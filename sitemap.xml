@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</loc>
+    <loc>https://academic-demo.netlify.app/courses_python/example/python/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses_python/example/python/</loc>
+    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/1.ggplot2/3.boxplot/</loc>

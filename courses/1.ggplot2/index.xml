@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Python basics</title>
+      <title>Scatterplot</title>
       <link>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</guid>
@@ -110,7 +110,7 @@ fig.show()
     </item>
     
     <item>
-      <title>Statistics</title>
+      <title>Histograms</title>
       <link>https://academic-demo.netlify.app/courses/1.ggplot2/2.histogram/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/courses/1.ggplot2/2.histogram/</guid>

@@ -14,9 +14,9 @@
     
     <item>
       <title>Python basics</title>
-      <link>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</link>
+      <link>https://academic-demo.netlify.app/courses_python/example/python/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</guid>
+      <guid>https://academic-demo.netlify.app/courses_python/example/python/</guid>
       <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -50,10 +50,10 @@
     </item>
     
     <item>
-      <title>Python basics</title>
-      <link>https://academic-demo.netlify.app/courses_python/example/python/</link>
+      <title>Scatterplot</title>
+      <link>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses_python/example/python/</guid>
+      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</guid>
       <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -177,7 +177,7 @@ fig.show()
     </item>
     
     <item>
-      <title>Statistics</title>
+      <title>Histograms</title>
       <link>https://academic-demo.netlify.app/courses/1.ggplot2/2.histogram/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/courses/1.ggplot2/2.histogram/</guid>
@@ -419,7 +419,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-793514862&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-872594316&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -429,7 +429,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-793514862&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-872594316&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
