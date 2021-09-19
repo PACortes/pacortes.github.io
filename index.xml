@@ -14,9 +14,9 @@
     
     <item>
       <title>Python basics</title>
-      <link>https://academic-demo.netlify.app/courses/example/python/</link>
+      <link>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/example/python/</guid>
+      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</guid>
       <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -88,9 +88,39 @@
     
     <item>
       <title>Visualization</title>
-      <link>https://academic-demo.netlify.app/courses/example/visualization/</link>
+      <link>https://academic-demo.netlify.app/courses/1.ggplot2/3.boxplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/example/visualization/</guid>
+      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/3.boxplot/</guid>
+      <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
+&lt;p&gt;
+  &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
+&lt;h2 id=&#34;learn&#34;&gt;Learn&lt;/h2&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/hSPmj7mK6ng&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&#34;quiz&#34;&gt;Quiz&lt;/h2&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-2&#34;&gt;
+  &lt;summary&gt;When is a heatmap useful?&lt;/summary&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+&lt;/details&gt;
+&lt;details class=&#34;spoiler &#34;  id=&#34;spoiler-3&#34;&gt;
+  &lt;summary&gt;Write Plotly code to render a bar chart&lt;/summary&gt;
+  &lt;p&gt;&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import plotly.express as px
+data_canada = px.data.gapminder().query(&amp;quot;country == &#39;Canada&#39;&amp;quot;)
+fig = px.bar(data_canada, x=&#39;year&#39;, y=&#39;pop&#39;)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/p&gt;
+&lt;/details&gt;</description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>https://academic-demo.netlify.app/courses/1.ggplot2/4.jitter/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/4.jitter/</guid>
       <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -148,9 +178,9 @@ fig.show()
     
     <item>
       <title>Statistics</title>
-      <link>https://academic-demo.netlify.app/courses/example/stats/</link>
+      <link>https://academic-demo.netlify.app/courses/1.ggplot2/2.histogram/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/example/stats/</guid>
+      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/2.histogram/</guid>
       <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -389,7 +419,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-751638942&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-793514862&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -399,7 +429,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-751638942&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-793514862&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
