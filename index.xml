@@ -389,7 +389,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-736821594&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-324986751&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -399,7 +399,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-736821594&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-324986751&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -626,20 +626,6 @@ You found me!
     </item>
     
     <item>
-      <title>An example preprint / working paper</title>
-      <link>https://academic-demo.netlify.app/publication/preprint/</link>
-      <pubDate>Sun, 07 Apr 2019 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/publication/preprint/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Display Jupyter Notebooks with Academic</title>
       <link>https://academic-demo.netlify.app/post/jupyter/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
@@ -834,9 +820,17 @@ Three
     
     <item>
       <title>Mitochondrial phenotype during torpor: Modulation of mitochondrial electron transport system in the Chilean mouse–opossum Thylamys elegans</title>
-      <link>https://academic-demo.netlify.app/publication/journal-article/</link>
+      <link>https://academic-demo.netlify.app/publication/2016_cortes-et-al_b/</link>
       <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/publication/journal-article/</guid>
+      <guid>https://academic-demo.netlify.app/publication/2016_cortes-et-al_b/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mitochondrial phenotype during torpor: Modulation of mitochondrial electron transport system in the Chilean mouse–opossum Thylamys elegans</title>
+      <link>https://academic-demo.netlify.app/publication/2018_cortes-et-al/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/publication/2018_cortes-et-al/</guid>
       <description></description>
     </item>
     
@@ -862,22 +856,11 @@ Three
     </item>
     
     <item>
-      <title>An example conference paper</title>
-      <link>https://academic-demo.netlify.app/publication/conference-paper/</link>
-      <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/publication/conference-paper/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Click the &lt;em&gt;Cite&lt;/em&gt; button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Create your slides in Markdown - click the &lt;em&gt;Slides&lt;/em&gt; button to check out the example.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <title>Thermal ecological physiology of native and invasive frog species: do invaders perform better?</title>
+      <link>https://academic-demo.netlify.app/publication/2016_cortes-et-al_a/</link>
+      <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/publication/2016_cortes-et-al_a/</guid>
+      <description></description>
     </item>
     
     <item>
