@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Silvia A Quijano | Pablo Cortes</title>
+    <link>https://academic-demo.netlify.app/author/silvia-a-quijano/</link>
+      <atom:link href="https://academic-demo.netlify.app/author/silvia-a-quijano/index.xml" rel="self" type="application/rss+xml" />
+    <description>Silvia A Quijano</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 16 Oct 2011 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Silvia A Quijano</title>
+      <link>https://academic-demo.netlify.app/author/silvia-a-quijano/</link>
+    </image>
+    
+    <item>
+      <title>Bioenergetics and intestinal phenotypic ﬂexibility in the microbiotherid marsupial (Dromiciops gliroides) from the temperate forest in South America</title>
+      <link>https://academic-demo.netlify.app/publication/2011_cortes-et-al/</link>
+      <pubDate>Sun, 16 Oct 2011 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/publication/2011_cortes-et-al/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bioenergetics and inter-individual variation in physiological capacities in a relict mammal, the monito del monte (Dromiciops gliroides)</title>
+      <link>https://academic-demo.netlify.app/publication/2009_cortes-et-al/</link>
+      <pubDate>Thu, 15 Jan 2009 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/publication/2009_cortes-et-al/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

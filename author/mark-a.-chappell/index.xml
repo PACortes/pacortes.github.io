@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mark A. Chappell | Pablo Cortes</title>
+    <link>https://academic-demo.netlify.app/author/mark-a.-chappell/</link>
+      <atom:link href="https://academic-demo.netlify.app/author/mark-a.-chappell/index.xml" rel="self" type="application/rss+xml" />
+    <description>Mark A. Chappell</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Dec 2012 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>Mark A. Chappell</title>
+      <link>https://academic-demo.netlify.app/author/mark-a.-chappell/</link>
+    </image>
+    
+    <item>
+      <title>Aerobic power, huddling and the efficiency of torpor in the South American marsupial, Dromiciops gliroides</title>
+      <link>https://academic-demo.netlify.app/publication/2012_franco-et-al/</link>
+      <pubDate>Sat, 01 Dec 2012 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/publication/2012_franco-et-al/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

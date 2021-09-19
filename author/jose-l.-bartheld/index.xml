@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>José L. Bartheld | Pablo Cortes</title>
+    <title>Jose L. Bartheld | Pablo Cortes</title>
     <link>https://academic-demo.netlify.app/author/jose-l.-bartheld/</link>
       <atom:link href="https://academic-demo.netlify.app/author/jose-l.-bartheld/index.xml" rel="self" type="application/rss+xml" />
-    <description>José L. Bartheld</description>
+    <description>Jose L. Bartheld</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Apr 2016 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
-      <title>José L. Bartheld</title>
+      <title>Jose L. Bartheld</title>
       <link>https://academic-demo.netlify.app/author/jose-l.-bartheld/</link>
     </image>
     
@@ -17,6 +17,14 @@
       <link>https://academic-demo.netlify.app/publication/2016_cortes-et-al_a/</link>
       <pubDate>Fri, 01 Apr 2016 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/publication/2016_cortes-et-al_a/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Energy metabolism and the postprandial response of the Chilean tarantulas, Euathlus truculentus (Araneae: Theraphosidae)</title>
+      <link>https://academic-demo.netlify.app/publication/2011_nespolo-et-al/</link>
+      <pubDate>Wed, 10 Aug 2011 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/publication/2011_nespolo-et-al/</guid>
       <description></description>
     </item>
     
