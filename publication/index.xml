@@ -27,6 +27,14 @@
     </item>
     
     <item>
+      <title>Mitochondrial phenotype during torpor: Modulation of mitochondrial electron transport system in the Chilean mouse–opossum Thylamys elegans</title>
+      <link>https://academic-demo.netlify.app/publication/journal-article/</link>
+      <pubDate>Sun, 01 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/publication/journal-article/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>An example conference paper</title>
       <link>https://academic-demo.netlify.app/publication/conference-paper/</link>
       <pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate>
@@ -42,50 +50,6 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Supplementary notes can be added here, including &lt;a href=&#34;https://wowchemy.com/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;code, math, and images&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://academic-demo.netlify.app/publication/journal-article/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/publication/journal-article/</guid>
-      <description>&lt;p&gt;abstract: Mammalian torpor is a phenotype characterized by a controlled decline of metabolic rate, generally followed by a reduction in body temperature. During arousal from torpor, both metabolic rate and body temperature rapidly returns to resting levels. Metabolic rate reduction experienced by torpid animals is triggered by active suppression of mitochondrial respiration, which is rapidly reversed during rewarming process. In this study, we analyzed the changes in the maximal activity of key enzymes related to electron transport system (complexes I, III and IV) in six tissues of torpid, arousing and euthermic Chilean mouse-opossums (&lt;em&gt;Thylamys elegans&lt;/em&gt;). We observed higher maximal activities of complexes I and IV during torpor in brain, heart and liver, the most metabolically active organs in mammals. On the contrary, higher enzymatic activities of complexes III were observed during torpor in kidneys and lungs. Moreover, skeletal muscle was the only tissue without significant differences among stages in all complexes evaluated, suggesting no modulation of oxidative capacities of electron transport system components in this thermogenic tissue. In overall, our data suggest that complexes I and IV activity plays a major role in initiation and maintenance of metabolic suppression during torpor in Chilean mouse-opossum, whereas improvement of oxidative capacities in complex III might be critical to sustain metabolic machinery in organs that remains metabolically active during torpor.
-author_notes:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Equal contribution
-authors:&lt;/li&gt;
-&lt;li&gt;admin&lt;/li&gt;
-&lt;li&gt;Francisco Bozinovic&lt;/li&gt;
-&lt;li&gt;Pierre U Blier
-date: &amp;ldquo;2018-07-01T00:00:00Z&amp;rdquo;
-doi: &amp;ldquo;&lt;a href=&#34;https://doi.org/10.1016/j.cbpa.2017.12.014%22&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.1016/j.cbpa.2017.12.014&#34;&lt;/a&gt;
-featured: false
-image:
-caption: &amp;lsquo;Image credit: &lt;a href=&#34;https://www.naturalista.mx/observations/68387896&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;naturalista&lt;/strong&gt;&lt;/a&gt;&amp;rsquo;
-focal_point: &amp;quot;&amp;rdquo;
-preview_only: false
-projects: []
-publication: &amp;lsquo;Comparative Biochemistry and Physiology - Part A: Molecular &amp;amp; Integrative Physiology. 221:7-14&amp;rsquo;
-publication_short: &amp;quot;&amp;quot;
-publication_types:&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;2&amp;rdquo;
-publishDate: &amp;ldquo;2017-01-01T00:00:00Z&amp;rdquo;
-tags:&lt;/li&gt;
-&lt;li&gt;Torpor&lt;/li&gt;
-&lt;li&gt;Marsupials&lt;/li&gt;
-&lt;li&gt;Electron transport system
-title: &amp;ldquo;Mitochondrial phenotype during torpor: Modulation of mitochondrial electron transport system in the Chilean mouse–opossum Thylamys elegans&amp;rdquo;
-url_code: &amp;quot;&amp;quot;
-url_dataset: &amp;quot;&amp;quot;
-url_pdf: &lt;a href=&#34;https://reader.elsevier.com/reader/sd/pii/S1095643318300333?token=67858656C2E49BB0368D7A50728D3C412AAFF2A17762C6E947C53960E266DBC640011567E636C1FC8B52E36DCAC14BB3&amp;amp;originRegion=eu-west-1&amp;amp;originCreation=20210916205607&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://reader.elsevier.com/reader/sd/pii/S1095643318300333?token=67858656C2E49BB0368D7A50728D3C412AAFF2A17762C6E947C53960E266DBC640011567E636C1FC8B52E36DCAC14BB3&amp;originRegion=eu-west-1&amp;originCreation=20210916205607&lt;/a&gt;
-url_poster: &amp;quot;&amp;quot;
-url_project: &amp;quot;&amp;quot;
-url_slides: &amp;quot;&amp;quot;
-url_source: &amp;quot;&amp;quot;
-url_video: &amp;quot;&amp;quot;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
 </description>
     </item>
     
