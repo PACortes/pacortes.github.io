@@ -5,19 +5,19 @@
     <loc>https://academic-demo.netlify.app/courses_python/example/python/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/1.scatterplot/</loc>
+    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/scatterplot/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/3.boxplot/</loc>
+    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/boxplot/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/4.jitter/</loc>
+    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/jitter/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses_python/example/visualization/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/2.histogram/</loc>
+    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/histogram/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses_python/example/stats/</loc>
@@ -79,6 +79,9 @@
   </url><url>
     <loc>https://academic-demo.netlify.app/category/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/courses/1.ggplot2/graficos/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
