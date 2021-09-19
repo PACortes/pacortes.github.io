@@ -20,10 +20,10 @@
     <loc>https://academic-demo.netlify.app/courses_python/example/stats/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/</loc>
+    <loc>https://academic-demo.netlify.app/talk/example-talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/talk/example-talk/</loc>
+    <loc>https://academic-demo.netlify.app/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/event/</loc>
@@ -41,10 +41,10 @@
     <loc>https://academic-demo.netlify.app/courses_python/example/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/</loc>
+    <loc>https://academic-demo.netlify.app/courses_python/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses_python/</loc>
+    <loc>https://academic-demo.netlify.app/courses/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/academic/</loc>

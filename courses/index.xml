@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutoriales de R | Academic</title>
+    <title>Tutoriales de R | Pablo Cortes</title>
     <link>https://academic-demo.netlify.app/courses/</link>
       <atom:link href="https://academic-demo.netlify.app/courses/index.xml" rel="self" type="application/rss+xml" />
     <description>Tutoriales de R</description>
