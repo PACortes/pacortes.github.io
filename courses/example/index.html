@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="An example of using Wowchemy&#39;s Book layout for publishing online courses." />
+  <meta name="description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/example/" />
@@ -295,12 +295,12 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/example/" />
-  <meta property="og:title" content="📊 Learn Data Science | Pablo Cortes" />
-  <meta property="og:description" content="An example of using Wowchemy&#39;s Book layout for publishing online courses." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/example/featured.jpg" />
+  <meta property="og:title" content="📊 ggplot2: Visualización de datos | Pablo Cortes" />
+  <meta property="og:description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/example/featured.jpg" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/courses/example/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-01-24T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-09-19T00:00:00&#43;00:00" />
     
   
 
@@ -316,7 +316,7 @@
 
 
 
-  <title>📊 Learn Data Science | Pablo Cortes</title>
+  <title>📊 ggplot2: Visualización de datos | Pablo Cortes</title>
 </head>
 
 
@@ -786,11 +786,10 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-you-will-learn">What you will learn</a></li>
-    <li><a href="#program-overview">Program overview</a></li>
-    <li><a href="#courses-in-this-program">Courses in this program</a></li>
-    <li><a href="#meet-your-instructor">Meet your instructor</a></li>
-    <li><a href="#faqs">FAQs</a></li>
+    <li><a href="#resumen">Resumen</a></li>
+    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
+    <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
+    <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
 </nav>
 
@@ -838,7 +837,7 @@
 
           
 
-          <h1>📊 Learn Data Science</h1>
+          <h1>📊 ggplot2: Visualización de datos</h1>
 
           <div class="article-style">
             
@@ -858,36 +857,39 @@
 <figure  >
   <div class="d-flex justify-content-center">
     <div class="w-100" ><img alt="" srcset="
-               /courses/example/featured_hu76eaa58daf827988c1005eeac201f4e9_1602413_f33984f4a1c4cb67b249fda35b37581e.jpg 400w,
-               /courses/example/featured_hu76eaa58daf827988c1005eeac201f4e9_1602413_a1cd7731d90ffc91b37c0af3081d00b6.jpg 760w,
-               /courses/example/featured_hu76eaa58daf827988c1005eeac201f4e9_1602413_1200x1200_fit_q75_lanczos.jpg 1200w"
-               src="/courses/example/featured_hu76eaa58daf827988c1005eeac201f4e9_1602413_f33984f4a1c4cb67b249fda35b37581e.jpg"
-               width="760"
-               height="507"
+               /courses/example/ggplot2_logo_hu3fce93cf2c88e692e6804a8c4b6c799b_39324_0064e28f3a3664e2326e5ab6fbbb2e40.png 400w,
+               /courses/example/ggplot2_logo_hu3fce93cf2c88e692e6804a8c4b6c799b_39324_77bd285d85d4b152fd2ebf4f5571b4a4.png 760w,
+               /courses/example/ggplot2_logo_hu3fce93cf2c88e692e6804a8c4b6c799b_39324_1200x1200_fit_lanczos_3.png 1200w"
+               src="/courses/example/ggplot2_logo_hu3fce93cf2c88e692e6804a8c4b6c799b_39324_0064e28f3a3664e2326e5ab6fbbb2e40.png"
+               width="656"
+               height="760"
                loading="lazy" data-zoomable /></div>
   </div></figure>
 <details class="toc-inpage d-print-none d-xl-none " open>
   <summary class="font-weight-bold">Table of Contents</summary>
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#what-you-will-learn">What you will learn</a></li>
-    <li><a href="#program-overview">Program overview</a></li>
-    <li><a href="#courses-in-this-program">Courses in this program</a></li>
-    <li><a href="#meet-your-instructor">Meet your instructor</a></li>
-    <li><a href="#faqs">FAQs</a></li>
+    <li><a href="#resumen">Resumen</a></li>
+    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
+    <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
+    <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
 </nav>
 </details>
 
-<h2 id="what-you-will-learn">What you will learn</h2>
+<h2 id="resumen">Resumen</h2>
 <ul>
 <li>Fundamental <mark>Python programming skills</mark></li>
 <li><mark>Statistical concepts</mark> and how to apply them in practice</li>
 <li>Gain experience with the <mark>Scikit</mark>, including data visualization with <mark>Plotly</mark> and data wrangling with <mark>Pandas</mark></li>
 </ul>
-<h2 id="program-overview">Program overview</h2>
-<p>The demand for skilled data science practitioners is rapidly growing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
-<h2 id="courses-in-this-program">Courses in this program</h2>
+<h2 id="qué-es-ggplot2">¿Qué es ggplot2?</h2>
+<p>ggplot2 es un paquete de visualización altamente versátil que permite crear gráficos elegantes y atractivos.</p>
+<p>El paquete ggplot2 implementa un único sistema para describir y construir gráficos, el cuál funciona en capas (se agrega una a una) y se aplica a diferentes tipos de visualizaciones.</p>
+<p>En general, ggplot2 divide un gráfico (plot) en tres partes fundamentales diferentes:</p>
+<pre><code class="language-r">ggplot(data = data, mapping=aes(x=Var1, y =Var2))+ geom_function()
+</code></pre>
+<h2 id="visualizaciones-a-realizar">Visualizaciones a realizar</h2>
 
 
   <ul class="list-unstyled">
@@ -913,21 +915,11 @@
   </ul>
 
 
-<h2 id="meet-your-instructor">Meet your instructor</h2>
-<a href="/author/pablo-cortes-garcia/">Pablo Cortés García</a>
-<h2 id="faqs">FAQs</h2>
-<details class="spoiler "  id="spoiler-9">
-  <summary>Are there prerequisites?</summary>
-  <p>There are no prerequisites for the first course.</p>
-</details>
-<details class="spoiler "  id="spoiler-10">
-  <summary>How often do the courses run?</summary>
-  <p>Continuously, at your own pace.</p>
-</details>
+<h2 id="enlaces-de-interés">Enlaces de interés</h2>
 <ul class="cta-group">
   
   <li>
-    <a href="python"  class="btn btn-primary px-3 py-3">Begin the course</a>
+    <a href="python"  class="btn btn-primary px-3 py-3">Comencemos con el taller</a>
   </li>
   
   
@@ -954,7 +946,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Jan 24, 2021</p>
+          <p>Last updated on Sep 19, 2021</p>
 
           
 
