@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ggplot2: Visualización de datos | Pablo Cortes</title>
-    <link>https://academic-demo.netlify.app/courses/ggplot2/</link>
-      <atom:link href="https://academic-demo.netlify.app/courses/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://academic-demo.netlify.app/courses/bibliometrix/</link>
+      <atom:link href="https://academic-demo.netlify.app/courses/bibliometrix/index.xml" rel="self" type="application/rss+xml" />
     <description>ggplot2: Visualización de datos</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://academic-demo.netlify.app/courses/ggplot2/featured.jpg</url>
+      <url>https://academic-demo.netlify.app/courses/bibliometrix/featured.jpg</url>
       <title>ggplot2: Visualización de datos</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/</link>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/</link>
     </image>
     
     <item>
       <title>Scatterplot</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</link>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/scatterplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</guid>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/scatterplot/</guid>
       <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -51,9 +51,9 @@
     
     <item>
       <title>jitter</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/jitter/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/jitter/</guid>
       <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -81,9 +81,9 @@ fig.show()
     
     <item>
       <title>Visualization</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</link>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/boxplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</guid>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/boxplot/</guid>
       <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -111,9 +111,9 @@ fig.show()
     
     <item>
       <title>Histograms</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/histogram/</link>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/histogram/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/histogram/</guid>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/histogram/</guid>
       <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -139,9 +139,9 @@ The variance of the distribution is $\sigma^{2}$.
     
     <item>
       <title>Grafico de torta</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/graficos/</link>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/graficos/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/graficos/</guid>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/graficos/</guid>
       <description>
 
 
@@ -178,7 +178,7 @@ pie(
   init.angle = -50, border = NA
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div class=&#34;figure&#34;&gt;&lt;span style=&#34;display:block;&#34; id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
+&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/graficos_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;
 Figure 1: A fancy pie chart.
 &lt;/p&gt;

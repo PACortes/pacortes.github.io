@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="Learn how to visualize data with Plotly." />
+  <meta name="description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/boxplot/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/bibliometrix/" />
 
   
 
@@ -268,6 +268,8 @@
   
 
   
+    <link rel="alternate" href="/courses/bibliometrix/index.xml" type="application/rss+xml" title="Pablo Cortes" />
+  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -276,7 +278,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/courses/ggplot2/boxplot/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/courses/bibliometrix/" />
 
   
   
@@ -287,24 +289,19 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/boxplot/" />
-  <meta property="og:title" content="Visualization | Pablo Cortes" />
-  <meta property="og:description" content="Learn how to visualize data with Plotly." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
-    <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/courses/bibliometrix/" />
+  <meta property="og:title" content="ggplot2: Visualización de datos | Pablo Cortes" />
+  <meta property="og:description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/bibliometrix/featured.jpg" />
+    <meta property="twitter:image" content="https://academic-demo.netlify.app/courses/bibliometrix/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
-      <meta
-        property="article:published_time"
-        content="2021-01-01T00:00:00&#43;00:00"
-      />
+      <meta property="og:updated_time" content="2021-09-19T00:00:00&#43;00:00" />
     
-    <meta property="article:modified_time" content="2021-01-01T00:00:00&#43;00:00">
   
 
   
@@ -315,17 +312,15 @@
 
   
 
-  
 
 
 
 
-
-  <title>Visualization | Pablo Cortes</title>
+  <title>ggplot2: Visualización de datos | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="d1660bf40c6b0e0ebf4510d1b8996711" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="c355531e11a1791961a8301fbb073bbf" >
 
   
   
@@ -698,7 +693,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          ggplot2
+          Tutoriales de R
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -735,10 +730,6 @@
 
       
       
-        
-          
-        
-      
 
 
   
@@ -752,30 +743,30 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/ggplot2/">ggplot2</a>
+        <a class="docs-toc-link  active" href="/courses/bibliometrix/">ggplot2</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class=""><a href="/courses/ggplot2/scatterplot/">Scatterplot</a></li>
+  <li class=""><a href="/courses/bibliometrix/scatterplot/">Scatterplot</a></li>
 
 
 
-  <li class=""><a href="/courses/ggplot2/jitter/">jitter</a></li>
+  <li class=""><a href="/courses/bibliometrix/jitter/">jitter</a></li>
 
 
 
-  <li class="active"><a href="/courses/ggplot2/boxplot/">Visualization</a></li>
+  <li class=""><a href="/courses/bibliometrix/boxplot/">Visualization</a></li>
 
 
 
-  <li class=""><a href="/courses/ggplot2/histogram/">Histograms</a></li>
+  <li class=""><a href="/courses/bibliometrix/histogram/">Histograms</a></li>
 
 
 
-  <li class=""><a href="/courses/ggplot2/graficos/">Grafico de torta</a></li>
+  <li class=""><a href="/courses/bibliometrix/graficos/">Grafico de torta</a></li>
 
       
         </ul>
@@ -803,8 +794,10 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#learn">Learn</a></li>
-    <li><a href="#quiz">Quiz</a></li>
+    <li><a href="#resumen">Resumen</a></li>
+    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
+    <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
+    <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
 </nav>
 
@@ -822,7 +815,6 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
-  
   
   
 
@@ -844,17 +836,8 @@
   </li>
 
 
-  <li class="breadcrumb-item">
-    <a href="/courses/ggplot2/">
-      
-        ggplot2
-      
-    </a>
-  </li>
-
-
       <li class="breadcrumb-item active" aria-current="page">
-        Visualization
+        ggplot2
       </li>
     </ol>
   </nav>
@@ -862,32 +845,99 @@
 
           
 
-          <h1>Visualization</h1>
+          <h1>ggplot2: Visualización de datos</h1>
 
           <div class="article-style">
-            <p>Learn how to visualize data with Plotly.</p>
-<p>
-  <i class="fas fa-clock  pr-1 fa-fw"></i> 1-2 hours per week, for 8 weeks</p>
-<h2 id="learn">Learn</h2>
+            
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/hSPmj7mK6ng" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
 
-<h2 id="quiz">Quiz</h2>
-<details class="spoiler "  id="spoiler-2">
-  <summary>When is a heatmap useful?</summary>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="ggplot2_logo.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<details class="toc-inpage d-print-none d-xl-none " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#resumen">Resumen</a></li>
+    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
+    <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
+    <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
+  </ul>
+</nav>
 </details>
-<details class="spoiler "  id="spoiler-3">
-  <summary>Write Plotly code to render a bar chart</summary>
-  <p><pre><code class="language-python">import plotly.express as px
-data_canada = px.data.gapminder().query(&quot;country == 'Canada'&quot;)
-fig = px.bar(data_canada, x='year', y='pop')
-fig.show()
+
+<h2 id="resumen">Resumen</h2>
+<ul>
+<li>Fundamental <mark>Python programming skills</mark></li>
+<li><mark>Statistical concepts</mark> and how to apply them in practice</li>
+<li>Gain experience with the <mark>Scikit</mark>, including data visualization with <mark>Plotly</mark> and data wrangling with <mark>Pandas</mark></li>
+</ul>
+<h2 id="qué-es-ggplot2">¿Qué es ggplot2?</h2>
+<p>ggplot2 es un paquete de visualización altamente versátil que permite crear gráficos elegantes y atractivos.</p>
+<p>El paquete ggplot2 implementa un único sistema para describir y construir gráficos, el cuál funciona en capas (se agrega una a una) y se aplica a diferentes tipos de visualizaciones.</p>
+<p>En general, ggplot2 divide un gráfico (plot) en tres partes fundamentales diferentes:</p>
+<pre><code class="language-r">ggplot(data = MisDatos, mapping=aes(x=Variable1, y =Variable2))+ geom_function()
 </code></pre>
+<h2 id="visualizaciones-a-realizar">Visualizaciones a realizar</h2>
+
+
+  <ul class="list-unstyled">
+    
+      <li>
+        <h5><a href="/courses/bibliometrix/scatterplot/">Scatterplot</a></h5>
+        <p>Build a foundation in Python.
 </p>
-</details>
+      </li>
+    
+      <li>
+        <h5><a href="/courses/bibliometrix/jitter/">jitter</a></h5>
+        <p>Learn how to visualize data with Plotly.
+</p>
+      </li>
+    
+      <li>
+        <h5><a href="/courses/bibliometrix/boxplot/">Visualization</a></h5>
+        <p>Learn how to visualize data with Plotly.
+</p>
+      </li>
+    
+      <li>
+        <h5><a href="/courses/bibliometrix/histogram/">Histograms</a></h5>
+        <p>Introduction to statistics for data science.
+</p>
+      </li>
+    
+      <li>
+        <h5><a href="/courses/bibliometrix/graficos/">Grafico de torta</a></h5>
+        <p>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.</p>
+      </li>
+    
+  </ul>
+
+
+<h2 id="enlaces-de-interés">Enlaces de interés</h2>
+<ul class="cta-group">
+  
+  <li>
+    <a href="python"  class="btn btn-primary px-3 py-3">Comencemos con el taller</a>
+  </li>
+  
+  
+</ul>
+
+
           </div>
 
           
@@ -901,19 +951,6 @@ fig.show()
 <div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/courses/ggplot2/jitter/" rel="next">jitter</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/courses/ggplot2/histogram/" rel="prev">Histograms</a>
-  </div>
-  
 </div>
 
           </div>
@@ -921,7 +958,7 @@ fig.show()
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Jan 1, 2021</p>
+          <p>Last updated on Sep 19, 2021</p>
 
           
 
