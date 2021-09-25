@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ggplot2: Visualización de datos | Pablo Cortes</title>
+    <title>bibliometrix | Pablo Cortes</title>
     <link>https://academic-demo.netlify.app/courses/bibliometrix/</link>
       <atom:link href="https://academic-demo.netlify.app/courses/bibliometrix/index.xml" rel="self" type="application/rss+xml" />
-    <description>ggplot2: Visualización de datos</description>
+    <description>bibliometrix</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/courses/bibliometrix/featured.png</url>
-      <title>ggplot2: Visualización de datos</title>
+      <title>bibliometrix</title>
       <link>https://academic-demo.netlify.app/courses/bibliometrix/</link>
     </image>
     
