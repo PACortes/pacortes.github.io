@@ -51,9 +51,9 @@
     
     <item>
       <title>Scatterplot</title>
-      <link>https://academic-demo.netlify.app/courses/1.ggplot2/scatterplot/</link>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/scatterplot/</guid>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</guid>
       <description>&lt;p&gt;Build a foundation in Python.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -88,9 +88,9 @@
     
     <item>
       <title>jitter</title>
-      <link>https://academic-demo.netlify.app/courses/1.ggplot2/jitter/</link>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/jitter/</guid>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
       <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -118,9 +118,9 @@ fig.show()
     
     <item>
       <title>Visualization</title>
-      <link>https://academic-demo.netlify.app/courses/1.ggplot2/boxplot/</link>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/boxplot/</guid>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</guid>
       <description>&lt;p&gt;Learn how to visualize data with Plotly.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -178,9 +178,9 @@ fig.show()
     
     <item>
       <title>Histograms</title>
-      <link>https://academic-demo.netlify.app/courses/1.ggplot2/histogram/</link>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/histogram/</link>
       <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/histogram/</guid>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/histogram/</guid>
       <description>&lt;p&gt;Introduction to statistics for data science.&lt;/p&gt;
 &lt;p&gt;
   &lt;i class=&#34;fas fa-clock  pr-1 fa-fw&#34;&gt;&lt;/i&gt; 1-2 hours per week, for 8 weeks&lt;/p&gt;
@@ -343,9 +343,9 @@ The variance of the distribution is $\sigma^{2}$.
     
     <item>
       <title>Hello R Markdown</title>
-      <link>https://academic-demo.netlify.app/courses/1.ggplot2/graficos/</link>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/graficos/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/1.ggplot2/graficos/</guid>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/graficos/</guid>
       <description>
 
 
@@ -469,7 +469,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-953627814&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-529671348&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -479,7 +479,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-953627814&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-529671348&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
