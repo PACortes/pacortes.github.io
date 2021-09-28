@@ -72,7 +72,9 @@ Figure 1: A fancy pie chart.
 
 &lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Los gráficos de dispersión se utilizan para observar asociación entre dos variablesnuméricas diferentes.&lt;/p&gt;
+&lt;p&gt;La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.&lt;/p&gt;
+&lt;p&gt;Este tipo de gráfico permite responder preguntas sobre los datos, por ejemplo: ¿cuál es la relación entre dos variables? ¿Cómo se distribuyen los datos? ¿Dónde están los valores atípicos?&lt;/p&gt;
 &lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
 ##      speed           dist       
