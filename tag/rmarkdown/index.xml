@@ -85,6 +85,10 @@ library(knitr)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;3.2. Texto&lt;/h2&gt;
 &lt;p&gt;El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.&lt;/p&gt;
 &lt;p&gt;Un aspecto importante es que la separación de párrafos se realiza saltando una línea en blanco.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Me salto
+una
+
+línea&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;trozos-chunk-de-código&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3.3. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/h2&gt;
