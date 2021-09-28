@@ -30,8 +30,7 @@
   
     
   
-  <meta name="description" content="Los gráficos de dispersión (scatterplot en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.
-La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental." />
+  <meta name="description" content="1. Cargando la librería 2.Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/graficos/" />
@@ -296,8 +295,7 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/graficos/" />
   <meta property="og:title" content="Grafico de dispersión | Pablo Cortes" />
-  <meta property="og:description" content="Los gráficos de dispersión (scatterplot en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.
-La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1. Cargando la librería 2.Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -766,6 +764,20 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
     <div class="article-style">
       
 
+<div id="TOC">
+<ul>
+<li><a href="#cargando-la-librería">1. Cargando la librería</a></li>
+<li><a href="#sintáxis">2.Sintáxis</a></li>
+<li><a href="#visualización">3. Visualización</a><ul>
+<li><a href="#título-y-etiquetas">3.1. Título y etiquetas</a></li>
+<li><a href="#límites-de-los-ejes">3.2. Límites de los ejes</a></li>
+<li><a href="#título-y-etiquetas-tamaño-de-las-letras">3.3. Título y etiquetas: tamaño de las letras</a></li>
+<li><a href="#tamaño-de-los-puntos">3.4. Tamaño de los puntos</a></li>
+<li><a href="#color-de-los-puntos">3.5. Color de los puntos</a></li>
+</ul></li>
+<li><a href="#finalmente">4. Finalmente…</a></li>
+</ul>
+</div>
 
 <p>Los gráficos de dispersión (<em>scatterplot</em> en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.</p>
 <p>La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.</p>
@@ -785,14 +797,14 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
 <li><p><code>+</code>: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.</p></li>
 <li><p><code>geom_point()</code>: Especifica que queremos generar un gráfico de dispersión.</p></li>
 </ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Visualización
-Ahora, generemos un gráfico de dispersión con las variables <em>Petal.Length</em> y <em>Petal.Width</em> de la base de datos <code>iris</code>.</li>
-</ol>
+</div>
+<div id="visualización" class="section level1">
+<h1>3. Visualización</h1>
+<p>Ahora, generemos un gráfico de dispersión con las variables <em>Petal.Length</em> y <em>Petal.Width</em> de la base de datos <code>iris</code>.</p>
 <pre class="r"><code>ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()</code></pre>
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <div id="título-y-etiquetas" class="section level2">
-<h2>3.1 Título y etiquetas</h2>
+<h2>3.1. Título y etiquetas</h2>
 <p>Ajustemos el título del gráfico las etiquetas de los ejes con la función <code>labs()</code>:</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
@@ -802,7 +814,7 @@ Ahora, generemos un gráfico de dispersión con las variables <em>Petal.Length</
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 <div id="límites-de-los-ejes" class="section level2">
-<h2>3.2 Límites de los ejes</h2>
+<h2>3.2. Límites de los ejes</h2>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
   xlim(c(0, 8))+
@@ -813,7 +825,7 @@ labs(title=&quot;Largo vs Ancho del Pétalo&quot;,
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="título-y-etiquetas-tamaño-de-las-letras" class="section level2">
-<h2>3.3 Título y etiquetas: tamaño de las letras</h2>
+<h2>3.3. Título y etiquetas: tamaño de las letras</h2>
 <p>Ahora, aumentemos el tamaños de las letras de títulos (y su color) y etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
 <p><code>theme()</code> incluye dos componentes principales:</p>
 <ul>
@@ -841,7 +853,7 @@ labs(title=&quot;Largo vs Ancho del Pétalo&quot;,
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
 <div id="tamaño-de-los-puntos" class="section level2">
-<h2>3.4 Tamaño de los puntos</h2>
+<h2>3.4. Tamaño de los puntos</h2>
 <p>Para cambiar el tamaño de los puntos (aumentar o disminuir), utilizamos la función <code>size =</code>(valor por defecto:0.5) dentro de <code>geom_point()</code>.</p>
 <p>Por ejemplo, podemos especificar que todos los puntos tendrán un diamtero de 2.5</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -871,7 +883,7 @@ labs(title=&quot;Largo vs Ancho del Pétalo&quot;,
 <p>También, podemos</p>
 </div>
 <div id="color-de-los-puntos" class="section level2">
-<h2>3.5 Color de los puntos</h2>
+<h2>3.5. Color de los puntos</h2>
 <p>Ajustemos el tamaño y color de los puntos</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(col=&quot;steelblue&quot;, size=2.5)+
@@ -927,8 +939,9 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
         legend.text = element_text(size = 12))</code></pre>
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
-<div id="finalmente" class="section level2">
-<h2>3.6 Finalmente…</h2>
+</div>
+<div id="finalmente" class="section level1">
+<h1>4. Finalmente…</h1>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
   scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
@@ -944,7 +957,6 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <p>Theme elements [<a href="https://ggplot2.tidyverse.org/reference/element.html" class="uri">https://ggplot2.tidyverse.org/reference/element.html</a>]</p>
-</div>
 </div>
 
     </div>
