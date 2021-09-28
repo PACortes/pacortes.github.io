@@ -68,7 +68,16 @@
     <loc>https://academic-demo.netlify.app/courses_python/</loc>
     <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/post/my-first-blog-post/</loc>
+    <loc>https://academic-demo.netlify.app/authors/</loc>
+    <lastmod>2021-09-17T16:12:21-03:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/author/martina-le-bert/</loc>
+    <lastmod>2021-09-17T16:12:21-03:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/post/negacionismo/</loc>
+    <lastmod>2021-09-17T16:12:21-03:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/author/pablo-cortes-garcia/</loc>
     <lastmod>2021-09-17T16:12:21-03:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/post/</loc>
@@ -83,9 +92,6 @@
     <loc>https://academic-demo.netlify.app/publication-type/2/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/authors/</loc>
-    <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/tag/electron-transport-system/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -96,9 +102,6 @@
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/publication/2018_cortes-et-al/</loc>
-    <lastmod>2018-07-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/author/pablo-cortes-garcia/</loc>
     <lastmod>2018-07-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/author/pierre-u-blier/</loc>
