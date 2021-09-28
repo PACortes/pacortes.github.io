@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="En este módulo aprenderemos a generar informes reproducibles." />
+  <meta name="description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/rmarkdown/" />
@@ -295,8 +295,8 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/rmarkdown/" />
-  <meta property="og:title" content="RMarkdown: informes reproducibles | Pablo Cortes" />
-  <meta property="og:description" content="En este módulo aprenderemos a generar informes reproducibles." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/rmarkdown/featured.png" />
+  <meta property="og:title" content="RMarkdown: Informes reproducibles | Pablo Cortes" />
+  <meta property="og:description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/rmarkdown/featured.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/courses/rmarkdown/featured.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -316,7 +316,7 @@
 
 
 
-  <title>RMarkdown: informes reproducibles | Pablo Cortes</title>
+  <title>RMarkdown: Informes reproducibles | Pablo Cortes</title>
 </head>
 
 
@@ -750,7 +750,7 @@
       
 
 
-  <li class=""><a href="/courses/rmarkdown/rmarkdown/">Grafico</a></li>
+  <li class=""><a href="/courses/rmarkdown/graficos/">Grafico de dispersión</a></li>
 
       
         </ul>
@@ -779,7 +779,7 @@
       <nav id="TableOfContents">
   <ul>
     <li><a href="#resumen">Resumen</a></li>
-    <li><a href="#qué-es-rmrkdown">¿Qué es Rmrkdown?</a></li>
+    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
     <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
@@ -829,7 +829,7 @@
 
           
 
-          <h1>RMarkdown: informes reproducibles</h1>
+          <h1>RMarkdown: Informes reproducibles</h1>
 
           <div class="article-style">
             
@@ -862,7 +862,7 @@
   <nav id="TableOfContents">
   <ul>
     <li><a href="#resumen">Resumen</a></li>
-    <li><a href="#qué-es-rmrkdown">¿Qué es Rmrkdown?</a></li>
+    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
     <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
@@ -875,16 +875,20 @@
 <li><mark>Statistical concepts</mark> and how to apply them in practice</li>
 <li>Gain experience with the <mark>Scikit</mark>, including data visualization with <mark>Plotly</mark> and data wrangling with <mark>Pandas</mark></li>
 </ul>
-<h2 id="qué-es-rmrkdown">¿Qué es Rmrkdown?</h2>
-<p>Rmarkdown nos permite generar informes a partir de R. Utiliza un lenguaje llamado Markdown para enriquecer el informe final. Este permite incluir texto, comandos de R, imágenes y gráficos a un documento. Pero lo más importante es que permite que se reproduzca el análisis realizado y si se incorporan nuevos datos, los resultados se actualizarán.</p>
+<h2 id="qué-es-ggplot2">¿Qué es ggplot2?</h2>
+<p>ggplot2 es un paquete de visualización altamente versátil que permite crear gráficos elegantes y atractivos.</p>
+<p>El paquete ggplot2 implementa un único sistema para describir y construir gráficos, el cuál funciona en capas (se agrega una a una) y se aplica a diferentes tipos de visualizaciones.</p>
+<p>En general, ggplot2 divide un gráfico (plot) en tres partes fundamentales diferentes:</p>
+<pre><code class="language-r">ggplot(data = MisDatos, mapping=aes(x=Variable1, y =Variable2))+ geom_function()
+</code></pre>
 <h2 id="visualizaciones-a-realizar">Visualizaciones a realizar</h2>
 
 
   <ul class="list-unstyled">
     
       <li>
-        <h5><a href="/courses/rmarkdown/rmarkdown/">Grafico</a></h5>
-        <p>1. ¿Como funciona? 2. Requisitos 3. Estructura del archivo .Rmd. 3.1. Encabezado YAML 3.2. Texto 3.3. Trozos (chunk) de código  4. Syntaxis 5. Primer informe con RMarkdown 5.</p>
+        <h5><a href="/courses/rmarkdown/graficos/">Grafico de dispersión</a></h5>
+        <p>1. Definición 2. Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3.</p>
       </li>
     
   </ul>
