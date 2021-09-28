@@ -312,6 +312,13 @@ library(knitr)&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;3.1. Encabezado YAML&lt;/h2&gt;
 &lt;p&gt;El encabezado YAML (en inglés &lt;em&gt;yet another markup language&lt;/em&gt;) determina los parámetros generales de formato para el documento a generar. Es importante tener presente que este encabezado define el formato del archivo resultante, más no su contenido.&lt;/p&gt;
 &lt;p&gt;El encabezado comienza y termina con tres rayas (- - -). Veamos el siguiente ejemplo que incluye algunos parámetros (existen muchos más) que definirán el formato del documento:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: &amp;quot;Título del documento&amp;quot;
+author: &amp;quot;Quien desarrolla el documento&amp;quot;
+date: &amp;quot;Fecha en la cual desarrollamos el documento&amp;quot;
+output:
+  html_document: default
+---&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;En este ejemplo hemos especificado que el documento se generará en formato &lt;em&gt;HTML&lt;/em&gt;. Otras opciones de &lt;em&gt;output&lt;/em&gt; son:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;output: html_document&lt;/strong&gt;… archivo html (página web)&lt;/li&gt;
@@ -897,7 +904,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-284693715&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-294816537&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -907,7 +914,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-284693715&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-294816537&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();

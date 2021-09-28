@@ -817,6 +817,13 @@ library(knitr)</code></pre>
 <h2>3.1. Encabezado YAML</h2>
 <p>El encabezado YAML (en inglés <em>yet another markup language</em>) determina los parámetros generales de formato para el documento a generar. Es importante tener presente que este encabezado define el formato del archivo resultante, más no su contenido.</p>
 <p>El encabezado comienza y termina con tres rayas (- - -). Veamos el siguiente ejemplo que incluye algunos parámetros (existen muchos más) que definirán el formato del documento:</p>
+<pre><code>---
+title: &quot;Título del documento&quot;
+author: &quot;Quien desarrolla el documento&quot;
+date: &quot;Fecha en la cual desarrollamos el documento&quot;
+output:
+  html_document: default
+---</code></pre>
 <p>En este ejemplo hemos especificado que el documento se generará en formato <em>HTML</em>. Otras opciones de <em>output</em> son:</p>
 <ul>
 <li><strong>output: html_document</strong>… archivo html (página web)</li>
