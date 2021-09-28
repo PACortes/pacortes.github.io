@@ -265,8 +265,8 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;li&gt;&lt;a href=&#34;#requisitos&#34;&gt;2. Requisitos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#estructura-del-archivo-.rmd.&#34;&gt;3. Estructura del archivo &lt;code&gt;.Rmd&lt;/code&gt;.&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#encabezado-yaml&#34;&gt;3.1. Encabezado YAML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;3.2. Texto&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#trozos-chunk-de-código&#34;&gt;3.3. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#trozos-chunk-de-código&#34;&gt;3.2. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;3.3. Texto&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#primer-informe-con-rmarkdown&#34;&gt;5. Primer informe con RMarkdown&lt;/a&gt;&lt;ul&gt;
@@ -328,17 +328,8 @@ output:
 &lt;li&gt;&lt;strong&gt;output: ioslides_presentation&lt;/strong&gt;… presentación ioslides (html)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;texto&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.2. Texto&lt;/h2&gt;
-&lt;p&gt;El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.&lt;/p&gt;
-&lt;p&gt;Un aspecto importante es que la separación de párrafos se realiza saltando una línea en blanco.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Me salto
-una
-
-línea&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;div id=&#34;trozos-chunk-de-código&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.3. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/h2&gt;
+&lt;h2&gt;3.2. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/h2&gt;
 &lt;p&gt;Los trozos (&lt;em&gt;chunk&lt;/em&gt;) de código en un documento de R Markdown contendrán tu código R. Todos los fragmentos de código comienzan y terminan con &lt;code&gt;```&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Un &lt;em&gt;chunk&lt;/em&gt; básico se ve de la siguiente forma:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# ``` {r } 
@@ -363,6 +354,18 @@ respuesta
 &lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: Ctrl + Alt + I&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;OS X&lt;/strong&gt;: Cmd + Option + I&lt;/li&gt;
 &lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#```{r }
+
+#```&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;texto&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.3. Texto&lt;/h2&gt;
+&lt;p&gt;El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.&lt;/p&gt;
+&lt;p&gt;Un aspecto importante es que la separación de párrafos se realiza saltando una línea en blanco.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Me salto
+una
+
+línea&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;syntaxis&#34; class=&#34;section level1&#34;&gt;
@@ -474,7 +477,7 @@ glimpse(iris)
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/aspectos_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/aspectos_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -904,7 +907,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-294816537&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-835412967&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -914,7 +917,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-294816537&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-835412967&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
