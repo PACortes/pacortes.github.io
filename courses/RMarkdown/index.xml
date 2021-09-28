@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RMarkdown: Informes reproducibles | Pablo Cortes</title>
+    <title>rmarkdown: informes reproducibles | Pablo Cortes</title>
     <link>https://academic-demo.netlify.app/courses/rmarkdown/</link>
       <atom:link href="https://academic-demo.netlify.app/courses/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
-    <description>RMarkdown: Informes reproducibles</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <description>rmarkdown: informes reproducibles</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/courses/rmarkdown/featured.png</url>
-      <title>RMarkdown: Informes reproducibles</title>
+      <title>rmarkdown: informes reproducibles</title>
       <link>https://academic-demo.netlify.app/courses/rmarkdown/</link>
     </image>
     
     <item>
-      <title>RMarkdown</title>
+      <title>Grafico de dispersión</title>
       <link>https://academic-demo.netlify.app/courses/rmarkdown/graficos/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/rmarkdown/graficos/</guid>
