@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Cargando la librería 2.Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." />
+  <meta name="description" content="1. Definición 2. Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/graficos/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/graficos/" />
   <meta property="og:title" content="Grafico de dispersión | Pablo Cortes" />
-  <meta property="og:description" content="1. Cargando la librería 2.Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -766,8 +766,8 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#cargando-la-librería">1. Cargando la librería</a></li>
-<li><a href="#sintáxis">2.Sintáxis</a></li>
+<li><a href="#definición">1. Definición</a></li>
+<li><a href="#sintáxis">2. Sintáxis</a></li>
 <li><a href="#visualización">3. Visualización</a><ul>
 <li><a href="#título-y-etiquetas">3.1. Título y etiquetas</a></li>
 <li><a href="#límites-de-los-ejes">3.2. Límites de los ejes</a></li>
@@ -775,19 +775,20 @@
 <li><a href="#tamaño-de-los-puntos">3.4. Tamaño de los puntos</a></li>
 <li><a href="#color-de-los-puntos">3.5. Color de los puntos</a></li>
 </ul></li>
-<li><a href="#finalmente">4. Finalmente…</a></li>
+<li><a href="#juntando-todas-las-piezas">4. Juntando todas las piezas</a></li>
+<li><a href="#referencias">5. Referencias</a></li>
 </ul>
 </div>
 
+<div id="definición" class="section level1">
+<h1>1. Definición</h1>
 <p>Los gráficos de dispersión (<em>scatterplot</em> en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.</p>
 <p>La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.</p>
-<div id="cargando-la-librería" class="section level1">
-<h1>1. Cargando la librería</h1>
-<p>Para comenzar, carguemos la libreía ggplot2 usando la función <code>library()</code>.</p>
+<p>Recordemos que antes de realizar nuestro gráfico, debemos cargar la libreía ggplot2 usando la función <code>library()</code>.</p>
 <pre class="r"><code>library(ggplot2)</code></pre>
 </div>
 <div id="sintáxis" class="section level1">
-<h1>2.Sintáxis</h1>
+<h1>2. Sintáxis</h1>
 <p>La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:</p>
 <p><code>ggplot(data, mapping=aes(x,y))+ geom_point()</code></p>
 <p>En donde:</p>
@@ -940,8 +941,8 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 </div>
-<div id="finalmente" class="section level1">
-<h1>4. Finalmente…</h1>
+<div id="juntando-todas-las-piezas" class="section level1">
+<h1>4. Juntando todas las piezas</h1>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
   scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
@@ -956,7 +957,12 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
         legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-<p>Theme elements [<a href="https://ggplot2.tidyverse.org/reference/element.html" class="uri">https://ggplot2.tidyverse.org/reference/element.html</a>]</p>
+</div>
+<div id="referencias" class="section level1">
+<h1>5. Referencias</h1>
+<ul>
+<li>Theme elements [<a href="https://ggplot2.tidyverse.org/reference/element.html" class="uri">https://ggplot2.tidyverse.org/reference/element.html</a>]</li>
+</ul>
 </div>
 
     </div>

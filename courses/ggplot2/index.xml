@@ -21,8 +21,8 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#cargando-la-librería&#34;&gt;1. Cargando la librería&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2.Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;3. Visualización&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#título-y-etiquetas&#34;&gt;3.1. Título y etiquetas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#límites-de-los-ejes&#34;&gt;3.2. Límites de los ejes&lt;/a&gt;&lt;/li&gt;
@@ -30,19 +30,20 @@
 &lt;li&gt;&lt;a href=&#34;#tamaño-de-los-puntos&#34;&gt;3.4. Tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#color-de-los-puntos&#34;&gt;3.5. Color de los puntos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#finalmente&#34;&gt;4. Finalmente…&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;4. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;5. Referencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
 &lt;p&gt;Los gráficos de dispersión (&lt;em&gt;scatterplot&lt;/em&gt; en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.&lt;/p&gt;
 &lt;p&gt;La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.&lt;/p&gt;
-&lt;div id=&#34;cargando-la-librería&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Cargando la librería&lt;/h1&gt;
-&lt;p&gt;Para comenzar, carguemos la libreía ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar la libreía ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2.Sintáxis&lt;/h1&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
 &lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_point()&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;En donde:&lt;/p&gt;
@@ -195,8 +196,8 @@ De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;finalmente&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;4. Finalmente…&lt;/h1&gt;
+&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Juntando todas las piezas&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
   scale_colour_manual(values=c(&amp;quot;#BC3C29FF&amp;quot;, &amp;quot;#0072B5FF&amp;quot;,&amp;quot;#E18727FF&amp;quot;))+
@@ -211,7 +212,12 @@ De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Theme elements [&lt;a href=&#34;https://ggplot2.tidyverse.org/reference/element.html&#34; class=&#34;uri&#34;&gt;https://ggplot2.tidyverse.org/reference/element.html&lt;/a&gt;]&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5. Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Theme elements [&lt;a href=&#34;https://ggplot2.tidyverse.org/reference/element.html&#34; class=&#34;uri&#34;&gt;https://ggplot2.tidyverse.org/reference/element.html&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
