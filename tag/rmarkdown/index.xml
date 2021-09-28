@@ -29,10 +29,6 @@
 &lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;3.3. Texto&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#primer-informe-con-rmarkdown&#34;&gt;5. Primer informe con RMarkdown&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#paso-1.-exploremos-nuestros-datos&#34;&gt;Paso 1. Exploremos nuestros datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#paso-2.-visualicemos-nuestros-datos&#34;&gt;Paso 2. Visualicemos nuestros datos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -198,9 +194,29 @@ línea&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;h6 id=&#34;encabezado-6-texto&#34;&gt;Encabezado 6 | ###### texto&lt;/h6&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;primer-informe-con-rmarkdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;5. Primer informe con RMarkdown&lt;/h1&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Primer informe con RMarkdown</title>
+      <link>https://academic-demo.netlify.app/courses/intrmd/informe/</link>
+      <pubDate>Mon, 27 Sep 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/intrmd/informe/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#objetivo-del-informe&#34;&gt;Objetivo del informe&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#paso-1.-exploremos-nuestros-datos&#34;&gt;Paso 1. Exploremos nuestros datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#paso-2.-visualicemos-nuestros-datos&#34;&gt;Paso 2. Visualicemos nuestros datos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
 &lt;p&gt;Generemos un pequeño informe en el cuál aplicaremos los conocimientos que hemos aprendido sobre las librerías &lt;code&gt;dplyr&lt;/code&gt;, &lt;code&gt;ggplot2&lt;/code&gt; y &lt;code&gt;rmarkdown&lt;/code&gt;. En el informe se explorarán y visualizarán los los datos de la base de datos iris.&lt;/p&gt;
+&lt;div id=&#34;objetivo-del-informe&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Objetivo del informe&lt;/h1&gt;
+&lt;p&gt;El presente informe tiene por objetivo generar y documentar un gráfico de dispersión para las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt; contenidas en la base de datos &lt;strong&gt;iris&lt;/strong&gt;.&lt;/p&gt;
 &lt;div id=&#34;paso-1.-exploremos-nuestros-datos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Paso 1. Exploremos nuestros datos&lt;/h2&gt;
 &lt;p&gt;Utilizaremos el verbo &lt;code&gt;glimpse()&lt;/code&gt; de la librería dplyr para explorar la estructura de la base de datos iris. Recordemos que asignamos el nombre data a nuestra base de datos&lt;/p&gt;
@@ -237,7 +253,7 @@ glimpse(iris)
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/aspectos_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/informe_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>

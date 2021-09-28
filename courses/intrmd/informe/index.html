@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="Profesor Asistente" />
+  <meta name="description" content="Objetivo del informe Paso 1. Exploremos nuestros datos Paso 2. Visualicemos nuestros datos    Generemos un pequeño informe en el cuál aplicaremos los conocimientos que hemos aprendido sobre las librerías dplyr, ggplot2 y rmarkdown." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/category/r/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/intrmd/informe/" />
 
   
 
@@ -268,8 +268,6 @@
   
 
   
-    <link rel="alternate" href="/category/r/index.xml" type="application/rss+xml" title="Pablo Cortes" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -278,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/category/r/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/courses/intrmd/informe/" />
 
   
   
@@ -295,14 +293,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/category/r/" />
-  <meta property="og:title" content="R | Pablo Cortes" />
-  <meta property="og:description" content="Profesor Asistente" /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/courses/intrmd/informe/" />
+  <meta property="og:title" content="Primer informe con RMarkdown | Pablo Cortes" />
+  <meta property="og:description" content="Objetivo del informe Paso 1. Exploremos nuestros datos Paso 2. Visualicemos nuestros datos    Generemos un pequeño informe en el cuál aplicaremos los conocimientos que hemos aprendido sobre las librerías dplyr, ggplot2 y rmarkdown." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-09-27T21:13:14-05:00" />
+      <meta
+        property="article:published_time"
+        content="2021-09-27T21:13:14-05:00"
+      />
     
+    <meta property="article:modified_time" content="2021-09-27T21:13:14-05:00">
   
 
   
@@ -313,15 +315,17 @@
 
   
 
+  
 
 
 
 
-  <title>R | Pablo Cortes</title>
+
+  <title>Primer informe con RMarkdown | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   "  >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="8492a5cc792df2588475303c833311c3" >
 
   
   
@@ -548,7 +552,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/courses/"><span>R</span></a>
+          <a class="nav-link  active" href="/courses/"><span>R</span></a>
         </li>
 
         
@@ -680,7 +684,9 @@
   </div>
 
   <div class="page-body">
-    
+    <article class="article">
+
+  
 
 
 
@@ -698,62 +704,13 @@
   
   
   
-    
-  
-<div class="universal-wrapper pt-3">
-  <h1>R</h1>
+<div class="article-container pt-3">
+  <h1>Primer informe con RMarkdown</h1>
 
   
 
-  
-</div>
-
-
-
-<div class="universal-wrapper">
-  
-
-  
   
     
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/intrmd/aspectos/" >Aspectos generales</a>
-    </div>
-
-    
-    <a href="/courses/intrmd/aspectos/"  class="summary-link">
-      <div class="article-style">
-        1. ¿Como funciona? 2. Requisitos 3. Estructura del archivo .Rmd. 3.1. Encabezado YAML 3.2. Trozos (chunk) de código 3.3. Texto  4. Syntaxis   1. ¿Como funciona? Debemos comenzar abriendo un archivo R Markdown, un archivo de texto sin formato, que tiene la extensión .
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
 
 
 <div class="article-metadata">
@@ -791,389 +748,321 @@
 
 </div>
 
-      
-    </div>
-
     
 
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
+
+
+
+
+  
 </div>
 
-    
-  
-    
+
+
+  <div class="article-container">
+
+    <div class="article-style">
       
 
+<div id="TOC">
+<ul>
+<li><a href="#objetivo-del-informe">Objetivo del informe</a><ul>
+<li><a href="#paso-1.-exploremos-nuestros-datos">Paso 1. Exploremos nuestros datos</a></li>
+<li><a href="#paso-2.-visualicemos-nuestros-datos">Paso 2. Visualicemos nuestros datos</a></li>
+</ul></li>
+</ul>
+</div>
 
+<p>Generemos un pequeño informe en el cuál aplicaremos los conocimientos que hemos aprendido sobre las librerías <code>dplyr</code>, <code>ggplot2</code> y <code>rmarkdown</code>. En el informe se explorarán y visualizarán los los datos de la base de datos iris.</p>
+<div id="objetivo-del-informe" class="section level1">
+<h1>Objetivo del informe</h1>
+<p>El presente informe tiene por objetivo generar y documentar un gráfico de dispersión para las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong> contenidas en la base de datos <strong>iris</strong>.</p>
+<div id="paso-1.-exploremos-nuestros-datos" class="section level2">
+<h2>Paso 1. Exploremos nuestros datos</h2>
+<p>Utilizaremos el verbo <code>glimpse()</code> de la librería dplyr para explorar la estructura de la base de datos iris. Recordemos que asignamos el nombre data a nuestra base de datos</p>
+<p>Primero debemos asegurarnos de llamar a la librería <code>dplyr</code>. También explicitaremos el argumento <code>warming = FALSE</code> para que…</p>
+<p>Ahora, exploremos la estructura de nuestros datos:</p>
+<pre class="r"><code>library(dplyr)
+glimpse(iris)
+## Rows: 150
+## Columns: 5
+## $ Sepal.Length &lt;dbl&gt; 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4, 4…
+## $ Sepal.Width  &lt;dbl&gt; 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3…
+## $ Petal.Length &lt;dbl&gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1…
+## $ Petal.Width  &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0…
+## $ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, …</code></pre>
+</div>
+<div id="paso-2.-visualicemos-nuestros-datos" class="section level2">
+<h2>Paso 2. Visualicemos nuestros datos</h2>
+<p>Generemos un gráfico de dispersión con la función <code>geom_point ()</code> para las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong>.</p>
+<p>Primero debemos asegurarnos de llamar a la librería <code>ggplot2</code>.</p>
+<pre class="r"><code>library(ggplot2)</code></pre>
+<p>Recordemos que la sintáxis básica de <code>ggplot2</code> para generar un gráfico es:</p>
+<p><code>ggplot(data, mapping=aes(x,y))+ geom_function()</code></p>
+<p>Ahora, incorporemos un gráfico de dispersión a nuestro informe.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;,
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        legend.position = c(0.13, 0.85),
+        legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
+<p><img src="/courses/intrmd/informe_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/intrmd/informe/" >Primer informe con RMarkdown</a>
     </div>
 
     
-    <a href="/courses/intrmd/informe/"  class="summary-link">
-      <div class="article-style">
-        Objetivo del informe Paso 1. Exploremos nuestros datos Paso 2. Visualicemos nuestros datos    Generemos un pequeño informe en el cuál aplicaremos los conocimientos que hemos aprendido sobre las librerías dplyr, ggplot2 y rmarkdown.
-      </div>
-    </a>
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/rmarkdown/">RMarkdown</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
-
-    <div class="stream-meta article-metadata">
-
       
-
+      
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/intrmd/informe/&amp;text=Primer%20informe%20con%20RMarkdown" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
     
       
-    
-    Sep 27, 2021
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
-  
-
-</div>
-
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/ggplot2/scatterplot/" >Grafico de dispersión</a>
-    </div>
-
-    
-    <a href="/courses/ggplot2/scatterplot/"  class="summary-link">
-      <div class="article-style">
-        1. Definición 2. Sintáxis 3. Visualización 3.1. Límites de los ejes 3.1. Título y etiquetas 3.4. Tamaño de los puntos 3.5. Color de los puntos  4. Juntando todas las piezas 5.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/intrmd/informe/&amp;t=Primer%20informe%20con%20RMarkdown" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
     
       
-    
-    Sep 20, 2021
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
-  
-
-</div>
-
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/courses/bibliometrix/graficos/" >Grafico de torta</a>
-    </div>
-
-    
-    <a href="/courses/bibliometrix/graficos/"  class="summary-link">
-      <div class="article-style">
-        R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Primer%20informe%20con%20RMarkdown&amp;body=https://academic-demo.netlify.app/courses/intrmd/informe/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
     
       
-    
-    Dec 1, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
-  
-
-</div>
-
       
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/post/2020-12-01-r-rmarkdown/" >Hello R Markdown</a>
-    </div>
-
-    
-    <a href="/post/2020-12-01-r-rmarkdown/"  class="summary-link">
-      <div class="article-style">
-        R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
       
         
-
-
-<div class="article-metadata">
-
-  
-  
-
-  
-  <span class="article-date">
-    
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/intrmd/informe/&amp;title=Primer%20informe%20con%20RMarkdown" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
     
       
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Primer%20informe%20con%20RMarkdown%20https://academic-demo.netlify.app/courses/intrmd/informe/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
     
-    Dec 1, 2020
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    1 min read
-  </span>
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
-  
-
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/intrmd/informe/&amp;title=Primer%20informe%20con%20RMarkdown" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
       
+      <a href="https://academic-demo.netlify.app/"><img class="avatar mr-3 avatar-circle" src="/author/pablo-cortes-garcia/avatar_hu7d3b0da55c569d642c49bbbb65ab872a_84834_270x270_fill_q75_lanczos_center.jpeg" alt="Pablo Cortés García"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://academic-demo.netlify.app/">Pablo Cortés García</a></h5>
+      <h6 class="card-subtitle">Profesor Asistente</h6>
+      <p class="card-text">My research interests include distributed robotics, mobile computing and programmable matter.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Pablo_Cortes11" target="_blank" rel="noopener">
+        <i class="fab fa-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/PACortes" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/pablo-andr%c3%a9s-cort%c3%a9s-garc%c3%ada-1bb2511b3" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/pabcorgar/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
     </div>
+  </div>
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   </div>
-  <div class="ml-3">
-    
-    
-  </div>
-</div>
-
-    
-  
-
-  
-
-</div>
+</article>
   </div>
 
   <div class="page-footer">
