@@ -38,6 +38,24 @@
     <loc>https://academic-demo.netlify.app/courses/</loc>
     <lastmod>2021-09-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://academic-demo.netlify.app/categories/</loc>
+    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/ggplot/</loc>
+    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</loc>
+    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/category/r/</loc>
+    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tags/</loc>
+    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
+    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/courses/bibliometrix/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -65,16 +83,10 @@
     <loc>https://academic-demo.netlify.app/authors/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/categories/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/category/demo/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/author/pablo-cortes-garcia/</loc>
-    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tags/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/post/getting-started/</loc>
@@ -89,13 +101,7 @@
     <loc>https://academic-demo.netlify.app/category/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/ggplot2/graficos/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tag/ggplot/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/courses/intrmd/graficos/</loc>
+    <loc>https://academic-demo.netlify.app/courses/graficos/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/bibliometrix/graficos/</loc>
@@ -107,9 +113,6 @@
     <loc>https://academic-demo.netlify.app/tag/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/category/r/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/tag/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
@@ -117,9 +120,6 @@
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/rmarkdown/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/post/writing-technical-content/</loc>

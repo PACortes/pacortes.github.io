@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." />
+  <meta name="description" content="En este módulo vamos a visualizar nuestros datos usando el paquete ggplot2." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/" />
@@ -296,7 +296,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/" />
   <meta property="og:title" content="ggplot2: Visualización de datos | Pablo Cortes" />
-  <meta property="og:description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/ggplot2/featured.png" />
+  <meta property="og:description" content="En este módulo vamos a visualizar nuestros datos usando el paquete ggplot2." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/ggplot2/featured.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/courses/ggplot2/featured.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -750,7 +750,7 @@
       
 
 
-  <li class=""><a href="/courses/ggplot2/graficos/">Aspectos generales</a></li>
+  <li class=""><a href="/courses/ggplot2/scatterplot/">Grafico de dispersión</a></li>
 
       
         </ul>
@@ -778,7 +778,6 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#resumen">Resumen</a></li>
     <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
     <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
@@ -861,7 +860,6 @@
   <summary class="font-weight-bold">Table of Contents</summary>
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#resumen">Resumen</a></li>
     <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
     <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
@@ -869,26 +867,20 @@
 </nav>
 </details>
 
-<h2 id="resumen">Resumen</h2>
-<ul>
-<li>Fundamental <mark>Python programming skills</mark></li>
-<li><mark>Statistical concepts</mark> and how to apply them in practice</li>
-<li>Gain experience with the <mark>Scikit</mark>, including data visualization with <mark>Plotly</mark> and data wrangling with <mark>Pandas</mark></li>
-</ul>
 <h2 id="qué-es-ggplot2">¿Qué es ggplot2?</h2>
 <p>ggplot2 es un paquete de visualización altamente versátil que permite crear gráficos elegantes y atractivos.</p>
 <p>El paquete ggplot2 implementa un único sistema para describir y construir gráficos, el cuál funciona en capas (se agrega una a una) y se aplica a diferentes tipos de visualizaciones.</p>
 <p>En general, ggplot2 divide un gráfico (plot) en tres partes fundamentales diferentes:</p>
-<pre><code class="language-r">ggplot(data = MisDatos, mapping=aes(x=Variable1, y =Variable2))+ geom_function()
-</code></pre>
+<p>La sintáxis básica de ggplot2 para generar un gráfico es:</p>
+<p><code>ggplot(data, mapping=aes(x,y))+ geom_function()</code></p>
 <h2 id="visualizaciones-a-realizar">Visualizaciones a realizar</h2>
 
 
   <ul class="list-unstyled">
     
       <li>
-        <h5><a href="/courses/ggplot2/graficos/">Aspectos generales</a></h5>
-        <p>1. ¿Como funciona? 2. Requisitos 3. Estructura del archivo .Rmd. 3.1. Encabezado YAML 3.2. Texto 3.3. ### Trozos (chunk) de código 4. Syntaxis    1. ¿Como funciona?</p>
+        <h5><a href="/courses/ggplot2/scatterplot/">Grafico de dispersión</a></h5>
+        <p>1. Definición 2. Sintáxis 3. Visualización 3.1. Límites de los ejes 3.1. Título y etiquetas 3.4. Tamaño de los puntos 3.5. Color de los puntos  4. Juntando todas las piezas 5.</p>
       </li>
     
   </ul>

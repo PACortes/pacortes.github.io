@@ -5,7 +5,7 @@
     <link>https://academic-demo.netlify.app/tag/visualizacion/</link>
       <atom:link href="https://academic-demo.netlify.app/tag/visualizacion/index.xml" rel="self" type="application/rss+xml" />
     <description>Visualización</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 20 Sep 2021 21:13:14 -0500</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Visualización</title>
@@ -14,9 +14,9 @@
     
     <item>
       <title>Grafico de dispersión</title>
-      <link>https://academic-demo.netlify.app/courses/intrmd/graficos/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/intrmd/graficos/</guid>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</link>
+      <pubDate>Mon, 20 Sep 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -57,7 +57,7 @@
 &lt;h1&gt;3. Visualización&lt;/h1&gt;
 &lt;p&gt;Generemos un gráfico de dispersión con las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;límites-de-los-ejes&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3.1. Límites de los ejes&lt;/h2&gt;
 &lt;p&gt;Ahora&lt;/p&gt;
@@ -68,7 +68,7 @@
 labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
        x=&amp;quot;Largo de Pétalo (cms)&amp;quot;,
        y=&amp;quot;Ancho de Pétalo (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;título-y-etiquetas&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3.1. Título y etiquetas&lt;/h2&gt;
@@ -78,7 +78,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
   labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
        x=&amp;quot;Largo de Pétalo (cms)&amp;quot;,
        y=&amp;quot;Ancho de Pétalo (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ahora, aumentemos el tamaños de las letras de títulos (y su color) y etiquetas con a función &lt;code&gt;theme()&lt;/code&gt;, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;theme()&lt;/code&gt; incluye dos componentes principales:&lt;/p&gt;
 &lt;ul&gt;
@@ -103,7 +103,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25,colour=&amp;quot;darkblue&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3.4. Tamaño de los puntos&lt;/h2&gt;
@@ -119,7 +119,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión &lt;code&gt;aes()&lt;/code&gt; dentro de &lt;code&gt;geom_point()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(size=Petal.Length&amp;gt;2.5))+
@@ -132,7 +132,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))
 ## Warning: Using size for a discrete variable is not advised.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;También, podemos&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;color-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
@@ -148,7 +148,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;De acuerdo a categorías en otra variable.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
@@ -160,7 +160,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
 De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
 &lt;p&gt;Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -174,7 +174,7 @@ De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
@@ -190,7 +190,7 @@ De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         legend.title = element_text(size = 15),
         legend.text = element_text(size = 12))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
@@ -208,7 +208,7 @@ De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/graficos_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;5. Referencias&lt;/h1&gt;
