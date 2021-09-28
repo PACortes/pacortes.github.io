@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="R Markdown Los gráficos de dispersión se utilizan para observar asociación entre dos variablesnuméricas diferentes.
+  <meta name="description" content="Gráfico de Dispersión Los gráficos de dispersión (scatterplot en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.
 La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental." />
 
   
@@ -295,8 +295,8 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/graficos/" />
-  <meta property="og:title" content="Grafico de torta | Pablo Cortes" />
-  <meta property="og:description" content="R Markdown Los gráficos de dispersión se utilizan para observar asociación entre dos variablesnuméricas diferentes.
+  <meta property="og:title" content="Grafico de dispersión | Pablo Cortes" />
+  <meta property="og:description" content="Gráfico de Dispersión Los gráficos de dispersión (scatterplot en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.
 La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -323,7 +323,7 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
 
 
 
-  <title>Grafico de torta | Pablo Cortes</title>
+  <title>Grafico de dispersión | Pablo Cortes</title>
 </head>
 
 
@@ -707,7 +707,7 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
   
   
 <div class="article-container pt-3">
-  <h1>Grafico de torta</h1>
+  <h1>Grafico de dispersión</h1>
 
   
 
@@ -767,46 +767,112 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
       
 
 
-<div id="r-markdown" class="section level1">
-<h1>R Markdown</h1>
-<p>Los gráficos de dispersión se utilizan para observar asociación entre dos variablesnuméricas diferentes.</p>
+<div id="gráfico-de-dispersión" class="section level1">
+<h1>Gráfico de Dispersión</h1>
+<p>Los gráficos de dispersión (scatterplot en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.</p>
 <p>La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.</p>
-<p>Este tipo de gráfico permite responder preguntas sobre los datos, por ejemplo: ¿cuál es la relación entre dos variables? ¿Cómo se distribuyen los datos? ¿Dónde están los valores atípicos?</p>
-<p>You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932</code></pre>
 </div>
-<div id="grafico" class="section level1">
-<h1>Grafico</h1>
-<p>You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:</p>
-<pre class="r"><code>par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
-  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
-  init.angle = -50, border = NA
-)</code></pre>
-<div class="figure"><span style="display:block;" id="fig:pie"></span>
-<img src="/courses/ggplot2/graficos_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">
-Figure 1: A fancy pie chart.
-</p>
+<div id="datos" class="section level1">
+<h1>Datos</h1>
 </div>
+<div id="cargando-la-librería" class="section level1">
+<h1>Cargando la librería</h1>
+<pre class="r"><code>library(ggplot2)</code></pre>
+</div>
+<div id="visualización" class="section level1">
+<h1>Visualización</h1>
+<p>A continuación,</p>
+<pre class="r"><code>ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Mejoremos nuestro gráfico. Para ello, modificaremos algúnos parámetros gráficos, como</p>
+<p>Ajustemos el título del gráfico y de los ejes</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point()+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       x=&quot;Largo de Pétalo (cms)&quot;,
+       y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>Ajustemos el título del gráfico y de los ejes</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point()+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25,colour=&quot;maroon&quot;))</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Ajustemos el tamaño y color de los puntos</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(col=&quot;steelblue&quot;, size=2.5)+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        plot.subtitle=element_text(size=20))</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Ajustemos el color de los puntos de acuerdo a categorías en otra variable</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        plot.subtitle=element_text(size=20))</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        plot.subtitle=element_text(size=20))</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Mi primer gráfico en R&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        legend.position = c(0.13, 0.85),
+        legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
+        legend.title = element_text(size = 15),
+        legend.text = element_text(size = 12))</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Finalmente</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Petalo&quot;,
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        legend.position = c(0.13, 0.85),
+        legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 
     </div>
@@ -839,7 +905,7 @@ Figure 1: A fancy pie chart.
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;text=Grafico%20de%20torta" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;text=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -852,7 +918,7 @@ Figure 1: A fancy pie chart.
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;t=Grafico%20de%20torta" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;t=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -865,7 +931,7 @@ Figure 1: A fancy pie chart.
       
       
       <li>
-        <a href="mailto:?subject=Grafico%20de%20torta&amp;body=https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Grafico%20de%20dispersi%c3%b3n&amp;body=https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -878,7 +944,7 @@ Figure 1: A fancy pie chart.
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Grafico%20de%20torta" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -891,7 +957,7 @@ Figure 1: A fancy pie chart.
       
       
       <li>
-        <a href="whatsapp://send?text=Grafico%20de%20torta%20https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Grafico%20de%20dispersi%c3%b3n%20https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -904,7 +970,7 @@ Figure 1: A fancy pie chart.
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Grafico%20de%20torta" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
