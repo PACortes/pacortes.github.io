@@ -95,9 +95,6 @@
     <loc>https://academic-demo.netlify.app/courses/ggplot2/graficos/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/rmarkdown/graficos/</loc>
-    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/courses/bibliometrix/graficos/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
@@ -114,6 +111,9 @@
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/regression/</loc>
+    <lastmod>2020-12-01T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/courses/rmarkdown/graficos/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
