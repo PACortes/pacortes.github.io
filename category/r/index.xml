@@ -22,13 +22,13 @@
 
 &lt;p&gt;Los gráficos de dispersión (&lt;em&gt;scatterplot&lt;/em&gt; en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.&lt;/p&gt;
 &lt;p&gt;La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.&lt;/p&gt;
-&lt;div id=&#34;cargando-la-librería&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Cargando la librería&lt;/h2&gt;
+&lt;div id=&#34;cargando-la-librería&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Cargando la librería&lt;/h1&gt;
 &lt;p&gt;Para comenzar, carguemos la libreía ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Sintáxis&lt;/h1&gt;
+&lt;h1&gt;2.Sintáxis&lt;/h1&gt;
 &lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_point()&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;En donde:&lt;/p&gt;
@@ -38,14 +38,14 @@
 &lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;geom_point()&lt;/code&gt;: Especifica que queremos generar un gráfico de dispersión.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Visualización&lt;/h1&gt;
-&lt;p&gt;Ahora, generemos un gráfico de dispersión con las variables &lt;em&gt;Petal.Length&lt;/em&gt; y &lt;em&gt;Petal.Width&lt;/em&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Visualización
+Ahora, generemos un gráfico de dispersión con las variables &lt;em&gt;Petal.Length&lt;/em&gt; y &lt;em&gt;Petal.Width&lt;/em&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;título-y-etiquetas&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Título y etiquetas&lt;/h2&gt;
+&lt;h2&gt;3.1 Título y etiquetas&lt;/h2&gt;
 &lt;p&gt;Ajustemos el título del gráfico las etiquetas de los ejes con la función &lt;code&gt;labs()&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
@@ -55,7 +55,7 @@
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;límites-de-los-ejes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Límites de los ejes&lt;/h2&gt;
+&lt;h2&gt;3.2 Límites de los ejes&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
   xlim(c(0, 8))+
@@ -66,7 +66,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;título-y-etiquetas-tamaño-de-las-letras&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Título y etiquetas: tamaño de las letras&lt;/h2&gt;
+&lt;h2&gt;3.3 Título y etiquetas: tamaño de las letras&lt;/h2&gt;
 &lt;p&gt;Ahora, aumentemos el tamaños de las letras de títulos (y su color) y etiquetas con a función &lt;code&gt;theme()&lt;/code&gt;, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;theme()&lt;/code&gt; incluye dos componentes principales:&lt;/p&gt;
 &lt;ul&gt;
@@ -94,7 +94,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Tamaño de los puntos&lt;/h2&gt;
+&lt;h2&gt;3.4 Tamaño de los puntos&lt;/h2&gt;
 &lt;p&gt;Para cambiar el tamaño de los puntos (aumentar o disminuir), utilizamos la función &lt;code&gt;size =&lt;/code&gt;(valor por defecto:0.5) dentro de &lt;code&gt;geom_point()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, podemos especificar que todos los puntos tendrán un diamtero de 2.5&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -121,10 +121,10 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         plot.subtitle=element_text(size=20))
 ## Warning: Using size for a discrete variable is not advised.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;También, podemos
-## Color de los puntos&lt;/p&gt;
-&lt;div id=&#34;método-1&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Método 1:&lt;/h3&gt;
+&lt;p&gt;También, podemos&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;color-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.5 Color de los puntos&lt;/h2&gt;
 &lt;p&gt;Ajustemos el tamaño y color de los puntos&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(col=&amp;quot;steelblue&amp;quot;, size=2.5)+
@@ -137,9 +137,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;método-2-de-acuerdo-a-categorías-en-otra-variable.&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Método 2: De acuerdo a categorías en otra variable.&lt;/h3&gt;
+&lt;p&gt;De acuerdo a categorías en otra variable.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
   xlim(c(0, 8))+
@@ -151,7 +149,7 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;
-### Método 2: De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
+De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
 &lt;p&gt;Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
@@ -181,7 +179,9 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         legend.title = element_text(size = 15),
         legend.text = element_text(size = 12))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Finalmente&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;finalmente&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.6 Finalmente…&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
   scale_colour_manual(values=c(&amp;quot;#BC3C29FF&amp;quot;, &amp;quot;#0072B5FF&amp;quot;,&amp;quot;#E18727FF&amp;quot;))+
@@ -197,7 +197,6 @@ labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Theme elements [&lt;a href=&#34;https://ggplot2.tidyverse.org/reference/element.html&#34; class=&#34;uri&#34;&gt;https://ggplot2.tidyverse.org/reference/element.html&lt;/a&gt;]&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
