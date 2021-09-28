@@ -5,9 +5,9 @@
     <link>https://academic-demo.netlify.app/courses/example/</link>
       <atom:link href="https://academic-demo.netlify.app/courses/example/index.xml" rel="self" type="application/rss+xml" />
     <description>rmarkdown: informes reproducibles</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 24 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://academic-demo.netlify.app/courses/example/featured.jpg</url>
+      <url>https://academic-demo.netlify.app/courses/example/featured.png</url>
       <title>rmarkdown: informes reproducibles</title>
       <link>https://academic-demo.netlify.app/courses/example/</link>
     </image>
