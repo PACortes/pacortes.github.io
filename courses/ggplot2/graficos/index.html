@@ -777,11 +777,11 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
 <div id="sintáxis" class="section level1">
 <h1>Sintáxis</h1>
 <p>La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:</p>
-<p><code>ggplot(data=, mapping=aes(x=,y=))+ geom_point()</code></p>
+<p><code>ggplot(data, mapping=aes(x,y))+ geom_point()</code></p>
 <p>En donde:</p>
 <p>You first pass the dataset mtcars to ggplot.</p>
-<p>*<code>data</code>: es la base de datos.</p>
 <ul>
+<li><p><code>data</code>: es la base de datos.</p></li>
 <li><p><code>aes()</code>: especifica las variables en los ejes x e y.</p></li>
 <li><p><code>+</code>: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.</p></li>
 <li><p><code>geom_point()</code>: Especifica que queremos generar un gráfico de dispersión.</p></li>
@@ -789,11 +789,12 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
 </div>
 <div id="visualización" class="section level1">
 <h1>Visualización</h1>
-<p>Ahora, generemos un gráfico de dispersión con las variables * <em>Petal.Length</em> y * <em>Petal.Width</em> de la base de datos <code>iris</code>.</p>
+<p>Ahora, generemos un gráfico de dispersión con las variables <em>Petal.Length</em> y <em>Petal.Width</em> de la base de datos <code>iris</code>.</p>
 <pre class="r"><code>ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png" width="672" />
-## Título y etiquetas
-Ajustemos el título del gráfico las etiquetas de los ejes con la función <code>labs()</code>:</p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="título-y-etiquetas" class="section level2">
+<h2>Título y etiquetas</h2>
+<p>Ajustemos el título del gráfico las etiquetas de los ejes con la función <code>labs()</code>:</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
   xlim(c(0, 8))+
@@ -801,8 +802,10 @@ Ajustemos el título del gráfico las etiquetas de los ejes con la función <c
   labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
        x=&quot;Largo de Pétalo (cms)&quot;,
        y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png" width="672" />
-## Título y etiquetas: tamañao de fuente</p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="título-y-etiquetas-tamañao-de-fuente" class="section level2">
+<h2>Título y etiquetas: tamañao de fuente</h2>
 <p>Ahora, aumentemos el tamaños de las fuentes de títulos (y su color) y etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
 <p><code>theme()</code> incluye dos componentes principales:</p>
 <ul>
@@ -887,6 +890,7 @@ Ajustemos el título del gráfico las etiquetas de los ejes con la función <c
         legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
 </div>
 
     </div>

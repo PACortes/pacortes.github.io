@@ -30,11 +30,11 @@
 &lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Sintáxis&lt;/h1&gt;
 &lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ggplot(data=, mapping=aes(x=,y=))+ geom_point()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_point()&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;En donde:&lt;/p&gt;
 &lt;p&gt;You first pass the dataset mtcars to ggplot.&lt;/p&gt;
-&lt;p&gt;*&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;geom_point()&lt;/code&gt;: Especifica que queremos generar un gráfico de dispersión.&lt;/p&gt;&lt;/li&gt;
@@ -42,11 +42,12 @@
 &lt;/div&gt;
 &lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Visualización&lt;/h1&gt;
-&lt;p&gt;Ahora, generemos un gráfico de dispersión con las variables * &lt;em&gt;Petal.Length&lt;/em&gt; y * &lt;em&gt;Petal.Width&lt;/em&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Ahora, generemos un gráfico de dispersión con las variables &lt;em&gt;Petal.Length&lt;/em&gt; y &lt;em&gt;Petal.Width&lt;/em&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;
-## Título y etiquetas
-Ajustemos el título del gráfico las etiquetas de los ejes con la función &lt;code&gt;labs()&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;título-y-etiquetas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Título y etiquetas&lt;/h2&gt;
+&lt;p&gt;Ajustemos el título del gráfico las etiquetas de los ejes con la función &lt;code&gt;labs()&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
   xlim(c(0, 8))+
@@ -54,8 +55,10 @@ Ajustemos el título del gráfico las etiquetas de los ejes con la función &l
   labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
        x=&amp;quot;Largo de Pétalo (cms)&amp;quot;,
        y=&amp;quot;Ancho de Pétalo (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;
-## Título y etiquetas: tamañao de fuente&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;título-y-etiquetas-tamañao-de-fuente&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Título y etiquetas: tamañao de fuente&lt;/h2&gt;
 &lt;p&gt;Ahora, aumentemos el tamaños de las fuentes de títulos (y su color) y etiquetas con a función &lt;code&gt;theme()&lt;/code&gt;, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;theme()&lt;/code&gt; incluye dos componentes principales:&lt;/p&gt;
 &lt;ul&gt;
@@ -140,6 +143,7 @@ Ajustemos el título del gráfico las etiquetas de los ejes con la función &l
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
