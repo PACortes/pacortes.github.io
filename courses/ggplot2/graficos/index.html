@@ -779,7 +779,6 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
 <p>La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:</p>
 <p><code>ggplot(data, mapping=aes(x,y))+ geom_point()</code></p>
 <p>En donde:</p>
-<p>You first pass the dataset mtcars to ggplot.</p>
 <ul>
 <li><p><code>data</code>: es la base de datos.</p></li>
 <li><p><code>aes()</code>: especifica las variables en los ejes x e y.</p></li>
@@ -797,20 +796,38 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
 <p>Ajustemos el título del gráfico las etiquetas de los ejes con la función <code>labs()</code>:</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
   labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
        x=&quot;Largo de Pétalo (cms)&quot;,
        y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
 <p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
-<div id="título-y-etiquetas-tamañao-de-fuente" class="section level2">
-<h2>Título y etiquetas: tamañao de fuente</h2>
-<p>Ahora, aumentemos el tamaños de las fuentes de títulos (y su color) y etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
+<div id="límites-de-los-ejes" class="section level2">
+<h2>Límites de los ejes</h2>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point()+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       x=&quot;Largo de Pétalo (cms)&quot;,
+       y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="título-y-etiquetas-tamaño-de-las-letras" class="section level2">
+<h2>Título y etiquetas: tamaño de las letras</h2>
+<p>Ahora, aumentemos el tamaños de las letras de títulos (y su color) y etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
 <p><code>theme()</code> incluye dos componentes principales:</p>
 <ul>
 <li><p><strong>Elementos del tema</strong>: especifica los elementos que queremos controlar.Por ejemplo, <code>plot.title</code> controla la apariencia del título.</p></li>
-<li><p><strong>Función del tema</strong><code>+</code>: describe la propiedad visual del elemento que queremos controlar.Por ejemplo, <code>element_text()</code> establece el tamaño de fuente, el color, entre otros.</p></li>
+<li><p><strong>Función del tema</strong>: describe la propiedad visual del elemento que queremos controlar.Por ejemplo, <code>element_text()</code> establece el tamaño de fuente, el color, entre otros:</p>
+<ul>
+<li><p>Para cambiar el tamaño de un elemento, utilizamos la función <code>size =</code>.</p></li>
+<li><p>Para cambiar el color de un elemento, utilizamos la función <code>color =</code>.</p></li>
+<li><p>Para cambiar la familia de letra de un elemento, utilizamos <code>family =</code>.</p></li>
+<li><p>Para cambiar el tipo de letra de un elemento, utilizamos <code>face =</code>.</p>
+<ul>
+<li>Para cambiar el tipo de línea, utilizamos <code>linetype =</code>.</li>
+</ul></li>
+</ul></li>
 </ul>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
@@ -821,7 +838,40 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25,colour=&quot;darkblue&quot;))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="tamaño-de-los-puntos" class="section level2">
+<h2>Tamaño de los puntos</h2>
+<p>Para cambiar el tamaño de los puntos (aumentar o disminuir), utilizamos la función <code>size =</code>(valor por defecto:0.5) dentro de <code>geom_point()</code>.</p>
+<p>Por ejemplo, podemos especificar que todos los puntos tendrán un diamtero de 2.5</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(size=2.5)+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        plot.subtitle=element_text(size=20))</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión <code>aes()</code> dentro de <code>geom_point()</code>.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(size=Petal.Length&gt;2.5))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        plot.subtitle=element_text(size=20))
+## Warning: Using size for a discrete variable is not advised.</code></pre>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>También, podemos
+## Color de los puntos</p>
+<div id="método-1" class="section level3">
+<h3>Método 1:</h3>
 <p>Ajustemos el tamaño y color de los puntos</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(col=&quot;steelblue&quot;, size=2.5)+
@@ -833,8 +883,10 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>Ajustemos el color de los puntos de acuerdo a categorías en otra variable</p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="método-2-de-acuerdo-a-categorías-en-otra-variable." class="section level3">
+<h3>Método 2: De acuerdo a categorías en otra variable.</h3>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
   xlim(c(0, 8))+
@@ -845,7 +897,8 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-9-1.png" width="672" />
+### Método 2: De acuerdo a categorías en otra variable con valores específicos.</p>
 <p>Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
@@ -858,7 +911,7 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
@@ -874,7 +927,7 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
         legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
         legend.title = element_text(size = 15),
         legend.text = element_text(size = 12))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <p>Finalmente</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
@@ -889,7 +942,9 @@ La posición de cada punto en el eje horizontal y vertical indica valores para u
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>Theme elements [<a href="https://ggplot2.tidyverse.org/reference/element.html" class="uri">https://ggplot2.tidyverse.org/reference/element.html</a>]</p>
+</div>
 </div>
 </div>
 
