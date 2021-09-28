@@ -732,7 +732,7 @@ library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/RMarkdown/Rmarkdown_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/rmarkdown/rmarkdown_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -1076,7 +1076,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-769584213&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-652734981&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -1086,7 +1086,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-769584213&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-652734981&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
