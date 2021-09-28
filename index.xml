@@ -269,6 +269,10 @@ The variance of the distribution is $\sigma^{2}$.
 &lt;li&gt;&lt;a href=&#34;#trozos-chunk-de-código&#34;&gt;3.3. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#primer-informe-con-rmarkdown&#34;&gt;5. Primer informe con RMarkdown&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#paso-1.-exploremos-nuestros-datos&#34;&gt;Paso 1. Exploremos nuestros datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#paso-2.-visualicemos-nuestros-datos&#34;&gt;Paso 2. Visualicemos nuestros datos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -419,6 +423,48 @@ respuesta
 &lt;li&gt;&lt;h5 id=&#34;encabezado-5-texto&#34;&gt;Encabezado 5 | ##### texto&lt;/h5&gt;&lt;/li&gt;
 &lt;li&gt;&lt;h6 id=&#34;encabezado-6-texto&#34;&gt;Encabezado 6 | ###### texto&lt;/h6&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;primer-informe-con-rmarkdown&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5. Primer informe con RMarkdown&lt;/h1&gt;
+&lt;p&gt;Generemos un pequeño informe en el cuál aplicaremos los conocimientos que hemos aprendido sobre las librerías &lt;code&gt;dplyr&lt;/code&gt;, &lt;code&gt;ggplot2&lt;/code&gt; y &lt;code&gt;rmarkdown&lt;/code&gt;. En el informe se explorarán y visualizarán los los datos de la base de datos iris.&lt;/p&gt;
+&lt;div id=&#34;paso-1.-exploremos-nuestros-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Paso 1. Exploremos nuestros datos&lt;/h2&gt;
+&lt;p&gt;Utilizaremos el verbo &lt;code&gt;glimpse()&lt;/code&gt; de la librería dplyr para explorar la estructura de la base de datos iris. Recordemos que asignamos el nombre data a nuestra base de datos&lt;/p&gt;
+&lt;p&gt;Primero debemos asegurarnos de llamar a la librería &lt;code&gt;dplyr&lt;/code&gt;. También explicitaremos el argumento &lt;code&gt;warming = FALSE&lt;/code&gt; para que…&lt;/p&gt;
+&lt;p&gt;Ahora, exploremos la estructura de nuestros datos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+glimpse(iris)
+## Rows: 150
+## Columns: 5
+## $ Sepal.Length &amp;lt;dbl&amp;gt; 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4, 4…
+## $ Sepal.Width  &amp;lt;dbl&amp;gt; 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3…
+## $ Petal.Length &amp;lt;dbl&amp;gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1…
+## $ Petal.Width  &amp;lt;dbl&amp;gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0…
+## $ Species      &amp;lt;fct&amp;gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, …&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;paso-2.-visualicemos-nuestros-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Paso 2. Visualicemos nuestros datos&lt;/h2&gt;
+&lt;p&gt;Generemos un gráfico de dispersión con la función &lt;code&gt;geom_point ()&lt;/code&gt; para las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Primero debemos asegurarnos de llamar a la librería &lt;code&gt;ggplot2&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Recordemos que la sintáxis básica de &lt;code&gt;ggplot2&lt;/code&gt; para generar un gráfico es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_function()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ahora, incorporemos un gráfico de dispersión a nuestro informe.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&amp;quot;#BC3C29FF&amp;quot;, &amp;quot;#0072B5FF&amp;quot;,&amp;quot;#E18727FF&amp;quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;,
+       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        legend.position = c(0.13, 0.85),
+        legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/intrmd/aspectos_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -847,7 +893,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-589164732&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-986453721&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -857,7 +903,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-589164732&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-986453721&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
