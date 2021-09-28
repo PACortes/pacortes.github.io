@@ -349,28 +349,33 @@ The variance of the distribution is $\sigma^{2}$.
       <description>
 
 
-&lt;p&gt;Los gráficos de dispersión (scatterplot en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.&lt;/p&gt;
+&lt;p&gt;Los gráficos de dispersión (&lt;em&gt;scatterplot&lt;/em&gt; en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.&lt;/p&gt;
 &lt;p&gt;La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.&lt;/p&gt;
 &lt;div id=&#34;cargando-la-librería&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Cargando la librería&lt;/h2&gt;
 &lt;p&gt;Para comenzar, carguemos la libreía ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;visualización&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Visualización&lt;/h2&gt;
-&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de dipersión es&lt;/p&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ggplot(data=, mapping=aes(x=,y=))+ geom_point()&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;En donde:&lt;/p&gt;
-&lt;p&gt;You first pass the dataset mtcars to ggplot.
-+ &lt;code&gt;data&lt;/code&gt;: es la base de datos.
-+ &lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.
-+ &lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.
-+ &lt;code&gt;geom_point()&lt;/code&gt;: Especifica que queremos generar un gráfico de dispersión.&lt;/p&gt;
-&lt;p&gt;Ahora, generemos un gráfico de dispersión con las variables &lt;code&gt;Petal.Length&lt;/code&gt;, y =&lt;code&gt;Petal.Width&lt;/code&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;You first pass the dataset mtcars to ggplot.&lt;/p&gt;
+&lt;p&gt;*&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_point()&lt;/code&gt;: Especifica que queremos generar un gráfico de dispersión.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Visualización&lt;/h1&gt;
+&lt;p&gt;Ahora, generemos un gráfico de dispersión con las variables * &lt;em&gt;Petal.Length&lt;/em&gt; y * &lt;em&gt;Petal.Width&lt;/em&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Mejoremos nuestro gráfico. Para ello, modificaremos algúnos parámetros gráficos, como&lt;/p&gt;
-&lt;p&gt;Ajustemos el título del gráfico y de los ejes&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;
+## Título y etiquetas
+Ajustemos el título del gráfico las etiquetas de los ejes con la función &lt;code&gt;labs()&lt;/code&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
   xlim(c(0, 8))+
@@ -378,8 +383,14 @@ The variance of the distribution is $\sigma^{2}$.
   labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
        x=&amp;quot;Largo de Pétalo (cms)&amp;quot;,
        y=&amp;quot;Ancho de Pétalo (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Ajustemos el título del gráfico y de los ejes&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;
+## Título y etiquetas: tamañao de fuente&lt;/p&gt;
+&lt;p&gt;Ahora, aumentemos el tamaños de las fuentes de títulos (y su color) y etiquetas con a función &lt;code&gt;theme()&lt;/code&gt;, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;theme()&lt;/code&gt; incluye dos componentes principales:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Elementos del tema&lt;/strong&gt;: especifica los elementos que queremos controlar.Por ejemplo, &lt;code&gt;plot.title&lt;/code&gt; controla la apariencia del título.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Función del tema&lt;/strong&gt;&lt;code&gt;+&lt;/code&gt;: describe la propiedad visual del elemento que queremos controlar.Por ejemplo, &lt;code&gt;element_text()&lt;/code&gt; establece el tamaño de fuente, el color, entre otros.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
   xlim(c(0, 8))+
@@ -388,7 +399,7 @@ The variance of the distribution is $\sigma^{2}$.
        y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25,colour=&amp;quot;maroon&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+        plot.title=element_text(size=25,colour=&amp;quot;darkblue&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Ajustemos el tamaño y color de los puntos&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -590,7 +601,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-439827156&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-685249317&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -600,7 +611,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-439827156&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-685249317&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
