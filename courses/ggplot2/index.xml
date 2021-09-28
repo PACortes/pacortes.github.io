@@ -20,21 +20,24 @@
       <description>
 
 
-&lt;div id=&#34;gráfico-de-dispersión&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Gráfico de Dispersión&lt;/h1&gt;
 &lt;p&gt;Los gráficos de dispersión (scatterplot en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.&lt;/p&gt;
 &lt;p&gt;La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Datos&lt;/h1&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cargando-la-librería&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Cargando la librería&lt;/h1&gt;
+&lt;div id=&#34;cargando-la-librería&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cargando la librería&lt;/h2&gt;
+&lt;p&gt;Para comenzar, carguemos la libreía ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Visualización&lt;/h1&gt;
-&lt;p&gt;A continuación,&lt;/p&gt;
+&lt;div id=&#34;visualización&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Visualización&lt;/h2&gt;
+&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de dipersión es&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data=, mapping=aes(x=,y=))+ geom_point()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;p&gt;You first pass the dataset mtcars to ggplot.
++ &lt;code&gt;data&lt;/code&gt;: es la base de datos.
++ &lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.
++ &lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.
++ &lt;code&gt;geom_point()&lt;/code&gt;: Especifica que queremos generar un gráfico de dispersión.&lt;/p&gt;
+&lt;p&gt;Ahora, generemos un gráfico de dispersión con las variables &lt;code&gt;Petal.Length&lt;/code&gt;, y =&lt;code&gt;Petal.Width&lt;/code&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Mejoremos nuestro gráfico. Para ello, modificaremos algúnos parámetros gráficos, como&lt;/p&gt;
