@@ -5,7 +5,7 @@
     <link>https://academic-demo.netlify.app/tag/rmarkdown/</link>
       <atom:link href="https://academic-demo.netlify.app/tag/rmarkdown/index.xml" rel="self" type="application/rss+xml" />
     <description>RMarkdown</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 27 Sep 2021 21:13:14 -0500</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>RMarkdown</title>
@@ -14,9 +14,9 @@
     
     <item>
       <title>Aspectos generales</title>
-      <link>https://academic-demo.netlify.app/courses/graficos/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/graficos/</guid>
+      <link>https://academic-demo.netlify.app/courses/intrmd/aspectos/</link>
+      <pubDate>Mon, 27 Sep 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/intrmd/aspectos/</guid>
       <description>
 
 &lt;div id=&#34;TOC&#34;&gt;
@@ -24,11 +24,11 @@
 &lt;li&gt;&lt;a href=&#34;#como-funciona&#34;&gt;1. ¿Como funciona?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#requisitos&#34;&gt;2. Requisitos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#estructura-del-archivo-.rmd.&#34;&gt;3. Estructura del archivo &lt;code&gt;.Rmd&lt;/code&gt;.&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#encabezado-yaml&#34;&gt;3.1. &lt;strong&gt;Encabezado YAML&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;3.2. &lt;strong&gt;Texto&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#trozos-chunk-de-código&#34;&gt;3.3. ### &lt;strong&gt;Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#encabezado-yaml&#34;&gt;3.1. Encabezado YAML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;3.2. Texto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#trozos-chunk-de-código&#34;&gt;3.3. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -53,9 +53,8 @@
 &lt;li&gt;RStudio &lt;a href=&#34;https://rstudio.com&#34; class=&#34;uri&#34;&gt;https://rstudio.com&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Instalar los paquetes &lt;code&gt;knitr&lt;/code&gt; y &lt;code&gt;rmarkdown&lt;/code&gt;. Podemos instalar cada paquete desde el CRAN con:&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(&amp;quot;rmarkdown&amp;quot;)
-library(rmarkdown)
-#install.packages(&amp;quot;knitr&amp;quot;)
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rmarkdown)
+
 library(knitr)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;El paquete &lt;code&gt;Knitr&lt;/code&gt; integra en un sólo archivo markdown el texto ingresado en formato RMarkdown y los resultados de la ejecución de los códigos construidos mediante R.&lt;/p&gt;
 &lt;ol start=&#34;4&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
@@ -66,16 +65,9 @@ library(knitr)&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;3. Estructura del archivo &lt;code&gt;.Rmd&lt;/code&gt;.&lt;/h1&gt;
 &lt;p&gt;Cuando se utiliza el botón de &lt;code&gt;Knit&lt;/code&gt; se generan documentos los cuales contienen sintaxis en markdown con codigos de R en &lt;em&gt;chunks&lt;/em&gt;.&lt;/p&gt;
 &lt;div id=&#34;encabezado-yaml&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.1. &lt;strong&gt;Encabezado YAML&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2&gt;3.1. Encabezado YAML&lt;/h2&gt;
 &lt;p&gt;El encabezado YAML (en inglés &lt;em&gt;yet another markup language&lt;/em&gt;) determina los parámetros generales de formato para el documento a generar. Es importante tener presente que este encabezado define el formato del archivo resultante, más no su contenido.&lt;/p&gt;
 &lt;p&gt;El encabezado comienza y termina con tres rayas (- - -). Veamos el siguiente ejemplo que incluye algunos parámetros (existen muchos más) que definirán el formato del documento:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: &amp;quot;Título del documento&amp;quot;
-author: &amp;quot;Quien desarrolla el documento&amp;quot;
-date: &amp;quot;Fecha en la cual desarrollamos el documento&amp;quot;
-output:
-  html_document: default
----&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;En este ejemplo hemos especificado que el documento se generará en formato &lt;em&gt;HTML&lt;/em&gt;. Otras opciones de &lt;em&gt;output&lt;/em&gt; son:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;output: html_document&lt;/strong&gt;… archivo html (página web)&lt;/li&gt;
@@ -86,21 +78,12 @@ output:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;texto&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.2. &lt;strong&gt;Texto&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2&gt;3.2. Texto&lt;/h2&gt;
 &lt;p&gt;El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.&lt;/p&gt;
-&lt;p&gt;Podemos escribir lo que queramos, pero siempre…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;respeto.jpg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Podemos agregar imágenes a un informe de R Markdown a partir de imágenes disponibles en nuestro directorio de trabajo. Para ello utilziaremos la siguiente sintaxis:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;![AQUÍ PODEMOS INCORPORAR TEXTO ](respeto.jpg)
-&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Un aspecto importante es que la separación de párrafos se realiza saltando una línea en blanco.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Me salto
-una
-
-línea&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;trozos-chunk-de-código&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.3. ### &lt;strong&gt;Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2&gt;3.3. Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/h2&gt;
 &lt;p&gt;Los trozos (&lt;em&gt;chunk&lt;/em&gt;) de código en un documento de R Markdown contendrán tu código R. Todos los fragmentos de código comienzan y terminan con &lt;code&gt;```&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Un &lt;em&gt;chunk&lt;/em&gt; básico se ve de la siguiente forma:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# ``` {r } 
@@ -125,12 +108,10 @@ respuesta
 &lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: Ctrl + Alt + I&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;OS X&lt;/strong&gt;: Cmd + Option + I&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#```{r }
-
-#```&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;syntaxis&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4. Syntaxis&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;syntaxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Syntaxis&lt;/h1&gt;
 &lt;p&gt;La syntaxis de Markdown es muy secilla y nos permite añadir estilo, imágenes, enlaces y expresiones mátematicas a nuestro documento de texto. Las palabras o frases deben comenzar y terminar con los siguientes simbolos:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -191,14 +172,13 @@ respuesta
 &lt;/ol&gt;
 &lt;p&gt;En algunas ocasiones, estaremos interesados en establecer secciones dentro de nuestro documento. Para ello podemos diferenciar mmúltiples encabezados, según el tamaño del texto.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;h1 id=&#34;encabezado-1-texto&#34;&gt;Encabezado 1 | &lt;em&gt;# texto&lt;/em&gt;&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h2 id=&#34;encabezado-2-texto&#34;&gt;Encabezado 2 | &lt;em&gt;## texto&lt;/em&gt;&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h3 id=&#34;encabezado-3-texto&#34;&gt;Encabezado 3 | &lt;em&gt;### texto&lt;/em&gt;&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h4 id=&#34;encabezado-4-texto&#34;&gt;Encabezado 4 | &lt;em&gt;#### texto&lt;/em&gt;&lt;/h4&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h5 id=&#34;encabezado-5-texto&#34;&gt;Encabezado 5 | &lt;em&gt;##### texto&lt;/em&gt;&lt;/h5&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h6 id=&#34;encabezado-6-texto&#34;&gt;Encabezado 6 | &lt;em&gt;###### texto&lt;/em&gt;&lt;/h6&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h1 id=&#34;encabezado-1-texto&#34;&gt;Encabezado 1 | # texto&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&#34;encabezado-2-texto&#34;&gt;Encabezado 2 | ## texto&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&#34;encabezado-3-texto&#34;&gt;Encabezado 3 | ### texto&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4 id=&#34;encabezado-4-texto&#34;&gt;Encabezado 4 | #### texto&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h5 id=&#34;encabezado-5-texto&#34;&gt;Encabezado 5 | ##### texto&lt;/h5&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h6 id=&#34;encabezado-6-texto&#34;&gt;Encabezado 6 | ###### texto&lt;/h6&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
