@@ -549,197 +549,6 @@ De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Aspectos generales</title>
-      <link>https://academic-demo.netlify.app/courses/graficos/</link>
-      <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/graficos/</guid>
-      <description>
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#como-funciona&#34;&gt;1. ¿Como funciona?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#requisitos&#34;&gt;2. Requisitos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#estructura-del-archivo-.rmd.&#34;&gt;3. Estructura del archivo &lt;code&gt;.Rmd&lt;/code&gt;.&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#encabezado-yaml&#34;&gt;3.1. &lt;strong&gt;Encabezado YAML&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;3.2. &lt;strong&gt;Texto&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#trozos-chunk-de-código&#34;&gt;3.3. ### &lt;strong&gt;Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;como-funciona&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. ¿Como funciona?&lt;/h1&gt;
-&lt;p&gt;Debemos comenzar abriendo un archivo R Markdown, un archivo de texto sin formato, que tiene la extensión &lt;code&gt;.Rmd&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;En el menú debemos hacer click en:
-&lt;strong&gt;File –&amp;gt; New File –&amp;gt; R Markdown…&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Esto abrirá un fichero que nos permitirá elegir el formato de salida de nuestro informe:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;página web que se podrá ver con un navegador,&lt;/li&gt;
-&lt;li&gt;documento PDF o&lt;/li&gt;
-&lt;li&gt;documento Word.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Importante&lt;/em&gt;: Si deseamos generar una documento PDF, necesitaremos instalar LaTeX. Para los usuarios de Markdown R que no hayan instalado LaTeX anteriormente, se recomienda instalarTinyTeX (&lt;a href=&#34;https://yihui.name/tinytex/&#34; class=&#34;uri&#34;&gt;https://yihui.name/tinytex/&lt;/a&gt;):&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;requisitos&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Requisitos&lt;/h1&gt;
-&lt;p&gt;Al momento de comenzar un proyecto, debemos tener instalado los siguientes programas:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;La versión mas reciente de R &lt;a href=&#34;https://www.r-project.org&#34; class=&#34;uri&#34;&gt;https://www.r-project.org&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;RStudio &lt;a href=&#34;https://rstudio.com&#34; class=&#34;uri&#34;&gt;https://rstudio.com&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Instalar los paquetes &lt;code&gt;knitr&lt;/code&gt; y &lt;code&gt;rmarkdown&lt;/code&gt;. Podemos instalar cada paquete desde el CRAN con:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(&amp;quot;rmarkdown&amp;quot;)
-library(rmarkdown)
-#install.packages(&amp;quot;knitr&amp;quot;)
-library(knitr)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;El paquete &lt;code&gt;Knitr&lt;/code&gt; integra en un sólo archivo markdown el texto ingresado en formato RMarkdown y los resultados de la ejecución de los códigos construidos mediante R.&lt;/p&gt;
-&lt;ol start=&#34;4&#34; style=&#34;list-style-type: lower-alpha&#34;&gt;
-&lt;li&gt;Conocimientos basicos en markdown (para eso está este tutorial, no?).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;div id=&#34;estructura-del-archivo-.rmd.&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Estructura del archivo &lt;code&gt;.Rmd&lt;/code&gt;.&lt;/h1&gt;
-&lt;p&gt;Cuando se utiliza el botón de &lt;code&gt;Knit&lt;/code&gt; se generan documentos los cuales contienen sintaxis en markdown con codigos de R en &lt;em&gt;chunks&lt;/em&gt;.&lt;/p&gt;
-&lt;div id=&#34;encabezado-yaml&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.1. &lt;strong&gt;Encabezado YAML&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;El encabezado YAML (en inglés &lt;em&gt;yet another markup language&lt;/em&gt;) determina los parámetros generales de formato para el documento a generar. Es importante tener presente que este encabezado define el formato del archivo resultante, más no su contenido.&lt;/p&gt;
-&lt;p&gt;El encabezado comienza y termina con tres rayas (- - -). Veamos el siguiente ejemplo que incluye algunos parámetros (existen muchos más) que definirán el formato del documento:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: &amp;quot;Título del documento&amp;quot;
-author: &amp;quot;Quien desarrolla el documento&amp;quot;
-date: &amp;quot;Fecha en la cual desarrollamos el documento&amp;quot;
-output:
-  html_document: default
----&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;En este ejemplo hemos especificado que el documento se generará en formato &lt;em&gt;HTML&lt;/em&gt;. Otras opciones de &lt;em&gt;output&lt;/em&gt; son:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;output: html_document&lt;/strong&gt;… archivo html (página web)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;output: pdf_document&lt;/strong&gt;… archivo pdf&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;output: word_document&lt;/strong&gt;… Microsoft Word .docx&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;output: beamer_presentation&lt;/strong&gt;… presentación beamer (pdf)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;output: ioslides_presentation&lt;/strong&gt;… presentación ioslides (html)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;texto&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.2. &lt;strong&gt;Texto&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.&lt;/p&gt;
-&lt;p&gt;Podemos escribir lo que queramos, pero siempre…&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;respeto.jpg&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Podemos agregar imágenes a un informe de R Markdown a partir de imágenes disponibles en nuestro directorio de trabajo. Para ello utilziaremos la siguiente sintaxis:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;![AQUÍ PODEMOS INCORPORAR TEXTO ](respeto.jpg)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Un aspecto importante es que la separación de párrafos se realiza saltando una línea en blanco.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Me salto
-una
-
-línea&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;trozos-chunk-de-código&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.3. ### &lt;strong&gt;Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;Los trozos (&lt;em&gt;chunk&lt;/em&gt;) de código en un documento de R Markdown contendrán tu código R. Todos los fragmentos de código comienzan y terminan con &lt;code&gt;```&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Un &lt;em&gt;chunk&lt;/em&gt; básico se ve de la siguiente forma:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# ``` {r } 
-
-#Aquí va el código
-
-# ```&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Veamos un ejemplo:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# sumemos
-x &amp;lt;- 1+12
-
-y &amp;lt;- 90
-
-# generemos un objeto que contenga la resta de &amp;quot;x&amp;quot; con &amp;quot;y&amp;quot; 
-respuesta &amp;lt;- x - y
-
-# revisemos el resultado de nuestro objeto llamado respuesta
-respuesta
-## [1] -77&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Ahora, insertemos un nuevo &lt;em&gt;chunk&lt;/em&gt;. Para ello podemos escribirlo o podemos utilizar una combinación desde el teclado para generar un &lt;em&gt;chunk&lt;/em&gt; por defecto:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: Ctrl + Alt + I&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;OS X&lt;/strong&gt;: Cmd + Option + I&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#```{r }
-
-#```&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;syntaxis&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4. Syntaxis&lt;/h2&gt;
-&lt;p&gt;La syntaxis de Markdown es muy secilla y nos permite añadir estilo, imágenes, enlaces y expresiones mátematicas a nuestro documento de texto. Las palabras o frases deben comenzar y terminar con los siguientes simbolos:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th&gt;Syntaxis&lt;/th&gt;
-&lt;th&gt;Resultado&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;* *&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;cursiva&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;_ _&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;cursiva&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;** **&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;negrita&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;__ __&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;negrita&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;superindice ^ ^&lt;/td&gt;
-&lt;td&gt;superindice &lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td&gt;tachado ~~ ~~&lt;/td&gt;
-&lt;td&gt;&lt;del&gt;tachado&lt;/del&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td&gt;eslabon [ ]&lt;/td&gt;
-&lt;td&gt;[&lt;a href=&#34;https://www.umayor.cl/um/&#34; class=&#34;uri&#34;&gt;https://www.umayor.cl/um/&lt;/a&gt;]&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;También podemos generar listas no numeradas:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Item 1&lt;/li&gt;
-&lt;li&gt;Item 2
-&lt;ul&gt;
-&lt;li&gt;Item 2a&lt;/li&gt;
-&lt;li&gt;Item 2b&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;y listas numeradas:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
-&lt;li&gt;Item 1&lt;/li&gt;
-&lt;li&gt;Item 2&lt;/li&gt;
-&lt;li&gt;Item 2
-&lt;ul&gt;
-&lt;li&gt;Item 3a&lt;/li&gt;
-&lt;li&gt;Item 3b&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;En algunas ocasiones, estaremos interesados en establecer secciones dentro de nuestro documento. Para ello podemos diferenciar mmúltiples encabezados, según el tamaño del texto.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;h1 id=&#34;encabezado-1-texto&#34;&gt;Encabezado 1 | &lt;em&gt;# texto&lt;/em&gt;&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h2 id=&#34;encabezado-2-texto&#34;&gt;Encabezado 2 | &lt;em&gt;## texto&lt;/em&gt;&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h3 id=&#34;encabezado-3-texto&#34;&gt;Encabezado 3 | &lt;em&gt;### texto&lt;/em&gt;&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h4 id=&#34;encabezado-4-texto&#34;&gt;Encabezado 4 | &lt;em&gt;#### texto&lt;/em&gt;&lt;/h4&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h5 id=&#34;encabezado-5-texto&#34;&gt;Encabezado 5 | &lt;em&gt;##### texto&lt;/em&gt;&lt;/h5&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h6 id=&#34;encabezado-6-texto&#34;&gt;Encabezado 6 | &lt;em&gt;###### texto&lt;/em&gt;&lt;/h6&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Grafico de torta</title>
       <link>https://academic-demo.netlify.app/courses/bibliometrix/graficos/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
@@ -867,7 +676,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-574312968&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-128654379&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -877,7 +686,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-574312968&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-128654379&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
