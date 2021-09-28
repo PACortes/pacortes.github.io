@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>RMarkdown</title>
+      <title>Grafico</title>
       <link>https://academic-demo.netlify.app/courses/rmarkdown/rmarkdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/rmarkdown/rmarkdown/</guid>
@@ -30,9 +30,9 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#primer-informe-con-rmarkdown&#34;&gt;5. Primer informe con RMarkdown&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#objetivo-del-informe&#34;&gt;Objetivo del informe&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#paso-1.-exploremos-nuestros-datos&#34;&gt;Paso 1. Exploremos nuestros datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#paso-2.-visualicemos-nuestros-datos&#34;&gt;Paso 2. Visualicemos nuestros datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#objetivo-del-informe&#34;&gt;5.1. Objetivo del informe&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploremos-nuestros-datos&#34;&gt;5.2.Exploremos nuestros datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualicemos-nuestros-datos&#34;&gt;5.3. Visualicemos nuestros datos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -53,11 +53,11 @@
 &lt;div id=&#34;requisitos&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;2. Requisitos&lt;/h1&gt;
 &lt;p&gt;Al momento de comenzar un proyecto, debemos tener instalado los siguientes programas:&lt;/p&gt;
-&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;ul&gt;
 &lt;li&gt;La versión mas reciente de R &lt;a href=&#34;https://www.r-project.org&#34; class=&#34;uri&#34;&gt;https://www.r-project.org&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;RStudio &lt;a href=&#34;https://rstudio.com&#34; class=&#34;uri&#34;&gt;https://rstudio.com&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Instalar los paquetes &lt;code&gt;knitr&lt;/code&gt; y &lt;code&gt;rmarkdown&lt;/code&gt;. Podemos instalar cada paquete desde el CRAN con:&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(&amp;quot;rmarkdown&amp;quot;)
 library(rmarkdown)
 #install.packages(&amp;quot;knitr&amp;quot;)
@@ -130,9 +130,6 @@ respuesta
 &lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;: Ctrl + Alt + I&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;OS X&lt;/strong&gt;: Cmd + Option + I&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#```{r }
-
-#```&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;syntaxis&#34; class=&#34;section level1&#34;&gt;
@@ -197,23 +194,23 @@ respuesta
 &lt;/ol&gt;
 &lt;p&gt;En algunas ocasiones, estaremos interesados en establecer secciones dentro de nuestro documento. Para ello podemos diferenciar mmúltiples encabezados, según el tamaño del texto.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;h1 id=&#34;encabezado-1-texto&#34;&gt;Encabezado 1 |&lt;em&gt;# texto&lt;/em&gt;&lt;/h1&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h2 id=&#34;encabezado-2-texto&#34;&gt;Encabezado 2 |&lt;em&gt;## texto&lt;/em&gt;&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h3 id=&#34;encabezado-3-texto&#34;&gt;Encabezado 3 |&lt;em&gt;### texto&lt;/em&gt;&lt;/h3&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h4 id=&#34;encabezado-4-texto&#34;&gt;Encabezado 4 |&lt;em&gt;#### texto&lt;/em&gt;&lt;/h4&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h5 id=&#34;encabezado-5-texto&#34;&gt;Encabezado 5 |&lt;em&gt;##### texto&lt;/em&gt;&lt;/h5&gt;&lt;/li&gt;
-&lt;li&gt;&lt;h6 id=&#34;encabezado-6-texto&#34;&gt;Encabezado 6 |&lt;em&gt;###### texto&lt;/em&gt;&lt;/h6&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h1 id=&#34;encabezado-1-texto&#34;&gt;Encabezado 1 | &lt;em&gt;# texto&lt;/em&gt;&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h2 id=&#34;encabezado-2-texto&#34;&gt;Encabezado 2 | &lt;em&gt;## texto&lt;/em&gt;&lt;/h2&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h3 id=&#34;encabezado-3-texto&#34;&gt;Encabezado 3 | &lt;em&gt;### texto&lt;/em&gt;&lt;/h3&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h4 id=&#34;encabezado-4-texto&#34;&gt;Encabezado 4 | &lt;em&gt;#### texto&lt;/em&gt;&lt;/h4&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h5 id=&#34;encabezado-5-texto&#34;&gt;Encabezado 5 | &lt;em&gt;##### texto&lt;/em&gt;&lt;/h5&gt;&lt;/li&gt;
+&lt;li&gt;&lt;h6 id=&#34;encabezado-6-texto&#34;&gt;Encabezado 6 | &lt;em&gt;###### texto&lt;/em&gt;&lt;/h6&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;primer-informe-con-rmarkdown&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;5. Primer informe con RMarkdown&lt;/h1&gt;
 &lt;p&gt;Generemos un pequeño informe en el cuál aplicaremos los conocimientos que hemos aprendido sobre las librerías &lt;code&gt;dplyr&lt;/code&gt;, &lt;code&gt;ggplot2&lt;/code&gt; y &lt;code&gt;rmarkdown&lt;/code&gt;.&lt;/p&gt;
-&lt;div id=&#34;objetivo-del-informe&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Objetivo del informe&lt;/h3&gt;
+&lt;div id=&#34;objetivo-del-informe&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5.1. Objetivo del informe&lt;/h2&gt;
 &lt;p&gt;Generar un informe automatizado en el cuál se explorarán y visualizarán los los datos de la base de datos iris.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;paso-1.-exploremos-nuestros-datos&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Paso 1. Exploremos nuestros datos&lt;/h3&gt;
+&lt;div id=&#34;exploremos-nuestros-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5.2.Exploremos nuestros datos&lt;/h2&gt;
 &lt;p&gt;Utilizaremos el verbo &lt;code&gt;glimpse()&lt;/code&gt; de la librería dplyr para explorar la estructura de la base de datos iris. Recordemos que asignamos el nombre data a nuestra base de datos&lt;/p&gt;
 &lt;p&gt;Primero debemos asegurarnos de llamar a la librería &lt;code&gt;dplyr&lt;/code&gt;. También explicitaremos el argumento &lt;code&gt;warming = FALSE&lt;/code&gt; para que…&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(&amp;quot;dplyr&amp;quot;)
@@ -381,8 +378,8 @@ library(dplyr)&lt;/code&gt;&lt;/pre&gt;
 ## $ Petal.Width  &amp;lt;dbl&amp;gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0…
 ## $ Species      &amp;lt;fct&amp;gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, …&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;paso-2.-visualicemos-nuestros-datos&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Paso 2. Visualicemos nuestros datos&lt;/h3&gt;
+&lt;div id=&#34;visualicemos-nuestros-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;5.3. Visualicemos nuestros datos&lt;/h2&gt;
 &lt;p&gt;Generemos un gráfico de dispersión con la función &lt;code&gt;geom_point ()&lt;/code&gt; para las variables Petal.Length y Petal.Width.&lt;/p&gt;
 &lt;p&gt;Primero debemos asegurarnos de llamar a la librería &lt;code&gt;ggplot2&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(&amp;quot;ggplot2&amp;quot;)
@@ -406,7 +403,7 @@ library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/RMarkdown/Rmarkdown_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/RMarkdown/Rmarkdown_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
