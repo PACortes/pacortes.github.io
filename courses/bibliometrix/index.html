@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete biliometrix." />
+  <meta name="description" content="En este módulo exploraremos el paquete `bibliometrix`, una herramienta de R para realizar análisis bibliométricos." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/bibliometrix/" />
@@ -296,7 +296,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/bibliometrix/" />
   <meta property="og:title" content="bibliometrix | Pablo Cortes" />
-  <meta property="og:description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete biliometrix." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/bibliometrix/featured.png" />
+  <meta property="og:description" content="En este módulo exploraremos el paquete `bibliometrix`, una herramienta de R para realizar análisis bibliométricos." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/bibliometrix/featured.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/courses/bibliometrix/featured.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -745,33 +745,6 @@
       <div class="docs-toc-item">
         <a class="docs-toc-link  active" href="/courses/bibliometrix/">bibliometrix</a>
     
-      
-        <ul class="nav docs-sidenav">
-      
-
-
-  <li class=""><a href="/courses/bibliometrix/scatterplot/">Scatterplot</a></li>
-
-
-
-  <li class=""><a href="/courses/bibliometrix/jitter/">jitter</a></li>
-
-
-
-  <li class=""><a href="/courses/bibliometrix/boxplot/">Visualization</a></li>
-
-
-
-  <li class=""><a href="/courses/bibliometrix/histogram/">Histograms</a></li>
-
-
-
-  <li class=""><a href="/courses/bibliometrix/graficos/">Grafico de torta</a></li>
-
-      
-        </ul>
-      
-    
 
     
       </div>
@@ -794,9 +767,9 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#resumen">Resumen</a></li>
-    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
-    <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
+    <li><a href="#qué-es-bibliometrix">¿Qué es <code>bibliometrix</code>?</a></li>
+    <li><a href="#bibliometría">Bibliometría</a></li>
+    <li><a href="#por-qué-">¿Por qué ?</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
 </nav>
@@ -877,68 +850,29 @@
   <summary class="font-weight-bold">Table of Contents</summary>
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#resumen">Resumen</a></li>
-    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
-    <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
+    <li><a href="#qué-es-bibliometrix">¿Qué es <code>bibliometrix</code>?</a></li>
+    <li><a href="#bibliometría">Bibliometría</a></li>
+    <li><a href="#por-qué-">¿Por qué ?</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
 </nav>
 </details>
 
-<h2 id="resumen">Resumen</h2>
-<ul>
-<li>Fundamental <mark>Python programming skills</mark></li>
-<li><mark>Statistical concepts</mark> and how to apply them in practice</li>
-<li>Gain experience with the <mark>Scikit</mark>, including data visualization with <mark>Plotly</mark> and data wrangling with <mark>Pandas</mark></li>
-</ul>
-<h2 id="qué-es-ggplot2">¿Qué es ggplot2?</h2>
-<p>ggplot2 es un paquete de visualización altamente versátil que permite crear gráficos elegantes y atractivos.</p>
-<p>El paquete ggplot2 implementa un único sistema para describir y construir gráficos, el cuál funciona en capas (se agrega una a una) y se aplica a diferentes tipos de visualizaciones.</p>
-<p>En general, ggplot2 divide un gráfico (plot) en tres partes fundamentales diferentes:</p>
-<pre><code class="language-r">ggplot(data = MisDatos, mapping=aes(x=Variable1, y =Variable2))+ geom_function()
-</code></pre>
-<h2 id="visualizaciones-a-realizar">Visualizaciones a realizar</h2>
-
-
-  <ul class="list-unstyled">
-    
-      <li>
-        <h5><a href="/courses/bibliometrix/scatterplot/">Scatterplot</a></h5>
-        <p>Build a foundation in Python.
-</p>
-      </li>
-    
-      <li>
-        <h5><a href="/courses/bibliometrix/jitter/">jitter</a></h5>
-        <p>Learn how to visualize data with Plotly.
-</p>
-      </li>
-    
-      <li>
-        <h5><a href="/courses/bibliometrix/boxplot/">Visualization</a></h5>
-        <p>Learn how to visualize data with Plotly.
-</p>
-      </li>
-    
-      <li>
-        <h5><a href="/courses/bibliometrix/histogram/">Histograms</a></h5>
-        <p>Introduction to statistics for data science.
-</p>
-      </li>
-    
-      <li>
-        <h5><a href="/courses/bibliometrix/graficos/">Grafico de torta</a></h5>
-        <p>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.</p>
-      </li>
-    
-  </ul>
-
-
+<h2 id="qué-es-bibliometrix">¿Qué es <code>bibliometrix</code>?</h2>
+<p><code>bliometrix</code> es un paquete de R que proporciona un conjunto de herramientas analíticas para la investigación cuantitativa en bibliometría.</p>
+<h2 id="bibliometría">Bibliometría</h2>
+<p>La bibliometría es la aplicación de análisis cuantitativos y estadísticas a publicaciones como artículos de revistas y los recuentos de citas que los acompañan. Este tipo de análisis es clave al momento de establecer el estado del arte de una disciplina o tópicos de investigación específicos.</p>
+<h2 id="por-qué-">¿Por qué ?</h2>
+<p><code>bliometrix</code> proveé una serie de rutinas que permite importar datos bibliográficos desde bases académicas como Web of Science, SCOPUS, PubMed, Digital Science Dimensions y Cochrane.</p>
+<p>Además, <code>bliometrix</code> incluye una shiny app (<code>biblioshiny()</code>) que proporciona una interfaz web para facilitar el uso de las herramientas.</p>
 <h2 id="enlaces-de-interés">Enlaces de interés</h2>
+<ul>
+<li>Bibliometrix <a href="https://www.bibliometrix.org/index.html" target="_blank" rel="noopener">https://www.bibliometrix.org/index.html</a></li>
+</ul>
 <ul class="cta-group">
   
   <li>
-    <a href="python"  class="btn btn-primary px-3 py-3">Comencemos con el taller</a>
+    <a href="python"  class="btn btn-primary px-3 py-3">Comencemos</a>
   </li>
   
   
