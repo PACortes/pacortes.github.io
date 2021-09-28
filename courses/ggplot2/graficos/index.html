@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." />
+  <meta name="description" content="1. ¿Como funciona? 2. Requisitos 3. Estructura del archivo .Rmd. 3.1. Encabezado YAML 3.2. Texto 3.3. ### Trozos (chunk) de código 4. Syntaxis    1. ¿Como funciona?" />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/graficos/" />
@@ -294,8 +294,8 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/graficos/" />
-  <meta property="og:title" content="Grafico de dispersión | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Visualización 3.1. Título y etiquetas 3.2. Límites de los ejes 3.3. Título y etiquetas: tamaño de las letras 3.4. Tamaño de los puntos 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="Aspectos generales | Pablo Cortes" />
+  <meta property="og:description" content="1. ¿Como funciona? 2. Requisitos 3. Estructura del archivo .Rmd. 3.1. Encabezado YAML 3.2. Texto 3.3. ### Trozos (chunk) de código 4. Syntaxis    1. ¿Como funciona?" /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -321,7 +321,7 @@
 
 
 
-  <title>Grafico de dispersión | Pablo Cortes</title>
+  <title>Aspectos generales | Pablo Cortes</title>
 </head>
 
 
@@ -705,7 +705,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Grafico de dispersión</h1>
+  <h1>Aspectos generales</h1>
 
   
 
@@ -766,203 +766,184 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#definición">1. Definición</a></li>
-<li><a href="#sintáxis">2. Sintáxis</a></li>
-<li><a href="#visualización">3. Visualización</a><ul>
-<li><a href="#título-y-etiquetas">3.1. Título y etiquetas</a></li>
-<li><a href="#límites-de-los-ejes">3.2. Límites de los ejes</a></li>
-<li><a href="#título-y-etiquetas-tamaño-de-las-letras">3.3. Título y etiquetas: tamaño de las letras</a></li>
-<li><a href="#tamaño-de-los-puntos">3.4. Tamaño de los puntos</a></li>
-<li><a href="#color-de-los-puntos">3.5. Color de los puntos</a></li>
+<li><a href="#como-funciona">1. ¿Como funciona?</a></li>
+<li><a href="#requisitos">2. Requisitos</a></li>
+<li><a href="#estructura-del-archivo-.rmd.">3. Estructura del archivo <code>.Rmd</code>.</a><ul>
+<li><a href="#encabezado-yaml">3.1. <strong>Encabezado YAML</strong></a></li>
+<li><a href="#texto">3.2. <strong>Texto</strong></a></li>
+<li><a href="#trozos-chunk-de-código">3.3. ### <strong>Trozos (<em>chunk</em>) de código</strong></a></li>
+<li><a href="#syntaxis">4. Syntaxis</a></li>
 </ul></li>
-<li><a href="#juntando-todas-las-piezas">4. Juntando todas las piezas</a></li>
-<li><a href="#referencias">5. Referencias</a></li>
 </ul>
 </div>
 
-<div id="definición" class="section level1">
-<h1>1. Definición</h1>
-<p>Los gráficos de dispersión (<em>scatterplot</em> en inglés) se utilizan para observar asociación entre dos variablesnuméricas diferentes.</p>
-<p>La posición de cada punto en el eje horizontal y vertical indica valores para una misma unidad experimental.</p>
-<p>Recordemos que antes de realizar nuestro gráfico, debemos cargar la libreía ggplot2 usando la función <code>library()</code>.</p>
-<pre class="r"><code>library(ggplot2)</code></pre>
-</div>
-<div id="sintáxis" class="section level1">
-<h1>2. Sintáxis</h1>
-<p>La sintáxis básica de ggplot2 para generar un gráfico de dipersión es:</p>
-<p><code>ggplot(data, mapping=aes(x,y))+ geom_point()</code></p>
-<p>En donde:</p>
+<div id="como-funciona" class="section level1">
+<h1>1. ¿Como funciona?</h1>
+<p>Debemos comenzar abriendo un archivo R Markdown, un archivo de texto sin formato, que tiene la extensión <code>.Rmd</code>.</p>
+<p>En el menú debemos hacer click en:
+<strong>File –&gt; New File –&gt; R Markdown…</strong></p>
+<p>Esto abrirá un fichero que nos permitirá elegir el formato de salida de nuestro informe:</p>
 <ul>
-<li><p><code>data</code>: es la base de datos.</p></li>
-<li><p><code>aes()</code>: especifica las variables en los ejes x e y.</p></li>
-<li><p><code>+</code>: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.</p></li>
-<li><p><code>geom_point()</code>: Especifica que queremos generar un gráfico de dispersión.</p></li>
+<li>página web que se podrá ver con un navegador,</li>
+<li>documento PDF o</li>
+<li>documento Word.</li>
+</ul>
+<p><em>Importante</em>: Si deseamos generar una documento PDF, necesitaremos instalar LaTeX. Para los usuarios de Markdown R que no hayan instalado LaTeX anteriormente, se recomienda instalarTinyTeX (<a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>):</p>
+</div>
+<div id="requisitos" class="section level1">
+<h1>2. Requisitos</h1>
+<p>Al momento de comenzar un proyecto, debemos tener instalado los siguientes programas:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La versión mas reciente de R <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>.</li>
+<li>RStudio <a href="https://rstudio.com" class="uri">https://rstudio.com</a>.</li>
+<li>Instalar los paquetes <code>knitr</code> y <code>rmarkdown</code>. Podemos instalar cada paquete desde el CRAN con:</li>
+</ol>
+<pre class="r"><code>#install.packages(&quot;rmarkdown&quot;)
+library(rmarkdown)
+#install.packages(&quot;knitr&quot;)
+library(knitr)</code></pre>
+<p>El paquete <code>Knitr</code> integra en un sólo archivo markdown el texto ingresado en formato RMarkdown y los resultados de la ejecución de los códigos construidos mediante R.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Conocimientos basicos en markdown (para eso está este tutorial, no?).</li>
+</ol>
+</div>
+<div id="estructura-del-archivo-.rmd." class="section level1">
+<h1>3. Estructura del archivo <code>.Rmd</code>.</h1>
+<p>Cuando se utiliza el botón de <code>Knit</code> se generan documentos los cuales contienen sintaxis en markdown con codigos de R en <em>chunks</em>.</p>
+<div id="encabezado-yaml" class="section level2">
+<h2>3.1. <strong>Encabezado YAML</strong></h2>
+<p>El encabezado YAML (en inglés <em>yet another markup language</em>) determina los parámetros generales de formato para el documento a generar. Es importante tener presente que este encabezado define el formato del archivo resultante, más no su contenido.</p>
+<p>El encabezado comienza y termina con tres rayas (- - -). Veamos el siguiente ejemplo que incluye algunos parámetros (existen muchos más) que definirán el formato del documento:</p>
+<pre><code>---
+title: &quot;Título del documento&quot;
+author: &quot;Quien desarrolla el documento&quot;
+date: &quot;Fecha en la cual desarrollamos el documento&quot;
+output:
+  html_document: default
+---</code></pre>
+<p>En este ejemplo hemos especificado que el documento se generará en formato <em>HTML</em>. Otras opciones de <em>output</em> son:</p>
+<ul>
+<li><strong>output: html_document</strong>… archivo html (página web)</li>
+<li><strong>output: pdf_document</strong>… archivo pdf</li>
+<li><strong>output: word_document</strong>… Microsoft Word .docx</li>
+<li><strong>output: beamer_presentation</strong>… presentación beamer (pdf)</li>
+<li><strong>output: ioslides_presentation</strong>… presentación ioslides (html)</li>
 </ul>
 </div>
-<div id="visualización" class="section level1">
-<h1>3. Visualización</h1>
-<p>Ahora, generemos un gráfico de dispersión con las variables <em>Petal.Length</em> y <em>Petal.Width</em> de la base de datos <code>iris</code>.</p>
-<pre class="r"><code>ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<div id="título-y-etiquetas" class="section level2">
-<h2>3.1. Título y etiquetas</h2>
-<p>Ajustemos el título del gráfico las etiquetas de los ejes con la función <code>labs()</code>:</p>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point()+
-  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       x=&quot;Largo de Pétalo (cms)&quot;,
-       y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div id="texto" class="section level2">
+<h2>3.2. <strong>Texto</strong></h2>
+<p>El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.</p>
+<p>Podemos escribir lo que queramos, pero siempre…</p>
+<p><img src="respeto.jpg" /></p>
+<p>Podemos agregar imágenes a un informe de R Markdown a partir de imágenes disponibles en nuestro directorio de trabajo. Para ello utilziaremos la siguiente sintaxis:</p>
+<pre><code>![AQUÍ PODEMOS INCORPORAR TEXTO ](respeto.jpg)
+</code></pre>
+<p>Un aspecto importante es que la separación de párrafos se realiza saltando una línea en blanco.</p>
+<pre><code>Me salto
+una
+
+línea</code></pre>
 </div>
-<div id="límites-de-los-ejes" class="section level2">
-<h2>3.2. Límites de los ejes</h2>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point()+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       x=&quot;Largo de Pétalo (cms)&quot;,
-       y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<div id="trozos-chunk-de-código" class="section level2">
+<h2>3.3. ### <strong>Trozos (<em>chunk</em>) de código</strong></h2>
+<p>Los trozos (<em>chunk</em>) de código en un documento de R Markdown contendrán tu código R. Todos los fragmentos de código comienzan y terminan con <code>```</code>.</p>
+<p>Un <em>chunk</em> básico se ve de la siguiente forma:</p>
+<pre class="r"><code># ``` {r } 
+
+#Aquí va el código
+
+# ```</code></pre>
+<p>Veamos un ejemplo:</p>
+<pre class="r"><code># sumemos
+x &lt;- 1+12
+
+y &lt;- 90
+
+# generemos un objeto que contenga la resta de &quot;x&quot; con &quot;y&quot; 
+respuesta &lt;- x - y
+
+# revisemos el resultado de nuestro objeto llamado respuesta
+respuesta
+## [1] -77</code></pre>
+<p>Ahora, insertemos un nuevo <em>chunk</em>. Para ello podemos escribirlo o podemos utilizar una combinación desde el teclado para generar un <em>chunk</em> por defecto:</p>
+<ul>
+<li><strong>Windows</strong>: Ctrl + Alt + I</li>
+<li><strong>OS X</strong>: Cmd + Option + I</li>
+</ul>
+<pre class="r"><code>#```{r }
+
+#```</code></pre>
 </div>
-<div id="título-y-etiquetas-tamaño-de-las-letras" class="section level2">
-<h2>3.3. Título y etiquetas: tamaño de las letras</h2>
-<p>Ahora, aumentemos el tamaños de las letras de títulos (y su color) y etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
-<p><code>theme()</code> incluye dos componentes principales:</p>
+<div id="syntaxis" class="section level2">
+<h2>4. Syntaxis</h2>
+<p>La syntaxis de Markdown es muy secilla y nos permite añadir estilo, imágenes, enlaces y expresiones mátematicas a nuestro documento de texto. Las palabras o frases deben comenzar y terminar con los siguientes simbolos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Syntaxis</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>* *</td>
+<td><strong>cursiva</strong></td>
+</tr>
+<tr class="even">
+<td>_ _</td>
+<td><strong>cursiva</strong></td>
+</tr>
+<tr class="odd">
+<td>** **</td>
+<td><strong>negrita</strong></td>
+</tr>
+<tr class="even">
+<td>__ __</td>
+<td><strong>negrita</strong></td>
+</tr>
+<tr class="odd">
+<td>superindice ^ ^</td>
+<td>superindice <sup>2</sup></td>
+</tr>
+<tr class="even">
+<td>tachado ~~ ~~</td>
+<td><del>tachado</del></td>
+</tr>
+<tr class="odd">
+<td>eslabon [ ]</td>
+<td>[<a href="https://www.umayor.cl/um/" class="uri">https://www.umayor.cl/um/</a>]</td>
+</tr>
+</tbody>
+</table>
+<p>También podemos generar listas no numeradas:</p>
 <ul>
-<li><p><strong>Elementos del tema</strong>: especifica los elementos que queremos controlar.Por ejemplo, <code>plot.title</code> controla la apariencia del título.</p></li>
-<li><p><strong>Función del tema</strong>: describe la propiedad visual del elemento que queremos controlar.Por ejemplo, <code>element_text()</code> establece el tamaño de fuente, el color, entre otros:</p>
+<li>Item 1</li>
+<li>Item 2
 <ul>
-<li><p>Para cambiar el tamaño de un elemento, utilizamos la función <code>size =</code>.</p></li>
-<li><p>Para cambiar el color de un elemento, utilizamos la función <code>color =</code>.</p></li>
-<li><p>Para cambiar la familia de letra de un elemento, utilizamos <code>family =</code>.</p></li>
-<li><p>Para cambiar el tipo de letra de un elemento, utilizamos <code>face =</code>.</p>
-<ul>
-<li>Para cambiar el tipo de línea, utilizamos <code>linetype =</code>.</li>
+<li>Item 2a</li>
+<li>Item 2b</li>
 </ul></li>
-</ul></li>
 </ul>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point()+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25,colour=&quot;darkblue&quot;))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-</div>
-<div id="tamaño-de-los-puntos" class="section level2">
-<h2>3.4. Tamaño de los puntos</h2>
-<p>Para cambiar el tamaño de los puntos (aumentar o disminuir), utilizamos la función <code>size =</code>(valor por defecto:0.5) dentro de <code>geom_point()</code>.</p>
-<p>Por ejemplo, podemos especificar que todos los puntos tendrán un diamtero de 2.5</p>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(size=2.5)+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-<p>También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión <code>aes()</code> dentro de <code>geom_point()</code>.</p>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(size=Petal.Length&gt;2.5))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))
-## Warning: Using size for a discrete variable is not advised.</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>También, podemos</p>
-</div>
-<div id="color-de-los-puntos" class="section level2">
-<h2>3.5. Color de los puntos</h2>
-<p>Ajustemos el tamaño y color de los puntos</p>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(col=&quot;steelblue&quot;, size=2.5)+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
-<p>De acuerdo a categorías en otra variable.</p>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-9-1.png" width="672" />
-De acuerdo a categorías en otra variable con valores específicos.</p>
-<p>Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable</p>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>Ajustemos manualmente color de los puntos de acuerdo a categorías en otra variable</p>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Mi primer gráfico en R&quot;, 
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        legend.position = c(0.13, 0.85),
-        legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 12))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
-</div>
-</div>
-<div id="juntando-todas-las-piezas" class="section level1">
-<h1>4. Juntando todas las piezas</h1>
-<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&quot;Largo vs Ancho del Petalo&quot;,
-       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        legend.position = c(0.13, 0.85),
-        legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
-        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
-<p><img src="/courses/ggplot2/graficos_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
-</div>
-<div id="referencias" class="section level1">
-<h1>5. Referencias</h1>
+<p>y listas numeradas:</p>
+<ol style="list-style-type: decimal">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 2
 <ul>
-<li>Theme elements [<a href="https://ggplot2.tidyverse.org/reference/element.html" class="uri">https://ggplot2.tidyverse.org/reference/element.html</a>]</li>
+<li>Item 3a</li>
+<li>Item 3b</li>
+</ul></li>
+</ol>
+<p>En algunas ocasiones, estaremos interesados en establecer secciones dentro de nuestro documento. Para ello podemos diferenciar mmúltiples encabezados, según el tamaño del texto.</p>
+<ul>
+<li><h1 id="encabezado-1-texto">Encabezado 1 | <em># texto</em></h1></li>
+<li><h2 id="encabezado-2-texto">Encabezado 2 | <em>## texto</em></h2></li>
+<li><h3 id="encabezado-3-texto">Encabezado 3 | <em>### texto</em></h3></li>
+<li><h4 id="encabezado-4-texto">Encabezado 4 | <em>#### texto</em></h4></li>
+<li><h5 id="encabezado-5-texto">Encabezado 5 | <em>##### texto</em></h5></li>
+<li><h6 id="encabezado-6-texto">Encabezado 6 | <em>###### texto</em></h6></li>
 </ul>
+</div>
 </div>
 
     </div>
@@ -976,7 +957,7 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/visualizacion/">Visualización</a>
+  <a class="badge badge-light" href="/tag/rmarkdown/">RMarkdown</a>
   
   <a class="badge badge-light" href="/tag/ggplot/">ggplot</a>
   
@@ -995,7 +976,7 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;text=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;text=Aspectos%20generales" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1008,7 +989,7 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;t=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;t=Aspectos%20generales" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1021,7 +1002,7 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
       
       
       <li>
-        <a href="mailto:?subject=Grafico%20de%20dispersi%c3%b3n&amp;body=https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Aspectos%20generales&amp;body=https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1034,7 +1015,7 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Aspectos%20generales" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1047,7 +1028,7 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Grafico%20de%20dispersi%c3%b3n%20https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Aspectos%20generales%20https://academic-demo.netlify.app/courses/ggplot2/graficos/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1060,7 +1041,7 @@ De acuerdo a categorías en otra variable con valores específicos.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Grafico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/graficos/&amp;title=Aspectos%20generales" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
