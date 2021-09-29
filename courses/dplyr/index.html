@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." />
+  <meta name="description" content="En este taller, aprenderemos a manipular nuestros datos usando el paquete `dplyr`." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/" />
@@ -254,45 +254,6 @@
 
 
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1988641-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-      dataLayer.push(arguments);
-  }
-
-  function trackOutboundLink(url, target) {
-    gtag('event', 'click', {
-         'event_category': 'outbound',
-         'event_label': url,
-         'transport_type': 'beacon',
-         'event_callback': function () {
-           if (target !== '_blank') {
-             document.location = url;
-           }
-         }
-    });
-    console.debug("Outbound link clicked: " + url);
-  }
-
-  function onClickCallback(event) {
-    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
-      return;
-    }
-    trackOutboundLink(event.target, event.target.getAttribute('target'));  
-  }
-
-  gtag('js', new Date());
-  gtag('config', 'UA-1988641-2', {});
-  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
-
-  
-  document.addEventListener('click', onClickCallback, false);
-</script>
-
-
   
 
   
@@ -335,11 +296,11 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/" />
   <meta property="og:title" content="dplyr: manipulación de datos | Pablo Cortes" />
-  <meta property="og:description" content="En este taller, aprenderemos a visualizar nuestros datos usando el paquete ggplot2." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/dplyr/featured.jpg" />
+  <meta property="og:description" content="En este taller, aprenderemos a manipular nuestros datos usando el paquete `dplyr`." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/dplyr/featured.jpg" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/courses/dplyr/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-09-19T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-09-28T00:00:00&#43;00:00" />
     
   
 
@@ -613,36 +574,6 @@
             
           
           
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/courses_python/"><span>Python</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
             
             
             
@@ -806,8 +737,7 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#resumen">Resumen</a></li>
-    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
+    <li><a href="#qué-es-dplyr">¿Qué es <code>dplyr</code>?</a></li>
     <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
@@ -889,26 +819,16 @@
   <summary class="font-weight-bold">Table of Contents</summary>
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#resumen">Resumen</a></li>
-    <li><a href="#qué-es-ggplot2">¿Qué es ggplot2?</a></li>
+    <li><a href="#qué-es-dplyr">¿Qué es <code>dplyr</code>?</a></li>
     <li><a href="#visualizaciones-a-realizar">Visualizaciones a realizar</a></li>
     <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
   </ul>
 </nav>
 </details>
 
-<h2 id="resumen">Resumen</h2>
-<ul>
-<li>Fundamental <mark>Python programming skills</mark></li>
-<li><mark>Statistical concepts</mark> and how to apply them in practice</li>
-<li>Gain experience with the <mark>Scikit</mark>, including data visualization with <mark>Plotly</mark> and data wrangling with <mark>Pandas</mark></li>
-</ul>
-<h2 id="qué-es-ggplot2">¿Qué es ggplot2?</h2>
-<p>ggplot2 es un paquete de visualización altamente versátil que permite crear gráficos elegantes y atractivos.</p>
-<p>El paquete ggplot2 implementa un único sistema para describir y construir gráficos, el cuál funciona en capas (se agrega una a una) y se aplica a diferentes tipos de visualizaciones.</p>
-<p>En general, ggplot2 divide un gráfico (plot) en tres partes fundamentales diferentes:</p>
-<pre><code class="language-r">ggplot(data = MisDatos, mapping=aes(x=Variable1, y =Variable2))+ geom_function()
-</code></pre>
+<h2 id="qué-es-dplyr">¿Qué es <code>dplyr</code>?</h2>
+<p>Es un paquete de R que contiene una colección de funciones para realizar operaciones de manipulación de datos, tales como : filtrar por fila, seleccionar columnas específicas, reordenar filas, añadir nuevas filas, agregar datos, entre muchas otras.</p>
+<p>Lo fantástico de este paquete es que cada función en <code>dplyr</code> hace solo una cosa, de manera muy rápida y ectiva</p>
 <h2 id="visualizaciones-a-realizar">Visualizaciones a realizar</h2>
 
 
@@ -944,7 +864,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Sep 19, 2021</p>
+          <p>Last updated on Sep 28, 2021</p>
 
           
 
@@ -1147,18 +1067,6 @@
 
 
 
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-1988641-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
 
 
 </body>

@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://academic-demo.netlify.app/courses_python/example/python/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/courses_python/example/visualization/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/courses_python/example/stats/</loc>
-    <lastmod>2021-01-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/talk/example-talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
@@ -41,6 +32,9 @@
     <loc>https://academic-demo.netlify.app/courses/</loc>
     <lastmod>2021-09-27T21:13:14-05:00</lastmod>
   </url><url>
+    <loc>https://academic-demo.netlify.app/courses/dplyr/</loc>
+    <lastmod>2021-09-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/courses/intrmd/</loc>
     <lastmod>2021-09-28T00:00:00+00:00</lastmod>
   </url><url>
@@ -56,17 +50,8 @@
     <loc>https://academic-demo.netlify.app/courses/bibliometrix/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/dplyr/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/courses/ggplot2/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/courses_python/example/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/courses_python/</loc>
-    <lastmod>2021-01-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/authors/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
