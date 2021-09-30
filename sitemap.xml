@@ -11,25 +11,34 @@
     <loc>https://academic-demo.netlify.app/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/courses/intrmd/aspectos/</loc>
-    <lastmod>2021-09-27T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/categories/</loc>
+    <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/courses/rvest/01scrapeando/</loc>
+    <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/category/r/</loc>
+    <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/recuperacion-de-informacion/</loc>
+    <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tags/</loc>
+    <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/courses/</loc>
+    <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/web-scraping/</loc>
+    <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/courses/intrmd/aspectos/</loc>
     <lastmod>2021-09-27T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/intrmd/informe/</loc>
     <lastmod>2021-09-27T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/category/r/</loc>
-    <lastmod>2021-09-27T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/tag/rmarkdown/</loc>
-    <lastmod>2021-09-27T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tags/</loc>
-    <lastmod>2021-09-27T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/courses/</loc>
     <lastmod>2021-09-27T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/dplyr/</loc>
@@ -47,13 +56,7 @@
     <loc>https://academic-demo.netlify.app/courses/rvest/00instalar/</loc>
     <lastmod>2021-09-20T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/tag/recuperacion-de-informacion/</loc>
-    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
-    <lastmod>2021-09-20T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tag/web-scraping/</loc>
     <lastmod>2021-09-20T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/bibliometrix/</loc>

@@ -5,12 +5,55 @@
     <link>https://academic-demo.netlify.app/tag/web-scraping/</link>
       <atom:link href="https://academic-demo.netlify.app/tag/web-scraping/index.xml" rel="self" type="application/rss+xml" />
     <description>Web scraping</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 20 Sep 2021 21:13:14 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Sep 2021 21:13:14 -0500</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Web scraping</title>
       <link>https://academic-demo.netlify.app/tag/web-scraping/</link>
     </image>
+    
+    <item>
+      <title>Extraer datos desde una página específica</title>
+      <link>https://academic-demo.netlify.app/courses/rvest/01scrapeando/</link>
+      <pubDate>Wed, 29 Sep 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/rvest/01scrapeando/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#cargar-el-paquete-rvest&#34;&gt;1. Cargar el paquete &lt;code&gt;rvest&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#url-de-la-página-de-interés.&#34;&gt;2. URL de la página de interés.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extraer-información-desde-el-título-de-la-noticia&#34;&gt;3. Extraer información desde el título de la noticia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Imaginemos que queremos extraer información de prensa sobre el proceso constituyente desde el periodico chileno [LaTercera].&lt;/p&gt;
+&lt;p&gt;En este ejemplo, vamos a extraer datos desde una noticia específica que acaba de ser publicada.&lt;/p&gt;
+&lt;div id=&#34;cargar-el-paquete-rvest&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Cargar el paquete &lt;code&gt;rvest&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Lo primero que debemos hacer es cargar el paquete &lt;code&gt;rvest&lt;/code&gt; y todos los paquetes adicionales que necesitemos para trabajar. En este ejemplo usaremos &lt;code&gt;dplyr&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)
+library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;url-de-la-página-de-interés.&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. URL de la página de interés.&lt;/h1&gt;
+&lt;p&gt;URL significa Uniform Resource Locator y es la dirección única y específica que se asigna a cada uno de los recursos disponibles de la World Wide Web para que puedan ser localizados por el navegador y visitados por los usuarios.&lt;/p&gt;
+&lt;p&gt;Ahora, lo que debemos hacer es ir a la página de interés, copiar su URL y guardarla como un objeto.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url_interes&amp;lt;- &amp;quot;https://www.latercera.com/politica/noticia/convencion-aprueba-que-sea-el-pleno-por-mayoria-simple-el-que-califique-la-renuncia-de-un-convencional-se-descarta-participacion-del-tc/7KTM6K5JZFC4HOUYQOOUGSU5YQ/&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extraer-información-desde-el-título-de-la-noticia&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Extraer información desde el título de la noticia&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;h1&lt;/strong&gt; es el elemento HTML utilizado para identificar la cabecera más importante en una página web, tales como el título de una página, el título de un post, el nombre de un producto, etc.&lt;/p&gt;
+&lt;p&gt;Utilicemos las funciones &lt;code&gt;read_html&lt;/code&gt;, &lt;code&gt;html_elements()&lt;/code&gt; y &lt;code&gt;html_text()&lt;/code&gt; par leer la URL, obtener el elemento &lt;strong&gt;h1&lt;/strong&gt; y extraer el texto contenido en el elemento, respectivamente.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;titulo_pagina &amp;lt;- read_html(url_interes)%&amp;gt;% 
+  html_element(&amp;quot;h1&amp;quot;) %&amp;gt;% 
+  html_text()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, revisemos el texto obtenido desde el título de la página.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;titulo_pagina
+## [1] &amp;quot;Convención aprueba que sea el pleno, por mayoría simple, el que califique la renuncia de un convencional: se descarta participación del TC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Instalando rvest</title>
@@ -23,8 +66,8 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#instalando-y-cargando-rvest&#34;&gt;1. Instalando y cargando &lt;code&gt;rvest&lt;/code&gt;&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#desde-el-cran&#34;&gt;1.1. Desde el CRAN&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#desde-github&#34;&gt;1.1. Desde GitHub&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#no-olvidemos-que-siempre-debemos-cargar-el-paquete-antes-de-usarlo&#34;&gt;No olvidemos que siempre debemos cargar el paquete antes de usarlo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#desde-github&#34;&gt;1.2. Desde GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#no-olvidemos-que-siempre-debemos-cargar-el-paquete-antes-de-usarlo&#34;&gt;1.3. No olvidemos que siempre debemos cargar el paquete antes de usarlo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#funciones-básicas-en-rvest&#34;&gt;2 Funciones básicas en &lt;code&gt;rvest&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -38,13 +81,13 @@
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(&amp;quot;rvest&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;desde-github&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;1.1. Desde GitHub&lt;/h2&gt;
+&lt;h2&gt;1.2. Desde GitHub&lt;/h2&gt;
 &lt;p&gt;Para este camino, debemos tener instalado el paquete &lt;code&gt;devtools&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
 #devtools::install_github(&amp;quot;tidyverse/rvest&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;no-olvidemos-que-siempre-debemos-cargar-el-paquete-antes-de-usarlo&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;No olvidemos que siempre debemos cargar el paquete antes de usarlo&lt;/h2&gt;
+&lt;h2&gt;1.3. No olvidemos que siempre debemos cargar el paquete antes de usarlo&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
