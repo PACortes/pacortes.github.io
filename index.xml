@@ -695,6 +695,39 @@ De acuerdo a categorías en otra variable con valores específicos.&lt;/p&gt;
     
     <item>
       <title>Instalando rvest</title>
+      <link>https://academic-demo.netlify.app/courses/rvest/00_instalar/</link>
+      <pubDate>Mon, 20 Sep 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/rvest/00_instalar/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#instalando-rvest&#34;&gt;1. Instalando rvest&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#desde-el-cran&#34;&gt;1.1. Desde el CRAN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#desde-github&#34;&gt;1.1. Desde GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;instalando-rvest&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Instalando rvest&lt;/h1&gt;
+&lt;p&gt;Para instalar el paquete, tenemos dos posibles caminos:&lt;/p&gt;
+&lt;div id=&#34;desde-el-cran&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1.1. Desde el CRAN&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#install.packages(&amp;quot;rvest&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;desde-github&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1.1. Desde GitHub&lt;/h2&gt;
+&lt;p&gt;Para esta instalación, debemos tener isntalado el paquete &lt;code&gt;devtools&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
+#devtools::install_github(&amp;quot;tidyverse/rvest&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Instalando rvest</title>
       <link>https://academic-demo.netlify.app/courses/rvest/instalar/</link>
       <pubDate>Mon, 20 Sep 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/rvest/instalar/</guid>
