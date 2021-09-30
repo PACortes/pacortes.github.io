@@ -37,7 +37,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;desde-github&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1.1. Desde GitHub&lt;/h2&gt;
-&lt;p&gt;Para esta instalación, debemos tener isntalado el paquete &lt;code&gt;devtools&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Para este camino, debemos tener instalado el paquete &lt;code&gt;devtools&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install.packages(&amp;quot;devtools&amp;quot;)
 #devtools::install_github(&amp;quot;tidyverse/rvest&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
