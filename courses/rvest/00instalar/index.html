@@ -30,8 +30,7 @@
   
     
   
-  <meta name="description" content="1. Instalando rvest 1.1. Desde el CRAN 1.1. Desde GitHub    1. Instalando rvest Para instalar el paquete, tenemos dos posibles caminos:
-1.1. Desde el CRAN #install." />
+  <meta name="description" content="1. Instalando y cargando rvest 1.1. Desde el CRAN 1.1. Desde GitHub No olvidemos que siempre debemos cargar el paquete antes de usarlo  2 Funciones básicas en rvest   1." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/rvest/00instalar/" />
@@ -296,8 +295,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/rvest/00instalar/" />
   <meta property="og:title" content="Instalando rvest | Pablo Cortes" />
-  <meta property="og:description" content="1. Instalando rvest 1.1. Desde el CRAN 1.1. Desde GitHub    1. Instalando rvest Para instalar el paquete, tenemos dos posibles caminos:
-1.1. Desde el CRAN #install." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1. Instalando y cargando rvest 1.1. Desde el CRAN 1.1. Desde GitHub No olvidemos que siempre debemos cargar el paquete antes de usarlo  2 Funciones básicas en rvest   1." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -738,15 +736,17 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#instalando-rvest">1. Instalando rvest</a><ul>
+<li><a href="#instalando-y-cargando-rvest">1. Instalando y cargando <code>rvest</code></a><ul>
 <li><a href="#desde-el-cran">1.1. Desde el CRAN</a></li>
 <li><a href="#desde-github">1.1. Desde GitHub</a></li>
+<li><a href="#no-olvidemos-que-siempre-debemos-cargar-el-paquete-antes-de-usarlo">No olvidemos que siempre debemos cargar el paquete antes de usarlo</a></li>
 </ul></li>
+<li><a href="#funciones-básicas-en-rvest">2 Funciones básicas en <code>rvest</code></a></li>
 </ul>
 </div>
 
-<div id="instalando-rvest" class="section level1">
-<h1>1. Instalando rvest</h1>
+<div id="instalando-y-cargando-rvest" class="section level1">
+<h1>1. Instalando y cargando <code>rvest</code></h1>
 <p>Para instalar el paquete, tenemos dos posibles caminos:</p>
 <div id="desde-el-cran" class="section level2">
 <h2>1.1. Desde el CRAN</h2>
@@ -758,6 +758,27 @@
 <pre class="r"><code># install.packages(&quot;devtools&quot;)
 #devtools::install_github(&quot;tidyverse/rvest&quot;)</code></pre>
 </div>
+<div id="no-olvidemos-que-siempre-debemos-cargar-el-paquete-antes-de-usarlo" class="section level2">
+<h2>No olvidemos que siempre debemos cargar el paquete antes de usarlo</h2>
+<pre class="r"><code>library(rvest)</code></pre>
+</div>
+</div>
+<div id="funciones-básicas-en-rvest" class="section level1">
+<h1>2 Funciones básicas en <code>rvest</code></h1>
+<p>A continuación se listan las funciones más importantes y sus respectivas descripciones.</p>
+<ul>
+<li><p><code>read_html()</code>: crea un objeto que contiene todo el código o etiquetas HTML.</p></li>
+<li><p><code>html_nodes()</code>: selecciona partes del objeto que contiene todo el código html.</p></li>
+<li><p><code>html_elements()</code>: devuelve un conjunto de nodos específicos.</p></li>
+<li><p><code>html_name()</code>: obtiene los atributos html.</p></li>
+<li><p><code>html_text()</code>: extrae el texto html, sin procesar.</p></li>
+<li><p><code>html_text2()</code>: extrae el texto html, procesa el texto.</p></li>
+<li><p><code>html_attr()</code>: regresa los atributos específicos html.</p></li>
+<li><p><code>html_attrs()</code>: obtiene los atributos html.</p></li>
+<li><p><code>html_chilren()</code>: obtiene atributos hijos.</p></li>
+<li><p><code>html_table()</code>: convierte una tabla html en una estructura de datos en R.</p></li>
+<li><p><code>minimal_html()</code>: genera una pagina html mínima.</p></li>
+</ul>
 </div>
 
     </div>
