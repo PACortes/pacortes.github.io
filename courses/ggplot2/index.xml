@@ -270,7 +270,7 @@
 &lt;p&gt;Los gráficos de cajas y bigotes (&lt;em&gt;boxplot&lt;/em&gt; en inglés) se utilizan para visualizar grupos de datos numéricos a través de sus cuartiles.&lt;/p&gt;
 &lt;p&gt;Cada gráfico de caja está compuesto por un rectángulo (la «caja») y dos brazos (los «bigotes»). La caja está definida por el segundo y tercer cuartil, mientras que los bigotes por el primero y el cuarto cuartil. La línea gruesa es la mediana (y no la media). Este tipo de representación es también útil para detectar valores atípicos (outliers).&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/boxplot.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar la libreía ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
@@ -331,14 +331,14 @@ glimpse(MaterialParticulado)
 &lt;h1&gt;4. Visualización&lt;/h1&gt;
 &lt;div id=&#34;gráfico-de-cajas-para-una-variable&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;4.1. Gráfico de cajas para una variable&lt;/h2&gt;
-&lt;p&gt;Generemos un gráfico de cajas para la variable dispersión con la variables &lt;strong&gt;PM2.5&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Generemos un gráfico de cajas para visualizar la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(y=PM2.5))+
       geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;gráfico-de-cajas-para-dos-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;4.2. Gráfico de cajas para dos variables&lt;/h2&gt;
-&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; dependiendo de la &lt;strong&gt;Ciudad&lt;/strong&gt; en la cuál se levantó la información.&lt;/p&gt;
+&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; para cada &lt;strong&gt;Ciudad&lt;/strong&gt; en la que se levantó información.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
       geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
@@ -355,6 +355,122 @@ glimpse(MaterialParticulado)
         plot.title=element_text(size=25),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>3. Gráfico de cajas</title>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
+      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#material-particulado-pm&#34;&gt;3.1. Material Particulado (PM)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-de-datos-descripción&#34;&gt;3.2. Base de datos: descripción&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-de-datos-descarga&#34;&gt;3.3. Base de datos: descarga&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-una-variable&#34;&gt;4.1. Gráfico de cajas para una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-dos-variables&#34;&gt;4.2. Gráfico de cajas para dos variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;Este tipo de gráfico permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos.
+Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico jitter es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_jitter()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_boxplot()&lt;/code&gt;: Especifica que queremos generar un gráfico de cajas.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Datos&lt;/h1&gt;
+&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
+&lt;div id=&#34;material-particulado-pm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.1. Material Particulado (PM)&lt;/h2&gt;
+&lt;p&gt;Se denomina &lt;a href=&#34;https://sinca.mma.gob.cl/index.php/pagina/index/id/glosario&#34;&gt;Material Particulado (MP)&lt;/a&gt; a una mezcla de partículas líquidas y sólidas que se encuentran en suspensión en el aire. Los MPs son de generados a partir de algúna actividad antropogénica o natural, y forman pare de la contaminación atmosférica que impacta negativamente la salud humana.&lt;/p&gt;
+&lt;p&gt;Estos contaminantes se clasifican en función de su diámetro aerodinámico en PM10 (partículas con un diámetro inferior a 10 micras) o PM2.5 (diámetro inferior a 2,5 micra).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-de-datos-descripción&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.2. Base de datos: descripción&lt;/h2&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt; fue generada a partir de la información recuperada desde la plataforma SINCA el día 06-10-2021, y contiene la siguiente información:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Ciudad&lt;/strong&gt;: Localidad del país en la cuál se encuentra la estación de monitoreo que registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fecha&lt;/strong&gt;: Momento en el cuál se registra la calidad del aire (Año/Mes/día).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Año&lt;/strong&gt;: Año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mes&lt;/strong&gt;: Mes del año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM2.5&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 2.5 μm.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM10&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 10 μm.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-de-datos-descarga&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.3. Base de datos: descarga&lt;/h2&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readr)
+MaterialParticulado &amp;lt;- read_delim(&amp;quot;MaterialParticulado.txt&amp;quot;, 
+delim = &amp;quot;\t&amp;quot;, escape_double = FALSE, 
+col_types = cols(Year = col_factor(levels = c(&amp;quot;2018&amp;quot;, &amp;quot;2019&amp;quot;, &amp;quot;2020&amp;quot;, &amp;quot;2021&amp;quot;)), Mes = col_factor(levels = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, 
+&amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;12&amp;quot;))), trim_ws = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Exploremos el encabezado de la base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;glimpse()&lt;/code&gt;. del paquete &lt;code&gt;dplyr()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+
+glimpse(MaterialParticulado)
+## Rows: 135
+## Columns: 6
+## $ Ciudad &amp;lt;chr&amp;gt; &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Sa…
+## $ Fecha  &amp;lt;dbl&amp;gt; 180101, 180201, 180301, 180401, 180501, 180601, 180701, 180801,…
+## $ Year   &amp;lt;fct&amp;gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 201…
+## $ Mes    &amp;lt;fct&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, …
+## $ PM2.5  &amp;lt;dbl&amp;gt; 15.29, 16.64, 17.85, 24.83, 34.65, 48.03, 40.13, 38.06, 24.97, …
+## $ PM10   &amp;lt;dbl&amp;gt; 54.42, 55.21, 75.63, 82.41, 98.61, 86.80, 62.77, 69.97, 57.63, …&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Visualización&lt;/h1&gt;
+&lt;div id=&#34;gráfico-de-cajas-para-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.1. Gráfico de cajas para una variable&lt;/h2&gt;
+&lt;p&gt;Generemos un gráfico de cajas para la variable dispersión con la variables &lt;strong&gt;PM2.5&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(y=PM2.5))+
+      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gráfico-de-cajas-para-dos-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.2. Gráfico de cajas para dos variables&lt;/h2&gt;
+&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; para cada &lt;strong&gt;Ciudad&lt;/strong&gt; en la que se levantó información.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#0072B5FF&amp;quot;)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

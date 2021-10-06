@@ -756,7 +756,7 @@
 <p>Los gráficos de cajas y bigotes (<em>boxplot</em> en inglés) se utilizan para visualizar grupos de datos numéricos a través de sus cuartiles.</p>
 <p>Cada gráfico de caja está compuesto por un rectángulo (la «caja») y dos brazos (los «bigotes»). La caja está definida por el segundo y tercer cuartil, mientras que los bigotes por el primero y el cuarto cuartil. La línea gruesa es la mediana (y no la media). Este tipo de representación es también útil para detectar valores atípicos (outliers).</p>
 <p><img src="/courses/ggplot2/Boxplot_files/boxplot.png" width="400" height="200" /></p>
-<p>Recordemos que antes de realizar nuestro gráfico, debemos cargar la libreía ggplot2 usando la función <code>library()</code>.</p>
+<p>Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función <code>library()</code>.</p>
 <pre class="r"><code>library(ggplot2)</code></pre>
 </div>
 <div id="sintáxis" class="section level1">
@@ -817,14 +817,14 @@ glimpse(MaterialParticulado)
 <h1>4. Visualización</h1>
 <div id="gráfico-de-cajas-para-una-variable" class="section level2">
 <h2>4.1. Gráfico de cajas para una variable</h2>
-<p>Generemos un gráfico de cajas para la variable dispersión con la variables <strong>PM2.5</strong>.</p>
+<p>Generemos un gráfico de cajas para visualizar la distribución de la variable <strong>PM2.5</strong>.</p>
 <pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(y=PM2.5))+
       geom_boxplot()</code></pre>
 <p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="gráfico-de-cajas-para-dos-variables" class="section level2">
 <h2>4.2. Gráfico de cajas para dos variables</h2>
-<p>Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable <strong>PM2.5</strong> dependiendo de la <strong>Ciudad</strong> en la cuál se levantó la información.</p>
+<p>Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable <strong>PM2.5</strong> para cada <strong>Ciudad</strong> en la que se levantó información.</p>
 <pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
       geom_boxplot()</code></pre>
 <p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
