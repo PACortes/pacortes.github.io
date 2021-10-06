@@ -95,7 +95,7 @@
 &lt;h1&gt;2. Extracción de texto desde una página específica&lt;/h1&gt;
 &lt;p&gt;Imaginemos que queremos extraer información de prensa sobre el proceso constituyente que se lleva a cabo en Chile.&lt;/p&gt;
 &lt;p&gt;En este ejemplo, vamos a extraer datos desde una noticia específica recientemente publicada en el periodico chileno [&lt;a href=&#34;https://www.latercera.com&#34; class=&#34;uri&#34;&gt;https://www.latercera.com&lt;/a&gt;].&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;latercera.png&#34; width=&#34;517&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/rvest/02_scrapeando_files/latercera.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;cargar-el-paquete-rvest&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.1. Cargar el paquete &lt;code&gt;rvest&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;Lo primero que debemos hacer es cargar el paquete &lt;code&gt;rvest&lt;/code&gt; y todos los paquetes adicionales que necesitemos para trabajar. En este ejemplo usaremos &lt;code&gt;dplyr&lt;/code&gt;.&lt;/p&gt;
