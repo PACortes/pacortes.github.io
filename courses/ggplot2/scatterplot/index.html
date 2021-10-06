@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Sintáxis 3. Visualización 3.1. Límites de los ejes 3.2. Título y etiquetas 3.3. Tamaño de los puntos 3.4. Color de los puntos 3.5. Leyenda  4." />
+  <meta name="description" content="1. Definición 2. Sintáxis 3. Base de datos 4. Visualización 4.1. Límites de los ejes 4.2. Título y etiquetas 4.3. Tamaño de los puntos 4.4. Color de los puntos 4." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/scatterplot/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/scatterplot/" />
   <meta property="og:title" content="Grafico de dispersión | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Visualización 3.1. Límites de los ejes 3.2. Título y etiquetas 3.3. Tamaño de los puntos 3.4. Color de los puntos 3.5. Leyenda  4." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Base de datos 4. Visualización 4.1. Límites de los ejes 4.2. Título y etiquetas 4.3. Tamaño de los puntos 4.4. Color de los puntos 4." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -738,15 +738,16 @@
 <ul>
 <li><a href="#definición">1. Definición</a></li>
 <li><a href="#sintáxis">2. Sintáxis</a></li>
-<li><a href="#visualización">3. Visualización</a><ul>
-<li><a href="#límites-de-los-ejes">3.1. Límites de los ejes</a></li>
-<li><a href="#título-y-etiquetas">3.2. Título y etiquetas</a></li>
-<li><a href="#tamaño-de-los-puntos">3.3. Tamaño de los puntos</a></li>
-<li><a href="#color-de-los-puntos">3.4. Color de los puntos</a></li>
-<li><a href="#leyenda">3.5. Leyenda</a></li>
+<li><a href="#base-de-datos">3. Base de datos</a></li>
+<li><a href="#visualización">4. Visualización</a><ul>
+<li><a href="#límites-de-los-ejes">4.1. Límites de los ejes</a></li>
+<li><a href="#título-y-etiquetas">4.2. Título y etiquetas</a></li>
+<li><a href="#tamaño-de-los-puntos">4.3. Tamaño de los puntos</a></li>
+<li><a href="#color-de-los-puntos">4.4. Color de los puntos</a></li>
+<li><a href="#leyenda">4.5. Leyenda</a></li>
 </ul></li>
-<li><a href="#juntando-todas-las-piezas">4. Juntando todas las piezas</a></li>
-<li><a href="#referencias">5. Referencias</a></li>
+<li><a href="#juntando-todas-las-piezas">5. Juntando todas las piezas</a></li>
+<li><a href="#referencias">6. Referencias</a></li>
 </ul>
 </div>
 
@@ -769,22 +770,37 @@
 <li><p><code>geom_point()</code>: Especifica que queremos generar un gráfico de dispersión.</p></li>
 </ul>
 </div>
+<div id="base-de-datos" class="section level1">
+<h1>3. Base de datos</h1>
+<p>Para el presente tutorial, utilizaremos el conjunto de datos <strong>flor Iris</strong>, multivariante introducido por Sir. Ronald Fisher en su artículo de 1936, <em>The use of multiple measurements in taxonomic problems</em> [<a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x" class="uri">https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x</a>].</p>
+<p><img src="iris.png" /></p>
+<p>La base de datos <strong>iris</strong> viene incluida en R y contiene las mediciones en centímetros de las variables longitud de los pétalos (<strong>Petal.Length</strong> y <strong>Petal.Width</strong>) y sépalos (<strong>Setal.Length</strong> y <strong>Setal.Width</strong>) de 50 flores de tres especies (<strong>Species</strong>) del género Iris: <em>Iris setosa</em>, <em>Iris versicolor</em> e <em>Iris virginica</em>.</p>
+<p>Exploremos el encabezado de la base de datos <strong>iris</strong></p>
+<pre class="r"><code>head (iris)
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
 <div id="visualización" class="section level1">
-<h1>3. Visualización</h1>
+<h1>4. Visualización</h1>
 <p>Generemos un gráfico de dispersión con las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong> de la base de datos <code>iris</code>.</p>
 <pre class="r"><code>ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <div id="límites-de-los-ejes" class="section level2">
-<h2>3.1. Límites de los ejes</h2>
+<h2>4.1. Límites de los ejes</h2>
 <p>Un primer ajuste que podemos hacer a nuestro gráfico es modificar los límites de los ejes. Para ello utilizamos las funciónes <code>xlim()</code> y <code>ylim()</code> para modificar los ejes x e y, respectivamente.</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
   xlim(c(0, 8))+
   ylim(c(0, 3))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="título-y-etiquetas" class="section level2">
-<h2>3.2. Título y etiquetas</h2>
+<h2>4.2. Título y etiquetas</h2>
 <p>Por defecto, las etiquetas de los ejes muestran los nombres de las variables. Ahora bien, podemos personalizar las etiquetas, e incluso el título del gráfico, con la función <code>labs()</code>:</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point()+
@@ -793,7 +809,7 @@
   labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
        x=&quot;Largo de Pétalo (cms)&quot;,
        y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>Ahora, aumentemos el tamaño de las letras del título (y su color) y las etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
 <p><code>theme()</code> incluye dos componentes principales:</p>
 <ul>
@@ -816,10 +832,10 @@
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25,colour=&quot;darkblue&quot;))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
 <div id="tamaño-de-los-puntos" class="section level2">
-<h2>3.3. Tamaño de los puntos</h2>
+<h2>4.3. Tamaño de los puntos</h2>
 <p>Ahora, para cambiar el tamaño de los puntos (aumentar o disminuir), utilizamos la función <code>size =</code> (valor por defecto: 0.5) dentro de <code>geom_point()</code>.</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(size=2.5)+
@@ -830,7 +846,7 @@
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión <code>aes()</code> dentro de <code>geom_point()</code>.</p>
 <p>Por ejemplo, asignemos un tamaño de punto diferente para aquellas muestran con un diametro de <strong>Petal.Length</strong> mayor a 2.5.</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -843,10 +859,10 @@
         axis.title=element_text(size=23),
         plot.title=element_text(size=25))
 ## Warning: Using size for a discrete variable is not advised.</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
 <div id="color-de-los-puntos" class="section level2">
-<h2>3.4. Color de los puntos</h2>
+<h2>4.4. Color de los puntos</h2>
 <p>Para mejorar la presentación de nuestro gráfico, podemos ajustar el color de los puntos incorporando la función <code>col=</code> dentro de <code>geom_point()</code>.</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(col=&quot;steelblue&quot;, size=2.5)+
@@ -857,7 +873,7 @@
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>También, podemos asignar colores específicos que diferencien entre las categorías de una tercera variable.</p>
 <p>Por ejemplo, asignemos diferentes colores para cada una de las especies en la base de datos.</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -870,7 +886,7 @@
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Podemos realizar lo mismo, pero especificando los colores que queremos asignar a las especies. Para ello, utilizamos la función <code>scale_colour_manual()</code>.</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
@@ -883,10 +899,10 @@
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         plot.subtitle=element_text(size=20))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="leyenda" class="section level2">
-<h2>3.5. Leyenda</h2>
+<h2>4.5. Leyenda</h2>
 <p>Al momento de espcificar colores (o formas) que diferencien entre las categorías de una tercera variable, automáticamente se genera una leyenda especificando la codificación.</p>
 <p>ggplot2 nos permite realizar ajustes a parámetros gráficos de la leyenda dentro de la función <code>theme()</code>. Algúnos de estos ajustes incluyen:</p>
 <ul>
@@ -909,11 +925,11 @@
         legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
         legend.title = element_text(size = 15),
         legend.text = element_text(size = 12))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 </div>
 <div id="juntando-todas-las-piezas" class="section level1">
-<h1>4. Juntando todas las piezas</h1>
+<h1>5. Juntando todas las piezas</h1>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
   geom_point(aes(col=Species), size=2.5)+
   scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
@@ -927,10 +943,10 @@
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
-<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
 <div id="referencias" class="section level1">
-<h1>5. Referencias</h1>
+<h1>6. Referencias</h1>
 <ul>
 <li>Theme elements [<a href="https://ggplot2.tidyverse.org/reference/element.html" class="uri">https://ggplot2.tidyverse.org/reference/element.html</a>]</li>
 </ul>
