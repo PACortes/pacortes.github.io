@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Learn how to visualize data with Plotly." />
+  <meta name="description" content="1. Definición 2. Sintáxis 3. Base de datos 4. Visualización 4.1. Límites de los ejes 4.2. Título y etiquetas 4.3. Tamaño de los puntos 4.4. Color de los puntos 4." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/boxplot/" />
@@ -294,17 +294,17 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/boxplot/" />
-  <meta property="og:title" content="Visualization | Pablo Cortes" />
-  <meta property="og:description" content="Learn how to visualize data with Plotly." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="2. Gráfico de cajas | Pablo Cortes" />
+  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Base de datos 4. Visualización 4.1. Límites de los ejes 4.2. Título y etiquetas 4.3. Tamaño de los puntos 4.4. Color de los puntos 4." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2021-01-01T00:00:00&#43;00:00"
+        content="2021-10-05T21:13:14-05:00"
       />
     
-    <meta property="article:modified_time" content="2021-01-01T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2021-10-05T21:13:14-05:00">
   
 
   
@@ -321,11 +321,11 @@
 
 
 
-  <title>Visualization | Pablo Cortes</title>
+  <title>2. Gráfico de cajas | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="d1660bf40c6b0e0ebf4510d1b8996711" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="48eba8fe4f0279f57f880594f39a2e10" >
 
   
   
@@ -492,7 +492,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/#posts"><span>Prensa</span></a>
+          <a class="nav-link " href="/#posts"><span>Opinión</span></a>
         </li>
 
         
@@ -553,36 +553,6 @@
 
         <li class="nav-item">
           <a class="nav-link  active" href="/courses/"><span>R</span></a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        
-
-        
-        
-        
-        
-
-        
-          
-            
-            
-          
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link " href="/courses_python/"><span>Python</span></a>
         </li>
 
         
@@ -684,268 +654,561 @@
   </div>
 
   <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>2. Gráfico de cajas</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Oct 5, 2021
+  </span>
+  
+
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
+  
+
+</div>
+
     
 
 
 
 
 
-<div class="container-fluid docs">
-  <div class="row flex-xl-nowrap">
-    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
-      <form class="docs-search d-flex align-items-center">
-  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    <div class="d-flex">
-      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
-        
-          ggplot2
-        
-      </span>
-      <span><i class="fas fa-chevron-down"></i></span>
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+<div id="TOC">
+<ul>
+<li><a href="#definición">1. Definición</a></li>
+<li><a href="#sintáxis">2. Sintáxis</a></li>
+<li><a href="#base-de-datos">3. Base de datos</a></li>
+<li><a href="#visualización">4. Visualización</a><ul>
+<li><a href="#límites-de-los-ejes">4.1. Límites de los ejes</a></li>
+<li><a href="#título-y-etiquetas">4.2. Título y etiquetas</a></li>
+<li><a href="#tamaño-de-los-puntos">4.3. Tamaño de los puntos</a></li>
+<li><a href="#color-de-los-puntos">4.4. Color de los puntos</a></li>
+<li><a href="#leyenda">4.5. Leyenda</a></li>
+</ul></li>
+<li><a href="#juntando-todas-las-piezas">5. Juntando todas las piezas</a></li>
+<li><a href="#referencias">6. Referencias</a></li>
+</ul>
+</div>
+
+<div id="definición" class="section level1">
+<h1>1. Definición</h1>
+<p>Los gráficos de cajas y bigotes (<em>boxplot</em> en inglés) se utilizan para visualizar grupos de datos numéricos a través de sus cuartiles.</p>
+<p>Cada gráfico de caja está compuesto por un rectángulo (la «caja») y dos brazos (los «bigotes»). La caja está definida por el segundo y tercer cuartil, mientras que los bigotes por el primero y el cuarto cuartil. La línea gruesa es la mediana (y no la media). Este tipo de representación es también útil para detectar valores atípicos (outliers).</p>
+<p><img src="/courses/ggplot2/Boxplot_files/boxplot.png" width="400" height="200" /></p>
+<p>Recordemos que antes de realizar nuestro gráfico, debemos cargar la libreía ggplot2 usando la función <code>library()</code>.</p>
+<pre class="r"><code>library(ggplot2)</code></pre>
+</div>
+<div id="sintáxis" class="section level1">
+<h1>2. Sintáxis</h1>
+<p>La sintáxis básica de ggplot2 para generar un gráfico de cajas es:</p>
+<p><code>ggplot(data, mapping=aes(x,y))+ box_point()</code></p>
+<p>En donde:</p>
+<ul>
+<li><p><code>data</code>: es la base de datos.</p></li>
+<li><p><code>aes()</code>: especifica las variables en los ejes x e y.</p></li>
+<li><p><code>+</code>: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.</p></li>
+<li><p><code>box_point()</code>: Especifica que queremos generar un gráfico de cajas.</p></li>
+</ul>
+</div>
+<div id="base-de-datos" class="section level1">
+<h1>3. Base de datos</h1>
+<p>Para el presente tutorial, utilizaremos una base deel conjunto de datos <strong>flor Iris</strong>, multivariante introducido por Sir. Ronald Fisher en su artículo de 1936, <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x">The use of multiple measurements in taxonomic problems</a>.</p>
+<p><img src="/courses/ggplot2/scatterplot_files/iris.png" width="400" height="200" /></p>
+<p>La base de datos <strong>iris</strong> viene incluida en R y contiene las mediciones en centímetros de las variables longitud de los pétalos (<strong>Petal.Length</strong> y <strong>Petal.Width</strong>) y sépalos (<strong>Setal.Length</strong> y <strong>Setal.Width</strong>) de 50 flores de tres especies (<strong>Species</strong>) del género Iris: <em>Iris setosa</em>, <em>Iris versicolor</em> e <em>Iris virginica</em>.</p>
+<p>Exploremos el encabezado de la base de datos <strong>iris</strong>.</p>
+<pre class="r"><code>head (iris)
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
+<div id="visualización" class="section level1">
+<h1>4. Visualización</h1>
+<p>Generemos un gráfico de dispersión con las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong> de la base de datos <code>iris</code>.</p>
+<pre class="r"><code>ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<div id="límites-de-los-ejes" class="section level2">
+<h2>4.1. Límites de los ejes</h2>
+<p>Un primer ajuste que podemos hacer a nuestro gráfico es modificar los límites de los ejes. Para ello utilizamos las funciónes <code>xlim()</code> y <code>ylim()</code> para modificar los ejes x e y, respectivamente.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point()+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="título-y-etiquetas" class="section level2">
+<h2>4.2. Título y etiquetas</h2>
+<p>Por defecto, las etiquetas de los ejes muestran los nombres de las variables. Ahora bien, podemos personalizar las etiquetas, e incluso el título del gráfico, con la función <code>labs()</code>:</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point()+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       x=&quot;Largo de Pétalo (cms)&quot;,
+       y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Ahora, aumentemos el tamaño de las letras del título (y su color) y las etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
+<p><code>theme()</code> incluye dos componentes principales:</p>
+<ul>
+<li><p><strong>Elementos del tema</strong>: especifica los elementos que queremos controlar.Por ejemplo, <code>plot.title</code> controla la apariencia del título.</p></li>
+<li><p><strong>Función del tema</strong>: describe la propiedad visual del elemento que queremos controlar. Por ejemplo, <code>element_text()</code> establece el tamaño de fuente, el color, entre otros:</p>
+<ul>
+<li><p><code>size =</code>: Para cambiar el tamaño de un elemento.</p></li>
+<li><p><code>color =</code>: Para cambiar el color de un elemento.</p></li>
+<li><p><code>family =</code>: Para cambiar la familia de letra de un elemento.</p></li>
+<li><p><code>face =</code>: Para cambiar el tipo de letra de un elemento.</p></li>
+<li><p><code>linetype =</code>: Para cambiar el tipo de línea.</p></li>
+</ul></li>
+</ul>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point()+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25,colour=&quot;darkblue&quot;))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="tamaño-de-los-puntos" class="section level2">
+<h2>4.3. Tamaño de los puntos</h2>
+<p>Ahora, para cambiar el tamaño de los puntos (aumentar o disminuir), utilizamos la función <code>size =</code> (valor por defecto: 0.5) dentro de <code>geom_point()</code>.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(size=2.5)+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión <code>aes()</code> dentro de <code>geom_point()</code>.</p>
+<p>Por ejemplo, asignemos un tamaño de punto diferente para aquellas muestran con un diametro de <strong>Petal.Length</strong> mayor a 2.5.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(size=Petal.Length&gt;2.5))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25))
+## Warning: Using size for a discrete variable is not advised.</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="color-de-los-puntos" class="section level2">
+<h2>4.4. Color de los puntos</h2>
+<p>Para mejorar la presentación de nuestro gráfico, podemos ajustar el color de los puntos incorporando la función <code>col=</code> dentro de <code>geom_point()</code>.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(col=&quot;steelblue&quot;, size=2.5)+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>También, podemos asignar colores específicos que diferencien entre las categorías de una tercera variable.</p>
+<p>Por ejemplo, asignemos diferentes colores para cada una de las especies en la base de datos.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        plot.subtitle=element_text(size=20))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Podemos realizar lo mismo, pero especificando los colores que queremos asignar a las especies. Para ello, utilizamos la función <code>scale_colour_manual()</code>.</p>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Pétalo&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        plot.subtitle=element_text(size=20))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="leyenda" class="section level2">
+<h2>4.5. Leyenda</h2>
+<p>Al momento de espcificar colores (o formas) que diferencien entre las categorías de una tercera variable, automáticamente se genera una leyenda especificando la codificación.</p>
+<p>ggplot2 nos permite realizar ajustes a parámetros gráficos de la leyenda dentro de la función <code>theme()</code>. Algúnos de estos ajustes incluyen:</p>
+<ul>
+<li><p><code>legend.position =</code>: Especifica la posición de la leyenda. Los valores opcionales pueden ser “none”, “left”, “right”, “bottom”, “top” o un vector numérico de dos elementos.</p></li>
+<li><p><code>legend.box.background =</code>: Para dar formato al fondo de la leyenda.</p></li>
+<li><p><code>legend.title =</code>: Para cambiar el foramto del título de la leyenda.</p></li>
+<li><p><code>legend.text =</code>: Para dar formato a las etiquetas de la leyenda.</p></li>
+</ul>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Mi primer gráfico en R&quot;, 
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        legend.position = c(0.13, 0.85),
+        legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
+        legend.title = element_text(size = 15),
+        legend.text = element_text(size = 12))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+</div>
+<div id="juntando-todas-las-piezas" class="section level1">
+<h1>5. Juntando todas las piezas</h1>
+<pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
+  geom_point(aes(col=Species), size=2.5)+
+  scale_colour_manual(values=c(&quot;#BC3C29FF&quot;, &quot;#0072B5FF&quot;,&quot;#E18727FF&quot;))+
+  xlim(c(0, 8))+
+  ylim(c(0, 3))+
+  labs(title=&quot;Largo vs Ancho del Petalo&quot;,
+       y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        legend.position = c(0.13, 0.85),
+        legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="referencias" class="section level1">
+<h1>6. Referencias</h1>
+<ul>
+<li><p><a href="https://ggplot2.tidyverse.org/reference/element.html">Theme elements</a></p></li>
+<li><p><a href="http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/">Legends</a></p></li>
+<li><p><a href="https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris">Conjunto de datos iris</a></p></li>
+</ul>
+</div>
+
     </div>
-  </button>
 
-  
-  <button class="form-control sidebar-search js-search d-none d-md-flex">
-    <i class="fas fa-search pr-2"></i>
-    <span class="sidebar-search-text">Search...</span>
-    <span class="sidebar-search-shortcut">/</span>
-  </button>
-  
-</form>
-
-<nav class="collapse docs-links" id="docs-nav">
-  
-  
-  
-  
-  
-  
-
-  
-  
     
 
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/visualizacion/">Visualización</a>
+  
+  <a class="badge badge-light" href="/tag/ggplot/">ggplot</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
     
       
-
-      <ul class="nav docs-sidenav">
-        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Tutoriales de R</a></li>
-      </ul>
-
       
       
         
-          
-        
       
-
-
-  
-    
-    
-    
-    
       
-    
-    
-
-    
-      <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/ggplot2/">ggplot2</a>
-    
       
-        <ul class="nav docs-sidenav">
-      
-
-
-  <li class=""><a href="/courses/ggplot2/scatterplot/">Scatterplot</a></li>
-
-
-
-  <li class=""><a href="/courses/ggplot2/jitter/">jitter</a></li>
-
-
-
-  <li class="active"><a href="/courses/ggplot2/boxplot/">Visualization</a></li>
-
-
-
-  <li class=""><a href="/courses/ggplot2/histogram/">Histograms</a></li>
-
-
-
-  <li class=""><a href="/courses/ggplot2/graficos/">Grafico de torta</a></li>
-
-      
-        </ul>
-      
-    
-
-    
-      </div>
-    
-
-    
-  
-</nav>
-
-    </div>
-
-    
-    
-    <div class="d-none d-xl-block col-xl-2 docs-toc">
-      
-
-      <ul class="nav toc-top">
-        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-      </ul>
-
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#learn">Learn</a></li>
-    <li><a href="#quiz">Quiz</a></li>
-  </ul>
-</nav>
-
-      
-    </div>
-    
-
-    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
-
-      <article class="article">
-
-        <div class="docs-article-container">
-          
-            
-  <nav class="d-none d-md-flex" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      
-  
-  
-  
-
-  <li class="breadcrumb-item">
-    <a href="/">
-      
-        Home
-      
-    </a>
-  </li>
-
-
-  <li class="breadcrumb-item">
-    <a href="/courses/">
-      
-        Tutoriales de R
-      
-    </a>
-  </li>
-
-
-  <li class="breadcrumb-item">
-    <a href="/courses/ggplot2/">
-      
-        ggplot2
-      
-    </a>
-  </li>
-
-
-      <li class="breadcrumb-item active" aria-current="page">
-        Visualization
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/boxplot/&amp;text=2.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
       </li>
-    </ol>
-  </nav>
-
-
-          
-
-          <h1>Visualization</h1>
-
-          <div class="article-style">
-            <p>Learn how to visualize data with Plotly.</p>
-<p>
-  <i class="fas fa-clock  pr-1 fa-fw"></i> 1-2 hours per week, for 8 weeks</p>
-<h2 id="learn">Learn</h2>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/hSPmj7mK6ng" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/boxplot/&amp;t=2.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=2.%20Gr%c3%a1fico%20de%20cajas&amp;body=https://academic-demo.netlify.app/courses/ggplot2/boxplot/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/boxplot/&amp;title=2.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=2.%20Gr%c3%a1fico%20de%20cajas%20https://academic-demo.netlify.app/courses/ggplot2/boxplot/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/boxplot/&amp;title=2.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
 
-<h2 id="quiz">Quiz</h2>
-<details class="spoiler "  id="spoiler-2">
-  <summary>When is a heatmap useful?</summary>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</details>
-<details class="spoiler "  id="spoiler-3">
-  <summary>Write Plotly code to render a bar chart</summary>
-  <p><pre><code class="language-python">import plotly.express as px
-data_canada = px.data.gapminder().query(&quot;country == 'Canada'&quot;)
-fig = px.bar(data_canada, x='year', y='pop')
-fig.show()
-</code></pre>
-</p>
-</details>
-          </div>
-
-          
 
 
 
-          
-          
-          <div class="article-widget">
-            
-<div class="post-nav">
+
+
+
+
+
+
+
+  
+  
+
+
+
   
   
   
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/courses/ggplot2/jitter/" rel="next">jitter</a>
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://academic-demo.netlify.app/"><img class="avatar mr-3 avatar-circle" src="/author/pablo-cortes-garcia/avatar_hu7d3b0da55c569d642c49bbbb65ab872a_84834_270x270_fill_q75_lanczos_center.jpeg" alt="Pablo Cortés García"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://academic-demo.netlify.app/">Pablo Cortés García</a></h5>
+      <h6 class="card-subtitle">Profesor Asistente</h6>
+      <p class="card-text">Mis intereses incluyen Cambio Climático, Biodiversidad, Análisis de texto computacional, Búsqueda y recuperación de información.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Pablo_Cortes11" target="_blank" rel="noopener">
+        <i class="fab fa-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/PACortes" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/pablo-andr%c3%a9s-cort%c3%a9s-garc%c3%ada-1bb2511b3" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/pabcorgar/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
   </div>
-  
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/courses/ggplot2/histogram/" rel="prev">Histograms</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </div>
-  
-</div>
+</article>
+  </div>
 
-          </div>
-          
-        </div>
-
-        <div class="body-footer">
-          <p>Last updated on Jan 1, 2021</p>
-
-          
-
-
-
-
-
-          
-
-
-
-
-          
-
-
-  
-  
-
-
-
-        </div>
-
-      </article>
-
+  <div class="page-footer">
+    
+    
+    <div class="container">
       <footer class="site-footer">
 
   
@@ -981,15 +1244,7 @@ fig.show()
   </p>
 </footer>
 
-
-    </main>
-  </div>
-</div>
-
-  </div>
-
-  <div class="page-footer">
-    
+    </div>
     
   </div>
 
@@ -1059,11 +1314,6 @@ fig.show()
 
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
-    
 
     
     
@@ -1121,6 +1371,7 @@ fig.show()
 
     
   <script async defer src="https://buttons.github.io/buttons.js"></script>
+
 
 
 
