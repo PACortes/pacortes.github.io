@@ -314,16 +314,16 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#base-de-datos&#34;&gt;3. Base de datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#material-particulado-pm&#34;&gt;3.1. Material Particulado (PM)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-de-datos-descripción&#34;&gt;3.2. Base de datos: descripción&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-de-datos-descarga&#34;&gt;3.3. Base de datos: descarga&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#límites-de-los-ejes&#34;&gt;4.1. Límites de los ejes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#título-y-etiquetas&#34;&gt;4.2. Título y etiquetas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tamaño-de-los-puntos&#34;&gt;4.3. Tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#color-de-los-puntos&#34;&gt;4.4. Color de los puntos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#leyenda&#34;&gt;4.5. Leyenda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-una-variable&#34;&gt;4.1. Gráfico de cajas para una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-dos-variables&#34;&gt;4.2. Gráfico de cajas para dos variables&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;6. Referencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -338,197 +338,85 @@
 &lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;2. Sintáxis&lt;/h1&gt;
 &lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de cajas es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ box_point()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_boxplot()&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;En donde:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;box_point()&lt;/code&gt;: Especifica que queremos generar un gráfico de cajas.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_boxplot()&lt;/code&gt;: Especifica que queremos generar un gráfico de cajas.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;base-de-datos&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Base de datos&lt;/h1&gt;
-&lt;p&gt;Para el presente tutorial, utilizaremos una base deel conjunto de datos &lt;strong&gt;flor Iris&lt;/strong&gt;, multivariante introducido por Sir. Ronald Fisher en su artículo de 1936, &lt;a href=&#34;https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x&#34;&gt;The use of multiple measurements in taxonomic problems&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/iris.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;La base de datos &lt;strong&gt;iris&lt;/strong&gt; viene incluida en R y contiene las mediciones en centímetros de las variables longitud de los pétalos (&lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt;) y sépalos (&lt;strong&gt;Setal.Length&lt;/strong&gt; y &lt;strong&gt;Setal.Width&lt;/strong&gt;) de 50 flores de tres especies (&lt;strong&gt;Species&lt;/strong&gt;) del género Iris: &lt;em&gt;Iris setosa&lt;/em&gt;, &lt;em&gt;Iris versicolor&lt;/em&gt; e &lt;em&gt;Iris virginica&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Exploremos el encabezado de la base de datos &lt;strong&gt;iris&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;head (iris)
-##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Datos&lt;/h1&gt;
+&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
+&lt;div id=&#34;material-particulado-pm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.1. Material Particulado (PM)&lt;/h2&gt;
+&lt;p&gt;Se denomina &lt;a href=&#34;https://sinca.mma.gob.cl/index.php/pagina/index/id/glosario&#34;&gt;Material Particulado (MP)&lt;/a&gt; a una mezcla de partículas líquidas y sólidas que se encuentran en suspensión en el aire. Los MPs son de generados a partir de algúna actividad antropogénica o natural, y forman pare de la contaminación atmosférica que impacta negativamente la salud humana.&lt;/p&gt;
+&lt;p&gt;Estos contaminantes se clasifican en función de su diámetro aerodinámico en PM10 (partículas con un diámetro inferior a 10 micras) o PM2.5 (diámetro inferior a 2,5 micra).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-de-datos-descripción&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.2. Base de datos: descripción&lt;/h2&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt; fue generada a partir de la información recuperada desde la plataforma SINCA el día 06-10-2021, y contiene la siguiente información:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Ciudad&lt;/strong&gt;: Localidad del país en la cuál se encuentra la estación de monitoreo que registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fecha&lt;/strong&gt;: Momento en el cuál se registra la calidad del aire (Año/Mes/día).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Año&lt;/strong&gt;: Año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mes&lt;/strong&gt;: Mes del año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM2.5&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 2.5 μm.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM10&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 10 μm.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-de-datos-descarga&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.3. Base de datos: descarga&lt;/h2&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readr)
+MaterialParticulado &amp;lt;- read_delim(&amp;quot;MaterialParticulado.txt&amp;quot;, 
+delim = &amp;quot;\t&amp;quot;, escape_double = FALSE, 
+col_types = cols(Year = col_factor(levels = c(&amp;quot;2018&amp;quot;, &amp;quot;2019&amp;quot;, &amp;quot;2020&amp;quot;, &amp;quot;2021&amp;quot;)), Mes = col_factor(levels = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, 
+&amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;12&amp;quot;))), trim_ws = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Exploremos el encabezado de la base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;glimpse()&lt;/code&gt;. del paquete &lt;code&gt;dplyr()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+
+glimpse(MaterialParticulado)
+## Rows: 135
+## Columns: 6
+## $ Ciudad &amp;lt;chr&amp;gt; &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Sa…
+## $ Fecha  &amp;lt;dbl&amp;gt; 180101, 180201, 180301, 180401, 180501, 180601, 180701, 180801,…
+## $ Year   &amp;lt;fct&amp;gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 201…
+## $ Mes    &amp;lt;fct&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, …
+## $ PM2.5  &amp;lt;dbl&amp;gt; 15.29, 16.64, 17.85, 24.83, 34.65, 48.03, 40.13, 38.06, 24.97, …
+## $ PM10   &amp;lt;dbl&amp;gt; 54.42, 55.21, 75.63, 82.41, 98.61, 86.80, 62.77, 69.97, 57.63, …&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;4. Visualización&lt;/h1&gt;
-&lt;p&gt;Generemos un gráfico de dispersión con las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=iris, mapping =aes(x=Petal.Length, y =Petal.Width))+geom_point()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;div id=&#34;límites-de-los-ejes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.1. Límites de los ejes&lt;/h2&gt;
-&lt;p&gt;Un primer ajuste que podemos hacer a nuestro gráfico es modificar los límites de los ejes. Para ello utilizamos las funciónes &lt;code&gt;xlim()&lt;/code&gt; y &lt;code&gt;ylim()&lt;/code&gt; para modificar los ejes x e y, respectivamente.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point()+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;gráfico-de-cajas-para-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.1. Gráfico de cajas para una variable&lt;/h2&gt;
+&lt;p&gt;Generemos un gráfico de cajas para la variable dispersión con la variables &lt;strong&gt;PM2.5&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(y=PM2.5))+
+      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;título-y-etiquetas&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.2. Título y etiquetas&lt;/h2&gt;
-&lt;p&gt;Por defecto, las etiquetas de los ejes muestran los nombres de las variables. Ahora bien, podemos personalizar las etiquetas, e incluso el título del gráfico, con la función &lt;code&gt;labs()&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point()+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
-       x=&amp;quot;Largo de Pétalo (cms)&amp;quot;,
-       y=&amp;quot;Ancho de Pétalo (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;gráfico-de-cajas-para-dos-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.2. Gráfico de cajas para dos variables&lt;/h2&gt;
+&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; dependiendo de la &lt;strong&gt;Ciudad&lt;/strong&gt; en la cuál se levantó la información.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Ahora, aumentemos el tamaño de las letras del título (y su color) y las etiquetas con a función &lt;code&gt;theme()&lt;/code&gt;, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;theme()&lt;/code&gt; incluye dos componentes principales:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Elementos del tema&lt;/strong&gt;: especifica los elementos que queremos controlar.Por ejemplo, &lt;code&gt;plot.title&lt;/code&gt; controla la apariencia del título.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Función del tema&lt;/strong&gt;: describe la propiedad visual del elemento que queremos controlar. Por ejemplo, &lt;code&gt;element_text()&lt;/code&gt; establece el tamaño de fuente, el color, entre otros:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;size =&lt;/code&gt;: Para cambiar el tamaño de un elemento.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;color =&lt;/code&gt;: Para cambiar el color de un elemento.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;family =&lt;/code&gt;: Para cambiar la familia de letra de un elemento.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;face =&lt;/code&gt;: Para cambiar el tipo de letra de un elemento.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;linetype =&lt;/code&gt;: Para cambiar el tipo de línea.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point()+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25,colour=&amp;quot;darkblue&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.3. Tamaño de los puntos&lt;/h2&gt;
-&lt;p&gt;Ahora, para cambiar el tamaño de los puntos (aumentar o disminuir), utilizamos la función &lt;code&gt;size =&lt;/code&gt; (valor por defecto: 0.5) dentro de &lt;code&gt;geom_point()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(size=2.5)+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión &lt;code&gt;aes()&lt;/code&gt; dentro de &lt;code&gt;geom_point()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Por ejemplo, asignemos un tamaño de punto diferente para aquellas muestran con un diametro de &lt;strong&gt;Petal.Length&lt;/strong&gt; mayor a 2.5.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(size=Petal.Length&amp;gt;2.5))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25))
-## Warning: Using size for a discrete variable is not advised.&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;color-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.4. Color de los puntos&lt;/h2&gt;
-&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color de los puntos incorporando la función &lt;code&gt;col=&lt;/code&gt; dentro de &lt;code&gt;geom_point()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(col=&amp;quot;steelblue&amp;quot;, size=2.5)+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;También, podemos asignar colores específicos que diferencien entre las categorías de una tercera variable.&lt;/p&gt;
-&lt;p&gt;Por ejemplo, asignemos diferentes colores para cada una de las especies en la base de datos.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Podemos realizar lo mismo, pero especificando los colores que queremos asignar a las especies. Para ello, utilizamos la función &lt;code&gt;scale_colour_manual()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  scale_colour_manual(values=c(&amp;quot;#BC3C29FF&amp;quot;, &amp;quot;#0072B5FF&amp;quot;,&amp;quot;#E18727FF&amp;quot;))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Pétalo&amp;quot;, 
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;leyenda&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.5. Leyenda&lt;/h2&gt;
-&lt;p&gt;Al momento de espcificar colores (o formas) que diferencien entre las categorías de una tercera variable, automáticamente se genera una leyenda especificando la codificación.&lt;/p&gt;
-&lt;p&gt;ggplot2 nos permite realizar ajustes a parámetros gráficos de la leyenda dentro de la función &lt;code&gt;theme()&lt;/code&gt;. Algúnos de estos ajustes incluyen:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;legend.position =&lt;/code&gt;: Especifica la posición de la leyenda. Los valores opcionales pueden ser “none”, “left”, “right”, “bottom”, “top” o un vector numérico de dos elementos.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;legend.box.background =&lt;/code&gt;: Para dar formato al fondo de la leyenda.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;legend.title =&lt;/code&gt;: Para cambiar el foramto del título de la leyenda.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;legend.text =&lt;/code&gt;: Para dar formato a las etiquetas de la leyenda.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  scale_colour_manual(values=c(&amp;quot;#BC3C29FF&amp;quot;, &amp;quot;#0072B5FF&amp;quot;,&amp;quot;#E18727FF&amp;quot;))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Mi primer gráfico en R&amp;quot;, 
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        legend.position = c(0.13, 0.85),
-        legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
-        legend.title = element_text(size = 15),
-        legend.text = element_text(size = 12))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
-  geom_point(aes(col=Species), size=2.5)+
-  scale_colour_manual(values=c(&amp;quot;#BC3C29FF&amp;quot;, &amp;quot;#0072B5FF&amp;quot;,&amp;quot;#E18727FF&amp;quot;))+
-  xlim(c(0, 8))+
-  ylim(c(0, 3))+
-  labs(title=&amp;quot;Largo vs Ancho del Petalo&amp;quot;,
-       y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#0072B5FF&amp;quot;)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
-        legend.position = c(0.13, 0.85),
-        legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;6. Referencias&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ggplot2.tidyverse.org/reference/element.html&#34;&gt;Theme elements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/&#34;&gt;Legends&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris&#34;&gt;Conjunto de datos iris&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
