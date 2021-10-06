@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Sintáxis 3. Datos 3.1. Material Particulado (PM) 3.2. Base de datos: descripción 3.3. Base de datos: descarga  4. Visualización 4.1. Gráfico de cajas para una variable 4." />
+  <meta name="description" content="1. Definición 2. Sintáxis 3. Datos 4. Visualización 4.1. Gráfico jitter para una variable  5. Juntando todas las piezas   1. Definición Este tipo de gráfico permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/ggplot2/jitter/" />
@@ -294,8 +294,8 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/jitter/" />
-  <meta property="og:title" content="3. Gráfico de cajas | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Datos 3.1. Material Particulado (PM) 3.2. Base de datos: descripción 3.3. Base de datos: descarga  4. Visualización 4.1. Gráfico de cajas para una variable 4." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="3. Gráfico jitter | Pablo Cortes" />
+  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Datos 4. Visualización 4.1. Gráfico jitter para una variable  5. Juntando todas las piezas   1. Definición Este tipo de gráfico permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -321,7 +321,7 @@
 
 
 
-  <title>3. Gráfico de cajas | Pablo Cortes</title>
+  <title>3. Gráfico jitter | Pablo Cortes</title>
 </head>
 
 
@@ -675,7 +675,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>3. Gráfico de cajas</h1>
+  <h1>3. Gráfico jitter</h1>
 
   
 
@@ -738,14 +738,9 @@
 <ul>
 <li><a href="#definición">1. Definición</a></li>
 <li><a href="#sintáxis">2. Sintáxis</a></li>
-<li><a href="#datos">3. Datos</a><ul>
-<li><a href="#material-particulado-pm">3.1. Material Particulado (PM)</a></li>
-<li><a href="#base-de-datos-descripción">3.2. Base de datos: descripción</a></li>
-<li><a href="#base-de-datos-descarga">3.3. Base de datos: descarga</a></li>
-</ul></li>
+<li><a href="#datos">3. Datos</a></li>
 <li><a href="#visualización">4. Visualización</a><ul>
-<li><a href="#gráfico-de-cajas-para-una-variable">4.1. Gráfico de cajas para una variable</a></li>
-<li><a href="#gráfico-de-cajas-para-dos-variables">4.2. Gráfico de cajas para dos variables</a></li>
+<li><a href="#gráfico-jitter-para-una-variable">4.1. Gráfico jitter para una variable</a></li>
 </ul></li>
 <li><a href="#juntando-todas-las-piezas">5. Juntando todas las piezas</a></li>
 </ul>
@@ -772,73 +767,35 @@ Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggp
 <div id="datos" class="section level1">
 <h1>3. Datos</h1>
 <p>Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del <a href="https://sinca.mma.gob.cl/#">Sistema de Información Nacional de Calidad del Aire (SINCA)</a> del Minsiterio de Medio Ambiente de Chile.</p>
-<div id="material-particulado-pm" class="section level2">
-<h2>3.1. Material Particulado (PM)</h2>
-<p>Se denomina <a href="https://sinca.mma.gob.cl/index.php/pagina/index/id/glosario">Material Particulado (MP)</a> a una mezcla de partículas líquidas y sólidas que se encuentran en suspensión en el aire. Los MPs son de generados a partir de algúna actividad antropogénica o natural, y forman pare de la contaminación atmosférica que impacta negativamente la salud humana.</p>
-<p>Estos contaminantes se clasifican en función de su diámetro aerodinámico en PM10 (partículas con un diámetro inferior a 10 micras) o PM2.5 (diámetro inferior a 2,5 micra).</p>
-</div>
-<div id="base-de-datos-descripción" class="section level2">
-<h2>3.2. Base de datos: descripción</h2>
-<p>La base de datos <strong>MaterialParticulado</strong> fue generada a partir de la información recuperada desde la plataforma SINCA el día 06-10-2021, y contiene la siguiente información:</p>
-<ul>
-<li><p><strong>Ciudad</strong>: Localidad del país en la cuál se encuentra la estación de monitoreo que registra la calidad del aire.</p></li>
-<li><p><strong>Fecha</strong>: Momento en el cuál se registra la calidad del aire (Año/Mes/día).</p></li>
-<li><p><strong>Año</strong>: Año en el cuál se registra la calidad del aire.</p></li>
-<li><p><strong>Mes</strong>: Mes del año en el cuál se registra la calidad del aire.</p></li>
-<li><p><strong>PM2.5</strong>: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 2.5 μm.</p></li>
-<li><p><strong>PM10</strong>: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 10 μm.</p></li>
-</ul>
-</div>
-<div id="base-de-datos-descarga" class="section level2">
-<h2>3.3. Base de datos: descarga</h2>
 <p>La base de datos <strong>MaterialParticulado.txt</strong> se encuentra disponible en el repositorio github <a href="https://github.com/PACortes/pacortes_datos">PACortes/pacortes_datos</a>.</p>
 <pre class="r"><code>library(readr)
 MaterialParticulado &lt;- read_delim(&quot;MaterialParticulado.txt&quot;, 
 delim = &quot;\t&quot;, escape_double = FALSE, 
 col_types = cols(Year = col_factor(levels = c(&quot;2018&quot;, &quot;2019&quot;, &quot;2020&quot;, &quot;2021&quot;)), Mes = col_factor(levels = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, 
 &quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;))), trim_ws = TRUE)</code></pre>
-<p>Exploremos el encabezado de la base de datos <strong>MaterialParticulado</strong>. Para ello, utilizaremos la función <code>glimpse()</code>. del paquete <code>dplyr()</code>.</p>
-<pre class="r"><code>library(dplyr)
-
-glimpse(MaterialParticulado)
-## Rows: 135
-## Columns: 6
-## $ Ciudad &lt;chr&gt; &quot;Santiago&quot;, &quot;Santiago&quot;, &quot;Santiago&quot;, &quot;Santiago&quot;, &quot;Santiago&quot;, &quot;Sa…
-## $ Fecha  &lt;dbl&gt; 180101, 180201, 180301, 180401, 180501, 180601, 180701, 180801,…
-## $ Year   &lt;fct&gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 201…
-## $ Mes    &lt;fct&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, …
-## $ PM2.5  &lt;dbl&gt; 15.29, 16.64, 17.85, 24.83, 34.65, 48.03, 40.13, 38.06, 24.97, …
-## $ PM10   &lt;dbl&gt; 54.42, 55.21, 75.63, 82.41, 98.61, 86.80, 62.77, 69.97, 57.63, …</code></pre>
-</div>
 </div>
 <div id="visualización" class="section level1">
 <h1>4. Visualización</h1>
-<div id="gráfico-de-cajas-para-una-variable" class="section level2">
-<h2>4.1. Gráfico de cajas para una variable</h2>
-<p>Generemos un gráfico de cajas para la variable dispersión con la variables <strong>PM2.5</strong>.</p>
-<pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(y=PM2.5))+
-      geom_boxplot()</code></pre>
-<p><img src="/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-</div>
-<div id="gráfico-de-cajas-para-dos-variables" class="section level2">
-<h2>4.2. Gráfico de cajas para dos variables</h2>
-<p>Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable <strong>PM2.5</strong> para cada <strong>Ciudad</strong> en la que se levantó información.</p>
+<div id="gráfico-jitter-para-una-variable" class="section level2">
+<h2>4.1. Gráfico jitter para una variable</h2>
+<p>Generemos un gráfico jitter para visualziar los datos de la variable <strong>PM2.5</strong>.</p>
 <pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot()</code></pre>
-<p><img src="/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+  geom_jitter()</code></pre>
+<p><img src="/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>
 </div>
 <div id="juntando-todas-las-piezas" class="section level1">
 <h1>5. Juntando todas las piezas</h1>
 <pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&quot;#0072B5FF&quot;)+
+  geom_boxplot()+
+  geom_jitter(position=position_jitter(0.1), color=&quot;#0072B5FF&quot;)+
   labs(title=&quot;PM2.5 según ciudad&quot;,
        y=&quot;PM2.5 (μm)&quot;, x=&quot;Ciudad&quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
-<p><img src="/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 
     </div>
@@ -871,7 +828,7 @@ glimpse(MaterialParticulado)
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;text=3.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;text=3.%20Gr%c3%a1fico%20jitter" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -884,7 +841,7 @@ glimpse(MaterialParticulado)
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;t=3.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;t=3.%20Gr%c3%a1fico%20jitter" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -897,7 +854,7 @@ glimpse(MaterialParticulado)
       
       
       <li>
-        <a href="mailto:?subject=3.%20Gr%c3%a1fico%20de%20cajas&amp;body=https://academic-demo.netlify.app/courses/ggplot2/jitter/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=3.%20Gr%c3%a1fico%20jitter&amp;body=https://academic-demo.netlify.app/courses/ggplot2/jitter/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -910,7 +867,7 @@ glimpse(MaterialParticulado)
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;title=3.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;title=3.%20Gr%c3%a1fico%20jitter" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -923,7 +880,7 @@ glimpse(MaterialParticulado)
       
       
       <li>
-        <a href="whatsapp://send?text=3.%20Gr%c3%a1fico%20de%20cajas%20https://academic-demo.netlify.app/courses/ggplot2/jitter/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=3.%20Gr%c3%a1fico%20jitter%20https://academic-demo.netlify.app/courses/ggplot2/jitter/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -936,7 +893,7 @@ glimpse(MaterialParticulado)
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;title=3.%20Gr%c3%a1fico%20de%20cajas" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/jitter/&amp;title=3.%20Gr%c3%a1fico%20jitter" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
