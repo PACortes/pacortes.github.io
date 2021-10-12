@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="2. Extracción de texto desde una página específica 2.1. Cargar el paquete rvest 2.2. URL de la página de interés. 2.3. Extraer información desde el título de la noticia    2." />
+  <meta name="description" content="1. Revisión Sistemática 2. Revisión Sistemática vs narrativa 3. Etapas de un revisión Sistemática 3.1 Formular la pregunta de investigación 3.2 Definir criterios de inclusión y exclusión 3.3 Estrategia de búsqueda 3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" />
@@ -294,8 +294,8 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" />
-  <meta property="og:title" content="2. Extracción desde una página | Pablo Cortes" />
-  <meta property="og:description" content="2. Extracción de texto desde una página específica 2.1. Cargar el paquete rvest 2.2. URL de la página de interés. 2.3. Extraer información desde el título de la noticia    2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="2. Revisión Sistemática | Pablo Cortes" />
+  <meta property="og:description" content="1. Revisión Sistemática 2. Revisión Sistemática vs narrativa 3. Etapas de un revisión Sistemática 3.1 Formular la pregunta de investigación 3.2 Definir criterios de inclusión y exclusión 3.3 Estrategia de búsqueda 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -321,7 +321,7 @@
 
 
 
-  <title>2. Extracción desde una página | Pablo Cortes</title>
+  <title>2. Revisión Sistemática | Pablo Cortes</title>
 </head>
 
 
@@ -675,7 +675,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>2. Extracción desde una página</h1>
+  <h1>2. Revisión Sistemática</h1>
 
   
 
@@ -736,41 +736,70 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#extracción-de-texto-desde-una-página-específica">2. Extracción de texto desde una página específica</a><ul>
-<li><a href="#cargar-el-paquete-rvest">2.1. Cargar el paquete <code>rvest</code></a></li>
-<li><a href="#url-de-la-página-de-interés.">2.2. URL de la página de interés.</a></li>
-<li><a href="#extraer-información-desde-el-título-de-la-noticia">2.3. Extraer información desde el título de la noticia</a></li>
+<li><a href="#revisión-sistemática">1. Revisión Sistemática</a></li>
+<li><a href="#revisión-sistemática-vs-narrativa">2. Revisión Sistemática vs narrativa</a></li>
+<li><a href="#etapas-de-un-revisión-sistemática">3. Etapas de un revisión Sistemática</a><ul>
+<li><a href="#formular-la-pregunta-de-investigación">3.1 Formular la pregunta de investigación</a></li>
+<li><a href="#definir-criterios-de-inclusión-y-exclusión">3.2 Definir criterios de inclusión y exclusión</a></li>
+<li><a href="#estrategia-de-búsqueda">3.3 Estrategia de búsqueda</a></li>
+<li><a href="#selección-de-estudios">3.4 Selección de estudios</a></li>
+<li><a href="#extraer-los-datos">3.5 Extraer los datos</a></li>
+<li><a href="#analizar-e-interpretar-los-resultados">3.6 Analizar e interpretar los resultados</a></li>
+<li><a href="#referencias">Referencias</a></li>
 </ul></li>
 </ul>
 </div>
 
-<div id="extracción-de-texto-desde-una-página-específica" class="section level1">
-<h1>2. Extracción de texto desde una página específica</h1>
-<p>Imaginemos que queremos extraer información de prensa sobre el proceso constituyente que se lleva a cabo en Chile.</p>
-<p>En este ejemplo, vamos a extraer datos desde una noticia específica recientemente publicada en el periodico chileno [<a href="https://www.latercera.com" class="uri">https://www.latercera.com</a>].</p>
-<p><img src="/courses/rvest/02_scrapeando_files/latercera.png" width="400" height="200" /></p>
-<div id="cargar-el-paquete-rvest" class="section level2">
-<h2>2.1. Cargar el paquete <code>rvest</code></h2>
-<p>Lo primero que debemos hacer es cargar el paquete <code>rvest</code> y todos los paquetes adicionales que necesitemos para trabajar. En este ejemplo usaremos <code>dplyr</code>.</p>
-<pre class="r"><code>library(rvest)
-library(dplyr)</code></pre>
+<p><img src="/courses/bibliometrix/02_Revision_files/SR.png" /></p>
+<div id="revisión-sistemática" class="section level1">
+<h1>1. Revisión Sistemática</h1>
+<p>Artículo de “síntesis de la evidencia disponible”, en el que se realiza una revisión de aspectos cuantitativos y cualitativos de estudios primarios, con el objetivo de resumir la información existente sobre una pregunta de investigación en una determinada disciplina.</p>
+<p>Las revisiones sistemáticas permiten:</p>
+<ul>
+<li><p>Analizar el conocimiento en torno a una pregunta de investigación a través del análisis de trabajos publicados.</p></li>
+<li><p>Realizar una descripción general de lo que se hizo, y lo que debería investigarse más a fondo, en torno a una pregunta e investigación.</p></li>
+<li><p>Identificar tendencias generales asociadas a un fenómeno de interés.</p></li>
+<li><p>Discutir y razonar la importancia de una pregunta de investigación</p></li>
+<li><p>Formular problemas e hipótesis de trabajos.</p></li>
+</ul>
 </div>
-<div id="url-de-la-página-de-interés." class="section level2">
-<h2>2.2. URL de la página de interés.</h2>
-<p>URL significa Uniform Resource Locator y es la dirección única y específica que se asigna a cada uno de los recursos disponibles de la World Wide Web para que puedan ser localizados por el navegador y visitados por los usuarios.</p>
-<p>Ahora, lo que debemos hacer es ir a la página de interés, copiar su URL y guardarla como un objeto.</p>
-<pre class="r"><code>url_interes&lt;- &quot;https://www.latercera.com/politica/noticia/convencion-aprueba-que-sea-el-pleno-por-mayoria-simple-el-que-califique-la-renuncia-de-un-convencional-se-descarta-participacion-del-tc/7KTM6K5JZFC4HOUYQOOUGSU5YQ/&quot;</code></pre>
+<div id="revisión-sistemática-vs-narrativa" class="section level1">
+<h1>2. Revisión Sistemática vs narrativa</h1>
+<p>Las revisiones sistemáticas se diferencian de las revisiones narrativas tradicionales en varios aspectos.</p>
+<p>Las <strong>revisiones narrativas</strong> tienden a ser principalmente descriptivas, no implican una búsqueda sistemática de la literatura y, por lo tanto, a menudo se centran en un subconjunto de estudios sobre un tema en particular. Si bien son informativas, a menudo pueden incluir un elemento de sesgo de selección.</p>
+<p>Las <strong>revisiones sistemáticas</strong> involucran una estrategia de búsqueda establecida <em>a priori</em>, con el objetivo de reducir el sesgo al identificar, evaluar y sintetizar todos los estudios relevantes sobre un tema en particular. A menudo, las revisiones sistemáticas incluyen un componente de metanálisis que implica el uso de técnicas estadísticas para sintetizar los datos de varios estudios en una sola estimación cuantitativa.</p>
 </div>
-<div id="extraer-información-desde-el-título-de-la-noticia" class="section level2">
-<h2>2.3. Extraer información desde el título de la noticia</h2>
-<p><strong>h1</strong> es el elemento HTML utilizado para identificar la cabecera más importante en una página web, tales como el título de una página, el título de un post, el nombre de un producto, etc.</p>
-<p>Utilicemos las funciones <code>read_html</code>, <code>html_elements()</code> y <code>html_text()</code> par leer la URL, obtener el elemento <strong>h1</strong> y extraer el texto contenido en el elemento, respectivamente.</p>
-<pre class="r"><code>titulo_pagina &lt;- read_html(url_interes)%&gt;% 
-  html_element(&quot;h1&quot;) %&gt;% 
-  html_text()</code></pre>
-<p>Ahora, revisemos el texto obtenido desde el título de la página.</p>
-<pre class="r"><code>titulo_pagina
-## [1] &quot;Convención aprueba que sea el pleno, por mayoría simple, el que califique la renuncia de un convencional: se descarta participación del TC&quot;</code></pre>
+<div id="etapas-de-un-revisión-sistemática" class="section level1">
+<h1>3. Etapas de un revisión Sistemática</h1>
+<div id="formular-la-pregunta-de-investigación" class="section level2">
+<h2>3.1 Formular la pregunta de investigación</h2>
+<p>La primera etapa, y la más importante, implica definir la pregunta de investigación de la revisión. Esta pregunta representa algúna dimensión sobre un tema en particular sobre el cuál queremos saber más.</p>
+<p>Por ejemplo, si el tema que nos interesa es la <a href="https://www.cepal.org/es/publicaciones/40407-guia-general-la-gestion-residuos-solidos-domiciliarios">gestión de Residuos Domiciliarios en Chile</a>, existen múltiples dimensionadas relacionadas sobre las cuales quisieramos ahondar.</p>
+<p><img src="/courses/bibliometrix/02_Revision_files/preview_384592.png" width="400" height="200" /></p>
+<p>En términos de la Gestión Domiciliaria de Residuos, podríamos preguntarnos ¿La gestión de residiuos en Chile está relacionda con el poder adquisitivo?</p>
+</div>
+<div id="definir-criterios-de-inclusión-y-exclusión" class="section level2">
+<h2>3.2 Definir criterios de inclusión y exclusión</h2>
+</div>
+<div id="estrategia-de-búsqueda" class="section level2">
+<h2>3.3 Estrategia de búsqueda</h2>
+</div>
+<div id="selección-de-estudios" class="section level2">
+<h2>3.4 Selección de estudios</h2>
+</div>
+<div id="extraer-los-datos" class="section level2">
+<h2>3.5 Extraer los datos</h2>
+</div>
+<div id="analizar-e-interpretar-los-resultados" class="section level2">
+<h2>3.6 Analizar e interpretar los resultados</h2>
+</div>
+<div id="referencias" class="section level2">
+<h2>Referencias</h2>
+<ul>
+<li><p><a href="https://www.elsevier.es/pt-revista-cirugia-espanola-english-edition--436-articulo-systematic-reviews-literature-what-should-S2173507713000914">Systematic Reviews of the Literature</a></p></li>
+<li><p><a href="https://ebn.bmj.com/content/14/3/64">What is a systematic review</a></p></li>
+<li><p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3024725/">Systematic reviews and Meta-Analyses</a></p></li>
+</ul>
 </div>
 </div>
 
@@ -785,9 +814,11 @@ library(dplyr)</code></pre>
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/web-scraping/">Web scraping</a>
+  <a class="badge badge-light" href="/tag/bibliometria/">Bibliometría</a>
   
-  <a class="badge badge-light" href="/tag/recuperacion-de-informacion/">Recuperación de información</a>
+  <a class="badge badge-light" href="/tag/bibliometrix/">Bibliometrix</a>
+  
+  <a class="badge badge-light" href="/tag/revision-sistematica/">Revisión Sistemática</a>
   
 </div>
 
@@ -804,7 +835,7 @@ library(dplyr)</code></pre>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;text=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;text=2.%20Revisi%c3%b3n%20Sistem%c3%a1tica" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -817,7 +848,7 @@ library(dplyr)</code></pre>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;t=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;t=2.%20Revisi%c3%b3n%20Sistem%c3%a1tica" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -830,7 +861,7 @@ library(dplyr)</code></pre>
       
       
       <li>
-        <a href="mailto:?subject=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina&amp;body=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=2.%20Revisi%c3%b3n%20Sistem%c3%a1tica&amp;body=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -843,7 +874,7 @@ library(dplyr)</code></pre>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;title=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;title=2.%20Revisi%c3%b3n%20Sistem%c3%a1tica" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -856,7 +887,7 @@ library(dplyr)</code></pre>
       
       
       <li>
-        <a href="whatsapp://send?text=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina%20https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=2.%20Revisi%c3%b3n%20Sistem%c3%a1tica%20https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -869,7 +900,7 @@ library(dplyr)</code></pre>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;title=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;title=2.%20Revisi%c3%b3n%20Sistem%c3%a1tica" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
