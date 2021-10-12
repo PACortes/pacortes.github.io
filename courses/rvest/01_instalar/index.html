@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Aspectos básicos de rvest 1.1. Instalando y cargando rvest Desde el CRAN Desde GitHub  1.2. No olvidemos que siempre debemos cargar el paquete antes de usarlo 1." />
+  <meta name="description" content="1. Bibliometría 2. Indicadores bibliométricos 3. Bases de Datos   1. Bibliometría Ciencia que aplica métodos estadísticos a la literatura científica de una determinada disciplina, y a los autores que la producen, con el objetivo de estudiar y analizar la actividad científica." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/rvest/01_instalar/" />
@@ -294,8 +294,8 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/rvest/01_instalar/" />
-  <meta property="og:title" content="1. Aspectos básicos | Pablo Cortes" />
-  <meta property="og:description" content="1. Aspectos básicos de rvest 1.1. Instalando y cargando rvest Desde el CRAN Desde GitHub  1.2. No olvidemos que siempre debemos cargar el paquete antes de usarlo 1." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="1. Análisis Bibliométrico | Pablo Cortes" />
+  <meta property="og:description" content="1. Bibliometría 2. Indicadores bibliométricos 3. Bases de Datos   1. Bibliometría Ciencia que aplica métodos estadísticos a la literatura científica de una determinada disciplina, y a los autores que la producen, con el objetivo de estudiar y analizar la actividad científica." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -321,7 +321,7 @@
 
 
 
-  <title>1. Aspectos básicos | Pablo Cortes</title>
+  <title>1. Análisis Bibliométrico | Pablo Cortes</title>
 </head>
 
 
@@ -675,7 +675,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>1. Aspectos básicos</h1>
+  <h1>1. Análisis Bibliométrico</h1>
 
   
 
@@ -736,55 +736,76 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#aspectos-básicos-de-rvest">1. Aspectos básicos de <code>rvest</code></a><ul>
-<li><a href="#instalando-y-cargando-rvest">1.1. Instalando y cargando <code>rvest</code></a><ul>
-<li><a href="#desde-el-cran">Desde el CRAN</a></li>
-<li><a href="#desde-github">Desde GitHub</a></li>
-</ul></li>
-<li><a href="#no-olvidemos-que-siempre-debemos-cargar-el-paquete-antes-de-usarlo">1.2. No olvidemos que siempre debemos cargar el paquete antes de usarlo</a></li>
-<li><a href="#funciones-básicas-en-rvest">1.3. Funciones básicas en <code>rvest</code></a></li>
-</ul></li>
+<li><a href="#bibliometría">1. Bibliometría</a></li>
+<li><a href="#indicadores-bibliométricos">2. Indicadores bibliométricos</a></li>
+<li><a href="#bases-de-datos">3. Bases de Datos</a></li>
 </ul>
 </div>
 
-<div id="aspectos-básicos-de-rvest" class="section level1">
-<h1>1. Aspectos básicos de <code>rvest</code></h1>
-<p>Antes de extraer información de una página web, debemos instalar y cargar el paquete <code>rvest</code>, así como conocer las principales funciones contenidas en él.</p>
-<div id="instalando-y-cargando-rvest" class="section level2">
-<h2>1.1. Instalando y cargando <code>rvest</code></h2>
-<p>Para instalar el paquete, tenemos dos posibles caminos:</p>
-<div id="desde-el-cran" class="section level3">
-<h3>Desde el CRAN</h3>
-<pre class="r"><code>#install.packages(&quot;rvest&quot;)</code></pre>
-</div>
-<div id="desde-github" class="section level3">
-<h3>Desde GitHub</h3>
-<p>Para este camino, debemos tener instalado el paquete <code>devtools</code>.</p>
-<pre class="r"><code># install.packages(&quot;devtools&quot;)
-#devtools::install_github(&quot;tidyverse/rvest&quot;)</code></pre>
-</div>
-</div>
-<div id="no-olvidemos-que-siempre-debemos-cargar-el-paquete-antes-de-usarlo" class="section level2">
-<h2>1.2. No olvidemos que siempre debemos cargar el paquete antes de usarlo</h2>
-<pre class="r"><code>library(rvest)</code></pre>
-</div>
-<div id="funciones-básicas-en-rvest" class="section level2">
-<h2>1.3. Funciones básicas en <code>rvest</code></h2>
-<p>A continuación se listan las funciones más importantes y sus respectivas descripciones.</p>
+<p><img src="/courses/rvest/01_Instalar_files/bibliometrics.png" width="400" height="200" /></p>
+<div id="bibliometría" class="section level1">
+<h1>1. Bibliometría</h1>
+<p>Ciencia que aplica métodos estadísticos a la literatura científica de una determinada disciplina, y a los autores que la producen, con el objetivo de estudiar y analizar la actividad científica.</p>
+<p>En otras palabras, la bibliometría permite analizar el conocimiento generado en una determinada disciplina. Este tipo de análisis nos permite identificar nuevo conocimiento a partir del existente. También permite reconocer vacíos de conocimiento.</p>
+<p>Los análisis bibliométricos son utilizados para describir o identificar tendencias generales asociadas a un fenómeno de interés, tales cómo:</p>
 <ul>
-<li><p><code>read_html()</code>: crea un objeto que contiene todo el código o etiquetas HTML.</p></li>
-<li><p><code>html_nodes()</code>: selecciona partes del objeto que contiene todo el código html.</p></li>
-<li><p><code>html_elements()</code>: devuelve un conjunto de nodos específicos.</p></li>
-<li><p><code>html_name()</code>: obtiene los atributos html.</p></li>
-<li><p><code>html_text()</code>: extrae el texto html, sin procesar.</p></li>
-<li><p><code>html_text2()</code>: extrae el texto html, procesa el texto.</p></li>
-<li><p><code>html_attr()</code>: regresa los atributos específicos html.</p></li>
-<li><p><code>html_attrs()</code>: obtiene los atributos html.</p></li>
-<li><p><code>html_chilren()</code>: obtiene atributos hijos.</p></li>
-<li><p><code>html_table()</code>: convierte una tabla html en una estructura de datos en R.</p></li>
-<li><p><code>minimal_html()</code>: genera una pagina html mínima.</p></li>
+<li>El aumento o disminución del interés por parte de la comunidad científica.</li>
+<li>La evolución cronológica de la producción científica.</li>
+<li>La productividad de los autores, instituciones o países.</li>
+<li>La colaboración entre científicos, instituciones o países.</li>
+<li>El impacto de las publicaciones en la comunidad científica.</li>
 </ul>
 </div>
+<div id="indicadores-bibliométricos" class="section level1">
+<h1>2. Indicadores bibliométricos</h1>
+<p>Los indicadores bibliométricos son datos numéricos calculados a partir de las características bibliográficas observadas en los documentos publicados en una determinada disciplina y que permiten el análisis de diversos aspectos de la actividad científica.</p>
+<ul>
+<li><p><strong>Indicadores de productividad científica</strong>: se basan en el recuento de publicaciones científicas. Cuantifican el tamaño, crecimiento y distribución de los artículos.</p>
+<ul>
+<li>Número total de Publicaciones.</li>
+<li>Año de la publicación.</li>
+<li>Evolución temporal de las publicaciones.</li>
+<li>Autores, países e instituciones de las publicaciones.</li>
+<li>Tipos de publicación.</li>
+<li>Áreas de publicación.</li>
+<li>Idioma de la publicación.</li>
+<li>Fuentes de las publicaciones.</li>
+</ul></li>
+<li><p><strong>Indicadores de impacto</strong>: Toman como datos citaciones de artículos y factor de impacto de la revista para indicar la “influencia” de la producción científica.</p>
+<ul>
+<li>Factor de impacto de la fuente.</li>
+<li>Citación de los artículos.</li>
+<li>Índice de inmediatez.</li>
+<li>Índice de autocitación.</li>
+</ul></li>
+<li><p><strong>Indicadores de colaboración</strong>: Miden el nivel de relación entre autores,instituciones o países que han realzado una publicación científica.</p>
+<ul>
+<li>Índice de multiautoría.</li>
+<li>Índice de institucionalidad.</li>
+<li>Tipo de internacionalización.</li>
+<li>Índice de inmediatez.</li>
+<li>Redes de colaboración.</li>
+</ul></li>
+<li><p><strong>Indicadores de contenido</strong>: Describen los temas abordados en las publicaciones científicas. Permiten identificar cuáles son los temas más importantes y los más recientes.</p>
+<ul>
+<li>Índice de multiautoría.</li>
+<li>Modelamiento de tópicos.</li>
+<li>Frecuencia de palabras claves.</li>
+<li>Redes de co-ocurrencia de palabras.</li>
+<li>Mapas temáticos.</li>
+</ul></li>
+</ul>
+</div>
+<div id="bases-de-datos" class="section level1">
+<h1>3. Bases de Datos</h1>
+<p>Las Bases de datos bibliográficas constituyen una de las principales fuentes de información sobre las publicaciones. Diferentes bases de datos se utilizan para hacer análisis bibliométricos y cada base de datos tiene características diferentes y puede proporcionar diferentes servicios.</p>
+<p>Actualmente, las bases de datos más utilizadas son Web of Science, Scopus y PubMed.</p>
+<p><img src="/courses/rvest/01_Instalar_files/logos.png" width="400" height="200" /></p>
+<ul>
+<li><p><a href="https://www.webofscience.com/wos/woscc/basic-search">Web of Science (WoS)</a>: plataforma on-line de suscipción propiedad de la empresa Clarivate Analytics. Es una colección de bases de datos de referencias bibliográficas y citas de publicaciones periódicas que recogen información desde 1900 a la actualidad. WOS está compuesta por la colección básica Core Collection que abarca los índices de Ciencias, Ciencias Sociales y Artes y Humanidades. Además, cuenta con bases de datos complementarias (Medline, Scielo y Korean cITATION index).</p></li>
+<li><p><a href="https://www.scopus.com">Scopus</a>: plataforma on-line de suscipción propiedad de la empresa Elsevier. La colección incluye revistas revisadas por pares de las áreas de ciencias, tecnología, medicina y ciencias sociales, incluyendo artes y humanidades.</p></li>
+<li><p><a href="https://pubmed.ncbi.nlm.nih.gov/">PubMed</a>: plataforma on-line de libre acceso. Permite consultar principalmente los contenidos de la base de datos Medline, especializada en ciencias de la salud. La colección incluye revistas revisadas por pares de las áreas de ciencias, tecnología, medicina y ciencias sociales, incluyendo artes y humanidades.</p></li>
+</ul>
 </div>
 
     </div>
@@ -817,7 +838,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;text=1.%20Aspectos%20b%c3%a1sicos" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;text=1.%20An%c3%a1lisis%20Bibliom%c3%a9trico" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -830,7 +851,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;t=1.%20Aspectos%20b%c3%a1sicos" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;t=1.%20An%c3%a1lisis%20Bibliom%c3%a9trico" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -843,7 +864,7 @@
       
       
       <li>
-        <a href="mailto:?subject=1.%20Aspectos%20b%c3%a1sicos&amp;body=https://academic-demo.netlify.app/courses/rvest/01_instalar/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=1.%20An%c3%a1lisis%20Bibliom%c3%a9trico&amp;body=https://academic-demo.netlify.app/courses/rvest/01_instalar/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -856,7 +877,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;title=1.%20Aspectos%20b%c3%a1sicos" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;title=1.%20An%c3%a1lisis%20Bibliom%c3%a9trico" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -869,7 +890,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=1.%20Aspectos%20b%c3%a1sicos%20https://academic-demo.netlify.app/courses/rvest/01_instalar/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=1.%20An%c3%a1lisis%20Bibliom%c3%a9trico%20https://academic-demo.netlify.app/courses/rvest/01_instalar/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -882,7 +903,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;title=1.%20Aspectos%20b%c3%a1sicos" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/rvest/01_instalar/&amp;title=1.%20An%c3%a1lisis%20Bibliom%c3%a9trico" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>

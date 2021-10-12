@@ -12,5 +12,54 @@
       <link>https://academic-demo.netlify.app/courses/bibliometrix/</link>
     </image>
     
+    <item>
+      <title>2. Extracción desde una página</title>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</link>
+      <pubDate>Wed, 29 Sep 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#extracción-de-texto-desde-una-página-específica&#34;&gt;2. Extracción de texto desde una página específica&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#cargar-el-paquete-rvest&#34;&gt;2.1. Cargar el paquete &lt;code&gt;rvest&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#url-de-la-página-de-interés.&#34;&gt;2.2. URL de la página de interés.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extraer-información-desde-el-título-de-la-noticia&#34;&gt;2.3. Extraer información desde el título de la noticia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;extracción-de-texto-desde-una-página-específica&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Extracción de texto desde una página específica&lt;/h1&gt;
+&lt;p&gt;Imaginemos que queremos extraer información de prensa sobre el proceso constituyente que se lleva a cabo en Chile.&lt;/p&gt;
+&lt;p&gt;En este ejemplo, vamos a extraer datos desde una noticia específica recientemente publicada en el periodico chileno [&lt;a href=&#34;https://www.latercera.com&#34; class=&#34;uri&#34;&gt;https://www.latercera.com&lt;/a&gt;].&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/rvest/02_scrapeando_files/latercera.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;cargar-el-paquete-rvest&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.1. Cargar el paquete &lt;code&gt;rvest&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Lo primero que debemos hacer es cargar el paquete &lt;code&gt;rvest&lt;/code&gt; y todos los paquetes adicionales que necesitemos para trabajar. En este ejemplo usaremos &lt;code&gt;dplyr&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(rvest)
+library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;url-de-la-página-de-interés.&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.2. URL de la página de interés.&lt;/h2&gt;
+&lt;p&gt;URL significa Uniform Resource Locator y es la dirección única y específica que se asigna a cada uno de los recursos disponibles de la World Wide Web para que puedan ser localizados por el navegador y visitados por los usuarios.&lt;/p&gt;
+&lt;p&gt;Ahora, lo que debemos hacer es ir a la página de interés, copiar su URL y guardarla como un objeto.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;url_interes&amp;lt;- &amp;quot;https://www.latercera.com/politica/noticia/convencion-aprueba-que-sea-el-pleno-por-mayoria-simple-el-que-califique-la-renuncia-de-un-convencional-se-descarta-participacion-del-tc/7KTM6K5JZFC4HOUYQOOUGSU5YQ/&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extraer-información-desde-el-título-de-la-noticia&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3. Extraer información desde el título de la noticia&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;h1&lt;/strong&gt; es el elemento HTML utilizado para identificar la cabecera más importante en una página web, tales como el título de una página, el título de un post, el nombre de un producto, etc.&lt;/p&gt;
+&lt;p&gt;Utilicemos las funciones &lt;code&gt;read_html&lt;/code&gt;, &lt;code&gt;html_elements()&lt;/code&gt; y &lt;code&gt;html_text()&lt;/code&gt; par leer la URL, obtener el elemento &lt;strong&gt;h1&lt;/strong&gt; y extraer el texto contenido en el elemento, respectivamente.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;titulo_pagina &amp;lt;- read_html(url_interes)%&amp;gt;% 
+  html_element(&amp;quot;h1&amp;quot;) %&amp;gt;% 
+  html_text()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, revisemos el texto obtenido desde el título de la página.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;titulo_pagina
+## [1] &amp;quot;Convención aprueba que sea el pleno, por mayoría simple, el que califique la renuncia de un convencional: se descarta participación del TC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="En este módulo vamos a extraer datos desde sitios web (Web scraping)." />
+  <meta name="description" content="2. Extracción de texto desde una página específica 2.1. Cargar el paquete rvest 2.2. URL de la página de interés. 2.3. Extraer información desde el título de la noticia    2." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/rvest/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" />
 
   
 
@@ -268,8 +268,6 @@
   
 
   
-    <link rel="alternate" href="/courses/rvest/index.xml" type="application/rss+xml" title="Pablo Cortes" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -278,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/courses/rvest/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" />
 
   
   
@@ -289,19 +287,24 @@
   
   
     
+    
   
   
-  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/courses/rvest/" />
-  <meta property="og:title" content="rvest: Extracción automática de datos desde sitios web | Pablo Cortes" />
-  <meta property="og:description" content="En este módulo vamos a extraer datos desde sitios web (Web scraping)." /><meta property="og:image" content="https://academic-demo.netlify.app/courses/rvest/featured.png" />
-    <meta property="twitter:image" content="https://academic-demo.netlify.app/courses/rvest/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" />
+  <meta property="og:title" content="2. Extracción desde una página | Pablo Cortes" />
+  <meta property="og:description" content="2. Extracción de texto desde una página específica 2.1. Cargar el paquete rvest 2.2. URL de la página de interés. 2.3. Extraer información desde el título de la noticia    2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-09-19T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2021-09-29T21:13:14-05:00"
+      />
     
+    <meta property="article:modified_time" content="2021-09-29T21:13:14-05:00">
   
 
   
@@ -312,15 +315,17 @@
 
   
 
+  
 
 
 
 
-  <title>rvest: Extracción automática de datos desde sitios web | Pablo Cortes</title>
+
+  <title>2. Extracción desde una página | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="96e7a645cd091317e6b8650d7c237c38" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="30cce7d3a806e8bf94e9904fd70dcdc2" >
 
   
   
@@ -649,250 +654,237 @@
   </div>
 
   <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>2. Extracción desde una página</h1>
+
+  
+
+  
     
 
 
+<div class="article-metadata">
 
-
-
-<div class="container-fluid docs">
-  <div class="row flex-xl-nowrap">
-    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
-      <form class="docs-search d-flex align-items-center">
-  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
-    <div class="d-flex">
-      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
-        
-          Tutoriales de R
-        
-      </span>
-      <span><i class="fas fa-chevron-down"></i></span>
-    </div>
-  </button>
-
-  
-  <button class="form-control sidebar-search js-search d-none d-md-flex">
-    <i class="fas fa-search pr-2"></i>
-    <span class="sidebar-search-text">Search...</span>
-    <span class="sidebar-search-shortcut">/</span>
-  </button>
-  
-</form>
-
-<nav class="collapse docs-links" id="docs-nav">
-  
-  
-  
-  
   
   
 
   
-  
-    
-
-    
-      
-
-      <ul class="nav docs-sidenav">
-        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Tutoriales de R</a></li>
-      </ul>
-
-      
-      
-
-
-  
-    
-    
+  <span class="article-date">
     
     
       
     
-    
-
-    
-      <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/courses/rvest/">rvest</a>
-    
-      
-        <ul class="nav docs-sidenav">
-      
-
-
-  <li class=""><a href="/courses/rvest/01_instalar/">1. Análisis Bibliométrico</a></li>
-
-
-
-  <li class=""><a href="/courses/rvest/02_scrapeando/">2. Extracción desde una página</a></li>
-
-      
-        </ul>
-      
-    
-
-    
-      </div>
-    
-
-    
+    Sep 29, 2021
+  </span>
   
-</nav>
 
-    </div>
+  
 
-    
-    
-    <div class="d-none d-xl-block col-xl-2 docs-toc">
-      
+  
 
-      <ul class="nav toc-top">
-        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
-      </ul>
-
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#qué-es-rvest">¿Qué es <code>rvest</code>?</a></li>
-    <li><a href="#qué-es--web-scraping">¿Qué es  Web scraping?</a></li>
-    <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
-  </ul>
-</nav>
-
-      
-    </div>
-    
-
-    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
-
-      <article class="article">
-
-        <div class="docs-article-container">
-          
-            
-  <nav class="d-none d-md-flex" aria-label="breadcrumb">
-    <ol class="breadcrumb">
-      
+  
+  
+  
+  
   
   
 
-  <li class="breadcrumb-item">
-    <a href="/">
-      
-        Home
-      
-    </a>
-  </li>
-
-
-  <li class="breadcrumb-item">
-    <a href="/courses/">
-      
-        Tutoriales de R
-      
-    </a>
-  </li>
-
-
-      <li class="breadcrumb-item active" aria-current="page">
-        rvest
-      </li>
-    </ol>
-  </nav>
-
-
-          
-
-          <h1>rvest: Extracción automática de datos desde sitios web</h1>
-
-          <div class="article-style">
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="" srcset="
-               /courses/rvest/rvest_logo_hud16a5d05fec91933d4f35d3011f5cea9_31384_e4013a5fc664b25725b9c4ce8f5cda07.png 400w,
-               /courses/rvest/rvest_logo_hud16a5d05fec91933d4f35d3011f5cea9_31384_c58495a4d0aac0d71553fb5af520b7c4.png 760w,
-               /courses/rvest/rvest_logo_hud16a5d05fec91933d4f35d3011f5cea9_31384_1200x1200_fit_lanczos_3.png 1200w"
-               src="/courses/rvest/rvest_logo_hud16a5d05fec91933d4f35d3011f5cea9_31384_e4013a5fc664b25725b9c4ce8f5cda07.png"
-               width="240"
-               height="278"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<details class="toc-inpage d-print-none d-xl-none " open>
-  <summary class="font-weight-bold">Table of Contents</summary>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#qué-es-rvest">¿Qué es <code>rvest</code>?</a></li>
-    <li><a href="#qué-es--web-scraping">¿Qué es  Web scraping?</a></li>
-    <li><a href="#enlaces-de-interés">Enlaces de interés</a></li>
-  </ul>
-</nav>
-</details>
-
-<h2 id="qué-es-rvest">¿Qué es <code>rvest</code>?</h2>
-<p>Es un paquete de la librería <code>tidyverse</code> que permite extraer (&ldquo;scrape&rdquo;) datos de páginas web.</p>
-<h2 id="qué-es--web-scraping">¿Qué es  Web scraping?</h2>
-<p>Web Scraping es una técnica para obtener datos no estructurado (etiquetas HTML) de una página web, a un formato estructurado de columnas y renglones, en los cuales se puede acceder y usar más fácilmente.</p>
-<h2 id="enlaces-de-interés">Enlaces de interés</h2>
-<ul>
-<li>Package ‘rvest’: <a href="https://cran.r-project.org/web/packages/rvest/index.html" target="_blank" rel="noopener">https://cran.r-project.org/web/packages/rvest/index.html</a></li>
-</ul>
-<ul class="cta-group">
-  
-  <li>
-    <a href="00instalar"  class="btn btn-primary px-3 py-3">Comencemos con el taller</a>
-  </li>
   
   
-</ul>
-
-
-          </div>
-
-          
-
-
-
-          
-          
-          <div class="article-widget">
-            
-<div class="post-nav">
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
   
+
+</div>
+
+    
+
+
+
+
+
   
 </div>
 
-          </div>
-          
-        </div>
-
-        <div class="body-footer">
-          <p>Last updated on Sep 19, 2021</p>
-
-          
 
 
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+<div id="TOC">
+<ul>
+<li><a href="#extracción-de-texto-desde-una-página-específica">2. Extracción de texto desde una página específica</a><ul>
+<li><a href="#cargar-el-paquete-rvest">2.1. Cargar el paquete <code>rvest</code></a></li>
+<li><a href="#url-de-la-página-de-interés.">2.2. URL de la página de interés.</a></li>
+<li><a href="#extraer-información-desde-el-título-de-la-noticia">2.3. Extraer información desde el título de la noticia</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="extracción-de-texto-desde-una-página-específica" class="section level1">
+<h1>2. Extracción de texto desde una página específica</h1>
+<p>Imaginemos que queremos extraer información de prensa sobre el proceso constituyente que se lleva a cabo en Chile.</p>
+<p>En este ejemplo, vamos a extraer datos desde una noticia específica recientemente publicada en el periodico chileno [<a href="https://www.latercera.com" class="uri">https://www.latercera.com</a>].</p>
+<p><img src="/courses/rvest/02_scrapeando_files/latercera.png" width="400" height="200" /></p>
+<div id="cargar-el-paquete-rvest" class="section level2">
+<h2>2.1. Cargar el paquete <code>rvest</code></h2>
+<p>Lo primero que debemos hacer es cargar el paquete <code>rvest</code> y todos los paquetes adicionales que necesitemos para trabajar. En este ejemplo usaremos <code>dplyr</code>.</p>
+<pre class="r"><code>library(rvest)
+library(dplyr)</code></pre>
+</div>
+<div id="url-de-la-página-de-interés." class="section level2">
+<h2>2.2. URL de la página de interés.</h2>
+<p>URL significa Uniform Resource Locator y es la dirección única y específica que se asigna a cada uno de los recursos disponibles de la World Wide Web para que puedan ser localizados por el navegador y visitados por los usuarios.</p>
+<p>Ahora, lo que debemos hacer es ir a la página de interés, copiar su URL y guardarla como un objeto.</p>
+<pre class="r"><code>url_interes&lt;- &quot;https://www.latercera.com/politica/noticia/convencion-aprueba-que-sea-el-pleno-por-mayoria-simple-el-que-califique-la-renuncia-de-un-convencional-se-descarta-participacion-del-tc/7KTM6K5JZFC4HOUYQOOUGSU5YQ/&quot;</code></pre>
+</div>
+<div id="extraer-información-desde-el-título-de-la-noticia" class="section level2">
+<h2>2.3. Extraer información desde el título de la noticia</h2>
+<p><strong>h1</strong> es el elemento HTML utilizado para identificar la cabecera más importante en una página web, tales como el título de una página, el título de un post, el nombre de un producto, etc.</p>
+<p>Utilicemos las funciones <code>read_html</code>, <code>html_elements()</code> y <code>html_text()</code> par leer la URL, obtener el elemento <strong>h1</strong> y extraer el texto contenido en el elemento, respectivamente.</p>
+<pre class="r"><code>titulo_pagina &lt;- read_html(url_interes)%&gt;% 
+  html_element(&quot;h1&quot;) %&gt;% 
+  html_text()</code></pre>
+<p>Ahora, revisemos el texto obtenido desde el título de la página.</p>
+<pre class="r"><code>titulo_pagina
+## [1] &quot;Convención aprueba que sea el pleno, por mayoría simple, el que califique la renuncia de un convencional: se descarta participación del TC&quot;</code></pre>
+</div>
+</div>
+
+    </div>
+
+    
 
 
 
-          
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/web-scraping/">Web scraping</a>
+  
+  <a class="badge badge-light" href="/tag/recuperacion-de-informacion/">Recuperación de información</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;text=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;t=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina&amp;body=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;title=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina%20https://academic-demo.netlify.app/courses/bibliometrix/02_revision/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/bibliometrix/02_revision/&amp;title=2.%20Extracci%c3%b3n%20desde%20una%20p%c3%a1gina" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
 
 
 
 
-          
+
+
+
+
+
 
 
   
@@ -900,10 +892,142 @@
 
 
 
-        </div>
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://academic-demo.netlify.app/"><img class="avatar mr-3 avatar-circle" src="/author/pablo-cortes-garcia/avatar_hu7d3b0da55c569d642c49bbbb65ab872a_84834_270x270_fill_q75_lanczos_center.jpeg" alt="Pablo Cortés García"></a>
+    
 
-      </article>
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://academic-demo.netlify.app/">Pablo Cortés García</a></h5>
+      <h6 class="card-subtitle">Profesor Asistente</h6>
+      <p class="card-text">Mis intereses incluyen Cambio Climático, Biodiversidad, Análisis de texto computacional, Búsqueda y recuperación de información.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Pablo_Cortes11" target="_blank" rel="noopener">
+        <i class="fab fa-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/PACortes" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/pablo-andr%c3%a9s-cort%c3%a9s-garc%c3%ada-1bb2511b3" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/pabcorgar/" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+</ul>
 
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
       <footer class="site-footer">
 
   
@@ -939,15 +1063,7 @@
   </p>
 </footer>
 
-
-    </main>
-  </div>
-</div>
-
-  </div>
-
-  <div class="page-footer">
-    
+    </div>
     
   </div>
 
@@ -1016,11 +1132,6 @@
     
 
     
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
-    <script>
-      anchors.add();
-    </script>
     
 
     
