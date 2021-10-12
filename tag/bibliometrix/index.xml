@@ -35,7 +35,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/SR.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/SR.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;revisión-sistemática&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;1. Revisión Sistemática&lt;/h1&gt;
 &lt;p&gt;Artículo de “síntesis de la evidencia disponible”, en el que se realiza una revisión de aspectos cuantitativos y cualitativos de estudios primarios, con el objetivo de resumir la información existente sobre una pregunta de investigación en una determinada disciplina.&lt;/p&gt;
@@ -60,7 +60,7 @@
 &lt;h2&gt;3.1 Formular la pregunta de investigación&lt;/h2&gt;
 &lt;p&gt;La primera etapa, y la más importante, implica definir la pregunta de investigación de la revisión. Esta pregunta representa algúna dimensión sobre un tema en particular sobre el cuál queremos saber más.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, si el tema que nos interesa es la &lt;a href=&#34;https://www.cepal.org/es/publicaciones/40407-guia-general-la-gestion-residuos-solidos-domiciliarios&#34;&gt;gestión de Residuos Domiciliarios en Chile&lt;/a&gt;, existen múltiples dimensionadas relacionadas sobre las cuales quisieramos ahondar.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/preview_384592.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/preview_384592.png&#34; width=&#34;600&#34; height=&#34;300&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;En términos de la Gestión Domiciliaria de Residuos, podríamos preguntarnos ¿La gestión de residiuos en Chile está relacionda con el poder adquisitivo?&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;definir-criterios-de-inclusión-y-exclusión&#34; class=&#34;section level2&#34;&gt;
