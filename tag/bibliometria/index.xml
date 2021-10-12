@@ -5,7 +5,7 @@
     <link>https://academic-demo.netlify.app/tag/bibliometria/</link>
       <atom:link href="https://academic-demo.netlify.app/tag/bibliometria/index.xml" rel="self" type="application/rss+xml" />
     <description>Bibliometría</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 29 Sep 2021 21:13:14 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 11 Oct 2021 21:13:14 -0500</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Bibliometría</title>
@@ -13,9 +13,92 @@
     </image>
     
     <item>
+      <title>1. Análisis Bibliométrico</title>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/01_bibliometria/</link>
+      <pubDate>Mon, 11 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/01_bibliometria/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#bibliometría&#34;&gt;1. Bibliometría&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#indicadores-bibliométricos&#34;&gt;2. Indicadores bibliométricos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bases-de-datos&#34;&gt;3. Bases de Datos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/rvest/01_Instalar_files/bibliometrics.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;bibliometría&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Bibliometría&lt;/h1&gt;
+&lt;p&gt;Ciencia que aplica métodos estadísticos a la literatura científica de una determinada disciplina, y a los autores que la producen, con el objetivo de estudiar y analizar la actividad científica.&lt;/p&gt;
+&lt;p&gt;En otras palabras, la bibliometría permite analizar el conocimiento generado en una determinada disciplina. Este tipo de análisis nos permite identificar nuevo conocimiento a partir del existente. También permite reconocer vacíos de conocimiento.&lt;/p&gt;
+&lt;p&gt;Los análisis bibliométricos son utilizados para describir o identificar tendencias generales asociadas a un fenómeno de interés, tales cómo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El aumento o disminución del interés por parte de la comunidad científica.&lt;/li&gt;
+&lt;li&gt;La evolución cronológica de la producción científica.&lt;/li&gt;
+&lt;li&gt;La productividad de los autores, instituciones o países.&lt;/li&gt;
+&lt;li&gt;La colaboración entre científicos, instituciones o países.&lt;/li&gt;
+&lt;li&gt;El impacto de las publicaciones en la comunidad científica.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;indicadores-bibliométricos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Indicadores bibliométricos&lt;/h1&gt;
+&lt;p&gt;Los indicadores bibliométricos son datos numéricos calculados a partir de las características bibliográficas observadas en los documentos publicados en una determinada disciplina y que permiten el análisis de diversos aspectos de la actividad científica.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de productividad científica&lt;/strong&gt;: se basan en el recuento de publicaciones científicas. Cuantifican el tamaño, crecimiento y distribución de los artículos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Número total de Publicaciones.&lt;/li&gt;
+&lt;li&gt;Año de la publicación.&lt;/li&gt;
+&lt;li&gt;Evolución temporal de las publicaciones.&lt;/li&gt;
+&lt;li&gt;Autores, países e instituciones de las publicaciones.&lt;/li&gt;
+&lt;li&gt;Tipos de publicación.&lt;/li&gt;
+&lt;li&gt;Áreas de publicación.&lt;/li&gt;
+&lt;li&gt;Idioma de la publicación.&lt;/li&gt;
+&lt;li&gt;Fuentes de las publicaciones.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de impacto&lt;/strong&gt;: Toman como datos citaciones de artículos y factor de impacto de la revista para indicar la “influencia” de la producción científica.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Factor de impacto de la fuente.&lt;/li&gt;
+&lt;li&gt;Citación de los artículos.&lt;/li&gt;
+&lt;li&gt;Índice de inmediatez.&lt;/li&gt;
+&lt;li&gt;Índice de autocitación.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de colaboración&lt;/strong&gt;: Miden el nivel de relación entre autores,instituciones o países que han realzado una publicación científica.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Índice de multiautoría.&lt;/li&gt;
+&lt;li&gt;Índice de institucionalidad.&lt;/li&gt;
+&lt;li&gt;Tipo de internacionalización.&lt;/li&gt;
+&lt;li&gt;Índice de inmediatez.&lt;/li&gt;
+&lt;li&gt;Redes de colaboración.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de contenido&lt;/strong&gt;: Describen los temas abordados en las publicaciones científicas. Permiten identificar cuáles son los temas más importantes y los más recientes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Índice de multiautoría.&lt;/li&gt;
+&lt;li&gt;Modelamiento de tópicos.&lt;/li&gt;
+&lt;li&gt;Frecuencia de palabras claves.&lt;/li&gt;
+&lt;li&gt;Redes de co-ocurrencia de palabras.&lt;/li&gt;
+&lt;li&gt;Mapas temáticos.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bases-de-datos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Bases de Datos&lt;/h1&gt;
+&lt;p&gt;Las Bases de datos bibliográficas constituyen una de las principales fuentes de información sobre las publicaciones. Diferentes bases de datos se utilizan para hacer análisis bibliométricos y cada base de datos tiene características diferentes y puede proporcionar diferentes servicios.&lt;/p&gt;
+&lt;p&gt;Actualmente, las bases de datos más utilizadas son Web of Science, Scopus y PubMed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/rvest/01_Instalar_files/logos.png&#34; width=&#34;800&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.webofscience.com/wos/woscc/basic-search&#34;&gt;Web of Science (WoS)&lt;/a&gt;: plataforma on-line de suscipción propiedad de la empresa Clarivate Analytics. Es una colección de bases de datos de referencias bibliográficas y citas de publicaciones periódicas que recogen información desde 1900 a la actualidad. WOS está compuesta por la colección básica Core Collection que abarca los índices de Ciencias, Ciencias Sociales y Artes y Humanidades. Además, cuenta con bases de datos complementarias (Medline, Scielo y Korean cITATION index).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.scopus.com&#34;&gt;Scopus&lt;/a&gt;: plataforma on-line de suscipción propiedad de la empresa Elsevier. La colección incluye revistas revisadas por pares de las áreas de ciencias, tecnología, medicina y ciencias sociales, incluyendo artes y humanidades.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/&#34;&gt;PubMed&lt;/a&gt;: plataforma on-line de libre acceso. Permite consultar principalmente los contenidos de la base de datos Medline, especializada en ciencias de la salud. La colección incluye revistas revisadas por pares de las áreas de ciencias, tecnología, medicina y ciencias sociales, incluyendo artes y humanidades.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>2. Revisión Sistemática</title>
       <link>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</link>
-      <pubDate>Wed, 29 Sep 2021 21:13:14 -0500</pubDate>
+      <pubDate>Mon, 11 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</guid>
       <description>
 

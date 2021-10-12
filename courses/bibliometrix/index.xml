@@ -12,5 +12,166 @@
       <link>https://academic-demo.netlify.app/courses/bibliometrix/</link>
     </image>
     
+    <item>
+      <title>1. Análisis Bibliométrico</title>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/01_bibliometria/</link>
+      <pubDate>Mon, 11 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/01_bibliometria/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#bibliometría&#34;&gt;1. Bibliometría&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#indicadores-bibliométricos&#34;&gt;2. Indicadores bibliométricos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#bases-de-datos&#34;&gt;3. Bases de Datos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/rvest/01_Instalar_files/bibliometrics.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;bibliometría&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Bibliometría&lt;/h1&gt;
+&lt;p&gt;Ciencia que aplica métodos estadísticos a la literatura científica de una determinada disciplina, y a los autores que la producen, con el objetivo de estudiar y analizar la actividad científica.&lt;/p&gt;
+&lt;p&gt;En otras palabras, la bibliometría permite analizar el conocimiento generado en una determinada disciplina. Este tipo de análisis nos permite identificar nuevo conocimiento a partir del existente. También permite reconocer vacíos de conocimiento.&lt;/p&gt;
+&lt;p&gt;Los análisis bibliométricos son utilizados para describir o identificar tendencias generales asociadas a un fenómeno de interés, tales cómo:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;El aumento o disminución del interés por parte de la comunidad científica.&lt;/li&gt;
+&lt;li&gt;La evolución cronológica de la producción científica.&lt;/li&gt;
+&lt;li&gt;La productividad de los autores, instituciones o países.&lt;/li&gt;
+&lt;li&gt;La colaboración entre científicos, instituciones o países.&lt;/li&gt;
+&lt;li&gt;El impacto de las publicaciones en la comunidad científica.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;indicadores-bibliométricos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Indicadores bibliométricos&lt;/h1&gt;
+&lt;p&gt;Los indicadores bibliométricos son datos numéricos calculados a partir de las características bibliográficas observadas en los documentos publicados en una determinada disciplina y que permiten el análisis de diversos aspectos de la actividad científica.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de productividad científica&lt;/strong&gt;: se basan en el recuento de publicaciones científicas. Cuantifican el tamaño, crecimiento y distribución de los artículos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Número total de Publicaciones.&lt;/li&gt;
+&lt;li&gt;Año de la publicación.&lt;/li&gt;
+&lt;li&gt;Evolución temporal de las publicaciones.&lt;/li&gt;
+&lt;li&gt;Autores, países e instituciones de las publicaciones.&lt;/li&gt;
+&lt;li&gt;Tipos de publicación.&lt;/li&gt;
+&lt;li&gt;Áreas de publicación.&lt;/li&gt;
+&lt;li&gt;Idioma de la publicación.&lt;/li&gt;
+&lt;li&gt;Fuentes de las publicaciones.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de impacto&lt;/strong&gt;: Toman como datos citaciones de artículos y factor de impacto de la revista para indicar la “influencia” de la producción científica.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Factor de impacto de la fuente.&lt;/li&gt;
+&lt;li&gt;Citación de los artículos.&lt;/li&gt;
+&lt;li&gt;Índice de inmediatez.&lt;/li&gt;
+&lt;li&gt;Índice de autocitación.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de colaboración&lt;/strong&gt;: Miden el nivel de relación entre autores,instituciones o países que han realzado una publicación científica.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Índice de multiautoría.&lt;/li&gt;
+&lt;li&gt;Índice de institucionalidad.&lt;/li&gt;
+&lt;li&gt;Tipo de internacionalización.&lt;/li&gt;
+&lt;li&gt;Índice de inmediatez.&lt;/li&gt;
+&lt;li&gt;Redes de colaboración.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de contenido&lt;/strong&gt;: Describen los temas abordados en las publicaciones científicas. Permiten identificar cuáles son los temas más importantes y los más recientes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Índice de multiautoría.&lt;/li&gt;
+&lt;li&gt;Modelamiento de tópicos.&lt;/li&gt;
+&lt;li&gt;Frecuencia de palabras claves.&lt;/li&gt;
+&lt;li&gt;Redes de co-ocurrencia de palabras.&lt;/li&gt;
+&lt;li&gt;Mapas temáticos.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;bases-de-datos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Bases de Datos&lt;/h1&gt;
+&lt;p&gt;Las Bases de datos bibliográficas constituyen una de las principales fuentes de información sobre las publicaciones. Diferentes bases de datos se utilizan para hacer análisis bibliométricos y cada base de datos tiene características diferentes y puede proporcionar diferentes servicios.&lt;/p&gt;
+&lt;p&gt;Actualmente, las bases de datos más utilizadas son Web of Science, Scopus y PubMed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/rvest/01_Instalar_files/logos.png&#34; width=&#34;800&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.webofscience.com/wos/woscc/basic-search&#34;&gt;Web of Science (WoS)&lt;/a&gt;: plataforma on-line de suscipción propiedad de la empresa Clarivate Analytics. Es una colección de bases de datos de referencias bibliográficas y citas de publicaciones periódicas que recogen información desde 1900 a la actualidad. WOS está compuesta por la colección básica Core Collection que abarca los índices de Ciencias, Ciencias Sociales y Artes y Humanidades. Además, cuenta con bases de datos complementarias (Medline, Scielo y Korean cITATION index).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.scopus.com&#34;&gt;Scopus&lt;/a&gt;: plataforma on-line de suscipción propiedad de la empresa Elsevier. La colección incluye revistas revisadas por pares de las áreas de ciencias, tecnología, medicina y ciencias sociales, incluyendo artes y humanidades.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://pubmed.ncbi.nlm.nih.gov/&#34;&gt;PubMed&lt;/a&gt;: plataforma on-line de libre acceso. Permite consultar principalmente los contenidos de la base de datos Medline, especializada en ciencias de la salud. La colección incluye revistas revisadas por pares de las áreas de ciencias, tecnología, medicina y ciencias sociales, incluyendo artes y humanidades.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>2. Revisión Sistemática</title>
+      <link>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</link>
+      <pubDate>Mon, 11 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</guid>
+      <description>
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#revisión-sistemática&#34;&gt;1. Revisión Sistemática&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#revisión-sistemática-vs-narrativa&#34;&gt;2. Revisión Sistemática vs narrativa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#etapas-de-un-revisión-sistemática&#34;&gt;3. Etapas de un revisión Sistemática&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#formular-la-pregunta-de-investigación&#34;&gt;3.1 Formular la pregunta de investigación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#definir-criterios-de-inclusión-y-exclusión&#34;&gt;3.2 Definir criterios de inclusión y exclusión&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#estrategia-de-búsqueda&#34;&gt;3.3 Estrategia de búsqueda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#selección-de-estudios&#34;&gt;3.4 Selección de estudios&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extraer-los-datos&#34;&gt;3.5 Extraer los datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#analizar-e-interpretar-los-resultados&#34;&gt;3.6 Analizar e interpretar los resultados&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/SR.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;revisión-sistemática&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Revisión Sistemática&lt;/h1&gt;
+&lt;p&gt;Artículo de “síntesis de la evidencia disponible”, en el que se realiza una revisión de aspectos cuantitativos y cualitativos de estudios primarios, con el objetivo de resumir la información existente sobre una pregunta de investigación en una determinada disciplina.&lt;/p&gt;
+&lt;p&gt;Las revisiones sistemáticas permiten:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Analizar el conocimiento en torno a una pregunta de investigación a través del análisis de trabajos publicados.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Realizar una descripción general de lo que se hizo, y lo que debería investigarse más a fondo, en torno a una pregunta e investigación.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Identificar tendencias generales asociadas a un fenómeno de interés.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Discutir y razonar la importancia de una pregunta de investigación&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Formular problemas e hipótesis de trabajos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;revisión-sistemática-vs-narrativa&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Revisión Sistemática vs narrativa&lt;/h1&gt;
+&lt;p&gt;Las revisiones sistemáticas se diferencian de las revisiones narrativas tradicionales en varios aspectos.&lt;/p&gt;
+&lt;p&gt;Las &lt;strong&gt;revisiones narrativas&lt;/strong&gt; tienden a ser principalmente descriptivas, no implican una búsqueda sistemática de la literatura y, por lo tanto, a menudo se centran en un subconjunto de estudios sobre un tema en particular. Si bien son informativas, a menudo pueden incluir un elemento de sesgo de selección.&lt;/p&gt;
+&lt;p&gt;Las &lt;strong&gt;revisiones sistemáticas&lt;/strong&gt; involucran una estrategia de búsqueda establecida &lt;em&gt;a priori&lt;/em&gt;, con el objetivo de reducir el sesgo al identificar, evaluar y sintetizar todos los estudios relevantes sobre un tema en particular. A menudo, las revisiones sistemáticas incluyen un componente de metanálisis que implica el uso de técnicas estadísticas para sintetizar los datos de varios estudios en una sola estimación cuantitativa.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;etapas-de-un-revisión-sistemática&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Etapas de un revisión Sistemática&lt;/h1&gt;
+&lt;div id=&#34;formular-la-pregunta-de-investigación&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.1 Formular la pregunta de investigación&lt;/h2&gt;
+&lt;p&gt;La primera etapa, y la más importante, implica definir la pregunta de investigación de la revisión. Esta pregunta representa algúna dimensión sobre un tema en particular sobre el cuál queremos saber más.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, si el tema que nos interesa es la &lt;a href=&#34;https://www.cepal.org/es/publicaciones/40407-guia-general-la-gestion-residuos-solidos-domiciliarios&#34;&gt;gestión de Residuos Domiciliarios en Chile&lt;/a&gt;, existen múltiples dimensionadas relacionadas sobre las cuales quisieramos ahondar.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/preview_384592.png&#34; width=&#34;600&#34; height=&#34;300&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;En términos de la Gestión Domiciliaria de Residuos, podríamos preguntarnos ¿La gestión de residiuos en Chile está relacionda con el poder adquisitivo?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;definir-criterios-de-inclusión-y-exclusión&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.2 Definir criterios de inclusión y exclusión&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estrategia-de-búsqueda&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.3 Estrategia de búsqueda&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;selección-de-estudios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.4 Selección de estudios&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extraer-los-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.5 Extraer los datos&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;analizar-e-interpretar-los-resultados&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.6 Analizar e interpretar los resultados&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referencias&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Referencias&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.elsevier.es/pt-revista-cirugia-espanola-english-edition--436-articulo-systematic-reviews-literature-what-should-S2173507713000914&#34;&gt;Systematic Reviews of the Literature&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ebn.bmj.com/content/14/3/64&#34;&gt;What is a systematic review&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3024725/&#34;&gt;Systematic reviews and Meta-Analyses&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
