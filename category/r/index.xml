@@ -73,7 +73,6 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Indicadores de contenido&lt;/strong&gt;: Describen los temas abordados en las publicaciones científicas. Permiten identificar cuáles son los temas más importantes y los más recientes.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Índice de multiautoría.&lt;/li&gt;
 &lt;li&gt;Modelamiento de tópicos.&lt;/li&gt;
 &lt;li&gt;Frecuencia de palabras claves.&lt;/li&gt;
 &lt;li&gt;Redes de co-ocurrencia de palabras.&lt;/li&gt;
@@ -396,7 +395,7 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#revisión-sistemática-rs&#34;&gt;1. Revisión Sistemática (RS)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#rs-vs-narrativa&#34;&gt;2. RS vs narrativa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rs-vs-revisión-narrativa&#34;&gt;2. RS vs Revisión Narrativa&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#etapas-de-una-rs&#34;&gt;3. Etapas de una RS&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#formular-la-pregunta-de-investigación&#34;&gt;3.1 Formular la pregunta de investigación&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#ejemplo&#34;&gt;3.1.1 Ejemplo&lt;/a&gt;&lt;/li&gt;
@@ -414,7 +413,7 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/SR.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/SR.png&#34; width=&#34;200&#34; height=&#34;100&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;revisión-sistemática-rs&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;1. Revisión Sistemática (RS)&lt;/h1&gt;
 &lt;p&gt;Artículo de “síntesis de la evidencia disponible”, en el que se realiza una revisión de aspectos cuantitativos y cualitativos de estudios primarios, con el objetivo de resumir la información existente sobre una pregunta de investigación en una determinada disciplina.&lt;/p&gt;
@@ -427,8 +426,8 @@
 &lt;li&gt;&lt;p&gt;Formular problemas e hipótesis de trabajos.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;rs-vs-narrativa&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. RS vs narrativa&lt;/h1&gt;
+&lt;div id=&#34;rs-vs-revisión-narrativa&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. RS vs Revisión Narrativa&lt;/h1&gt;
 &lt;p&gt;Las revisiones sistemáticas se diferencian de las revisiones narrativas tradicionales en varios aspectos.&lt;/p&gt;
 &lt;p&gt;Las &lt;strong&gt;revisiones narrativas&lt;/strong&gt; tienden a ser principalmente descriptivas, no implican una búsqueda sistemática de la literatura y, por lo tanto, a menudo se centran en un subconjunto de estudios sobre un tema en particular. Si bien son informativas, a menudo pueden incluir un elemento de sesgo de selección.&lt;/p&gt;
 &lt;p&gt;Las &lt;strong&gt;revisiones sistemáticas&lt;/strong&gt; involucran una estrategia de búsqueda establecida &lt;em&gt;a priori&lt;/em&gt;, con el objetivo de reducir el sesgo al identificar, evaluar y sintetizar todos los estudios relevantes sobre un tema en particular. A menudo, las revisiones sistemáticas incluyen un componente de metanálisis que implica el uso de técnicas estadísticas para sintetizar los datos de varios estudios en una sola estimación cuantitativa.&lt;/p&gt;
@@ -448,23 +447,25 @@
 &lt;li&gt;&lt;strong&gt;Who&lt;/strong&gt;: ¿Sobre quién trata?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;What&lt;/strong&gt;: ¿Que ocurre?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;When&lt;/strong&gt;: ¿Cuando tendrá lugar?&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Where&lt;/strong&gt;: ¿Donde tendrá lugar?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Where&lt;/strong&gt;: ¿Dónde tendrá lugar?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Why&lt;/strong&gt;: ¿Por qué ocurre?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;How&lt;/strong&gt;: ¿Cómo ocurre?&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;ejemplo&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;3.1.1 Ejemplo&lt;/h3&gt;
-&lt;p&gt;Por ejemplo, si el tema que nos interesa es la &lt;a href=&#34;https://www.cepal.org/es/publicaciones/40407-guia-general-la-gestion-residuos-solidos-domiciliarios&#34;&gt;gestión de residuos domiciliarios en Chile&lt;/a&gt;, existen múltiples dimensiones relacionadas sobre las cuales quisieramos ahondar.&lt;/p&gt;
+&lt;p&gt;Si el tema que nos interesa es la &lt;a href=&#34;https://www.cepal.org/es/publicaciones/40407-guia-general-la-gestion-residuos-solidos-domiciliarios&#34;&gt;gestión de residuos domiciliarios en Chile&lt;/a&gt;, existen múltiples dimensiones relacionadas sobre las cuales quisieramos ahondar.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/bibliometrix/02_Revision_files/preview_384592.png&#34; width=&#34;600&#34; height=&#34;300&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Si la dimensión de interés es el poder adquisitivo. Entonces, podríamos preguntarnos &lt;em&gt;¿Cómo la gestión de residiuos domiciliarios en Chile se relaciona con el poder adquisitivo?&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Si la dimensión de interés es el poder adquisitivo. Entonces, podríamos preguntarnos:
+&lt;em&gt;¿Cómo la gestión de residuos domiciliarios en Chile se relaciona con el poder adquisitivo?&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Siempre debemos corroborar si la pregunta de investigación es una buena pregunta: no utiliza palabras o conceptos vagos, es específica, no presenta ambiguedades, es interesante, etc.&lt;/p&gt;
-&lt;p&gt;Si analizamos detalladamente la pregunta de nuestro ejemplo, surgen dos preguntas inmediatamente:&lt;/p&gt;
+&lt;p&gt;Si analizamos detalladamente la pregunta de nuestro ejemplo, inmediatamente surgen dos preguntas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;¿Donde tendrá lugar?. Podríamos aclarar si la investigación se realizará a escala nacional, regional, municpial?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;¿Donde tendrá lugar?. Podríamos aclarar si la investigación se realizará a escala nacional, regional, municipal, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;¿Sobre quién trata?. Podríamos aclarar si la investigación considerará el poder adquisitivo a escala nacional, de algúna instituciones, de las personas, etc.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Entonces, una versión mejorada de nuestra pregunta sería: &lt;em&gt;¿Cómo la gestión de residiuos domiciliarios a escala municipal se relaciona con el poder adquisitivo de los habitantes de [Valdivia] (&lt;a href=&#34;https://es.wikipedia.org/wiki/Valdivia&#34; class=&#34;uri&#34;&gt;https://es.wikipedia.org/wiki/Valdivia&lt;/a&gt;)?&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Entonces, una versión mejorada de nuestra pregunta sería:
+&lt;em&gt;¿Cómo la gestión de residiuos domiciliarios a escala municipal se relaciona con el poder adquisitivo de los habitantes de la ciudad de?&lt;/em&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;estrategia-pico&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;3.1.2 Estrategia PICO&lt;/h3&gt;
