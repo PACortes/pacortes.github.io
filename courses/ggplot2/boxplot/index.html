@@ -294,7 +294,7 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/ggplot2/boxplot/" />
-  <meta property="og:title" content="2. Gráfico de cajas | Pablo Cortes" />
+  <meta property="og:title" content="Gráfico de cajas | Pablo Cortes" />
   <meta property="og:description" content="1. Definición 2. Sintáxis 3. Datos 3.1. Material Particulado (PM) 3.2. Base de datos: descripción 3.3. Base de datos: descarga  4. Visualización 4.1. Gráfico de cajas para una variable 4." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -321,7 +321,7 @@
 
 
 
-  <title>2. Gráfico de cajas | Pablo Cortes</title>
+  <title>Gráfico de cajas | Pablo Cortes</title>
 </head>
 
 
@@ -729,15 +729,15 @@
       
 
 
-  <li class=""><a href="/courses/ggplot2/scatterplot/">1. Gráfico de dispersión</a></li>
+  <li class=""><a href="/courses/ggplot2/scatterplot/">Gráfico de dispersión</a></li>
 
 
 
-  <li class="active"><a href="/courses/ggplot2/boxplot/">2. Gráfico de cajas</a></li>
+  <li class="active"><a href="/courses/ggplot2/boxplot/">Gráfico de cajas</a></li>
 
 
 
-  <li class=""><a href="/courses/ggplot2/jitter/">3. Gráfico jitter</a></li>
+  <li class=""><a href="/courses/ggplot2/jitter/">Gráfico jitter</a></li>
 
       
         </ul>
@@ -811,7 +811,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        2. Gráfico de cajas
+        Gráfico de cajas
       </li>
     </ol>
   </nav>
@@ -819,7 +819,7 @@
 
           
 
-          <h1>2. Gráfico de cajas</h1>
+          <h1>Gráfico de cajas</h1>
 
           <div class="article-style">
             
@@ -836,8 +836,8 @@
 <li><a href="#visualización">4. Visualización</a><ul>
 <li><a href="#gráfico-de-cajas-para-una-variable">4.1. Gráfico de cajas para una variable</a></li>
 <li><a href="#gráfico-de-cajas-para-dos-variables">4.2. Gráfico de cajas para dos variables</a></li>
-<li><a href="#título-y-etiquetas">4.3. Título y etiquetas</a></li>
-<li><a href="#título-etiquetasy-ejes">4.4. Título, etiquetasy ejes</a></li>
+<li><a href="#título-etiquetas-y-ejes">4.3. Título, etiquetas y ejes</a></li>
+<li><a href="#color-de-las-cajas">4.4. Color de las cajas</a></li>
 </ul></li>
 <li><a href="#juntando-todas-las-piezas">5. Juntando todas las piezas</a></li>
 </ul>
@@ -922,20 +922,8 @@ glimpse(MaterialParticulado)
       geom_boxplot()</code></pre>
 <p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>
-<div id="título-y-etiquetas" class="section level2">
-<h2>4.3. Título y etiquetas</h2>
-<p>Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función <code>labs()</code>. Además, vamos a aumentar el tamaño de cada una de estas etiquetas con la función <code>theme()</code>.</p>
-<pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&quot;#5F9EA0&quot;)+
-  labs(title=&quot;PM2.5 según ciudad&quot;,
-       y=&quot;PM2.5 (μm)&quot;, x=&quot;Ciudad&quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25))</code></pre>
-<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-</div>
-<div id="título-etiquetasy-ejes" class="section level2">
-<h2>4.4. Título, etiquetasy ejes</h2>
+<div id="título-etiquetas-y-ejes" class="section level2">
+<h2>4.3. Título, etiquetas y ejes</h2>
 <p>Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función <code>labs()</code>. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función <code>theme()</code>.</p>
 <pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
       geom_boxplot(fill=&quot;#5F9EA0&quot;)+
@@ -945,11 +933,12 @@ glimpse(MaterialParticulado)
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
-<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
-</div>
-<div id="juntando-todas-las-piezas" class="section level1">
-<h1>5. Juntando todas las piezas</h1>
+<div id="color-de-las-cajas" class="section level2">
+<h2>4.4. Color de las cajas</h2>
+<p>Para mejorar la presentación de nuestro gráfico, podemos ajustar el color de los puntos incorporando la función <code>fill=</code> dentro de <code>geom_boxplot()</code>.</p>
+<p>Pra nuestro ejemplo, se utilizará el color <em>cadet blue</em> en formato <a href="https://flaviocopes.com/rgb-color-codes/">RGB</a>:</p>
 <pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
       geom_boxplot(fill=&quot;#5F9EA0&quot;)+
   labs(title=&quot;PM2.5 según ciudad&quot;,
@@ -958,7 +947,30 @@ glimpse(MaterialParticulado)
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>También, podemos ajustar la intensidad del color con la función <code>alpha=</code> (valor por defecto: 1):</p>
+</div>
+</div>
+<div id="juntando-todas-las-piezas" class="section level1">
+<h1>5. Juntando todas las piezas</h1>
+<pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&quot;#5F9EA0&quot;, alpha=0.5)+
+  labs(title=&quot;PM2.5 según ciudad&quot;,
+       y=&quot;PM2.5 (μm)&quot;, x=&quot;Ciudad&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&quot;#5F9EA0&quot;, alpha =0.5)+
+  labs(title=&quot;PM2.5 según ciudad&quot;,
+       y=&quot;PM2.5 (μm)&quot;, x=&quot;Ciudad&quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
+<p><img src="/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
 
           </div>
@@ -985,14 +997,14 @@ glimpse(MaterialParticulado)
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/ggplot2/scatterplot/" rel="next">1. Gráfico de dispersión</a>
+    <a href="/courses/ggplot2/scatterplot/" rel="next">Gráfico de dispersión</a>
   </div>
   
   
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/ggplot2/jitter/" rel="prev">3. Gráfico jitter</a>
+    <a href="/courses/ggplot2/jitter/" rel="prev">Gráfico jitter</a>
   </div>
   
 </div>
@@ -1024,9 +1036,9 @@ glimpse(MaterialParticulado)
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/courses/ggplot2/jitter/">3. Gráfico jitter</a></li>
+      <li><a href="/courses/ggplot2/scatterplot/">Gráfico de dispersión</a></li>
       
-      <li><a href="/courses/ggplot2/scatterplot/">1. Gráfico de dispersión</a></li>
+      <li><a href="/courses/ggplot2/jitter/">Gráfico jitter</a></li>
       
     </ul>
   </div>

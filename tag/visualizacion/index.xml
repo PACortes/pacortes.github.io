@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>1. Gráfico de dispersión</title>
+      <title>Gráfico de dispersión</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</guid>
@@ -249,7 +249,7 @@
     </item>
     
     <item>
-      <title>2. Gráfico de cajas</title>
+      <title>Gráfico de cajas</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</guid>
@@ -267,8 +267,8 @@
 &lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-una-variable&#34;&gt;4.1. Gráfico de cajas para una variable&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-dos-variables&#34;&gt;4.2. Gráfico de cajas para dos variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#título-y-etiquetas&#34;&gt;4.3. Título y etiquetas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#título-etiquetasy-ejes&#34;&gt;4.4. Título, etiquetasy ejes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.3. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#color-de-las-cajas&#34;&gt;4.4. Color de las cajas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -353,20 +353,8 @@ glimpse(MaterialParticulado)
       geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;título-y-etiquetas&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.3. Título y etiquetas&lt;/h2&gt;
-&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;título-etiquetasy-ejes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.4. Título, etiquetasy ejes&lt;/h2&gt;
+&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.3. Título, etiquetas y ejes&lt;/h2&gt;
 &lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
       geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
@@ -376,11 +364,12 @@ glimpse(MaterialParticulado)
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
+&lt;div id=&#34;color-de-las-cajas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.4. Color de las cajas&lt;/h2&gt;
+&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color de los puntos incorporando la función &lt;code&gt;fill=&lt;/code&gt; dentro de &lt;code&gt;geom_boxplot()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pra nuestro ejemplo, se utilizará el color &lt;em&gt;cadet blue&lt;/em&gt; en formato &lt;a href=&#34;https://flaviocopes.com/rgb-color-codes/&#34;&gt;RGB&lt;/a&gt;:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
       geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
   labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
@@ -389,13 +378,36 @@ glimpse(MaterialParticulado)
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;También, podemos ajustar la intensidad del color con la función &lt;code&gt;alpha=&lt;/code&gt; (valor por defecto: 1):&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha=0.5)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha =0.5)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>3. Gráfico jitter</title>
+      <title>Gráfico jitter</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
@@ -408,15 +420,18 @@ glimpse(MaterialParticulado)
 &lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-jitter-para-una-variable&#34;&gt;4.1. Gráfico jitter para una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.2. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dispersión-de-los-datos&#34;&gt;4.3. Dispersión de los datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#color-forma-y-tamaño-de-los-puntos&#34;&gt;4.4. Color, forma y tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;Este tipo de gráfico permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos.
-Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Con frecuencia, al generar un gráfico de dispersión, es posible que muchos puntos se sobrepongan unos con otros. Esto puede ser un problema ya que no podremos visualizar y apreciar la cantidad de datos de forma clara e informativa.&lt;/p&gt;
+&lt;p&gt;Una solución es realizar un gráfico tipo jitter, el cuál permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
@@ -428,34 +443,28 @@ Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggp
 &lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_boxplot()&lt;/code&gt;: Especifica que queremos generar un gráfico de cajas.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_jitter()&lt;/code&gt;: Especifica que queremos generar un gráfico de tipo jitter.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;3. Datos&lt;/h1&gt;
 &lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
 &lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readr)
-MaterialParticulado &amp;lt;- read_delim(&amp;quot;MaterialParticulado.txt&amp;quot;, 
-delim = &amp;quot;\t&amp;quot;, escape_double = FALSE, 
-col_types = cols(Year = col_factor(levels = c(&amp;quot;2018&amp;quot;, &amp;quot;2019&amp;quot;, &amp;quot;2020&amp;quot;, &amp;quot;2021&amp;quot;)), Mes = col_factor(levels = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, 
-&amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;12&amp;quot;))), trim_ws = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;4. Visualización&lt;/h1&gt;
 &lt;div id=&#34;gráfico-jitter-para-una-variable&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;4.1. Gráfico jitter para una variable&lt;/h2&gt;
-&lt;p&gt;Generemos un gráfico jitter para visualziar los datos de la variable &lt;strong&gt;PM2.5&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Generemos un gráfico jitter para visualizar los datos de la variable PM2.5 para cada Ciudad en la que se levantó información.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
   geom_jitter()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
+&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.2. Título, etiquetas y ejes&lt;/h2&gt;
+&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_boxplot()+
-  geom_jitter(position=position_jitter(0.1), color=&amp;quot;#0072B5FF&amp;quot;)+
+  geom_jitter()+
   labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
        y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
   theme(axis.text =element_text(size=16),
@@ -463,6 +472,57 @@ col_types = cols(Year = col_factor(levels = c(&amp;quot;2018&amp;quot;, &amp;quo
         plot.title=element_text(size=25),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dispersión-de-los-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.3. Dispersión de los datos&lt;/h2&gt;
+&lt;p&gt;Para controlar el grado de dispersión de los puntos, podemos personalizar utilizamos la función &lt;code&gt;width =&lt;/code&gt; (valor por defecto: 40% de la resolución de los datos) dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, disminuyamos a un 20% la dispersión de los puntos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter(width = 0.2)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;color-forma-y-tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.4. Color, forma y tamaño de los puntos&lt;/h2&gt;
+&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color, forma y tamaño de los puntos con las funciones &lt;code&gt;color =&lt;/code&gt;, &lt;code&gt;shape =&lt;/code&gt; y &lt;code&gt;size =&lt;/code&gt; dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter(width = 0.2, color = &amp;quot;#5F9EA0&amp;quot;, shape = 17, size =2)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
+# 5. Gráfico de cajas con jitter
+Cuando tenemos una variable categórica que representa grupos, podemos crear un gráfico de cajas y sobreponer los puntos a cada grupo. Para ello, debemos agregar una capa adicional con la información del gráfico jitter.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
+  geom_jitter(width = 0.2, alpha=0.8)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
+# 6. Juntando todas las piezas&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
+  geom_jitter(width = 0.2, alpha=0.8)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
