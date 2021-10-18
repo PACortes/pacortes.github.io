@@ -177,10 +177,10 @@
        x=&amp;quot;Largo de Pétalo (cms)&amp;quot;,
        y=&amp;quot;Ancho de Pétalo (cms)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Ahora, aumentemos el tamaño de las letras del título (y su color) y las etiquetas con a función &lt;code&gt;theme()&lt;/code&gt;, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.&lt;/p&gt;
+&lt;p&gt;Ahora, aumentemos el tamaño de las letras del título (y su color) y las etiquetas con la función &lt;code&gt;theme()&lt;/code&gt;, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;theme()&lt;/code&gt; incluye dos componentes principales:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Elementos del tema&lt;/strong&gt;: especifica los elementos que queremos controlar.Por ejemplo, &lt;code&gt;plot.title&lt;/code&gt; controla la apariencia del título.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Elementos del tema&lt;/strong&gt;: especifica los elementos que queremos controlar. Por ejemplo, &lt;code&gt;plot.title&lt;/code&gt; controla la apariencia del título y &lt;code&gt;axis.line&lt;/code&gt; controla la apariencia de las líneas de los ejes.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Función del tema&lt;/strong&gt;: describe la propiedad visual del elemento que queremos controlar. Por ejemplo, &lt;code&gt;element_text()&lt;/code&gt; establece el tamaño de fuente, el color, entre otros:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;size =&lt;/code&gt;: Para cambiar el tamaño de un elemento.&lt;/p&gt;&lt;/li&gt;
@@ -198,7 +198,8 @@
        y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25,colour=&amp;quot;darkblue&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+        plot.title=element_text(size=25,colour=&amp;quot;darkblue&amp;quot;),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
@@ -212,7 +213,8 @@
        y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión &lt;code&gt;aes()&lt;/code&gt; dentro de &lt;code&gt;geom_point()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, asignemos un tamaño de punto diferente para aquellas muestran con un diametro de &lt;strong&gt;Petal.Length&lt;/strong&gt; mayor a 2.5.&lt;/p&gt;
@@ -224,7 +226,8 @@
        y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25))
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))
 ## Warning: Using size for a discrete variable is not advised.&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -239,7 +242,8 @@
        y=&amp;quot;Ancho (cms)&amp;quot;, x=&amp;quot;Largo (cms)&amp;quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;También, podemos asignar colores específicos que diferencien entre las categorías de una tercera variable.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, asignemos diferentes colores para cada una de las especies en la base de datos.&lt;/p&gt;
@@ -252,7 +256,8 @@
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
+        plot.subtitle=element_text(size=20),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;Podemos realizar lo mismo, pero especificando los colores que queremos asignar a las especies. Para ello, utilizamos la función &lt;code&gt;scale_colour_manual()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -265,7 +270,8 @@
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))&lt;/code&gt;&lt;/pre&gt;
+        plot.subtitle=element_text(size=20),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;leyenda&#34; class=&#34;section level2&#34;&gt;
@@ -291,7 +297,8 @@
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &amp;quot;transparent&amp;quot;, colour = &amp;quot;#333333&amp;quot;,size=1.2),
         legend.title = element_text(size = 15),
-        legend.text = element_text(size = 12))&lt;/code&gt;&lt;/pre&gt;
+        legend.text = element_text(size = 12),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -587,6 +594,8 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-una-variable&#34;&gt;4.1. Gráfico de cajas para una variable&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-dos-variables&#34;&gt;4.2. Gráfico de cajas para dos variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-y-etiquetas&#34;&gt;4.3. Título y etiquetas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-etiquetasy-ejes&#34;&gt;4.4. Título, etiquetasy ejes&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -665,23 +674,49 @@ glimpse(MaterialParticulado)
 &lt;/div&gt;
 &lt;div id=&#34;gráfico-de-cajas-para-dos-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;4.2. Gráfico de cajas para dos variables&lt;/h2&gt;
-&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable categórica. Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; para cada &lt;strong&gt;Ciudad&lt;/strong&gt; en la que se levantó información.&lt;/p&gt;
+&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable de tipo categórica. Para ello, debemos especificar la variable a incorporar en el eje x.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; para cada &lt;strong&gt;Ciudad&lt;/strong&gt; en la que se levantó información.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
       geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
+&lt;div id=&#34;título-y-etiquetas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.3. Título y etiquetas&lt;/h2&gt;
+&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&amp;quot;#0072B5FF&amp;quot;)+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;título-etiquetasy-ejes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.4. Título, etiquetasy ejes&lt;/h2&gt;
+&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
   labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
        y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

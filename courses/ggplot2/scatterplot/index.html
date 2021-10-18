@@ -654,85 +654,175 @@
   </div>
 
   <div class="page-body">
-    <article class="article">
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-<div class="article-container pt-3">
-  <h1>1. Gráfico de dispersión</h1>
-
-  
-
-  
     
 
 
-<div class="article-metadata">
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          ggplot2
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
 
   
   
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Tutoriales de R</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
 
   
-  <span class="article-date">
+    
+    
     
     
       
     
-    Oct 5, 2021
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/r/">R</a></span>
-  
-
-</div>
-
     
 
-
-
-
-
-  
-</div>
-
-
-
-  <div class="article-container">
-
-    <div class="article-style">
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/ggplot2/">ggplot2</a>
+    
       
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/courses/ggplot2/scatterplot/">1. Gráfico de dispersión</a></li>
+
+
+
+  <li class=""><a href="/courses/ggplot2/boxplot/">2. Gráfico de cajas</a></li>
+
+
+
+  <li class=""><a href="/courses/ggplot2/jitter/">3. Gráfico jitter</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Tutoriales de R
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/ggplot2/">
+      
+        ggplot2
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        1. Gráfico de dispersión
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>1. Gráfico de dispersión</h1>
+
+          <div class="article-style">
+            
 
 <div id="TOC">
 <ul>
@@ -810,10 +900,10 @@
        x=&quot;Largo de Pétalo (cms)&quot;,
        y=&quot;Ancho de Pétalo (cms)&quot;)</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<p>Ahora, aumentemos el tamaño de las letras del título (y su color) y las etiquetas con a función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
+<p>Ahora, aumentemos el tamaño de las letras del título (y su color) y las etiquetas con la función <code>theme()</code>, la cuál nos permite controlar aspectos como fuentes, marcas, fondos, entre muchos otros.</p>
 <p><code>theme()</code> incluye dos componentes principales:</p>
 <ul>
-<li><p><strong>Elementos del tema</strong>: especifica los elementos que queremos controlar.Por ejemplo, <code>plot.title</code> controla la apariencia del título.</p></li>
+<li><p><strong>Elementos del tema</strong>: especifica los elementos que queremos controlar. Por ejemplo, <code>plot.title</code> controla la apariencia del título y <code>axis.line</code> controla la apariencia de las líneas de los ejes.</p></li>
 <li><p><strong>Función del tema</strong>: describe la propiedad visual del elemento que queremos controlar. Por ejemplo, <code>element_text()</code> establece el tamaño de fuente, el color, entre otros:</p>
 <ul>
 <li><p><code>size =</code>: Para cambiar el tamaño de un elemento.</p></li>
@@ -831,7 +921,8 @@
        y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25,colour=&quot;darkblue&quot;))</code></pre>
+        plot.title=element_text(size=25,colour=&quot;darkblue&quot;),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 </div>
 <div id="tamaño-de-los-puntos" class="section level2">
@@ -845,7 +936,8 @@
        y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25))</code></pre>
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p>También, podríamos especificar diferentes tamaños según un valor específico de una de nuestras variables. Para ello debemos incorporar una dimensión <code>aes()</code> dentro de <code>geom_point()</code>.</p>
 <p>Por ejemplo, asignemos un tamaño de punto diferente para aquellas muestran con un diametro de <strong>Petal.Length</strong> mayor a 2.5.</p>
@@ -857,7 +949,8 @@
        y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25))
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))
 ## Warning: Using size for a discrete variable is not advised.</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
 </div>
@@ -872,7 +965,8 @@
        y=&quot;Ancho (cms)&quot;, x=&quot;Largo (cms)&quot;)+
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
-        plot.title=element_text(size=25))</code></pre>
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>También, podemos asignar colores específicos que diferencien entre las categorías de una tercera variable.</p>
 <p>Por ejemplo, asignemos diferentes colores para cada una de las especies en la base de datos.</p>
@@ -885,7 +979,8 @@
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))</code></pre>
+        plot.subtitle=element_text(size=20),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Podemos realizar lo mismo, pero especificando los colores que queremos asignar a las especies. Para ello, utilizamos la función <code>scale_colour_manual()</code>.</p>
 <pre class="r"><code>ggplot(data = iris, mapping=aes(x=Petal.Length , y =Petal.Width))+
@@ -898,7 +993,8 @@
   theme(axis.text =element_text(size=16),
         axis.title=element_text(size=23),
         plot.title=element_text(size=25),
-        plot.subtitle=element_text(size=20))</code></pre>
+        plot.subtitle=element_text(size=20),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="leyenda" class="section level2">
@@ -924,7 +1020,8 @@
         legend.position = c(0.13, 0.85),
         legend.box.background = element_rect(fill = &quot;transparent&quot;, colour = &quot;#333333&quot;,size=1.2),
         legend.title = element_text(size = 15),
-        legend.text = element_text(size = 12))</code></pre>
+        legend.text = element_text(size = 12),
+        axis.line = element_line(color = &quot;#333333&quot;,size = 1, linetype = &quot;solid&quot;))</code></pre>
 <p><img src="/courses/ggplot2/scatterplot_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 </div>
@@ -954,14 +1051,9 @@
 </ul>
 </div>
 
-    </div>
+          </div>
 
-    
-
-
-
-
-
+          
 
 <div class="article-tags">
   
@@ -973,241 +1065,62 @@
 
 
 
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://academic-demo.netlify.app/courses/ggplot2/scatterplot/&amp;text=1.%20Gr%c3%a1fico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://academic-demo.netlify.app/courses/ggplot2/scatterplot/&amp;t=1.%20Gr%c3%a1fico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=1.%20Gr%c3%a1fico%20de%20dispersi%c3%b3n&amp;body=https://academic-demo.netlify.app/courses/ggplot2/scatterplot/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://academic-demo.netlify.app/courses/ggplot2/scatterplot/&amp;title=1.%20Gr%c3%a1fico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="whatsapp://send?text=1.%20Gr%c3%a1fico%20de%20dispersi%c3%b3n%20https://academic-demo.netlify.app/courses/ggplot2/scatterplot/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://academic-demo.netlify.app/courses/ggplot2/scatterplot/&amp;title=1.%20Gr%c3%a1fico%20de%20dispersi%c3%b3n" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/ggplot2/boxplot/" rel="prev">2. Gráfico de cajas</a>
+  </div>
+  
 </div>
 
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Oct 5, 2021</p>
+
+          
 
 
 
 
 
+          
 
 
 
+
+          
 
 
   
   
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  <div class="media author-card content-widget-hr">
-    
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
       
-      <a href="https://academic-demo.netlify.app/"><img class="avatar mr-3 avatar-circle" src="/author/pablo-cortes-garcia/avatar_hu7d3b0da55c569d642c49bbbb65ab872a_84834_270x270_fill_q75_lanczos_center.jpeg" alt="Pablo Cortés García"></a>
-    
-
-    <div class="media-body">
-      <h5 class="card-title"><a href="https://academic-demo.netlify.app/">Pablo Cortés García</a></h5>
-      <h6 class="card-subtitle">Profesor Asistente</h6>
-      <p class="card-text">Mis intereses incluyen Cambio Climático, Biodiversidad, Análisis de texto computacional, Búsqueda y recuperación de información.</p>
-      <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
+      <li><a href="/courses/ggplot2/boxplot/">2. Gráfico de cajas</a></li>
       
-    
-    
-    
-    
-    
+      <li><a href="/courses/ggplot2/jitter/">3. Gráfico jitter</a></li>
       
-    
-    <li>
-      <a href="/#contact" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.researchgate.net/profile/Pablo_Cortes11" target="_blank" rel="noopener">
-        <i class="fab fa-researchgate"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/PACortes" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/pablo-andr%c3%a9s-cort%c3%a9s-garc%c3%ada-1bb2511b3" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.instagram.com/pabcorgar/" target="_blank" rel="noopener">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </li>
-  
-</ul>
-
-    </div>
+    </ul>
   </div>
+  
 
 
 
+        </div>
 
+      </article>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-</article>
-  </div>
-
-  <div class="page-footer">
-    
-    
-    <div class="container">
       <footer class="site-footer">
 
   
@@ -1243,7 +1156,15 @@
   </p>
 </footer>
 
-    </div>
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
     
   </div>
 
@@ -1312,6 +1233,11 @@
     
 
     
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
     
 
     
