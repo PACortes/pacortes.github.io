@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>1. Análisis Bibliométrico</title>
+      <title>Análisis Bibliométrico</title>
       <link>https://academic-demo.netlify.app/courses/bibliometrix/01_bibliometria/</link>
       <pubDate>Mon, 11 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/bibliometrix/01_bibliometria/</guid>
@@ -393,7 +393,7 @@
     </item>
     
     <item>
-      <title>2. Revisión Sistemática</title>
+      <title>Revisión Sistemática</title>
       <link>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</link>
       <pubDate>Mon, 11 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</guid>
@@ -684,7 +684,7 @@ glimpse(MaterialParticulado)
 &lt;h2&gt;4.3. Título, etiquetas y ejes&lt;/h2&gt;
 &lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
+      geom_boxplot()+
   labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
        y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
   theme(axis.text =element_text(size=16),

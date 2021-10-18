@@ -926,7 +926,7 @@ glimpse(MaterialParticulado)
 <h2>4.3. Título, etiquetas y ejes</h2>
 <p>Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función <code>labs()</code>. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función <code>theme()</code>.</p>
 <pre class="r"><code>ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&quot;#5F9EA0&quot;)+
+      geom_boxplot()+
   labs(title=&quot;PM2.5 según ciudad&quot;,
        y=&quot;PM2.5 (μm)&quot;, x=&quot;Ciudad&quot;)+
   theme(axis.text =element_text(size=16),
