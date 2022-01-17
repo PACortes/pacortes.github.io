@@ -1,70 +1,867 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>dplyr: manipulación de datos | Pablo Cortes</title>
-    <link>https://academic-demo.netlify.app/courses/dplyr/</link>
-      <atom:link href="https://academic-demo.netlify.app/courses/dplyr/index.xml" rel="self" type="application/rss+xml" />
-    <description>dplyr: manipulación de datos</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 28 Sep 2021 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://academic-demo.netlify.app/courses/dplyr/featured.jpg</url>
-      <title>dplyr: manipulación de datos</title>
-      <link>https://academic-demo.netlify.app/courses/dplyr/</link>
-    </image>
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
     
-    <item>
-      <title>select</title>
-      <link>https://academic-demo.netlify.app/courses/dplyr/select/</link>
-      <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/dplyr/select/</guid>
-      <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+    
+    
+  
+  
 
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable&#34;&gt;2.1. Seleccionemos una variable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-por-posición-en-la-base-de-datos&#34;&gt;2.2. Seleccionemos una variable por posición en la base de datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-más-de-una-variable&#34;&gt;2.3. Seleccionemos más de una variable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-un-rango-de-variables&#34;&gt;2.4. Seleccionemos un rango de variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-todas-las-variables-excepto-una&#34;&gt;2.4. Seleccionemos todas las variables excepto una&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-comienza-con-cierto-carácter&#34;&gt;2.6. Seleccionemos una variable que comienza con cierto carácter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-termina-con-cierto-carácter&#34;&gt;2.7. Seleccionemos una variable que termina con cierto carácter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-contiene-un-valor&#34;&gt;2.8. Seleccionemos una variable que contiene un valor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;6. Referencias&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
+  <meta name="author" content="Pablo Cortés García" />
 
-&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;La función &lt;code&gt;select&lt;/code&gt; permite elegir un subconjunto de las variables (columnas) de la base de datos.&lt;/p&gt;
-&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;select&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+  
+  
+  
+    
+  
+  <meta name="description" content="1. Definición 2. Sintáxis  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2.4. Seleccionemos un rango de variables 2." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/select/" />
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.481af39c39ffd87b2d14f39943e7c723.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://academic-demo.netlify.app/courses/dplyr/select/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Pablo Cortes" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/select/" />
+  <meta property="og:title" content="select | Pablo Cortes" />
+  <meta property="og:description" content="1. Definición 2. Sintáxis  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2.4. Seleccionemos un rango de variables 2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-01-15T21:13:14-05:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-01-15T21:13:14-05:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>select | Pablo Cortes</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="423e8d2516d44af0210d76abca68d03c" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Pablo Cortes</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Pablo Cortes</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Opinión</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publication/"><span>Publicaciones</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/courses/"><span>R</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contacto</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://www.researchgate.net/profile/Pablo_Cortes11" target="_blank" rel="noopener" aria-label="researchgate">
+              <i class="fab fa-researchgate" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          dplyr
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Tutoriales de R</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/courses/dplyr/">dplyr</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class="active"><a href="/courses/dplyr/select/">select</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/">
+      
+        Tutoriales de R
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/courses/dplyr/">
+      
+        dplyr
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        select
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>select</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#definición">1. Definición</a></li>
+<li><a href="#sintáxis">2. Sintáxis</a>
+<ul>
+<li><a href="#seleccionemos-una-variable">2.1. Seleccionemos una variable</a></li>
+<li><a href="#seleccionemos-una-variable-por-posición-en-la-base-de-datos">2.2. Seleccionemos una variable por posición en la base de datos</a></li>
+<li><a href="#seleccionemos-más-de-una-variable">2.3. Seleccionemos más de una variable</a></li>
+<li><a href="#seleccionemos-un-rango-de-variables">2.4. Seleccionemos un rango de variables</a></li>
+<li><a href="#seleccionemos-todas-las-variables-excepto-una">2.4. Seleccionemos todas las variables excepto una</a></li>
+<li><a href="#seleccionemos-una-variable-que-comienza-con-cierto-carácter">2.6. Seleccionemos una variable que comienza con cierto carácter</a></li>
+<li><a href="#seleccionemos-una-variable-que-termina-con-cierto-carácter">2.7. Seleccionemos una variable que termina con cierto carácter</a></li>
+<li><a href="#seleccionemos-una-variable-que-contiene-un-valor">2.8. Seleccionemos una variable que contiene un valor</a></li>
+</ul></li>
+<li><a href="#referencias">6. Referencias</a></li>
+</ul>
+</div>
+
+<div id="definición" class="section level1">
+<h1>1. Definición</h1>
+<p>La función <code>select</code> permite elegir un subconjunto de las variables (columnas) de la base de datos.</p>
+<p>Recordemos que antes de utilizar la función <code>select</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
+<pre class="r"><code>library(dplyr)
 ## 
-## Attaching package: &amp;#39;dplyr&amp;#39;
-## The following objects are masked from &amp;#39;package:stats&amp;#39;:
+## Attaching package: &#39;dplyr&#39;
+## The following objects are masked from &#39;package:stats&#39;:
 ## 
 ##     filter, lag
-## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## The following objects are masked from &#39;package:base&#39;:
 ## 
-##     intersect, setdiff, setequal, union&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
-&lt;p&gt;La sintáxis básica de &lt;code&gt;select&lt;/code&gt; para seleccionar una variable es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;select(data, variable)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;En donde:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;variable&lt;/code&gt;: especifica la variable a seleccionar&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;seleccionemos-una-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.1. Seleccionemos una variable&lt;/h2&gt;
-&lt;p&gt;Seleccionaremos la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,Petal.Length)
+##     intersect, setdiff, setequal, union</code></pre>
+</div>
+<div id="sintáxis" class="section level1">
+<h1>2. Sintáxis</h1>
+<p>La sintáxis básica de <code>select</code> para seleccionar una variable es:</p>
+<p><code>select(data, variable)</code></p>
+<p>En donde:</p>
+<ul>
+<li><p><code>data</code>: es la base de datos.</p></li>
+<li><p><code>variable</code>: especifica la variable a seleccionar</p></li>
+</ul>
+<div id="seleccionemos-una-variable" class="section level2">
+<h2>2.1. Seleccionemos una variable</h2>
+<p>Seleccionaremos la variable <strong>Petal.Length</strong> base de datos <code>iris</code>.</p>
+<pre class="r"><code>select(iris,Petal.Length)
 ##     Petal.Length
 ## 1            1.4
 ## 2            1.4
@@ -215,12 +1012,12 @@
 ## 147          5.0
 ## 148          5.2
 ## 149          5.4
-## 150          5.1&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seleccionemos-una-variable-por-posición-en-la-base-de-datos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.2. Seleccionemos una variable por posición en la base de datos&lt;/h2&gt;
-&lt;p&gt;Una alternativa a lo anterior, es seleccionar una variable que se encuentre en un orden específico detro de la base de datos. Por ejemplo, seleccionemos la quinta variable en la base de datos &lt;code&gt;iris&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,5)
+## 150          5.1</code></pre>
+</div>
+<div id="seleccionemos-una-variable-por-posición-en-la-base-de-datos" class="section level2">
+<h2>2.2. Seleccionemos una variable por posición en la base de datos</h2>
+<p>Una alternativa a lo anterior, es seleccionar una variable que se encuentre en un orden específico detro de la base de datos. Por ejemplo, seleccionemos la quinta variable en la base de datos <code>iris</code>:</p>
+<pre class="r"><code>select(iris,5)
 ##        Species
 ## 1       setosa
 ## 2       setosa
@@ -371,21 +1168,21 @@
 ## 147  virginica
 ## 148  virginica
 ## 149  virginica
-## 150  virginica&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;El resultado nos muestra que la variable ubicada en la quinta posición es &lt;strong&gt;Species&lt;/strong&gt;. Para corroborar el orden, podemos utilizar la función &lt;code&gt;glimpse&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;glimpse(iris)
+## 150  virginica</code></pre>
+<p>El resultado nos muestra que la variable ubicada en la quinta posición es <strong>Species</strong>. Para corroborar el orden, podemos utilizar la función <code>glimpse</code>:</p>
+<pre class="r"><code>glimpse(iris)
 ## Rows: 150
 ## Columns: 5
-## $ Sepal.Length &amp;lt;dbl&amp;gt; 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4, 4.…
-## $ Sepal.Width  &amp;lt;dbl&amp;gt; 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.…
-## $ Petal.Length &amp;lt;dbl&amp;gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1.…
-## $ Petal.Width  &amp;lt;dbl&amp;gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.…
-## $ Species      &amp;lt;fct&amp;gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s…&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seleccionemos-más-de-una-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.3. Seleccionemos más de una variable&lt;/h2&gt;
-&lt;p&gt;Ahora, seleccionemos las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt;. Eto lo podemos realizar nombrando las variables de interés:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,Petal.Length, Petal.Width)
+## $ Sepal.Length &lt;dbl&gt; 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4, 4.…
+## $ Sepal.Width  &lt;dbl&gt; 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.…
+## $ Petal.Length &lt;dbl&gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1.…
+## $ Petal.Width  &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.…
+## $ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s…</code></pre>
+</div>
+<div id="seleccionemos-más-de-una-variable" class="section level2">
+<h2>2.3. Seleccionemos más de una variable</h2>
+<p>Ahora, seleccionemos las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong>. Eto lo podemos realizar nombrando las variables de interés:</p>
+<pre class="r"><code>select(iris,Petal.Length, Petal.Width)
 ##     Petal.Length Petal.Width
 ## 1            1.4         0.2
 ## 2            1.4         0.2
@@ -536,12 +1333,12 @@
 ## 147          5.0         1.9
 ## 148          5.2         2.0
 ## 149          5.4         2.3
-## 150          5.1         1.8&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seleccionemos-un-rango-de-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.4. Seleccionemos un rango de variables&lt;/h2&gt;
-&lt;p&gt;De forma alternativa, podemos selccionar un rango de variables utilizando &lt;code&gt;:&lt;/code&gt;. Aquí, las variables de interes deben estar ubicadas en posiciones contiguas dentro de la base de datos:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,3:4)
+## 150          5.1         1.8</code></pre>
+</div>
+<div id="seleccionemos-un-rango-de-variables" class="section level2">
+<h2>2.4. Seleccionemos un rango de variables</h2>
+<p>De forma alternativa, podemos selccionar un rango de variables utilizando <code>:</code>. Aquí, las variables de interes deben estar ubicadas en posiciones contiguas dentro de la base de datos:</p>
+<pre class="r"><code>select(iris,3:4)
 ##     Petal.Length Petal.Width
 ## 1            1.4         0.2
 ## 2            1.4         0.2
@@ -692,9 +1489,9 @@
 ## 147          5.0         1.9
 ## 148          5.2         2.0
 ## 149          5.4         2.3
-## 150          5.1         1.8&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Cuando las varables no se encuentran contiguas, podemos especificar las variables a seleccionar utilizando &lt;code&gt;c(,)&lt;/code&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,c(,c(1,3:4)))
+## 150          5.1         1.8</code></pre>
+<p>Cuando las varables no se encuentran contiguas, podemos especificar las variables a seleccionar utilizando <code>c(,)</code>:</p>
+<pre class="r"><code>select(iris,c(,c(1,3:4)))
 ##     Sepal.Length Petal.Length Petal.Width
 ## 1            5.1          1.4         0.2
 ## 2            4.9          1.4         0.2
@@ -845,13 +1642,13 @@
 ## 147          6.3          5.0         1.9
 ## 148          6.5          5.2         2.0
 ## 149          6.2          5.4         2.3
-## 150          5.9          5.1         1.8&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;En este ejemplo, especificamos que queremos todas las filas, y las columnas 1, 3 y 4.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seleccionemos-todas-las-variables-excepto-una&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.4. Seleccionemos todas las variables excepto una&lt;/h2&gt;
-&lt;p&gt;Para seleccionar todas las variables excepto una, debemos anteponer el signo &lt;code&gt;-&lt;/code&gt;a la variable que &lt;strong&gt;no&lt;/strong&gt; es de nuestro interés. Por ejemplo, vamos a excluir la variable &lt;strong&gt;Petal.Length&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,-Petal.Length)
+## 150          5.9          5.1         1.8</code></pre>
+<p>En este ejemplo, especificamos que queremos todas las filas, y las columnas 1, 3 y 4.</p>
+</div>
+<div id="seleccionemos-todas-las-variables-excepto-una" class="section level2">
+<h2>2.4. Seleccionemos todas las variables excepto una</h2>
+<p>Para seleccionar todas las variables excepto una, debemos anteponer el signo <code>-</code>a la variable que <strong>no</strong> es de nuestro interés. Por ejemplo, vamos a excluir la variable <strong>Petal.Length</strong>:</p>
+<pre class="r"><code>select(iris,-Petal.Length)
 ##     Sepal.Length Sepal.Width Petal.Width    Species
 ## 1            5.1         3.5         0.2     setosa
 ## 2            4.9         3.0         0.2     setosa
@@ -1002,28 +1799,259 @@
 ## 147          6.3         2.5         1.9  virginica
 ## 148          6.5         3.0         2.0  virginica
 ## 149          6.2         3.4         2.3  virginica
-## 150          5.9         3.0         1.8  virginica&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seleccionemos-una-variable-que-comienza-con-cierto-carácter&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.6. Seleccionemos una variable que comienza con cierto carácter&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seleccionemos-una-variable-que-termina-con-cierto-carácter&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.7. Seleccionemos una variable que termina con cierto carácter&lt;/h2&gt;
-&lt;/div&gt;
-&lt;div id=&#34;seleccionemos-una-variable-que-contiene-un-valor&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.8. Seleccionemos una variable que contiene un valor&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;6. Referencias&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ggplot2.tidyverse.org/reference/element.html&#34;&gt;Theme elements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/&#34;&gt;Legends&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris&#34;&gt;Conjunto de datos iris&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
+## 150          5.9         3.0         1.8  virginica</code></pre>
+</div>
+<div id="seleccionemos-una-variable-que-comienza-con-cierto-carácter" class="section level2">
+<h2>2.6. Seleccionemos una variable que comienza con cierto carácter</h2>
+</div>
+<div id="seleccionemos-una-variable-que-termina-con-cierto-carácter" class="section level2">
+<h2>2.7. Seleccionemos una variable que termina con cierto carácter</h2>
+</div>
+<div id="seleccionemos-una-variable-que-contiene-un-valor" class="section level2">
+<h2>2.8. Seleccionemos una variable que contiene un valor</h2>
+</div>
+</div>
+<div id="referencias" class="section level1">
+<h1>6. Referencias</h1>
+<ul>
+<li><p><a href="https://ggplot2.tidyverse.org/reference/element.html">Theme elements</a></p></li>
+<li><p><a href="http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/">Legends</a></p></li>
+<li><p><a href="https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris">Conjunto de datos iris</a></p></li>
+</ul>
+</div>
+
+          </div>
+
+          
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/manipulacion/">Manipulación</a>
+  
+  <a class="badge badge-light" href="/tag/dplyr/">dplyr</a>
+  
+</div>
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Jan 15, 2022</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
     
-  </channel>
-</rss>
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+
+</body>
+</html>
