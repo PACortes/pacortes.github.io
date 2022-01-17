@@ -35,7 +35,10 @@
     <loc>https://academic-demo.netlify.app/authors/</loc>
     <lastmod>2022-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/tag/biodiversidad/</loc>
+    <loc>https://academic-demo.netlify.app/tag/cambio-climatico/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/crisis-climatica/</loc>
     <lastmod>2022-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/post/crisisclimatica/</loc>
@@ -44,16 +47,10 @@
     <loc>https://academic-demo.netlify.app/author/martina-le-bert/</loc>
     <lastmod>2022-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/tag/negacionismo/</loc>
-    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/author/pablo-cortes-garcia/</loc>
     <lastmod>2022-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/post/</loc>
-    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tag/prensa/</loc>
     <lastmod>2022-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tags/</loc>
@@ -125,7 +122,16 @@
     <loc>https://academic-demo.netlify.app/courses/rvest/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://academic-demo.netlify.app/tag/biodiversidad/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/negacionismo/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/post/negacionismo/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/prensa/</loc>
     <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/slides/</loc>
