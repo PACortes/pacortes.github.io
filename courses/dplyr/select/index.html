@@ -829,15 +829,16 @@
 <li><a href="#seleccionemos-todas-las-variables-excepto-una">2.4. Seleccionemos todas las variables excepto una</a></li>
 <li><a href="#seleccionemos-una-variable-que-comienza-con-cierto-carácter">2.5. Seleccionemos una variable que comienza con cierto carácter</a></li>
 <li><a href="#seleccionemos-una-variable-que-termina-con-cierto-carácter">2.6. Seleccionemos una variable que termina con cierto carácter</a></li>
-<li><a href="#seleccionemos-una-variable-que-contiene-un-valor">2.7. Seleccionemos una variable que contiene un valor</a></li>
+<li><a href="#seleccionemos-una-variable-que-contiene-un-patrón-determinado">2.7. Seleccionemos una variable que contiene un patrón determinado</a></li>
+<li><a href="#seleccionemos-variables-especificadas-en-un-vector">2.8. Seleccionemos variables especificadas en un vector</a></li>
 </ul></li>
-<li><a href="#referencias">6. Referencias</a></li>
+<li><a href="#referencias">3. Referencias</a></li>
 </ul>
 </div>
 
 <div id="definición" class="section level1">
 <h1>1. Definición</h1>
-<p>La función <code>select</code> permite elegir un subconjunto de las variables (columnas) de la base de datos.</p>
+<p>La función <code>select</code> permite elegir un subconjunto de las variables (columnas) de la base de datos en base a su nombre y/o posición.</p>
 <p>Recordemos que antes de utilizar la función <code>select</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
 <pre class="r"><code>library(dplyr)</code></pre>
 </div>
@@ -923,20 +924,61 @@
 </div>
 <div id="seleccionemos-una-variable-que-comienza-con-cierto-carácter" class="section level2">
 <h2>2.5. Seleccionemos una variable que comienza con cierto carácter</h2>
+<p>Dependiendo de las etiquetas asignadas a las variables de una base de datos, algunas veces será de utilidad seleccionar una o más variables en base a los caracteres con los cuales comienzan sus nombres.</p>
+<p>Por ejemplo, en nuestra base de datos, podemos seleccionar variables que comiencen con <strong>Petal</strong>. Para ello, utilizaremos la función <code>starts_with()</code>:</p>
+<pre class="r"><code>select(iris,starts_with(&quot;Petal&quot;))</code></pre>
+<pre><code>##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4</code></pre>
 </div>
 <div id="seleccionemos-una-variable-que-termina-con-cierto-carácter" class="section level2">
 <h2>2.6. Seleccionemos una variable que termina con cierto carácter</h2>
+<p>De forma similar al ejemplo anterior, select nos permite seleccionar variables que terminen con ciertos caracteres. Por ejemplo, podemos seleccionar variables cuyo nombre finalice con <strong>Length</strong>. Para ello, utilizaremos la función <code>ends_with()</code>:</p>
+<pre class="r"><code>select(iris,ends_with(&quot;Length&quot;))</code></pre>
+<pre><code>##   Sepal.Length Petal.Length
+## 1          5.1          1.4
+## 2          4.9          1.4
+## 3          4.7          1.3
+## 4          4.6          1.5
+## 5          5.0          1.4
+## 6          5.4          1.7</code></pre>
 </div>
-<div id="seleccionemos-una-variable-que-contiene-un-valor" class="section level2">
-<h2>2.7. Seleccionemos una variable que contiene un valor</h2>
+<div id="seleccionemos-una-variable-que-contiene-un-patrón-determinado" class="section level2">
+<h2>2.7. Seleccionemos una variable que contiene un patrón determinado</h2>
+<p>Podríamos seleccionar variables en base a la prescencia de uno o más caracteres específicos en su nombre. Para ello, debemos utilizar la función <code>contains()</code>:</p>
+<pre class="r"><code>select(iris,contains(&quot;S&quot;))</code></pre>
+<pre><code>##   Sepal.Length Sepal.Width Species
+## 1          5.1         3.5  setosa
+## 2          4.9         3.0  setosa
+## 3          4.7         3.2  setosa
+## 4          4.6         3.1  setosa
+## 5          5.0         3.6  setosa
+## 6          5.4         3.9  setosa</code></pre>
+<p>La selección anterior nos permitió seleccionar todas las variables que incluyen la letra <strong>S</strong> en su nombre.</p>
+</div>
+<div id="seleccionemos-variables-especificadas-en-un-vector" class="section level2">
+<h2>2.8. Seleccionemos variables especificadas en un vector</h2>
+<p>Finalmente, podríamos seleccionar las variables especificadas en un vector. Para ello, debemos utilizar la función <code>one_of()</code>. Generemos un vector llamados <strong>Petalo</strong> que contendrá los nombres de las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong>:</p>
+<pre class="r"><code>Petalo&lt;-c(&quot;Petal.Length&quot;,&quot;Petal.Width&quot;)</code></pre>
+<p>Ahora, seleccionemos las variables:</p>
+<pre class="r"><code>select(iris,one_of(Petalo))</code></pre>
+<pre><code>##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4</code></pre>
 </div>
 </div>
 <div id="referencias" class="section level1">
-<h1>6. Referencias</h1>
+<h1>3. Referencias</h1>
 <ul>
-<li><p><a href="https://ggplot2.tidyverse.org/reference/element.html">Theme elements</a></p></li>
-<li><p><a href="http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/">Legends</a></p></li>
-<li><p><a href="https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris">Conjunto de datos iris</a></p></li>
+<li><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></li>
 </ul>
 </div>
 

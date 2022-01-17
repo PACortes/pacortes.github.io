@@ -32,15 +32,16 @@
 &lt;li&gt;&lt;a href=&#34;#seleccionemos-todas-las-variables-excepto-una&#34;&gt;2.4. Seleccionemos todas las variables excepto una&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-comienza-con-cierto-carácter&#34;&gt;2.5. Seleccionemos una variable que comienza con cierto carácter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-termina-con-cierto-carácter&#34;&gt;2.6. Seleccionemos una variable que termina con cierto carácter&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-contiene-un-valor&#34;&gt;2.7. Seleccionemos una variable que contiene un valor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-contiene-un-patrón-determinado&#34;&gt;2.7. Seleccionemos una variable que contiene un patrón determinado&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-variables-especificadas-en-un-vector&#34;&gt;2.8. Seleccionemos variables especificadas en un vector&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;6. Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;3. Referencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;La función &lt;code&gt;select&lt;/code&gt; permite elegir un subconjunto de las variables (columnas) de la base de datos.&lt;/p&gt;
+&lt;p&gt;La función &lt;code&gt;select&lt;/code&gt; permite elegir un subconjunto de las variables (columnas) de la base de datos en base a su nombre y/o posición.&lt;/p&gt;
 &lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;select&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -126,20 +127,61 @@
 &lt;/div&gt;
 &lt;div id=&#34;seleccionemos-una-variable-que-comienza-con-cierto-carácter&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.5. Seleccionemos una variable que comienza con cierto carácter&lt;/h2&gt;
+&lt;p&gt;Dependiendo de las etiquetas asignadas a las variables de una base de datos, algunas veces será de utilidad seleccionar una o más variables en base a los caracteres con los cuales comienzan sus nombres.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, en nuestra base de datos, podemos seleccionar variables que comiencen con &lt;strong&gt;Petal&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;starts_with()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,starts_with(&amp;quot;Petal&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;seleccionemos-una-variable-que-termina-con-cierto-carácter&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.6. Seleccionemos una variable que termina con cierto carácter&lt;/h2&gt;
+&lt;p&gt;De forma similar al ejemplo anterior, select nos permite seleccionar variables que terminen con ciertos caracteres. Por ejemplo, podemos seleccionar variables cuyo nombre finalice con &lt;strong&gt;Length&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;ends_with()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,ends_with(&amp;quot;Length&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Petal.Length
+## 1          5.1          1.4
+## 2          4.9          1.4
+## 3          4.7          1.3
+## 4          4.6          1.5
+## 5          5.0          1.4
+## 6          5.4          1.7&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;div id=&#34;seleccionemos-una-variable-que-contiene-un-valor&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.7. Seleccionemos una variable que contiene un valor&lt;/h2&gt;
+&lt;div id=&#34;seleccionemos-una-variable-que-contiene-un-patrón-determinado&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.7. Seleccionemos una variable que contiene un patrón determinado&lt;/h2&gt;
+&lt;p&gt;Podríamos seleccionar variables en base a la prescencia de uno o más caracteres específicos en su nombre. Para ello, debemos utilizar la función &lt;code&gt;contains()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,contains(&amp;quot;S&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Species
+## 1          5.1         3.5  setosa
+## 2          4.9         3.0  setosa
+## 3          4.7         3.2  setosa
+## 4          4.6         3.1  setosa
+## 5          5.0         3.6  setosa
+## 6          5.4         3.9  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;La selección anterior nos permitió seleccionar todas las variables que incluyen la letra &lt;strong&gt;S&lt;/strong&gt; en su nombre.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-variables-especificadas-en-un-vector&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.8. Seleccionemos variables especificadas en un vector&lt;/h2&gt;
+&lt;p&gt;Finalmente, podríamos seleccionar las variables especificadas en un vector. Para ello, debemos utilizar la función &lt;code&gt;one_of()&lt;/code&gt;. Generemos un vector llamados &lt;strong&gt;Petalo&lt;/strong&gt; que contendrá los nombres de las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Petalo&amp;lt;-c(&amp;quot;Petal.Length&amp;quot;,&amp;quot;Petal.Width&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, seleccionemos las variables:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,one_of(Petalo))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;6. Referencias&lt;/h1&gt;
+&lt;h1&gt;3. Referencias&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://ggplot2.tidyverse.org/reference/element.html&#34;&gt;Theme elements&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/&#34;&gt;Legends&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://es.wikipedia.org/wiki/Conjunto_de_datos_flor_iris&#34;&gt;Conjunto de datos iris&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dplyr.tidyverse.org/reference/select.html&#34;&gt;select&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 </description>
