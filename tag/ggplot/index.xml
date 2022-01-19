@@ -13,18 +13,20 @@
     </image>
     
     <item>
-      <title>Gráfico de dispersión</title>
+      <title>Grafico de dispersion</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</guid>
       <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#base-de-datos&#34;&gt;3. Base de datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#límites-de-los-ejes&#34;&gt;4.1. Límites de los ejes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#título-y-etiquetas&#34;&gt;4.2. Título y etiquetas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tamaño-de-los-puntos&#34;&gt;4.3. Tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
@@ -249,22 +251,25 @@
     </item>
     
     <item>
-      <title>Gráfico de cajas</title>
+      <title>Grafico de cajas</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</guid>
       <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#material-particulado-pm&#34;&gt;3.1. Material Particulado (PM)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#base-de-datos-descripción&#34;&gt;3.2. Base de datos: descripción&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#base-de-datos-descarga&#34;&gt;3.3. Base de datos: descarga&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-una-variable&#34;&gt;4.1. Gráfico de cajas para una variable&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-dos-variables&#34;&gt;4.2. Gráfico de cajas para dos variables&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.3. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
@@ -407,18 +412,20 @@ glimpse(MaterialParticulado)
     </item>
     
     <item>
-      <title>Gráfico jitter</title>
+      <title>Grafico jitter</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
       <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#gráfico-jitter-para-una-variable&#34;&gt;4.1. Gráfico jitter para una variable&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.2. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#dispersión-de-los-datos&#34;&gt;4.3. Dispersión de los datos&lt;/a&gt;&lt;/li&gt;
