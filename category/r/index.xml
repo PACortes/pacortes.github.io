@@ -56,7 +56,7 @@
 &lt;/ul&gt;
 &lt;div id=&#34;seleccionemos-una-variable&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.1. Seleccionemos una variable&lt;/h2&gt;
-&lt;p&gt;Seleccionaremos la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Seleccionemos la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; de la base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,Petal.Length)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##   Petal.Length
 ## 1          1.4
@@ -563,6 +563,203 @@
 &lt;li&gt;&lt;p&gt;&lt;code&gt;minimal_html()&lt;/code&gt;: genera una pagina html mínima.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>filter</title>
+      <link>https://academic-demo.netlify.app/courses/dplyr/filter/</link>
+      <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/dplyr/filter/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#operadores-lógicos&#34;&gt;3. Operadores lógicos&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable&#34;&gt;2.1. Seleccionemos una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-por-posición-en-la-base-de-datos&#34;&gt;2.2. Seleccionemos una variable por posición en la base de datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-más-de-una-variable&#34;&gt;2.3. Seleccionemos más de una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-un-rango-de-variables&#34;&gt;2.4. Seleccionemos un rango de variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-todas-las-variables-excepto-una&#34;&gt;2.4. Seleccionemos todas las variables excepto una&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-comienza-con-cierto-carácter&#34;&gt;2.5. Seleccionemos una variable que comienza con cierto carácter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-termina-con-cierto-carácter&#34;&gt;2.6. Seleccionemos una variable que termina con cierto carácter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-una-variable-que-contiene-un-patrón-determinado&#34;&gt;2.7. Seleccionemos una variable que contiene un patrón determinado&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#seleccionemos-variables-especificadas-en-un-vector&#34;&gt;2.8. Seleccionemos variables especificadas en un vector&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;3. Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;Así como la función &lt;code&gt;select&lt;/code&gt; es utilizada para seleccionar variables (columnas), la función &lt;code&gt;filter&lt;/code&gt; hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;select&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de &lt;code&gt;filter&lt;/code&gt; para seleccionar observaciones es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;select(filter, condición)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;condición&lt;/code&gt;: condición de interés que deben cumplir las observaciones.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;operadores-lógicos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Operadores lógicos&lt;/h1&gt;
+&lt;p&gt;Existen múltiples operadoores que será útiles para especificar las condicones de interés al momento de filtrar los datos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;lt; y&lt;/code&gt;: x menor que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;gt; y =&lt;/code&gt;: x mayor que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;lt;= y&lt;/code&gt;: x menor o igual que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;gt;= y&lt;/code&gt;: x mayor o igual que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x == y&lt;/code&gt;: x igual a y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x != y&lt;/code&gt;: x no es igual a y.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Además, podemos usar las siguientes funciones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;between(x, A, B)&lt;/code&gt;: x &amp;gt;= A &amp;amp; x &amp;lt;= B;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;condición&lt;/code&gt;: condición de interés que deben cumplir las observaciones.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;seleccionemos-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.1. Seleccionemos una variable&lt;/h2&gt;
+&lt;p&gt;Seleccionaremos la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; base de datos &lt;code&gt;iris&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,Petal.Length)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Petal.Length
+## 1          1.4
+## 2          1.4
+## 3          1.3
+## 4          1.5
+## 5          1.4
+## 6          1.7&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-una-variable-por-posición-en-la-base-de-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.2. Seleccionemos una variable por posición en la base de datos&lt;/h2&gt;
+&lt;p&gt;Una alternativa a lo anterior, es seleccionar una variable que se encuentre en un orden específico detro de la base de datos. Por ejemplo, seleccionemos la quinta variable en la base de datos &lt;code&gt;iris&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Species
+## 1  setosa
+## 2  setosa
+## 3  setosa
+## 4  setosa
+## 5  setosa
+## 6  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;El resultado nos muestra que la variable ubicada en la quinta posición es &lt;strong&gt;Species&lt;/strong&gt;. Para corroborar el orden, podemos utilizar la función &lt;code&gt;glimpse&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;glimpse(iris)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-más-de-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3. Seleccionemos más de una variable&lt;/h2&gt;
+&lt;p&gt;Ahora, seleccionemos las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt;. Esto lo podemos realizar nombrando las variables de interés:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,Petal.Length, Petal.Width)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-un-rango-de-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.4. Seleccionemos un rango de variables&lt;/h2&gt;
+&lt;p&gt;De forma alternativa, podemos selccionar un rango de variables utilizando &lt;code&gt;:&lt;/code&gt;. Aquí, las variables de interes deben estar ubicadas en posiciones contiguas dentro de la base de datos:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Cuando las varables no se encuentran contiguas, podemos especificar las variables a seleccionar utilizando &lt;code&gt;c(,)&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,c(,c(1,3:4)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Petal.Length Petal.Width
+## 1          5.1          1.4         0.2
+## 2          4.9          1.4         0.2
+## 3          4.7          1.3         0.2
+## 4          4.6          1.5         0.2
+## 5          5.0          1.4         0.2
+## 6          5.4          1.7         0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;En este ejemplo, especificamos que queremos todas las filas, y las columnas 1, 3 y 4.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-todas-las-variables-excepto-una&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.4. Seleccionemos todas las variables excepto una&lt;/h2&gt;
+&lt;p&gt;Para seleccionar todas las variables excepto una, debemos anteponer el signo &lt;code&gt;-&lt;/code&gt;a la variable que &lt;strong&gt;no&lt;/strong&gt; es de nuestro interés. Por ejemplo, vamos a excluir la variable &lt;strong&gt;Petal.Length&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,-Petal.Length)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Width Species
+## 1          5.1         3.5         0.2  setosa
+## 2          4.9         3.0         0.2  setosa
+## 3          4.7         3.2         0.2  setosa
+## 4          4.6         3.1         0.2  setosa
+## 5          5.0         3.6         0.2  setosa
+## 6          5.4         3.9         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-una-variable-que-comienza-con-cierto-carácter&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.5. Seleccionemos una variable que comienza con cierto carácter&lt;/h2&gt;
+&lt;p&gt;Dependiendo de las etiquetas asignadas a las variables de una base de datos, algunas veces será de utilidad seleccionar una o más variables en base a los caracteres con los cuales comienzan sus nombres.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, en nuestra base de datos, podemos seleccionar variables que comiencen con &lt;strong&gt;Petal&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;starts_with()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,starts_with(&amp;quot;Petal&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-una-variable-que-termina-con-cierto-carácter&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.6. Seleccionemos una variable que termina con cierto carácter&lt;/h2&gt;
+&lt;p&gt;De forma similar al ejemplo anterior, select nos permite seleccionar variables que terminen con ciertos caracteres. Por ejemplo, podemos seleccionar variables cuyo nombre finalice con &lt;strong&gt;Length&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;ends_with()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,ends_with(&amp;quot;Length&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Petal.Length
+## 1          5.1          1.4
+## 2          4.9          1.4
+## 3          4.7          1.3
+## 4          4.6          1.5
+## 5          5.0          1.4
+## 6          5.4          1.7&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-una-variable-que-contiene-un-patrón-determinado&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.7. Seleccionemos una variable que contiene un patrón determinado&lt;/h2&gt;
+&lt;p&gt;Podríamos seleccionar variables en base a la prescencia de uno o más caracteres específicos en su nombre. Para ello, debemos utilizar la función &lt;code&gt;contains()&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,contains(&amp;quot;S&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Species
+## 1          5.1         3.5  setosa
+## 2          4.9         3.0  setosa
+## 3          4.7         3.2  setosa
+## 4          4.6         3.1  setosa
+## 5          5.0         3.6  setosa
+## 6          5.4         3.9  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;La selección anterior nos permitió seleccionar todas las variables que incluyen la letra &lt;strong&gt;S&lt;/strong&gt; en su nombre.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;seleccionemos-variables-especificadas-en-un-vector&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.8. Seleccionemos variables especificadas en un vector&lt;/h2&gt;
+&lt;p&gt;Finalmente, podríamos seleccionar las variables especificadas en un vector. Para ello, debemos utilizar la función &lt;code&gt;one_of()&lt;/code&gt;. Generemos un vector llamados &lt;strong&gt;Petalo&lt;/strong&gt; que contendrá los nombres de las variables &lt;strong&gt;Petal.Length&lt;/strong&gt; y &lt;strong&gt;Petal.Width&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Petalo&amp;lt;-c(&amp;quot;Petal.Length&amp;quot;,&amp;quot;Petal.Width&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, seleccionemos las variables:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(iris,one_of(Petalo))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Petal.Length Petal.Width
+## 1          1.4         0.2
+## 2          1.4         0.2
+## 3          1.3         0.2
+## 4          1.5         0.2
+## 5          1.4         0.2
+## 6          1.7         0.4&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dplyr.tidyverse.org/reference/select.html&#34;&gt;select&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>

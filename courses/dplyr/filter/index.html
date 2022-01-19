@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Sintáxis  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2.4. Seleccionemos un rango de variables 2." />
+  <meta name="description" content="1. Definición 2. Sintáxis 3. Operadores lógicos  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/select/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/filter/" />
 
   
 
@@ -276,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/courses/dplyr/select/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/courses/dplyr/filter/" />
 
   
   
@@ -293,9 +293,9 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/select/" />
-  <meta property="og:title" content="select | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Sintáxis  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2.4. Seleccionemos un rango de variables 2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/filter/" />
+  <meta property="og:title" content="filter | Pablo Cortes" />
+  <meta property="og:description" content="1. Definición 2. Sintáxis 3. Operadores lógicos  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -321,11 +321,11 @@
 
 
 
-  <title>select | Pablo Cortes</title>
+  <title>filter | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="423e8d2516d44af0210d76abca68d03c" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="325c7a40fb6825df2677ea29e3f9d715" >
 
   
   
@@ -729,11 +729,11 @@
       
 
 
-  <li class="active"><a href="/courses/dplyr/select/">select</a></li>
+  <li class=""><a href="/courses/dplyr/select/">select</a></li>
 
 
 
-  <li class=""><a href="/courses/dplyr/filter/">filter</a></li>
+  <li class="active"><a href="/courses/dplyr/filter/">filter</a></li>
 
       
         </ul>
@@ -807,7 +807,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        select
+        filter
       </li>
     </ol>
   </nav>
@@ -815,7 +815,7 @@
 
           
 
-          <h1>select</h1>
+          <h1>filter</h1>
 
           <div class="article-style">
             
@@ -824,7 +824,8 @@
 <div id="TOC">
 <ul>
 <li><a href="#definición">1. Definición</a></li>
-<li><a href="#sintáxis">2. Sintáxis</a>
+<li><a href="#sintáxis">2. Sintáxis</a></li>
+<li><a href="#operadores-lógicos">3. Operadores lógicos</a>
 <ul>
 <li><a href="#seleccionemos-una-variable">2.1. Seleccionemos una variable</a></li>
 <li><a href="#seleccionemos-una-variable-por-posición-en-la-base-de-datos">2.2. Seleccionemos una variable por posición en la base de datos</a></li>
@@ -842,22 +843,43 @@
 
 <div id="definición" class="section level1">
 <h1>1. Definición</h1>
-<p>La función <code>select</code> permite elegir un subconjunto de las variables (columnas) de la base de datos en base a su nombre y/o posición.</p>
+<p>Así como la función <code>select</code> es utilizada para seleccionar variables (columnas), la función <code>filter</code> hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés.</p>
 <p>Recordemos que antes de utilizar la función <code>select</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
 <pre class="r"><code>library(dplyr)</code></pre>
 </div>
 <div id="sintáxis" class="section level1">
 <h1>2. Sintáxis</h1>
-<p>La sintáxis básica de <code>select</code> para seleccionar una variable es:</p>
-<p><code>select(data, variable)</code></p>
+<p>La sintáxis básica de <code>filter</code> para seleccionar observaciones es:</p>
+<p><code>select(filter, condición)</code></p>
 <p>En donde:</p>
 <ul>
 <li><p><code>data</code>: es la base de datos.</p></li>
-<li><p><code>variable</code>: especifica la variable a seleccionar</p></li>
+<li><p><code>condición</code>: condición de interés que deben cumplir las observaciones.</p></li>
+</ul>
+</div>
+<div id="operadores-lógicos" class="section level1">
+<h1>3. Operadores lógicos</h1>
+<p>Existen múltiples operadoores que será útiles para especificar las condicones de interés al momento de filtrar los datos.</p>
+<ul>
+<li><p><code>x &lt; y</code>: x menor que y.</p></li>
+<li><p><code>x &gt; y =</code>: x mayor que y.</p></li>
+<li><p><code>x &lt;= y</code>: x menor o igual que y.</p></li>
+<li><p><code>x &gt;= y</code>: x mayor o igual que y.</p></li>
+<li><p><code>x == y</code>: x igual a y.</p></li>
+<li><p><code>x != y</code>: x no es igual a y.</p></li>
+</ul>
+<p>Además, podemos usar las siguientes funciones:</p>
+<ul>
+<li><code>between(x, A, B)</code>: x &gt;= A &amp; x &lt;= B;</li>
+</ul>
+<p>En donde:</p>
+<ul>
+<li><p><code>data</code>: es la base de datos.</p></li>
+<li><p><code>condición</code>: condición de interés que deben cumplir las observaciones.</p></li>
 </ul>
 <div id="seleccionemos-una-variable" class="section level2">
 <h2>2.1. Seleccionemos una variable</h2>
-<p>Seleccionemos la variable <strong>Petal.Length</strong> de la base de datos <code>iris</code>.</p>
+<p>Seleccionaremos la variable <strong>Petal.Length</strong> base de datos <code>iris</code>.</p>
 <pre class="r"><code>select(iris,Petal.Length)</code></pre>
 <pre><code>##   Petal.Length
 ## 1          1.4
@@ -1009,9 +1031,10 @@
   
   
   <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/courses/dplyr/filter/" rel="prev">filter</a>
+    <div class="meta-nav">Previous</div>
+    <a href="/courses/dplyr/select/" rel="next">select</a>
   </div>
+  
   
 </div>
 
@@ -1042,7 +1065,7 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/courses/dplyr/filter/">filter</a></li>
+      <li><a href="/courses/dplyr/select/">select</a></li>
       
     </ul>
   </div>
