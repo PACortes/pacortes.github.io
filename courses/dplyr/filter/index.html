@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Operadores lógicos y booleanos 2. Sintáxis  2.1 Condición de interés en una variable 2.2 Condición de interés en dos variables 2.3 Condición de interés en una u otra variable 2." />
+  <meta name="description" content="1. Definición 2. Operadores lógicos y booleanos 3. Sintáxis  3.1 Condición de interés en una variable 3.2 Condición de interés en dos variables 3.3 Condición de interés en una u otra variable 3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/filter/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/filter/" />
   <meta property="og:title" content="filter | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Operadores lógicos y booleanos 2. Sintáxis  2.1 Condición de interés en una variable 2.2 Condición de interés en dos variables 2.3 Condición de interés en una u otra variable 2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1. Definición 2. Operadores lógicos y booleanos 3. Sintáxis  3.1 Condición de interés en una variable 3.2 Condición de interés en dos variables 3.3 Condición de interés en una u otra variable 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -825,22 +825,24 @@
 <ul>
 <li><a href="#definición">1. Definición</a></li>
 <li><a href="#operadores-lógicos-y-booleanos">2. Operadores lógicos y booleanos</a></li>
-<li><a href="#sintáxis">2. Sintáxis</a>
+<li><a href="#sintáxis">3. Sintáxis</a>
 <ul>
-<li><a href="#condición-de-interés-en-una-variable">2.1 Condición de interés en una variable</a></li>
-<li><a href="#condición-de-interés-en-dos-variables">2.2 Condición de interés en dos variables</a></li>
-<li><a href="#condición-de-interés-en-una-u-otra-variable">2.3 Condición de interés en una u otra variable</a></li>
-<li><a href="#filtrar-observaciones-que-no-contienen-un-valor-en-una-variable">2.4 Filtrar observaciones que no contienen un valor en una variable</a></li>
-<li><a href="#filtrar-observaciones-que-no-contienen-valores-en-múltiples-variables">2.5 Filtrar observaciones que no contienen valores en múltiples variables</a></li>
+<li><a href="#condición-de-interés-en-una-variable">3.1 Condición de interés en una variable</a></li>
+<li><a href="#condición-de-interés-en-dos-variables">3.2 Condición de interés en dos variables</a></li>
+<li><a href="#condición-de-interés-en-una-u-otra-variable">3.3 Condición de interés en una u otra variable</a></li>
+<li><a href="#filtrar-observaciones-que-no-contienen-un-valor-en-una-variable">3.4 Filtrar observaciones que no contienen un valor en una variable</a></li>
+<li><a href="#filtrar-observaciones-que-no-contienen-valores-en-múltiples-variables">3.5 Filtrar observaciones que no contienen valores en múltiples variables</a></li>
 </ul></li>
-<li><a href="#referencias">3. Referencias</a></li>
+<li><a href="#referencias">4. Referencias</a></li>
 </ul>
 </div>
 
 <div id="definición" class="section level1">
 <h1>1. Definición</h1>
-<p>Así como la función <code>select</code> es utilizada para seleccionar variables (columnas), la función <code>filter</code> hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés.</p>
-<p>Recordemos que antes de utilizar la función <code>select</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
+<p>Así como la función <code>select</code> es utilizada para seleccionar variables (columnas), la función <code>filter</code> hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés. En otras palabras <code>filter</code>permite filtrar un subconjunto de observaciones según sus valores.</p>
+<p>Cuando ejecutamos una operación de filtrado y <code>dplyr</code> devuelve un nuevo <em>data frame</em>. Por defecto, R imprime todos los resultados.</p>
+<p><code>filter</code> solo incluye observaciones donde la condición es <code>TRUE</code>; excluye tanto los valores <code>FALSE</code> como <code>NA</code>.</p>
+<p>Recordemos que antes de utilizar la función <code>filter</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
 <pre class="r"><code>library(dplyr)</code></pre>
 </div>
 <div id="operadores-lógicos-y-booleanos" class="section level1">
@@ -855,7 +857,7 @@
 <li><p><code>x != y</code>: x no es igual a y.</p></li>
 <li><p><code>between(x, A, B)</code>: x &gt;= A &amp; x &lt;= B.</p></li>
 <li><p><code>%in%</code>: Comprueba si un valor está en una conjunto de valores.</p></li>
-<li><p><code>is.na()</code>: Comprueba si un valor es un NA.</p></li>
+<li><p><code>is.na()</code>: Comprueba si un valor es NA (valor faltante).</p></li>
 </ul>
 <p>Además, podemps usar operadores Booleanas para establecer combinaciones de condiciones:</p>
 <ul>
@@ -865,7 +867,7 @@
 </ul>
 </div>
 <div id="sintáxis" class="section level1">
-<h1>2. Sintáxis</h1>
+<h1>3. Sintáxis</h1>
 <p>La sintáxis básica de <code>filter</code> para seleccionar observaciones es:</p>
 <p><code>select(filter, condición)</code></p>
 <p>En donde:</p>
@@ -874,7 +876,7 @@
 <li><p><code>condición</code>: condición de interés que deben cumplir las observaciones.</p></li>
 </ul>
 <div id="condición-de-interés-en-una-variable" class="section level2">
-<h2>2.1 Condición de interés en una variable</h2>
+<h2>3.1 Condición de interés en una variable</h2>
 <p>Filtremos información específica de una variable. Por ejemplo, podríamos estar interesados en todas aquellas observaciones que tengan un <strong>Largo de Sépalo</strong> mayor a 5.8. Para aplicar el filtro, utilizaremos el operador lógico <code>x &gt; y</code>:</p>
 <pre class="r"><code>filter(iris,Sepal.Length&gt;5.8)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
@@ -886,7 +888,7 @@
 ## 6          6.6         2.9          4.6         1.3 versicolor</code></pre>
 </div>
 <div id="condición-de-interés-en-dos-variables" class="section level2">
-<h2>2.2 Condición de interés en dos variables</h2>
+<h2>3.2 Condición de interés en dos variables</h2>
 <p>Ahora bien, podríamos estar interesados en observaciones que cumplan criterios en dos (o más variables). Por ejemplo, queremos trabajar con las observaciones de la especie <strong>versicolor</strong> que tengan un <strong>Largo de Sépalo</strong> mayor a 5.8. Para aplicar el filtro, utilizaremos los operadores lógicos <code>x &gt; y</code> y <code>x == y</code>, además del operador booleano <code>&amp;</code>:</p>
 <pre class="r"><code>filter(iris,Sepal.Length&gt;5.8 &amp; Species==&quot;versicolor&quot;)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
@@ -907,7 +909,7 @@
 ## 6          7.3         2.9          6.3         1.8 virginica</code></pre>
 </div>
 <div id="condición-de-interés-en-una-u-otra-variable" class="section level2">
-<h2>2.3 Condición de interés en una u otra variable</h2>
+<h2>3.3 Condición de interés en una u otra variable</h2>
 <p>Ahora bien, podríamos estar interesados en observaciones que cumplan criterios en una u otra variable. Por ejemplo, queremos trabajar con las observaciones de la especie <strong>versicolor</strong> y todas aquellas que tengan un <strong>Largo de Sépalo</strong> mayor a 5.8 (independiente de la especie). Para aplicar el filtro, utilizaremos los operadores lógicos <code>x &gt; y</code> y <code>x == y</code>, además del operador booleano <code>|</code>:</p>
 <pre class="r"><code>filter(iris,Sepal.Length&gt;5.8 | Species==&quot;versicolor&quot;)</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
@@ -919,7 +921,7 @@
 ## 6          5.7         2.8          4.5         1.3 versicolor</code></pre>
 </div>
 <div id="filtrar-observaciones-que-no-contienen-un-valor-en-una-variable" class="section level2">
-<h2>2.4 Filtrar observaciones que no contienen un valor en una variable</h2>
+<h2>3.4 Filtrar observaciones que no contienen un valor en una variable</h2>
 <p>Cuando trabajamos con variables que contienen una gran cantidad de niveles, podríamos estar interesados en algúnas de ellas para futuros análisis. Por ejemplo, queremos trabajar solamente con las observaciones de la <strong>especie</strong> <strong>virginica</strong>. Dicho de otro modo, queremos excluir las observaciones de las especies <strong>setosa</strong> y <strong>versicolor</strong>. Para aplicar el filtro, utilizaremos los operadores lógicos <code>!</code> y <code>%in%</code>, además del operador booleano <code>|</code>.</p>
 <pre class="r"><code>filter(iris, !Species %in% c(&quot;setosa&quot;,&quot;versicolor&quot;))</code></pre>
 <pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
@@ -932,7 +934,7 @@
 <p>Acabamos de filtrar la base de datos para quedarnos con todas aquellas observaciones de la variable <strong>Species</strong> que no contienen los valores <strong>setosa</strong> y <strong>versicolor</strong>.</p>
 </div>
 <div id="filtrar-observaciones-que-no-contienen-valores-en-múltiples-variables" class="section level2">
-<h2>2.5 Filtrar observaciones que no contienen valores en múltiples variables</h2>
+<h2>3.5 Filtrar observaciones que no contienen valores en múltiples variables</h2>
 <p>De igual forma, podríamos estar interesados en observaciones que cumplan condiciones en más de una varible. Por ejemplo, queremos trabajar solamente con las observaciones de la especie <strong>virginica</strong> que tienen un <strong>Largo de Sépalo</strong> diferente a 5.8. Dicho de otra forma, queremos excluir las observaciones de las especies <strong>setosa</strong> y <strong>versicolor</strong> que tengan un <strong>Largo de Sépalo</strong> igual 5.8.</p>
 <pre class="r"><code>filter(iris, !Species %in% c(&quot;setosa&quot;,&quot;versicolor&quot;) &amp; 
              !Sepal.Length %in% c(5.8))</code></pre>
@@ -946,9 +948,9 @@
 </div>
 </div>
 <div id="referencias" class="section level1">
-<h1>3. Referencias</h1>
+<h1>4. Referencias</h1>
 <ul>
-<li><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></li>
+<li><a href="https://es.r4ds.hadley.nz/transform.html#filtrar-filas-con-filter">filter</a></li>
 </ul>
 </div>
 
