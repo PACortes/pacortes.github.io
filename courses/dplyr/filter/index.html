@@ -294,7 +294,7 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/filter/" />
-  <meta property="og:title" content="filter | Pablo Cortes" />
+  <meta property="og:title" content="filter() | Pablo Cortes" />
   <meta property="og:description" content="1. Definición 2. Operadores lógicos y booleanos 3. Sintáxis  3.1 Condición de interés en una variable 3.2 Condición de interés en dos variables 3.3 Condición de interés en una u otra variable 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -321,7 +321,7 @@
 
 
 
-  <title>filter | Pablo Cortes</title>
+  <title>filter() | Pablo Cortes</title>
 </head>
 
 
@@ -729,11 +729,19 @@
       
 
 
-  <li class=""><a href="/courses/dplyr/select/">select</a></li>
+  <li class=""><a href="/courses/dplyr/select/">select()</a></li>
 
 
 
-  <li class="active"><a href="/courses/dplyr/filter/">filter</a></li>
+  <li class=""><a href="/courses/dplyr/copia-de-filter/">filter</a></li>
+
+
+
+  <li class="active"><a href="/courses/dplyr/filter/">filter()</a></li>
+
+
+
+  <li class=""><a href="/courses/dplyr/mutate/">mutate()</a></li>
 
       
         </ul>
@@ -807,7 +815,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        filter
+        filter()
       </li>
     </ol>
   </nav>
@@ -815,7 +823,7 @@
 
           
 
-          <h1>filter</h1>
+          <h1>filter()</h1>
 
           <div class="article-style">
             
@@ -839,10 +847,10 @@
 
 <div id="definición" class="section level1">
 <h1>1. Definición</h1>
-<p>Así como la función <code>select</code> es utilizada para seleccionar variables (columnas), la función <code>filter</code> hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés. En otras palabras <code>filter</code>permite filtrar un subconjunto de observaciones según sus valores.</p>
-<p>Cuando ejecutamos una operación de filtrado y <code>dplyr</code> devuelve un nuevo <em>data frame</em>. Por defecto, R imprime todos los resultados.</p>
-<p><code>filter</code> solo incluye observaciones donde la condición es <code>TRUE</code>; excluye tanto los valores <code>FALSE</code> como <code>NA</code>.</p>
-<p>Recordemos que antes de utilizar la función <code>filter</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
+<p>Así como la función <code>select()</code> es utilizada para seleccionar variables (columnas), la función <code>filter()</code> hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés. En otras palabras <code>filter()</code>permite filtrar un subconjunto de observaciones según sus valores.</p>
+<p>Cuando ejecutamos una operación de filtrado, <code>dplyr</code> devuelve un nuevo <em>data frame</em>. Por defecto, R imprime todos los resultados.</p>
+<p><code>filter()</code> solo incluye observaciones donde la condición es <code>TRUE</code>; excluye tanto los valores <code>FALSE</code> como <code>NA</code>.</p>
+<p>Recordemos que antes de utilizar la función <code>filter()</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
 <pre class="r"><code>library(dplyr)</code></pre>
 </div>
 <div id="operadores-lógicos-y-booleanos" class="section level1">
@@ -868,11 +876,11 @@
 </div>
 <div id="sintáxis" class="section level1">
 <h1>3. Sintáxis</h1>
-<p>La sintáxis básica de <code>filter</code> para seleccionar observaciones es:</p>
-<p><code>select(filter, condición)</code></p>
+<p>La sintáxis básica de <code>filter()</code> para seleccionar observaciones es:</p>
+<p><code>filter(data, condición)</code></p>
 <p>En donde:</p>
 <ul>
-<li><p><code>data</code>: es la base de datos.</p></li>
+<li><p><code>data</code>: data frame (nuestros datos).</p></li>
 <li><p><code>condición</code>: condición de interés que deben cumplir las observaciones.</p></li>
 </ul>
 <div id="condición-de-interés-en-una-variable" class="section level2">
@@ -978,9 +986,15 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Previous</div>
-    <a href="/courses/dplyr/select/" rel="next">select</a>
+    <a href="/courses/dplyr/copia-de-filter/" rel="next">filter</a>
   </div>
   
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/courses/dplyr/mutate/" rel="prev">mutate()</a>
+  </div>
   
 </div>
 
@@ -1011,7 +1025,11 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/courses/dplyr/select/">select</a></li>
+      <li><a href="/courses/dplyr/select/">select()</a></li>
+      
+      <li><a href="/courses/dplyr/mutate/">mutate()</a></li>
+      
+      <li><a href="/courses/dplyr/copia-de-filter/">filter</a></li>
       
     </ul>
   </div>

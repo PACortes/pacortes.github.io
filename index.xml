@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>select</title>
+      <title>select()</title>
       <link>https://academic-demo.netlify.app/courses/dplyr/select/</link>
       <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/dplyr/select/</guid>
@@ -41,17 +41,18 @@
 
 &lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;La función &lt;code&gt;select&lt;/code&gt; permite elegir un subconjunto de las variables (columnas) de la base de datos en base a su nombre y/o posición.&lt;/p&gt;
-&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;select&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;La función &lt;code&gt;select()&lt;/code&gt; permite elegir un subconjunto de las variables (columnas) de la base de datos en base a su nombre y/o posición.&lt;/p&gt;
+&lt;p&gt;Cuando ejecutamos una operación de filtrado, &lt;code&gt;select()&lt;/code&gt; devuelve un nuevo &lt;em&gt;data frame&lt;/em&gt;. Por defecto, R imprime todos los resultados.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;select()&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;2. Sintáxis&lt;/h1&gt;
-&lt;p&gt;La sintáxis básica de &lt;code&gt;select&lt;/code&gt; para seleccionar una variable es:&lt;/p&gt;
+&lt;p&gt;La sintáxis básica de &lt;code&gt;select()&lt;/code&gt; para seleccionar una variable es:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;select(data, variable)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;En donde:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: data frame (nuestros datos).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;variable&lt;/code&gt;: especifica la variable a seleccionar&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;seleccionemos-una-variable&#34; class=&#34;section level2&#34;&gt;
@@ -571,11 +572,11 @@
     
     <item>
       <title>filter</title>
-      <link>https://academic-demo.netlify.app/courses/dplyr/filter/</link>
+      <link>https://academic-demo.netlify.app/courses/dplyr/copia-de-filter/</link>
       <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/dplyr/filter/</guid>
+      <guid>https://academic-demo.netlify.app/courses/dplyr/copia-de-filter/</guid>
       <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;Copia de filter_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -629,6 +630,149 @@
 &lt;p&gt;En donde:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;condición&lt;/code&gt;: condición de interés que deben cumplir las observaciones.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;condición-de-interés-en-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.1 Condición de interés en una variable&lt;/h2&gt;
+&lt;p&gt;Filtremos información específica de una variable. Por ejemplo, podríamos estar interesados en todas aquellas observaciones que tengan un &lt;strong&gt;Largo de Sépalo&lt;/strong&gt; mayor a 5.8. Para aplicar el filtro, utilizaremos el operador lógico &lt;code&gt;x &amp;gt; y&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(iris,Sepal.Length&amp;gt;5.8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 1          7.0         3.2          4.7         1.4 versicolor
+## 2          6.4         3.2          4.5         1.5 versicolor
+## 3          6.9         3.1          4.9         1.5 versicolor
+## 4          6.5         2.8          4.6         1.5 versicolor
+## 5          6.3         3.3          4.7         1.6 versicolor
+## 6          6.6         2.9          4.6         1.3 versicolor&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;condición-de-interés-en-dos-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.2 Condición de interés en dos variables&lt;/h2&gt;
+&lt;p&gt;Ahora bien, podríamos estar interesados en observaciones que cumplan criterios en dos (o más variables). Por ejemplo, queremos trabajar con las observaciones de la especie &lt;strong&gt;versicolor&lt;/strong&gt; que tengan un &lt;strong&gt;Largo de Sépalo&lt;/strong&gt; mayor a 5.8. Para aplicar el filtro, utilizaremos los operadores lógicos &lt;code&gt;x &amp;gt; y&lt;/code&gt; y &lt;code&gt;x == y&lt;/code&gt;, además del operador booleano &lt;code&gt;&amp;amp;&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(iris,Sepal.Length&amp;gt;5.8 &amp;amp; Species==&amp;quot;versicolor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 1          7.0         3.2          4.7         1.4 versicolor
+## 2          6.4         3.2          4.5         1.5 versicolor
+## 3          6.9         3.1          4.9         1.5 versicolor
+## 4          6.5         2.8          4.6         1.5 versicolor
+## 5          6.3         3.3          4.7         1.6 versicolor
+## 6          6.6         2.9          4.6         1.3 versicolor&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;De forma similar, si estuviesemos interesados en las observaciones de todas las especies excepto &lt;strong&gt;versicolor&lt;/strong&gt;, podemos utilizar el operador lógico&lt;code&gt;x &amp;gt; y&lt;/code&gt; y &lt;code&gt;x != y&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(iris,Sepal.Length&amp;gt;5.8 &amp;amp; Species!=&amp;quot;versicolor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 1          6.3         3.3          6.0         2.5 virginica
+## 2          7.1         3.0          5.9         2.1 virginica
+## 3          6.3         2.9          5.6         1.8 virginica
+## 4          6.5         3.0          5.8         2.2 virginica
+## 5          7.6         3.0          6.6         2.1 virginica
+## 6          7.3         2.9          6.3         1.8 virginica&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;condición-de-interés-en-una-u-otra-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.3 Condición de interés en una u otra variable&lt;/h2&gt;
+&lt;p&gt;Ahora bien, podríamos estar interesados en observaciones que cumplan criterios en una u otra variable. Por ejemplo, queremos trabajar con las observaciones de la especie &lt;strong&gt;versicolor&lt;/strong&gt; y todas aquellas que tengan un &lt;strong&gt;Largo de Sépalo&lt;/strong&gt; mayor a 5.8 (independiente de la especie). Para aplicar el filtro, utilizaremos los operadores lógicos &lt;code&gt;x &amp;gt; y&lt;/code&gt; y &lt;code&gt;x == y&lt;/code&gt;, además del operador booleano &lt;code&gt;|&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(iris,Sepal.Length&amp;gt;5.8 | Species==&amp;quot;versicolor&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 1          7.0         3.2          4.7         1.4 versicolor
+## 2          6.4         3.2          4.5         1.5 versicolor
+## 3          6.9         3.1          4.9         1.5 versicolor
+## 4          5.5         2.3          4.0         1.3 versicolor
+## 5          6.5         2.8          4.6         1.5 versicolor
+## 6          5.7         2.8          4.5         1.3 versicolor&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;filtrar-observaciones-que-no-contienen-un-valor-en-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.4 Filtrar observaciones que no contienen un valor en una variable&lt;/h2&gt;
+&lt;p&gt;Cuando trabajamos con variables que contienen una gran cantidad de niveles, podríamos estar interesados en algúnas de ellas para futuros análisis. Por ejemplo, queremos trabajar solamente con las observaciones de la &lt;strong&gt;especie&lt;/strong&gt; &lt;strong&gt;virginica&lt;/strong&gt;. Dicho de otro modo, queremos excluir las observaciones de las especies &lt;strong&gt;setosa&lt;/strong&gt; y &lt;strong&gt;versicolor&lt;/strong&gt;. Para aplicar el filtro, utilizaremos los operadores lógicos &lt;code&gt;!&lt;/code&gt; y &lt;code&gt;%in%&lt;/code&gt;, además del operador booleano &lt;code&gt;|&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(iris, !Species %in% c(&amp;quot;setosa&amp;quot;,&amp;quot;versicolor&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 1          6.3         3.3          6.0         2.5 virginica
+## 2          5.8         2.7          5.1         1.9 virginica
+## 3          7.1         3.0          5.9         2.1 virginica
+## 4          6.3         2.9          5.6         1.8 virginica
+## 5          6.5         3.0          5.8         2.2 virginica
+## 6          7.6         3.0          6.6         2.1 virginica&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Acabamos de filtrar la base de datos para quedarnos con todas aquellas observaciones de la variable &lt;strong&gt;Species&lt;/strong&gt; que no contienen los valores &lt;strong&gt;setosa&lt;/strong&gt; y &lt;strong&gt;versicolor&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;filtrar-observaciones-que-no-contienen-valores-en-múltiples-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.5 Filtrar observaciones que no contienen valores en múltiples variables&lt;/h2&gt;
+&lt;p&gt;De igual forma, podríamos estar interesados en observaciones que cumplan condiciones en más de una varible. Por ejemplo, queremos trabajar solamente con las observaciones de la especie &lt;strong&gt;virginica&lt;/strong&gt; que tienen un &lt;strong&gt;Largo de Sépalo&lt;/strong&gt; diferente a 5.8. Dicho de otra forma, queremos excluir las observaciones de las especies &lt;strong&gt;setosa&lt;/strong&gt; y &lt;strong&gt;versicolor&lt;/strong&gt; que tengan un &lt;strong&gt;Largo de Sépalo&lt;/strong&gt; igual 5.8.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(iris, !Species %in% c(&amp;quot;setosa&amp;quot;,&amp;quot;versicolor&amp;quot;) &amp;amp; 
+             !Sepal.Length %in% c(5.8))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 1          6.3         3.3          6.0         2.5 virginica
+## 2          7.1         3.0          5.9         2.1 virginica
+## 3          6.3         2.9          5.6         1.8 virginica
+## 4          6.5         3.0          5.8         2.2 virginica
+## 5          7.6         3.0          6.6         2.1 virginica
+## 6          4.9         2.5          4.5         1.7 virginica&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://es.r4ds.hadley.nz/transform.html#filtrar-filas-con-filter&#34;&gt;filter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>filter()</title>
+      <link>https://academic-demo.netlify.app/courses/dplyr/filter/</link>
+      <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/dplyr/filter/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#operadores-lógicos-y-booleanos&#34;&gt;2. Operadores lógicos y booleanos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;3. Sintáxis&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#condición-de-interés-en-una-variable&#34;&gt;3.1 Condición de interés en una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#condición-de-interés-en-dos-variables&#34;&gt;3.2 Condición de interés en dos variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#condición-de-interés-en-una-u-otra-variable&#34;&gt;3.3 Condición de interés en una u otra variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#filtrar-observaciones-que-no-contienen-un-valor-en-una-variable&#34;&gt;3.4 Filtrar observaciones que no contienen un valor en una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#filtrar-observaciones-que-no-contienen-valores-en-múltiples-variables&#34;&gt;3.5 Filtrar observaciones que no contienen valores en múltiples variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;4. Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;Así como la función &lt;code&gt;select()&lt;/code&gt; es utilizada para seleccionar variables (columnas), la función &lt;code&gt;filter()&lt;/code&gt; hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés. En otras palabras &lt;code&gt;filter()&lt;/code&gt;permite filtrar un subconjunto de observaciones según sus valores.&lt;/p&gt;
+&lt;p&gt;Cuando ejecutamos una operación de filtrado, &lt;code&gt;dplyr&lt;/code&gt; devuelve un nuevo &lt;em&gt;data frame&lt;/em&gt;. Por defecto, R imprime todos los resultados.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;filter()&lt;/code&gt; solo incluye observaciones donde la condición es &lt;code&gt;TRUE&lt;/code&gt;; excluye tanto los valores &lt;code&gt;FALSE&lt;/code&gt; como &lt;code&gt;NA&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;filter()&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;operadores-lógicos-y-booleanos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Operadores lógicos y booleanos&lt;/h1&gt;
+&lt;p&gt;Existen múltiples operadoores que serán útiles para especificar las condicones de interés al momento de filtrar los datos.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;lt; y&lt;/code&gt;: x menor que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;gt; y =&lt;/code&gt;: x mayor que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;lt;= y&lt;/code&gt;: x menor o igual que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x &amp;gt;= y&lt;/code&gt;: x mayor o igual que y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x == y&lt;/code&gt;: x igual a y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;x != y&lt;/code&gt;: x no es igual a y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;between(x, A, B)&lt;/code&gt;: x &amp;gt;= A &amp;amp; x &amp;lt;= B.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;%in%&lt;/code&gt;: Comprueba si un valor está en una conjunto de valores.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;is.na()&lt;/code&gt;: Comprueba si un valor es NA (valor faltante).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Además, podemps usar operadores Booleanas para establecer combinaciones de condiciones:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;&amp;amp;&lt;/code&gt;: es “y”: lo utilizamos para múltiples condiciones.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;|&lt;/code&gt;: es “o”.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;!&lt;/code&gt;: es “no”; lo utilizamos para negar una condición.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de &lt;code&gt;filter()&lt;/code&gt; para seleccionar observaciones es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;filter(data, condición)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: data frame (nuestros datos).&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;condición&lt;/code&gt;: condición de interés que deben cumplir las observaciones.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;condición-de-interés-en-una-variable&#34; class=&#34;section level2&#34;&gt;
@@ -1101,6 +1245,137 @@ library(dplyr)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;titulo_pagina
 ## [1] &amp;quot;Convención aprueba que sea el pleno, por mayoría simple, el que califique la renuncia de un convencional: se descarta participación del TC&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mutate()</title>
+      <link>https://academic-demo.netlify.app/courses/dplyr/mutate/</link>
+      <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/dplyr/mutate/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#razón-entre-dos-variables&#34;&gt;2.1 Razón entre dos variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#multiplicamos-una-variable-por-una-constante&#34;&gt;2.2 Multiplicamos una variable por una constante&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#generamos-dos-nuevas-variables&#34;&gt;2.3 Generamos dos nuevas variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combinando-mutate-con-recode&#34;&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;recode()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media&#34;&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;cut&lt;/code&gt;()&lt;code&gt;&lt;/code&gt;cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; se encuentran bajo o sobre la media:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;3. Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;El verbo &lt;code&gt;mutate()&lt;/code&gt; permite crear nuevas variables (columnas) a partir de variables existentes, conservando las variables existentes.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; siempre agrega nuevas variables (columnas) al final de un conjunto de datos. Además, &lt;code&gt;mutate()&lt;/code&gt; puede combinarse con otras grandes funciones para tareas más avanzadas.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;mutate()&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de &lt;code&gt;mutate()&lt;/code&gt; para seleccionar observaciones es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mutate(data, ...)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: data frame (nuestros datos).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;...&lt;/code&gt;: Nombre y valor de la expresión que determinará la nueva variable (e.g. Nueva_variable = variable_original*2).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;razón-entre-dos-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.1 Razón entre dos variables&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; nos permite calcular una variable que represente la razón entre dos variables en nuestra base de datos. Por ejemplo, asignaremos el nombre &lt;strong&gt;Razon_Petalo&lt;/strong&gt; a la razón entre el &lt;strong&gt;Largo del Pétalo&lt;/strong&gt; y el &lt;strong&gt;Ancho del Pétalo&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Razon_Petalo=Petal.Length/Petal.Width)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
+## 1          5.1         3.5          1.4         0.2  setosa         7.00
+## 2          4.9         3.0          1.4         0.2  setosa         7.00
+## 3          4.7         3.2          1.3         0.2  setosa         6.50
+## 4          4.6         3.1          1.5         0.2  setosa         7.50
+## 5          5.0         3.6          1.4         0.2  setosa         7.00
+## 6          5.4         3.9          1.7         0.4  setosa         4.25&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Podemos apreciar que se ha agreagdo una nueva variable (columna) al final del conjunto de datos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;multiplicamos-una-variable-por-una-constante&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.2 Multiplicamos una variable por una constante&lt;/h2&gt;
+&lt;p&gt;Las variables de la base de datos iris están medidas en milimetros. Si quisieramos transformarlas a centimetros, debemos multiplicarlas por una constante. A modo de ejemplo, transformemos la variable &lt;strong&gt;Sepal.Length&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Sepal.length.cm=Sepal.Length*0.1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.length.cm
+## 1          5.1         3.5          1.4         0.2  setosa            0.51
+## 2          4.9         3.0          1.4         0.2  setosa            0.49
+## 3          4.7         3.2          1.3         0.2  setosa            0.47
+## 4          4.6         3.1          1.5         0.2  setosa            0.46
+## 5          5.0         3.6          1.4         0.2  setosa            0.50
+## 6          5.4         3.9          1.7         0.4  setosa            0.54&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, nuestra abse de datos tiene 7 columnas, igual que el ejemplo anterior. ¿Por qué no vemos la variable &lt;strong&gt;Razon_Petalo&lt;/strong&gt;?. Para que los cambios se mantengan a l olargo de la rutina de trabajo debemos (i) generar un objeto con el nuevo &lt;em&gt;data frame&lt;/em&gt; (p.e. iris_1) o (ii) asignar los cambios al &lt;em&gt;data frame&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;generamos-dos-nuevas-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3 Generamos dos nuevas variables&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; nos permite generar múltiples variables. A continuación, generaremos simultáneamente las variables &lt;strong&gt;Razon_Petalo&lt;/strong&gt; y Sepal.length.cm:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Razon_Petalo=Petal.Length/Petal.Width,
+            Sepal.length.cm=Sepal.Length*0.1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
+## 1          5.1         3.5          1.4         0.2  setosa         7.00
+## 2          4.9         3.0          1.4         0.2  setosa         7.00
+## 3          4.7         3.2          1.3         0.2  setosa         6.50
+## 4          4.6         3.1          1.5         0.2  setosa         7.50
+## 5          5.0         3.6          1.4         0.2  setosa         7.00
+## 6          5.4         3.9          1.7         0.4  setosa         4.25
+##   Sepal.length.cm
+## 1            0.51
+## 2            0.49
+## 3            0.47
+## 4            0.46
+## 5            0.50
+## 6            0.54&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;combinando-mutate-con-recode&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;recode()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;recode()&lt;/code&gt; permite cambiar las observaciones dentro de una variable. Por ejemplo, cambiemos el nombre a las especies contenidas en la base datos.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Species_nueva=recode(Species, 
+                                 &amp;quot;setosa&amp;quot;=&amp;quot;Iris_setosa&amp;quot;,
+                                 &amp;quot;virginica&amp;quot;=&amp;quot;Iris_virginica&amp;quot;,
+                                 &amp;quot;versicolor&amp;quot;=&amp;quot;Iris_versicolor&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Species_nueva
+## 1          5.1         3.5          1.4         0.2  setosa   Iris_setosa
+## 2          4.9         3.0          1.4         0.2  setosa   Iris_setosa
+## 3          4.7         3.2          1.3         0.2  setosa   Iris_setosa
+## 4          4.6         3.1          1.5         0.2  setosa   Iris_setosa
+## 5          5.0         3.6          1.4         0.2  setosa   Iris_setosa
+## 6          5.4         3.9          1.7         0.4  setosa   Iris_setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;cut&lt;/code&gt;()&lt;code&gt;&lt;/code&gt;cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; se encuentran bajo o sobre la media:&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Petal.Length.Segmento=cut(Petal.Length, 
+                       c(-Inf,mean(Petal.Length), max(Petal.Length)),
+                       c(&amp;quot;Bajo la media&amp;quot;,&amp;quot;Sobre la media&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+##   Petal.Length.Segmento
+## 1         Bajo la media
+## 2         Bajo la media
+## 3         Bajo la media
+## 4         Bajo la media
+## 5         Bajo la media
+## 6         Bajo la media&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://dplyr.tidyverse.org/reference/mutate.html&#34;&gt;tidyverse.org&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/mutate&#34;&gt;R documentation&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 </description>
     </item>
