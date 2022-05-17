@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MMAD109: visualización y análisis de datos | Pablo Cortes</title>
+    <link>https://academic-demo.netlify.app/docencia/mmad109/</link>
+      <atom:link href="https://academic-demo.netlify.app/docencia/mmad109/index.xml" rel="self" type="application/rss+xml" />
+    <description>MMAD109: visualización y análisis de datos</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://academic-demo.netlify.app/docencia/mmad109/featured.png</url>
+      <title>MMAD109: visualización y análisis de datos</title>
+      <link>https://academic-demo.netlify.app/docencia/mmad109/</link>
+    </image>
+    
+  </channel>
+</rss>
