@@ -920,7 +920,12 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;li&gt;&lt;a href=&#34;#perdido-na-y-vacío-null&#34;&gt;Perdido (NA) y Vacío (NULL)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#verificando-el-tipo-de-dato&#34;&gt;Verificando el tipo de dato&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#estructura-de-datos-en-r&#34;&gt;3. Estructura de datos en R&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#operadores&#34;&gt;3. Operadores&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#operador-de-asignación&#34;&gt;Operador de asignación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#operador-de-concatenación&#34;&gt;Operador de concatenación&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#estructura-de-datos-en-r&#34;&gt;4. Estructura de datos en R&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#vector&#34;&gt;Vector&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
@@ -1007,12 +1012,12 @@ tabla %&amp;gt;%
               cell_text(weight = &amp;quot;bold&amp;quot;))) %&amp;gt;%
   tab_options(table.font.size = px(20L),
               column_labels.font.size = px(25L))&lt;/code&gt;&lt;/pre&gt;
-&lt;div id=&#34;iywluyahgw&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;lhxmefilsw&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#iywluyahgw .gt_table {
+#lhxmefilsw .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1037,7 +1042,7 @@ tabla %&amp;gt;%
   border-left-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_heading {
+#lhxmefilsw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1049,7 +1054,7 @@ tabla %&amp;gt;%
   border-right-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_title {
+#lhxmefilsw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1059,7 +1064,7 @@ tabla %&amp;gt;%
   border-bottom-width: 0;
 }
 
-#iywluyahgw .gt_subtitle {
+#lhxmefilsw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1069,13 +1074,13 @@ tabla %&amp;gt;%
   border-top-width: 0;
 }
 
-#iywluyahgw .gt_bottom_border {
+#lhxmefilsw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_col_headings {
+#lhxmefilsw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1090,7 +1095,7 @@ tabla %&amp;gt;%
   border-right-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_col_heading {
+#lhxmefilsw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1110,7 +1115,7 @@ tabla %&amp;gt;%
   overflow-x: hidden;
 }
 
-#iywluyahgw .gt_column_spanner_outer {
+#lhxmefilsw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1122,15 +1127,15 @@ tabla %&amp;gt;%
   padding-right: 4px;
 }
 
-#iywluyahgw .gt_column_spanner_outer:first-child {
+#lhxmefilsw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#iywluyahgw .gt_column_spanner_outer:last-child {
+#lhxmefilsw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#iywluyahgw .gt_column_spanner {
+#lhxmefilsw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1142,7 +1147,7 @@ tabla %&amp;gt;%
   width: 100%;
 }
 
-#iywluyahgw .gt_group_heading {
+#lhxmefilsw .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1164,7 +1169,7 @@ tabla %&amp;gt;%
   vertical-align: middle;
 }
 
-#iywluyahgw .gt_empty_group_heading {
+#lhxmefilsw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1179,15 +1184,15 @@ tabla %&amp;gt;%
   vertical-align: middle;
 }
 
-#iywluyahgw .gt_from_md &gt; :first-child {
+#lhxmefilsw .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#iywluyahgw .gt_from_md &gt; :last-child {
+#lhxmefilsw .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#iywluyahgw .gt_row {
+#lhxmefilsw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1206,7 +1211,7 @@ tabla %&amp;gt;%
   overflow-x: hidden;
 }
 
-#iywluyahgw .gt_stub {
+#lhxmefilsw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1218,7 +1223,7 @@ tabla %&amp;gt;%
   padding-left: 12px;
 }
 
-#iywluyahgw .gt_summary_row {
+#lhxmefilsw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1228,7 +1233,7 @@ tabla %&amp;gt;%
   padding-right: 5px;
 }
 
-#iywluyahgw .gt_first_summary_row {
+#lhxmefilsw .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1238,7 +1243,7 @@ tabla %&amp;gt;%
   border-top-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_grand_summary_row {
+#lhxmefilsw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1248,7 +1253,7 @@ tabla %&amp;gt;%
   padding-right: 5px;
 }
 
-#iywluyahgw .gt_first_grand_summary_row {
+#lhxmefilsw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1258,11 +1263,11 @@ tabla %&amp;gt;%
   border-top-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_striped {
+#lhxmefilsw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#iywluyahgw .gt_table_body {
+#lhxmefilsw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1271,7 +1276,7 @@ tabla %&amp;gt;%
   border-bottom-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_footnotes {
+#lhxmefilsw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1285,13 +1290,13 @@ tabla %&amp;gt;%
   border-right-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_footnote {
+#lhxmefilsw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#iywluyahgw .gt_sourcenotes {
+#lhxmefilsw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1305,41 +1310,41 @@ tabla %&amp;gt;%
   border-right-color: #D3D3D3;
 }
 
-#iywluyahgw .gt_sourcenote {
+#lhxmefilsw .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#iywluyahgw .gt_left {
+#lhxmefilsw .gt_left {
   text-align: left;
 }
 
-#iywluyahgw .gt_center {
+#lhxmefilsw .gt_center {
   text-align: center;
 }
 
-#iywluyahgw .gt_right {
+#lhxmefilsw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#iywluyahgw .gt_font_normal {
+#lhxmefilsw .gt_font_normal {
   font-weight: normal;
 }
 
-#iywluyahgw .gt_font_bold {
+#lhxmefilsw .gt_font_bold {
   font-weight: bold;
 }
 
-#iywluyahgw .gt_font_italic {
+#lhxmefilsw .gt_font_italic {
   font-style: italic;
 }
 
-#iywluyahgw .gt_super {
+#lhxmefilsw .gt_super {
   font-size: 65%;
 }
 
-#iywluyahgw .gt_footnote_marks {
+#lhxmefilsw .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1375,8 +1380,28 @@ tabla %&amp;gt;%
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div id=&#34;operadores&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Operadores&lt;/h1&gt;
+&lt;div id=&#34;operador-de-asignación&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Operador de asignación&lt;/h2&gt;
+&lt;p&gt;Nos permite asignar datos a un objeto. Para ello podems utilizar los símbolos &lt;em&gt;&amp;lt;-&lt;/em&gt; o &lt;em&gt;=&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos&amp;lt;-2
+
+letra&amp;lt;-&amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Si asignamos un datos a un objetoal que ya habíamos asignado datos, nuestro objeto conserva los datos más recientes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Esta operación nos permite “guardar” el resultado de operaciones, de modo que podemos recuperarlos sin necesidad de realizar las operaciones otra vez (Revisar &lt;em&gt;Environment&lt;/em&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A lo largo del taller utilizaremos &lt;em&gt;&amp;lt;-&lt;/em&gt; por ser característico de R y fácil de reconocer visualmente.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;operador-de-concatenación&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Operador de concatenación&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos_digitos&amp;lt;-c(15, 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div id=&#34;estructura-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Estructura de datos en R&lt;/h1&gt;
+&lt;h1&gt;4. Estructura de datos en R&lt;/h1&gt;
 &lt;div id=&#34;vector&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Vector&lt;/h2&gt;
 &lt;p&gt;Colección de uno o más datos del mismo tipo.&lt;/p&gt;
