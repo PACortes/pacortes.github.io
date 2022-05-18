@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R | Pablo Cortes</title>
+    <link>https://academic-demo.netlify.app/tag/r/</link>
+      <atom:link href="https://academic-demo.netlify.app/tag/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>R</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 05 Oct 2021 21:13:14 -0500</lastBuildDate>
+    <image>
+      <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
+      <title>R</title>
+      <link>https://academic-demo.netlify.app/tag/r/</link>
+    </image>
+    
+    <item>
+      <title>Conceptos básicos de R</title>
+      <link>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</link>
+      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;Consola&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#script&#34;&gt;Script&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;2. Tipos de datos en R&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#numérico&#34;&gt;Numérico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cadena-de-texto&#34;&gt;Cadena de texto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#factor&#34;&gt;Factor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lógico&#34;&gt;Lógico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#perdido-na-y-vacío-null&#34;&gt;Perdido (NA) y Vacío (NULL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#verificando-el-tipo-de-dato&#34;&gt;Verificando el tipo de dato&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#estructura-de-datos-en-r&#34;&gt;3. Estructura de datos en R&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#vector&#34;&gt;Vector&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/docencia/MMAD109/Sesion01_1_files/RSTUDIO.png&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Consola&lt;/h2&gt;
+&lt;p&gt;Es el corazón de &lt;code&gt;R&lt;/code&gt;y &lt;code&gt;RStudio&lt;/code&gt;. Aquí escribiremos las lineas de comando para “pedir” cosas a RStudio. En la consola también visualzaremos los resultados de las petición realizada (excepto gráficos). Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cuando la consola tiene el cursor &lt;em&gt;&amp;gt;&lt;/em&gt; significa que le podemos dar comandos para ejecutar.&lt;/li&gt;
+&lt;li&gt;Si es que tiene el símbolo &lt;em&gt;+&lt;/em&gt; quiere decir que nos falta completar el comando anterior.&lt;/li&gt;
+&lt;li&gt;El texto en rojo nos avisa y explica, errores en la solicitud realizada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Script&lt;/h2&gt;
+&lt;p&gt;Es un documento de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En el script escribiremos y ejecutaremos nuestras líneas de código. Además, en el script podemos escribir notas personales. Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Para ejecutar una(s) línea(s) de comandos, debemos presionar &lt;em&gt;&amp;lt;Ctrl + R&amp;gt;&lt;/em&gt; (Windows) o &lt;em&gt;&amp;lt;Ctrl +Enter&amp;gt;&lt;/em&gt; (Mac). Los resultados se visualizaran en la consola.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Para geneerar notas personales, las(s) línea(s) de texto y/o códigolaLas deben estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tipos-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Tipos de datos en R&lt;/h1&gt;
+&lt;p&gt;Los tipos de datos de uso más común en R son:&lt;/p&gt;
+&lt;div id=&#34;numérico&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Numérico&lt;/h2&gt;
+&lt;p&gt;Representan números que tienen una parte decimal o fraccionaria.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5
+## [1] 5
+
+25.3
+## [1] 25.3
+
+123890.85544
+## [1] 123890.9&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cadena-de-texto&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cadena de texto&lt;/h2&gt;
+&lt;p&gt;Secuencias de caracteres. Puede contener letras, números, espacios, signos de puntuación y símbolos especiales.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;quot;a&amp;quot;
+## [1] &amp;quot;a&amp;quot;
+
+&amp;quot;a&amp;quot;
+## [1] &amp;quot;a&amp;quot;
+
+&amp;quot;Contaminacion&amp;quot;
+## [1] &amp;quot;Contaminacion&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;factor&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Factor&lt;/h2&gt;
+&lt;p&gt;Dato numérico representado por una etiqueta.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lógico&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Lógico&lt;/h2&gt;
+&lt;p&gt;Sólo tienen dos valores posibles: verdadero (TRUE) y falso (FALSE). Representan si una condición o estado se cumple, es verdadero, o no, es falso.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;perdido-na-y-vacío-null&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Perdido (NA) y Vacío (NULL)&lt;/h2&gt;
+&lt;p&gt;En R, usamos NA para representar datos perdidos, mientras que NULL representa la ausencia de datos. La diferencia entre las dos es que un dato NULL aparece sólo cuando R intenta recuperar un dato y no encuentra nada, mientras que NA es usado para representar explícitamente datos perdidos, omitidos o que por alguna razón son faltantes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Verificando el tipo de dato&lt;/h2&gt;
+&lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#library(tableHTML)
+library(gt)
+tabla &amp;lt;- data.frame(
+  FU=c(&amp;quot;is.integer()&amp;quot;,&amp;quot;is.numeric&amp;quot;,&amp;quot;is.character()&amp;quot;,&amp;quot;is.factor()&amp;quot;,&amp;quot;is.logical()&amp;quot;,&amp;quot;is.na()&amp;quot;,&amp;quot;is.null()&amp;quot; ),
+                 TD=c(&amp;quot;Entero&amp;quot;,&amp;quot;Numérico&amp;quot;,&amp;quot;Cadena de texto&amp;quot;,&amp;quot;Factor&amp;quot;,&amp;quot;Lógico&amp;quot;,&amp;quot;NA&amp;quot;,&amp;quot;NULL&amp;quot;))
+
+tabla %&amp;gt;%
+  gt() %&amp;gt;% 
+  cols_label(FU=&amp;quot;Función&amp;quot;,
+             TD= &amp;quot;Tipo de dato&amp;quot;) %&amp;gt;%
+  tab_style(locations=cells_column_labels(columns=everything()),
+            style = list(
+              cell_borders(sides=&amp;quot;bottom&amp;quot;,weight=px(3)),
+              cell_text(weight = &amp;quot;bold&amp;quot;))) %&amp;gt;%
+  tab_options(table.font.size = px(20L),
+              column_labels.font.size = px(25L))&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;iywluyahgw&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#iywluyahgw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#iywluyahgw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#iywluyahgw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#iywluyahgw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#iywluyahgw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#iywluyahgw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#iywluyahgw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#iywluyahgw .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#iywluyahgw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#iywluyahgw .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#iywluyahgw .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#iywluyahgw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#iywluyahgw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#iywluyahgw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iywluyahgw .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iywluyahgw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#iywluyahgw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#iywluyahgw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#iywluyahgw .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#iywluyahgw .gt_left {
+  text-align: left;
+}
+
+#iywluyahgw .gt_center {
+  text-align: center;
+}
+
+#iywluyahgw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#iywluyahgw .gt_font_normal {
+  font-weight: normal;
+}
+
+#iywluyahgw .gt_font_bold {
+  font-weight: bold;
+}
+
+#iywluyahgw .gt_font_italic {
+  font-style: italic;
+}
+
+#iywluyahgw .gt_super {
+  font-size: 65%;
+}
+
+#iywluyahgw .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Función&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Tipo de dato&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.integer()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Entero&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.numeric&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Numérico&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.character()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Cadena de texto&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.factor()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Factor&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.logical()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Lógico&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.na()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;NA&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.null()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;NULL&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estructura-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Estructura de datos en R&lt;/h1&gt;
+&lt;div id=&#34;vector&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Vector&lt;/h2&gt;
+&lt;p&gt;Colección de uno o más datos del mismo tipo.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(15, 2, 3.3, 5, 8)
+## [1] 15.0  2.0  3.3  5.0  8.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_numerio&amp;lt;-c(15, 2, 3.3, 5, 8)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -20,6 +20,9 @@
     <loc>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</loc>
     <lastmod>2021-10-11T21:13:14-05:00</lastmod>
   </url><url>
+    <loc>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</loc>
+    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
@@ -101,6 +104,15 @@
     <loc>https://academic-demo.netlify.app/tag/ggplot/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
+    <loc>https://academic-demo.netlify.app/tag/r/</loc>
+    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/rstudio/</loc>
+    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/docencia/</loc>
+    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
@@ -135,9 +147,6 @@
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/rvest/</loc>
-    <lastmod>2021-09-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/docencia/</loc>
     <lastmod>2021-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/biodiversidad/</loc>
