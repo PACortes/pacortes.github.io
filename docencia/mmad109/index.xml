@@ -23,12 +23,15 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#instalación-de-rstudio&#34;&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#las-partes-de-rstudio&#34;&gt;2. Las partes de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#entorno-de-trabajo-de-rstudio&#34;&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;Consola&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#script&#34;&gt;Script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;2.1. Consola&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#script&#34;&gt;2.2. Script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ambientehistorialconeccionestutorial&#34;&gt;2.3. Ambiente/Historial/Conecciones/Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#archivos-visualizaciones-paquetes-ayuda&#34;&gt;2.4. Archivos, Visualizaciones, Paquetes, Ayuda&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;2. Tipos de datos en R&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#interactuando-con-rstudio&#34;&gt;3. Interactuando con &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;4. Tipos de datos en R&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#numérico&#34;&gt;Numérico&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#cadena-de-texto&#34;&gt;Cadena de texto&lt;/a&gt;&lt;/li&gt;
@@ -53,34 +56,62 @@
 &lt;p&gt;Este taller asumirá que está utilizando &lt;code&gt;RStudio&lt;/code&gt; para interactuar con &lt;code&gt;R&lt;/code&gt;y , aunque todo lo que veremos se puede hacer directament en &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
 &lt;div id=&#34;instalación-de-rstudio&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; es gratuito y de código abierto. Haz click &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;aquí&lt;/a&gt; para descargar la versión que corresponda a tu sitema operativo.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; requiere la instalación de &lt;code&gt;R&lt;/code&gt; (versión 3.0. 1 o superior). Para descargar &lt;code&gt;R&lt;/code&gt;, haz click &lt;a href=&#34;https://cran.r-project.org/bin/windows/base/&#34;&gt;aquí&lt;/a&gt; si tu sistema operativo es Windows, y &lt;a href=&#34;https://cran.r-project.org/bin/macosx/&#34;&gt;aquí&lt;/a&gt; en caso de que sea macOS.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; es gratuito y de código abierto. Haz clic &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;aquí&lt;/a&gt; para descargar la versión que corresponda a tu sitema operativo.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; requiere la instalación de &lt;code&gt;R&lt;/code&gt; (versión 3.0. 1 o superior). Para descargar &lt;code&gt;R&lt;/code&gt;, haz clic &lt;a href=&#34;https://cran.r-project.org/bin/windows/base/&#34;&gt;aquí&lt;/a&gt; si tu sistema operativo es Windows, y &lt;a href=&#34;https://cran.r-project.org/bin/macosx/&#34;&gt;aquí&lt;/a&gt; en caso de que sea macOS.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;las-partes-de-rstudio&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Las partes de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Cuando abras RStudio, notarás muchas ventanas diferentes, cada una con algunas pestañas. En primera instancia, puede que esto sea abrumador. Afortunadamente. solo necesitaremos usar algunos de estas opciones para lograr los objetivos de este taller.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;static/docencia/MMAD109/Sesion01_1_files/rstudio.png&#34; width=&#34;400&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;entorno-de-trabajo-de-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.&lt;/p&gt;
 &lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Consola&lt;/h2&gt;
-&lt;p&gt;Es el corazón de &lt;code&gt;R&lt;/code&gt;y &lt;code&gt;RStudio&lt;/code&gt;. Aquí escribiremos las lineas de comando para “pedir” cosas a RStudio. En la consola también visualzaremos los resultados de las petición realizada (excepto gráficos). Es importante tener en cuenta que:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cuando la consola tiene el cursor &lt;em&gt;&amp;gt;&lt;/em&gt; significa que le podemos dar comandos para ejecutar.&lt;/li&gt;
-&lt;li&gt;Si es que tiene el símbolo &lt;em&gt;+&lt;/em&gt; quiere decir que nos falta completar el comando anterior.&lt;/li&gt;
-&lt;li&gt;El texto en rojo nos avisa y explica, errores en la solicitud realizada.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h2&gt;2.1. Consola&lt;/h2&gt;
+&lt;p&gt;En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde se está el donde está el prompt &lt;em&gt;&amp;gt;&lt;/em&gt;, y donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. El panel “Consola” es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Script&lt;/h2&gt;
-&lt;p&gt;Es un documento de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;En el script escribiremos y ejecutaremos nuestras líneas de código. Además, en el script podemos escribir notas personales. Es importante tener en cuenta que:&lt;/p&gt;
+&lt;h2&gt;2.2. Script&lt;/h2&gt;
+&lt;p&gt;En el panel superior izquierdo, encontraremos el &lt;em&gt;script&lt;/em&gt;, editor de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para geneerar comentarios, las(s) línea(s) de texto deben estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para guardar el script:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Para ejecutar una(s) línea(s) de comandos, debemos presionar &lt;em&gt;&amp;lt;Ctrl + R&amp;gt;&lt;/em&gt; (Windows) o &lt;em&gt;&amp;lt;Ctrl +Enter&amp;gt;&lt;/em&gt; (Mac). Los resultados se visualizaran en la consola.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Para geneerar notas personales, las(s) línea(s) de texto y/o códigolaLas deben estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;File &amp;gt; Save as&lt;/em&gt; y seleccionar la ruta donde se quiere guardar el archivo con la extensión &lt;em&gt;.R&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Hacer clic en el botón &lt;em&gt;Guardar&lt;/em&gt; que se encuentra en la parte izquierda de la cinta de opciones del script.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
+&lt;div id=&#34;ambientehistorialconeccionestutorial&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3. Ambiente/Historial/Conecciones/Tutorial&lt;/h2&gt;
+&lt;p&gt;En el panel superior derecho, encontraremos cuatro pestañas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Environment&lt;/em&gt;: Aquí se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;History&lt;/em&gt;: Aquí se registran las instrucciones ejecutadas. Como opciones, podemos cargar y guardar el historial de la sesión, seleccionar una o más instrucciones y enviarlas a la consola o al script, además de poder limpiar el historial.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Connections&lt;/em&gt;: Auí puedes conectar &lt;code&gt;RStudio&lt;/code&gt; a diferentes fuentes de datos. Por ejemplo ODBC, Spark, Oracle, SQLServer, entre otras.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Tutorial&lt;/em&gt;: Aquí encontraremos ayuda usando el paquete &lt;code&gt;learnr&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;archivos-visualizaciones-paquetes-ayuda&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.4. Archivos, Visualizaciones, Paquetes, Ayuda&lt;/h2&gt;
+&lt;p&gt;En el panel inferior derecho, encontraremos cinco pestañas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Files&lt;/em&gt;: Permite ver el historial de archivos trabajados con el programa.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Plots&lt;/em&gt;: Aquí se visualizan los gráficos que generamos.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Packages&lt;/em&gt;: Entrega un listado de los paquetes instalados en &lt;code&gt;R&lt;/code&gt; y los que han sido cargados en la sesión. A través de las opciones de esta pestaña podemos instalar nuevos paquetes o actualizar los existentes.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Help&lt;/em&gt;: Permite acceder al CRAN (siempre que se cuente con conexión a Internet), página oficial del software que ofrece diferentes recursos para el programa: información general, de los paquetes instalados, de funciones de interés, entre otros.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Viewer&lt;/em&gt;: Aquí podemos ver los resultados al construir reportes mediante funcionalidades tipo &lt;code&gt;rmarkdown&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Es importante señalar que podemos reorganizar los paneles en &lt;em&gt;Ver -&amp;gt; Paneles -&amp;gt; Diseño de panel&lt;/em&gt;. Además. podemos agregar y eliminar pestañas de los paneles en &lt;em&gt;Ver&lt;/em&gt; y seleccionando o deseleccionando las opciones de pestañas que se enumeran en la parte inferior.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interactuando-con-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Interactuando con &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Interactuar con &lt;code&gt;RStudio&lt;/code&gt; es simple. Básicamente, debemos escribir el código &lt;code&gt;R&lt;/code&gt; en la línea inferior de la consola y luego haga clic en &lt;em&gt;Enter&lt;/em&gt; para ejecutarlo. También podemos enviar código desde el &lt;em&gt;script&lt;/em&gt;, presionando &lt;em&gt;&amp;lt;Ctrl + R&amp;gt;&lt;/em&gt; (Windows) o &lt;em&gt;&amp;lt;Ctrl +Enter&amp;gt;&lt;/em&gt; (Mac).&lt;/p&gt;
+&lt;p&gt;El código que escribimos se llama comando, porque dará la orden a nuestro computador que haga algo por nosotros. La línea en la que escribimos se llama línea de comando.&lt;/p&gt;
+&lt;p&gt;Cuando escribimos un comando en el prompt &lt;em&gt;&amp;gt;&lt;/em&gt; y presionamos &lt;em&gt;Enter&lt;/em&gt;, o lo enviamos desde el &lt;em&gt;script&lt;/em&gt;, &lt;code&gt;R&lt;/code&gt; ejecutará el comando y nos mostará los resultados en la consola. Junto a nuestros resultados, aparecerá &lt;em&gt;[1]&lt;/em&gt;, informando que en esta línea comienza con el primer valor del resultado. Luego, RStudio muestra un nuevo &lt;em&gt;&amp;gt;&lt;/em&gt; para su próximo comando.&lt;/p&gt;
+&lt;p&gt;Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cuando la consola muestra el prompt &lt;em&gt;&amp;gt;&lt;/em&gt;, significa que podemos dar nuevos comandos para ejecutar.&lt;/li&gt;
+&lt;li&gt;Si escribimos un comando incompleto y presionamos &lt;em&gt;Enter&lt;/em&gt;, la consola mostrará un indicador &lt;em&gt;+&lt;/em&gt;, lo que significa que está esperando que escribamos el resto del comando.&lt;/li&gt;
+&lt;li&gt;Si escribimos un comando que R no reconoce, R devolverá un mensaje de error. Esto no es para alarmarno. R simplemente nos está diciendo que no puede entender o hacer lo que le pedimos. El texto en rojo nos avisa y explica, los errores en la solicitud realizada.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;tipos-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Tipos de datos en R&lt;/h1&gt;
+&lt;h1&gt;4. Tipos de datos en R&lt;/h1&gt;
 &lt;p&gt;Los tipos de datos de uso más común en R son:&lt;/p&gt;
 &lt;div id=&#34;numérico&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Numérico&lt;/h2&gt;
@@ -121,12 +152,12 @@
 &lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Verificando el tipo de dato&lt;/h2&gt;
 &lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
-&lt;div id=&#34;vsewyzxbyz&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;xvhbuncixk&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#vsewyzxbyz .gt_table {
+#xvhbuncixk .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -151,7 +182,7 @@
   border-left-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_heading {
+#xvhbuncixk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -163,7 +194,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_title {
+#xvhbuncixk .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -173,7 +204,7 @@
   border-bottom-width: 0;
 }
 
-#vsewyzxbyz .gt_subtitle {
+#xvhbuncixk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -183,13 +214,13 @@
   border-top-width: 0;
 }
 
-#vsewyzxbyz .gt_bottom_border {
+#xvhbuncixk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_col_headings {
+#xvhbuncixk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -204,7 +235,7 @@
   border-right-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_col_heading {
+#xvhbuncixk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -224,7 +255,7 @@
   overflow-x: hidden;
 }
 
-#vsewyzxbyz .gt_column_spanner_outer {
+#xvhbuncixk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -236,15 +267,15 @@
   padding-right: 4px;
 }
 
-#vsewyzxbyz .gt_column_spanner_outer:first-child {
+#xvhbuncixk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vsewyzxbyz .gt_column_spanner_outer:last-child {
+#xvhbuncixk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vsewyzxbyz .gt_column_spanner {
+#xvhbuncixk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -256,7 +287,7 @@
   width: 100%;
 }
 
-#vsewyzxbyz .gt_group_heading {
+#xvhbuncixk .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -278,7 +309,7 @@
   vertical-align: middle;
 }
 
-#vsewyzxbyz .gt_empty_group_heading {
+#xvhbuncixk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -293,15 +324,15 @@
   vertical-align: middle;
 }
 
-#vsewyzxbyz .gt_from_md &gt; :first-child {
+#xvhbuncixk .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#vsewyzxbyz .gt_from_md &gt; :last-child {
+#xvhbuncixk .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#vsewyzxbyz .gt_row {
+#xvhbuncixk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -320,7 +351,7 @@
   overflow-x: hidden;
 }
 
-#vsewyzxbyz .gt_stub {
+#xvhbuncixk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -332,7 +363,7 @@
   padding-left: 12px;
 }
 
-#vsewyzxbyz .gt_summary_row {
+#xvhbuncixk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -342,7 +373,7 @@
   padding-right: 5px;
 }
 
-#vsewyzxbyz .gt_first_summary_row {
+#xvhbuncixk .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -352,7 +383,7 @@
   border-top-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_grand_summary_row {
+#xvhbuncixk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -362,7 +393,7 @@
   padding-right: 5px;
 }
 
-#vsewyzxbyz .gt_first_grand_summary_row {
+#xvhbuncixk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -372,11 +403,11 @@
   border-top-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_striped {
+#xvhbuncixk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vsewyzxbyz .gt_table_body {
+#xvhbuncixk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -385,7 +416,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_footnotes {
+#xvhbuncixk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -399,13 +430,13 @@
   border-right-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_footnote {
+#xvhbuncixk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vsewyzxbyz .gt_sourcenotes {
+#xvhbuncixk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -419,41 +450,41 @@
   border-right-color: #D3D3D3;
 }
 
-#vsewyzxbyz .gt_sourcenote {
+#xvhbuncixk .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vsewyzxbyz .gt_left {
+#xvhbuncixk .gt_left {
   text-align: left;
 }
 
-#vsewyzxbyz .gt_center {
+#xvhbuncixk .gt_center {
   text-align: center;
 }
 
-#vsewyzxbyz .gt_right {
+#xvhbuncixk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vsewyzxbyz .gt_font_normal {
+#xvhbuncixk .gt_font_normal {
   font-weight: normal;
 }
 
-#vsewyzxbyz .gt_font_bold {
+#xvhbuncixk .gt_font_bold {
   font-weight: bold;
 }
 
-#vsewyzxbyz .gt_font_italic {
+#xvhbuncixk .gt_font_italic {
   font-style: italic;
 }
 
-#vsewyzxbyz .gt_super {
+#xvhbuncixk .gt_super {
   font-size: 65%;
 }
 
-#vsewyzxbyz .gt_footnote_marks {
+#xvhbuncixk .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
