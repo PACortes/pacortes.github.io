@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.1. Consola 2.2. Script 2.3. Ambiente/Historial/Conecciones/Tutorial 2.4. Archivos, Visualizaciones, Paquetes, Ayuda  3. Interactuando con RStudio 4." />
+  <meta name="description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.1. Consola 2.2. Script 2.3. Ambiente, Historial, Conecciones y Tutorial 2.4. Archivos, Visualizaciones, Paquetes y Ayuda  3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/" />
   <meta property="og:title" content="Introducción a RStudio | Pablo Cortes" />
-  <meta property="og:description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.1. Consola 2.2. Script 2.3. Ambiente/Historial/Conecciones/Tutorial 2.4. Archivos, Visualizaciones, Paquetes, Ayuda  3. Interactuando con RStudio 4." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.1. Consola 2.2. Script 2.3. Ambiente, Historial, Conecciones y Tutorial 2.4. Archivos, Visualizaciones, Paquetes y Ayuda  3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -854,8 +854,8 @@
 <ul>
 <li><a href="#consola">2.1. Consola</a></li>
 <li><a href="#script">2.2. Script</a></li>
-<li><a href="#ambientehistorialconeccionestutorial">2.3. Ambiente/Historial/Conecciones/Tutorial</a></li>
-<li><a href="#archivos-visualizaciones-paquetes-ayuda">2.4. Archivos, Visualizaciones, Paquetes, Ayuda</a></li>
+<li><a href="#ambiente-historial-conecciones-y-tutorial">2.3. Ambiente, Historial, Conecciones y Tutorial</a></li>
+<li><a href="#archivos-visualizaciones-paquetes-y-ayuda">2.4. Archivos, Visualizaciones, Paquetes y Ayuda</a></li>
 </ul></li>
 <li><a href="#interactuando-con-rstudio">3. Interactuando con <code>RStudio</code></a></li>
 <li><a href="#tipos-de-datos-en-r">4. Tipos de datos en R</a>
@@ -879,8 +879,8 @@
 </ul>
 </div>
 
-<p><code>RStudio</code> no es <code>R</code>. Es un programa que ejecuta <code>R</code> y proporciona herramientas adicionales que son útiles al escribir código <code>R</code>, algo así como su sistema operativo puede ejecutar un navegador web.</p>
-<p>Este taller asumirá que está utilizando <code>RStudio</code> para interactuar con <code>R</code>y , aunque todo lo que veremos se puede hacer directament en <code>R</code>.</p>
+<p>Recordemos que <code>RStudio</code> no es <code>R</code>. Es un programa que ejecuta <code>R</code> y proporciona herramientas adicionales que son útiles al escribir código <code>R</code>, algo así como su sistema operativo puede ejecutar un navegador web.</p>
+<p>Este taller asumirá que estamos utilizando <code>RStudio</code> para interactuar con <code>R</code>, aunque todo lo que veremos se puede hacer directament en <code>R</code>.</p>
 <div id="instalación-de-rstudio" class="section level1">
 <h1>1. Instalación de <code>RStudio</code></h1>
 <p><code>RStudio</code> es gratuito y de código abierto. Haz clic <a href="https://www.rstudio.com/products/rstudio/download/">aquí</a> para descargar la versión que corresponda a tu sitema operativo.</p>
@@ -891,36 +891,35 @@
 <p>Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.</p>
 <div id="consola" class="section level2">
 <h2>2.1. Consola</h2>
-<p>En el panel inferior izquierdo, encontraremos la consola de <code>RStudio</code>. Es aquí donde se está el donde está el prompt <em>&gt;</em>, y donde podemos escribir las lineas de comando para interactuar con <code>R</code>, y en donde nuestro código es interpretado. El panel “Consola” es la única parte de <code>RStudio</code> que en realidad es <code>R</code>; todo lo demás son herramientas opcionales.</p>
+<p>En el panel inferior izquierdo, encontraremos la consola de <code>RStudio</code>. Es aquí donde podemos escribir las lineas de comando para interactuar con <code>R</code>, y en donde nuestro código es interpretado. La consola es la única parte de <code>RStudio</code> que en realidad es <code>R</code>; todo lo demás son herramientas opcionales.</p>
 </div>
 <div id="script" class="section level2">
 <h2>2.2. Script</h2>
-<p>En el panel superior izquierdo, encontraremos el <em>script</em>, editor de texto con la extensión de archivo <em>.R</em> que puede ser leido por <code>R</code>. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para geneerar comentarios, las(s) línea(s) de texto deben estar precedidas por el el símbolo <em>#</em>.</p>
+<p>En el panel superior izquierdo, encontraremos el script, editor de texto con la extensión de archivo <em>.R</em> que puede ser leido por <code>R</code>. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para ello, la(s) línea(s) de texto debe(n) estar precedidas por el el símbolo <em>#</em>.</p>
 <p>Para guardar el script:</p>
 <ul>
 <li><em>File &gt; Save as</em> y seleccionar la ruta donde se quiere guardar el archivo con la extensión <em>.R</em></li>
 <li>Hacer clic en el botón <em>Guardar</em> que se encuentra en la parte izquierda de la cinta de opciones del script.</li>
 </ul>
 </div>
-<div id="ambientehistorialconeccionestutorial" class="section level2">
-<h2>2.3. Ambiente/Historial/Conecciones/Tutorial</h2>
+<div id="ambiente-historial-conecciones-y-tutorial" class="section level2">
+<h2>2.3. Ambiente, Historial, Conecciones y Tutorial</h2>
 <p>En el panel superior derecho, encontraremos cuatro pestañas:</p>
 <ul>
-<li><em>Environment</em>: Aquí se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.</li>
-<li><em>History</em>: Aquí se registran las instrucciones ejecutadas. Como opciones, podemos cargar y guardar el historial de la sesión, seleccionar una o más instrucciones y enviarlas a la consola o al script, además de poder limpiar el historial.</li>
-<li><em>Connections</em>: Auí puedes conectar <code>RStudio</code> a diferentes fuentes de datos. Por ejemplo ODBC, Spark, Oracle, SQLServer, entre otras.</li>
-<li><em>Tutorial</em>: Aquí encontraremos ayuda usando el paquete <code>learnr</code>.</li>
+<li><strong>Environment</strong>: En el ambiente de trabajo se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.</li>
+<li><strong>History</strong>: En el hisotrial se registran las instrucciones ejecutadas. Como opciones, podemos cargar y guardar el historial de la sesión, seleccionar una o más instrucciones y enviarlas a la consola o al script, además de poder limpiar el historial.</li>
+<li><strong>Connections</strong>: En conecciones, puedes conectar <code>RStudio</code> a diferentes fuentes de datos. Por ejemplo ODBC, Spark, Oracle, SQLServer, entre otras.</li>
+<li><strong>Tutorial</strong>: Aquí encontraremos ayuda usando el paquete <code>learnr</code>.</li>
 </ul>
 </div>
-<div id="archivos-visualizaciones-paquetes-ayuda" class="section level2">
-<h2>2.4. Archivos, Visualizaciones, Paquetes, Ayuda</h2>
-<p>En el panel inferior derecho, encontraremos cinco pestañas:</p>
+<div id="archivos-visualizaciones-paquetes-y-ayuda" class="section level2">
+<h2>2.4. Archivos, Visualizaciones, Paquetes y Ayuda</h2>
+<p>En el panel inferior derecho, encontraremos cuatro pestañas:</p>
 <ul>
-<li><em>Files</em>: Permite ver el historial de archivos trabajados con el programa.</li>
-<li><em>Plots</em>: Aquí se visualizan los gráficos que generamos.</li>
-<li><em>Packages</em>: Entrega un listado de los paquetes instalados en <code>R</code> y los que han sido cargados en la sesión. A través de las opciones de esta pestaña podemos instalar nuevos paquetes o actualizar los existentes.</li>
-<li><em>Help</em>: Permite acceder al CRAN (siempre que se cuente con conexión a Internet), página oficial del software que ofrece diferentes recursos para el programa: información general, de los paquetes instalados, de funciones de interés, entre otros.</li>
-<li><em>Viewer</em>: Aquí podemos ver los resultados al construir reportes mediante funcionalidades tipo <code>rmarkdown</code>.</li>
+<li><strong>Files</strong>: En la pestaña archivos podemos ver el historial de archivos trabajados.</li>
+<li><strong>Plots</strong>: Aquí se visualizan los gráficos que generamos.</li>
+<li><strong>Packages</strong>: Entrega un listado de los paquetes instalados en <code>R</code> y los que han sido cargados en la sesión. A través de las opciones de esta pestaña podemos instalar nuevos paquetes o actualizar los existentes.</li>
+<li><strong>Help</strong>: Permite acceder al CRAN (siempre que se cuente con conexión a Internet), página oficial del software que ofrece diferentes recursos para el programa: información general, de los paquetes instalados, de funciones de interés, entre otros.</li>
 </ul>
 <p>Es importante señalar que podemos reorganizar los paneles en <em>Ver -&gt; Paneles -&gt; Diseño de panel</em>. Además. podemos agregar y eliminar pestañas de los paneles en <em>Ver</em> y seleccionando o deseleccionando las opciones de pestañas que se enumeran en la parte inferior.</p>
 </div>
@@ -979,12 +978,12 @@
 <div id="verificando-el-tipo-de-dato" class="section level2">
 <h2>Verificando el tipo de dato</h2>
 <p>Podemos verificar si un dato es de un tipo específico con la familia de funciones <code>is()</code>. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE</p>
-<div id="xvhbuncixk" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="houzybeehe" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#xvhbuncixk .gt_table {
+#houzybeehe .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1009,7 +1008,7 @@
   border-left-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_heading {
+#houzybeehe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1021,7 +1020,7 @@
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_title {
+#houzybeehe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1031,7 +1030,7 @@
   border-bottom-width: 0;
 }
 
-#xvhbuncixk .gt_subtitle {
+#houzybeehe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1041,13 +1040,13 @@
   border-top-width: 0;
 }
 
-#xvhbuncixk .gt_bottom_border {
+#houzybeehe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_col_headings {
+#houzybeehe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1062,7 +1061,7 @@
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_col_heading {
+#houzybeehe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1082,7 +1081,7 @@
   overflow-x: hidden;
 }
 
-#xvhbuncixk .gt_column_spanner_outer {
+#houzybeehe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1094,15 +1093,15 @@
   padding-right: 4px;
 }
 
-#xvhbuncixk .gt_column_spanner_outer:first-child {
+#houzybeehe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xvhbuncixk .gt_column_spanner_outer:last-child {
+#houzybeehe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xvhbuncixk .gt_column_spanner {
+#houzybeehe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1114,7 +1113,7 @@
   width: 100%;
 }
 
-#xvhbuncixk .gt_group_heading {
+#houzybeehe .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1136,7 +1135,7 @@
   vertical-align: middle;
 }
 
-#xvhbuncixk .gt_empty_group_heading {
+#houzybeehe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1151,15 +1150,15 @@
   vertical-align: middle;
 }
 
-#xvhbuncixk .gt_from_md > :first-child {
+#houzybeehe .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xvhbuncixk .gt_from_md > :last-child {
+#houzybeehe .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xvhbuncixk .gt_row {
+#houzybeehe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1178,7 +1177,7 @@
   overflow-x: hidden;
 }
 
-#xvhbuncixk .gt_stub {
+#houzybeehe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1190,7 +1189,7 @@
   padding-left: 12px;
 }
 
-#xvhbuncixk .gt_summary_row {
+#houzybeehe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1200,7 +1199,7 @@
   padding-right: 5px;
 }
 
-#xvhbuncixk .gt_first_summary_row {
+#houzybeehe .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1210,7 +1209,7 @@
   border-top-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_grand_summary_row {
+#houzybeehe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1220,7 +1219,7 @@
   padding-right: 5px;
 }
 
-#xvhbuncixk .gt_first_grand_summary_row {
+#houzybeehe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1230,11 +1229,11 @@
   border-top-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_striped {
+#houzybeehe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xvhbuncixk .gt_table_body {
+#houzybeehe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1243,7 +1242,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_footnotes {
+#houzybeehe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1257,13 +1256,13 @@
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_footnote {
+#houzybeehe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#xvhbuncixk .gt_sourcenotes {
+#houzybeehe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1277,41 +1276,41 @@
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_sourcenote {
+#houzybeehe .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#xvhbuncixk .gt_left {
+#houzybeehe .gt_left {
   text-align: left;
 }
 
-#xvhbuncixk .gt_center {
+#houzybeehe .gt_center {
   text-align: center;
 }
 
-#xvhbuncixk .gt_right {
+#houzybeehe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xvhbuncixk .gt_font_normal {
+#houzybeehe .gt_font_normal {
   font-weight: normal;
 }
 
-#xvhbuncixk .gt_font_bold {
+#houzybeehe .gt_font_bold {
   font-weight: bold;
 }
 
-#xvhbuncixk .gt_font_italic {
+#houzybeehe .gt_font_italic {
   font-style: italic;
 }
 
-#xvhbuncixk .gt_super {
+#houzybeehe .gt_super {
   font-size: 65%;
 }
 
-#xvhbuncixk .gt_footnote_marks {
+#houzybeehe .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;

@@ -1072,8 +1072,8 @@ glimpse(MaterialParticulado)
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;2.1. Consola&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#script&#34;&gt;2.2. Script&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ambientehistorialconeccionestutorial&#34;&gt;2.3. Ambiente/Historial/Conecciones/Tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#archivos-visualizaciones-paquetes-ayuda&#34;&gt;2.4. Archivos, Visualizaciones, Paquetes, Ayuda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ambiente-historial-conecciones-y-tutorial&#34;&gt;2.3. Ambiente, Historial, Conecciones y Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#archivos-visualizaciones-paquetes-y-ayuda&#34;&gt;2.4. Archivos, Visualizaciones, Paquetes y Ayuda&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#interactuando-con-rstudio&#34;&gt;3. Interactuando con &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;4. Tipos de datos en R&lt;/a&gt;
@@ -1097,8 +1097,8 @@ glimpse(MaterialParticulado)
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; no es &lt;code&gt;R&lt;/code&gt;. Es un programa que ejecuta &lt;code&gt;R&lt;/code&gt; y proporciona herramientas adicionales que son útiles al escribir código &lt;code&gt;R&lt;/code&gt;, algo así como su sistema operativo puede ejecutar un navegador web.&lt;/p&gt;
-&lt;p&gt;Este taller asumirá que está utilizando &lt;code&gt;RStudio&lt;/code&gt; para interactuar con &lt;code&gt;R&lt;/code&gt;y , aunque todo lo que veremos se puede hacer directament en &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Recordemos que &lt;code&gt;RStudio&lt;/code&gt; no es &lt;code&gt;R&lt;/code&gt;. Es un programa que ejecuta &lt;code&gt;R&lt;/code&gt; y proporciona herramientas adicionales que son útiles al escribir código &lt;code&gt;R&lt;/code&gt;, algo así como su sistema operativo puede ejecutar un navegador web.&lt;/p&gt;
+&lt;p&gt;Este taller asumirá que estamos utilizando &lt;code&gt;RStudio&lt;/code&gt; para interactuar con &lt;code&gt;R&lt;/code&gt;, aunque todo lo que veremos se puede hacer directament en &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
 &lt;div id=&#34;instalación-de-rstudio&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; es gratuito y de código abierto. Haz clic &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;aquí&lt;/a&gt; para descargar la versión que corresponda a tu sitema operativo.&lt;/p&gt;
@@ -1109,36 +1109,35 @@ glimpse(MaterialParticulado)
 &lt;p&gt;Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.&lt;/p&gt;
 &lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.1. Consola&lt;/h2&gt;
-&lt;p&gt;En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde se está el donde está el prompt &lt;em&gt;&amp;gt;&lt;/em&gt;, y donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. El panel “Consola” es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
+&lt;p&gt;En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. La consola es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.2. Script&lt;/h2&gt;
-&lt;p&gt;En el panel superior izquierdo, encontraremos el &lt;em&gt;script&lt;/em&gt;, editor de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para geneerar comentarios, las(s) línea(s) de texto deben estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;En el panel superior izquierdo, encontraremos el script, editor de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para ello, la(s) línea(s) de texto debe(n) estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Para guardar el script:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;File &amp;gt; Save as&lt;/em&gt; y seleccionar la ruta donde se quiere guardar el archivo con la extensión &lt;em&gt;.R&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Hacer clic en el botón &lt;em&gt;Guardar&lt;/em&gt; que se encuentra en la parte izquierda de la cinta de opciones del script.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;ambientehistorialconeccionestutorial&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.3. Ambiente/Historial/Conecciones/Tutorial&lt;/h2&gt;
+&lt;div id=&#34;ambiente-historial-conecciones-y-tutorial&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3. Ambiente, Historial, Conecciones y Tutorial&lt;/h2&gt;
 &lt;p&gt;En el panel superior derecho, encontraremos cuatro pestañas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Environment&lt;/em&gt;: Aquí se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;History&lt;/em&gt;: Aquí se registran las instrucciones ejecutadas. Como opciones, podemos cargar y guardar el historial de la sesión, seleccionar una o más instrucciones y enviarlas a la consola o al script, además de poder limpiar el historial.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Connections&lt;/em&gt;: Auí puedes conectar &lt;code&gt;RStudio&lt;/code&gt; a diferentes fuentes de datos. Por ejemplo ODBC, Spark, Oracle, SQLServer, entre otras.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Tutorial&lt;/em&gt;: Aquí encontraremos ayuda usando el paquete &lt;code&gt;learnr&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environment&lt;/strong&gt;: En el ambiente de trabajo se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;History&lt;/strong&gt;: En el hisotrial se registran las instrucciones ejecutadas. Como opciones, podemos cargar y guardar el historial de la sesión, seleccionar una o más instrucciones y enviarlas a la consola o al script, además de poder limpiar el historial.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connections&lt;/strong&gt;: En conecciones, puedes conectar &lt;code&gt;RStudio&lt;/code&gt; a diferentes fuentes de datos. Por ejemplo ODBC, Spark, Oracle, SQLServer, entre otras.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tutorial&lt;/strong&gt;: Aquí encontraremos ayuda usando el paquete &lt;code&gt;learnr&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;archivos-visualizaciones-paquetes-ayuda&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.4. Archivos, Visualizaciones, Paquetes, Ayuda&lt;/h2&gt;
-&lt;p&gt;En el panel inferior derecho, encontraremos cinco pestañas:&lt;/p&gt;
+&lt;div id=&#34;archivos-visualizaciones-paquetes-y-ayuda&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.4. Archivos, Visualizaciones, Paquetes y Ayuda&lt;/h2&gt;
+&lt;p&gt;En el panel inferior derecho, encontraremos cuatro pestañas:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;Files&lt;/em&gt;: Permite ver el historial de archivos trabajados con el programa.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Plots&lt;/em&gt;: Aquí se visualizan los gráficos que generamos.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Packages&lt;/em&gt;: Entrega un listado de los paquetes instalados en &lt;code&gt;R&lt;/code&gt; y los que han sido cargados en la sesión. A través de las opciones de esta pestaña podemos instalar nuevos paquetes o actualizar los existentes.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Help&lt;/em&gt;: Permite acceder al CRAN (siempre que se cuente con conexión a Internet), página oficial del software que ofrece diferentes recursos para el programa: información general, de los paquetes instalados, de funciones de interés, entre otros.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;Viewer&lt;/em&gt;: Aquí podemos ver los resultados al construir reportes mediante funcionalidades tipo &lt;code&gt;rmarkdown&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Files&lt;/strong&gt;: En la pestaña archivos podemos ver el historial de archivos trabajados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plots&lt;/strong&gt;: Aquí se visualizan los gráficos que generamos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Packages&lt;/strong&gt;: Entrega un listado de los paquetes instalados en &lt;code&gt;R&lt;/code&gt; y los que han sido cargados en la sesión. A través de las opciones de esta pestaña podemos instalar nuevos paquetes o actualizar los existentes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Help&lt;/strong&gt;: Permite acceder al CRAN (siempre que se cuente con conexión a Internet), página oficial del software que ofrece diferentes recursos para el programa: información general, de los paquetes instalados, de funciones de interés, entre otros.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Es importante señalar que podemos reorganizar los paneles en &lt;em&gt;Ver -&amp;gt; Paneles -&amp;gt; Diseño de panel&lt;/em&gt;. Además. podemos agregar y eliminar pestañas de los paneles en &lt;em&gt;Ver&lt;/em&gt; y seleccionando o deseleccionando las opciones de pestañas que se enumeran en la parte inferior.&lt;/p&gt;
 &lt;/div&gt;
@@ -1197,12 +1196,12 @@ glimpse(MaterialParticulado)
 &lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Verificando el tipo de dato&lt;/h2&gt;
 &lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
-&lt;div id=&#34;xvhbuncixk&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;houzybeehe&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#xvhbuncixk .gt_table {
+#houzybeehe .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1227,7 +1226,7 @@ glimpse(MaterialParticulado)
   border-left-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_heading {
+#houzybeehe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1239,7 +1238,7 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_title {
+#houzybeehe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1249,7 +1248,7 @@ glimpse(MaterialParticulado)
   border-bottom-width: 0;
 }
 
-#xvhbuncixk .gt_subtitle {
+#houzybeehe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1259,13 +1258,13 @@ glimpse(MaterialParticulado)
   border-top-width: 0;
 }
 
-#xvhbuncixk .gt_bottom_border {
+#houzybeehe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_col_headings {
+#houzybeehe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1280,7 +1279,7 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_col_heading {
+#houzybeehe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1300,7 +1299,7 @@ glimpse(MaterialParticulado)
   overflow-x: hidden;
 }
 
-#xvhbuncixk .gt_column_spanner_outer {
+#houzybeehe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1312,15 +1311,15 @@ glimpse(MaterialParticulado)
   padding-right: 4px;
 }
 
-#xvhbuncixk .gt_column_spanner_outer:first-child {
+#houzybeehe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xvhbuncixk .gt_column_spanner_outer:last-child {
+#houzybeehe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xvhbuncixk .gt_column_spanner {
+#houzybeehe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1332,7 +1331,7 @@ glimpse(MaterialParticulado)
   width: 100%;
 }
 
-#xvhbuncixk .gt_group_heading {
+#houzybeehe .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1354,7 +1353,7 @@ glimpse(MaterialParticulado)
   vertical-align: middle;
 }
 
-#xvhbuncixk .gt_empty_group_heading {
+#houzybeehe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1369,15 +1368,15 @@ glimpse(MaterialParticulado)
   vertical-align: middle;
 }
 
-#xvhbuncixk .gt_from_md &gt; :first-child {
+#houzybeehe .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#xvhbuncixk .gt_from_md &gt; :last-child {
+#houzybeehe .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#xvhbuncixk .gt_row {
+#houzybeehe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1396,7 +1395,7 @@ glimpse(MaterialParticulado)
   overflow-x: hidden;
 }
 
-#xvhbuncixk .gt_stub {
+#houzybeehe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1408,7 +1407,7 @@ glimpse(MaterialParticulado)
   padding-left: 12px;
 }
 
-#xvhbuncixk .gt_summary_row {
+#houzybeehe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1418,7 +1417,7 @@ glimpse(MaterialParticulado)
   padding-right: 5px;
 }
 
-#xvhbuncixk .gt_first_summary_row {
+#houzybeehe .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1428,7 +1427,7 @@ glimpse(MaterialParticulado)
   border-top-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_grand_summary_row {
+#houzybeehe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1438,7 +1437,7 @@ glimpse(MaterialParticulado)
   padding-right: 5px;
 }
 
-#xvhbuncixk .gt_first_grand_summary_row {
+#houzybeehe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1448,11 +1447,11 @@ glimpse(MaterialParticulado)
   border-top-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_striped {
+#houzybeehe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xvhbuncixk .gt_table_body {
+#houzybeehe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1461,7 +1460,7 @@ glimpse(MaterialParticulado)
   border-bottom-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_footnotes {
+#houzybeehe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1475,13 +1474,13 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_footnote {
+#houzybeehe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#xvhbuncixk .gt_sourcenotes {
+#houzybeehe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1495,41 +1494,41 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#xvhbuncixk .gt_sourcenote {
+#houzybeehe .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#xvhbuncixk .gt_left {
+#houzybeehe .gt_left {
   text-align: left;
 }
 
-#xvhbuncixk .gt_center {
+#houzybeehe .gt_center {
   text-align: center;
 }
 
-#xvhbuncixk .gt_right {
+#houzybeehe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xvhbuncixk .gt_font_normal {
+#houzybeehe .gt_font_normal {
   font-weight: normal;
 }
 
-#xvhbuncixk .gt_font_bold {
+#houzybeehe .gt_font_bold {
   font-weight: bold;
 }
 
-#xvhbuncixk .gt_font_italic {
+#houzybeehe .gt_font_italic {
   font-style: italic;
 }
 
-#xvhbuncixk .gt_super {
+#houzybeehe .gt_super {
   font-size: 65%;
 }
 
-#xvhbuncixk .gt_footnote_marks {
+#houzybeehe .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
