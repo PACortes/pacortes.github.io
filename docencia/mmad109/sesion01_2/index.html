@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Sintáxis  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2.4. Seleccionemos un rango de variables 2." />
+  <meta name="description" content="1. Tipos de datos en R  1.1. Numérico 1.2. Cadena de texto 1.3. Factor 1.4. Lógico 1.5.Perdido (NA) y Vacío (NULL) 1.6. Verificando el tipo de dato  2." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/select/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/mmad109/sesion01_2/" />
 
   
 
@@ -276,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/courses/dplyr/select/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/docencia/mmad109/sesion01_2/" />
 
   
   
@@ -293,18 +293,18 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/select/" />
-  <meta property="og:title" content="select() | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Sintáxis  2.1. Seleccionemos una variable 2.2. Seleccionemos una variable por posición en la base de datos 2.3. Seleccionemos más de una variable 2.4. Seleccionemos un rango de variables 2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/docencia/mmad109/sesion01_2/" />
+  <meta property="og:title" content="Datos en RStudio | Pablo Cortes" />
+  <meta property="og:description" content="1. Tipos de datos en R  1.1. Numérico 1.2. Cadena de texto 1.3. Factor 1.4. Lógico 1.5.Perdido (NA) y Vacío (NULL) 1.6. Verificando el tipo de dato  2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
         property="article:published_time"
-        content="2022-01-15T21:13:14-05:00"
+        content="2021-10-05T21:13:14-05:00"
       />
     
-    <meta property="article:modified_time" content="2022-01-15T21:13:14-05:00">
+    <meta property="article:modified_time" content="2021-10-05T21:13:14-05:00">
   
 
   
@@ -321,11 +321,11 @@
 
 
 
-  <title>select() | Pablo Cortes</title>
+  <title>Datos en RStudio | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="423e8d2516d44af0210d76abca68d03c" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ee3b19d5f886bac0846f36f8164285f0" >
 
   
   
@@ -552,7 +552,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/courses/"><span>R</span></a>
+          <a class="nav-link " href="/courses/"><span>R</span></a>
         </li>
 
         
@@ -582,7 +582,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/docencia/"><span>Docencia</span></a>
+          <a class="nav-link  active" href="/docencia/"><span>Docencia</span></a>
         </li>
 
         
@@ -698,7 +698,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          dplyr
+          MMAD109
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -730,7 +730,7 @@
       
 
       <ul class="nav docs-sidenav">
-        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Tutoriales de R</a></li>
+        <li><a href="/docencia/"><i class="fas fa-arrow-left pr-1"></i>Docencia</a></li>
       </ul>
 
       
@@ -752,22 +752,18 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/dplyr/">dplyr</a>
+        <a class="docs-toc-link " href="/docencia/mmad109/">MMAD109</a>
     
       
         <ul class="nav docs-sidenav">
       
 
 
-  <li class="active"><a href="/courses/dplyr/select/">select()</a></li>
+  <li class="active"><a href="/docencia/mmad109/sesion01_2/">Datos en RStudio</a></li>
 
 
 
-  <li class=""><a href="/courses/dplyr/filter/">filter()</a></li>
-
-
-
-  <li class=""><a href="/courses/dplyr/mutate/">mutate()</a></li>
+  <li class=""><a href="/docencia/mmad109/sesion01_1/">Introducción a RStudio</a></li>
 
       
         </ul>
@@ -823,25 +819,25 @@
 
 
   <li class="breadcrumb-item">
-    <a href="/courses/">
+    <a href="/docencia/">
       
-        Tutoriales de R
+        Docencia
       
     </a>
   </li>
 
 
   <li class="breadcrumb-item">
-    <a href="/courses/dplyr/">
+    <a href="/docencia/mmad109/">
       
-        dplyr
+        MMAD109
       
     </a>
   </li>
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        select()
+        Datos en RStudio
       </li>
     </ol>
   </nav>
@@ -849,7 +845,7 @@
 
           
 
-          <h1>select()</h1>
+          <h1>Datos en RStudio</h1>
 
           <div class="article-style">
             
@@ -857,168 +853,468 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#definición">1. Definición</a></li>
-<li><a href="#sintáxis">2. Sintáxis</a>
+<li><a href="#tipos-de-datos-en-r">1. Tipos de datos en R</a>
 <ul>
-<li><a href="#seleccionemos-una-variable">2.1. Seleccionemos una variable</a></li>
-<li><a href="#seleccionemos-una-variable-por-posición-en-la-base-de-datos">2.2. Seleccionemos una variable por posición en la base de datos</a></li>
-<li><a href="#seleccionemos-más-de-una-variable">2.3. Seleccionemos más de una variable</a></li>
-<li><a href="#seleccionemos-un-rango-de-variables">2.4. Seleccionemos un rango de variables</a></li>
-<li><a href="#seleccionemos-todas-las-variables-excepto-una">2.4. Seleccionemos todas las variables excepto una</a></li>
-<li><a href="#seleccionemos-una-variable-que-comienza-con-cierto-carácter">2.5. Seleccionemos una variable que comienza con cierto carácter</a></li>
-<li><a href="#seleccionemos-una-variable-que-termina-con-cierto-carácter">2.6. Seleccionemos una variable que termina con cierto carácter</a></li>
-<li><a href="#seleccionemos-una-variable-que-contiene-un-patrón-determinado">2.7. Seleccionemos una variable que contiene un patrón determinado</a></li>
-<li><a href="#seleccionemos-variables-especificadas-en-un-vector">2.8. Seleccionemos variables especificadas en un vector</a></li>
+<li><a href="#numérico">1.1. Numérico</a></li>
+<li><a href="#cadena-de-texto">1.2. Cadena de texto</a></li>
+<li><a href="#factor">1.3. Factor</a></li>
+<li><a href="#lógico">1.4. Lógico</a></li>
+<li><a href="#perdido-na-y-vacío-null">1.5.Perdido (NA) y Vacío (NULL)</a></li>
+<li><a href="#verificando-el-tipo-de-dato">1.6. Verificando el tipo de dato</a></li>
 </ul></li>
-<li><a href="#referencias">3. Referencias</a></li>
+<li><a href="#operadores">2. Operadores</a>
+<ul>
+<li><a href="#operador-de-asignación">Operador de asignación</a></li>
+<li><a href="#operador-de-concatenación">Operador de concatenación</a></li>
+</ul></li>
+<li><a href="#estructura-de-datos-en-r">3. Estructura de datos en R</a>
+<ul>
+<li><a href="#vector">Vector</a></li>
+</ul></li>
 </ul>
 </div>
 
-<div id="definición" class="section level1">
-<h1>1. Definición</h1>
-<p>La función <code>select()</code> permite elegir un subconjunto de las variables (columnas) de la base de datos en base a su nombre y/o posición.</p>
-<p>Cuando ejecutamos una operación de filtrado, <code>select()</code> devuelve un nuevo <em>data frame</em>. Por defecto, R imprime todos los resultados.</p>
-<p>Recordemos que antes de utilizar la función <code>select()</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
-<pre class="r"><code>library(dplyr)</code></pre>
+<div id="tipos-de-datos-en-r" class="section level1">
+<h1>1. Tipos de datos en R</h1>
+<p>Los tipos de datos de uso más común en R son:</p>
+<div id="numérico" class="section level2">
+<h2>1.1. Numérico</h2>
+<p>Representan números que tienen una parte decimal o fraccionaria.</p>
+<pre class="r"><code>5
+## [1] 5
+
+25.3
+## [1] 25.3
+
+123890.85544
+## [1] 123890.9</code></pre>
 </div>
-<div id="sintáxis" class="section level1">
-<h1>2. Sintáxis</h1>
-<p>La sintáxis básica de <code>select()</code> para seleccionar una variable es:</p>
-<p><code>select(data, variable)</code></p>
-<p>En donde:</p>
+<div id="cadena-de-texto" class="section level2">
+<h2>1.2. Cadena de texto</h2>
+<p>Secuencias de caracteres. Puede contener letras, números, espacios, signos de puntuación y símbolos especiales.</p>
+<pre class="r"><code>&quot;a&quot;
+## [1] &quot;a&quot;
+
+&quot;a&quot;
+## [1] &quot;a&quot;
+
+&quot;Contaminacion&quot;
+## [1] &quot;Contaminacion&quot;</code></pre>
+</div>
+<div id="factor" class="section level2">
+<h2>1.3. Factor</h2>
+<p>Dato numérico representado por una etiqueta.</p>
+<p>Por último, cada una de las etiquetas o valores que puedes asumir un factor se conoce como nivel. En nuestro ejemplo con femenino y masculino, tendríamos dos niveles.</p>
+</div>
+<div id="lógico" class="section level2">
+<h2>1.4. Lógico</h2>
+<p>Sólo tienen dos valores posibles: verdadero (TRUE) y falso (FALSE). Representan si una condición o estado se cumple, es verdadero, o no, es falso.</p>
+</div>
+<div id="perdido-na-y-vacío-null" class="section level2">
+<h2>1.5.Perdido (NA) y Vacío (NULL)</h2>
+<p>En R, usamos NA para representar datos perdidos, mientras que NULL representa la ausencia de datos. La diferencia entre las dos es que un dato NULL aparece sólo cuando R intenta recuperar un dato y no encuentra nada, mientras que NA es usado para representar explícitamente datos perdidos, omitidos o que por alguna razón son faltantes.</p>
+</div>
+<div id="verificando-el-tipo-de-dato" class="section level2">
+<h2>1.6. Verificando el tipo de dato</h2>
+<p>Podemos verificar si un dato es de un tipo específico con la familia de funciones <code>is()</code>. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE</p>
+<div id="wtfyozltun" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+#wtfyozltun .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wtfyozltun .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wtfyozltun .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wtfyozltun .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wtfyozltun .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wtfyozltun .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wtfyozltun .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wtfyozltun .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wtfyozltun .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wtfyozltun .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wtfyozltun .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wtfyozltun .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wtfyozltun .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#wtfyozltun .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wtfyozltun .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wtfyozltun .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wtfyozltun .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#wtfyozltun .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wtfyozltun .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#wtfyozltun .gt_left {
+  text-align: left;
+}
+
+#wtfyozltun .gt_center {
+  text-align: center;
+}
+
+#wtfyozltun .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wtfyozltun .gt_font_normal {
+  font-weight: normal;
+}
+
+#wtfyozltun .gt_font_bold {
+  font-weight: bold;
+}
+
+#wtfyozltun .gt_font_italic {
+  font-style: italic;
+}
+
+#wtfyozltun .gt_super {
+  font-size: 65%;
+}
+
+#wtfyozltun .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+</style>
+<table class="gt_table">
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;">Función</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;">Tipo de dato</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td class="gt_row gt_center">is.integer()</td>
+<td class="gt_row gt_center">Entero</td></tr>
+    <tr><td class="gt_row gt_center">is.numeric</td>
+<td class="gt_row gt_center">Numérico</td></tr>
+    <tr><td class="gt_row gt_center">is.character()</td>
+<td class="gt_row gt_center">Cadena de texto</td></tr>
+    <tr><td class="gt_row gt_center">is.factor()</td>
+<td class="gt_row gt_center">Factor</td></tr>
+    <tr><td class="gt_row gt_center">is.logical()</td>
+<td class="gt_row gt_center">Lógico</td></tr>
+    <tr><td class="gt_row gt_center">is.na()</td>
+<td class="gt_row gt_center">NA</td></tr>
+    <tr><td class="gt_row gt_center">is.null()</td>
+<td class="gt_row gt_center">NULL</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+<div id="operadores" class="section level1">
+<h1>2. Operadores</h1>
+<p><a href="https://bookdown.org/jboscomendoza/r-principiantes4/operadores-relacionales.html">operadores</a></p>
+<div id="operador-de-asignación" class="section level2">
+<h2>Operador de asignación</h2>
+<p>Nos permite asignar datos a un objeto. Para ello podems utilizar los símbolos <em>&lt;-</em> o <em>=</em>.</p>
+<pre class="r"><code>dos&lt;-2
+
+letra&lt;-&quot;a&quot;</code></pre>
+<p>Es importante tener en cuenta que:</p>
 <ul>
-<li><p><code>data</code>: data frame (nuestros datos).</p></li>
-<li><p><code>variable</code>: especifica la variable a seleccionar</p></li>
+<li><p>Si asignamos un datos a un objeto al que ya habíamos asignado datos, nuestro objeto conserva los datos más recientes.</p></li>
+<li><p>Esta operación nos permite “guardar” el resultado de operaciones, de modo que podemos recuperarlos sin necesidad de realizar las operaciones otra vez (Revisar <em>Environment</em>).</p></li>
+<li><p>A lo largo del taller utilizaremos <em>&lt;-</em> por ser característico de R y fácil de reconocer visualmente.</p></li>
 </ul>
-<div id="seleccionemos-una-variable" class="section level2">
-<h2>2.1. Seleccionemos una variable</h2>
-<p>Seleccionemos la variable <strong>Petal.Length</strong> de la base de datos <code>iris</code>.</p>
-<pre class="r"><code>select(iris,Petal.Length)</code></pre>
-<pre><code>##   Petal.Length
-## 1          1.4
-## 2          1.4
-## 3          1.3
-## 4          1.5
-## 5          1.4
-## 6          1.7</code></pre>
 </div>
-<div id="seleccionemos-una-variable-por-posición-en-la-base-de-datos" class="section level2">
-<h2>2.2. Seleccionemos una variable por posición en la base de datos</h2>
-<p>Una alternativa a lo anterior, es seleccionar una variable que se encuentre en un orden específico detro de la base de datos. Por ejemplo, seleccionemos la quinta variable en la base de datos <code>iris</code>:</p>
-<pre class="r"><code>select(iris,5)</code></pre>
-<pre><code>##   Species
-## 1  setosa
-## 2  setosa
-## 3  setosa
-## 4  setosa
-## 5  setosa
-## 6  setosa</code></pre>
-<p>El resultado nos muestra que la variable ubicada en la quinta posición es <strong>Species</strong>. Para corroborar el orden, podemos utilizar la función <code>glimpse</code>:</p>
-<pre class="r"><code>glimpse(iris)</code></pre>
-</div>
-<div id="seleccionemos-más-de-una-variable" class="section level2">
-<h2>2.3. Seleccionemos más de una variable</h2>
-<p>Ahora, seleccionemos las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong>. Esto lo podemos realizar nombrando las variables de interés:</p>
-<pre class="r"><code>select(iris,Petal.Length, Petal.Width)</code></pre>
-<pre><code>##   Petal.Length Petal.Width
-## 1          1.4         0.2
-## 2          1.4         0.2
-## 3          1.3         0.2
-## 4          1.5         0.2
-## 5          1.4         0.2
-## 6          1.7         0.4</code></pre>
-</div>
-<div id="seleccionemos-un-rango-de-variables" class="section level2">
-<h2>2.4. Seleccionemos un rango de variables</h2>
-<p>De forma alternativa, podemos selccionar un rango de variables utilizando <code>:</code>. Aquí, las variables de interes deben estar ubicadas en posiciones contiguas dentro de la base de datos:</p>
-<pre><code>##   Petal.Length Petal.Width
-## 1          1.4         0.2
-## 2          1.4         0.2
-## 3          1.3         0.2
-## 4          1.5         0.2
-## 5          1.4         0.2
-## 6          1.7         0.4</code></pre>
-<p>Cuando las varables no se encuentran contiguas, podemos especificar las variables a seleccionar utilizando <code>c(,)</code>:</p>
-<pre class="r"><code>select(iris,c(,c(1,3:4)))</code></pre>
-<pre><code>##   Sepal.Length Petal.Length Petal.Width
-## 1          5.1          1.4         0.2
-## 2          4.9          1.4         0.2
-## 3          4.7          1.3         0.2
-## 4          4.6          1.5         0.2
-## 5          5.0          1.4         0.2
-## 6          5.4          1.7         0.4</code></pre>
-<p>En este ejemplo, especificamos que queremos todas las filas, y las columnas 1, 3 y 4.</p>
-</div>
-<div id="seleccionemos-todas-las-variables-excepto-una" class="section level2">
-<h2>2.4. Seleccionemos todas las variables excepto una</h2>
-<p>Para seleccionar todas las variables excepto una, debemos anteponer el signo <code>-</code>a la variable que <strong>no</strong> es de nuestro interés. Por ejemplo, vamos a excluir la variable <strong>Petal.Length</strong>:</p>
-<pre class="r"><code>select(iris,-Petal.Length)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Width Species
-## 1          5.1         3.5         0.2  setosa
-## 2          4.9         3.0         0.2  setosa
-## 3          4.7         3.2         0.2  setosa
-## 4          4.6         3.1         0.2  setosa
-## 5          5.0         3.6         0.2  setosa
-## 6          5.4         3.9         0.4  setosa</code></pre>
-</div>
-<div id="seleccionemos-una-variable-que-comienza-con-cierto-carácter" class="section level2">
-<h2>2.5. Seleccionemos una variable que comienza con cierto carácter</h2>
-<p>Dependiendo de las etiquetas asignadas a las variables de una base de datos, algunas veces será de utilidad seleccionar una o más variables en base a los caracteres con los cuales comienzan sus nombres.</p>
-<p>Por ejemplo, en nuestra base de datos, podemos seleccionar variables que comiencen con <strong>Petal</strong>. Para ello, utilizaremos la función <code>starts_with()</code>:</p>
-<pre class="r"><code>select(iris,starts_with(&quot;Petal&quot;))</code></pre>
-<pre><code>##   Petal.Length Petal.Width
-## 1          1.4         0.2
-## 2          1.4         0.2
-## 3          1.3         0.2
-## 4          1.5         0.2
-## 5          1.4         0.2
-## 6          1.7         0.4</code></pre>
-</div>
-<div id="seleccionemos-una-variable-que-termina-con-cierto-carácter" class="section level2">
-<h2>2.6. Seleccionemos una variable que termina con cierto carácter</h2>
-<p>De forma similar al ejemplo anterior, select nos permite seleccionar variables que terminen con ciertos caracteres. Por ejemplo, podemos seleccionar variables cuyo nombre finalice con <strong>Length</strong>. Para ello, utilizaremos la función <code>ends_with()</code>:</p>
-<pre class="r"><code>select(iris,ends_with(&quot;Length&quot;))</code></pre>
-<pre><code>##   Sepal.Length Petal.Length
-## 1          5.1          1.4
-## 2          4.9          1.4
-## 3          4.7          1.3
-## 4          4.6          1.5
-## 5          5.0          1.4
-## 6          5.4          1.7</code></pre>
-</div>
-<div id="seleccionemos-una-variable-que-contiene-un-patrón-determinado" class="section level2">
-<h2>2.7. Seleccionemos una variable que contiene un patrón determinado</h2>
-<p>Podríamos seleccionar variables en base a la prescencia de uno o más caracteres específicos en su nombre. Para ello, debemos utilizar la función <code>contains()</code>:</p>
-<pre class="r"><code>select(iris,contains(&quot;S&quot;))</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Species
-## 1          5.1         3.5  setosa
-## 2          4.9         3.0  setosa
-## 3          4.7         3.2  setosa
-## 4          4.6         3.1  setosa
-## 5          5.0         3.6  setosa
-## 6          5.4         3.9  setosa</code></pre>
-<p>La selección anterior nos permitió seleccionar todas las variables que incluyen la letra <strong>S</strong> en su nombre.</p>
-</div>
-<div id="seleccionemos-variables-especificadas-en-un-vector" class="section level2">
-<h2>2.8. Seleccionemos variables especificadas en un vector</h2>
-<p>Finalmente, podríamos seleccionar las variables especificadas en un vector. Para ello, debemos utilizar la función <code>one_of()</code>. Generemos un vector llamados <strong>Petalo</strong> que contendrá los nombres de las variables <strong>Petal.Length</strong> y <strong>Petal.Width</strong>:</p>
-<pre class="r"><code>Petalo&lt;-c(&quot;Petal.Length&quot;,&quot;Petal.Width&quot;)</code></pre>
-<p>Ahora, seleccionemos las variables:</p>
-<pre class="r"><code>select(iris,one_of(Petalo))</code></pre>
-<pre><code>##   Petal.Length Petal.Width
-## 1          1.4         0.2
-## 2          1.4         0.2
-## 3          1.3         0.2
-## 4          1.5         0.2
-## 5          1.4         0.2
-## 6          1.7         0.4</code></pre>
+<div id="operador-de-concatenación" class="section level2">
+<h2>Operador de concatenación</h2>
+<pre class="r"><code>dos_digitos&lt;-c(15, 2)</code></pre>
 </div>
 </div>
-<div id="referencias" class="section level1">
-<h1>3. Referencias</h1>
-<ul>
-<li><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></li>
-</ul>
+<div id="estructura-de-datos-en-r" class="section level1">
+<h1>3. Estructura de datos en R</h1>
+<div id="vector" class="section level2">
+<h2>Vector</h2>
+<p>Colección de uno o más datos del mismo tipo.</p>
+<pre class="r"><code>c(15, 2, 3.3, 5, 8)
+## [1] 15.0  2.0  3.3  5.0  8.0</code></pre>
+<pre class="r"><code>vector_numerio&lt;-c(15, 2, 3.3, 5, 8)</code></pre>
+</div>
 </div>
 
           </div>
@@ -1027,9 +1323,9 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/manipulacion/">Manipulación</a>
+  <a class="badge badge-light" href="/tag/r/">R</a>
   
-  <a class="badge badge-light" href="/tag/dplyr/">dplyr</a>
+  <a class="badge badge-light" href="/tag/rstudio/">RStudio</a>
   
 </div>
 
@@ -1045,7 +1341,7 @@
   
   <div class="post-nav-item">
     <div class="meta-nav">Next</div>
-    <a href="/courses/dplyr/filter/" rel="prev">filter()</a>
+    <a href="/docencia/mmad109/sesion01_1/" rel="prev">Introducción a RStudio</a>
   </div>
   
 </div>
@@ -1055,7 +1351,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Jan 15, 2022</p>
+          <p>Last updated on Oct 5, 2021</p>
 
           
 
@@ -1077,9 +1373,7 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/courses/dplyr/filter/">filter()</a></li>
-      
-      <li><a href="/courses/dplyr/mutate/">mutate()</a></li>
+      <li><a href="/docencia/mmad109/sesion01_1/">Introducción a RStudio</a></li>
       
     </ul>
   </div>

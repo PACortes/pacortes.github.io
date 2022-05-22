@@ -759,6 +759,10 @@
       
 
 
+  <li class=""><a href="/docencia/mmad109/sesion01_2/">Datos en RStudio</a></li>
+
+
+
   <li class="active"><a href="/docencia/mmad109/sesion01_1/">Introducción a RStudio</a></li>
 
       
@@ -858,24 +862,7 @@
 <li><a href="#archivos-visualizaciones-paquetes-y-ayuda">2.4. Archivos, Visualizaciones, Paquetes y Ayuda</a></li>
 </ul></li>
 <li><a href="#interactuando-con-rstudio">3. Interactuando con <code>RStudio</code></a></li>
-<li><a href="#tipos-de-datos-en-r">4. Tipos de datos en R</a>
-<ul>
-<li><a href="#numérico">Numérico</a></li>
-<li><a href="#cadena-de-texto">Cadena de texto</a></li>
-<li><a href="#factor">Factor</a></li>
-<li><a href="#lógico">Lógico</a></li>
-<li><a href="#perdido-na-y-vacío-null">Perdido (NA) y Vacío (NULL)</a></li>
-<li><a href="#verificando-el-tipo-de-dato">Verificando el tipo de dato</a></li>
-</ul></li>
-<li><a href="#operadores">3. Operadores</a>
-<ul>
-<li><a href="#operador-de-asignación">Operador de asignación</a></li>
-<li><a href="#operador-de-concatenación">Operador de concatenación</a></li>
-</ul></li>
-<li><a href="#estructura-de-datos-en-r">4. Estructura de datos en R</a>
-<ul>
-<li><a href="#vector">Vector</a></li>
-</ul></li>
+<li><a href="#sintáxis">5. Sintáxis</a></li>
 </ul>
 </div>
 
@@ -936,445 +923,17 @@
 <li>Si escribimos un comando que R no reconoce, R devolverá un mensaje de error. Esto no es para alarmarno. R simplemente nos está diciendo que no puede entender o hacer lo que le pedimos. El texto en rojo nos avisa y explica, los errores en la solicitud realizada.</li>
 </ul>
 </div>
-<div id="tipos-de-datos-en-r" class="section level1">
-<h1>4. Tipos de datos en R</h1>
-<p>Los tipos de datos de uso más común en R son:</p>
-<div id="numérico" class="section level2">
-<h2>Numérico</h2>
-<p>Representan números que tienen una parte decimal o fraccionaria.</p>
-<pre class="r"><code>5
-## [1] 5
-
-25.3
-## [1] 25.3
-
-123890.85544
-## [1] 123890.9</code></pre>
-</div>
-<div id="cadena-de-texto" class="section level2">
-<h2>Cadena de texto</h2>
-<p>Secuencias de caracteres. Puede contener letras, números, espacios, signos de puntuación y símbolos especiales.</p>
-<pre class="r"><code>&quot;a&quot;
-## [1] &quot;a&quot;
-
-&quot;a&quot;
-## [1] &quot;a&quot;
-
-&quot;Contaminacion&quot;
-## [1] &quot;Contaminacion&quot;</code></pre>
-</div>
-<div id="factor" class="section level2">
-<h2>Factor</h2>
-<p>Dato numérico representado por una etiqueta.</p>
-</div>
-<div id="lógico" class="section level2">
-<h2>Lógico</h2>
-<p>Sólo tienen dos valores posibles: verdadero (TRUE) y falso (FALSE). Representan si una condición o estado se cumple, es verdadero, o no, es falso.</p>
-</div>
-<div id="perdido-na-y-vacío-null" class="section level2">
-<h2>Perdido (NA) y Vacío (NULL)</h2>
-<p>En R, usamos NA para representar datos perdidos, mientras que NULL representa la ausencia de datos. La diferencia entre las dos es que un dato NULL aparece sólo cuando R intenta recuperar un dato y no encuentra nada, mientras que NA es usado para representar explícitamente datos perdidos, omitidos o que por alguna razón son faltantes.</p>
-</div>
-<div id="verificando-el-tipo-de-dato" class="section level2">
-<h2>Verificando el tipo de dato</h2>
-<p>Podemos verificar si un dato es de un tipo específico con la familia de funciones <code>is()</code>. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE</p>
-<div id="houzybeehe" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#houzybeehe .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 20px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#houzybeehe .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#houzybeehe .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#houzybeehe .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#houzybeehe .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#houzybeehe .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#houzybeehe .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 25px;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#houzybeehe .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 25px;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#houzybeehe .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#houzybeehe .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#houzybeehe .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#houzybeehe .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#houzybeehe .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#houzybeehe .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#houzybeehe .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#houzybeehe .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#houzybeehe .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#houzybeehe .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#houzybeehe .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#houzybeehe .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#houzybeehe .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#houzybeehe .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#houzybeehe .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#houzybeehe .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#houzybeehe .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#houzybeehe .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#houzybeehe .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#houzybeehe .gt_left {
-  text-align: left;
-}
-
-#houzybeehe .gt_center {
-  text-align: center;
-}
-
-#houzybeehe .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#houzybeehe .gt_font_normal {
-  font-weight: normal;
-}
-
-#houzybeehe .gt_font_bold {
-  font-weight: bold;
-}
-
-#houzybeehe .gt_font_italic {
-  font-style: italic;
-}
-
-#houzybeehe .gt_super {
-  font-size: 65%;
-}
-
-#houzybeehe .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 65%;
-}
-</style>
-<table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;">Función</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;">Tipo de dato</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_center">is.integer()</td>
-<td class="gt_row gt_center">Entero</td></tr>
-    <tr><td class="gt_row gt_center">is.numeric</td>
-<td class="gt_row gt_center">Numérico</td></tr>
-    <tr><td class="gt_row gt_center">is.character()</td>
-<td class="gt_row gt_center">Cadena de texto</td></tr>
-    <tr><td class="gt_row gt_center">is.factor()</td>
-<td class="gt_row gt_center">Factor</td></tr>
-    <tr><td class="gt_row gt_center">is.logical()</td>
-<td class="gt_row gt_center">Lógico</td></tr>
-    <tr><td class="gt_row gt_center">is.na()</td>
-<td class="gt_row gt_center">NA</td></tr>
-    <tr><td class="gt_row gt_center">is.null()</td>
-<td class="gt_row gt_center">NULL</td></tr>
-  </tbody>
-  
-  
-</table>
-</div>
-</div>
-</div>
-<div id="operadores" class="section level1">
-<h1>3. Operadores</h1>
-<div id="operador-de-asignación" class="section level2">
-<h2>Operador de asignación</h2>
-<p>Nos permite asignar datos a un objeto. Para ello podems utilizar los símbolos <em>&lt;-</em> o <em>=</em>.</p>
-<pre class="r"><code>dos&lt;-2
-
-letra&lt;-&quot;a&quot;</code></pre>
-<p>Es importante tener en cuenta que:</p>
+<div id="sintáxis" class="section level1">
+<h1>5. Sintáxis</h1>
+<p><code>R</code> es un lenguaje de programación. Tanto en <code>R</code>, así como de la interfaz <code>RStudio</code>, podemos interactuará con el programa mediante códigos. La sintaxis es un conjunto de códigos. Su uso en <code>R</code> y <code>RStudio</code> es bastante intuitivo y sigue un patrón lógico.</p>
+<p>De modo general, la sintáxis de <code>R</code> sigue la siguiente estructura básica:</p>
+<p><code>comando(objeto)</code></p>
+<p>En donde:</p>
 <ul>
-<li><p>Si asignamos un datos a un objetoal que ya habíamos asignado datos, nuestro objeto conserva los datos más recientes.</p></li>
-<li><p>Esta operación nos permite “guardar” el resultado de operaciones, de modo que podemos recuperarlos sin necesidad de realizar las operaciones otra vez (Revisar <em>Environment</em>).</p></li>
-<li><p>A lo largo del taller utilizaremos <em>&lt;-</em> por ser característico de R y fácil de reconocer visualmente.</p></li>
+<li><p><code>comandos</code>: función a ejecutar a un objeto.</p></li>
+<li><p><code>objeto</code>: estructura de datos que tiene algunos atributos y métodos que actúan sobre sus atributos.</p></li>
 </ul>
-</div>
-<div id="operador-de-concatenación" class="section level2">
-<h2>Operador de concatenación</h2>
-<pre class="r"><code>dos_digitos&lt;-c(15, 2)</code></pre>
-</div>
-</div>
-<div id="estructura-de-datos-en-r" class="section level1">
-<h1>4. Estructura de datos en R</h1>
-<div id="vector" class="section level2">
-<h2>Vector</h2>
-<p>Colección de uno o más datos del mismo tipo.</p>
-<pre class="r"><code>c(15, 2, 3.3, 5, 8)
-## [1] 15.0  2.0  3.3  5.0  8.0</code></pre>
-<pre class="r"><code>vector_numerio&lt;-c(15, 2, 3.3, 5, 8)</code></pre>
-</div>
+<p>Este ejemplo es una operación simple. Al aumentar la complejidad de los análisis la especificación de los comandos y los objetos irá requiriendo una mayor cantidad de información.</p>
 </div>
 
           </div>
@@ -1396,6 +955,13 @@ letra&lt;-&quot;a&quot;</code></pre>
           <div class="article-widget">
             
 <div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/docencia/mmad109/sesion01_2/" rel="next">Datos en RStudio</a>
+  </div>
   
   
 </div>
@@ -1422,6 +988,15 @@ letra&lt;-&quot;a&quot;</code></pre>
 
 
   
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/docencia/mmad109/sesion01_2/">Datos en RStudio</a></li>
+      
+    </ul>
+  </div>
   
 
 
