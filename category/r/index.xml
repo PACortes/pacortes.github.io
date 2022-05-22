@@ -1104,7 +1104,7 @@ glimpse(MaterialParticulado)
 &lt;div id=&#34;las-partes-de-rstudio&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;2. Las partes de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Cuando abras RStudio, notarás muchas ventanas diferentes, cada una con algunas pestañas. En primera instancia, puede que esto sea abrumador. Afortunadamente. solo necesitaremos usar algunos de estas opciones para lograr los objetivos de este taller.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/docencia/MMAD109/Sesion01_1_files/rstudio.png&#34; width=&#34;400&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;static/docencia/MMAD109/Sesion01_1_files/rstudio.png&#34; width=&#34;400&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Consola&lt;/h2&gt;
 &lt;p&gt;Es el corazón de &lt;code&gt;R&lt;/code&gt;y &lt;code&gt;RStudio&lt;/code&gt;. Aquí escribiremos las lineas de comando para “pedir” cosas a RStudio. En la consola también visualzaremos los resultados de las petición realizada (excepto gráficos). Es importante tener en cuenta que:&lt;/p&gt;
@@ -1166,12 +1166,12 @@ glimpse(MaterialParticulado)
 &lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Verificando el tipo de dato&lt;/h2&gt;
 &lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
-&lt;div id=&#34;vksmdmasft&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;vsewyzxbyz&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#vksmdmasft .gt_table {
+#vsewyzxbyz .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1196,7 +1196,7 @@ glimpse(MaterialParticulado)
   border-left-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_heading {
+#vsewyzxbyz .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1208,7 +1208,7 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_title {
+#vsewyzxbyz .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1218,7 +1218,7 @@ glimpse(MaterialParticulado)
   border-bottom-width: 0;
 }
 
-#vksmdmasft .gt_subtitle {
+#vsewyzxbyz .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1228,13 +1228,13 @@ glimpse(MaterialParticulado)
   border-top-width: 0;
 }
 
-#vksmdmasft .gt_bottom_border {
+#vsewyzxbyz .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_col_headings {
+#vsewyzxbyz .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1249,7 +1249,7 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_col_heading {
+#vsewyzxbyz .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1269,7 +1269,7 @@ glimpse(MaterialParticulado)
   overflow-x: hidden;
 }
 
-#vksmdmasft .gt_column_spanner_outer {
+#vsewyzxbyz .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1281,15 +1281,15 @@ glimpse(MaterialParticulado)
   padding-right: 4px;
 }
 
-#vksmdmasft .gt_column_spanner_outer:first-child {
+#vsewyzxbyz .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vksmdmasft .gt_column_spanner_outer:last-child {
+#vsewyzxbyz .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vksmdmasft .gt_column_spanner {
+#vsewyzxbyz .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1301,7 +1301,7 @@ glimpse(MaterialParticulado)
   width: 100%;
 }
 
-#vksmdmasft .gt_group_heading {
+#vsewyzxbyz .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1323,7 +1323,7 @@ glimpse(MaterialParticulado)
   vertical-align: middle;
 }
 
-#vksmdmasft .gt_empty_group_heading {
+#vsewyzxbyz .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1338,15 +1338,15 @@ glimpse(MaterialParticulado)
   vertical-align: middle;
 }
 
-#vksmdmasft .gt_from_md &gt; :first-child {
+#vsewyzxbyz .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#vksmdmasft .gt_from_md &gt; :last-child {
+#vsewyzxbyz .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#vksmdmasft .gt_row {
+#vsewyzxbyz .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1365,7 +1365,7 @@ glimpse(MaterialParticulado)
   overflow-x: hidden;
 }
 
-#vksmdmasft .gt_stub {
+#vsewyzxbyz .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1377,7 +1377,7 @@ glimpse(MaterialParticulado)
   padding-left: 12px;
 }
 
-#vksmdmasft .gt_summary_row {
+#vsewyzxbyz .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1387,7 +1387,7 @@ glimpse(MaterialParticulado)
   padding-right: 5px;
 }
 
-#vksmdmasft .gt_first_summary_row {
+#vsewyzxbyz .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1397,7 +1397,7 @@ glimpse(MaterialParticulado)
   border-top-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_grand_summary_row {
+#vsewyzxbyz .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1407,7 +1407,7 @@ glimpse(MaterialParticulado)
   padding-right: 5px;
 }
 
-#vksmdmasft .gt_first_grand_summary_row {
+#vsewyzxbyz .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1417,11 +1417,11 @@ glimpse(MaterialParticulado)
   border-top-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_striped {
+#vsewyzxbyz .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vksmdmasft .gt_table_body {
+#vsewyzxbyz .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1430,7 +1430,7 @@ glimpse(MaterialParticulado)
   border-bottom-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_footnotes {
+#vsewyzxbyz .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1444,13 +1444,13 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_footnote {
+#vsewyzxbyz .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#vksmdmasft .gt_sourcenotes {
+#vsewyzxbyz .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1464,41 +1464,41 @@ glimpse(MaterialParticulado)
   border-right-color: #D3D3D3;
 }
 
-#vksmdmasft .gt_sourcenote {
+#vsewyzxbyz .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#vksmdmasft .gt_left {
+#vsewyzxbyz .gt_left {
   text-align: left;
 }
 
-#vksmdmasft .gt_center {
+#vsewyzxbyz .gt_center {
   text-align: center;
 }
 
-#vksmdmasft .gt_right {
+#vsewyzxbyz .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vksmdmasft .gt_font_normal {
+#vsewyzxbyz .gt_font_normal {
   font-weight: normal;
 }
 
-#vksmdmasft .gt_font_bold {
+#vsewyzxbyz .gt_font_bold {
   font-weight: bold;
 }
 
-#vksmdmasft .gt_font_italic {
+#vsewyzxbyz .gt_font_italic {
   font-style: italic;
 }
 
-#vksmdmasft .gt_super {
+#vsewyzxbyz .gt_super {
   font-size: 65%;
 }
 
-#vksmdmasft .gt_footnote_marks {
+#vsewyzxbyz .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
