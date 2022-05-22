@@ -509,6 +509,101 @@
     </item>
     
     <item>
+      <title>Introducción a RStudio</title>
+      <link>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</link>
+      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#instalación-de-rstudio&#34;&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#entorno-de-trabajo-de-rstudio&#34;&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;2.1. Consola&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#script&#34;&gt;2.2. Script&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ambiente-historial-conecciones-y-tutorial&#34;&gt;2.3. Ambiente, Historial, Conecciones y Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#archivos-visualizaciones-paquetes-y-ayuda&#34;&gt;2.4. Archivos, Visualizaciones, Paquetes y Ayuda&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#interactuando-con-rstudio&#34;&gt;3. Interactuando con &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;5. Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Recordemos que &lt;code&gt;RStudio&lt;/code&gt; no es &lt;code&gt;R&lt;/code&gt;. Es un programa que ejecuta &lt;code&gt;R&lt;/code&gt; y proporciona herramientas adicionales que son útiles al escribir código &lt;code&gt;R&lt;/code&gt;, algo así como su sistema operativo puede ejecutar un navegador web.&lt;/p&gt;
+&lt;p&gt;Este taller asumirá que estamos utilizando &lt;code&gt;RStudio&lt;/code&gt; para interactuar con &lt;code&gt;R&lt;/code&gt;, aunque todo lo que veremos se puede hacer directament en &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;instalación-de-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; es gratuito y de código abierto. Haz clic &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;aquí&lt;/a&gt; para descargar la versión que corresponda a tu sitema operativo.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; requiere la instalación de &lt;code&gt;R&lt;/code&gt; (versión 3.0.1 o superior). Para descargar &lt;code&gt;R&lt;/code&gt;, haz clic &lt;a href=&#34;https://cran.r-project.org/bin/windows/base/&#34;&gt;aquí&lt;/a&gt; si tu sistema operativo es Windows, y &lt;a href=&#34;https://cran.r-project.org/bin/macosx/&#34;&gt;aquí&lt;/a&gt; en caso de que sea macOS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;entorno-de-trabajo-de-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.&lt;/p&gt;
+&lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.1. Consola&lt;/h2&gt;
+&lt;p&gt;En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. La consola es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.2. Script&lt;/h2&gt;
+&lt;p&gt;En el panel superior izquierdo, encontraremos el script, editor de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para ello, la(s) línea(s) de texto debe(n) estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Para guardar el script:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;File &amp;gt; Save as&lt;/em&gt; y seleccionar la ruta donde se quiere guardar el archivo con la extensión &lt;em&gt;.R&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Hacer clic en el botón &lt;em&gt;Guardar&lt;/em&gt; que se encuentra en la parte izquierda de la cinta de opciones del script.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;ambiente-historial-conecciones-y-tutorial&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3. Ambiente, Historial, Conecciones y Tutorial&lt;/h2&gt;
+&lt;p&gt;En el panel superior derecho, encontraremos cuatro pestañas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Environment&lt;/strong&gt;: En el ambiente de trabajo se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;History&lt;/strong&gt;: En el hisotrial se registran las instrucciones ejecutadas. Como opciones, podemos cargar y guardar el historial de la sesión, seleccionar una o más instrucciones y enviarlas a la consola o al script, además de poder limpiar el historial.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connections&lt;/strong&gt;: En conecciones, puedes conectar &lt;code&gt;RStudio&lt;/code&gt; a diferentes fuentes de datos. Por ejemplo ODBC, Spark, Oracle, SQLServer, entre otras.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tutorial&lt;/strong&gt;: Aquí encontraremos ayuda usando el paquete &lt;code&gt;learnr&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;archivos-visualizaciones-paquetes-y-ayuda&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.4. Archivos, Visualizaciones, Paquetes y Ayuda&lt;/h2&gt;
+&lt;p&gt;En el panel inferior derecho, encontraremos cuatro pestañas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Files&lt;/strong&gt;: En la pestaña archivos podemos ver el historial de archivos trabajados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Plots&lt;/strong&gt;: Aquí se visualizan los gráficos que generamos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Packages&lt;/strong&gt;: Entrega un listado de los paquetes instalados en &lt;code&gt;R&lt;/code&gt; y los que han sido cargados en la sesión. A través de las opciones de esta pestaña podemos instalar nuevos paquetes o actualizar los existentes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Help&lt;/strong&gt;: Permite acceder al CRAN (siempre que se cuente con conexión a Internet), página oficial del software que ofrece diferentes recursos para el programa: información general, de los paquetes instalados, de funciones de interés, entre otros.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Es importante señalar que podemos reorganizar los paneles en &lt;em&gt;Ver -&amp;gt; Paneles -&amp;gt; Diseño de panel&lt;/em&gt;. Además. podemos agregar y eliminar pestañas de los paneles en &lt;em&gt;Ver&lt;/em&gt; y seleccionando o deseleccionando las opciones de pestañas que se enumeran en la parte inferior.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;interactuando-con-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Interactuando con &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Interactuar con &lt;code&gt;RStudio&lt;/code&gt; es simple. Básicamente, debemos escribir el código &lt;code&gt;R&lt;/code&gt; en la línea inferior de la consola y luego haga clic en &lt;em&gt;Enter&lt;/em&gt; para ejecutarlo. También podemos enviar código desde el &lt;em&gt;script&lt;/em&gt;, presionando &lt;em&gt;&amp;lt;Ctrl + R&amp;gt;&lt;/em&gt; (Windows) o &lt;em&gt;&amp;lt;Ctrl +Enter&amp;gt;&lt;/em&gt; (Mac).&lt;/p&gt;
+&lt;p&gt;El código que escribimos se llama comando, porque dará la orden a nuestro computador que haga algo por nosotros. La línea en la que escribimos se llama línea de comando.&lt;/p&gt;
+&lt;p&gt;Cuando escribimos un comando en el prompt &lt;em&gt;&amp;gt;&lt;/em&gt; y presionamos &lt;em&gt;Enter&lt;/em&gt;, o lo enviamos desde el &lt;em&gt;script&lt;/em&gt;, &lt;code&gt;R&lt;/code&gt; ejecutará el comando y nos mostará los resultados en la consola. Junto a nuestros resultados, aparecerá &lt;em&gt;[1]&lt;/em&gt;, informando que en esta línea comienza con el primer valor del resultado. Luego, RStudio muestra un nuevo &lt;em&gt;&amp;gt;&lt;/em&gt; para su próximo comando.&lt;/p&gt;
+&lt;p&gt;Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cuando la consola muestra el prompt &lt;em&gt;&amp;gt;&lt;/em&gt;, significa que podemos dar nuevos comandos para ejecutar.&lt;/li&gt;
+&lt;li&gt;Si escribimos un comando incompleto y presionamos &lt;em&gt;Enter&lt;/em&gt;, la consola mostrará un indicador &lt;em&gt;+&lt;/em&gt;, lo que significa que está esperando que escribamos el resto del comando.&lt;/li&gt;
+&lt;li&gt;Si escribimos un comando que R no reconoce, R devolverá un mensaje de error. Esto no es para alarmarno. R simplemente nos está diciendo que no puede entender o hacer lo que le pedimos. El texto en rojo nos avisa y explica, los errores en la solicitud realizada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5. Sintáxis&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; es un lenguaje de programación. Tanto en &lt;code&gt;R&lt;/code&gt;, así como de la interfaz &lt;code&gt;RStudio&lt;/code&gt;, podemos interactuará con el programa mediante códigos. La sintaxis es un conjunto de códigos. Su uso en &lt;code&gt;R&lt;/code&gt; y &lt;code&gt;RStudio&lt;/code&gt; es bastante intuitivo y sigue un patrón lógico.&lt;/p&gt;
+&lt;p&gt;De modo general, la sintáxis de &lt;code&gt;R&lt;/code&gt; sigue la siguiente estructura básica:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;comando(objeto)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;comandos&lt;/code&gt;: función a ejecutar a un objeto.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;objeto&lt;/code&gt;: estructura de datos que tiene algunos atributos y métodos que actúan sobre sus atributos.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Este ejemplo es una operación simple. Al aumentar la complejidad de los análisis la especificación de los comandos y los objetos irá requiriendo una mayor cantidad de información.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>1. Aspectos básicos</title>
       <link>https://academic-demo.netlify.app/courses/rvest/01_instalar/</link>
       <pubDate>Mon, 20 Sep 2021 21:13:14 -0500</pubDate>
@@ -1529,101 +1624,6 @@ glimpse(MaterialParticulado)
         plot.title=element_text(size=25),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Introducción a RStudio</title>
-      <link>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</link>
-      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</guid>
-      <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#instalación-de-rstudio&#34;&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#entorno-de-trabajo-de-rstudio&#34;&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;2.1. Consola&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#script&#34;&gt;2.2. Script&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ambiente-historial-conecciones-y-tutorial&#34;&gt;2.3. Ambiente, Historial, Conecciones y Tutorial&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#archivos-visualizaciones-paquetes-y-ayuda&#34;&gt;2.4. Archivos, Visualizaciones, Paquetes y Ayuda&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#interactuando-con-rstudio&#34;&gt;3. Interactuando con &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;5. Sintáxis&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Recordemos que &lt;code&gt;RStudio&lt;/code&gt; no es &lt;code&gt;R&lt;/code&gt;. Es un programa que ejecuta &lt;code&gt;R&lt;/code&gt; y proporciona herramientas adicionales que son útiles al escribir código &lt;code&gt;R&lt;/code&gt;, algo así como su sistema operativo puede ejecutar un navegador web.&lt;/p&gt;
-&lt;p&gt;Este taller asumirá que estamos utilizando &lt;code&gt;RStudio&lt;/code&gt; para interactuar con &lt;code&gt;R&lt;/code&gt;, aunque todo lo que veremos se puede hacer directament en &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;div id=&#34;instalación-de-rstudio&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; es gratuito y de código abierto. Haz clic &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;aquí&lt;/a&gt; para descargar la versión que corresponda a tu sitema operativo.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; requiere la instalación de &lt;code&gt;R&lt;/code&gt; (versión 3.0. 1 o superior). Para descargar &lt;code&gt;R&lt;/code&gt;, haz clic &lt;a href=&#34;https://cran.r-project.org/bin/windows/base/&#34;&gt;aquí&lt;/a&gt; si tu sistema operativo es Windows, y &lt;a href=&#34;https://cran.r-project.org/bin/macosx/&#34;&gt;aquí&lt;/a&gt; en caso de que sea macOS.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;entorno-de-trabajo-de-rstudio&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.&lt;/p&gt;
-&lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.1. Consola&lt;/h2&gt;
-&lt;p&gt;En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. La consola es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.2. Script&lt;/h2&gt;
-&lt;p&gt;En el panel superior izquierdo, encontraremos el script, editor de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para ello, la(s) línea(s) de texto debe(n) estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Para guardar el script:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;File &amp;gt; Save as&lt;/em&gt; y seleccionar la ruta donde se quiere guardar el archivo con la extensión &lt;em&gt;.R&lt;/em&gt;&lt;/li&gt;
-&lt;li&gt;Hacer clic en el botón &lt;em&gt;Guardar&lt;/em&gt; que se encuentra en la parte izquierda de la cinta de opciones del script.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;ambiente-historial-conecciones-y-tutorial&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.3. Ambiente, Historial, Conecciones y Tutorial&lt;/h2&gt;
-&lt;p&gt;En el panel superior derecho, encontraremos cuatro pestañas:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Environment&lt;/strong&gt;: En el ambiente de trabajo se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;History&lt;/strong&gt;: En el hisotrial se registran las instrucciones ejecutadas. Como opciones, podemos cargar y guardar el historial de la sesión, seleccionar una o más instrucciones y enviarlas a la consola o al script, además de poder limpiar el historial.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Connections&lt;/strong&gt;: En conecciones, puedes conectar &lt;code&gt;RStudio&lt;/code&gt; a diferentes fuentes de datos. Por ejemplo ODBC, Spark, Oracle, SQLServer, entre otras.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tutorial&lt;/strong&gt;: Aquí encontraremos ayuda usando el paquete &lt;code&gt;learnr&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;archivos-visualizaciones-paquetes-y-ayuda&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.4. Archivos, Visualizaciones, Paquetes y Ayuda&lt;/h2&gt;
-&lt;p&gt;En el panel inferior derecho, encontraremos cuatro pestañas:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Files&lt;/strong&gt;: En la pestaña archivos podemos ver el historial de archivos trabajados.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plots&lt;/strong&gt;: Aquí se visualizan los gráficos que generamos.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Packages&lt;/strong&gt;: Entrega un listado de los paquetes instalados en &lt;code&gt;R&lt;/code&gt; y los que han sido cargados en la sesión. A través de las opciones de esta pestaña podemos instalar nuevos paquetes o actualizar los existentes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Help&lt;/strong&gt;: Permite acceder al CRAN (siempre que se cuente con conexión a Internet), página oficial del software que ofrece diferentes recursos para el programa: información general, de los paquetes instalados, de funciones de interés, entre otros.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Es importante señalar que podemos reorganizar los paneles en &lt;em&gt;Ver -&amp;gt; Paneles -&amp;gt; Diseño de panel&lt;/em&gt;. Además. podemos agregar y eliminar pestañas de los paneles en &lt;em&gt;Ver&lt;/em&gt; y seleccionando o deseleccionando las opciones de pestañas que se enumeran en la parte inferior.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;interactuando-con-rstudio&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Interactuando con &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;Interactuar con &lt;code&gt;RStudio&lt;/code&gt; es simple. Básicamente, debemos escribir el código &lt;code&gt;R&lt;/code&gt; en la línea inferior de la consola y luego haga clic en &lt;em&gt;Enter&lt;/em&gt; para ejecutarlo. También podemos enviar código desde el &lt;em&gt;script&lt;/em&gt;, presionando &lt;em&gt;&amp;lt;Ctrl + R&amp;gt;&lt;/em&gt; (Windows) o &lt;em&gt;&amp;lt;Ctrl +Enter&amp;gt;&lt;/em&gt; (Mac).&lt;/p&gt;
-&lt;p&gt;El código que escribimos se llama comando, porque dará la orden a nuestro computador que haga algo por nosotros. La línea en la que escribimos se llama línea de comando.&lt;/p&gt;
-&lt;p&gt;Cuando escribimos un comando en el prompt &lt;em&gt;&amp;gt;&lt;/em&gt; y presionamos &lt;em&gt;Enter&lt;/em&gt;, o lo enviamos desde el &lt;em&gt;script&lt;/em&gt;, &lt;code&gt;R&lt;/code&gt; ejecutará el comando y nos mostará los resultados en la consola. Junto a nuestros resultados, aparecerá &lt;em&gt;[1]&lt;/em&gt;, informando que en esta línea comienza con el primer valor del resultado. Luego, RStudio muestra un nuevo &lt;em&gt;&amp;gt;&lt;/em&gt; para su próximo comando.&lt;/p&gt;
-&lt;p&gt;Es importante tener en cuenta que:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cuando la consola muestra el prompt &lt;em&gt;&amp;gt;&lt;/em&gt;, significa que podemos dar nuevos comandos para ejecutar.&lt;/li&gt;
-&lt;li&gt;Si escribimos un comando incompleto y presionamos &lt;em&gt;Enter&lt;/em&gt;, la consola mostrará un indicador &lt;em&gt;+&lt;/em&gt;, lo que significa que está esperando que escribamos el resto del comando.&lt;/li&gt;
-&lt;li&gt;Si escribimos un comando que R no reconoce, R devolverá un mensaje de error. Esto no es para alarmarno. R simplemente nos está diciendo que no puede entender o hacer lo que le pedimos. El texto en rojo nos avisa y explica, los errores en la solicitud realizada.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;5. Sintáxis&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;R&lt;/code&gt; es un lenguaje de programación. Tanto en &lt;code&gt;R&lt;/code&gt;, así como de la interfaz &lt;code&gt;RStudio&lt;/code&gt;, podemos interactuará con el programa mediante códigos. La sintaxis es un conjunto de códigos. Su uso en &lt;code&gt;R&lt;/code&gt; y &lt;code&gt;RStudio&lt;/code&gt; es bastante intuitivo y sigue un patrón lógico.&lt;/p&gt;
-&lt;p&gt;De modo general, la sintáxis de &lt;code&gt;R&lt;/code&gt; sigue la siguiente estructura básica:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;comando(objeto)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;En donde:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;comandos&lt;/code&gt;: función a ejecutar a un objeto.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;objeto&lt;/code&gt;: estructura de datos que tiene algunos atributos y métodos que actúan sobre sus atributos.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Este ejemplo es una operación simple. Al aumentar la complejidad de los análisis la especificación de los comandos y los objetos irá requiriendo una mayor cantidad de información.&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
