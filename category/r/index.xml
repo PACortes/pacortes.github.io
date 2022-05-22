@@ -897,507 +897,6 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
     </item>
     
     <item>
-      <title>Conceptos básicos de R</title>
-      <link>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</link>
-      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</guid>
-      <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;Consola&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#script&#34;&gt;Script&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;2. Tipos de datos en R&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#numérico&#34;&gt;Numérico&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#cadena-de-texto&#34;&gt;Cadena de texto&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#factor&#34;&gt;Factor&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#lógico&#34;&gt;Lógico&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#perdido-na-y-vacío-null&#34;&gt;Perdido (NA) y Vacío (NULL)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#verificando-el-tipo-de-dato&#34;&gt;Verificando el tipo de dato&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#operadores&#34;&gt;3. Operadores&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#operador-de-asignación&#34;&gt;Operador de asignación&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#operador-de-concatenación&#34;&gt;Operador de concatenación&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#estructura-de-datos-en-r&#34;&gt;4. Estructura de datos en R&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#vector&#34;&gt;Vector&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/docencia/MMAD109/Sesion01_1_files/RSTUDIO.png&#34; width=&#34;400&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
-&lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Consola&lt;/h2&gt;
-&lt;p&gt;Es el corazón de &lt;code&gt;R&lt;/code&gt;y &lt;code&gt;RStudio&lt;/code&gt;. Aquí escribiremos las lineas de comando para “pedir” cosas a RStudio. En la consola también visualzaremos los resultados de las petición realizada (excepto gráficos). Es importante tener en cuenta que:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Cuando la consola tiene el cursor &lt;em&gt;&amp;gt;&lt;/em&gt; significa que le podemos dar comandos para ejecutar.&lt;/li&gt;
-&lt;li&gt;Si es que tiene el símbolo &lt;em&gt;+&lt;/em&gt; quiere decir que nos falta completar el comando anterior.&lt;/li&gt;
-&lt;li&gt;El texto en rojo nos avisa y explica, errores en la solicitud realizada.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Script&lt;/h2&gt;
-&lt;p&gt;Es un documento de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;En el script escribiremos y ejecutaremos nuestras líneas de código. Además, en el script podemos escribir notas personales. Es importante tener en cuenta que:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Para ejecutar una(s) línea(s) de comandos, debemos presionar &lt;em&gt;&amp;lt;Ctrl + R&amp;gt;&lt;/em&gt; (Windows) o &lt;em&gt;&amp;lt;Ctrl +Enter&amp;gt;&lt;/em&gt; (Mac). Los resultados se visualizaran en la consola.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Para geneerar notas personales, las(s) línea(s) de texto y/o códigolaLas deben estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tipos-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Tipos de datos en R&lt;/h1&gt;
-&lt;p&gt;Los tipos de datos de uso más común en R son:&lt;/p&gt;
-&lt;div id=&#34;numérico&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Numérico&lt;/h2&gt;
-&lt;p&gt;Representan números que tienen una parte decimal o fraccionaria.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5
-## [1] 5
-
-25.3
-## [1] 25.3
-
-123890.85544
-## [1] 123890.9&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cadena-de-texto&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Cadena de texto&lt;/h2&gt;
-&lt;p&gt;Secuencias de caracteres. Puede contener letras, números, espacios, signos de puntuación y símbolos especiales.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;quot;a&amp;quot;
-## [1] &amp;quot;a&amp;quot;
-
-&amp;quot;a&amp;quot;
-## [1] &amp;quot;a&amp;quot;
-
-&amp;quot;Contaminacion&amp;quot;
-## [1] &amp;quot;Contaminacion&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;factor&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Factor&lt;/h2&gt;
-&lt;p&gt;Dato numérico representado por una etiqueta.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;lógico&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Lógico&lt;/h2&gt;
-&lt;p&gt;Sólo tienen dos valores posibles: verdadero (TRUE) y falso (FALSE). Representan si una condición o estado se cumple, es verdadero, o no, es falso.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;perdido-na-y-vacío-null&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Perdido (NA) y Vacío (NULL)&lt;/h2&gt;
-&lt;p&gt;En R, usamos NA para representar datos perdidos, mientras que NULL representa la ausencia de datos. La diferencia entre las dos es que un dato NULL aparece sólo cuando R intenta recuperar un dato y no encuentra nada, mientras que NA es usado para representar explícitamente datos perdidos, omitidos o que por alguna razón son faltantes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Verificando el tipo de dato&lt;/h2&gt;
-&lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
-&lt;div id=&#34;zueropoesy&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
-&lt;style&gt;html {
-  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
-}
-
-#zueropoesy .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 20px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#zueropoesy .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#zueropoesy .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#zueropoesy .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 6px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#zueropoesy .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#zueropoesy .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#zueropoesy .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 25px;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#zueropoesy .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 25px;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#zueropoesy .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#zueropoesy .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#zueropoesy .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#zueropoesy .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#zueropoesy .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#zueropoesy .gt_from_md &gt; :first-child {
-  margin-top: 0;
-}
-
-#zueropoesy .gt_from_md &gt; :last-child {
-  margin-bottom: 0;
-}
-
-#zueropoesy .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#zueropoesy .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#zueropoesy .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#zueropoesy .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#zueropoesy .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#zueropoesy .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#zueropoesy .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#zueropoesy .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#zueropoesy .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#zueropoesy .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#zueropoesy .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#zueropoesy .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#zueropoesy .gt_left {
-  text-align: left;
-}
-
-#zueropoesy .gt_center {
-  text-align: center;
-}
-
-#zueropoesy .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#zueropoesy .gt_font_normal {
-  font-weight: normal;
-}
-
-#zueropoesy .gt_font_bold {
-  font-weight: bold;
-}
-
-#zueropoesy .gt_font_italic {
-  font-style: italic;
-}
-
-#zueropoesy .gt_super {
-  font-size: 65%;
-}
-
-#zueropoesy .gt_footnote_marks {
-  font-style: italic;
-  font-weight: normal;
-  font-size: 65%;
-}
-&lt;/style&gt;
-&lt;table class=&#34;gt_table&#34;&gt;
-  
-  &lt;thead class=&#34;gt_col_headings&#34;&gt;
-    &lt;tr&gt;
-      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Función&lt;/th&gt;
-      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Tipo de dato&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody class=&#34;gt_table_body&#34;&gt;
-    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.integer()&lt;/td&gt;
-&lt;td class=&#34;gt_row gt_center&#34;&gt;Entero&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.numeric&lt;/td&gt;
-&lt;td class=&#34;gt_row gt_center&#34;&gt;Numérico&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.character()&lt;/td&gt;
-&lt;td class=&#34;gt_row gt_center&#34;&gt;Cadena de texto&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.factor()&lt;/td&gt;
-&lt;td class=&#34;gt_row gt_center&#34;&gt;Factor&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.logical()&lt;/td&gt;
-&lt;td class=&#34;gt_row gt_center&#34;&gt;Lógico&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.na()&lt;/td&gt;
-&lt;td class=&#34;gt_row gt_center&#34;&gt;NA&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.null()&lt;/td&gt;
-&lt;td class=&#34;gt_row gt_center&#34;&gt;NULL&lt;/td&gt;&lt;/tr&gt;
-  &lt;/tbody&gt;
-  
-  
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;operadores&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Operadores&lt;/h1&gt;
-&lt;div id=&#34;operador-de-asignación&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Operador de asignación&lt;/h2&gt;
-&lt;p&gt;Nos permite asignar datos a un objeto. Para ello podems utilizar los símbolos &lt;em&gt;&amp;lt;-&lt;/em&gt; o &lt;em&gt;=&lt;/em&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos&amp;lt;-2
-
-letra&amp;lt;-&amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Es importante tener en cuenta que:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Si asignamos un datos a un objetoal que ya habíamos asignado datos, nuestro objeto conserva los datos más recientes.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Esta operación nos permite “guardar” el resultado de operaciones, de modo que podemos recuperarlos sin necesidad de realizar las operaciones otra vez (Revisar &lt;em&gt;Environment&lt;/em&gt;).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A lo largo del taller utilizaremos &lt;em&gt;&amp;lt;-&lt;/em&gt; por ser característico de R y fácil de reconocer visualmente.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;operador-de-concatenación&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Operador de concatenación&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos_digitos&amp;lt;-c(15, 2)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;estructura-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;4. Estructura de datos en R&lt;/h1&gt;
-&lt;div id=&#34;vector&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Vector&lt;/h2&gt;
-&lt;p&gt;Colección de uno o más datos del mismo tipo.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(15, 2, 3.3, 5, 8)
-## [1] 15.0  2.0  3.3  5.0  8.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_numerio&amp;lt;-c(15, 2, 3.3, 5, 8)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Grafico de cajas</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
@@ -1554,6 +1053,516 @@ glimpse(MaterialParticulado)
         plot.title=element_text(size=25),
         axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introducción a RStudio</title>
+      <link>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</link>
+      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#instalación-de-rstudio&#34;&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#las-partes-de-rstudio&#34;&gt;2. Las partes de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;Consola&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#script&#34;&gt;Script&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;2. Tipos de datos en R&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#numérico&#34;&gt;Numérico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cadena-de-texto&#34;&gt;Cadena de texto&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#factor&#34;&gt;Factor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lógico&#34;&gt;Lógico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#perdido-na-y-vacío-null&#34;&gt;Perdido (NA) y Vacío (NULL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#verificando-el-tipo-de-dato&#34;&gt;Verificando el tipo de dato&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#operadores&#34;&gt;3. Operadores&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#operador-de-asignación&#34;&gt;Operador de asignación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#operador-de-concatenación&#34;&gt;Operador de concatenación&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#estructura-de-datos-en-r&#34;&gt;4. Estructura de datos en R&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#vector&#34;&gt;Vector&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; no es &lt;code&gt;R&lt;/code&gt;. Es un programa que ejecuta &lt;code&gt;R&lt;/code&gt; y proporciona herramientas adicionales que son útiles al escribir código &lt;code&gt;R&lt;/code&gt;, algo así como su sistema operativo puede ejecutar un navegador web.&lt;/p&gt;
+&lt;p&gt;Este taller asumirá que está utilizando &lt;code&gt;RStudio&lt;/code&gt; para interactuar con &lt;code&gt;R&lt;/code&gt;y , aunque todo lo que veremos se puede hacer directament en &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;instalación-de-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; es gratuito y de código abierto. Haz click &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;aquí&lt;/a&gt; para descargar la versión que corresponda a tu sitema operativo.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; requiere la instalación de &lt;code&gt;R&lt;/code&gt; (versión 3.0. 1 o superior). Para descargar &lt;code&gt;R&lt;/code&gt;, haz click &lt;a href=&#34;https://cran.r-project.org/bin/windows/base/&#34;&gt;aquí&lt;/a&gt; si tu sistema operativo es Windows, y &lt;a href=&#34;https://cran.r-project.org/bin/macosx/&#34;&gt;aquí&lt;/a&gt; en caso de que sea macOS.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;las-partes-de-rstudio&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Las partes de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Cuando abras RStudio, notarás muchas ventanas diferentes, cada una con algunas pestañas. En primera instancia, puede que esto sea abrumador. Afortunadamente. solo necesitaremos usar algunos de estas opciones para lograr los objetivos de este taller.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/docencia/MMAD109/Sesion01_1_files/RSTUDIO.png&#34; width=&#34;400&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Consola&lt;/h2&gt;
+&lt;p&gt;Es el corazón de &lt;code&gt;R&lt;/code&gt;y &lt;code&gt;RStudio&lt;/code&gt;. Aquí escribiremos las lineas de comando para “pedir” cosas a RStudio. En la consola también visualzaremos los resultados de las petición realizada (excepto gráficos). Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cuando la consola tiene el cursor &lt;em&gt;&amp;gt;&lt;/em&gt; significa que le podemos dar comandos para ejecutar.&lt;/li&gt;
+&lt;li&gt;Si es que tiene el símbolo &lt;em&gt;+&lt;/em&gt; quiere decir que nos falta completar el comando anterior.&lt;/li&gt;
+&lt;li&gt;El texto en rojo nos avisa y explica, errores en la solicitud realizada.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Script&lt;/h2&gt;
+&lt;p&gt;Es un documento de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;En el script escribiremos y ejecutaremos nuestras líneas de código. Además, en el script podemos escribir notas personales. Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Para ejecutar una(s) línea(s) de comandos, debemos presionar &lt;em&gt;&amp;lt;Ctrl + R&amp;gt;&lt;/em&gt; (Windows) o &lt;em&gt;&amp;lt;Ctrl +Enter&amp;gt;&lt;/em&gt; (Mac). Los resultados se visualizaran en la consola.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Para geneerar notas personales, las(s) línea(s) de texto y/o códigolaLas deben estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tipos-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Tipos de datos en R&lt;/h1&gt;
+&lt;p&gt;Los tipos de datos de uso más común en R son:&lt;/p&gt;
+&lt;div id=&#34;numérico&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Numérico&lt;/h2&gt;
+&lt;p&gt;Representan números que tienen una parte decimal o fraccionaria.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5
+## [1] 5
+
+25.3
+## [1] 25.3
+
+123890.85544
+## [1] 123890.9&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cadena-de-texto&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cadena de texto&lt;/h2&gt;
+&lt;p&gt;Secuencias de caracteres. Puede contener letras, números, espacios, signos de puntuación y símbolos especiales.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;quot;a&amp;quot;
+## [1] &amp;quot;a&amp;quot;
+
+&amp;quot;a&amp;quot;
+## [1] &amp;quot;a&amp;quot;
+
+&amp;quot;Contaminacion&amp;quot;
+## [1] &amp;quot;Contaminacion&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;factor&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Factor&lt;/h2&gt;
+&lt;p&gt;Dato numérico representado por una etiqueta.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lógico&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Lógico&lt;/h2&gt;
+&lt;p&gt;Sólo tienen dos valores posibles: verdadero (TRUE) y falso (FALSE). Representan si una condición o estado se cumple, es verdadero, o no, es falso.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;perdido-na-y-vacío-null&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Perdido (NA) y Vacío (NULL)&lt;/h2&gt;
+&lt;p&gt;En R, usamos NA para representar datos perdidos, mientras que NULL representa la ausencia de datos. La diferencia entre las dos es que un dato NULL aparece sólo cuando R intenta recuperar un dato y no encuentra nada, mientras que NA es usado para representar explícitamente datos perdidos, omitidos o que por alguna razón son faltantes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Verificando el tipo de dato&lt;/h2&gt;
+&lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
+&lt;div id=&#34;bqvwldcfae&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#bqvwldcfae .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#bqvwldcfae .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#bqvwldcfae .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#bqvwldcfae .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#bqvwldcfae .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#bqvwldcfae .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#bqvwldcfae .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#bqvwldcfae .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#bqvwldcfae .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#bqvwldcfae .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#bqvwldcfae .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#bqvwldcfae .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#bqvwldcfae .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#bqvwldcfae .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bqvwldcfae .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#bqvwldcfae .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#bqvwldcfae .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#bqvwldcfae .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#bqvwldcfae .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#bqvwldcfae .gt_left {
+  text-align: left;
+}
+
+#bqvwldcfae .gt_center {
+  text-align: center;
+}
+
+#bqvwldcfae .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#bqvwldcfae .gt_font_normal {
+  font-weight: normal;
+}
+
+#bqvwldcfae .gt_font_bold {
+  font-weight: bold;
+}
+
+#bqvwldcfae .gt_font_italic {
+  font-style: italic;
+}
+
+#bqvwldcfae .gt_super {
+  font-size: 65%;
+}
+
+#bqvwldcfae .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Función&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Tipo de dato&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.integer()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Entero&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.numeric&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Numérico&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.character()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Cadena de texto&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.factor()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Factor&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.logical()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Lógico&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.na()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;NA&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;is.null()&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;NULL&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;operadores&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Operadores&lt;/h1&gt;
+&lt;div id=&#34;operador-de-asignación&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Operador de asignación&lt;/h2&gt;
+&lt;p&gt;Nos permite asignar datos a un objeto. Para ello podems utilizar los símbolos &lt;em&gt;&amp;lt;-&lt;/em&gt; o &lt;em&gt;=&lt;/em&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos&amp;lt;-2
+
+letra&amp;lt;-&amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Es importante tener en cuenta que:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Si asignamos un datos a un objetoal que ya habíamos asignado datos, nuestro objeto conserva los datos más recientes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Esta operación nos permite “guardar” el resultado de operaciones, de modo que podemos recuperarlos sin necesidad de realizar las operaciones otra vez (Revisar &lt;em&gt;Environment&lt;/em&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A lo largo del taller utilizaremos &lt;em&gt;&amp;lt;-&lt;/em&gt; por ser característico de R y fácil de reconocer visualmente.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;operador-de-concatenación&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Operador de concatenación&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos_digitos&amp;lt;-c(15, 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;estructura-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Estructura de datos en R&lt;/h1&gt;
+&lt;div id=&#34;vector&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Vector&lt;/h2&gt;
+&lt;p&gt;Colección de uno o más datos del mismo tipo.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(15, 2, 3.3, 5, 8)
+## [1] 15.0  2.0  3.3  5.0  8.0&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_numerio&amp;lt;-c(15, 2, 3.3, 5, 8)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

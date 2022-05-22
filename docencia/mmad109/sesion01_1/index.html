@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Definición  Consola Script  2. Tipos de datos en R  Numérico Cadena de texto Factor Lógico Perdido (NA) y Vacío (NULL) Verificando el tipo de dato  3." />
+  <meta name="description" content="1. Instalación de RStudio 2. Las partes de RStudio  Consola Script  2. Tipos de datos en R  Numérico Cadena de texto Factor Lógico Perdido (NA) y Vacío (NULL) Verificando el tipo de dato  3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/" />
@@ -294,8 +294,8 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/" />
-  <meta property="og:title" content="Conceptos básicos de R | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición  Consola Script  2. Tipos de datos en R  Numérico Cadena de texto Factor Lógico Perdido (NA) y Vacío (NULL) Verificando el tipo de dato  3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:title" content="Introducción a RStudio | Pablo Cortes" />
+  <meta property="og:description" content="1. Instalación de RStudio 2. Las partes de RStudio  Consola Script  2. Tipos de datos en R  Numérico Cadena de texto Factor Lógico Perdido (NA) y Vacío (NULL) Verificando el tipo de dato  3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -321,7 +321,7 @@
 
 
 
-  <title>Conceptos básicos de R | Pablo Cortes</title>
+  <title>Introducción a RStudio | Pablo Cortes</title>
 </head>
 
 
@@ -759,7 +759,7 @@
       
 
 
-  <li class="active"><a href="/docencia/mmad109/sesion01_1/">Conceptos básicos de R</a></li>
+  <li class="active"><a href="/docencia/mmad109/sesion01_1/">Introducción a RStudio</a></li>
 
       
         </ul>
@@ -833,7 +833,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        Conceptos básicos de R
+        Introducción a RStudio
       </li>
     </ol>
   </nav>
@@ -841,7 +841,7 @@
 
           
 
-          <h1>Conceptos básicos de R</h1>
+          <h1>Introducción a RStudio</h1>
 
           <div class="article-style">
             
@@ -849,7 +849,8 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#definición">1. Definición</a>
+<li><a href="#instalación-de-rstudio">1. Instalación de <code>RStudio</code></a></li>
+<li><a href="#las-partes-de-rstudio">2. Las partes de <code>RStudio</code></a>
 <ul>
 <li><a href="#consola">Consola</a></li>
 <li><a href="#script">Script</a></li>
@@ -875,8 +876,16 @@
 </ul>
 </div>
 
-<div id="definición" class="section level1">
-<h1>1. Definición</h1>
+<p><code>RStudio</code> no es <code>R</code>. Es un programa que ejecuta <code>R</code> y proporciona herramientas adicionales que son útiles al escribir código <code>R</code>, algo así como su sistema operativo puede ejecutar un navegador web.</p>
+<p>Este taller asumirá que está utilizando <code>RStudio</code> para interactuar con <code>R</code>y , aunque todo lo que veremos se puede hacer directament en <code>R</code>.</p>
+<div id="instalación-de-rstudio" class="section level1">
+<h1>1. Instalación de <code>RStudio</code></h1>
+<p><code>RStudio</code> es gratuito y de código abierto. Haz click <a href="https://www.rstudio.com/products/rstudio/download/">aquí</a> para descargar la versión que corresponda a tu sitema operativo.</p>
+<p><code>RStudio</code> requiere la instalación de <code>R</code> (versión 3.0. 1 o superior). Para descargar <code>R</code>, haz click <a href="https://cran.r-project.org/bin/windows/base/">aquí</a> si tu sistema operativo es Windows, y <a href="https://cran.r-project.org/bin/macosx/">aquí</a> en caso de que sea macOS.</p>
+</div>
+<div id="las-partes-de-rstudio" class="section level1">
+<h1>2. Las partes de <code>RStudio</code></h1>
+<p>Cuando abras RStudio, notarás muchas ventanas diferentes, cada una con algunas pestañas. En primera instancia, puede que esto sea abrumador. Afortunadamente. solo necesitaremos usar algunos de estas opciones para lograr los objetivos de este taller.</p>
 <p><img src="/docencia/MMAD109/Sesion01_1_files/RSTUDIO.png" width="400" height="400" /></p>
 <div id="consola" class="section level2">
 <h2>Consola</h2>
@@ -939,12 +948,12 @@
 <div id="verificando-el-tipo-de-dato" class="section level2">
 <h2>Verificando el tipo de dato</h2>
 <p>Podemos verificar si un dato es de un tipo específico con la familia de funciones <code>is()</code>. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE</p>
-<div id="zueropoesy" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="bqvwldcfae" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#zueropoesy .gt_table {
+#bqvwldcfae .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -969,7 +978,7 @@
   border-left-color: #D3D3D3;
 }
 
-#zueropoesy .gt_heading {
+#bqvwldcfae .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -981,7 +990,7 @@
   border-right-color: #D3D3D3;
 }
 
-#zueropoesy .gt_title {
+#bqvwldcfae .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -991,7 +1000,7 @@
   border-bottom-width: 0;
 }
 
-#zueropoesy .gt_subtitle {
+#bqvwldcfae .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1001,13 +1010,13 @@
   border-top-width: 0;
 }
 
-#zueropoesy .gt_bottom_border {
+#bqvwldcfae .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zueropoesy .gt_col_headings {
+#bqvwldcfae .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1022,7 +1031,7 @@
   border-right-color: #D3D3D3;
 }
 
-#zueropoesy .gt_col_heading {
+#bqvwldcfae .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1042,7 +1051,7 @@
   overflow-x: hidden;
 }
 
-#zueropoesy .gt_column_spanner_outer {
+#bqvwldcfae .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1054,15 +1063,15 @@
   padding-right: 4px;
 }
 
-#zueropoesy .gt_column_spanner_outer:first-child {
+#bqvwldcfae .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zueropoesy .gt_column_spanner_outer:last-child {
+#bqvwldcfae .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zueropoesy .gt_column_spanner {
+#bqvwldcfae .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1074,7 +1083,7 @@
   width: 100%;
 }
 
-#zueropoesy .gt_group_heading {
+#bqvwldcfae .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1096,7 +1105,7 @@
   vertical-align: middle;
 }
 
-#zueropoesy .gt_empty_group_heading {
+#bqvwldcfae .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1111,15 +1120,15 @@
   vertical-align: middle;
 }
 
-#zueropoesy .gt_from_md > :first-child {
+#bqvwldcfae .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zueropoesy .gt_from_md > :last-child {
+#bqvwldcfae .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zueropoesy .gt_row {
+#bqvwldcfae .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1138,7 +1147,7 @@
   overflow-x: hidden;
 }
 
-#zueropoesy .gt_stub {
+#bqvwldcfae .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1150,7 +1159,7 @@
   padding-left: 12px;
 }
 
-#zueropoesy .gt_summary_row {
+#bqvwldcfae .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1160,7 +1169,7 @@
   padding-right: 5px;
 }
 
-#zueropoesy .gt_first_summary_row {
+#bqvwldcfae .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1170,7 +1179,7 @@
   border-top-color: #D3D3D3;
 }
 
-#zueropoesy .gt_grand_summary_row {
+#bqvwldcfae .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1180,7 +1189,7 @@
   padding-right: 5px;
 }
 
-#zueropoesy .gt_first_grand_summary_row {
+#bqvwldcfae .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1190,11 +1199,11 @@
   border-top-color: #D3D3D3;
 }
 
-#zueropoesy .gt_striped {
+#bqvwldcfae .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zueropoesy .gt_table_body {
+#bqvwldcfae .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1203,7 +1212,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#zueropoesy .gt_footnotes {
+#bqvwldcfae .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1217,13 +1226,13 @@
   border-right-color: #D3D3D3;
 }
 
-#zueropoesy .gt_footnote {
+#bqvwldcfae .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#zueropoesy .gt_sourcenotes {
+#bqvwldcfae .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1237,41 +1246,41 @@
   border-right-color: #D3D3D3;
 }
 
-#zueropoesy .gt_sourcenote {
+#bqvwldcfae .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#zueropoesy .gt_left {
+#bqvwldcfae .gt_left {
   text-align: left;
 }
 
-#zueropoesy .gt_center {
+#bqvwldcfae .gt_center {
   text-align: center;
 }
 
-#zueropoesy .gt_right {
+#bqvwldcfae .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zueropoesy .gt_font_normal {
+#bqvwldcfae .gt_font_normal {
   font-weight: normal;
 }
 
-#zueropoesy .gt_font_bold {
+#bqvwldcfae .gt_font_bold {
   font-weight: bold;
 }
 
-#zueropoesy .gt_font_italic {
+#bqvwldcfae .gt_font_italic {
   font-style: italic;
 }
 
-#zueropoesy .gt_super {
+#bqvwldcfae .gt_super {
   font-size: 65%;
 }
 
-#zueropoesy .gt_footnote_marks {
+#bqvwldcfae .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
