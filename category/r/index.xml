@@ -1065,12 +1065,12 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1.6. Verificando el tipo de dato&lt;/h2&gt;
 &lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
-&lt;div id=&#34;wtfyozltun&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;gviirqqofb&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#wtfyozltun .gt_table {
+#gviirqqofb .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1095,7 +1095,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-left-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_heading {
+#gviirqqofb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1107,7 +1107,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_title {
+#gviirqqofb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1117,7 +1117,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-width: 0;
 }
 
-#wtfyozltun .gt_subtitle {
+#gviirqqofb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1127,13 +1127,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-width: 0;
 }
 
-#wtfyozltun .gt_bottom_border {
+#gviirqqofb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_col_headings {
+#gviirqqofb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1148,7 +1148,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_col_heading {
+#gviirqqofb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1168,7 +1168,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#wtfyozltun .gt_column_spanner_outer {
+#gviirqqofb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1180,15 +1180,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 4px;
 }
 
-#wtfyozltun .gt_column_spanner_outer:first-child {
+#gviirqqofb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#wtfyozltun .gt_column_spanner_outer:last-child {
+#gviirqqofb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#wtfyozltun .gt_column_spanner {
+#gviirqqofb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1200,7 +1200,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   width: 100%;
 }
 
-#wtfyozltun .gt_group_heading {
+#gviirqqofb .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1222,7 +1222,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#wtfyozltun .gt_empty_group_heading {
+#gviirqqofb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1237,15 +1237,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#wtfyozltun .gt_from_md &gt; :first-child {
+#gviirqqofb .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#wtfyozltun .gt_from_md &gt; :last-child {
+#gviirqqofb .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#wtfyozltun .gt_row {
+#gviirqqofb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1264,7 +1264,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#wtfyozltun .gt_stub {
+#gviirqqofb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1276,7 +1276,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-left: 12px;
 }
 
-#wtfyozltun .gt_summary_row {
+#gviirqqofb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1286,7 +1286,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#wtfyozltun .gt_first_summary_row {
+#gviirqqofb .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1296,7 +1296,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_grand_summary_row {
+#gviirqqofb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1306,7 +1306,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#wtfyozltun .gt_first_grand_summary_row {
+#gviirqqofb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1316,11 +1316,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_striped {
+#gviirqqofb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#wtfyozltun .gt_table_body {
+#gviirqqofb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1329,7 +1329,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_footnotes {
+#gviirqqofb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1343,13 +1343,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_footnote {
+#gviirqqofb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#wtfyozltun .gt_sourcenotes {
+#gviirqqofb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1363,41 +1363,41 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#wtfyozltun .gt_sourcenote {
+#gviirqqofb .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#wtfyozltun .gt_left {
+#gviirqqofb .gt_left {
   text-align: left;
 }
 
-#wtfyozltun .gt_center {
+#gviirqqofb .gt_center {
   text-align: center;
 }
 
-#wtfyozltun .gt_right {
+#gviirqqofb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#wtfyozltun .gt_font_normal {
+#gviirqqofb .gt_font_normal {
   font-weight: normal;
 }
 
-#wtfyozltun .gt_font_bold {
+#gviirqqofb .gt_font_bold {
   font-weight: bold;
 }
 
-#wtfyozltun .gt_font_italic {
+#gviirqqofb .gt_font_italic {
   font-style: italic;
 }
 
-#wtfyozltun .gt_super {
+#gviirqqofb .gt_super {
   font-size: 65%;
 }
 
-#wtfyozltun .gt_footnote_marks {
+#gviirqqofb .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
