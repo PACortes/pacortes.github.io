@@ -25,7 +25,6 @@
 &lt;li&gt;&lt;a href=&#34;#instalación-de-rstudio&#34;&gt;1. Instalación de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#entorno-de-trabajo-de-rstudio&#34;&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#consola&#34;&gt;2.1. Consola&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#script&#34;&gt;2.2. Script&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#ambiente-historial-conecciones-y-tutorial&#34;&gt;2.3. Ambiente, Historial, Conecciones y Tutorial&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#archivos-visualizaciones-paquetes-y-ayuda&#34;&gt;2.4. Archivos, Visualizaciones, Paquetes y Ayuda&lt;/a&gt;&lt;/li&gt;
@@ -45,14 +44,10 @@
 &lt;div id=&#34;entorno-de-trabajo-de-rstudio&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;rstuidio.png&#34; style=&#34;width:100.0%;height:100.0%&#34; alt=&#34;&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;hola&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;consola&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.1. Consola&lt;/h2&gt;
-&lt;p&gt;En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. La consola es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;rstuidio.png&#34; style=&#34;width:100.0%;height:100.0%&#34; alt=&#34;hola&#34; /&gt;
+&lt;img src=&#34;content/docencia/MMAD109/Sesion01_1_files/rstuidio.png&#34; /&gt;
+## 2.1. Consola
+En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. La consola es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
 &lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.2. Script&lt;/h2&gt;
 &lt;p&gt;En el panel superior izquierdo, encontraremos el script, editor de texto con la extensión de archivo &lt;em&gt;.R&lt;/em&gt; que puede ser leido por &lt;code&gt;R&lt;/code&gt;. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para ello, la(s) línea(s) de texto debe(n) estar precedidas por el el símbolo &lt;em&gt;#&lt;/em&gt;.&lt;/p&gt;
