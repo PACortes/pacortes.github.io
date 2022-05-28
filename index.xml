@@ -1010,8 +1010,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#operadores&#34;&gt;2. Operadores&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#operador-de-asignación&#34;&gt;Operador de asignación&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#operador-de-concatenación&#34;&gt;Operador de concatenación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#aritméticos&#34;&gt;2.1. Aritméticos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#relacionales&#34;&gt;2.2. Relacionales&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lógicos&#34;&gt;2.3. Lógicos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#asignación&#34;&gt;2.4. Asignación&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#concatenación&#34;&gt;2.5. Concatenación&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#estructura-de-datos-en-r&#34;&gt;3. Estructura de datos en R&lt;/a&gt;
 &lt;ul&gt;
@@ -1063,12 +1066,12 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1.6. Verificando el tipo de dato&lt;/h2&gt;
 &lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
-&lt;div id=&#34;woboldcqhy&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;qwqthdhcab&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#woboldcqhy .gt_table {
+#qwqthdhcab .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1093,7 +1096,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-left-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_heading {
+#qwqthdhcab .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1105,7 +1108,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_title {
+#qwqthdhcab .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1115,7 +1118,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-width: 0;
 }
 
-#woboldcqhy .gt_subtitle {
+#qwqthdhcab .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1125,13 +1128,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-width: 0;
 }
 
-#woboldcqhy .gt_bottom_border {
+#qwqthdhcab .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_col_headings {
+#qwqthdhcab .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1146,7 +1149,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_col_heading {
+#qwqthdhcab .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1166,7 +1169,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#woboldcqhy .gt_column_spanner_outer {
+#qwqthdhcab .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1178,15 +1181,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 4px;
 }
 
-#woboldcqhy .gt_column_spanner_outer:first-child {
+#qwqthdhcab .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#woboldcqhy .gt_column_spanner_outer:last-child {
+#qwqthdhcab .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#woboldcqhy .gt_column_spanner {
+#qwqthdhcab .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1198,7 +1201,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   width: 100%;
 }
 
-#woboldcqhy .gt_group_heading {
+#qwqthdhcab .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1220,7 +1223,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#woboldcqhy .gt_empty_group_heading {
+#qwqthdhcab .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1235,15 +1238,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#woboldcqhy .gt_from_md &gt; :first-child {
+#qwqthdhcab .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#woboldcqhy .gt_from_md &gt; :last-child {
+#qwqthdhcab .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#woboldcqhy .gt_row {
+#qwqthdhcab .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1262,7 +1265,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#woboldcqhy .gt_stub {
+#qwqthdhcab .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1274,7 +1277,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-left: 12px;
 }
 
-#woboldcqhy .gt_summary_row {
+#qwqthdhcab .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1284,7 +1287,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#woboldcqhy .gt_first_summary_row {
+#qwqthdhcab .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1294,7 +1297,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_grand_summary_row {
+#qwqthdhcab .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1304,7 +1307,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#woboldcqhy .gt_first_grand_summary_row {
+#qwqthdhcab .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1314,11 +1317,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_striped {
+#qwqthdhcab .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#woboldcqhy .gt_table_body {
+#qwqthdhcab .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1327,7 +1330,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_footnotes {
+#qwqthdhcab .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1341,13 +1344,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_footnote {
+#qwqthdhcab .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#woboldcqhy .gt_sourcenotes {
+#qwqthdhcab .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1361,41 +1364,41 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#woboldcqhy .gt_sourcenote {
+#qwqthdhcab .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#woboldcqhy .gt_left {
+#qwqthdhcab .gt_left {
   text-align: left;
 }
 
-#woboldcqhy .gt_center {
+#qwqthdhcab .gt_center {
   text-align: center;
 }
 
-#woboldcqhy .gt_right {
+#qwqthdhcab .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#woboldcqhy .gt_font_normal {
+#qwqthdhcab .gt_font_normal {
   font-weight: normal;
 }
 
-#woboldcqhy .gt_font_bold {
+#qwqthdhcab .gt_font_bold {
   font-weight: bold;
 }
 
-#woboldcqhy .gt_font_italic {
+#qwqthdhcab .gt_font_italic {
   font-style: italic;
 }
 
-#woboldcqhy .gt_super {
+#qwqthdhcab .gt_super {
   font-size: 65%;
 }
 
-#woboldcqhy .gt_footnote_marks {
+#qwqthdhcab .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1433,23 +1436,1525 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;/div&gt;
 &lt;div id=&#34;operadores&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;2. Operadores&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://bookdown.org/jboscomendoza/r-principiantes4/operadores-relacionales.html&#34;&gt;operadores&lt;/a&gt;&lt;/p&gt;
-&lt;div id=&#34;operador-de-asignación&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Operador de asignación&lt;/h2&gt;
-&lt;p&gt;Nos permite asignar datos a un objeto. Para ello podems utilizar los símbolos &lt;em&gt;&amp;lt;-&lt;/em&gt; o &lt;em&gt;=&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Los operadores son símbolos que le indican a &lt;code&gt;R&lt;/code&gt; que debe realizar una determinada tarea.&lt;/p&gt;
+&lt;p&gt;Existen operadores específicos para cada tipo de tarea. Los tipos de operadores principales, y específicos para cada tarea, son los siguientes:&lt;/p&gt;
+&lt;div id=&#34;aritméticos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.1. Aritméticos&lt;/h2&gt;
+&lt;p&gt;Este tipo de operador lo usarmeos para operaciones aritméticas.&lt;/p&gt;
+&lt;div id=&#34;cbpizptnbh&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#cbpizptnbh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#cbpizptnbh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#cbpizptnbh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#cbpizptnbh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#cbpizptnbh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#cbpizptnbh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#cbpizptnbh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#cbpizptnbh .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cbpizptnbh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#cbpizptnbh .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#cbpizptnbh .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#cbpizptnbh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#cbpizptnbh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#cbpizptnbh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbpizptnbh .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#cbpizptnbh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#cbpizptnbh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#cbpizptnbh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#cbpizptnbh .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#cbpizptnbh .gt_left {
+  text-align: left;
+}
+
+#cbpizptnbh .gt_center {
+  text-align: center;
+}
+
+#cbpizptnbh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#cbpizptnbh .gt_font_normal {
+  font-weight: normal;
+}
+
+#cbpizptnbh .gt_font_bold {
+  font-weight: bold;
+}
+
+#cbpizptnbh .gt_font_italic {
+  font-style: italic;
+}
+
+#cbpizptnbh .gt_super {
+  font-size: 65%;
+}
+
+#cbpizptnbh .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Operador&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Operación&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Ejemplo&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Resultado&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;+&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Suma&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1 + 1&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;-&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Resta&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2 - 1&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;*&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Multiplicación&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2 * 5&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1O&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;/&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;División&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;10 / 3&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;3.333333&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;^&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Potencia&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2 ^ 3&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;8&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;relacionales&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.2. Relacionales&lt;/h2&gt;
+&lt;p&gt;Los operadores lógicos nos permitirán hacer comparaciones y siempre obtendremos como resultado &lt;em&gt;TRUE&lt;/em&gt; o &lt;em&gt;FALSE&lt;/em&gt; (verdadero o falso, respectivamente).&lt;/p&gt;
+&lt;div id=&#34;fbjpzwwfrm&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#fbjpzwwfrm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fbjpzwwfrm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fbjpzwwfrm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fbjpzwwfrm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fbjpzwwfrm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fbjpzwwfrm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fbjpzwwfrm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fbjpzwwfrm .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fbjpzwwfrm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fbjpzwwfrm .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#fbjpzwwfrm .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#fbjpzwwfrm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fbjpzwwfrm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#fbjpzwwfrm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fbjpzwwfrm .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fbjpzwwfrm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fbjpzwwfrm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#fbjpzwwfrm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fbjpzwwfrm .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#fbjpzwwfrm .gt_left {
+  text-align: left;
+}
+
+#fbjpzwwfrm .gt_center {
+  text-align: center;
+}
+
+#fbjpzwwfrm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fbjpzwwfrm .gt_font_normal {
+  font-weight: normal;
+}
+
+#fbjpzwwfrm .gt_font_bold {
+  font-weight: bold;
+}
+
+#fbjpzwwfrm .gt_font_italic {
+  font-style: italic;
+}
+
+#fbjpzwwfrm .gt_super {
+  font-size: 65%;
+}
+
+#fbjpzwwfrm .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Operador&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Operación&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Ejemplo&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Resultado&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Menor que&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;1 &amp;lt; 2&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;TRUE&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;&amp;lt;=&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Menor o igual que&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt; 2 &amp;lt;= 2&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;TRUE&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Mayor que&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;3 &amp;gt; 2&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;FALSE&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;&amp;gt;=&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Mayor o igual que&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;5 &amp;gt;= 6&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;FALSE&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;==&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Exactamente igual que&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2 == 2&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;TRUE&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;!=&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;No es igual que&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;2 != 3&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;TRUE&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Al usar los operadores &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;gt;=&lt;/code&gt;, &lt;code&gt;&amp;lt;&lt;/code&gt; y &lt;code&gt;&amp;lt;=&lt;/code&gt; con cadenas de texto, su comportamiento será diferente.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;quot;dos&amp;quot; &amp;lt; &amp;quot;tres&amp;quot;
+## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Este resultado se debe a que se ha hecho una comparación por orden alfabético. En este caso, la palabra “dos” tiene una posición anterior a “tres”, pues empieza con “d” y esta letra tiene una posición anterior a la “t” en el alfabeto. Por lo tanto, es verdadero que &lt;em&gt;dos&lt;/em&gt;sea menor que &lt;em&gt;tres&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lógicos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3. Lógicos&lt;/h2&gt;
+&lt;p&gt;Este tipo de operador lo usarmeos para operaciones de álgebra Booleana, es decir, para describir relaciones lógicas, expresadas como verdadero (&lt;em&gt;TRUE&lt;/em&gt;) o falso (&lt;em&gt;FALSE&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Estos operadores pueden ser usados con estos con datos de tipo numérico, lógico y complejo. Al igual que con los operadores relacionales, los operadores lógicos siempre dan como resultado &lt;em&gt;TRUE&lt;/em&gt; o &lt;em&gt;FALSE&lt;/em&gt; (verdadero o falso, respectivamente).&lt;/p&gt;
+&lt;div id=&#34;pogubibruq&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#pogubibruq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#pogubibruq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pogubibruq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#pogubibruq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#pogubibruq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pogubibruq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#pogubibruq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#pogubibruq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#pogubibruq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#pogubibruq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#pogubibruq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#pogubibruq .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pogubibruq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#pogubibruq .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#pogubibruq .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#pogubibruq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#pogubibruq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#pogubibruq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pogubibruq .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#pogubibruq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#pogubibruq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#pogubibruq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#pogubibruq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#pogubibruq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pogubibruq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pogubibruq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#pogubibruq .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#pogubibruq .gt_left {
+  text-align: left;
+}
+
+#pogubibruq .gt_center {
+  text-align: center;
+}
+
+#pogubibruq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#pogubibruq .gt_font_normal {
+  font-weight: normal;
+}
+
+#pogubibruq .gt_font_bold {
+  font-weight: bold;
+}
+
+#pogubibruq .gt_font_italic {
+  font-style: italic;
+}
+
+#pogubibruq .gt_super {
+  font-size: 65%;
+}
+
+#pogubibruq .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Operador&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Comparación&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;x | y&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;x o y son verdaderos&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;x &amp;amp; y&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;x e y son verdaderos&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;!x&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;x no es verdadero (negación)&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;isTRUE(x)&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;x es verdadero (afirmación)&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Los operadores &lt;code&gt;|&lt;/code&gt; e &lt;code&gt;&amp;amp;&lt;/code&gt; siguen estas reglas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;|&lt;/code&gt; devuelve &lt;em&gt;TRUE&lt;/em&gt; si alguno de los datos es &lt;em&gt;TRUE&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt; solo devuelve &lt;em&gt;TRUE&lt;/em&gt; si ambos datos es &lt;em&gt;TRUE&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;|&lt;/code&gt; solo devuelve &lt;em&gt;FALSE&lt;/em&gt; si ambos datos son &lt;em&gt;FALSE&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;amp;&lt;/code&gt; devuelve &lt;em&gt;FALSE&lt;/em&gt; si alguno de los datos es &lt;em&gt;FALSE&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;asignación&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.4. Asignación&lt;/h2&gt;
+&lt;p&gt;Nos permite asignar datos a objetos.&lt;/p&gt;
+&lt;div id=&#34;gfsvxhtisu&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;style&gt;html {
+  font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
+}
+
+#gfsvxhtisu .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gfsvxhtisu .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gfsvxhtisu .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gfsvxhtisu .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 25px;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gfsvxhtisu .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gfsvxhtisu .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gfsvxhtisu .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gfsvxhtisu .gt_group_heading {
+  padding: 8px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gfsvxhtisu .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gfsvxhtisu .gt_from_md &gt; :first-child {
+  margin-top: 0;
+}
+
+#gfsvxhtisu .gt_from_md &gt; :last-child {
+  margin-bottom: 0;
+}
+
+#gfsvxhtisu .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gfsvxhtisu .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 12px;
+}
+
+#gfsvxhtisu .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gfsvxhtisu .gt_first_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gfsvxhtisu .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gfsvxhtisu .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding: 4px;
+}
+
+#gfsvxhtisu .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gfsvxhtisu .gt_sourcenote {
+  font-size: 90%;
+  padding: 4px;
+}
+
+#gfsvxhtisu .gt_left {
+  text-align: left;
+}
+
+#gfsvxhtisu .gt_center {
+  text-align: center;
+}
+
+#gfsvxhtisu .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gfsvxhtisu .gt_font_normal {
+  font-weight: normal;
+}
+
+#gfsvxhtisu .gt_font_bold {
+  font-weight: bold;
+}
+
+#gfsvxhtisu .gt_font_italic {
+  font-style: italic;
+}
+
+#gfsvxhtisu .gt_super {
+  font-size: 65%;
+}
+
+#gfsvxhtisu .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 65%;
+}
+&lt;/style&gt;
+&lt;table class=&#34;gt_table&#34;&gt;
+  
+  &lt;thead class=&#34;gt_col_headings&#34;&gt;
+    &lt;tr&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Operador&lt;/th&gt;
+      &lt;th class=&#34;gt_col_heading gt_columns_bottom_border gt_center&#34; rowspan=&#34;1&#34; colspan=&#34;1&#34; style=&#34;border-bottom-width: 3px; border-bottom-style: solid; border-bottom-color: #000000; font-weight: bold;&#34;&gt;Operación&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody class=&#34;gt_table_body&#34;&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;&amp;lt;-&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Asigna un valor a un objeto&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td class=&#34;gt_row gt_center&#34;&gt;=&lt;/td&gt;
+&lt;td class=&#34;gt_row gt_center&#34;&gt;Asigna un valor a un objeto&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  
+  
+&lt;/table&gt;
+&lt;/div&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos&amp;lt;-2
 
-letra&amp;lt;-&amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+dos
+## [1] 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;letra&amp;lt;-&amp;quot;a&amp;quot;
+
+letra
+## [1] &amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Es importante tener en cuenta que:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Si asignamos un datos a un objeto al que ya habíamos asignado datos, nuestro objeto conserva los datos más recientes.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Esta operación nos permite “guardar” el resultado de operaciones, de modo que podemos recuperarlos sin necesidad de realizar las operaciones otra vez (Revisar &lt;em&gt;Environment&lt;/em&gt;).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;A lo largo del taller utilizaremos &lt;em&gt;&amp;lt;-&lt;/em&gt; por ser característico de R y fácil de reconocer visualmente.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A lo largo del taller utilizaremos &lt;code&gt;&amp;lt;-&lt;/code&gt; por ser característico de R y fácil de reconocer visualmente.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;operador-de-concatenación&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Operador de concatenación&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos_digitos&amp;lt;-c(15, 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;concatenación&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.5. Concatenación&lt;/h2&gt;
+&lt;p&gt;Este operador es una función (&lt;code&gt;c()&lt;/code&gt;) que nos permite combinar dos o más valores en un solo objeto.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dos_digitos&amp;lt;-c(15, 2)
+
+dos_digitos
+## [1] 15  2&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;estructura-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
@@ -1457,9 +2962,77 @@ letra&amp;lt;-&amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;vector&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Vector&lt;/h2&gt;
 &lt;p&gt;Colección de uno o más datos del mismo tipo.&lt;/p&gt;
+&lt;p&gt;Propiedades de los vectores:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tipo&lt;/strong&gt;: Un vector tiene el mismo tipo que los datos que contiene.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Largo&lt;/strong&gt;: Es el número de elementos que contiene un vector.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Para crear un vector, podemos usar el operador de concatenación &lt;code&gt;c()&lt;/code&gt;. Llamamos esta función y le damos como argumento los elementos que deseamos combinar en un vector, separados por comas.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;c(15, 2, 3.3, 5, 8)
 ## [1] 15.0  2.0  3.3  5.0  8.0&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_numerio&amp;lt;-c(15, 2, 3.3, 5, 8)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_numerico&amp;lt;-c(15, 2, 3.3, 5, 8)
+
+vector_numerico
+## [1] 15.0  2.0  3.3  5.0  8.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Si deseamos agregar un elemento a un vector ya existente, podemos hacerlo combinando nuestro vector original con los elementos nuevos y asignando el resultado a nuestro vector original.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_numerico&amp;lt;-c(15, 2, 3.3, 5, 8)
+
+vector_numerico &amp;lt;-c(vector_numerico,1200)
+
+vector_numerico
+## [1]   15.0    2.0    3.3    5.0    8.0 1200.0&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;También podemos crear vectores que son combinaciones de vectores.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_numerico_1&amp;lt;-c(15, 2, 3.3)
+
+vector_numerico_2&amp;lt;-c(25, 9, 0.6)
+
+vector_numerico &amp;lt;-c (vector_numerico_1,vector_numerico_2)
+
+vector_numerico
+## [1] 15.0  2.0  3.3 25.0  9.0  0.6&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Podemos crear vectores de &lt;strong&gt;secuencias numéricas&lt;/strong&gt; usando &lt;code&gt;:&lt;/code&gt;. De un lado de los dos puntos escribimos el número de inicio de la secuencia y del otro el final.&lt;/p&gt;
+&lt;p&gt;Las secuencias creadas son consecutivas con incrementos o decrementos de 1. Estas secuencias pueden empezar con cualquier número, incluso si este es negativo o tiene cifras decimales.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1:50
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+## [26] 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vector_secuencia&amp;lt;- 1:50
+
+vector_secuencia
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+## [26] 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Otra opción para generar vectores es la función &lt;code&gt;rep(x,times)&lt;/code&gt;, la cual repite los elementos en &lt;code&gt;x&lt;/code&gt;un número determinado de veces (&lt;code&gt;times&lt;/code&gt;).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(1:5,2)
+##  [1] 1 2 3 4 5 1 2 3 4 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, si usamos el argumento &lt;code&gt;each&lt;/code&gt;, primero se replicará el elemento y luego se repetirá el número de veces definida por nosotros.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(1:5, each=2)
+##  [1] 1 1 2 2 3 3 4 4 5 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;El argumento &lt;code&gt;len&lt;/code&gt; sirve para definir el número de elementos que debe contener el resultado.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(1:5,each=2, len =4)
+## [1] 1 1 2 2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;El argumento &lt;code&gt;len&lt;/code&gt; sirve para definir el número de veces que queremos repetir el vector de interés.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(1:5,each=2, times =3)
+##  [1] 1 1 2 2 3 3 4 4 5 5 1 1 2 2 3 3 4 4 5 5 1 1 2 2 3 3 4 4 5 5&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, exploremos generemos repeticiones pero esta vez con vectores de cadenas de texto.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(LETTERS[1:5],4)
+##  [1] &amp;quot;A&amp;quot; &amp;quot;B&amp;quot; &amp;quot;C&amp;quot; &amp;quot;D&amp;quot; &amp;quot;E&amp;quot; &amp;quot;A&amp;quot; &amp;quot;B&amp;quot; &amp;quot;C&amp;quot; &amp;quot;D&amp;quot; &amp;quot;E&amp;quot; &amp;quot;A&amp;quot; &amp;quot;B&amp;quot; &amp;quot;C&amp;quot; &amp;quot;D&amp;quot; &amp;quot;E&amp;quot; &amp;quot;A&amp;quot; &amp;quot;B&amp;quot; &amp;quot;C&amp;quot; &amp;quot;D&amp;quot;
+## [20] &amp;quot;E&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(&amp;quot;Santiago&amp;quot;,4)
+## [1] &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(c(&amp;quot;Santiago&amp;quot;,&amp;quot;Valdivia&amp;quot;),4)
+## [1] &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Santiago&amp;quot;
+## [8] &amp;quot;Valdivia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(c(&amp;quot;Santiago&amp;quot;,&amp;quot;Valdivia&amp;quot;),4,each=2)
+##  [1] &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot;
+##  [7] &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot;
+## [13] &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rep(c(&amp;quot;Santiago&amp;quot;,&amp;quot;Valdivia&amp;quot;),each=5)
+##  [1] &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot;
+##  [7] &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Ciudad&amp;lt;-c(&amp;quot;Santiago&amp;quot;,&amp;quot;Valdivia&amp;quot;)
+Ciudad&amp;lt;-rep(Ciudad,each=5)
+Ciudad
+##  [1] &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot;
+##  [7] &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
