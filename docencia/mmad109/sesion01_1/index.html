@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.2. Script 2.3. Ambiente, Historial, Conecciones y Tutorial 2.4. Archivos, Visualizaciones, Paquetes y Ayuda  3. Interactuando con RStudio 5." />
+  <meta name="description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.1. Consola 2.2. Script 2.3. Ambiente, Historial, Conexiones y Tutorial 2.4. Archivos, Visualizaciones, Paquetes y Ayuda  3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/" />
   <meta property="og:title" content="Introducción a RStudio | Pablo Cortes" />
-  <meta property="og:description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.2. Script 2.3. Ambiente, Historial, Conecciones y Tutorial 2.4. Archivos, Visualizaciones, Paquetes y Ayuda  3. Interactuando con RStudio 5." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1. Instalación de RStudio 2. Entorno de trabajo de RStudio  2.1. Consola 2.2. Script 2.3. Ambiente, Historial, Conexiones y Tutorial 2.4. Archivos, Visualizaciones, Paquetes y Ayuda  3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -856,8 +856,9 @@
 <li><a href="#instalación-de-rstudio">1. Instalación de <code>RStudio</code></a></li>
 <li><a href="#entorno-de-trabajo-de-rstudio">2. Entorno de trabajo de <code>RStudio</code></a>
 <ul>
+<li><a href="#consola">2.1. Consola</a></li>
 <li><a href="#script">2.2. Script</a></li>
-<li><a href="#ambiente-historial-conecciones-y-tutorial">2.3. Ambiente, Historial, Conecciones y Tutorial</a></li>
+<li><a href="#ambiente-historial-conexiones-y-tutorial">2.3. Ambiente, Historial, Conexiones y Tutorial</a></li>
 <li><a href="#archivos-visualizaciones-paquetes-y-ayuda">2.4. Archivos, Visualizaciones, Paquetes y Ayuda</a></li>
 </ul></li>
 <li><a href="#interactuando-con-rstudio">3. Interactuando con <code>RStudio</code></a></li>
@@ -875,9 +876,10 @@
 <div id="entorno-de-trabajo-de-rstudio" class="section level1">
 <h1>2. Entorno de trabajo de <code>RStudio</code></h1>
 <p>Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.</p>
-<p><img src="rstuidio.png" style="width:100.0%;height:100.0%" alt="hola" />
-## 2.1. Consola
-En el panel inferior izquierdo, encontraremos la consola de <code>RStudio</code>. Es aquí donde podemos escribir las lineas de comando para interactuar con <code>R</code>, y en donde nuestro código es interpretado. La consola es la única parte de <code>RStudio</code> que en realidad es <code>R</code>; todo lo demás son herramientas opcionales.</p>
+<div id="consola" class="section level2">
+<h2>2.1. Consola</h2>
+<p>En el panel inferior izquierdo, encontraremos la consola de <code>RStudio</code>. Es aquí donde podemos escribir las lineas de comando para interactuar con <code>R</code>, y en donde nuestro código es interpretado. La consola es la única parte de <code>RStudio</code> que en realidad es <code>R</code>; todo lo demás son herramientas opcionales.</p>
+</div>
 <div id="script" class="section level2">
 <h2>2.2. Script</h2>
 <p>En el panel superior izquierdo, encontraremos el script, editor de texto con la extensión de archivo <em>.R</em> que puede ser leido por <code>R</code>. En el script escribiremos comandos que serán ejecutados en la consola. Además, en el script podemos agregar comentarios. Para ello, la(s) línea(s) de texto debe(n) estar precedidas por el el símbolo <em>#</em>.</p>
@@ -887,8 +889,8 @@ En el panel inferior izquierdo, encontraremos la consola de <code>RStudio</code>
 <li>Hacer clic en el botón <em>Guardar</em> que se encuentra en la parte izquierda de la cinta de opciones del script.</li>
 </ul>
 </div>
-<div id="ambiente-historial-conecciones-y-tutorial" class="section level2">
-<h2>2.3. Ambiente, Historial, Conecciones y Tutorial</h2>
+<div id="ambiente-historial-conexiones-y-tutorial" class="section level2">
+<h2>2.3. Ambiente, Historial, Conexiones y Tutorial</h2>
 <p>En el panel superior derecho, encontraremos cuatro pestañas:</p>
 <ul>
 <li><strong>Environment</strong>: En el ambiente de trabajo se irán registrando el trabajo realizado (resultados, variables, gráficos, etc.) durante una determinada sesión. También tenemos la opción de cargar y guardar una sesión de trabajo, importar datos y limpiar los objetos de la sesión.</li>
@@ -928,7 +930,7 @@ En el panel inferior izquierdo, encontraremos la consola de <code>RStudio</code>
 <p><code>comando(objeto)</code></p>
 <p>En donde:</p>
 <ul>
-<li><p><code>comandos</code>: función a ejecutar a un objeto.</p></li>
+<li><p><code>comando</code>: función a ejecutar a un objeto.</p></li>
 <li><p><code>objeto</code>: estructura de datos que tiene algunos atributos y métodos que actúan sobre sus atributos.</p></li>
 </ul>
 <p>Este ejemplo es una operación simple. Al aumentar la complejidad de los análisis la especificación de los comandos y los objetos irá requiriendo una mayor cantidad de información.</p>
