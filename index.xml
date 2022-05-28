@@ -999,13 +999,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;1. Tipos de datos en R&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#tipos-de-datos-en-r&#34;&gt;1. Tipos de datos en &lt;code&gt;R&lt;/code&gt;&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#numérico&#34;&gt;1.1. Numérico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#numericos&#34;&gt;1.2. Numericos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#cadena-de-texto&#34;&gt;1.2. Cadena de texto&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#factor&#34;&gt;1.3. Factor&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#lógico&#34;&gt;1.4. Lógico&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#perdido-na-y-vacío-null&#34;&gt;1.5.Perdido (NA) y Vacío (NULL)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#perdido-na-y-vacío-null&#34;&gt;1.5.Perdido (&lt;em&gt;NA&lt;/em&gt;) y Vacío (&lt;em&gt;NULL&lt;/em&gt;)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#verificando-el-tipo-de-dato&#34;&gt;1.6. Verificando el tipo de dato&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#operadores&#34;&gt;2. Operadores&lt;/a&gt;
@@ -1019,59 +1019,58 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;li&gt;&lt;a href=&#34;#estructura-de-datos-en-r&#34;&gt;3. Estructura de datos en R&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#vector&#34;&gt;Vector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-frames&#34;&gt;Data frames&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;tipos-de-datos-en-r&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Tipos de datos en R&lt;/h1&gt;
-&lt;p&gt;Los tipos de datos de uso más común en R son:&lt;/p&gt;
-&lt;div id=&#34;numérico&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;1.1. Numérico&lt;/h2&gt;
-&lt;p&gt;Representan números que tienen una parte decimal o fraccionaria.&lt;/p&gt;
+&lt;h1&gt;1. Tipos de datos en &lt;code&gt;R&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;En &lt;code&gt;R&lt;/code&gt; los datos pueden ser de diferentes tipos. Cada tipo tiene características particulares que lo distinguen de los demás. Entre otras cosas algunas operaciones sólo pueden realizarse con tipos de datos específicos. Los tipos de datos de uso más común en R son:&lt;/p&gt;
+&lt;div id=&#34;numericos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1.2. Numericos&lt;/h2&gt;
+&lt;p&gt;Los tipos de datos numéricos son bastante sencillos. Estos son solo números, escritos como números enteros o decimales.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5
-## [1] 5
-
-25.3
-## [1] 25.3
-
-123890.85544
-## [1] 123890.9&lt;/code&gt;&lt;/pre&gt;
+## [1] 5&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;25.3
+## [1] 25.3&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;cadena-de-texto&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1.2. Cadena de texto&lt;/h2&gt;
 &lt;p&gt;Secuencias de caracteres. Puede contener letras, números, espacios, signos de puntuación y símbolos especiales.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;quot;a&amp;quot;
-## [1] &amp;quot;a&amp;quot;
-
-&amp;quot;a&amp;quot;
-## [1] &amp;quot;a&amp;quot;
-
-&amp;quot;Contaminacion&amp;quot;
+## [1] &amp;quot;a&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;&amp;quot;Contaminacion&amp;quot;
 ## [1] &amp;quot;Contaminacion&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;factor&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1.3. Factor&lt;/h2&gt;
-&lt;p&gt;Dato numérico representado por una etiqueta.&lt;/p&gt;
-&lt;p&gt;Por último, cada una de las etiquetas o valores que puedes asumir un factor se conoce como nivel. En nuestro ejemplo con femenino y masculino, tendríamos dos niveles.&lt;/p&gt;
+&lt;p&gt;Este tipo de dato almacena variables categóricas o cualitativas. Los factores en &lt;code&gt;R&lt;/code&gt; son, por lo tanto, las variables categóricas que empleamos.&lt;/p&gt;
+&lt;p&gt;Por definición, las variables categóricas cuentan con un número limitado de factores (o categorías). Por ejemplo, la variable sexo solo tendría dos factores: hombre o mujer. Pero estos factores o categorías también pueden ser numéricos, como el número de personas que asisten a cada clase de esta asignatura.&lt;/p&gt;
+&lt;p&gt;Para crear un factor a partir de un vector, podemos usar la función &lt;code&gt;factor()&lt;/code&gt;. Por ejemplo, si generamos un vector con 10 elementos que indiquen el sexo de 10 personas, es importante convertirlo en factorial porque así R evalúa el número de factores que hay (2) en vez de tratarlos de modo independiente..&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sexo &amp;lt;- c(&amp;quot;hombre&amp;quot;, &amp;quot;mujer&amp;quot;, &amp;quot;mujer&amp;quot;, &amp;quot;mujer&amp;quot;, &amp;quot;hombre&amp;quot;, &amp;quot;mujer&amp;quot;, &amp;quot;mujer&amp;quot;, &amp;quot;mujer&amp;quot;, &amp;quot;hombre&amp;quot;, &amp;quot;mujer&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;factor(sexo)
+##  [1] hombre mujer  mujer  mujer  hombre mujer  mujer  mujer  hombre mujer 
+## Levels: hombre mujer&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;lógico&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1.4. Lógico&lt;/h2&gt;
-&lt;p&gt;Sólo tienen dos valores posibles: verdadero (TRUE) y falso (FALSE). Representan si una condición o estado se cumple, es verdadero, o no, es falso.&lt;/p&gt;
+&lt;p&gt;Sólo tienen dos valores posibles: verdadero (&lt;em&gt;TRUE&lt;/em&gt;) y falso (&lt;em&gt;FALSE&lt;/em&gt;). Representan si una condición o estado se cumple, es verdadero, o no, es falso.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;perdido-na-y-vacío-null&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;1.5.Perdido (NA) y Vacío (NULL)&lt;/h2&gt;
-&lt;p&gt;En R, usamos NA para representar datos perdidos, mientras que NULL representa la ausencia de datos. La diferencia entre las dos es que un dato NULL aparece sólo cuando R intenta recuperar un dato y no encuentra nada, mientras que NA es usado para representar explícitamente datos perdidos, omitidos o que por alguna razón son faltantes.&lt;/p&gt;
+&lt;h2&gt;1.5.Perdido (&lt;em&gt;NA&lt;/em&gt;) y Vacío (&lt;em&gt;NULL&lt;/em&gt;)&lt;/h2&gt;
+&lt;p&gt;En R, usamos &lt;em&gt;NA&lt;/em&gt; para representar datos perdidos, mientras que &lt;em&gt;NULL&lt;/em&gt; representa la ausencia de datos.&lt;/p&gt;
+&lt;p&gt;La diferencia entre las dos es que un dato &lt;em&gt;NULL&lt;/em&gt; aparece sólo cuando &lt;code&gt;R&lt;/code&gt; intenta recuperar un dato y no encuentra nada, mientras que &lt;em&gt;NA&lt;/em&gt; es usado para representar explícitamente datos perdidos, omitidos o que por alguna razón son faltantes.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;verificando-el-tipo-de-dato&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;1.6. Verificando el tipo de dato&lt;/h2&gt;
-&lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán TRUE y en caso contrario devolverán FALSE&lt;/p&gt;
-&lt;div id=&#34;qwqthdhcab&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;p&gt;Podemos verificar si un dato es de un tipo específico con la familia de funciones &lt;code&gt;is()&lt;/code&gt;. Estas funciones toman como argumento un dato, si este es del tipo que estamos verificando, nos devolverán &lt;em&gt;TRUE&lt;/em&gt; y en caso contrario devolverán &lt;em&gt;FALSE&lt;/em&gt;&lt;/p&gt;
+&lt;div id=&#34;oofuyovsum&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#qwqthdhcab .gt_table {
+#oofuyovsum .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1096,7 +1095,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-left-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_heading {
+#oofuyovsum .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1108,7 +1107,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_title {
+#oofuyovsum .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1118,7 +1117,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-width: 0;
 }
 
-#qwqthdhcab .gt_subtitle {
+#oofuyovsum .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1128,13 +1127,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-width: 0;
 }
 
-#qwqthdhcab .gt_bottom_border {
+#oofuyovsum .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_col_headings {
+#oofuyovsum .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1149,7 +1148,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_col_heading {
+#oofuyovsum .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1169,7 +1168,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#qwqthdhcab .gt_column_spanner_outer {
+#oofuyovsum .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1181,15 +1180,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 4px;
 }
 
-#qwqthdhcab .gt_column_spanner_outer:first-child {
+#oofuyovsum .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qwqthdhcab .gt_column_spanner_outer:last-child {
+#oofuyovsum .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qwqthdhcab .gt_column_spanner {
+#oofuyovsum .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1201,7 +1200,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   width: 100%;
 }
 
-#qwqthdhcab .gt_group_heading {
+#oofuyovsum .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1223,7 +1222,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#qwqthdhcab .gt_empty_group_heading {
+#oofuyovsum .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1238,15 +1237,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#qwqthdhcab .gt_from_md &gt; :first-child {
+#oofuyovsum .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#qwqthdhcab .gt_from_md &gt; :last-child {
+#oofuyovsum .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#qwqthdhcab .gt_row {
+#oofuyovsum .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1265,7 +1264,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#qwqthdhcab .gt_stub {
+#oofuyovsum .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1277,7 +1276,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-left: 12px;
 }
 
-#qwqthdhcab .gt_summary_row {
+#oofuyovsum .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1287,7 +1286,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#qwqthdhcab .gt_first_summary_row {
+#oofuyovsum .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1297,7 +1296,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_grand_summary_row {
+#oofuyovsum .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1307,7 +1306,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#qwqthdhcab .gt_first_grand_summary_row {
+#oofuyovsum .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1317,11 +1316,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_striped {
+#oofuyovsum .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qwqthdhcab .gt_table_body {
+#oofuyovsum .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1330,7 +1329,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_footnotes {
+#oofuyovsum .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1344,13 +1343,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_footnote {
+#oofuyovsum .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#qwqthdhcab .gt_sourcenotes {
+#oofuyovsum .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1364,41 +1363,41 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#qwqthdhcab .gt_sourcenote {
+#oofuyovsum .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#qwqthdhcab .gt_left {
+#oofuyovsum .gt_left {
   text-align: left;
 }
 
-#qwqthdhcab .gt_center {
+#oofuyovsum .gt_center {
   text-align: center;
 }
 
-#qwqthdhcab .gt_right {
+#oofuyovsum .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qwqthdhcab .gt_font_normal {
+#oofuyovsum .gt_font_normal {
   font-weight: normal;
 }
 
-#qwqthdhcab .gt_font_bold {
+#oofuyovsum .gt_font_bold {
   font-weight: bold;
 }
 
-#qwqthdhcab .gt_font_italic {
+#oofuyovsum .gt_font_italic {
   font-style: italic;
 }
 
-#qwqthdhcab .gt_super {
+#oofuyovsum .gt_super {
   font-size: 65%;
 }
 
-#qwqthdhcab .gt_footnote_marks {
+#oofuyovsum .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1441,12 +1440,12 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;div id=&#34;aritméticos&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.1. Aritméticos&lt;/h2&gt;
 &lt;p&gt;Este tipo de operador lo usarmeos para operaciones aritméticas.&lt;/p&gt;
-&lt;div id=&#34;cbpizptnbh&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;maqyoclyxe&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#cbpizptnbh .gt_table {
+#maqyoclyxe .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1471,7 +1470,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-left-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_heading {
+#maqyoclyxe .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1483,7 +1482,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_title {
+#maqyoclyxe .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1493,7 +1492,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-width: 0;
 }
 
-#cbpizptnbh .gt_subtitle {
+#maqyoclyxe .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1503,13 +1502,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-width: 0;
 }
 
-#cbpizptnbh .gt_bottom_border {
+#maqyoclyxe .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_col_headings {
+#maqyoclyxe .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1524,7 +1523,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_col_heading {
+#maqyoclyxe .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1544,7 +1543,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#cbpizptnbh .gt_column_spanner_outer {
+#maqyoclyxe .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1556,15 +1555,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 4px;
 }
 
-#cbpizptnbh .gt_column_spanner_outer:first-child {
+#maqyoclyxe .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#cbpizptnbh .gt_column_spanner_outer:last-child {
+#maqyoclyxe .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#cbpizptnbh .gt_column_spanner {
+#maqyoclyxe .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1576,7 +1575,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   width: 100%;
 }
 
-#cbpizptnbh .gt_group_heading {
+#maqyoclyxe .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1598,7 +1597,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#cbpizptnbh .gt_empty_group_heading {
+#maqyoclyxe .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1613,15 +1612,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#cbpizptnbh .gt_from_md &gt; :first-child {
+#maqyoclyxe .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#cbpizptnbh .gt_from_md &gt; :last-child {
+#maqyoclyxe .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#cbpizptnbh .gt_row {
+#maqyoclyxe .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1640,7 +1639,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#cbpizptnbh .gt_stub {
+#maqyoclyxe .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1652,7 +1651,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-left: 12px;
 }
 
-#cbpizptnbh .gt_summary_row {
+#maqyoclyxe .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1662,7 +1661,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#cbpizptnbh .gt_first_summary_row {
+#maqyoclyxe .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1672,7 +1671,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_grand_summary_row {
+#maqyoclyxe .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1682,7 +1681,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#cbpizptnbh .gt_first_grand_summary_row {
+#maqyoclyxe .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1692,11 +1691,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_striped {
+#maqyoclyxe .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#cbpizptnbh .gt_table_body {
+#maqyoclyxe .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1705,7 +1704,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_footnotes {
+#maqyoclyxe .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1719,13 +1718,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_footnote {
+#maqyoclyxe .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#cbpizptnbh .gt_sourcenotes {
+#maqyoclyxe .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1739,41 +1738,41 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#cbpizptnbh .gt_sourcenote {
+#maqyoclyxe .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#cbpizptnbh .gt_left {
+#maqyoclyxe .gt_left {
   text-align: left;
 }
 
-#cbpizptnbh .gt_center {
+#maqyoclyxe .gt_center {
   text-align: center;
 }
 
-#cbpizptnbh .gt_right {
+#maqyoclyxe .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#cbpizptnbh .gt_font_normal {
+#maqyoclyxe .gt_font_normal {
   font-weight: normal;
 }
 
-#cbpizptnbh .gt_font_bold {
+#maqyoclyxe .gt_font_bold {
   font-weight: bold;
 }
 
-#cbpizptnbh .gt_font_italic {
+#maqyoclyxe .gt_font_italic {
   font-style: italic;
 }
 
-#cbpizptnbh .gt_super {
+#maqyoclyxe .gt_super {
   font-size: 65%;
 }
 
-#cbpizptnbh .gt_footnote_marks {
+#maqyoclyxe .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -1819,12 +1818,12 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;div id=&#34;relacionales&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.2. Relacionales&lt;/h2&gt;
 &lt;p&gt;Los operadores lógicos nos permitirán hacer comparaciones y siempre obtendremos como resultado &lt;em&gt;TRUE&lt;/em&gt; o &lt;em&gt;FALSE&lt;/em&gt; (verdadero o falso, respectivamente).&lt;/p&gt;
-&lt;div id=&#34;fbjpzwwfrm&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;dttwrhzbqh&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#fbjpzwwfrm .gt_table {
+#dttwrhzbqh .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -1849,7 +1848,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-left-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_heading {
+#dttwrhzbqh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1861,7 +1860,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_title {
+#dttwrhzbqh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1871,7 +1870,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-width: 0;
 }
 
-#fbjpzwwfrm .gt_subtitle {
+#dttwrhzbqh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1881,13 +1880,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-width: 0;
 }
 
-#fbjpzwwfrm .gt_bottom_border {
+#dttwrhzbqh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_col_headings {
+#dttwrhzbqh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1902,7 +1901,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_col_heading {
+#dttwrhzbqh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1922,7 +1921,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#fbjpzwwfrm .gt_column_spanner_outer {
+#dttwrhzbqh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -1934,15 +1933,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 4px;
 }
 
-#fbjpzwwfrm .gt_column_spanner_outer:first-child {
+#dttwrhzbqh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fbjpzwwfrm .gt_column_spanner_outer:last-child {
+#dttwrhzbqh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fbjpzwwfrm .gt_column_spanner {
+#dttwrhzbqh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1954,7 +1953,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   width: 100%;
 }
 
-#fbjpzwwfrm .gt_group_heading {
+#dttwrhzbqh .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1976,7 +1975,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#fbjpzwwfrm .gt_empty_group_heading {
+#dttwrhzbqh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1991,15 +1990,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#fbjpzwwfrm .gt_from_md &gt; :first-child {
+#dttwrhzbqh .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#fbjpzwwfrm .gt_from_md &gt; :last-child {
+#dttwrhzbqh .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#fbjpzwwfrm .gt_row {
+#dttwrhzbqh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2018,7 +2017,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#fbjpzwwfrm .gt_stub {
+#dttwrhzbqh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2030,7 +2029,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-left: 12px;
 }
 
-#fbjpzwwfrm .gt_summary_row {
+#dttwrhzbqh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2040,7 +2039,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#fbjpzwwfrm .gt_first_summary_row {
+#dttwrhzbqh .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2050,7 +2049,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_grand_summary_row {
+#dttwrhzbqh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2060,7 +2059,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#fbjpzwwfrm .gt_first_grand_summary_row {
+#dttwrhzbqh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2070,11 +2069,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_striped {
+#dttwrhzbqh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fbjpzwwfrm .gt_table_body {
+#dttwrhzbqh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2083,7 +2082,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_footnotes {
+#dttwrhzbqh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2097,13 +2096,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_footnote {
+#dttwrhzbqh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#fbjpzwwfrm .gt_sourcenotes {
+#dttwrhzbqh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2117,41 +2116,41 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#fbjpzwwfrm .gt_sourcenote {
+#dttwrhzbqh .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#fbjpzwwfrm .gt_left {
+#dttwrhzbqh .gt_left {
   text-align: left;
 }
 
-#fbjpzwwfrm .gt_center {
+#dttwrhzbqh .gt_center {
   text-align: center;
 }
 
-#fbjpzwwfrm .gt_right {
+#dttwrhzbqh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fbjpzwwfrm .gt_font_normal {
+#dttwrhzbqh .gt_font_normal {
   font-weight: normal;
 }
 
-#fbjpzwwfrm .gt_font_bold {
+#dttwrhzbqh .gt_font_bold {
   font-weight: bold;
 }
 
-#fbjpzwwfrm .gt_font_italic {
+#dttwrhzbqh .gt_font_italic {
   font-style: italic;
 }
 
-#fbjpzwwfrm .gt_super {
+#dttwrhzbqh .gt_super {
   font-size: 65%;
 }
 
-#fbjpzwwfrm .gt_footnote_marks {
+#dttwrhzbqh .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -2206,12 +2205,12 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;h2&gt;2.3. Lógicos&lt;/h2&gt;
 &lt;p&gt;Este tipo de operador lo usarmeos para operaciones de álgebra Booleana, es decir, para describir relaciones lógicas, expresadas como verdadero (&lt;em&gt;TRUE&lt;/em&gt;) o falso (&lt;em&gt;FALSE&lt;/em&gt;).&lt;/p&gt;
 &lt;p&gt;Estos operadores pueden ser usados con estos con datos de tipo numérico, lógico y complejo. Al igual que con los operadores relacionales, los operadores lógicos siempre dan como resultado &lt;em&gt;TRUE&lt;/em&gt; o &lt;em&gt;FALSE&lt;/em&gt; (verdadero o falso, respectivamente).&lt;/p&gt;
-&lt;div id=&#34;pogubibruq&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;ipsxqawphl&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#pogubibruq .gt_table {
+#ipsxqawphl .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2236,7 +2235,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-left-color: #D3D3D3;
 }
 
-#pogubibruq .gt_heading {
+#ipsxqawphl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2248,7 +2247,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#pogubibruq .gt_title {
+#ipsxqawphl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2258,7 +2257,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-width: 0;
 }
 
-#pogubibruq .gt_subtitle {
+#ipsxqawphl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2268,13 +2267,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-width: 0;
 }
 
-#pogubibruq .gt_bottom_border {
+#ipsxqawphl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#pogubibruq .gt_col_headings {
+#ipsxqawphl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2289,7 +2288,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#pogubibruq .gt_col_heading {
+#ipsxqawphl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -2309,7 +2308,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#pogubibruq .gt_column_spanner_outer {
+#ipsxqawphl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -2321,15 +2320,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 4px;
 }
 
-#pogubibruq .gt_column_spanner_outer:first-child {
+#ipsxqawphl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#pogubibruq .gt_column_spanner_outer:last-child {
+#ipsxqawphl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#pogubibruq .gt_column_spanner {
+#ipsxqawphl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2341,7 +2340,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   width: 100%;
 }
 
-#pogubibruq .gt_group_heading {
+#ipsxqawphl .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2363,7 +2362,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#pogubibruq .gt_empty_group_heading {
+#ipsxqawphl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2378,15 +2377,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#pogubibruq .gt_from_md &gt; :first-child {
+#ipsxqawphl .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#pogubibruq .gt_from_md &gt; :last-child {
+#ipsxqawphl .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#pogubibruq .gt_row {
+#ipsxqawphl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2405,7 +2404,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#pogubibruq .gt_stub {
+#ipsxqawphl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2417,7 +2416,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-left: 12px;
 }
 
-#pogubibruq .gt_summary_row {
+#ipsxqawphl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2427,7 +2426,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#pogubibruq .gt_first_summary_row {
+#ipsxqawphl .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2437,7 +2436,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#pogubibruq .gt_grand_summary_row {
+#ipsxqawphl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2447,7 +2446,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#pogubibruq .gt_first_grand_summary_row {
+#ipsxqawphl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2457,11 +2456,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#pogubibruq .gt_striped {
+#ipsxqawphl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#pogubibruq .gt_table_body {
+#ipsxqawphl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2470,7 +2469,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-color: #D3D3D3;
 }
 
-#pogubibruq .gt_footnotes {
+#ipsxqawphl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2484,13 +2483,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#pogubibruq .gt_footnote {
+#ipsxqawphl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#pogubibruq .gt_sourcenotes {
+#ipsxqawphl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2504,41 +2503,41 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#pogubibruq .gt_sourcenote {
+#ipsxqawphl .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#pogubibruq .gt_left {
+#ipsxqawphl .gt_left {
   text-align: left;
 }
 
-#pogubibruq .gt_center {
+#ipsxqawphl .gt_center {
   text-align: center;
 }
 
-#pogubibruq .gt_right {
+#ipsxqawphl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#pogubibruq .gt_font_normal {
+#ipsxqawphl .gt_font_normal {
   font-weight: normal;
 }
 
-#pogubibruq .gt_font_bold {
+#ipsxqawphl .gt_font_bold {
   font-weight: bold;
 }
 
-#pogubibruq .gt_font_italic {
+#ipsxqawphl .gt_font_italic {
   font-style: italic;
 }
 
-#pogubibruq .gt_super {
+#ipsxqawphl .gt_super {
   font-size: 65%;
 }
 
-#pogubibruq .gt_footnote_marks {
+#ipsxqawphl .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -2577,12 +2576,12 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
 &lt;div id=&#34;asignación&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2.4. Asignación&lt;/h2&gt;
 &lt;p&gt;Nos permite asignar datos a objetos.&lt;/p&gt;
-&lt;div id=&#34;gfsvxhtisu&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
+&lt;div id=&#34;pkkizjogyx&#34; style=&#34;overflow-x:auto;overflow-y:auto;width:auto;height:auto;&#34;&gt;
 &lt;style&gt;html {
   font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Helvetica Neue&#39;, &#39;Fira Sans&#39;, &#39;Droid Sans&#39;, Arial, sans-serif;
 }
 
-#gfsvxhtisu .gt_table {
+#pkkizjogyx .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2607,7 +2606,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-left-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_heading {
+#pkkizjogyx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2619,7 +2618,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_title {
+#pkkizjogyx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2629,7 +2628,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-width: 0;
 }
 
-#gfsvxhtisu .gt_subtitle {
+#pkkizjogyx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2639,13 +2638,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-width: 0;
 }
 
-#gfsvxhtisu .gt_bottom_border {
+#pkkizjogyx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_col_headings {
+#pkkizjogyx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2660,7 +2659,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_col_heading {
+#pkkizjogyx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -2680,7 +2679,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#gfsvxhtisu .gt_column_spanner_outer {
+#pkkizjogyx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 25px;
@@ -2692,15 +2691,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 4px;
 }
 
-#gfsvxhtisu .gt_column_spanner_outer:first-child {
+#pkkizjogyx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gfsvxhtisu .gt_column_spanner_outer:last-child {
+#pkkizjogyx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gfsvxhtisu .gt_column_spanner {
+#pkkizjogyx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2712,7 +2711,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   width: 100%;
 }
 
-#gfsvxhtisu .gt_group_heading {
+#pkkizjogyx .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2734,7 +2733,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#gfsvxhtisu .gt_empty_group_heading {
+#pkkizjogyx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2749,15 +2748,15 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   vertical-align: middle;
 }
 
-#gfsvxhtisu .gt_from_md &gt; :first-child {
+#pkkizjogyx .gt_from_md &gt; :first-child {
   margin-top: 0;
 }
 
-#gfsvxhtisu .gt_from_md &gt; :last-child {
+#pkkizjogyx .gt_from_md &gt; :last-child {
   margin-bottom: 0;
 }
 
-#gfsvxhtisu .gt_row {
+#pkkizjogyx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2776,7 +2775,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   overflow-x: hidden;
 }
 
-#gfsvxhtisu .gt_stub {
+#pkkizjogyx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2788,7 +2787,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-left: 12px;
 }
 
-#gfsvxhtisu .gt_summary_row {
+#pkkizjogyx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2798,7 +2797,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#gfsvxhtisu .gt_first_summary_row {
+#pkkizjogyx .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2808,7 +2807,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_grand_summary_row {
+#pkkizjogyx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2818,7 +2817,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   padding-right: 5px;
 }
 
-#gfsvxhtisu .gt_first_grand_summary_row {
+#pkkizjogyx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2828,11 +2827,11 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-top-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_striped {
+#pkkizjogyx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gfsvxhtisu .gt_table_body {
+#pkkizjogyx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2841,7 +2840,7 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-bottom-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_footnotes {
+#pkkizjogyx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2855,13 +2854,13 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_footnote {
+#pkkizjogyx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#gfsvxhtisu .gt_sourcenotes {
+#pkkizjogyx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2875,41 +2874,41 @@ evitar errores y garantizar la reproducibilidad. Esto se debe a que los datos no
   border-right-color: #D3D3D3;
 }
 
-#gfsvxhtisu .gt_sourcenote {
+#pkkizjogyx .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#gfsvxhtisu .gt_left {
+#pkkizjogyx .gt_left {
   text-align: left;
 }
 
-#gfsvxhtisu .gt_center {
+#pkkizjogyx .gt_center {
   text-align: center;
 }
 
-#gfsvxhtisu .gt_right {
+#pkkizjogyx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gfsvxhtisu .gt_font_normal {
+#pkkizjogyx .gt_font_normal {
   font-weight: normal;
 }
 
-#gfsvxhtisu .gt_font_bold {
+#pkkizjogyx .gt_font_bold {
   font-weight: bold;
 }
 
-#gfsvxhtisu .gt_font_italic {
+#pkkizjogyx .gt_font_italic {
   font-style: italic;
 }
 
-#gfsvxhtisu .gt_super {
+#pkkizjogyx .gt_super {
   font-size: 65%;
 }
 
-#gfsvxhtisu .gt_footnote_marks {
+#pkkizjogyx .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -3033,6 +3032,28 @@ Ciudad&amp;lt;-rep(Ciudad,each=5)
 Ciudad
 ##  [1] &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Santiago&amp;quot; &amp;quot;Valdivia&amp;quot;
 ##  [7] &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot; &amp;quot;Valdivia&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-frames&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data frames&lt;/h2&gt;
+&lt;p&gt;Es una lista de vectores de la misma longitud. Los data frame permiten tipos de datos mixtos (por ejemplo, numérico, lógico, caracter). Esto les permite almacenar diferentes tipos de objetos (variables), lo cual es muy útil en el análisis estadístico.&lt;/p&gt;
+&lt;p&gt;Primero, generemos tres diferentes objetos.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;Ciudad&amp;lt;-rep(c(&amp;quot;Santiago&amp;quot;,&amp;quot;Valdivia&amp;quot;),each=5)
+Sitio_Muestreo&amp;lt;-rep(c(1:5), times=2)
+PM2.5&amp;lt;-c(73,75,79,84,80, 67, 65, 70, 61,65)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, utilizaremos la función &lt;code&gt;data.frame&lt;/code&gt;para generar nuestro data frame:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data&amp;lt;-data.frame(Ciudad,Sitio_Muestreo, PM2.5)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data
+##      Ciudad Sitio_Muestreo PM2.5
+## 1  Santiago              1    73
+## 2  Santiago              2    75
+## 3  Santiago              3    79
+## 4  Santiago              4    84
+## 5  Santiago              5    80
+## 6  Valdivia              1    67
+## 7  Valdivia              2    65
+## 8  Valdivia              3    70
+## 9  Valdivia              4    61
+## 10 Valdivia              5    65&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
