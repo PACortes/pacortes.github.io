@@ -45,7 +45,6 @@
 &lt;h1&gt;2. Entorno de trabajo de &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;Cuando abras RStudio, notarás una ventana con cuatro paneles principales, cada uno con algunas pestañas.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;rstuidio.png&#34; style=&#34;width:100.0%;height:100.0%&#34; alt=&#34;hola&#34; /&gt;
-&lt;img src=&#34;content/docencia/MMAD109/Sesion01_1_files/rstuidio.png&#34; /&gt;
 ## 2.1. Consola
 En el panel inferior izquierdo, encontraremos la consola de &lt;code&gt;RStudio&lt;/code&gt;. Es aquí donde podemos escribir las lineas de comando para interactuar con &lt;code&gt;R&lt;/code&gt;, y en donde nuestro código es interpretado. La consola es la única parte de &lt;code&gt;RStudio&lt;/code&gt; que en realidad es &lt;code&gt;R&lt;/code&gt;; todo lo demás son herramientas opcionales.&lt;/p&gt;
 &lt;div id=&#34;script&#34; class=&#34;section level2&#34;&gt;
