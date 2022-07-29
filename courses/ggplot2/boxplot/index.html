@@ -919,11 +919,6 @@
 <div id="base-de-datos-descarga" class="section level2">
 <h2>3.3. Base de datos: descarga</h2>
 <p>La base de datos <strong>MaterialParticulado.txt</strong> se encuentra disponible en el repositorio github <a href="https://github.com/PACortes/pacortes_datos">PACortes/pacortes_datos</a>.</p>
-<pre class="r"><code>library(readr)
-MaterialParticulado &lt;- read_delim(&quot;MaterialParticulado.txt&quot;, 
-delim = &quot;\t&quot;, escape_double = FALSE, 
-col_types = cols(Year = col_factor(levels = c(&quot;2018&quot;, &quot;2019&quot;, &quot;2020&quot;, &quot;2021&quot;)), Mes = col_factor(levels = c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, 
-&quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;))), trim_ws = TRUE)</code></pre>
 <p>Exploremos el encabezado de la base de datos <strong>MaterialParticulado</strong>. Para ello, utilizaremos la función <code>glimpse()</code>. del paquete <code>dplyr()</code>.</p>
 <pre class="r"><code>library(dplyr)
 
@@ -1069,9 +1064,9 @@ glimpse(MaterialParticulado)
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/courses/ggplot2/jitter/">Grafico jitter</a></li>
-      
       <li><a href="/courses/ggplot2/scatterplot/">Grafico de dispersion</a></li>
+      
+      <li><a href="/courses/ggplot2/jitter/">Grafico jitter</a></li>
       
     </ul>
   </div>

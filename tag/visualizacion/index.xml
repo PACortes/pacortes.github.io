@@ -322,11 +322,6 @@
 &lt;div id=&#34;base-de-datos-descarga&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3.3. Base de datos: descarga&lt;/h2&gt;
 &lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(readr)
-MaterialParticulado &amp;lt;- read_delim(&amp;quot;MaterialParticulado.txt&amp;quot;, 
-delim = &amp;quot;\t&amp;quot;, escape_double = FALSE, 
-col_types = cols(Year = col_factor(levels = c(&amp;quot;2018&amp;quot;, &amp;quot;2019&amp;quot;, &amp;quot;2020&amp;quot;, &amp;quot;2021&amp;quot;)), Mes = col_factor(levels = c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;, &amp;quot;5&amp;quot;, &amp;quot;6&amp;quot;, &amp;quot;7&amp;quot;, &amp;quot;8&amp;quot;, 
-&amp;quot;9&amp;quot;, &amp;quot;10&amp;quot;, &amp;quot;11&amp;quot;, &amp;quot;12&amp;quot;))), trim_ws = TRUE)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Exploremos el encabezado de la base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;glimpse()&lt;/code&gt;. del paquete &lt;code&gt;dplyr()&lt;/code&gt;.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
 
