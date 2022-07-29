@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="En este taller vamos a  introducir el software R.  Aprenderemos herramientas básicas para la visualización y el análisis de datos. Finalmente, aprenderemos a realizar informes automáticos." />
+  <meta name="description" content="R Markdown  1. ¿Como funciona? 2. Requisitos 3. Estructura del archivo .Rmd.  Encabezado YAML Texto Trozos (chunk) de código  4. Syntaxis    R Markdown Rmarkdown nos permite generar informes a partir de R." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/mmad109/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/mmad109/sesion03_1/" />
 
   
 
@@ -268,8 +268,6 @@
   
 
   
-    <link rel="alternate" href="/docencia/mmad109/index.xml" type="application/rss+xml" title="Pablo Cortes" />
-  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -278,7 +276,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/docencia/mmad109/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/docencia/mmad109/sesion03_1/" />
 
   
   
@@ -289,19 +287,24 @@
   
   
     
+    
   
   
-  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/docencia/mmad109/" />
-  <meta property="og:title" content="MMAD109: visualización y análisis de datos | Pablo Cortes" />
-  <meta property="og:description" content="En este taller vamos a  introducir el software R.  Aprenderemos herramientas básicas para la visualización y el análisis de datos. Finalmente, aprenderemos a realizar informes automáticos." /><meta property="og:image" content="https://academic-demo.netlify.app/docencia/mmad109/featured.png" />
-    <meta property="twitter:image" content="https://academic-demo.netlify.app/docencia/mmad109/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/docencia/mmad109/sesion03_1/" />
+  <meta property="og:title" content="R Markdown | Pablo Cortes" />
+  <meta property="og:description" content="R Markdown  1. ¿Como funciona? 2. Requisitos 3. Estructura del archivo .Rmd.  Encabezado YAML Texto Trozos (chunk) de código  4. Syntaxis    R Markdown Rmarkdown nos permite generar informes a partir de R." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2022-03-01T00:00:00&#43;00:00" />
+      <meta
+        property="article:published_time"
+        content="2021-10-05T21:13:14-05:00"
+      />
     
+    <meta property="article:modified_time" content="2021-10-05T21:13:14-05:00">
   
 
   
@@ -312,15 +315,17 @@
 
   
 
+  
 
 
 
 
-  <title>MMAD109: visualización y análisis de datos | Pablo Cortes</title>
+
+  <title>R Markdown | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="d2a02d0e2068b8b8c960a1d91b13286d" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="76a9f46587aa69e7f72ca5b5351b382a" >
 
   
   
@@ -693,7 +698,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          Docencia
+          MMAD109
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -730,6 +735,10 @@
 
       
       
+        
+          
+        
+      
 
 
   
@@ -743,7 +752,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/docencia/mmad109/">MMAD109</a>
+        <a class="docs-toc-link " href="/docencia/mmad109/">MMAD109</a>
     
       
         <ul class="nav docs-sidenav">
@@ -762,7 +771,7 @@
 
 
 
-  <li class=""><a href="/docencia/mmad109/sesion03_1/">R Markdown</a></li>
+  <li class="active"><a href="/docencia/mmad109/sesion03_1/">R Markdown</a></li>
 
       
         </ul>
@@ -788,15 +797,7 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      <nav id="TableOfContents">
-  <ul>
-    <li><a href="#gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</a></li>
-    <li><a href="#objetivos-del-taller">Objetivos del taller</a></li>
-    <li><a href="#qué-es-r">¿Qué es <code>R</code>?</a></li>
-    <li><a href="#qué-es-rstudio">¿Qué es <code>RStudio</code>?</a></li>
-    <li><a href="#definiciones">Definiciones</a></li>
-  </ul>
-</nav>
+      
 
       
     </div>
@@ -812,6 +813,7 @@
   <nav class="d-none d-md-flex" aria-label="breadcrumb">
     <ol class="breadcrumb">
       
+  
   
   
 
@@ -833,8 +835,17 @@
   </li>
 
 
-      <li class="breadcrumb-item active" aria-current="page">
+  <li class="breadcrumb-item">
+    <a href="/docencia/mmad109/">
+      
         MMAD109
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        R Markdown
       </li>
     </ol>
   </nav>
@@ -842,78 +853,231 @@
 
           
 
-          <h1>MMAD109: visualización y análisis de datos</h1>
+          <h1>R Markdown</h1>
 
           <div class="article-style">
             
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="" srcset="
-               /docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_479da0f2e1639ae9b2491ece322a3d48.png 400w,
-               /docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_29dd131674cac4ca9471114567552333.png 760w,
-               /docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_1200x1200_fit_lanczos_3.png 1200w"
-               src="/docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_479da0f2e1639ae9b2491ece322a3d48.png"
-               width="725"
-               height="545"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<details class="toc-inpage d-print-none d-xl-none " open>
-  <summary class="font-weight-bold">Table of Contents</summary>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</a></li>
-    <li><a href="#objetivos-del-taller">Objetivos del taller</a></li>
-    <li><a href="#qué-es-r">¿Qué es <code>R</code>?</a></li>
-    <li><a href="#qué-es-rstudio">¿Qué es <code>RStudio</code>?</a></li>
-    <li><a href="#definiciones">Definiciones</a></li>
-  </ul>
-</nav>
-</details>
-
-<h2 id="gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</h2>
-<p>La asignatura tiene por objetivo proporcionar al estudiante una base conceptual general sobre los diferentes problemas de contaminación ambiental asociados al desarrollo urbano e industrial y las herramientas e instrumentos de gestión y control que se aplican en Chile y el mundo para manejar la contaminación y los pasivos ambientales del territorio, en el marco de la institucionalidad y normativa vigentes en el país.</p>
-<h2 id="objetivos-del-taller">Objetivos del taller</h2>
-<p>En el presente taller aprenderemos a manejar <code>R</code> y <code>RStudio</code> como herramienta para poder explorar, visualizar, analizar y comunicar de manera eficaz datos de contaminación atmosférica.</p>
-<h2 id="qué-es-r">¿Qué es <code>R</code>?</h2>
-<p><code>R</code>  es un tipo de lenguaje de programación con software libre, que, a su vez, es un tipo de lenguaje interpretado. Es decir, los comandos o instrucciones son ejecutados directamente sin ningún tipo de software externo.</p>
-<p>El código <code>R</code>   es desarrollado actualmente por R Development Core Team, y su proyecto es colaborativo y abierto, por lo que otros usuarios programadores pueden ser partícipes del proyecto mediante la publicación de paquetes que extienden su configuración básica.</p>
-<p><code>R</code>  incluye una amplia variedad de técnicas estadísticas y de visualización de datos.</p>
-<h2 id="qué-es-rstudio">¿Qué es <code>RStudio</code>?</h2>
-<p><code>RStudio</code> es un entorno de desarrollo integrado para <code>R</code>. <code>RStudio</code> incluye una interfaz gráfica que nos permite interactuar con <code>R</code> de una forma más amigable.</p>
-<p>Es importante señalar que <code>RStudio</code> es un programa que ejecuta <code>R</code> y proporciona herramientas adicionales que son útiles al escribir código <code>R</code>, por ende RStudio<code>y</code>R` no son lo mismo.</p>
-<h2 id="definiciones">Definiciones</h2>
-<p>A continuación, se definen conceptos que serán de utilidad al momento de comenzar a explorar el mundo <code>R</code>.</p>
-<p><strong>CRAN</strong>:  The Comprehensive R Archive Network es una red de servidores web en todo el mundo donde podemos encontrar el código fuente R, los manuales y la documentación R, y los paquetes.</p>
-<p><strong>Paquete</strong>: Colección de funciones diseñadas para atender una tarea específica.</p>
-<p><strong>Instalar un paquete</strong>: Esta acción se realiza una sola vez. Para ello usaremos la función <code>install.packages()</code>, dando como argumento el nombre del paquete que deseamos instalar, entre comillas.</p>
-<p><strong>Cargar  un paquete</strong>: Esta acción se realiza cada vez que iniciemos sesión y que necesitemos utilizar un determinado paquete. Para ello usaremos la función <code>library()</code>, dando como argumento el nombre del paquete que deseamos instalar, esta vez sin utilizar comillas.</p>
-<p><strong>Función</strong>: Serie de operaciones a la que les hemos asignados un nombre. Las funciones aceptan argumentos, es decir, especificaciones sobre cómo deben funcionar.</p>
-<ul class="cta-group">
-  
-  <li>
-    <a href="sesion01_1"  class="btn btn-primary px-3 py-3">Comencemos con el taller</a>
-  </li>
-  
-  
+<div id="TOC">
+<ul>
+<li><a href="#r-markdown">R Markdown</a>
+<ul>
+<li><a href="#como-funciona">1. ¿Como funciona?</a></li>
+<li><a href="#requisitos">2. Requisitos</a></li>
+<li><a href="#estructura-del-archivo-.rmd.">3. Estructura del archivo <code>.Rmd</code>.</a>
+<ul>
+<li><a href="#encabezado-yaml"><strong>Encabezado YAML</strong></a></li>
+<li><a href="#texto"><strong>Texto</strong></a></li>
+<li><a href="#trozos-chunk-de-código"><strong>Trozos (<em>chunk</em>) de código</strong></a></li>
+</ul></li>
+<li><a href="#syntaxis">4. Syntaxis</a></li>
+</ul></li>
 </ul>
+</div>
 
+<div id="r-markdown" class="section level1">
+<h1>R Markdown</h1>
+<p>Rmarkdown nos permite generar informes a partir de R. Utiliza un lenguaje llamado Markdown para enriquecer el informe final. Este permite incluir texto, comandos de R, imágenes y gráficos a un documento. Pero lo más importante es que permite que se reproduzca el análisis realizado y si se incorporan nuevos datos, los resultados se actualizarán. Para mas detalles visitar <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<div id="como-funciona" class="section level2">
+<h2>1. ¿Como funciona?</h2>
+<p>Debemos comenzar abriendo un archivo R Markdown, un archivo de texto sin formato, que tiene la extensión <code>.Rmd</code>.</p>
+<p>En el menú debemos hacer click en:
+<strong>File –&gt; New File –&gt; R Markdown…</strong></p>
+<p>Esto abrirá un fichero que nos permitirá elegir el formato de salida de nuestro informe:</p>
+<ul>
+<li>página web que se podrá ver con un navegador,</li>
+<li>documento PDF o</li>
+<li>documento Word.</li>
+</ul>
+<p><em>Importante</em>: Si deseamos generar una documento PDF, necesitaremos instalar LaTeX. Para los usuarios de Markdown R que no hayan instalado LaTeX anteriormente, se recomienda instalarTinyTeX (<a href="https://yihui.name/tinytex/" class="uri">https://yihui.name/tinytex/</a>):</p>
+</div>
+<div id="requisitos" class="section level2">
+<h2>2. Requisitos</h2>
+<p>Al momento de comenzar un proyecto, debemos tener instalado los siguientes programas:</p>
+<ol style="list-style-type: lower-alpha">
+<li>La versión mas reciente de R <a href="https://www.r-project.org" class="uri">https://www.r-project.org</a>.</li>
+<li>RStudio <a href="https://rstudio.com" class="uri">https://rstudio.com</a>.</li>
+<li>Instalar los paquetes <code>knitr</code> y <code>rmarkdown</code>. Podemos instalar cada paquete desde el CRAN con:</li>
+</ol>
+<pre class="r"><code>#install.packages(&quot;rmarkdown&quot;)
+library(rmarkdown)
+#install.packages(&quot;knitr&quot;)
+library(knitr)</code></pre>
+<p>El paquete <code>Knitr</code> integra en un sólo archivo markdown el texto ingresado en formato RMarkdown y los resultados de la ejecución de los códigos construidos mediante R.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>Conocimientos basicos en markdown (para eso está este tutorial, no?).</li>
+</ol>
+</div>
+<div id="estructura-del-archivo-.rmd." class="section level2">
+<h2>3. Estructura del archivo <code>.Rmd</code>.</h2>
+<p>Cuando se utiliza el botón de <code>Knit</code> se generan documentos los cuales contienen sintaxis en markdown con codigos de R en <em>chunks</em>.</p>
+<div id="encabezado-yaml" class="section level3">
+<h3><strong>Encabezado YAML</strong></h3>
+<p>El encabezado YAML (en inglés <em>yet another markup language</em>) determina los parámetros generales de formato para el documento a generar. Es importante tener presente que este encabezado define el formato del archivo resultante, más no su contenido.</p>
+<p>El encabezado comienza y termina con tres rayas (- - -). Veamos el siguiente ejemplo que incluye algunos parámetros (existen muchos más) que definirán el formato del documento:</p>
+<pre><code>---
+title: &quot;Título del documento&quot;
+author: &quot;Quien desarrolla el documento&quot;
+date: &quot;Fecha en la cual desarrollamos el documento&quot;
+output:
+  html_document: default
+---</code></pre>
+<p>En este ejemplo hemos especificado que el documento se generará en formato <em>HTML</em>. Otras opciones de <em>output</em> son:</p>
+<ul>
+<li><strong>output: html_document</strong>… archivo html (página web)</li>
+<li><strong>output: pdf_document</strong>… archivo pdf</li>
+<li><strong>output: word_document</strong>… Microsoft Word .docx</li>
+<li><strong>output: beamer_presentation</strong>… presentación beamer (pdf)</li>
+<li><strong>output: ioslides_presentation</strong>… presentación ioslides (html)</li>
+</ul>
+</div>
+<div id="texto" class="section level3">
+<h3><strong>Texto</strong></h3>
+<p>El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.</p>
+<p>Podemos agregar imágenes a un informe de R Markdown a partir de imágenes disponibles en nuestro directorio de trabajo. Para ello utilziaremos la siguiente sintaxis:</p>
+<pre><code>![AQUÍ PODEMOS INCORPORAR TEXTO ](respeto.jpg)
+</code></pre>
+<p>Un aspecto importante es que la separación de párrafos se realiza saltando una línea en blanco.</p>
+<pre><code>Me salto
+una
+
+línea</code></pre>
+</div>
+<div id="trozos-chunk-de-código" class="section level3">
+<h3><strong>Trozos (<em>chunk</em>) de código</strong></h3>
+<p>Los trozos (<em>chunk</em>) de código en un documento de R Markdown contendrán tu código R. Los trozos de código
+está delimitado por tres apóstrofes seguidos por un r entre corchetes curvos <code>{r}</code>, y su cierre por otros tres apóstrofes (<code>```</code>). Eso delimita lo que se ejecutará como código.</p>
+<p>Un <em>chunk</em> básico se ve de la siguiente forma:</p>
+<pre class="r"><code>
+# ``` {r } 
+
+#Aquí va el código
+
+# ```</code></pre>
+<p>Veamos un ejemplo:</p>
+<pre class="r"><code># sumemos
+x &lt;- 1+12
+
+y &lt;- 90
+
+# generemos un objeto que contenga la resta de &quot;x&quot; con &quot;y&quot; 
+respuesta &lt;- x - y
+
+# revisemos el resultado de nuestro objeto llamado respuesta
+respuesta
+## [1] -77</code></pre>
+<p>Ahora, insertemos un nuevo <em>chunk</em>. Para ello podemos escribirlo o podemos utilizar una combinación desde el teclado para generar un <em>chunk</em> por defecto:</p>
+<ul>
+<li><strong>Windows</strong>: Ctrl + Alt + I</li>
+<li><strong>OS X</strong>: Cmd + Option + I</li>
+</ul>
+<pre class="r"><code>#```{r }
+
+#```</code></pre>
+<p>RMarkdown también nos permite configurar qué es lo que queremos mostrar en nuestro documento final. Por defecto, mostramos el código y resultado. Por ejemplo, al abrir el siguiente código de nuestra sintaxis de Markdown con las siguintes opciones <code>{r, eval = FALSE, echo = FALSE,  message = FALSE, warning= FALSE}</code> les estamos indicando lo siguiente:</p>
+<ul>
+<li><code>eval = FALSE</code>: queremos mostrar el código, pero que no se ejecute (sólo queremos enseñar cómo se hace algo).</li>
+<li><code>echo = FALSE</code>: queremos mostrar el resultado pero no el código (no queremos enseñar cómo se hace algo).</li>
+<li><code>message = FALSE</code>: No muestra los mensajes de información que se generan al correr el código.</li>
+<li><code>warning = FALSE</code>: No muestra los mensajes de advertencia que se generan al correr el código.</li>
+</ul>
+</div>
+</div>
+<div id="syntaxis" class="section level2">
+<h2>4. Syntaxis</h2>
+<p>La syntaxis de RMarkdown es muy secilla y nos permite añadir estilo, imágenes, enlaces y expresiones mátematicas a nuestro documento de texto. Las palabras o frases deben comenzar y terminar con los siguientes simbolos:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Syntaxis</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>* *</td>
+<td><strong>cursiva</strong></td>
+</tr>
+<tr class="even">
+<td>_ _</td>
+<td><strong>cursiva</strong></td>
+</tr>
+<tr class="odd">
+<td>** **</td>
+<td><strong>negrita</strong></td>
+</tr>
+<tr class="even">
+<td>__ __</td>
+<td><strong>negrita</strong></td>
+</tr>
+<tr class="odd">
+<td>superindice ^ ^</td>
+<td>superindice <sup>2</sup></td>
+</tr>
+<tr class="even">
+<td>tachado ~~ ~~</td>
+<td><del>tachado</del></td>
+</tr>
+<tr class="odd">
+<td>eslabon [ ]</td>
+<td>[<a href="https://www.umayor.cl/um/" class="uri">https://www.umayor.cl/um/</a>]</td>
+</tr>
+</tbody>
+</table>
+<p>También podemos generar listas no numeradas:</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2
+<ul>
+<li>Item 2a</li>
+<li>Item 2b</li>
+</ul></li>
+</ul>
+<p>y listas numeradas:</p>
+<ol style="list-style-type: decimal">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 2
+<ul>
+<li>Item 3a</li>
+<li>Item 3b</li>
+</ul></li>
+</ol>
+<p>En algunas ocasiones, estaremos interesados en establecer secciones dentro de nuestro documento. Para ello podemos diferenciar mmúltiples encabezados, según el tamaño del texto.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Nivel</th>
+<th>Sintaxis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Encabezado 1</td>
+<td><em># texto</em></td>
+</tr>
+</tbody>
+</table>
+<p>Encabezado 2 |<em>## texto</em></p>
+<p>Encabezado 3 |<em>### texto</em></p>
+<p>Encabezado 4 |<em>#### texto</em></p>
+<p>Encabezado 5 |<em>##### texto</em></p>
+<p>Encabezado 6 |<em>###### texto</em></p>
+</div>
+</div>
 
           </div>
 
           
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/r/">R</a>
+  
+  <a class="badge badge-light" href="/tag/rstudio/">RStudio</a>
+  
+</div>
 
 
 
@@ -924,6 +1088,13 @@
 <div class="post-nav">
   
   
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/docencia/mmad109/sesion03_2/" rel="next">Primer informe con RMarkdown</a>
+  </div>
+  
+  
 </div>
 
           </div>
@@ -931,7 +1102,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Mar 1, 2022</p>
+          <p>Last updated on Oct 5, 2021</p>
 
           
 
@@ -948,6 +1119,19 @@
 
 
   
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/docencia/mmad109/sesion01_2/">Datos en RStudio</a></li>
+      
+      <li><a href="/docencia/mmad109/sesion01_1/">Introducción a RStudio</a></li>
+      
+      <li><a href="/docencia/mmad109/sesion03_2/">Primer informe con RMarkdown</a></li>
+      
+    </ul>
+  </div>
   
 
 
