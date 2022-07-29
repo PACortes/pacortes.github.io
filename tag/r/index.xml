@@ -2194,7 +2194,7 @@ PM2.5&amp;lt;-c(73,75,79,84,80, 67, 65, 70, 61,65)&lt;/code&gt;&lt;/pre&gt;
 &lt;li&gt;&lt;a href=&#34;#estructura-del-archivo-.rmd.&#34;&gt;3. Estructura del archivo &lt;code&gt;.Rmd&lt;/code&gt;.&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#encabezado-yaml&#34;&gt;Encabezado YAML&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;&lt;strong&gt;Texto&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#texto&#34;&gt;Texto&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#trozos-chunk-de-código&#34;&gt;Trozos (&lt;em&gt;chunk&lt;/em&gt;) de código&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#syntaxis&#34;&gt;4. Syntaxis&lt;/a&gt;&lt;/li&gt;
@@ -2259,7 +2259,7 @@ output:
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;texto&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;&lt;strong&gt;Texto&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3&gt;Texto&lt;/h3&gt;
 &lt;p&gt;El documento lo podemos escribir en forma de texto plano (el contenido que deseas escribir). Para ello podemos usar la sintaxis de markdown para describir el formato del texto en el documento final. Dedicaremos una sección independiente para revisar la sintaxis de RMarkdown.&lt;/p&gt;
 &lt;p&gt;Podemos agregar imágenes a un informe de R Markdown a partir de imágenes disponibles en nuestro directorio de trabajo. Para ello utilziaremos la siguiente sintaxis:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;![AQUÍ PODEMOS INCORPORAR TEXTO ](respeto.jpg)
