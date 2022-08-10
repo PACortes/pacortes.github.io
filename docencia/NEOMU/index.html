@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Operadores lógicos y booleanos 3. Sintáxis  3.1 Condición de interés en una variable 3.2 Condición de interés en dos variables 3.3 Condición de interés en una u otra variable 3." />
+  <meta name="description" content="En este taller vamos a  introducir el software R.  Aprenderemos herramientas básicas para la visualización y el análisis de datos. Finalmente, aprenderemos a realizar informes automáticos." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/filter/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/neomu/" />
 
   
 
@@ -268,6 +268,8 @@
   
 
   
+    <link rel="alternate" href="/docencia/neomu/index.xml" type="application/rss+xml" title="Pablo Cortes" />
+  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -276,7 +278,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/courses/dplyr/filter/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/docencia/neomu/" />
 
   
   
@@ -293,18 +295,14 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/filter/" />
-  <meta property="og:title" content="filter() | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Operadores lógicos y booleanos 3. Sintáxis  3.1 Condición de interés en una variable 3.2 Condición de interés en dos variables 3.3 Condición de interés en una u otra variable 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/docencia/neomu/" />
+  <meta property="og:title" content="MMAD109: visualización y análisis de datos | Pablo Cortes" />
+  <meta property="og:description" content="En este taller vamos a  introducir el software R.  Aprenderemos herramientas básicas para la visualización y el análisis de datos. Finalmente, aprenderemos a realizar informes automáticos." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta
-        property="article:published_time"
-        content="2022-01-15T21:13:14-05:00"
-      />
+      <meta property="og:updated_time" content="2022-03-01T00:00:00&#43;00:00" />
     
-    <meta property="article:modified_time" content="2022-01-15T21:13:14-05:00">
   
 
   
@@ -315,17 +313,15 @@
 
   
 
-  
 
 
 
 
-
-  <title>filter() | Pablo Cortes</title>
+  <title>MMAD109: visualización y análisis de datos | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="325c7a40fb6825df2677ea29e3f9d715" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0d613ee3007ad1983a441829d74348cd" >
 
   
   
@@ -552,7 +548,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/courses/"><span>R</span></a>
+          <a class="nav-link " href="/courses/"><span>R</span></a>
         </li>
 
         
@@ -582,7 +578,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/docencia/"><span>Docencia</span></a>
+          <a class="nav-link  active" href="/docencia/"><span>Docencia</span></a>
         </li>
 
         
@@ -698,7 +694,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          dplyr
+          Docencia
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -730,14 +726,10 @@
       
 
       <ul class="nav docs-sidenav">
-        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Tutoriales de R</a></li>
+        <li><a href="/docencia/"><i class="fas fa-arrow-left pr-1"></i>Docencia</a></li>
       </ul>
 
       
-      
-        
-          
-        
       
 
 
@@ -752,26 +744,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/dplyr/">dplyr</a>
-    
-      
-        <ul class="nav docs-sidenav">
-      
-
-
-  <li class=""><a href="/courses/dplyr/select/">select()</a></li>
-
-
-
-  <li class="active"><a href="/courses/dplyr/filter/">filter()</a></li>
-
-
-
-  <li class=""><a href="/courses/dplyr/mutate/">mutate()</a></li>
-
-      
-        </ul>
-      
+        <a class="docs-toc-link  active" href="/docencia/neomu/">MMAD109</a>
     
 
     
@@ -793,7 +766,15 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</a></li>
+    <li><a href="#objetivos-del-taller">Objetivos del taller</a></li>
+    <li><a href="#qué-es-r">¿Qué es <code>R</code>?</a></li>
+    <li><a href="#qué-es-rstudio">¿Qué es <code>RStudio</code>?</a></li>
+    <li><a href="#definiciones">Definiciones</a></li>
+  </ul>
+</nav>
 
       
     </div>
@@ -811,7 +792,6 @@
       
   
   
-  
 
   <li class="breadcrumb-item">
     <a href="/">
@@ -823,25 +803,16 @@
 
 
   <li class="breadcrumb-item">
-    <a href="/courses/">
+    <a href="/docencia/">
       
-        Tutoriales de R
-      
-    </a>
-  </li>
-
-
-  <li class="breadcrumb-item">
-    <a href="/courses/dplyr/">
-      
-        dplyr
+        Docencia
       
     </a>
   </li>
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        filter()
+        MMAD109
       </li>
     </ol>
   </nav>
@@ -849,156 +820,71 @@
 
           
 
-          <h1>filter()</h1>
+          <h1>MMAD109: visualización y análisis de datos</h1>
 
           <div class="article-style">
             
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
-<div id="TOC">
-<ul>
-<li><a href="#definición">1. Definición</a></li>
-<li><a href="#operadores-lógicos-y-booleanos">2. Operadores lógicos y booleanos</a></li>
-<li><a href="#sintáxis">3. Sintáxis</a>
-<ul>
-<li><a href="#condición-de-interés-en-una-variable">3.1 Condición de interés en una variable</a></li>
-<li><a href="#condición-de-interés-en-dos-variables">3.2 Condición de interés en dos variables</a></li>
-<li><a href="#condición-de-interés-en-una-u-otra-variable">3.3 Condición de interés en una u otra variable</a></li>
-<li><a href="#filtrar-observaciones-que-no-contienen-un-valor-en-una-variable">3.4 Filtrar observaciones que no contienen un valor en una variable</a></li>
-<li><a href="#filtrar-observaciones-que-no-contienen-valores-en-múltiples-variables">3.5 Filtrar observaciones que no contienen valores en múltiples variables</a></li>
-</ul></li>
-<li><a href="#referencias">4. Referencias</a></li>
-</ul>
-</div>
 
-<div id="definición" class="section level1">
-<h1>1. Definición</h1>
-<p>Así como la función <code>select()</code> es utilizada para seleccionar variables (columnas), la función <code>filter()</code> hace lo propio con las observaciones (filas) de la base de datos que cumplen con una condición de interés. En otras palabras <code>filter()</code>permite filtrar un subconjunto de observaciones según sus valores.</p>
-<p>Cuando ejecutamos una operación de filtrado, <code>dplyr</code> devuelve un nuevo <em>data frame</em>. Por defecto, R imprime todos los resultados.</p>
-<p><code>filter()</code> solo incluye observaciones donde la condición es <code>TRUE</code>; excluye tanto los valores <code>FALSE</code> como <code>NA</code>.</p>
-<p>Recordemos que antes de utilizar la función <code>filter()</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
-<pre class="r"><code>library(dplyr)</code></pre>
-</div>
-<div id="operadores-lógicos-y-booleanos" class="section level1">
-<h1>2. Operadores lógicos y booleanos</h1>
-<p>Existen múltiples operadoores que serán útiles para especificar las condicones de interés al momento de filtrar los datos.</p>
-<ul>
-<li><p><code>x &lt; y</code>: x menor que y.</p></li>
-<li><p><code>x &gt; y =</code>: x mayor que y.</p></li>
-<li><p><code>x &lt;= y</code>: x menor o igual que y.</p></li>
-<li><p><code>x &gt;= y</code>: x mayor o igual que y.</p></li>
-<li><p><code>x == y</code>: x igual a y.</p></li>
-<li><p><code>x != y</code>: x no es igual a y.</p></li>
-<li><p><code>between(x, A, B)</code>: x &gt;= A &amp; x &lt;= B.</p></li>
-<li><p><code>%in%</code>: Comprueba si un valor está en una conjunto de valores.</p></li>
-<li><p><code>is.na()</code>: Comprueba si un valor es NA (valor faltante).</p></li>
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="foto1.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<details class="toc-inpage d-print-none d-xl-none " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</a></li>
+    <li><a href="#objetivos-del-taller">Objetivos del taller</a></li>
+    <li><a href="#qué-es-r">¿Qué es <code>R</code>?</a></li>
+    <li><a href="#qué-es-rstudio">¿Qué es <code>RStudio</code>?</a></li>
+    <li><a href="#definiciones">Definiciones</a></li>
+  </ul>
+</nav>
+</details>
+
+<h2 id="gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</h2>
+<p>La asignatura tiene por objetivo proporcionar al estudiante una base conceptual general sobre los diferentes problemas de contaminación ambiental asociados al desarrollo urbano e industrial y las herramientas e instrumentos de gestión y control que se aplican en Chile y el mundo para manejar la contaminación y los pasivos ambientales del territorio, en el marco de la institucionalidad y normativa vigentes en el país.</p>
+<h2 id="objetivos-del-taller">Objetivos del taller</h2>
+<p>En el presente taller aprenderemos a manejar <code>R</code> y <code>RStudio</code> como herramienta para poder explorar, visualizar, analizar y comunicar de manera eficaz datos de contaminación atmosférica.</p>
+<h2 id="qué-es-r">¿Qué es <code>R</code>?</h2>
+<p><code>R</code>  es un tipo de lenguaje de programación con software libre, que, a su vez, es un tipo de lenguaje interpretado. Es decir, los comandos o instrucciones son ejecutados directamente sin ningún tipo de software externo.</p>
+<p>El código <code>R</code>   es desarrollado actualmente por R Development Core Team, y su proyecto es colaborativo y abierto, por lo que otros usuarios programadores pueden ser partícipes del proyecto mediante la publicación de paquetes que extienden su configuración básica.</p>
+<p><code>R</code>  incluye una amplia variedad de técnicas estadísticas y de visualización de datos.</p>
+<h2 id="qué-es-rstudio">¿Qué es <code>RStudio</code>?</h2>
+<p><code>RStudio</code> es un entorno de desarrollo integrado para <code>R</code>. <code>RStudio</code> incluye una interfaz gráfica que nos permite interactuar con <code>R</code> de una forma más amigable.</p>
+<p>Es importante señalar que <code>RStudio</code> es un programa que ejecuta <code>R</code> y proporciona herramientas adicionales que son útiles al escribir código <code>R</code>, por ende RStudio<code>y</code>R` no son lo mismo.</p>
+<h2 id="definiciones">Definiciones</h2>
+<p>A continuación, se definen conceptos que serán de utilidad al momento de comenzar a explorar el mundo <code>R</code>.</p>
+<p><strong>CRAN</strong>:  The Comprehensive R Archive Network es una red de servidores web en todo el mundo donde podemos encontrar el código fuente R, los manuales y la documentación R, y los paquetes.</p>
+<p><strong>Paquete</strong>: Colección de funciones diseñadas para atender una tarea específica.</p>
+<p><strong>Instalar un paquete</strong>: Esta acción se realiza una sola vez. Para ello usaremos la función <code>install.packages()</code>, dando como argumento el nombre del paquete que deseamos instalar, entre comillas.</p>
+<p><strong>Cargar  un paquete</strong>: Esta acción se realiza cada vez que iniciemos sesión y que necesitemos utilizar un determinado paquete. Para ello usaremos la función <code>library()</code>, dando como argumento el nombre del paquete que deseamos instalar, esta vez sin utilizar comillas.</p>
+<p><strong>Función</strong>: Serie de operaciones a la que les hemos asignados un nombre. Las funciones aceptan argumentos, es decir, especificaciones sobre cómo deben funcionar.</p>
+<ul class="cta-group">
+  
+  <li>
+    <a href="sesion01_1"  class="btn btn-primary px-3 py-3">Comencemos con el taller</a>
+  </li>
+  
+  
 </ul>
-<p>Además, podemps usar operadores Booleanas para establecer combinaciones de condiciones:</p>
-<ul>
-<li><p><code>&amp;</code>: es “y”: lo utilizamos para múltiples condiciones.</p></li>
-<li><p><code>|</code>: es “o”.</p></li>
-<li><p><code>!</code>: es “no”; lo utilizamos para negar una condición.</p></li>
-</ul>
-</div>
-<div id="sintáxis" class="section level1">
-<h1>3. Sintáxis</h1>
-<p>La sintáxis básica de <code>filter()</code> para seleccionar observaciones es:</p>
-<p><code>filter(data, condición)</code></p>
-<p>En donde:</p>
-<ul>
-<li><p><code>data</code>: data frame (nuestros datos).</p></li>
-<li><p><code>condición</code>: condición de interés que deben cumplir las observaciones.</p></li>
-</ul>
-<div id="condición-de-interés-en-una-variable" class="section level2">
-<h2>3.1 Condición de interés en una variable</h2>
-<p>Filtremos información específica de una variable. Por ejemplo, podríamos estar interesados en todas aquellas observaciones que tengan un <strong>Largo de Sépalo</strong> mayor a 5.8. Para aplicar el filtro, utilizaremos el operador lógico <code>x &gt; y</code>:</p>
-<pre class="r"><code>filter(iris,Sepal.Length&gt;5.8)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1          7.0         3.2          4.7         1.4 versicolor
-## 2          6.4         3.2          4.5         1.5 versicolor
-## 3          6.9         3.1          4.9         1.5 versicolor
-## 4          6.5         2.8          4.6         1.5 versicolor
-## 5          6.3         3.3          4.7         1.6 versicolor
-## 6          6.6         2.9          4.6         1.3 versicolor</code></pre>
-</div>
-<div id="condición-de-interés-en-dos-variables" class="section level2">
-<h2>3.2 Condición de interés en dos variables</h2>
-<p>Ahora bien, podríamos estar interesados en observaciones que cumplan criterios en dos (o más variables). Por ejemplo, queremos trabajar con las observaciones de la especie <strong>versicolor</strong> que tengan un <strong>Largo de Sépalo</strong> mayor a 5.8. Para aplicar el filtro, utilizaremos los operadores lógicos <code>x &gt; y</code> y <code>x == y</code>, además del operador booleano <code>&amp;</code>:</p>
-<pre class="r"><code>filter(iris,Sepal.Length&gt;5.8 &amp; Species==&quot;versicolor&quot;)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1          7.0         3.2          4.7         1.4 versicolor
-## 2          6.4         3.2          4.5         1.5 versicolor
-## 3          6.9         3.1          4.9         1.5 versicolor
-## 4          6.5         2.8          4.6         1.5 versicolor
-## 5          6.3         3.3          4.7         1.6 versicolor
-## 6          6.6         2.9          4.6         1.3 versicolor</code></pre>
-<p>De forma similar, si estuviesemos interesados en las observaciones de todas las especies excepto <strong>versicolor</strong>, podemos utilizar el operador lógico<code>x &gt; y</code> y <code>x != y</code>:</p>
-<pre class="r"><code>filter(iris,Sepal.Length&gt;5.8 &amp; Species!=&quot;versicolor&quot;)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 1          6.3         3.3          6.0         2.5 virginica
-## 2          7.1         3.0          5.9         2.1 virginica
-## 3          6.3         2.9          5.6         1.8 virginica
-## 4          6.5         3.0          5.8         2.2 virginica
-## 5          7.6         3.0          6.6         2.1 virginica
-## 6          7.3         2.9          6.3         1.8 virginica</code></pre>
-</div>
-<div id="condición-de-interés-en-una-u-otra-variable" class="section level2">
-<h2>3.3 Condición de interés en una u otra variable</h2>
-<p>Ahora bien, podríamos estar interesados en observaciones que cumplan criterios en una u otra variable. Por ejemplo, queremos trabajar con las observaciones de la especie <strong>versicolor</strong> y todas aquellas que tengan un <strong>Largo de Sépalo</strong> mayor a 5.8 (independiente de la especie). Para aplicar el filtro, utilizaremos los operadores lógicos <code>x &gt; y</code> y <code>x == y</code>, además del operador booleano <code>|</code>:</p>
-<pre class="r"><code>filter(iris,Sepal.Length&gt;5.8 | Species==&quot;versicolor&quot;)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
-## 1          7.0         3.2          4.7         1.4 versicolor
-## 2          6.4         3.2          4.5         1.5 versicolor
-## 3          6.9         3.1          4.9         1.5 versicolor
-## 4          5.5         2.3          4.0         1.3 versicolor
-## 5          6.5         2.8          4.6         1.5 versicolor
-## 6          5.7         2.8          4.5         1.3 versicolor</code></pre>
-</div>
-<div id="filtrar-observaciones-que-no-contienen-un-valor-en-una-variable" class="section level2">
-<h2>3.4 Filtrar observaciones que no contienen un valor en una variable</h2>
-<p>Cuando trabajamos con variables que contienen una gran cantidad de niveles, podríamos estar interesados en algúnas de ellas para futuros análisis. Por ejemplo, queremos trabajar solamente con las observaciones de la <strong>especie</strong> <strong>virginica</strong>. Dicho de otro modo, queremos excluir las observaciones de las especies <strong>setosa</strong> y <strong>versicolor</strong>. Para aplicar el filtro, utilizaremos los operadores lógicos <code>!</code> y <code>%in%</code>, además del operador booleano <code>|</code>.</p>
-<pre class="r"><code>filter(iris, !Species %in% c(&quot;setosa&quot;,&quot;versicolor&quot;))</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 1          6.3         3.3          6.0         2.5 virginica
-## 2          5.8         2.7          5.1         1.9 virginica
-## 3          7.1         3.0          5.9         2.1 virginica
-## 4          6.3         2.9          5.6         1.8 virginica
-## 5          6.5         3.0          5.8         2.2 virginica
-## 6          7.6         3.0          6.6         2.1 virginica</code></pre>
-<p>Acabamos de filtrar la base de datos para quedarnos con todas aquellas observaciones de la variable <strong>Species</strong> que no contienen los valores <strong>setosa</strong> y <strong>versicolor</strong>.</p>
-</div>
-<div id="filtrar-observaciones-que-no-contienen-valores-en-múltiples-variables" class="section level2">
-<h2>3.5 Filtrar observaciones que no contienen valores en múltiples variables</h2>
-<p>De igual forma, podríamos estar interesados en observaciones que cumplan condiciones en más de una varible. Por ejemplo, queremos trabajar solamente con las observaciones de la especie <strong>virginica</strong> que tienen un <strong>Largo de Sépalo</strong> diferente a 5.8. Dicho de otra forma, queremos excluir las observaciones de las especies <strong>setosa</strong> y <strong>versicolor</strong> que tengan un <strong>Largo de Sépalo</strong> igual 5.8.</p>
-<pre class="r"><code>filter(iris, !Species %in% c(&quot;setosa&quot;,&quot;versicolor&quot;) &amp; 
-             !Sepal.Length %in% c(5.8))</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 1          6.3         3.3          6.0         2.5 virginica
-## 2          7.1         3.0          5.9         2.1 virginica
-## 3          6.3         2.9          5.6         1.8 virginica
-## 4          6.5         3.0          5.8         2.2 virginica
-## 5          7.6         3.0          6.6         2.1 virginica
-## 6          4.9         2.5          4.5         1.7 virginica</code></pre>
-</div>
-</div>
-<div id="referencias" class="section level1">
-<h1>4. Referencias</h1>
-<ul>
-<li><a href="https://es.r4ds.hadley.nz/transform.html#filtrar-filas-con-filter">filter</a></li>
-</ul>
-</div>
+
 
           </div>
 
           
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tag/manipulacion/">Manipulación</a>
-  
-  <a class="badge badge-light" href="/tag/dplyr/">dplyr</a>
-  
-</div>
 
 
 
@@ -1009,19 +895,6 @@
 <div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/courses/dplyr/select/" rel="next">select()</a>
-  </div>
-  
-  
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Next</div>
-    <a href="/courses/dplyr/mutate/" rel="prev">mutate()</a>
-  </div>
-  
 </div>
 
           </div>
@@ -1029,7 +902,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Jan 15, 2022</p>
+          <p>Last updated on Mar 1, 2022</p>
 
           
 
@@ -1046,17 +919,6 @@
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/courses/dplyr/select/">select()</a></li>
-      
-      <li><a href="/courses/dplyr/mutate/">mutate()</a></li>
-      
-    </ul>
-  </div>
   
 
 

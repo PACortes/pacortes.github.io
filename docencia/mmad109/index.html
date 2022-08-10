@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="En este taller vamos a  introducir el software R.  Aprenderemos herramientas básicas para la visualización y el análisis de datos. Finalmente, aprenderemos a realizar informes automáticos." />
+  <meta name="description" content="In this workshop we will introduce the R software. We will learn basic tools for data visualization and analysis. Finally, we will learn how to create automatic reports.." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/mmad109/" />
@@ -295,12 +295,12 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/docencia/mmad109/" />
-  <meta property="og:title" content="MMAD109: visualización y análisis de datos | Pablo Cortes" />
-  <meta property="og:description" content="En este taller vamos a  introducir el software R.  Aprenderemos herramientas básicas para la visualización y el análisis de datos. Finalmente, aprenderemos a realizar informes automáticos." /><meta property="og:image" content="https://academic-demo.netlify.app/docencia/mmad109/featured.png" />
+  <meta property="og:title" content="NEOM ERI-U-TA | Pablo Cortes" />
+  <meta property="og:description" content="In this workshop we will introduce the R software. We will learn basic tools for data visualization and analysis. Finally, we will learn how to create automatic reports.." /><meta property="og:image" content="https://academic-demo.netlify.app/docencia/mmad109/featured.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/docencia/mmad109/featured.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2022-03-01T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2022-08-10T00:00:00&#43;00:00" />
     
   
 
@@ -316,7 +316,7 @@
 
 
 
-  <title>MMAD109: visualización y análisis de datos | Pablo Cortes</title>
+  <title>NEOM ERI-U-TA | Pablo Cortes</title>
 </head>
 
 
@@ -743,7 +743,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/docencia/mmad109/">MMAD109</a>
+        <a class="docs-toc-link  active" href="/docencia/mmad109/">NEOM</a>
     
       
         <ul class="nav docs-sidenav">
@@ -790,11 +790,13 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</a></li>
-    <li><a href="#objetivos-del-taller">Objetivos del taller</a></li>
-    <li><a href="#qué-es-r">¿Qué es <code>R</code>?</a></li>
-    <li><a href="#qué-es-rstudio">¿Qué es <code>RStudio</code>?</a></li>
-    <li><a href="#definiciones">Definiciones</a></li>
+    <li><a href="#about-this-workshop">About this Workshop</a></li>
+    <li><a href="#what-is-r">¿What is <code>R</code>?</a></li>
+    <li><a href="#the-r-software-environment">The R software environment</a></li>
+    <li><a href="#why-use-r">Why use R?</a></li>
+    <li><a href="#what-is-rstudio">¿What is <code>RStudio</code>?</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#installing-and-loading-packages">Installing and Loading Packages</a></li>
   </ul>
 </nav>
 
@@ -834,7 +836,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        MMAD109
+        NEOM
       </li>
     </ol>
   </nav>
@@ -842,10 +844,56 @@
 
           
 
-          <h1>MMAD109: visualización y análisis de datos</h1>
+          <h1>NEOM ERI-U-TA</h1>
 
           <div class="article-style">
-            
+            <details class="toc-inpage d-print-none d-xl-none " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-this-workshop">About this Workshop</a></li>
+    <li><a href="#what-is-r">¿What is <code>R</code>?</a></li>
+    <li><a href="#the-r-software-environment">The R software environment</a></li>
+    <li><a href="#why-use-r">Why use R?</a></li>
+    <li><a href="#what-is-rstudio">¿What is <code>RStudio</code>?</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#installing-and-loading-packages">Installing and Loading Packages</a></li>
+  </ul>
+</nav>
+</details>
+
+<h2 id="about-this-workshop">About this Workshop</h2>
+<p>The aim of this five-day introductory workshop is to guide you through the basics of using <code>R</code> via <code>RStudio</code> for analysis of institutional data. It is ideal for people new to R or who have limited experience.</p>
+<p>I assume no prior coding language for this workshop. My goals are to equip you to work comfortably from the RStudio environment, process, and explore data, and make very nice graphical representations of data.</p>
+<p>Specific topics covered include the R environment (directories, workspace, scripts, and packages), data structures (vector, matrix, data frames, lists), and data visualization (scatterplots, boxplots, histograms, etc.).</p>
+<h2 id="what-is-r">¿What is <code>R</code>?</h2>
+<p><code>R</code> is a language and software environment for statistical computing and graphics.</p>
+<p>R provides a wide variety of statistical and graphical techniques, and is highly extensible.</p>
+<p>It is one of the most popular languages used by statisticians, data analysts, researchers and marketers to retrieve, clean, analyze, visualize and present data.</p>
+<h2 id="the-r-software-environment">The R software environment</h2>
+<p>The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.</p>
+<h2 id="why-use-r">Why use R?</h2>
+<ul>
+<li>
+<p>R is open-source and free!</p>
+</li>
+<li>
+<p>R is popular and R community is huge</p>
+</li>
+<li>
+<p>R runs on all platforms (Available for Windows, Macintosh, and Linux).</p>
+</li>
+<li>
+<p>Publication-quality graphs. With R you have complete control over plotting/graphing options and are able to output publication quality figures with ease.</p>
+</li>
+<li>
+<p>Packages for <em>literate statistical programming</em> - weaving written reports and analysis code in one document.</p>
+</li>
+<li>
+<p>It&rsquo;s fun&hellip; probably not at the beginning of the learning process.</p>
+<p>
+
+
 
 
 
@@ -861,46 +909,23 @@
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img alt="" srcset="
-               /docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_479da0f2e1639ae9b2491ece322a3d48.png 400w,
-               /docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_29dd131674cac4ca9471114567552333.png 760w,
-               /docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_1200x1200_fit_lanczos_3.png 1200w"
-               src="/docencia/mmad109/foto1_hu3146a279ec90b8d9a163f76267531a92_16820_479da0f2e1639ae9b2491ece322a3d48.png"
-               width="725"
-               height="545"
-               loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="r_rollercoaster.png" alt="Credit: @allison_horst" loading="lazy" data-zoomable /></div>
   </div></figure>
-<details class="toc-inpage d-print-none d-xl-none " open>
-  <summary class="font-weight-bold">Table of Contents</summary>
-  <nav id="TableOfContents">
-  <ul>
-    <li><a href="#gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</a></li>
-    <li><a href="#objetivos-del-taller">Objetivos del taller</a></li>
-    <li><a href="#qué-es-r">¿Qué es <code>R</code>?</a></li>
-    <li><a href="#qué-es-rstudio">¿Qué es <code>RStudio</code>?</a></li>
-    <li><a href="#definiciones">Definiciones</a></li>
-  </ul>
-</nav>
-</details>
-
-<h2 id="gestión-de-la-contaminación-y-pasivos-ambientales-mmad119">Gestión de la contaminación y pasivos ambientales (MMAD119)</h2>
-<p>La asignatura tiene por objetivo proporcionar al estudiante una base conceptual general sobre los diferentes problemas de contaminación ambiental asociados al desarrollo urbano e industrial y las herramientas e instrumentos de gestión y control que se aplican en Chile y el mundo para manejar la contaminación y los pasivos ambientales del territorio, en el marco de la institucionalidad y normativa vigentes en el país.</p>
-<h2 id="objetivos-del-taller">Objetivos del taller</h2>
-<p>En el presente taller aprenderemos a manejar <code>R</code> y <code>RStudio</code> como herramienta para poder explorar, visualizar, analizar y comunicar de manera eficaz datos de contaminación atmosférica.</p>
-<h2 id="qué-es-r">¿Qué es <code>R</code>?</h2>
-<p><code>R</code>  es un tipo de lenguaje de programación con software libre, que, a su vez, es un tipo de lenguaje interpretado. Es decir, los comandos o instrucciones son ejecutados directamente sin ningún tipo de software externo.</p>
-<p>El código <code>R</code>   es desarrollado actualmente por R Development Core Team, y su proyecto es colaborativo y abierto, por lo que otros usuarios programadores pueden ser partícipes del proyecto mediante la publicación de paquetes que extienden su configuración básica.</p>
-<p><code>R</code>  incluye una amplia variedad de técnicas estadísticas y de visualización de datos.</p>
-<h2 id="qué-es-rstudio">¿Qué es <code>RStudio</code>?</h2>
-<p><code>RStudio</code> es un entorno de desarrollo integrado para <code>R</code>. <code>RStudio</code> incluye una interfaz gráfica que nos permite interactuar con <code>R</code> de una forma más amigable.</p>
-<p>Es importante señalar que <code>RStudio</code> es un programa que ejecuta <code>R</code> y proporciona herramientas adicionales que son útiles al escribir código <code>R</code>, por ende RStudio<code>y</code>R` no son lo mismo.</p>
-<h2 id="definiciones">Definiciones</h2>
-<p>A continuación, se definen conceptos que serán de utilidad al momento de comenzar a explorar el mundo <code>R</code>.</p>
-<p><strong>CRAN</strong>:  The Comprehensive R Archive Network es una red de servidores web en todo el mundo donde podemos encontrar el código fuente R, los manuales y la documentación R, y los paquetes.</p>
-<p><strong>Paquete</strong>: Colección de funciones diseñadas para atender una tarea específica.</p>
-<p><strong>Instalar un paquete</strong>: Esta acción se realiza una sola vez. Para ello usaremos la función <code>install.packages()</code>, dando como argumento el nombre del paquete que deseamos instalar, entre comillas.</p>
-<p><strong>Cargar  un paquete</strong>: Esta acción se realiza cada vez que iniciemos sesión y que necesitemos utilizar un determinado paquete. Para ello usaremos la función <code>library()</code>, dando como argumento el nombre del paquete que deseamos instalar, esta vez sin utilizar comillas.</p>
-<p><strong>Función</strong>: Serie de operaciones a la que les hemos asignados un nombre. Las funciones aceptan argumentos, es decir, especificaciones sobre cómo deben funcionar.</p>
+</p>
+</li>
+</ul>
+<p>The R language programming environment is a fully planned and</p>
+<h2 id="what-is-rstudio">¿What is <code>RStudio</code>?</h2>
+<p><code>RStudio</code> is a free, open source IDE (integrated development environment) for R. Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import <em>CSV</em>, <em>Excel</em>, <em>SAS</em>, <em>SPSS</em> and <em>Stata</em> files into R without having to write the code to do so.</p>
+<p>It is important to note that <code>RStudio</code> is a software that runs <code>R</code> and provides additional tools that are useful when writing <code>R</code> code. So <code>R</code> and <code>RStudio</code> are not the same.</p>
+<h2 id="definitions">Definitions</h2>
+<p>The following concepts will be helpful as you begin to explore the <code>R</code> world.</p>
+<p><strong>CRAN</strong>: The Comprehensive R Archive Network is a network of web servers around the world that store identical, up-to-date, versions of code and documentation for R.</p>
+<p><strong>R packages</strong>: Extensions to the R programming language. R packages contain code, data, and documentation in a standardised collection format that can be installed by users of R, typically via a centralised software repository such as CRAN. The location where the packages are stored is called the library. If there is a particular functionality that you require, you can download the package from the appropriate site and it will be stored in your library.</p>
+<p><strong>Function</strong>: is a set of statements organized together to perform a specific task. R has a large number of in-built functions and the user can create their own functions.</p>
+<h2 id="installing-and-loading-packages">Installing and Loading Packages</h2>
+<p>In order to use a package, it needs to be installed on your computer by running <code>install.packages(&quot;name_of_package&quot;)</code> (do not forget <code>&quot;&quot;</code> around the name of the package).</p>
+<p>Once the package is installed, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run <code>library(name_of_package)</code> (this time <code>&quot;&quot;</code> around the name of the package are optional).</p>
 <ul class="cta-group">
   
   <li>
@@ -931,7 +956,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Mar 1, 2022</p>
+          <p>Last updated on Aug 10, 2022</p>
 
           
 
