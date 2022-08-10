@@ -51,7 +51,8 @@
 &lt;li&gt;&lt;p&gt;Packages for &lt;em&gt;literate statistical programming&lt;/em&gt; - weaving written reports and analysis code in one document.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;It’s fun… probably not at the beginning of the learning process.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/NEOMU/aboutr_files/r_rollercoaster.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/aboutr_files/r_rollercoaster.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt = &#39;my new screenshot&#39; width=&#39;200&#39; src=&#39;https://academic-demo.netlify.app/workshops/NEOMU/aboutr_files/r_rollercoaster.png&#39;/&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h2&gt;
