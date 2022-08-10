@@ -5,12 +5,80 @@
     <link>https://academic-demo.netlify.app/category/r/</link>
       <atom:link href="https://academic-demo.netlify.app/category/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 15 Jan 2022 21:13:14 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 10 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>R</title>
       <link>https://academic-demo.netlify.app/category/r/</link>
     </image>
+    
+    <item>
+      <title>About R &amp; RStudio</title>
+      <link>https://academic-demo.netlify.app/workshops/neomu/aboutr/</link>
+      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/aboutr/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-r&#34; id=&#34;toc-what-is-r&#34;&gt;¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-r-software-environment&#34; id=&#34;toc-the-r-software-environment&#34;&gt;The &lt;code&gt;R&lt;/code&gt; software environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-use-r&#34; id=&#34;toc-why-use-r&#34;&gt;Why use &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-rstudio&#34; id=&#34;toc-what-is-rstudio&#34;&gt;¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#definitions&#34; id=&#34;toc-definitions&#34;&gt;Definitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-and-loading-packages&#34; id=&#34;toc-installing-and-loading-packages&#34;&gt;Installing and Loading Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;what-is-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is a language and software environment for statistical computing and graphics.&lt;/p&gt;
+&lt;p&gt;R provides a wide variety of statistical and graphical techniques, and is highly extensible.&lt;/p&gt;
+&lt;p&gt;It is one of the most popular languages used by statisticians, data analysts, researchers and marketers to retrieve, clean, analyze, visualize and present data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-r-software-environment&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The &lt;code&gt;R&lt;/code&gt; software environment&lt;/h2&gt;
+&lt;p&gt;The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-use-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Why use &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;R is open-source and free!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R is popular and R community is huge&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R runs on all platforms (Available for Windows, Macintosh, and Linux).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Publication-quality graphs. With R you have complete control over plotting/graphing options and are able to output publication quality figures with ease.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Packages for &lt;em&gt;literate statistical programming&lt;/em&gt; - weaving written reports and analysis code in one document.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It’s fun… probably not at the beginning of the learning process.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;r_rollercoaster.png&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Credit: @allison_horst&lt;/p&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The R language programming environment is a fully planned and&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; is a free, open source IDE (integrated development environment) for R. Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import &lt;em&gt;CSV&lt;/em&gt;, &lt;em&gt;Excel&lt;/em&gt;, &lt;em&gt;SAS&lt;/em&gt;, &lt;em&gt;SPSS&lt;/em&gt; and &lt;em&gt;Stata&lt;/em&gt; files into R without having to write the code to do so.&lt;/p&gt;
+&lt;p&gt;It is important to note that &lt;code&gt;RStudio&lt;/code&gt; is a software that runs &lt;code&gt;R&lt;/code&gt; and provides additional tools that are useful when writing &lt;code&gt;R&lt;/code&gt; code. So &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are not the same.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;definitions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Definitions&lt;/h2&gt;
+&lt;p&gt;The following concepts will be helpful as you begin to explore the &lt;code&gt;R&lt;/code&gt; world.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CRAN&lt;/strong&gt;: The Comprehensive R Archive Network is a network of web servers around the world that store identical, up-to-date, versions of code and documentation for R.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;R packages&lt;/strong&gt;: Extensions to the R programming language. R packages contain code, data, and documentation in a standardised collection format that can be installed by users of R, typically via a centralised software repository such as CRAN. The location where the packages are stored is called the library. If there is a particular functionality that you require, you can download the package from the appropriate site and it will be stored in your library.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Function&lt;/strong&gt;: is a set of statements organized together to perform a specific task. R has a large number of in-built functions and the user can create their own functions.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-and-loading-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing and Loading Packages&lt;/h2&gt;
+&lt;p&gt;In order to use a package, it needs to be installed on your computer by running &lt;code&gt;install.packages(&#34;name_of_package&#34;)&lt;/code&gt; (do not forget &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package).&lt;/p&gt;
+&lt;p&gt;Once the package is installed, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run &lt;code&gt;library(name_of_package)&lt;/code&gt; (this time &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package are optional).&lt;/p&gt;
+&lt;p&gt;{{&amp;lt; cta cta_text= “” cta_link=“sesion01_1” &amp;gt;}}&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>select()</title>
