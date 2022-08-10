@@ -271,7 +271,7 @@
     </item>
     
     <item>
-      <title>Grafico de dispersion</title>
+      <title>R &amp; RStudio</title>
       <link>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</link>
       <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
       <guid>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</guid>
@@ -280,19 +280,19 @@
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#base-de-datos&#34;&gt;3. Base de datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34; id=&#34;toc-definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34; id=&#34;toc-sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-de-datos&#34; id=&#34;toc-base-de-datos&#34;&gt;3. Base de datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34; id=&#34;toc-visualización&#34;&gt;4. Visualización&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#límites-de-los-ejes&#34;&gt;4.1. Límites de los ejes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#título-y-etiquetas&#34;&gt;4.2. Título y etiquetas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#tamaño-de-los-puntos&#34;&gt;4.3. Tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#color-de-los-puntos&#34;&gt;4.4. Color de los puntos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#leyenda&#34;&gt;4.5. Leyenda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#límites-de-los-ejes&#34; id=&#34;toc-límites-de-los-ejes&#34;&gt;4.1. Límites de los ejes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-y-etiquetas&#34; id=&#34;toc-título-y-etiquetas&#34;&gt;4.2. Título y etiquetas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#tamaño-de-los-puntos&#34; id=&#34;toc-tamaño-de-los-puntos&#34;&gt;4.3. Tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#color-de-los-puntos&#34; id=&#34;toc-color-de-los-puntos&#34;&gt;4.4. Color de los puntos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#leyenda&#34; id=&#34;toc-leyenda&#34;&gt;4.5. Leyenda&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;6. Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34; id=&#34;toc-juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34; id=&#34;toc-referencias&#34;&gt;6. Referencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
