@@ -1,11 +1,13 @@
 ---
 date: "2022-08-10"
 linkTitle: NEOM
-summary: In this workshop we will introduce the R software. We will learn basic tools for data visualization and analysis. Finally, we will learn how to create automatic reports..
+summary: In this workshop we will introduce the R software. We will learn basic tools for data visualization and analysis. Finally, we will learn how to create automatic reports.
 title: "NEOM ERI-U-TA"
 type: book
 format: hugo
 ---
+
+{{< figure src="NeomLogo.png" >}}
 
 {{< toc hide_on="xl" >}}
 

@@ -11,9 +11,6 @@
     <loc>https://academic-demo.netlify.app/courses/ggplot2/scatterplot/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/docencia/mmad109/sesion01_1/</loc>
-    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/courses/rvest/01_instalar/</loc>
     <lastmod>2021-09-20T21:13:14-05:00</lastmod>
   </url><url>
@@ -22,9 +19,6 @@
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/bibliometrix/02_revision/</loc>
     <lastmod>2021-10-11T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/docencia/mmad109/sesion01_2/</loc>
-    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
@@ -38,12 +32,6 @@
     <loc>https://academic-demo.netlify.app/courses/ggplot2/jitter/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/docencia/mmad109/sesion03_1/</loc>
-    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/docencia/mmad109/sesion03_2/</loc>
-    <lastmod>2021-10-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://academic-demo.netlify.app/talk/example-talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url><url>
@@ -52,12 +40,6 @@
   </url><url>
     <loc>https://academic-demo.netlify.app/event/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/docencia/</loc>
-    <lastmod>2022-08-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/docencia/mmad109/</loc>
-    <lastmod>2022-08-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/categories/</loc>
     <lastmod>2022-01-15T21:13:14-05:00</lastmod>
@@ -117,12 +99,6 @@
     <lastmod>2021-10-11T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/ggplot/</loc>
-    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tag/r/</loc>
-    <lastmod>2021-10-05T21:13:14-05:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tag/rstudio/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
@@ -435,5 +411,7 @@
     <lastmod>2009-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/admin/</loc>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/docencia/</loc>
   </url>
 </urlset>
