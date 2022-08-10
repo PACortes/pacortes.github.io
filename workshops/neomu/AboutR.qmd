@@ -1,19 +1,20 @@
 ---
 title: "R & RStudio"
-date: '2022-08-10T21:13:14-05:00'
+date: "`r Sys.Date()`"
+
 categories: R
 tags:
 - Visualización
 - ggplot
-output:
-  blogdown::html_page:
-    toc: true
 type: book
 weight: 10
-format: hugo
+format:
+  html:
+    toc: true
+    number-sections: true
+    toc_float: yes
 ---
 
-{{< toc hide_on="xl" >}}
 
 ## ¿What is `R`?
 
