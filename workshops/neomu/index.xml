@@ -51,8 +51,10 @@
 &lt;li&gt;&lt;p&gt;Packages for &lt;em&gt;literate statistical programming&lt;/em&gt; - weaving written reports and analysis code in one document.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;It’s fun… probably not at the beginning of the learning process.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/aboutr_files/r_rollercoaster.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt = &#39;my new screenshot&#39; width=&#39;200&#39; src=&#39;https://academic-demo.netlify.app/workshops/neomu/aboutr_files/r_rollercoaster.png&#39;/&gt;&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/aboutr_files/r_rollercoaster.png&#34; width=&#34;800&#34; height=&#34;400&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Credits: allison_horst&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h2&gt;
@@ -87,13 +89,259 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#context&#34; id=&#34;toc-context&#34;&gt;Context&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#content&#34; id=&#34;toc-content&#34;&gt;Content&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-dictionary&#34; id=&#34;toc-data-dictionary&#34;&gt;Data Dictionary&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
 &lt;div id=&#34;context&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Context&lt;/h2&gt;
 &lt;p&gt;Evaluating university faculty teaching and research performance is necessary for multiple reasons, including assurance of student learning and informing administrative decision-making.&lt;/p&gt;
-&lt;p&gt;In this workshop, we will use a simulated dataset consisting of faculty employees information. The data set will be use for learning data visualization in R. You can download the database &lt;a href=&#34;https://www.dropbox.com/s/rsee0jk8v205jba/FacultyAffairs.xlsx?dl=0&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this workshop, we will use a simulated dataset consisting of faculty employees information. The data set will be use for learning data visualization in R. The dataset is available in ´xlsx´ and you can download it &lt;a href=&#34;https://www.dropbox.com/s/rsee0jk8v205jba/FacultyAffairs.xlsx?dl=0&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;content&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Content&lt;/h2&gt;
+&lt;p&gt;The dataset contains 20 variables and 311 rows of data (number of faculty employees). It reports data metrics related to faculty´s demographics, salary, teaching and research performance, among others.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-dictionary&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Data Dictionary&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Variable
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Datatype
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+EmployeeName
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Character
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Faculty’s full name
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Salary
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The faculty´s yearly salary. $ U.S. Dollars
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Sex
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Character
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Sex - M or F
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+MaritalDesc
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Character
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The marital status of the faculty (divorced, single, widowed, separated, etc)
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+DaysLateLast30
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The number of times that the faculty was late to work during the last 30 days
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Absences
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+No. of times the faculty was absent from work during the year
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Age
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Age
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+YearBirth
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Faculty’s year of birth
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Nationality
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Character
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Faculty’s nationality
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+School
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Character
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+School of faculty´s appointment
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Course
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+No. of courses instructed during the year
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Appointment
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Appointment ranks - 1 = Assistant Professor, 2 = Associate Professor, 3 = Professor
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Satisfaction
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Results from the last labour satisfaction survey - Value between 0 to 5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ResearchBudget
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Character
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Annual Research Budget
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+FirstYear
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Year of firts appointment
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Articles
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+No.of articles per year published in peer-reviewed journals during the year
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Students
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+No.of supervised theses during the year
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Evaluation
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Results from the last Teacher evaluation survey - Value between 0 to 5
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Community
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Numeric
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+No.of outreach activities during the year
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+ResearchArea
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Character
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Faculty’s research fueld
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 </description>
     </item>
