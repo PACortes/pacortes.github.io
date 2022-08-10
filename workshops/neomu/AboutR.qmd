@@ -10,6 +10,7 @@ output:
     toc: true
 type: book
 weight: 10
+format: hugo
 ---
 
 {{< toc hide_on="xl" >}}
