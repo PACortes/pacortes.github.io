@@ -40,7 +40,7 @@ The R language programming environment is a fully planned and coherent system bu
 
 -   Packages for *literate statistical programming* - weaving written reports and analysis code in one document.
 
--   It\'s fun... probably not at the beginning of the learning process.
+-   It's fun... probably not at the beginning of the learning process.
 
     ![Credit: \@allison_horst](r_rollercoaster.png)
 
