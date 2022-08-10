@@ -31,7 +31,7 @@ It is one of the most popular languages used by statisticians, data analysts, re
 
 The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.
 
-## Why use R?
+## Why use `R`?
 
 -   R is open-source and free!
 
@@ -71,4 +71,4 @@ In order to use a package, it needs to be installed on your computer by running 
 
 Once the package is installed, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run `library(name_of_package)` (this time `""` around the name of the package are optional).
 
-{{< cta cta_text="Comencemos con el taller" cta_link="sesion01_1" >}}
+{{< cta cta_text= "" cta_link="sesion01_1" >}}

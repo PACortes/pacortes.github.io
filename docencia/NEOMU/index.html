@@ -30,10 +30,10 @@
   
     
   
-  <meta name="description" content="1. Definición 2. Sintáxis  2.1 Razón entre dos variables 2.2 Multiplicamos una variable por una constante 2.3 Generamos dos nuevas variables Combinando mutate() con recode() Combinando mutate() con cut()cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario." />
+  <meta name="description" content="In this workshop we will introduce the R software. We will learn basic tools for data visualization and analysis. Finally, we will learn how to create automatic reports." />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/courses/dplyr/mutate/" />
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/docencia/neomu/" />
 
   
 
@@ -268,6 +268,8 @@
   
 
   
+    <link rel="alternate" href="/docencia/neomu/index.xml" type="application/rss+xml" title="Pablo Cortes" />
+  
 
   
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -276,7 +278,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://academic-demo.netlify.app/courses/dplyr/mutate/" />
+  <link rel="canonical" href="https://academic-demo.netlify.app/docencia/neomu/" />
 
   
   
@@ -293,18 +295,14 @@
   <meta property="twitter:card" content="summary" />
   
   <meta property="og:site_name" content="Pablo Cortes" />
-  <meta property="og:url" content="https://academic-demo.netlify.app/courses/dplyr/mutate/" />
-  <meta property="og:title" content="mutate() | Pablo Cortes" />
-  <meta property="og:description" content="1. Definición 2. Sintáxis  2.1 Razón entre dos variables 2.2 Multiplicamos una variable por una constante 2.3 Generamos dos nuevas variables Combinando mutate() con recode() Combinando mutate() con cut()cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/docencia/neomu/" />
+  <meta property="og:title" content="NEOM ERI-U-TA | Pablo Cortes" />
+  <meta property="og:description" content="In this workshop we will introduce the R software. We will learn basic tools for data visualization and analysis. Finally, we will learn how to create automatic reports." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta
-        property="article:published_time"
-        content="2022-01-15T21:13:14-05:00"
-      />
+      <meta property="og:updated_time" content="2022-08-10T00:00:00&#43;00:00" />
     
-    <meta property="article:modified_time" content="2022-01-15T21:13:14-05:00">
   
 
   
@@ -315,17 +313,15 @@
 
   
 
-  
 
 
 
 
-
-  <title>mutate() | Pablo Cortes</title>
+  <title>NEOM ERI-U-TA | Pablo Cortes</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="4907de7ba73e97a0f4cb378f8a45d764" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="0d613ee3007ad1983a441829d74348cd" >
 
   
   
@@ -552,7 +548,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link  active" href="/courses/"><span>R</span></a>
+          <a class="nav-link " href="/courses/"><span>R</span></a>
         </li>
 
         
@@ -582,7 +578,7 @@
         
 
         <li class="nav-item">
-          <a class="nav-link " href="/docencia/"><span>Docencia</span></a>
+          <a class="nav-link  active" href="/docencia/"><span>Docencia</span></a>
         </li>
 
         
@@ -698,7 +694,7 @@
     <div class="d-flex">
       <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
         
-          dplyr
+          Docencia
         
       </span>
       <span><i class="fas fa-chevron-down"></i></span>
@@ -730,14 +726,10 @@
       
 
       <ul class="nav docs-sidenav">
-        <li><a href="/courses/"><i class="fas fa-arrow-left pr-1"></i>Tutoriales de R</a></li>
+        <li><a href="/docencia/"><i class="fas fa-arrow-left pr-1"></i>Docencia</a></li>
       </ul>
 
       
-      
-        
-          
-        
       
 
 
@@ -752,26 +744,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/dplyr/">dplyr</a>
-    
-      
-        <ul class="nav docs-sidenav">
-      
-
-
-  <li class=""><a href="/courses/dplyr/select/">select()</a></li>
-
-
-
-  <li class=""><a href="/courses/dplyr/filter/">filter()</a></li>
-
-
-
-  <li class="active"><a href="/courses/dplyr/mutate/">mutate()</a></li>
-
-      
-        </ul>
-      
+        <a class="docs-toc-link  active" href="/docencia/neomu/">NEOM</a>
     
 
     
@@ -793,7 +766,17 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-this-workshop">About this Workshop</a></li>
+    <li><a href="#what-is-r">¿What is <code>R</code>?</a></li>
+    <li><a href="#the-r-software-environment">The R software environment</a></li>
+    <li><a href="#why-use-r">Why use <code>R</code>?</a></li>
+    <li><a href="#what-is-rstudio">¿What is <code>RStudio</code>?</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#installing-and-loading-packages">Installing and Loading Packages</a></li>
+  </ul>
+</nav>
 
       
     </div>
@@ -811,7 +794,6 @@
       
   
   
-  
 
   <li class="breadcrumb-item">
     <a href="/">
@@ -823,25 +805,16 @@
 
 
   <li class="breadcrumb-item">
-    <a href="/courses/">
+    <a href="/docencia/">
       
-        Tutoriales de R
-      
-    </a>
-  </li>
-
-
-  <li class="breadcrumb-item">
-    <a href="/courses/dplyr/">
-      
-        dplyr
+        Docencia
       
     </a>
   </li>
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        mutate()
+        NEOM
       </li>
     </ol>
   </nav>
@@ -849,144 +822,126 @@
 
           
 
-          <h1>mutate()</h1>
+          <h1>NEOM ERI-U-TA</h1>
 
           <div class="article-style">
             
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
-<div id="TOC">
-<ul>
-<li><a href="#definición">1. Definición</a></li>
-<li><a href="#sintáxis">2. Sintáxis</a>
-<ul>
-<li><a href="#razón-entre-dos-variables">2.1 Razón entre dos variables</a></li>
-<li><a href="#multiplicamos-una-variable-por-una-constante">2.2 Multiplicamos una variable por una constante</a></li>
-<li><a href="#generamos-dos-nuevas-variables">2.3 Generamos dos nuevas variables</a></li>
-<li><a href="#combinando-mutate-con-recode">Combinando <code>mutate()</code> con <code>recode()</code></a></li>
-<li><a href="#combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media">Combinando <code>mutate()</code> con <code>cut</code>()<code></code>cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable <strong>Petal.Length</strong> se encuentran bajo o sobre la media:</a></li>
-</ul></li>
-<li><a href="#referencias">3. Referencias</a></li>
-</ul>
-</div>
 
-<div id="definición" class="section level1">
-<h1>1. Definición</h1>
-<p>El verbo <code>mutate()</code> permite crear nuevas variables (columnas) a partir de variables existentes, conservando las variables existentes.</p>
-<p><code>mutate()</code> siempre agrega nuevas variables (columnas) al final de un conjunto de datos. Además, <code>mutate()</code> puede combinarse con otras grandes funciones para tareas más avanzadas.</p>
-<p>Recordemos que antes de utilizar la función <code>mutate()</code>, debemos cargar el paquete <code>dplyr</code> usando la función <code>library()</code>.</p>
-<pre class="r"><code>library(dplyr)</code></pre>
-</div>
-<div id="sintáxis" class="section level1">
-<h1>2. Sintáxis</h1>
-<p>La sintáxis básica de <code>mutate()</code> para seleccionar observaciones es:</p>
-<p><code>mutate(data, ...)</code></p>
-<p>En donde:</p>
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="%e2%80%9cNeomLogo.png%e2%80%9d" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<details class="toc-inpage d-print-none d-“xl”-none " open>
+  <summary class="font-weight-bold">Table of Contents</summary>
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-this-workshop">About this Workshop</a></li>
+    <li><a href="#what-is-r">¿What is <code>R</code>?</a></li>
+    <li><a href="#the-r-software-environment">The R software environment</a></li>
+    <li><a href="#why-use-r">Why use <code>R</code>?</a></li>
+    <li><a href="#what-is-rstudio">¿What is <code>RStudio</code>?</a></li>
+    <li><a href="#definitions">Definitions</a></li>
+    <li><a href="#installing-and-loading-packages">Installing and Loading Packages</a></li>
+  </ul>
+</nav>
+</details>
+
+<h2 id="about-this-workshop">About this Workshop</h2>
+<p>The aim of this five-day introductory workshop is to guide you through the basics of using <code>R</code> via <code>RStudio</code> for analysis of institutional data. It is ideal for people new to R or who have limited experience.</p>
+<p>I assume no prior coding language for this workshop. My goals are to equip you to work comfortably from the RStudio environment, process, and explore data, and make very nice graphical representations of data.</p>
+<p>Specific topics covered include the R environment (directories, workspace, scripts, and packages), data structures (vector, matrix, data frames, lists), and data visualization (scatterplots, boxplots, histograms, etc.).</p>
+<h2 id="what-is-r">¿What is <code>R</code>?</h2>
+<p><code>R</code> is a language and software environment for statistical computing and graphics.</p>
+<p>R provides a wide variety of statistical and graphical techniques, and is highly extensible.</p>
+<p>It is one of the most popular languages used by statisticians, data analysts, researchers and marketers to retrieve, clean, analyze, visualize and present data.</p>
+<h2 id="the-r-software-environment">The R software environment</h2>
+<p>The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.</p>
+<h2 id="why-use-r">Why use <code>R</code>?</h2>
 <ul>
-<li><p><code>data</code>: data frame (nuestros datos).</p></li>
-<li><p><code>...</code>: Nombre y valor de la expresión que determinará la nueva variable (e.g. Nueva_variable = variable_original*2).</p></li>
+<li>
+<p>R is open-source and free!</p>
+</li>
+<li>
+<p>R is popular and R community is huge</p>
+</li>
+<li>
+<p>R runs on all platforms (Available for Windows, Macintosh, and Linux).</p>
+</li>
+<li>
+<p>Publication-quality graphs. With R you have complete control over plotting/graphing options and are able to output publication quality figures with ease.</p>
+</li>
+<li>
+<p>Packages for <em>literate statistical programming</em> - weaving written reports and analysis code in one document.</p>
+</li>
+<li>
+<p>It&rsquo;s fun&hellip; probably not at the beginning of the learning process.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Credit: @allison_horst" srcset="
+               /docencia/neomu/r_rollercoaster_hu32110b34d818ad001fa4dadd0420b089_1772471_391a4dbdd13f97cc58a2a5f67f55a3bf.png 400w,
+               /docencia/neomu/r_rollercoaster_hu32110b34d818ad001fa4dadd0420b089_1772471_ed356a1f169dd60dedfacbc6d7903280.png 760w,
+               /docencia/neomu/r_rollercoaster_hu32110b34d818ad001fa4dadd0420b089_1772471_1200x1200_fit_lanczos_3.png 1200w"
+               src="/docencia/neomu/r_rollercoaster_hu32110b34d818ad001fa4dadd0420b089_1772471_391a4dbdd13f97cc58a2a5f67f55a3bf.png"
+               width="760"
+               height="447"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+</li>
 </ul>
-<div id="razón-entre-dos-variables" class="section level2">
-<h2>2.1 Razón entre dos variables</h2>
-<p><code>mutate()</code> nos permite calcular una variable que represente la razón entre dos variables en nuestra base de datos. Por ejemplo, asignaremos el nombre <strong>Razon_Petalo</strong> a la razón entre el <strong>Largo del Pétalo</strong> y el <strong>Ancho del Pétalo</strong>.</p>
-<pre class="r"><code>mutate(iris,Razon_Petalo=Petal.Length/Petal.Width)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
-## 1          5.1         3.5          1.4         0.2  setosa         7.00
-## 2          4.9         3.0          1.4         0.2  setosa         7.00
-## 3          4.7         3.2          1.3         0.2  setosa         6.50
-## 4          4.6         3.1          1.5         0.2  setosa         7.50
-## 5          5.0         3.6          1.4         0.2  setosa         7.00
-## 6          5.4         3.9          1.7         0.4  setosa         4.25</code></pre>
-<p>Podemos apreciar que se ha agreagdo una nueva variable (columna) al final del conjunto de datos.</p>
-</div>
-<div id="multiplicamos-una-variable-por-una-constante" class="section level2">
-<h2>2.2 Multiplicamos una variable por una constante</h2>
-<p>Las variables de la base de datos iris están medidas en milimetros. Si quisieramos transformarlas a centimetros, debemos multiplicarlas por una constante. A modo de ejemplo, transformemos la variable <strong>Sepal.Length</strong>:</p>
-<pre class="r"><code>mutate(iris,Sepal.length.cm=Sepal.Length*0.1)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.length.cm
-## 1          5.1         3.5          1.4         0.2  setosa            0.51
-## 2          4.9         3.0          1.4         0.2  setosa            0.49
-## 3          4.7         3.2          1.3         0.2  setosa            0.47
-## 4          4.6         3.1          1.5         0.2  setosa            0.46
-## 5          5.0         3.6          1.4         0.2  setosa            0.50
-## 6          5.4         3.9          1.7         0.4  setosa            0.54</code></pre>
-<p>Ahora, nuestra abse de datos tiene 7 columnas, igual que el ejemplo anterior. ¿Por qué no vemos la variable <strong>Razon_Petalo</strong>?. Para que los cambios se mantengan a l olargo de la rutina de trabajo debemos (i) generar un objeto con el nuevo <em>data frame</em> (p.e. iris_1) o (ii) asignar los cambios al <em>data frame</em>.</p>
-</div>
-<div id="generamos-dos-nuevas-variables" class="section level2">
-<h2>2.3 Generamos dos nuevas variables</h2>
-<p><code>mutate()</code> nos permite generar múltiples variables. A continuación, generaremos simultáneamente las variables <strong>Razon_Petalo</strong> y Sepal.length.cm:</p>
-<pre class="r"><code>mutate(iris,Razon_Petalo=Petal.Length/Petal.Width,
-            Sepal.length.cm=Sepal.Length*0.1)</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
-## 1          5.1         3.5          1.4         0.2  setosa         7.00
-## 2          4.9         3.0          1.4         0.2  setosa         7.00
-## 3          4.7         3.2          1.3         0.2  setosa         6.50
-## 4          4.6         3.1          1.5         0.2  setosa         7.50
-## 5          5.0         3.6          1.4         0.2  setosa         7.00
-## 6          5.4         3.9          1.7         0.4  setosa         4.25
-##   Sepal.length.cm
-## 1            0.51
-## 2            0.49
-## 3            0.47
-## 4            0.46
-## 5            0.50
-## 6            0.54</code></pre>
-</div>
-<div id="combinando-mutate-con-recode" class="section level2">
-<h2>Combinando <code>mutate()</code> con <code>recode()</code></h2>
-<p><code>recode()</code> permite cambiar las observaciones dentro de una variable. Por ejemplo, cambiemos el nombre a las especies contenidas en la base datos.</p>
-<pre class="r"><code>mutate(iris,Species_nueva=recode(Species, 
-                                 &quot;setosa&quot;=&quot;Iris_setosa&quot;,
-                                 &quot;virginica&quot;=&quot;Iris_virginica&quot;,
-                                 &quot;versicolor&quot;=&quot;Iris_versicolor&quot;))</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Species_nueva
-## 1          5.1         3.5          1.4         0.2  setosa   Iris_setosa
-## 2          4.9         3.0          1.4         0.2  setosa   Iris_setosa
-## 3          4.7         3.2          1.3         0.2  setosa   Iris_setosa
-## 4          4.6         3.1          1.5         0.2  setosa   Iris_setosa
-## 5          5.0         3.6          1.4         0.2  setosa   Iris_setosa
-## 6          5.4         3.9          1.7         0.4  setosa   Iris_setosa</code></pre>
-</div>
-<div id="combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media" class="section level2">
-<h2>Combinando <code>mutate()</code> con <code>cut</code>()<code></code>cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable <strong>Petal.Length</strong> se encuentran bajo o sobre la media:</h2>
-<pre class="r"><code>mutate(iris,Petal.Length.Segmento=cut(Petal.Length, 
-                       c(-Inf,mean(Petal.Length), max(Petal.Length)),
-                       c(&quot;Bajo la media&quot;,&quot;Sobre la media&quot;)))</code></pre>
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-##   Petal.Length.Segmento
-## 1         Bajo la media
-## 2         Bajo la media
-## 3         Bajo la media
-## 4         Bajo la media
-## 5         Bajo la media
-## 6         Bajo la media</code></pre>
-</div>
-</div>
-<div id="referencias" class="section level1">
-<h1>3. Referencias</h1>
-<ul>
-<li><p><a href="https://dplyr.tidyverse.org/reference/mutate.html">tidyverse.org</a></p></li>
-<li><p><a href="https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/mutate">R documentation</a></p></li>
+<p>The R language programming environment is a fully planned and</p>
+<h2 id="what-is-rstudio">¿What is <code>RStudio</code>?</h2>
+<p><code>RStudio</code> is a free, open source IDE (integrated development environment) for R. Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import <em>CSV</em>, <em>Excel</em>, <em>SAS</em>, <em>SPSS</em> and <em>Stata</em> files into R without having to write the code to do so.</p>
+<p>It is important to note that <code>RStudio</code> is a software that runs <code>R</code> and provides additional tools that are useful when writing <code>R</code> code. So <code>R</code> and <code>RStudio</code> are not the same.</p>
+<h2 id="definitions">Definitions</h2>
+<p>The following concepts will be helpful as you begin to explore the <code>R</code> world.</p>
+<p><strong>CRAN</strong>: The Comprehensive R Archive Network is a network of web servers around the world that store identical, up-to-date, versions of code and documentation for R.</p>
+<p><strong>R packages</strong>: Extensions to the R programming language. R packages contain code, data, and documentation in a standardised collection format that can be installed by users of R, typically via a centralised software repository such as CRAN. The location where the packages are stored is called the library. If there is a particular functionality that you require, you can download the package from the appropriate site and it will be stored in your library.</p>
+<p><strong>Function</strong>: is a set of statements organized together to perform a specific task. R has a large number of in-built functions and the user can create their own functions.</p>
+<h2 id="installing-and-loading-packages">Installing and Loading Packages</h2>
+<p>In order to use a package, it needs to be installed on your computer by running <code>install.packages(&quot;name_of_package&quot;)</code> (do not forget <code>&quot;&quot;</code> around the name of the package).</p>
+<p>Once the package is installed, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run <code>library(name_of_package)</code> (this time <code>&quot;&quot;</code> around the name of the package are optional).</p>
+<ul class="cta-group">
+  
+  <li>
+    <a href="%e2%80%9csesion01_1%e2%80%9d"  class="btn btn-primary px-3 py-3">“”</a>
+  </li>
+  
+  
 </ul>
-</div>
+
 
           </div>
 
           
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tag/manipulacion/">Manipulación</a>
-  
-  <a class="badge badge-light" href="/tag/dplyr/">dplyr</a>
-  
-</div>
 
 
 
@@ -997,13 +952,6 @@
 <div class="post-nav">
   
   
-  
-  <div class="post-nav-item">
-    <div class="meta-nav">Previous</div>
-    <a href="/courses/dplyr/filter/" rel="next">filter()</a>
-  </div>
-  
-  
 </div>
 
           </div>
@@ -1011,7 +959,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Jan 15, 2022</p>
+          <p>Last updated on Aug 10, 2022</p>
 
           
 
@@ -1028,17 +976,6 @@
 
 
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/courses/dplyr/select/">select()</a></li>
-      
-      <li><a href="/courses/dplyr/filter/">filter()</a></li>
-      
-    </ul>
-  </div>
   
 
 
