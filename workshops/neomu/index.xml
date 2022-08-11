@@ -81,10 +81,12 @@
     <item>
       <title>Faculty Data Set</title>
       <link>https://academic-demo.netlify.app/workshops/neomu/dataset/</link>
-      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/workshops/neomu/dataset/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;https://academic-demo.netlify.app/rmarkdown-libs/lightable/lightable.css&#34; rel=&#34;stylesheet&#34; /&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -102,6 +104,133 @@
 &lt;div id=&#34;content&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Content&lt;/h2&gt;
 &lt;p&gt;The dataset contains 20 variables and 311 rows of data (number of faculty employees). It reports data metrics related to faculty´s demographics, salary, teaching and research performance, among others.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+datadic&amp;lt;-data.frame(Element,Description)
+kable(datadic,booktabs = T) %&amp;gt;% 
+  kable_styling() %&amp;gt;%
+  pack_rows(index=c(&amp;quot;Human Resources &amp;quot; = 3, &amp;quot;Teaching&amp;quot; = 4, &amp;quot;Research&amp;quot; = 2, &amp;quot;Service&amp;quot; = 2))&lt;/code&gt;&lt;/pre&gt;
+&lt;table class=&#34;table&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Element
+&lt;/th&gt;
+&lt;th style=&#34;text-align:left;&#34;&gt;
+Description
+&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr grouplength=&#34;3&#34;&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;border-bottom: 1px solid;&#34;&gt;
+&lt;strong&gt;Human Resources&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Demographic information
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Demographic characteristics of the faculty members
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Personal information
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Personal information of the faculty members
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Employmnet information
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Information related to appointments of faculty members
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr grouplength=&#34;4&#34;&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;border-bottom: 1px solid;&#34;&gt;
+&lt;strong&gt;Teaching&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Effectiveness of course delivery
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The extent to which a faculty member can lecture, lead discussion, respond to student questions, evaluate assignments and use instructional technology
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Quality of course content
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+The extent to which knowledge presented is valid. Course content includes: course readings, instructor-developed resources, class exercises, clinical practice, and experiments
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Effectiveness in Managing Multiple Courses
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Ability to manage multuple courses
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Effectiveness in Mentoring Students
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Ability to encourage students and to help them understand the factors that contribute to academic success
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr grouplength=&#34;2&#34;&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;border-bottom: 1px solid;&#34;&gt;
+&lt;strong&gt;Research&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Quality of Research
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Evidence of making a substantive contribution to one or more fields of study
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Productivity in Research
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Capacity to conduct research that is of a high enough quality to regularly appear in refereed publications and be regularly included in conference presentations
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr grouplength=&#34;2&#34;&gt;
+&lt;td colspan=&#34;2&#34; style=&#34;border-bottom: 1px solid;&#34;&gt;
+&lt;strong&gt;Service&lt;/strong&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Service to the Institution
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Involvement in university committees
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left;padding-left: 2em;&#34; indentlevel=&#34;1&#34;&gt;
+Service to Society
+&lt;/td&gt;
+&lt;td style=&#34;text-align:left;&#34;&gt;
+Engaging in community outreach or community engagement effort
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 &lt;div id=&#34;data-dictionary&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Data Dictionary&lt;/h2&gt;
