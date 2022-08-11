@@ -662,18 +662,13 @@
 &lt;div id=&#34;content&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Content&lt;/h2&gt;
 &lt;p&gt;The dataset contains 20 variables and 311 rows of data (number of faculty employees). It reports data metrics related to faculty´s demographics, salary, teaching and research performance, among others.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
-datadic&amp;lt;-data.frame(Element,Description)
-kable(datadic,booktabs = T) %&amp;gt;% 
-  kable_styling() %&amp;gt;%
-  pack_rows(index=c(&amp;quot;Human Resources &amp;quot; = 3, &amp;quot;Teaching&amp;quot; = 4, &amp;quot;Research&amp;quot; = 2, &amp;quot;Service&amp;quot; = 2))&lt;/code&gt;&lt;/pre&gt;
-&lt;table class=&#34;table&#34; style=&#34;margin-left: auto; margin-right: auto;&#34;&gt;
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;th style=&#34;text-align:left;font-size: 22px;&#34;&gt;
 Element
 &lt;/th&gt;
-&lt;th style=&#34;text-align:left;&#34;&gt;
+&lt;th style=&#34;text-align:left;font-size: 22px;&#34;&gt;
 Description
 &lt;/th&gt;
 &lt;/tr&gt;
