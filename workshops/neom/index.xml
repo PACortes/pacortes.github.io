@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NEOM ERI-U-TA | Pablo Cortes</title>
-    <link>https://academic-demo.netlify.app/workshops/neomu/</link>
-      <atom:link href="https://academic-demo.netlify.app/workshops/neomu/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://academic-demo.netlify.app/workshops/neom/</link>
+      <atom:link href="https://academic-demo.netlify.app/workshops/neom/index.xml" rel="self" type="application/rss+xml" />
     <description>NEOM ERI-U-TA</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 10 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://academic-demo.netlify.app/workshops/neomu/featured.png</url>
+      <url>https://academic-demo.netlify.app/workshops/neom/featured.png</url>
       <title>NEOM ERI-U-TA</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/</link>
+      <link>https://academic-demo.netlify.app/workshops/neom/</link>
     </image>
     
     <item>
       <title>Day 1: About R &amp; RStudio</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/aboutr/</link>
+      <link>https://academic-demo.netlify.app/workshops/neom/aboutr/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/aboutr/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neom/aboutr/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -149,9 +149,9 @@
     
     <item>
       <title>Day 1: Exploring R &amp; RStudio</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/exploringr/</link>
+      <link>https://academic-demo.netlify.app/workshops/neom/exploringr/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/exploringr/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neom/exploringr/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -264,9 +264,9 @@ Ctrl/Cmd + S.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Day 1: Packages</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/packages/</link>
+      <link>https://academic-demo.netlify.app/workshops/neom/packages/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/packages/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neom/packages/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
@@ -303,9 +303,9 @@ Ctrl/Cmd + S.&lt;/p&gt;&lt;/li&gt;
     
     <item>
       <title>Day 1: Our Dataset</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/dataset/</link>
+      <link>https://academic-demo.netlify.app/workshops/neom/dataset/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/dataset/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neom/dataset/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;

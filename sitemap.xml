@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://academic-demo.netlify.app/workshops/neomu/aboutr/</loc>
+    <loc>https://academic-demo.netlify.app/workshops/neom/aboutr/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/dplyr/select/</loc>
@@ -17,7 +17,7 @@
     <loc>https://academic-demo.netlify.app/courses/rvest/01_instalar/</loc>
     <lastmod>2021-09-20T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/workshops/neomu/exploringr/</loc>
+    <loc>https://academic-demo.netlify.app/workshops/neom/exploringr/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/dplyr/filter/</loc>
@@ -32,7 +32,7 @@
     <loc>https://academic-demo.netlify.app/courses/rvest/02_scrapeando/</loc>
     <lastmod>2021-09-29T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/workshops/neomu/packages/</loc>
+    <loc>https://academic-demo.netlify.app/workshops/neom/packages/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/dplyr/mutate/</loc>
@@ -41,7 +41,7 @@
     <loc>https://academic-demo.netlify.app/courses/ggplot2/jitter/</loc>
     <lastmod>2021-10-05T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/workshops/neomu/dataset/</loc>
+    <loc>https://academic-demo.netlify.app/workshops/neom/dataset/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/talk/example-talk/</loc>
@@ -77,7 +77,7 @@
     <loc>https://academic-demo.netlify.app/workshops/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/workshops/neomu/</loc>
+    <loc>https://academic-demo.netlify.app/workshops/neom/</loc>
     <lastmod>2022-08-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tag/dplyr/</loc>
