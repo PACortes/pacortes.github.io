@@ -14,6 +14,72 @@
     
     <item>
       <title>About R &amp; RStudio</title>
+      <link>https://academic-demo.netlify.app/workshops/neomu/copia-de-aboutr/</link>
+      <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/copia-de-aboutr/</guid>
+      <description>
+&lt;script src=&#34;Copia de aboutr_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-r&#34; id=&#34;toc-what-is-r&#34;&gt;¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-r-software-environment&#34; id=&#34;toc-the-r-software-environment&#34;&gt;The &lt;code&gt;R&lt;/code&gt; software environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-use-r&#34; id=&#34;toc-why-use-r&#34;&gt;Why use &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-rstudio&#34; id=&#34;toc-what-is-rstudio&#34;&gt;¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#definitions&#34; id=&#34;toc-definitions&#34;&gt;Definitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-and-loading-packages&#34; id=&#34;toc-installing-and-loading-packages&#34;&gt;Installing and Loading Packages&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;what-is-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is a language and software environment for statistical computing and graphics.&lt;/p&gt;
+&lt;p&gt;R provides a wide variety of statistical and graphical techniques, and is highly extensible.&lt;/p&gt;
+&lt;p&gt;It is one of the most popular languages used by statisticians, data analysts, researchers and marketers to retrieve, clean, analyze, visualize and present data.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-r-software-environment&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;The &lt;code&gt;R&lt;/code&gt; software environment&lt;/h2&gt;
+&lt;p&gt;The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;why-use-r&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Why use &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;R is open-source and free!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R is popular and R community is huge&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R runs on all platforms (Available for Windows, Macintosh, and Linux).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Publication-quality graphs. With R you have complete control over plotting/graphing options and are able to output publication quality figures with ease.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Packages for &lt;em&gt;literate statistical programming&lt;/em&gt; - weaving written reports and analysis code in one document.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It’s fun… probably not at the beginning of the learning process.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/aboutr_files/r_rollercoaster.png&#34; width=&#34;800&#34; height=&#34;400&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Credits: allison_horst&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; is a free, open source IDE (integrated development environment) for R. Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import &lt;em&gt;CSV&lt;/em&gt;, &lt;em&gt;Excel&lt;/em&gt;, &lt;em&gt;SAS&lt;/em&gt;, &lt;em&gt;SPSS&lt;/em&gt; and &lt;em&gt;Stata&lt;/em&gt; files into R without having to write the code to do so.&lt;/p&gt;
+&lt;p&gt;It is important to note that &lt;code&gt;RStudio&lt;/code&gt; is a software that runs &lt;code&gt;R&lt;/code&gt; and provides additional tools that are useful when writing &lt;code&gt;R&lt;/code&gt; code. So &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are not the same.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;definitions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Definitions&lt;/h2&gt;
+&lt;p&gt;The following concepts will be helpful as you begin to explore the &lt;code&gt;R&lt;/code&gt; world.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;CRAN&lt;/strong&gt;: The Comprehensive R Archive Network is a network of web servers around the world that store identical, up-to-date, versions of code and documentation for R.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;R packages&lt;/strong&gt;: Extensions to the R programming language. R packages contain code, data, and documentation in a standardised collection format that can be installed by users of R, typically via a centralised software repository such as CRAN. The location where the packages are stored is called the library. If there is a particular functionality that you require, you can download the package from the appropriate site and it will be stored in your library.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Function&lt;/strong&gt;: is a set of statements organized together to perform a specific task. R has a large number of in-built functions and the user can create their own functions.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-and-loading-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installing and Loading Packages&lt;/h2&gt;
+&lt;p&gt;In order to use a package, it needs to be installed on your computer by running &lt;code&gt;install.packages(&#34;name_of_package&#34;)&lt;/code&gt; (do not forget &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package).&lt;/p&gt;
+&lt;p&gt;Once the package is installed, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run &lt;code&gt;library(name_of_package)&lt;/code&gt; (this time &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package are optional).&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About R &amp; RStudio</title>
       <link>https://academic-demo.netlify.app/workshops/neomu/aboutr/</link>
       <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/workshops/neomu/aboutr/</guid>
@@ -317,6 +383,162 @@
     </item>
     
     <item>
+      <title>Grafico de cajas</title>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</link>
+      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#material-particulado-pm&#34;&gt;3.1. Material Particulado (PM)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-de-datos-descripción&#34;&gt;3.2. Base de datos: descripción&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#base-de-datos-descarga&#34;&gt;3.3. Base de datos: descarga&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-una-variable&#34;&gt;4.1. Gráfico de cajas para una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-dos-variables&#34;&gt;4.2. Gráfico de cajas para dos variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.3. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#color-de-las-cajas&#34;&gt;4.4. Color de las cajas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;Los gráficos de cajas y bigotes (&lt;em&gt;boxplot&lt;/em&gt; en inglés) se utilizan para visualizar grupos de datos numéricos a través de sus cuartiles.&lt;/p&gt;
+&lt;p&gt;Cada gráfico de caja está compuesto por un rectángulo (la «caja») y dos brazos (los «bigotes»). La caja está definida por el segundo y tercer cuartil, mientras que los bigotes por el primero y el cuarto cuartil. La línea gruesa es la mediana (y no la media). Este tipo de representación es también útil para detectar valores atípicos (outliers).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/boxplot.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de cajas es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_boxplot()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_boxplot()&lt;/code&gt;: Especifica que queremos generar un gráfico de cajas.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Datos&lt;/h1&gt;
+&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
+&lt;div id=&#34;material-particulado-pm&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.1. Material Particulado (PM)&lt;/h2&gt;
+&lt;p&gt;Se denomina &lt;a href=&#34;https://sinca.mma.gob.cl/index.php/pagina/index/id/glosario&#34;&gt;Material Particulado (MP)&lt;/a&gt; a una mezcla de partículas líquidas y sólidas que se encuentran en suspensión en el aire. Los MPs son de generados a partir de algúna actividad antropogénica o natural, y forman pare de la contaminación atmosférica que impacta negativamente la salud humana.&lt;/p&gt;
+&lt;p&gt;Estos contaminantes se clasifican en función de su diámetro aerodinámico en PM10 (partículas con un diámetro inferior a 10 micras) o PM2.5 (diámetro inferior a 2,5 micra).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-de-datos-descripción&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.2. Base de datos: descripción&lt;/h2&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt; fue generada a partir de la información recuperada desde la plataforma SINCA el día 06-10-2021, y contiene la siguiente información:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Ciudad&lt;/strong&gt;: Localidad del país en la cuál se encuentra la estación de monitoreo que registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fecha&lt;/strong&gt;: Momento en el cuál se registra la calidad del aire (Año/Mes/día).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Año&lt;/strong&gt;: Año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mes&lt;/strong&gt;: Mes del año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM2.5&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 2.5 μm.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM10&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 10 μm.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-de-datos-descarga&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3.3. Base de datos: descarga&lt;/h2&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Exploremos el encabezado de la base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;glimpse()&lt;/code&gt;. del paquete &lt;code&gt;dplyr()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+
+glimpse(MaterialParticulado)
+## Rows: 135
+## Columns: 6
+## $ Ciudad &amp;lt;chr&amp;gt; &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Sa…
+## $ Fecha  &amp;lt;dbl&amp;gt; 180101, 180201, 180301, 180401, 180501, 180601, 180701, 180801,…
+## $ Year   &amp;lt;fct&amp;gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 201…
+## $ Mes    &amp;lt;fct&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, …
+## $ PM2.5  &amp;lt;dbl&amp;gt; 15.29, 16.64, 17.85, 24.83, 34.65, 48.03, 40.13, 38.06, 24.97, …
+## $ PM10   &amp;lt;dbl&amp;gt; 54.42, 55.21, 75.63, 82.41, 98.61, 86.80, 62.77, 69.97, 57.63, …&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Visualización&lt;/h1&gt;
+&lt;div id=&#34;gráfico-de-cajas-para-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.1. Gráfico de cajas para una variable&lt;/h2&gt;
+&lt;p&gt;Generemos un gráfico de cajas para visualizar la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(y=PM2.5))+
+      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gráfico-de-cajas-para-dos-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.2. Gráfico de cajas para dos variables&lt;/h2&gt;
+&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable de tipo categórica. Para ello, debemos especificar la variable a incorporar en el eje x.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; para cada &lt;strong&gt;Ciudad&lt;/strong&gt; en la que se levantó información.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.3. Título, etiquetas y ejes&lt;/h2&gt;
+&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot()+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;color-de-las-cajas&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.4. Color de las cajas&lt;/h2&gt;
+&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color de los puntos incorporando la función &lt;code&gt;fill=&lt;/code&gt; dentro de &lt;code&gt;geom_boxplot()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Pra nuestro ejemplo, se utilizará el color &lt;em&gt;cadet blue&lt;/em&gt; en formato &lt;a href=&#34;https://flaviocopes.com/rgb-color-codes/&#34;&gt;RGB&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;También, podemos ajustar la intensidad del color con la función &lt;code&gt;alpha=&lt;/code&gt; (valor por defecto: 1):&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha=0.5)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha =0.5)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Data Set</title>
       <link>https://academic-demo.netlify.app/workshops/neomu/dataset/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
@@ -342,7 +564,7 @@
 &lt;/div&gt;
 &lt;div id=&#34;content&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Content&lt;/h2&gt;
-&lt;p&gt;The dataset contains 32 variables and 850 rows of data. It reports data metrics related to three different dimensions: human resources, teaching performance and research performance.&lt;/p&gt;
+&lt;p&gt;The dataset contains 32 variables and 850 rows of data. It reports data metrics related to four different dimensions: human resources, teaching performance, research performance and services.&lt;/p&gt;
 &lt;table class=&#34;table&#34; style=&#34;font-size: 16px; margin-left: auto; margin-right: auto;&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -822,162 +1044,6 @@ Service to the society
 &lt;li&gt;&lt;p&gt;Upload the file.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;iframe src=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; width=1000 height=800&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Grafico de cajas</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</link>
-      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/boxplot/</guid>
-      <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#material-particulado-pm&#34;&gt;3.1. Material Particulado (PM)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#base-de-datos-descripción&#34;&gt;3.2. Base de datos: descripción&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#base-de-datos-descarga&#34;&gt;3.3. Base de datos: descarga&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-una-variable&#34;&gt;4.1. Gráfico de cajas para una variable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#gráfico-de-cajas-para-dos-variables&#34;&gt;4.2. Gráfico de cajas para dos variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.3. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#color-de-las-cajas&#34;&gt;4.4. Color de las cajas&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#juntando-todas-las-piezas&#34;&gt;5. Juntando todas las piezas&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;Los gráficos de cajas y bigotes (&lt;em&gt;boxplot&lt;/em&gt; en inglés) se utilizan para visualizar grupos de datos numéricos a través de sus cuartiles.&lt;/p&gt;
-&lt;p&gt;Cada gráfico de caja está compuesto por un rectángulo (la «caja») y dos brazos (los «bigotes»). La caja está definida por el segundo y tercer cuartil, mientras que los bigotes por el primero y el cuarto cuartil. La línea gruesa es la mediana (y no la media). Este tipo de representación es también útil para detectar valores atípicos (outliers).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/boxplot.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
-&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico de cajas es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_boxplot()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;En donde:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_boxplot()&lt;/code&gt;: Especifica que queremos generar un gráfico de cajas.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Datos&lt;/h1&gt;
-&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
-&lt;div id=&#34;material-particulado-pm&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.1. Material Particulado (PM)&lt;/h2&gt;
-&lt;p&gt;Se denomina &lt;a href=&#34;https://sinca.mma.gob.cl/index.php/pagina/index/id/glosario&#34;&gt;Material Particulado (MP)&lt;/a&gt; a una mezcla de partículas líquidas y sólidas que se encuentran en suspensión en el aire. Los MPs son de generados a partir de algúna actividad antropogénica o natural, y forman pare de la contaminación atmosférica que impacta negativamente la salud humana.&lt;/p&gt;
-&lt;p&gt;Estos contaminantes se clasifican en función de su diámetro aerodinámico en PM10 (partículas con un diámetro inferior a 10 micras) o PM2.5 (diámetro inferior a 2,5 micra).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;base-de-datos-descripción&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.2. Base de datos: descripción&lt;/h2&gt;
-&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt; fue generada a partir de la información recuperada desde la plataforma SINCA el día 06-10-2021, y contiene la siguiente información:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Ciudad&lt;/strong&gt;: Localidad del país en la cuál se encuentra la estación de monitoreo que registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Fecha&lt;/strong&gt;: Momento en el cuál se registra la calidad del aire (Año/Mes/día).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Año&lt;/strong&gt;: Año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Mes&lt;/strong&gt;: Mes del año en el cuál se registra la calidad del aire.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM2.5&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 2.5 μm.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;PM10&lt;/strong&gt;: Promedio mensual del registro diario de partículas de diámetro aerodinámico menor a 10 μm.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;base-de-datos-descarga&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;3.3. Base de datos: descarga&lt;/h2&gt;
-&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Exploremos el encabezado de la base de datos &lt;strong&gt;MaterialParticulado&lt;/strong&gt;. Para ello, utilizaremos la función &lt;code&gt;glimpse()&lt;/code&gt;. del paquete &lt;code&gt;dplyr()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
-
-glimpse(MaterialParticulado)
-## Rows: 135
-## Columns: 6
-## $ Ciudad &amp;lt;chr&amp;gt; &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Santiago&amp;quot;, &amp;quot;Sa…
-## $ Fecha  &amp;lt;dbl&amp;gt; 180101, 180201, 180301, 180401, 180501, 180601, 180701, 180801,…
-## $ Year   &amp;lt;fct&amp;gt; 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 2018, 201…
-## $ Mes    &amp;lt;fct&amp;gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7, 8, …
-## $ PM2.5  &amp;lt;dbl&amp;gt; 15.29, 16.64, 17.85, 24.83, 34.65, 48.03, 40.13, 38.06, 24.97, …
-## $ PM10   &amp;lt;dbl&amp;gt; 54.42, 55.21, 75.63, 82.41, 98.61, 86.80, 62.77, 69.97, 57.63, …&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;4. Visualización&lt;/h1&gt;
-&lt;div id=&#34;gráfico-de-cajas-para-una-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.1. Gráfico de cajas para una variable&lt;/h2&gt;
-&lt;p&gt;Generemos un gráfico de cajas para visualizar la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(y=PM2.5))+
-      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;gráfico-de-cajas-para-dos-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.2. Gráfico de cajas para dos variables&lt;/h2&gt;
-&lt;p&gt;Ahora, generemos el mismo gráfico de cajas pero incluyamos una segunda variable de tipo categórica. Para ello, debemos especificar la variable a incorporar en el eje x.&lt;/p&gt;
-&lt;p&gt;Por ejemplo, podemos ver la distribución de la variable &lt;strong&gt;PM2.5&lt;/strong&gt; para cada &lt;strong&gt;Ciudad&lt;/strong&gt; en la que se levantó información.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.3. Título, etiquetas y ejes&lt;/h2&gt;
-&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot()+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;color-de-las-cajas&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.4. Color de las cajas&lt;/h2&gt;
-&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color de los puntos incorporando la función &lt;code&gt;fill=&lt;/code&gt; dentro de &lt;code&gt;geom_boxplot()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Pra nuestro ejemplo, se utilizará el color &lt;em&gt;cadet blue&lt;/em&gt; en formato &lt;a href=&#34;https://flaviocopes.com/rgb-color-codes/&#34;&gt;RGB&lt;/a&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;También, podemos ajustar la intensidad del color con la función &lt;code&gt;alpha=&lt;/code&gt; (valor por defecto: 1):&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;juntando-todas-las-piezas&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;5. Juntando todas las piezas&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha=0.5)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-      geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha =0.5)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Boxplot_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>

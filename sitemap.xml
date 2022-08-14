@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://academic-demo.netlify.app/workshops/neomu/copia-de-aboutr/</loc>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/workshops/neomu/aboutr/</loc>
     <lastmod>2022-08-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -17,7 +20,7 @@
     <loc>https://academic-demo.netlify.app/courses/rvest/01_instalar/</loc>
     <lastmod>2021-09-20T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/workshops/neomu/dataset/</loc>
+    <loc>https://academic-demo.netlify.app/workshops/neomu/exploringr/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/dplyr/filter/</loc>
@@ -31,6 +34,9 @@
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/rvest/02_scrapeando/</loc>
     <lastmod>2021-09-29T21:13:14-05:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/workshops/neomu/dataset/</loc>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/dplyr/mutate/</loc>
     <lastmod>2022-01-15T21:13:14-05:00</lastmod>
@@ -53,7 +59,13 @@
     <loc>https://academic-demo.netlify.app/tag/ggplot/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://academic-demo.netlify.app/tag/r/</loc>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/category/r/</loc>
+    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://academic-demo.netlify.app/tag/rstudio/</loc>
     <lastmod>2022-08-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/tags/</loc>
