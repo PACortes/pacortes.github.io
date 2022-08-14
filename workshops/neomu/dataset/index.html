@@ -294,7 +294,7 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/workshops/neomu/dataset/" />
-  <meta property="og:title" content="Faculty Data Set | Pablo Cortes" />
+  <meta property="og:title" content="Data Set | Pablo Cortes" />
   <meta property="og:description" content="Context Content Data Dictionary   Context Evaluating university faculty teaching and research performance is necessary for multiple reasons, including assurance of student learning and informing administrative decision-making." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -321,7 +321,7 @@
 
 
 
-  <title>Faculty Data Set | Pablo Cortes</title>
+  <title>Data Set | Pablo Cortes</title>
 </head>
 
 
@@ -763,7 +763,7 @@
 
 
 
-  <li class="active"><a href="/workshops/neomu/dataset/">Faculty Data Set</a></li>
+  <li class="active"><a href="/workshops/neomu/dataset/">Data Set</a></li>
 
       
         </ul>
@@ -837,7 +837,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        Faculty Data Set
+        Data Set
       </li>
     </ol>
   </nav>
@@ -845,7 +845,7 @@
 
           
 
-          <h1>Faculty Data Set</h1>
+          <h1>Data Set</h1>
 
           <div class="article-style">
             
@@ -868,7 +868,7 @@
 </div>
 <div id="content" class="section level2">
 <h2>Content</h2>
-<p>The dataset contains 20 variables and 311 rows of data (number of faculty employees). It reports data metrics related to faculty´s demographics, salary, teaching and research performance, among others.</p>
+<p>The dataset contains 20 variables and 311 rows of data (number of faculty employees). It reports data metrics related to three different dimensions: human resources, teaching performance and research performance.</p>
 <table>
 <thead>
 <tr>
@@ -881,17 +881,9 @@ Description
 </tr>
 </thead>
 <tbody>
-<tr grouplength="3">
+<tr grouplength="2">
 <td colspan="2" style="border-bottom: 1px solid;">
 <strong>Human Resources</strong>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;padding-left: 2em;" indentlevel="1">
-Demographic information
-</td>
-<td style="text-align:left;">
-Demographic characteristics of the faculty members
 </td>
 </tr>
 <tr>
@@ -910,7 +902,7 @@ Employmnet information
 Information related to appointments of faculty members
 </td>
 </tr>
-<tr grouplength="4">
+<tr grouplength="3">
 <td colspan="2" style="border-bottom: 1px solid;">
 <strong>Teaching</strong>
 </td>
@@ -918,14 +910,6 @@ Information related to appointments of faculty members
 <tr>
 <td style="text-align:left;padding-left: 2em;" indentlevel="1">
 Effectiveness of course delivery
-</td>
-<td style="text-align:left;">
-The extent to which a faculty member can lecture, lead discussion, respond to student questions, evaluate assignments and use instructional technology
-</td>
-</tr>
-<tr>
-<td style="text-align:left;padding-left: 2em;" indentlevel="1">
-Quality of course content
 </td>
 <td style="text-align:left;">
 The extent to which knowledge presented is valid. Course content includes: course readings, instructor-developed resources, class exercises, clinical practice, and experiments
@@ -947,17 +931,9 @@ Effectiveness in Mentoring Students
 Ability to encourage students and to help them understand the factors that contribute to academic success
 </td>
 </tr>
-<tr grouplength="2">
+<tr grouplength="1">
 <td colspan="2" style="border-bottom: 1px solid;">
 <strong>Research</strong>
-</td>
-</tr>
-<tr>
-<td style="text-align:left;padding-left: 2em;" indentlevel="1">
-Quality of Research
-</td>
-<td style="text-align:left;">
-Evidence of making a substantive contribution to one or more fields of study
 </td>
 </tr>
 <tr>
@@ -997,38 +973,37 @@ Engaging in community outreach or community engagement effort
 <table>
 <thead>
 <tr>
-<th style="text-align:left;">
+<th style="text-align:left;font-size: 22px;">
 Variable
 </th>
-<th style="text-align:left;">
-Datatype
-</th>
-<th style="text-align:left;">
+<th style="text-align:left;font-size: 22px;">
 Description
+</th>
+<th style="text-align:left;font-size: 22px;">
+Element
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-EmployeeName
+AcadYear
 </td>
 <td style="text-align:left;">
-Character
+Academic year
 </td>
 <td style="text-align:left;">
-Faculty’s full name
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Salary
+EmployeeName
 </td>
 <td style="text-align:left;">
-Numeric
+Faculty’s full name
 </td>
 <td style="text-align:left;">
-The faculty´s yearly salary. $ U.S. Dollars
+Personal information
 </td>
 </tr>
 <tr>
@@ -1036,54 +1011,10 @@ The faculty´s yearly salary. $ U.S. Dollars
 Sex
 </td>
 <td style="text-align:left;">
-Character
+Sex (M or F)
 </td>
 <td style="text-align:left;">
-Sex - M or F
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-MaritalDesc
-</td>
-<td style="text-align:left;">
-Character
-</td>
-<td style="text-align:left;">
-The marital status of the faculty (divorced, single, widowed, separated, etc)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-DaysLateLast30
-</td>
-<td style="text-align:left;">
-Numeric
-</td>
-<td style="text-align:left;">
-The number of times that the faculty was late to work during the last 30 days
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Absences
-</td>
-<td style="text-align:left;">
-Numeric
-</td>
-<td style="text-align:left;">
-No. of times the faculty was absent from work during the year
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Age
-</td>
-<td style="text-align:left;">
-Numeric
-</td>
-<td style="text-align:left;">
-Age
+Personal information
 </td>
 </tr>
 <tr>
@@ -1091,10 +1022,10 @@ Age
 YearBirth
 </td>
 <td style="text-align:left;">
-Numeric
+Faculty’s year of birth
 </td>
 <td style="text-align:left;">
-Faculty’s year of birth
+Personal information
 </td>
 </tr>
 <tr>
@@ -1102,32 +1033,10 @@ Faculty’s year of birth
 Nationality
 </td>
 <td style="text-align:left;">
-Character
-</td>
-<td style="text-align:left;">
 Faculty’s nationality
 </td>
-</tr>
-<tr>
 <td style="text-align:left;">
-School
-</td>
-<td style="text-align:left;">
-Character
-</td>
-<td style="text-align:left;">
-School of faculty´s appointment
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Course
-</td>
-<td style="text-align:left;">
-Numeric
-</td>
-<td style="text-align:left;">
-No. of courses instructed during the year
+Personal information
 </td>
 </tr>
 <tr>
@@ -1135,87 +1044,186 @@ No. of courses instructed during the year
 Appointment
 </td>
 <td style="text-align:left;">
-Numeric
+Appointment ranks (1 = Assistant Professor, 2 = Associate Professor, 3 = Professor)
 </td>
 <td style="text-align:left;">
-Appointment ranks - 1 = Assistant Professor, 2 = Associate Professor, 3 = Professor
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Satisfaction
-</td>
-<td style="text-align:left;">
-Numeric
-</td>
-<td style="text-align:left;">
-Results from the last labour satisfaction survey - Value between 0 to 5
+Employment information
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-ResearchBudget
+SchoolApp
 </td>
 <td style="text-align:left;">
-Character
+School of appointment
 </td>
 <td style="text-align:left;">
-Annual Research Budget
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-FirstYear
-</td>
-<td style="text-align:left;">
-Numeric
-</td>
-<td style="text-align:left;">
-Year of firts appointment
+Employment information
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Articles
+FirstYearApp
 </td>
 <td style="text-align:left;">
-Numeric
+Year of first appointment
 </td>
 <td style="text-align:left;">
-No.of articles per year published in peer-reviewed journals during the year
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Students
-</td>
-<td style="text-align:left;">
-Numeric
-</td>
-<td style="text-align:left;">
-No.of supervised theses during the year
+Employment information
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Evaluation
+Salary
 </td>
 <td style="text-align:left;">
-Numeric
+The faculty´s yearly salary ($U.S. Dollars)
 </td>
 <td style="text-align:left;">
-Results from the last Teacher evaluation survey - Value between 0 to 5
+Employment information
 </td>
 </tr>
 <tr>
 <td style="text-align:left;">
-Community
+DaysLateLast30
 </td>
 <td style="text-align:left;">
-Numeric
+No. of times the faculty was late to work during the year
 </td>
 <td style="text-align:left;">
-No.of outreach activities during the year
+Employment information
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Absences
+</td>
+<td style="text-align:left;">
+No. of times the faculty was absent from work during the year
+</td>
+<td style="text-align:left;">
+Employment information
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+JobSatisfaction
+</td>
+<td style="text-align:left;">
+Results from the last labour satisfaction survey using a 5-point Likert scale (from 1 extremely dissatisfied to 5 extremely satisfied)
+</td>
+<td style="text-align:left;">
+Employment information
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SelfEvalResp
+</td>
+<td style="text-align:left;">
+Results from the last self-assestment survey about spped of response to students using a 5-point Likert scale (from 1 extremely slow to 5 extremely fast)
+</td>
+<td style="text-align:left;">
+Effectiveness of course delivery
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SelfEvalTech
+</td>
+<td style="text-align:left;">
+Results from the last self-assestment survey about the use of instructional technology using a 5-point Likert scale (from 1 never to 5 always)
+</td>
+<td style="text-align:left;">
+Effectiveness of course delivery
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SelfEvalInnov
+</td>
+<td style="text-align:left;">
+Results from the last self-assestment survey about the use of educational innovation approaches using a 5-point Likert scale (from 1 never to 5 always)
+</td>
+<td style="text-align:left;">
+Effectiveness of course delivery
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+StudentEvalResp
+</td>
+<td style="text-align:left;">
+Results from the last evaluation by students about spped of response to students using a 5-point Likert scale (from 1 extremely slow to 5 extremely fast)
+</td>
+<td style="text-align:left;">
+Effectiveness of course delivery
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+StudentEvalTech
+</td>
+<td style="text-align:left;">
+Results from the last evaluation by students about the use of instructional technology using a 5-point Likert scale (from 1 never to 5 always)
+</td>
+<td style="text-align:left;">
+Effectiveness of course delivery
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+StudentEvalInnov
+</td>
+<td style="text-align:left;">
+Results from the last evaluation by students about the use of educational innovation approaches using a 5-point Likert scale (from 1 never to 5 always)
+</td>
+<td style="text-align:left;">
+Effectiveness of course delivery
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CoursesUnd
+</td>
+<td style="text-align:left;">
+No. of undergraduate courses instructed during the year
+</td>
+<td style="text-align:left;">
+Effectiveness in managing multiple courses
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+CoursesGrad
+</td>
+<td style="text-align:left;">
+No. of graduate courses instructed during the year
+</td>
+<td style="text-align:left;">
+Effectiveness in managing multiple courses
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MentoringResProj
+</td>
+<td style="text-align:left;">
+No. of students mentored in research during the year
+</td>
+<td style="text-align:left;">
+Effectiveness in mentoring students
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+MentoringTheses
+</td>
+<td style="text-align:left;">
+No. of theses supervised during the year
+</td>
+<td style="text-align:left;">
+Effectiveness in mentoring students
 </td>
 </tr>
 <tr>
@@ -1223,10 +1231,120 @@ No.of outreach activities during the year
 ResearchArea
 </td>
 <td style="text-align:left;">
-Character
+Faculty’s research area
 </td>
 <td style="text-align:left;">
-Faculty’s research fueld
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NumPublications
+</td>
+<td style="text-align:left;">
+No.of articles published in peer-reviewed journals during the year
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+SubManuscripts
+</td>
+<td style="text-align:left;">
+No.of articles submitted to peer-reviewed journals during the year
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NumCitations
+</td>
+<td style="text-align:left;">
+Faculty´s cummulative number of citations
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NumBooks
+</td>
+<td style="text-align:left;">
+No.of books or book chapters published during the year
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NumConferences
+</td>
+<td style="text-align:left;">
+No.of international conferences presentations during the year
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ResBudget
+</td>
+<td style="text-align:left;">
+Annual Research Budget
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ResGrantsAwa
+</td>
+<td style="text-align:left;">
+No.of research grants submitted
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ResGrantsSub
+</td>
+<td style="text-align:left;">
+No.of research grants awarded
+</td>
+<td style="text-align:left;">
+Productivity in research
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NumComUniv
+</td>
+<td style="text-align:left;">
+No.of of participations in institutional committee
+</td>
+<td style="text-align:left;">
+Service to the institution
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NumOut
+</td>
+<td style="text-align:left;">
+No.of of participations in outreach activities
+</td>
+<td style="text-align:left;">
+Service to the society
 </td>
 </tr>
 </tbody>
@@ -1292,11 +1410,11 @@ Faculty’s research fueld
       
       <li><a href="/workshops/neomu/aboutr/">About R &amp; RStudio</a></li>
       
+      <li><a href="/courses/ggplot2/boxplot/">Grafico de cajas</a></li>
+      
       <li><a href="/courses/ggplot2/jitter/">Grafico jitter</a></li>
       
       <li><a href="/courses/ggplot2/scatterplot/">Gráfico de dispersión</a></li>
-      
-      <li><a href="/courses/ggplot2/boxplot/">Grafico de cajas</a></li>
       
     </ul>
   </div>
