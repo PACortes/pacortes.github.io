@@ -14,11 +14,11 @@
     
     <item>
       <title>About R &amp; RStudio</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/copia-de-aboutr/</link>
+      <link>https://academic-demo.netlify.app/workshops/neomu/aboutr/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/copia-de-aboutr/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/aboutr/</guid>
       <description>
-&lt;script src=&#34;Copia de aboutr_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
@@ -68,6 +68,7 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;CRAN&lt;/strong&gt;: The Comprehensive R Archive Network is a network of web servers around the world that store identical, up-to-date, versions of code and documentation for R.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;R packages&lt;/strong&gt;: Extensions to the R programming language. R packages contain code, data, and documentation in a standardised collection format that can be installed by users of R, typically via a centralised software repository such as CRAN. The location where the packages are stored is called the library. If there is a particular functionality that you require, you can download the package from the appropriate site and it will be stored in your library.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Function&lt;/strong&gt;: is a set of statements organized together to perform a specific task. R has a large number of in-built functions and the user can create their own functions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Objects&lt;/strong&gt;: R lets you save data by storing it inside an R object.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;div id=&#34;installing-and-loading-packages&#34; class=&#34;section level2&#34;&gt;
@@ -80,11 +81,11 @@
     
     <item>
       <title>About R &amp; RStudio</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/aboutr/</link>
-      <pubDate>Wed, 10 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/aboutr/</guid>
+      <link>https://academic-demo.netlify.app/workshops/neomu/copia-de-aboutr/</link>
+      <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/copia-de-aboutr/</guid>
       <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;Copia de aboutr_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
