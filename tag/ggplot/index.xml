@@ -14,35 +14,49 @@
     
     <item>
       <title>About R &amp; RStudio</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/aboutr/</link>
+      <link>https://academic-demo.netlify.app/workshops/neomu/day1/aboutr/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/aboutr/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/day1/aboutr/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-is-r&#34; id=&#34;toc-what-is-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-r-software-environment&#34; id=&#34;toc-the-r-software-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#why-use-r&#34; id=&#34;toc-why-use-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#what-is-rstudio&#34; id=&#34;toc-what-is-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#definitions&#34; id=&#34;toc-definitions&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.5&lt;/span&gt; Definitions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#installing-and-loading-packages&#34; id=&#34;toc-installing-and-loading-packages&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.6&lt;/span&gt; Installing and Loading Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-r&#34; id=&#34;toc-what-is-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-r-software-environment&#34; id=&#34;toc-the-r-software-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-use-r&#34; id=&#34;toc-why-use-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-rstudio&#34; id=&#34;toc-what-is-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#definitions&#34; id=&#34;toc-definitions&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Definitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-rstudio&#34; id=&#34;toc-r-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-r-rstudio&#34; id=&#34;toc-installing-r-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7&lt;/span&gt; Installing &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#window-users&#34; id=&#34;toc-window-users&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.1&lt;/span&gt; Window Users&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-r&#34; id=&#34;toc-to-install-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.1.1&lt;/span&gt; To install R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-rstudio&#34; id=&#34;toc-to-install-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.1.2&lt;/span&gt; To install RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mac-users&#34; id=&#34;toc-mac-users&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.2&lt;/span&gt; Mac Users&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-r-1&#34; id=&#34;toc-to-install-r-1&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.2.1&lt;/span&gt; To install R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-rstudio-1&#34; id=&#34;toc-to-install-rstudio-1&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.2.2&lt;/span&gt; To install RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-and-loading-packages&#34; id=&#34;toc-installing-and-loading-packages&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8&lt;/span&gt; Installing and Loading Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;what-is-r&#34; class=&#34;section level2&#34; number=&#34;0.1&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;div id=&#34;what-is-r&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;R&lt;/code&gt; is a language and software environment for statistical computing and graphics.&lt;/p&gt;
 &lt;p&gt;R provides a wide variety of statistical and graphical techniques, and is highly extensible.&lt;/p&gt;
 &lt;p&gt;It is one of the most popular languages used by statisticians, data analysts, researchers and marketers to retrieve, clean, analyze, visualize and present data.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;the-r-software-environment&#34; class=&#34;section level2&#34; number=&#34;0.2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/h2&gt;
+&lt;div id=&#34;the-r-software-environment&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/h1&gt;
 &lt;p&gt;The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;why-use-r&#34; class=&#34;section level2&#34; number=&#34;0.3&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;div id=&#34;why-use-r&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;R is open-source and free!&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;R is popular and R community is huge&lt;/p&gt;&lt;/li&gt;
@@ -56,13 +70,13 @@
 &lt;p class=&#34;caption&#34;&gt;Credits: allison_horst&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level2&#34; number=&#34;0.4&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h2&gt;
+&lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; is a free, open source IDE (integrated development environment) for R. Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import &lt;em&gt;CSV&lt;/em&gt;, &lt;em&gt;Excel&lt;/em&gt;, &lt;em&gt;SAS&lt;/em&gt;, &lt;em&gt;SPSS&lt;/em&gt; and &lt;em&gt;Stata&lt;/em&gt; files into R without having to write the code to do so.&lt;/p&gt;
 &lt;p&gt;It is important to note that &lt;code&gt;RStudio&lt;/code&gt; is a software that runs &lt;code&gt;R&lt;/code&gt; and provides additional tools that are useful when writing &lt;code&gt;R&lt;/code&gt; code. So &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are not the same.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;definitions&#34; class=&#34;section level2&#34; number=&#34;0.5&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.5&lt;/span&gt; Definitions&lt;/h2&gt;
+&lt;div id=&#34;definitions&#34; class=&#34;section level1&#34; number=&#34;5&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Definitions&lt;/h1&gt;
 &lt;p&gt;The following concepts will be helpful as you begin to explore the &lt;code&gt;R&lt;/code&gt; world.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;CRAN&lt;/strong&gt;: The Comprehensive R Archive Network is a network of web servers around the world that store identical, up-to-date, versions of code and documentation for R.&lt;/p&gt;&lt;/li&gt;
@@ -71,8 +85,62 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Objects&lt;/strong&gt;: R lets you save data by storing it inside an R object.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;installing-and-loading-packages&#34; class=&#34;section level2&#34; number=&#34;0.6&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.6&lt;/span&gt; Installing and Loading Packages&lt;/h2&gt;
+&lt;div id=&#34;r-rstudio&#34; class=&#34;section level1&#34; number=&#34;6&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h1&gt;
+&lt;p&gt;Let us remember that &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are two distinctly different applications that serve different purposes. &lt;code&gt;R&lt;/code&gt; is the software that performs the actual instructions. It’s the workhorse. Without &lt;code&gt;R&lt;/code&gt; installed on your computer, you would not be able to run any commands. &lt;code&gt;RStudio&lt;/code&gt; is a software that provides an nifty interface to R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-r-rstudio&#34; class=&#34;section level1&#34; number=&#34;7&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;7&lt;/span&gt; Installing &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;To get started with &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;, you need to acquire your own copy. Here, I will show you how to download it. Follow the link that describes your operating system: Windows or Mac.&lt;/p&gt;
+&lt;div id=&#34;window-users&#34; class=&#34;section level2&#34; number=&#34;7.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1&lt;/span&gt; Window Users&lt;/h2&gt;
+&lt;div id=&#34;to-install-r&#34; class=&#34;section level3&#34; number=&#34;7.1.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1.1&lt;/span&gt; To install R&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open an internet browser and go to &lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Click the “download R” link in the middle of the page under “Getting Started.”&lt;/li&gt;
+&lt;li&gt;Select a CRAN location (a mirror site) and click the corresponding link.&lt;/li&gt;
+&lt;li&gt;Click on the “Download R for Windows” link at the top of the page.&lt;/li&gt;
+&lt;li&gt;Click on the “install R for the first time” link at the top of the page.&lt;/li&gt;
+&lt;li&gt;Click “Download R for Windows” and save the executable file somewhere on your computer. Run the .exe file and follow the installation instructions.&lt;/li&gt;
+&lt;li&gt;Now that R is installed, you need to download and install RStudio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;to-install-rstudio&#34; class=&#34;section level3&#34; number=&#34;7.1.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1.2&lt;/span&gt; To install RStudio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to (www.rstudio.com)[www.rstudio.com].&lt;/li&gt;
+&lt;li&gt;Click on [Download] (&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;) and then “Download” under “RStudio Desktop”.&lt;/li&gt;
+&lt;li&gt;Click “Download RStudio for Mac” to get the latest Windows version; save the .dmg file on your computer; double-click it to open; and then drag and drop it to your applications folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mac-users&#34; class=&#34;section level2&#34; number=&#34;7.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.2&lt;/span&gt; Mac Users&lt;/h2&gt;
+&lt;div id=&#34;to-install-r-1&#34; class=&#34;section level3&#34; number=&#34;7.2.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.2.1&lt;/span&gt; To install R&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open an internet browser and go to &lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Click the “download R” link in the middle of the page under “Getting Started.”&lt;/li&gt;
+&lt;li&gt;Select a CRAN location (a mirror site) and click the corresponding link.&lt;/li&gt;
+&lt;li&gt;Click on the “Download R for macOS” link at the top of the page.&lt;/li&gt;
+&lt;li&gt;Click on the file containing the latest version of R, as appropriate for your hardware.&lt;/li&gt;
+&lt;li&gt;Save the .pkg file, double-click it to open, and follow the installation instructions.&lt;/li&gt;
+&lt;li&gt;Now that R is installed, you need to download and install RStudio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;to-install-rstudio-1&#34; class=&#34;section level3&#34; number=&#34;7.2.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.2.2&lt;/span&gt; To install RStudio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to (www.rstudio.com)[www.rstudio.com].&lt;/li&gt;
+&lt;li&gt;Click on [Download] (&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;) and then “Download” under “RStudio Desktop”.&lt;/li&gt;
+&lt;li&gt;Click “Download RStudio for Mac” to get the latest Mac version; save the .dmg file on your computer; double-click it to open; and then drag and drop it to your applications folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-and-loading-packages&#34; class=&#34;section level1&#34; number=&#34;8&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;8&lt;/span&gt; Installing and Loading Packages&lt;/h1&gt;
 &lt;p&gt;In order to use a package, it needs to be installed on your computer by running &lt;code&gt;install.packages(&#34;name_of_package&#34;)&lt;/code&gt; (do not forget &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package).&lt;/p&gt;
 &lt;p&gt;Once the package is installed, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run &lt;code&gt;library(name_of_package)&lt;/code&gt; (this time &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package are optional).&lt;/p&gt;
 &lt;/div&gt;
@@ -474,10 +542,133 @@ glimpse(MaterialParticulado)
     </item>
     
     <item>
+      <title>Grafico jitter</title>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
+      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-jitter-para-una-variable&#34;&gt;4.1. Gráfico jitter para una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.2. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dispersión-de-los-datos&#34;&gt;4.3. Dispersión de los datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#color-forma-y-tamaño-de-los-puntos&#34;&gt;4.4. Color, forma y tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;Con frecuencia, al generar un gráfico de dispersión, es posible que muchos puntos se sobrepongan unos con otros. Esto puede ser un problema ya que no podremos visualizar y apreciar la cantidad de datos de forma clara e informativa.&lt;/p&gt;
+&lt;p&gt;Una solución es realizar un gráfico tipo jitter, el cuál permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico jitter es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_jitter()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_jitter()&lt;/code&gt;: Especifica que queremos generar un gráfico de tipo jitter.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Datos&lt;/h1&gt;
+&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Visualización&lt;/h1&gt;
+&lt;div id=&#34;gráfico-jitter-para-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.1. Gráfico jitter para una variable&lt;/h2&gt;
+&lt;p&gt;Generemos un gráfico jitter para visualizar los datos de la variable PM2.5 para cada Ciudad en la que se levantó información.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.2. Título, etiquetas y ejes&lt;/h2&gt;
+&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter()+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dispersión-de-los-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.3. Dispersión de los datos&lt;/h2&gt;
+&lt;p&gt;Para controlar el grado de dispersión de los puntos, podemos personalizar utilizamos la función &lt;code&gt;width =&lt;/code&gt; (valor por defecto: 40% de la resolución de los datos) dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, disminuyamos a un 20% la dispersión de los puntos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter(width = 0.2)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;color-forma-y-tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.4. Color, forma y tamaño de los puntos&lt;/h2&gt;
+&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color, forma y tamaño de los puntos con las funciones &lt;code&gt;color =&lt;/code&gt;, &lt;code&gt;shape =&lt;/code&gt; y &lt;code&gt;size =&lt;/code&gt; dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter(width = 0.2, color = &amp;quot;#5F9EA0&amp;quot;, shape = 17, size =2)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
+# 5. Gráfico de cajas con jitter
+Cuando tenemos una variable categórica que representa grupos, podemos crear un gráfico de cajas y sobreponer los puntos a cada grupo. Para ello, debemos agregar una capa adicional con la información del gráfico jitter.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
+  geom_jitter(width = 0.2, alpha=0.8)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
+# 6. Juntando todas las piezas&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
+  geom_jitter(width = 0.2, alpha=0.8)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Data Set</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/dataset/</link>
+      <link>https://academic-demo.netlify.app/workshops/neomu/day1/dataset/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/dataset/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/day1/dataset/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
@@ -979,129 +1170,6 @@ Service to the society
 &lt;li&gt;&lt;p&gt;Upload the file.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;iframe src=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; width=1000 height=800&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Grafico jitter</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
-      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
-      <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#gráfico-jitter-para-una-variable&#34;&gt;4.1. Gráfico jitter para una variable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.2. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#dispersión-de-los-datos&#34;&gt;4.3. Dispersión de los datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#color-forma-y-tamaño-de-los-puntos&#34;&gt;4.4. Color, forma y tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;Con frecuencia, al generar un gráfico de dispersión, es posible que muchos puntos se sobrepongan unos con otros. Esto puede ser un problema ya que no podremos visualizar y apreciar la cantidad de datos de forma clara e informativa.&lt;/p&gt;
-&lt;p&gt;Una solución es realizar un gráfico tipo jitter, el cuál permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos.&lt;/p&gt;
-&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
-&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico jitter es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_jitter()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;En donde:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_jitter()&lt;/code&gt;: Especifica que queremos generar un gráfico de tipo jitter.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Datos&lt;/h1&gt;
-&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
-&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;4. Visualización&lt;/h1&gt;
-&lt;div id=&#34;gráfico-jitter-para-una-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.1. Gráfico jitter para una variable&lt;/h2&gt;
-&lt;p&gt;Generemos un gráfico jitter para visualizar los datos de la variable PM2.5 para cada Ciudad en la que se levantó información.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.2. Título, etiquetas y ejes&lt;/h2&gt;
-&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter()+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dispersión-de-los-datos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.3. Dispersión de los datos&lt;/h2&gt;
-&lt;p&gt;Para controlar el grado de dispersión de los puntos, podemos personalizar utilizamos la función &lt;code&gt;width =&lt;/code&gt; (valor por defecto: 40% de la resolución de los datos) dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Por ejemplo, disminuyamos a un 20% la dispersión de los puntos:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter(width = 0.2)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;color-forma-y-tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.4. Color, forma y tamaño de los puntos&lt;/h2&gt;
-&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color, forma y tamaño de los puntos con las funciones &lt;code&gt;color =&lt;/code&gt;, &lt;code&gt;shape =&lt;/code&gt; y &lt;code&gt;size =&lt;/code&gt; dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter(width = 0.2, color = &amp;quot;#5F9EA0&amp;quot;, shape = 17, size =2)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
-# 5. Gráfico de cajas con jitter
-Cuando tenemos una variable categórica que representa grupos, podemos crear un gráfico de cajas y sobreponer los puntos a cada grupo. Para ello, debemos agregar una capa adicional con la información del gráfico jitter.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
-  geom_jitter(width = 0.2, alpha=0.8)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
-# 6. Juntando todas las piezas&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
-  geom_jitter(width = 0.2, alpha=0.8)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>

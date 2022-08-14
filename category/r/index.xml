@@ -14,35 +14,49 @@
     
     <item>
       <title>About R &amp; RStudio</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/aboutr/</link>
+      <link>https://academic-demo.netlify.app/workshops/neomu/day1/aboutr/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/aboutr/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/day1/aboutr/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#what-is-r&#34; id=&#34;toc-what-is-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-r-software-environment&#34; id=&#34;toc-the-r-software-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#why-use-r&#34; id=&#34;toc-why-use-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#what-is-rstudio&#34; id=&#34;toc-what-is-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#definitions&#34; id=&#34;toc-definitions&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.5&lt;/span&gt; Definitions&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#installing-and-loading-packages&#34; id=&#34;toc-installing-and-loading-packages&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;0.6&lt;/span&gt; Installing and Loading Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-r&#34; id=&#34;toc-what-is-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-r-software-environment&#34; id=&#34;toc-the-r-software-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-use-r&#34; id=&#34;toc-why-use-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-rstudio&#34; id=&#34;toc-what-is-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#definitions&#34; id=&#34;toc-definitions&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Definitions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-rstudio&#34; id=&#34;toc-r-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-r-rstudio&#34; id=&#34;toc-installing-r-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7&lt;/span&gt; Installing &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#window-users&#34; id=&#34;toc-window-users&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.1&lt;/span&gt; Window Users&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-r&#34; id=&#34;toc-to-install-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.1.1&lt;/span&gt; To install R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-rstudio&#34; id=&#34;toc-to-install-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.1.2&lt;/span&gt; To install RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mac-users&#34; id=&#34;toc-mac-users&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.2&lt;/span&gt; Mac Users&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-r-1&#34; id=&#34;toc-to-install-r-1&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.2.1&lt;/span&gt; To install R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#to-install-rstudio-1&#34; id=&#34;toc-to-install-rstudio-1&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.2.2&lt;/span&gt; To install RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installing-and-loading-packages&#34; id=&#34;toc-installing-and-loading-packages&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8&lt;/span&gt; Installing and Loading Packages&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;what-is-r&#34; class=&#34;section level2&#34; number=&#34;0.1&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;div id=&#34;what-is-r&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;R&lt;/code&gt; is a language and software environment for statistical computing and graphics.&lt;/p&gt;
 &lt;p&gt;R provides a wide variety of statistical and graphical techniques, and is highly extensible.&lt;/p&gt;
 &lt;p&gt;It is one of the most popular languages used by statisticians, data analysts, researchers and marketers to retrieve, clean, analyze, visualize and present data.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;the-r-software-environment&#34; class=&#34;section level2&#34; number=&#34;0.2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/h2&gt;
+&lt;div id=&#34;the-r-software-environment&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/h1&gt;
 &lt;p&gt;The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;why-use-r&#34; class=&#34;section level2&#34; number=&#34;0.3&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/h2&gt;
+&lt;div id=&#34;why-use-r&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;R is open-source and free!&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;R is popular and R community is huge&lt;/p&gt;&lt;/li&gt;
@@ -56,13 +70,13 @@
 &lt;p class=&#34;caption&#34;&gt;Credits: allison_horst&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level2&#34; number=&#34;0.4&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h2&gt;
+&lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; is a free, open source IDE (integrated development environment) for R. Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import &lt;em&gt;CSV&lt;/em&gt;, &lt;em&gt;Excel&lt;/em&gt;, &lt;em&gt;SAS&lt;/em&gt;, &lt;em&gt;SPSS&lt;/em&gt; and &lt;em&gt;Stata&lt;/em&gt; files into R without having to write the code to do so.&lt;/p&gt;
 &lt;p&gt;It is important to note that &lt;code&gt;RStudio&lt;/code&gt; is a software that runs &lt;code&gt;R&lt;/code&gt; and provides additional tools that are useful when writing &lt;code&gt;R&lt;/code&gt; code. So &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are not the same.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;definitions&#34; class=&#34;section level2&#34; number=&#34;0.5&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.5&lt;/span&gt; Definitions&lt;/h2&gt;
+&lt;div id=&#34;definitions&#34; class=&#34;section level1&#34; number=&#34;5&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Definitions&lt;/h1&gt;
 &lt;p&gt;The following concepts will be helpful as you begin to explore the &lt;code&gt;R&lt;/code&gt; world.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;CRAN&lt;/strong&gt;: The Comprehensive R Archive Network is a network of web servers around the world that store identical, up-to-date, versions of code and documentation for R.&lt;/p&gt;&lt;/li&gt;
@@ -71,8 +85,62 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Objects&lt;/strong&gt;: R lets you save data by storing it inside an R object.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;installing-and-loading-packages&#34; class=&#34;section level2&#34; number=&#34;0.6&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;0.6&lt;/span&gt; Installing and Loading Packages&lt;/h2&gt;
+&lt;div id=&#34;r-rstudio&#34; class=&#34;section level1&#34; number=&#34;6&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h1&gt;
+&lt;p&gt;Let us remember that &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are two distinctly different applications that serve different purposes. &lt;code&gt;R&lt;/code&gt; is the software that performs the actual instructions. It’s the workhorse. Without &lt;code&gt;R&lt;/code&gt; installed on your computer, you would not be able to run any commands. &lt;code&gt;RStudio&lt;/code&gt; is a software that provides an nifty interface to R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-r-rstudio&#34; class=&#34;section level1&#34; number=&#34;7&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;7&lt;/span&gt; Installing &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;To get started with &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;, you need to acquire your own copy. Here, I will show you how to download it. Follow the link that describes your operating system: Windows or Mac.&lt;/p&gt;
+&lt;div id=&#34;window-users&#34; class=&#34;section level2&#34; number=&#34;7.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1&lt;/span&gt; Window Users&lt;/h2&gt;
+&lt;div id=&#34;to-install-r&#34; class=&#34;section level3&#34; number=&#34;7.1.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1.1&lt;/span&gt; To install R&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open an internet browser and go to &lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Click the “download R” link in the middle of the page under “Getting Started.”&lt;/li&gt;
+&lt;li&gt;Select a CRAN location (a mirror site) and click the corresponding link.&lt;/li&gt;
+&lt;li&gt;Click on the “Download R for Windows” link at the top of the page.&lt;/li&gt;
+&lt;li&gt;Click on the “install R for the first time” link at the top of the page.&lt;/li&gt;
+&lt;li&gt;Click “Download R for Windows” and save the executable file somewhere on your computer. Run the .exe file and follow the installation instructions.&lt;/li&gt;
+&lt;li&gt;Now that R is installed, you need to download and install RStudio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;to-install-rstudio&#34; class=&#34;section level3&#34; number=&#34;7.1.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1.2&lt;/span&gt; To install RStudio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to (www.rstudio.com)[www.rstudio.com].&lt;/li&gt;
+&lt;li&gt;Click on [Download] (&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;) and then “Download” under “RStudio Desktop”.&lt;/li&gt;
+&lt;li&gt;Click “Download RStudio for Mac” to get the latest Windows version; save the .dmg file on your computer; double-click it to open; and then drag and drop it to your applications folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mac-users&#34; class=&#34;section level2&#34; number=&#34;7.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.2&lt;/span&gt; Mac Users&lt;/h2&gt;
+&lt;div id=&#34;to-install-r-1&#34; class=&#34;section level3&#34; number=&#34;7.2.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.2.1&lt;/span&gt; To install R&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Open an internet browser and go to &lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Click the “download R” link in the middle of the page under “Getting Started.”&lt;/li&gt;
+&lt;li&gt;Select a CRAN location (a mirror site) and click the corresponding link.&lt;/li&gt;
+&lt;li&gt;Click on the “Download R for macOS” link at the top of the page.&lt;/li&gt;
+&lt;li&gt;Click on the file containing the latest version of R, as appropriate for your hardware.&lt;/li&gt;
+&lt;li&gt;Save the .pkg file, double-click it to open, and follow the installation instructions.&lt;/li&gt;
+&lt;li&gt;Now that R is installed, you need to download and install RStudio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;to-install-rstudio-1&#34; class=&#34;section level3&#34; number=&#34;7.2.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.2.2&lt;/span&gt; To install RStudio&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to (www.rstudio.com)[www.rstudio.com].&lt;/li&gt;
+&lt;li&gt;Click on [Download] (&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;) and then “Download” under “RStudio Desktop”.&lt;/li&gt;
+&lt;li&gt;Click “Download RStudio for Mac” to get the latest Mac version; save the .dmg file on your computer; double-click it to open; and then drag and drop it to your applications folder.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installing-and-loading-packages&#34; class=&#34;section level1&#34; number=&#34;8&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;8&lt;/span&gt; Installing and Loading Packages&lt;/h1&gt;
 &lt;p&gt;In order to use a package, it needs to be installed on your computer by running &lt;code&gt;install.packages(&#34;name_of_package&#34;)&lt;/code&gt; (do not forget &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package).&lt;/p&gt;
 &lt;p&gt;Once the package is installed, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run &lt;code&gt;library(name_of_package)&lt;/code&gt; (this time &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package are optional).&lt;/p&gt;
 &lt;/div&gt;
@@ -639,114 +707,46 @@
     
     <item>
       <title>Exploring R &amp; RStudio</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/exploringr/</link>
+      <link>https://academic-demo.netlify.app/workshops/neomu/day1/exploringr/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/exploringr/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/day1/exploringr/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#r-rstudio&#34; id=&#34;toc-r-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#installing-r-rstudio&#34; id=&#34;toc-installing-r-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Installing &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#opneing-rstudio&#34; id=&#34;toc-opneing-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Opneing &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#window-users&#34; id=&#34;toc-window-users&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; Window Users&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#console&#34; id=&#34;toc-console&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#environmenthistorygit&#34; id=&#34;toc-environmenthistorygit&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Environment/History/Git&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#to-install-r&#34; id=&#34;toc-to-install-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1.1&lt;/span&gt; To install R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#to-install-rstudio&#34; id=&#34;toc-to-install-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1.2&lt;/span&gt; To install RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#environment&#34; id=&#34;toc-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.1&lt;/span&gt; Environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#history&#34; id=&#34;toc-history&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.2&lt;/span&gt; History&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#git&#34; id=&#34;toc-git&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.3&lt;/span&gt; Git&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#mac-users&#34; id=&#34;toc-mac-users&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Mac Users&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#filesplotspackageshelpviewer&#34; id=&#34;toc-filesplotspackageshelpviewer&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Files/Plots/Packages/Help/Viewer&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#to-install-r-1&#34; id=&#34;toc-to-install-r-1&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2.1&lt;/span&gt; To install R&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#to-install-rstudio-1&#34; id=&#34;toc-to-install-rstudio-1&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2.2&lt;/span&gt; To install RStudio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#files&#34; id=&#34;toc-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.1&lt;/span&gt; Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plots&#34; id=&#34;toc-plots&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.2&lt;/span&gt; Plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#packages&#34; id=&#34;toc-packages&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.3&lt;/span&gt; Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#help&#34; id=&#34;toc-help&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.4&lt;/span&gt; Help&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#viewer&#34; id=&#34;toc-viewer&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.5&lt;/span&gt; Viewer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#opneing-rstudio&#34; id=&#34;toc-opneing-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Opneing &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#console&#34; id=&#34;toc-console&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Console&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#environmenthistorygit&#34; id=&#34;toc-environmenthistorygit&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; Environment/History/Git&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#environment&#34; id=&#34;toc-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2.1&lt;/span&gt; Environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#history&#34; id=&#34;toc-history&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2.2&lt;/span&gt; History&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#git&#34; id=&#34;toc-git&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2.3&lt;/span&gt; Git&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#filesplotspackageshelpviewer&#34; id=&#34;toc-filesplotspackageshelpviewer&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Files/Plots/Packages/Help/Viewer&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#files&#34; id=&#34;toc-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3.1&lt;/span&gt; Files&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#plots&#34; id=&#34;toc-plots&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3.2&lt;/span&gt; Plots&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#packages&#34; id=&#34;toc-packages&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3.3&lt;/span&gt; Packages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#help&#34; id=&#34;toc-help&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3.4&lt;/span&gt; Help&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#viewer&#34; id=&#34;toc-viewer&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3.5&lt;/span&gt; Viewer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#source-panel&#34; id=&#34;toc-source-panel&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.4&lt;/span&gt; Source Panel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#source-panel&#34; id=&#34;toc-source-panel&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Source Panel&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
-&lt;div id=&#34;r-rstudio&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h1&gt;
-&lt;p&gt;Let us remember that &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are two distinctly different applications that serve different purposes. &lt;code&gt;R&lt;/code&gt; is the software that performs the actual instructions. It’s the workhorse. Without &lt;code&gt;R&lt;/code&gt; installed on your computer, you would not be able to run any commands. &lt;code&gt;RStudio&lt;/code&gt; is a software that provides an nifty interface to R.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;installing-r-rstudio&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Installing &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;To get started with &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;, you need to acquire your own copy. Here, I will show you how to download it. Follow the link that describes your operating system: Windows or Mac.&lt;/p&gt;
-&lt;div id=&#34;window-users&#34; class=&#34;section level2&#34; number=&#34;2.1&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; Window Users&lt;/h2&gt;
-&lt;div id=&#34;to-install-r&#34; class=&#34;section level3&#34; number=&#34;2.1.1&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1.1&lt;/span&gt; To install R&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Open an internet browser and go to &lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Click the “download R” link in the middle of the page under “Getting Started.”&lt;/li&gt;
-&lt;li&gt;Select a CRAN location (a mirror site) and click the corresponding link.&lt;/li&gt;
-&lt;li&gt;Click on the “Download R for Windows” link at the top of the page.&lt;/li&gt;
-&lt;li&gt;Click on the “install R for the first time” link at the top of the page.&lt;/li&gt;
-&lt;li&gt;Click “Download R for Windows” and save the executable file somewhere on your computer. Run the .exe file and follow the installation instructions.&lt;/li&gt;
-&lt;li&gt;Now that R is installed, you need to download and install RStudio.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;to-install-rstudio&#34; class=&#34;section level3&#34; number=&#34;2.1.2&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1.2&lt;/span&gt; To install RStudio&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Go to (www.rstudio.com)[www.rstudio.com].&lt;/li&gt;
-&lt;li&gt;Click on [Download] (&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;) and then “Download” under “RStudio Desktop”.&lt;/li&gt;
-&lt;li&gt;Click “Download RStudio for Mac” to get the latest Windows version; save the .dmg file on your computer; double-click it to open; and then drag and drop it to your applications folder.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;mac-users&#34; class=&#34;section level2&#34; number=&#34;2.2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; Mac Users&lt;/h2&gt;
-&lt;div id=&#34;to-install-r-1&#34; class=&#34;section level3&#34; number=&#34;2.2.1&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2.1&lt;/span&gt; To install R&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Open an internet browser and go to &lt;a href=&#34;www.r-project.org&#34;&gt;www.r-project.org&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Click the “download R” link in the middle of the page under “Getting Started.”&lt;/li&gt;
-&lt;li&gt;Select a CRAN location (a mirror site) and click the corresponding link.&lt;/li&gt;
-&lt;li&gt;Click on the “Download R for macOS” link at the top of the page.&lt;/li&gt;
-&lt;li&gt;Click on the file containing the latest version of R, as appropriate for your hardware.&lt;/li&gt;
-&lt;li&gt;Save the .pkg file, double-click it to open, and follow the installation instructions.&lt;/li&gt;
-&lt;li&gt;Now that R is installed, you need to download and install RStudio.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;to-install-rstudio-1&#34; class=&#34;section level3&#34; number=&#34;2.2.2&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2.2&lt;/span&gt; To install RStudio&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Go to (www.rstudio.com)[www.rstudio.com].&lt;/li&gt;
-&lt;li&gt;Click on [Download] (&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;) and then “Download” under “RStudio Desktop”.&lt;/li&gt;
-&lt;li&gt;Click “Download RStudio for Mac” to get the latest Mac version; save the .dmg file on your computer; double-click it to open; and then drag and drop it to your applications folder.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;opneing-rstudio&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Opneing &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;div id=&#34;opneing-rstudio&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Opneing &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;When you open &lt;code&gt;RStudio&lt;/code&gt;, a window appears with three panels in it.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
 &lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/exploringr_files/rstudio.png&#34; width=&#34;800&#34; height=&#34;400&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;RStudio IDE for R in Mac&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The largest panel is a &lt;strong&gt;console&lt;/strong&gt; window. This is where you’ll run your R code and see results. The console window is exactly what you’d see if you ran R. Everything else you see is unique to RStudio. Hidden in the other panes are a text editor, a graphics window, a debugger, a file manager, and much more.&lt;/p&gt;
-&lt;div id=&#34;console&#34; class=&#34;section level2&#34; number=&#34;3.1&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Console&lt;/h2&gt;
+&lt;div id=&#34;console&#34; class=&#34;section level2&#34; number=&#34;1.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Console&lt;/h2&gt;
 &lt;p&gt;The &lt;strong&gt;console&lt;/strong&gt; panel (in RStudio, the bottom left panel) is the place where R is waiting for you to tell it what to do, and where it will show the results of a command.&lt;/p&gt;
 &lt;p&gt;You type R code into the bottom line of the RStudio console pane and then click Enter to run it. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line.&lt;/p&gt;
 &lt;p&gt;When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. Then RStudio displays a fresh prompt for your next command. For example, if you type 1 + 1 and hit Enter, RStudio will display:&lt;/p&gt;
@@ -764,46 +764,161 @@
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Console Title Bar&lt;/strong&gt;: Display of the current working directory. The ability to interrupt R during a long computation. Minimizing and maximizing the Console in relation to the Source pane (using the buttons at the top-right or by double-clicking the title bar).&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div id=&#34;environmenthistorygit&#34; class=&#34;section level2&#34; number=&#34;3.2&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; Environment/History/Git&lt;/h2&gt;
-&lt;div id=&#34;environment&#34; class=&#34;section level3&#34; number=&#34;3.2.1&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2.1&lt;/span&gt; Environment&lt;/h3&gt;
+&lt;div id=&#34;environmenthistorygit&#34; class=&#34;section level2&#34; number=&#34;1.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Environment/History/Git&lt;/h2&gt;
+&lt;div id=&#34;environment&#34; class=&#34;section level3&#34; number=&#34;1.2.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.1&lt;/span&gt; Environment&lt;/h3&gt;
 &lt;p&gt;The Environment tab provides meta-project information such as what values you have stored in variables and your custom functions.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;history&#34; class=&#34;section level3&#34; number=&#34;3.2.2&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2.2&lt;/span&gt; History&lt;/h3&gt;
+&lt;div id=&#34;history&#34; class=&#34;section level3&#34; number=&#34;1.2.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.2&lt;/span&gt; History&lt;/h3&gt;
 &lt;p&gt;The History tab runs through your previously-executed commands.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;git&#34; class=&#34;section level3&#34; number=&#34;3.2.3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2.3&lt;/span&gt; Git&lt;/h3&gt;
+&lt;div id=&#34;git&#34; class=&#34;section level3&#34; number=&#34;1.2.3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.3&lt;/span&gt; Git&lt;/h3&gt;
 &lt;p&gt;Git is an additional optional tab that is not enabled by default. Git is a version control tool that can be configured by going to Tools -&amp;gt; Global Options and navigating to Git/SVN.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;filesplotspackageshelpviewer&#34; class=&#34;section level2&#34; number=&#34;3.3&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; Files/Plots/Packages/Help/Viewer&lt;/h2&gt;
-&lt;div id=&#34;files&#34; class=&#34;section level3&#34; number=&#34;3.3.1&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3.1&lt;/span&gt; Files&lt;/h3&gt;
+&lt;div id=&#34;filesplotspackageshelpviewer&#34; class=&#34;section level2&#34; number=&#34;1.3&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Files/Plots/Packages/Help/Viewer&lt;/h2&gt;
+&lt;div id=&#34;files&#34; class=&#34;section level3&#34; number=&#34;1.3.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.1&lt;/span&gt; Files&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Files&lt;/strong&gt; shows you all files and folders in your current working directory. You can change your working directory by going to Session -&amp;gt; Set Working Directory -&amp;gt; Choose Directory.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;plots&#34; class=&#34;section level3&#34; number=&#34;3.3.2&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3.2&lt;/span&gt; Plots&lt;/h3&gt;
+&lt;div id=&#34;plots&#34; class=&#34;section level3&#34; number=&#34;1.3.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.2&lt;/span&gt; Plots&lt;/h3&gt;
 &lt;p&gt;The Plots tab displays any plots, graphs, or charts you run using one of R’s visualization tools.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;packages&#34; class=&#34;section level3&#34; number=&#34;3.3.3&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3.3&lt;/span&gt; Packages&lt;/h3&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level3&#34; number=&#34;1.3.3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.3&lt;/span&gt; Packages&lt;/h3&gt;
 &lt;p&gt;Packages is the system library of default R packages. Use the checkboxes to select and deselect packages here, or install additional packages by running install.packages(“packagename”) in the Console.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;help&#34; class=&#34;section level3&#34; number=&#34;3.3.4&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3.4&lt;/span&gt; Help&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Help&lt;/strong&gt; is the viewer for R documentation. To learn about a function, command, or other tool in R, enter help(“topicname”) in the Console and refer to the Help viewer.&lt;/p&gt;
+&lt;div id=&#34;help&#34; class=&#34;section level3&#34; number=&#34;1.3.4&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.4&lt;/span&gt; Help&lt;/h3&gt;
+&lt;p&gt;Help is the viewer for R documentation. To learn about a function, command, or other tool in R, enter help(“topicname”) in the Console and refer to the Help viewer.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;viewer&#34; class=&#34;section level3&#34; number=&#34;3.3.5&#34;&gt;
-&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3.5&lt;/span&gt; Viewer&lt;/h3&gt;
-&lt;p&gt;The &lt;strong&gt;Viewer&lt;/strong&gt; displays additional visualizations; for instance, if you are running a Shiny web app or previewing an HTML web document.&lt;/p&gt;
+&lt;div id=&#34;viewer&#34; class=&#34;section level3&#34; number=&#34;1.3.5&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.5&lt;/span&gt; Viewer&lt;/h3&gt;
+&lt;p&gt;The Viewer displays additional visualizations; for instance, if you are running a Shiny web app or previewing an HTML web document.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;source-panel&#34; class=&#34;section level2&#34; number=&#34;3.4&#34;&gt;
-&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; Source Panel&lt;/h2&gt;
+&lt;div id=&#34;source-panel&#34; class=&#34;section level2&#34; number=&#34;1.4&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Source Panel&lt;/h2&gt;
+&lt;p&gt;The Source panel is where you create, save, and edit &lt;strong&gt;R scripts&lt;/strong&gt;. R scripts are blocks of code that perform a task that you want to save, and when saved have a´.R extension.&lt;/p&gt;
+&lt;p&gt;When you’ve written and saved a script, you can re-use it for future projects.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;To create a new script&lt;/strong&gt;: In the top menu select File &amp;gt; New File &amp;gt; R Script or or Ctrl/Cmd + Shift + N.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;To save a script&lt;/strong&gt;: In the top menu select File &amp;gt; Save or
+Ctrl/Cmd + S.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;To open a previous script&lt;/strong&gt;: In the top menu select File &amp;gt; Open File or Ctrl/Cmd + O.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In RStudio, you can run a line of code of a R script file by placing a cursor anywhere on that line and pressing the shortcut keys Ctrl+Enter on a Windows keyboard or Command+Enter on a Mac.&lt;/p&gt;
+&lt;p&gt;You can also run an entire block of code by selecting all lines to be run then pressing the shortcut keys Ctrl+Enter/Command+Enter.&lt;/p&gt;
+&lt;p&gt;Or, you can run the entire R script by pressing Ctrl+Alt+R in Windows or Command+Option+R on a Mac.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Exploring R &amp; RStudio</title>
+      <link>https://academic-demo.netlify.app/workshops/neomu/day1/packages/</link>
+      <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/day1/packages/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#opneing-rstudio&#34; id=&#34;toc-opneing-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Opneing &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#console&#34; id=&#34;toc-console&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Console&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#environmenthistorygit&#34; id=&#34;toc-environmenthistorygit&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Environment/History/Git&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#environment&#34; id=&#34;toc-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.1&lt;/span&gt; Environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#history&#34; id=&#34;toc-history&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.2&lt;/span&gt; History&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#git&#34; id=&#34;toc-git&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2.3&lt;/span&gt; Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#filesplotspackageshelpviewer&#34; id=&#34;toc-filesplotspackageshelpviewer&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Files/Plots/Packages/Help/Viewer&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#files&#34; id=&#34;toc-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.1&lt;/span&gt; Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plots&#34; id=&#34;toc-plots&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.2&lt;/span&gt; Plots&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#packages&#34; id=&#34;toc-packages&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.3&lt;/span&gt; Packages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#help&#34; id=&#34;toc-help&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.4&lt;/span&gt; Help&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#viewer&#34; id=&#34;toc-viewer&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.5&lt;/span&gt; Viewer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#source-panel&#34; id=&#34;toc-source-panel&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Source Panel&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;opneing-rstudio&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Opneing &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;When you open &lt;code&gt;RStudio&lt;/code&gt;, a window appears with three panels in it.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/exploringr_files/rstudio.png&#34; width=&#34;800&#34; height=&#34;400&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;RStudio IDE for R in Mac&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The largest panel is a &lt;strong&gt;console&lt;/strong&gt; window. This is where you’ll run your R code and see results. The console window is exactly what you’d see if you ran R. Everything else you see is unique to RStudio. Hidden in the other panes are a text editor, a graphics window, a debugger, a file manager, and much more.&lt;/p&gt;
+&lt;div id=&#34;console&#34; class=&#34;section level2&#34; number=&#34;1.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Console&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;console&lt;/strong&gt; panel (in RStudio, the bottom left panel) is the place where R is waiting for you to tell it what to do, and where it will show the results of a command.&lt;/p&gt;
+&lt;p&gt;You type R code into the bottom line of the RStudio console pane and then click Enter to run it. The code you type is called a command, because it will command your computer to do something for you. The line you type it into is called the command line.&lt;/p&gt;
+&lt;p&gt;When you type a command at the prompt and hit Enter, your computer executes the command and shows you the results. Then RStudio displays a fresh prompt for your next command. For example, if you type 1 + 1 and hit Enter, RStudio will display:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;5 + 5
+## [1] 10&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You’ll notice that a [1] appears next to your result. R is just letting you know that this line begins with the first value in your result. Some commands return more than one value, and their results may fill up multiple lines. For example, the command 1:50 returns 50 values; it creates a sequence of integers from 1 to 50&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;1:50
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+## [26] 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can type commands directly into the console, but they will be forgotten when you close the session. It is better to enter the commands in the script editor, and save the script.&lt;/p&gt;
+&lt;p&gt;Some useful features of console panel:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Code Completion&lt;/strong&gt;: The RStudio IDE supports the automatic completion of code using the Tab key. The code completion feature also provides inline help for functions whenever possible.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Retrieving Previous Commands&lt;/strong&gt;: As you work with R you’ll often want to re-execute a command which you previously entered. As with the standard R console, the RStudio console supports the ability to recall previous commands using the arrow keys: Up (Recall previous commands) and Down (Reverse of Up).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Console Title Bar&lt;/strong&gt;: Display of the current working directory. The ability to interrupt R during a long computation. Minimizing and maximizing the Console in relation to the Source pane (using the buttons at the top-right or by double-clicking the title bar).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;environmenthistorygit&#34; class=&#34;section level2&#34; number=&#34;1.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Environment/History/Git&lt;/h2&gt;
+&lt;div id=&#34;environment&#34; class=&#34;section level3&#34; number=&#34;1.2.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.1&lt;/span&gt; Environment&lt;/h3&gt;
+&lt;p&gt;The Environment tab provides meta-project information such as what values you have stored in variables and your custom functions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;history&#34; class=&#34;section level3&#34; number=&#34;1.2.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.2&lt;/span&gt; History&lt;/h3&gt;
+&lt;p&gt;The History tab runs through your previously-executed commands.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;git&#34; class=&#34;section level3&#34; number=&#34;1.2.3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2.3&lt;/span&gt; Git&lt;/h3&gt;
+&lt;p&gt;Git is an additional optional tab that is not enabled by default. Git is a version control tool that can be configured by going to Tools -&amp;gt; Global Options and navigating to Git/SVN.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;filesplotspackageshelpviewer&#34; class=&#34;section level2&#34; number=&#34;1.3&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Files/Plots/Packages/Help/Viewer&lt;/h2&gt;
+&lt;div id=&#34;files&#34; class=&#34;section level3&#34; number=&#34;1.3.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.1&lt;/span&gt; Files&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Files&lt;/strong&gt; shows you all files and folders in your current working directory. You can change your working directory by going to Session -&amp;gt; Set Working Directory -&amp;gt; Choose Directory.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plots&#34; class=&#34;section level3&#34; number=&#34;1.3.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.2&lt;/span&gt; Plots&lt;/h3&gt;
+&lt;p&gt;The Plots tab displays any plots, graphs, or charts you run using one of R’s visualization tools.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level3&#34; number=&#34;1.3.3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.3&lt;/span&gt; Packages&lt;/h3&gt;
+&lt;p&gt;Packages is the system library of default R packages. Use the checkboxes to select and deselect packages here, or install additional packages by running install.packages(“packagename”) in the Console.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;help&#34; class=&#34;section level3&#34; number=&#34;1.3.4&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.4&lt;/span&gt; Help&lt;/h3&gt;
+&lt;p&gt;Help is the viewer for R documentation. To learn about a function, command, or other tool in R, enter help(“topicname”) in the Console and refer to the Help viewer.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;viewer&#34; class=&#34;section level3&#34; number=&#34;1.3.5&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.5&lt;/span&gt; Viewer&lt;/h3&gt;
+&lt;p&gt;The Viewer displays additional visualizations; for instance, if you are running a Shiny web app or previewing an HTML web document.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;source-panel&#34; class=&#34;section level2&#34; number=&#34;1.4&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Source Panel&lt;/h2&gt;
 &lt;p&gt;The Source panel is where you create, save, and edit &lt;strong&gt;R scripts&lt;/strong&gt;. R scripts are blocks of code that perform a task that you want to save, and when saved have a´.R extension.&lt;/p&gt;
 &lt;p&gt;When you’ve written and saved a script, you can re-use it for future projects.&lt;/p&gt;
 &lt;ul&gt;
@@ -1352,10 +1467,264 @@ library(dplyr)&lt;/code&gt;&lt;/pre&gt;
     </item>
     
     <item>
+      <title>mutate()</title>
+      <link>https://academic-demo.netlify.app/courses/dplyr/mutate/</link>
+      <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/dplyr/mutate/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#razón-entre-dos-variables&#34;&gt;2.1 Razón entre dos variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#multiplicamos-una-variable-por-una-constante&#34;&gt;2.2 Multiplicamos una variable por una constante&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#generamos-dos-nuevas-variables&#34;&gt;2.3 Generamos dos nuevas variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combinando-mutate-con-recode&#34;&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;recode()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media&#34;&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;cut&lt;/code&gt;()&lt;code&gt;&lt;/code&gt;cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; se encuentran bajo o sobre la media:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;3. Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;El verbo &lt;code&gt;mutate()&lt;/code&gt; permite crear nuevas variables (columnas) a partir de variables existentes, conservando las variables existentes.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; siempre agrega nuevas variables (columnas) al final de un conjunto de datos. Además, &lt;code&gt;mutate()&lt;/code&gt; puede combinarse con otras grandes funciones para tareas más avanzadas.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;mutate()&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de &lt;code&gt;mutate()&lt;/code&gt; para seleccionar observaciones es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mutate(data, ...)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: data frame (nuestros datos).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;...&lt;/code&gt;: Nombre y valor de la expresión que determinará la nueva variable (e.g. Nueva_variable = variable_original*2).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;razón-entre-dos-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.1 Razón entre dos variables&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; nos permite calcular una variable que represente la razón entre dos variables en nuestra base de datos. Por ejemplo, asignaremos el nombre &lt;strong&gt;Razon_Petalo&lt;/strong&gt; a la razón entre el &lt;strong&gt;Largo del Pétalo&lt;/strong&gt; y el &lt;strong&gt;Ancho del Pétalo&lt;/strong&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Razon_Petalo=Petal.Length/Petal.Width)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
+## 1          5.1         3.5          1.4         0.2  setosa         7.00
+## 2          4.9         3.0          1.4         0.2  setosa         7.00
+## 3          4.7         3.2          1.3         0.2  setosa         6.50
+## 4          4.6         3.1          1.5         0.2  setosa         7.50
+## 5          5.0         3.6          1.4         0.2  setosa         7.00
+## 6          5.4         3.9          1.7         0.4  setosa         4.25&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Podemos apreciar que se ha agreagdo una nueva variable (columna) al final del conjunto de datos.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;multiplicamos-una-variable-por-una-constante&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.2 Multiplicamos una variable por una constante&lt;/h2&gt;
+&lt;p&gt;Las variables de la base de datos iris están medidas en milimetros. Si quisieramos transformarlas a centimetros, debemos multiplicarlas por una constante. A modo de ejemplo, transformemos la variable &lt;strong&gt;Sepal.Length&lt;/strong&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Sepal.length.cm=Sepal.Length*0.1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.length.cm
+## 1          5.1         3.5          1.4         0.2  setosa            0.51
+## 2          4.9         3.0          1.4         0.2  setosa            0.49
+## 3          4.7         3.2          1.3         0.2  setosa            0.47
+## 4          4.6         3.1          1.5         0.2  setosa            0.46
+## 5          5.0         3.6          1.4         0.2  setosa            0.50
+## 6          5.4         3.9          1.7         0.4  setosa            0.54&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ahora, nuestra abse de datos tiene 7 columnas, igual que el ejemplo anterior. ¿Por qué no vemos la variable &lt;strong&gt;Razon_Petalo&lt;/strong&gt;?. Para que los cambios se mantengan a l olargo de la rutina de trabajo debemos (i) generar un objeto con el nuevo &lt;em&gt;data frame&lt;/em&gt; (p.e. iris_1) o (ii) asignar los cambios al &lt;em&gt;data frame&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;generamos-dos-nuevas-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2.3 Generamos dos nuevas variables&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; nos permite generar múltiples variables. A continuación, generaremos simultáneamente las variables &lt;strong&gt;Razon_Petalo&lt;/strong&gt; y Sepal.length.cm:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Razon_Petalo=Petal.Length/Petal.Width,
+            Sepal.length.cm=Sepal.Length*0.1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
+## 1          5.1         3.5          1.4         0.2  setosa         7.00
+## 2          4.9         3.0          1.4         0.2  setosa         7.00
+## 3          4.7         3.2          1.3         0.2  setosa         6.50
+## 4          4.6         3.1          1.5         0.2  setosa         7.50
+## 5          5.0         3.6          1.4         0.2  setosa         7.00
+## 6          5.4         3.9          1.7         0.4  setosa         4.25
+##   Sepal.length.cm
+## 1            0.51
+## 2            0.49
+## 3            0.47
+## 4            0.46
+## 5            0.50
+## 6            0.54&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;combinando-mutate-con-recode&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;recode()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;recode()&lt;/code&gt; permite cambiar las observaciones dentro de una variable. Por ejemplo, cambiemos el nombre a las especies contenidas en la base datos.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Species_nueva=recode(Species, 
+                                 &amp;quot;setosa&amp;quot;=&amp;quot;Iris_setosa&amp;quot;,
+                                 &amp;quot;virginica&amp;quot;=&amp;quot;Iris_virginica&amp;quot;,
+                                 &amp;quot;versicolor&amp;quot;=&amp;quot;Iris_versicolor&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Species_nueva
+## 1          5.1         3.5          1.4         0.2  setosa   Iris_setosa
+## 2          4.9         3.0          1.4         0.2  setosa   Iris_setosa
+## 3          4.7         3.2          1.3         0.2  setosa   Iris_setosa
+## 4          4.6         3.1          1.5         0.2  setosa   Iris_setosa
+## 5          5.0         3.6          1.4         0.2  setosa   Iris_setosa
+## 6          5.4         3.9          1.7         0.4  setosa   Iris_setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;cut&lt;/code&gt;()&lt;code&gt;&lt;/code&gt;cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; se encuentran bajo o sobre la media:&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Petal.Length.Segmento=cut(Petal.Length, 
+                       c(-Inf,mean(Petal.Length), max(Petal.Length)),
+                       c(&amp;quot;Bajo la media&amp;quot;,&amp;quot;Sobre la media&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+##   Petal.Length.Segmento
+## 1         Bajo la media
+## 2         Bajo la media
+## 3         Bajo la media
+## 4         Bajo la media
+## 5         Bajo la media
+## 6         Bajo la media&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Referencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://dplyr.tidyverse.org/reference/mutate.html&#34;&gt;tidyverse.org&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/mutate&#34;&gt;R documentation&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Grafico jitter</title>
+      <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
+      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
+      <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#gráfico-jitter-para-una-variable&#34;&gt;4.1. Gráfico jitter para una variable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.2. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dispersión-de-los-datos&#34;&gt;4.3. Dispersión de los datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#color-forma-y-tamaño-de-los-puntos&#34;&gt;4.4. Color, forma y tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;1. Definición&lt;/h1&gt;
+&lt;p&gt;Con frecuencia, al generar un gráfico de dispersión, es posible que muchos puntos se sobrepongan unos con otros. Esto puede ser un problema ya que no podremos visualizar y apreciar la cantidad de datos de forma clara e informativa.&lt;/p&gt;
+&lt;p&gt;Una solución es realizar un gráfico tipo jitter, el cuál permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos.&lt;/p&gt;
+&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
+&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico jitter es:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_jitter()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;En donde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_jitter()&lt;/code&gt;: Especifica que queremos generar un gráfico de tipo jitter.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;3. Datos&lt;/h1&gt;
+&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
+&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;4. Visualización&lt;/h1&gt;
+&lt;div id=&#34;gráfico-jitter-para-una-variable&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.1. Gráfico jitter para una variable&lt;/h2&gt;
+&lt;p&gt;Generemos un gráfico jitter para visualizar los datos de la variable PM2.5 para cada Ciudad en la que se levantó información.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.2. Título, etiquetas y ejes&lt;/h2&gt;
+&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter()+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dispersión-de-los-datos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.3. Dispersión de los datos&lt;/h2&gt;
+&lt;p&gt;Para controlar el grado de dispersión de los puntos, podemos personalizar utilizamos la función &lt;code&gt;width =&lt;/code&gt; (valor por defecto: 40% de la resolución de los datos) dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Por ejemplo, disminuyamos a un 20% la dispersión de los puntos:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter(width = 0.2)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;color-forma-y-tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;4.4. Color, forma y tamaño de los puntos&lt;/h2&gt;
+&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color, forma y tamaño de los puntos con las funciones &lt;code&gt;color =&lt;/code&gt;, &lt;code&gt;shape =&lt;/code&gt; y &lt;code&gt;size =&lt;/code&gt; dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_jitter(width = 0.2, color = &amp;quot;#5F9EA0&amp;quot;, shape = 17, size =2)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
+# 5. Gráfico de cajas con jitter
+Cuando tenemos una variable categórica que representa grupos, podemos crear un gráfico de cajas y sobreponer los puntos a cada grupo. Para ello, debemos agregar una capa adicional con la información del gráfico jitter.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
+  geom_jitter(width = 0.2, alpha=0.8)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
+# 6. Juntando todas las piezas&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
+  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
+  geom_jitter(width = 0.2, alpha=0.8)+
+  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
+       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
+  theme(axis.text =element_text(size=16),
+        axis.title=element_text(size=23),
+        plot.title=element_text(size=25),
+        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Data Set</title>
-      <link>https://academic-demo.netlify.app/workshops/neomu/dataset/</link>
+      <link>https://academic-demo.netlify.app/workshops/neomu/day1/dataset/</link>
       <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://academic-demo.netlify.app/workshops/neomu/dataset/</guid>
+      <guid>https://academic-demo.netlify.app/workshops/neomu/day1/dataset/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/kePrint/kePrint.js&#34;&gt;&lt;/script&gt;
@@ -1857,260 +2226,6 @@ Service to the society
 &lt;li&gt;&lt;p&gt;Upload the file.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;iframe src=&#34;https://liuyanguu.shinyapps.io/bcl_app/&#34; width=1000 height=800&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>mutate()</title>
-      <link>https://academic-demo.netlify.app/courses/dplyr/mutate/</link>
-      <pubDate>Sat, 15 Jan 2022 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/dplyr/mutate/</guid>
-      <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#razón-entre-dos-variables&#34;&gt;2.1 Razón entre dos variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#multiplicamos-una-variable-por-una-constante&#34;&gt;2.2 Multiplicamos una variable por una constante&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#generamos-dos-nuevas-variables&#34;&gt;2.3 Generamos dos nuevas variables&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#combinando-mutate-con-recode&#34;&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;recode()&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media&#34;&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;cut&lt;/code&gt;()&lt;code&gt;&lt;/code&gt;cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; se encuentran bajo o sobre la media:&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;3. Referencias&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;El verbo &lt;code&gt;mutate()&lt;/code&gt; permite crear nuevas variables (columnas) a partir de variables existentes, conservando las variables existentes.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; siempre agrega nuevas variables (columnas) al final de un conjunto de datos. Además, &lt;code&gt;mutate()&lt;/code&gt; puede combinarse con otras grandes funciones para tareas más avanzadas.&lt;/p&gt;
-&lt;p&gt;Recordemos que antes de utilizar la función &lt;code&gt;mutate()&lt;/code&gt;, debemos cargar el paquete &lt;code&gt;dplyr&lt;/code&gt; usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
-&lt;p&gt;La sintáxis básica de &lt;code&gt;mutate()&lt;/code&gt; para seleccionar observaciones es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;mutate(data, ...)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;En donde:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: data frame (nuestros datos).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;...&lt;/code&gt;: Nombre y valor de la expresión que determinará la nueva variable (e.g. Nueva_variable = variable_original*2).&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;razón-entre-dos-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.1 Razón entre dos variables&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; nos permite calcular una variable que represente la razón entre dos variables en nuestra base de datos. Por ejemplo, asignaremos el nombre &lt;strong&gt;Razon_Petalo&lt;/strong&gt; a la razón entre el &lt;strong&gt;Largo del Pétalo&lt;/strong&gt; y el &lt;strong&gt;Ancho del Pétalo&lt;/strong&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Razon_Petalo=Petal.Length/Petal.Width)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
-## 1          5.1         3.5          1.4         0.2  setosa         7.00
-## 2          4.9         3.0          1.4         0.2  setosa         7.00
-## 3          4.7         3.2          1.3         0.2  setosa         6.50
-## 4          4.6         3.1          1.5         0.2  setosa         7.50
-## 5          5.0         3.6          1.4         0.2  setosa         7.00
-## 6          5.4         3.9          1.7         0.4  setosa         4.25&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Podemos apreciar que se ha agreagdo una nueva variable (columna) al final del conjunto de datos.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;multiplicamos-una-variable-por-una-constante&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.2 Multiplicamos una variable por una constante&lt;/h2&gt;
-&lt;p&gt;Las variables de la base de datos iris están medidas en milimetros. Si quisieramos transformarlas a centimetros, debemos multiplicarlas por una constante. A modo de ejemplo, transformemos la variable &lt;strong&gt;Sepal.Length&lt;/strong&gt;:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Sepal.length.cm=Sepal.Length*0.1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Sepal.length.cm
-## 1          5.1         3.5          1.4         0.2  setosa            0.51
-## 2          4.9         3.0          1.4         0.2  setosa            0.49
-## 3          4.7         3.2          1.3         0.2  setosa            0.47
-## 4          4.6         3.1          1.5         0.2  setosa            0.46
-## 5          5.0         3.6          1.4         0.2  setosa            0.50
-## 6          5.4         3.9          1.7         0.4  setosa            0.54&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Ahora, nuestra abse de datos tiene 7 columnas, igual que el ejemplo anterior. ¿Por qué no vemos la variable &lt;strong&gt;Razon_Petalo&lt;/strong&gt;?. Para que los cambios se mantengan a l olargo de la rutina de trabajo debemos (i) generar un objeto con el nuevo &lt;em&gt;data frame&lt;/em&gt; (p.e. iris_1) o (ii) asignar los cambios al &lt;em&gt;data frame&lt;/em&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;generamos-dos-nuevas-variables&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;2.3 Generamos dos nuevas variables&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt; nos permite generar múltiples variables. A continuación, generaremos simultáneamente las variables &lt;strong&gt;Razon_Petalo&lt;/strong&gt; y Sepal.length.cm:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Razon_Petalo=Petal.Length/Petal.Width,
-            Sepal.length.cm=Sepal.Length*0.1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Razon_Petalo
-## 1          5.1         3.5          1.4         0.2  setosa         7.00
-## 2          4.9         3.0          1.4         0.2  setosa         7.00
-## 3          4.7         3.2          1.3         0.2  setosa         6.50
-## 4          4.6         3.1          1.5         0.2  setosa         7.50
-## 5          5.0         3.6          1.4         0.2  setosa         7.00
-## 6          5.4         3.9          1.7         0.4  setosa         4.25
-##   Sepal.length.cm
-## 1            0.51
-## 2            0.49
-## 3            0.47
-## 4            0.46
-## 5            0.50
-## 6            0.54&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;combinando-mutate-con-recode&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;recode()&lt;/code&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;recode()&lt;/code&gt; permite cambiar las observaciones dentro de una variable. Por ejemplo, cambiemos el nombre a las especies contenidas en la base datos.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Species_nueva=recode(Species, 
-                                 &amp;quot;setosa&amp;quot;=&amp;quot;Iris_setosa&amp;quot;,
-                                 &amp;quot;virginica&amp;quot;=&amp;quot;Iris_virginica&amp;quot;,
-                                 &amp;quot;versicolor&amp;quot;=&amp;quot;Iris_versicolor&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species Species_nueva
-## 1          5.1         3.5          1.4         0.2  setosa   Iris_setosa
-## 2          4.9         3.0          1.4         0.2  setosa   Iris_setosa
-## 3          4.7         3.2          1.3         0.2  setosa   Iris_setosa
-## 4          4.6         3.1          1.5         0.2  setosa   Iris_setosa
-## 5          5.0         3.6          1.4         0.2  setosa   Iris_setosa
-## 6          5.4         3.9          1.7         0.4  setosa   Iris_setosa&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;combinando-mutate-con-cutcut-transforma-las-observaciones-en-rangos-de-valores-poniendo-los-valores-dentro-de-segementos-definidos-por-el-usuario.-genermos-rangos-de-valores-para-saber-si-las-observaciones-de-la-variable-petal.length-se-encuentran-bajo-o-sobre-la-media&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Combinando &lt;code&gt;mutate()&lt;/code&gt; con &lt;code&gt;cut&lt;/code&gt;()&lt;code&gt;&lt;/code&gt;cut()` transforma las observaciones en rangos de valores, poniendo los valores dentro de segementos definidos por el usuario. Genermos rangos de valores para saber si las observaciones de la variable &lt;strong&gt;Petal.Length&lt;/strong&gt; se encuentran bajo o sobre la media:&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(iris,Petal.Length.Segmento=cut(Petal.Length, 
-                       c(-Inf,mean(Petal.Length), max(Petal.Length)),
-                       c(&amp;quot;Bajo la media&amp;quot;,&amp;quot;Sobre la media&amp;quot;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-##   Petal.Length.Segmento
-## 1         Bajo la media
-## 2         Bajo la media
-## 3         Bajo la media
-## 4         Bajo la media
-## 5         Bajo la media
-## 6         Bajo la media&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;referencias&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Referencias&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://dplyr.tidyverse.org/reference/mutate.html&#34;&gt;tidyverse.org&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.rdocumentation.org/packages/dplyr/versions/0.5.0/topics/mutate&#34;&gt;R documentation&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Grafico jitter</title>
-      <link>https://academic-demo.netlify.app/courses/ggplot2/jitter/</link>
-      <pubDate>Tue, 05 Oct 2021 21:13:14 -0500</pubDate>
-      <guid>https://academic-demo.netlify.app/courses/ggplot2/jitter/</guid>
-      <description>
-&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
-
-&lt;div id=&#34;TOC&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definición&#34;&gt;1. Definición&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#sintáxis&#34;&gt;2. Sintáxis&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#datos&#34;&gt;3. Datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualización&#34;&gt;4. Visualización&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#gráfico-jitter-para-una-variable&#34;&gt;4.1. Gráfico jitter para una variable&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#título-etiquetas-y-ejes&#34;&gt;4.2. Título, etiquetas y ejes&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#dispersión-de-los-datos&#34;&gt;4.3. Dispersión de los datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#color-forma-y-tamaño-de-los-puntos&#34;&gt;4.4. Color, forma y tamaño de los puntos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-
-&lt;div id=&#34;definición&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;1. Definición&lt;/h1&gt;
-&lt;p&gt;Con frecuencia, al generar un gráfico de dispersión, es posible que muchos puntos se sobrepongan unos con otros. Esto puede ser un problema ya que no podremos visualizar y apreciar la cantidad de datos de forma clara e informativa.&lt;/p&gt;
-&lt;p&gt;Una solución es realizar un gráfico tipo jitter, el cuál permite observar la densidad de puntos en cada categoría de una variable categórica, incorporando un grado de “ruido” para evitar sobreposición de puntos.&lt;/p&gt;
-&lt;p&gt;Recordemos que antes de realizar nuestro gráfico, debemos cargar el paquete ggplot2 usando la función &lt;code&gt;library()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;sintáxis&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;2. Sintáxis&lt;/h1&gt;
-&lt;p&gt;La sintáxis básica de ggplot2 para generar un gráfico jitter es:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ggplot(data, mapping=aes(x,y))+ geom_jitter()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;En donde:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: es la base de datos.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;aes()&lt;/code&gt;: especifica las variables en los ejes x e y.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;+&lt;/code&gt;: Da aviso a R para que suga leyendo el código, ya que se agregará una nueva capa.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_jitter()&lt;/code&gt;: Especifica que queremos generar un gráfico de tipo jitter.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;datos&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;3. Datos&lt;/h1&gt;
-&lt;p&gt;Para el presente tutorial, utilizaremos información de contaminación atmosférica para tres ciudades de Chile obtenida a partir de la plataforma oficial del &lt;a href=&#34;https://sinca.mma.gob.cl/#&#34;&gt;Sistema de Información Nacional de Calidad del Aire (SINCA)&lt;/a&gt; del Minsiterio de Medio Ambiente de Chile.&lt;/p&gt;
-&lt;p&gt;La base de datos &lt;strong&gt;MaterialParticulado.txt&lt;/strong&gt; se encuentra disponible en el repositorio github &lt;a href=&#34;https://github.com/PACortes/pacortes_datos&#34;&gt;PACortes/pacortes_datos&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;visualización&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;4. Visualización&lt;/h1&gt;
-&lt;div id=&#34;gráfico-jitter-para-una-variable&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.1. Gráfico jitter para una variable&lt;/h2&gt;
-&lt;p&gt;Generemos un gráfico jitter para visualizar los datos de la variable PM2.5 para cada Ciudad en la que se levantó información.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;título-etiquetas-y-ejes&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.2. Título, etiquetas y ejes&lt;/h2&gt;
-&lt;p&gt;Ahora, mejoremos la calidad de nuestro gráfico. Primero, vamos a personalizar la información de las etiquetaas de los ejes y título del gráfico con la función &lt;code&gt;labs()&lt;/code&gt;. Además, vamos a aumentar el tamaño de cada una de estas etiquetas, y personalizar la línea de los ejes, con la función &lt;code&gt;theme()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter()+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;dispersión-de-los-datos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.3. Dispersión de los datos&lt;/h2&gt;
-&lt;p&gt;Para controlar el grado de dispersión de los puntos, podemos personalizar utilizamos la función &lt;code&gt;width =&lt;/code&gt; (valor por defecto: 40% de la resolución de los datos) dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Por ejemplo, disminuyamos a un 20% la dispersión de los puntos:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter(width = 0.2)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;color-forma-y-tamaño-de-los-puntos&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;4.4. Color, forma y tamaño de los puntos&lt;/h2&gt;
-&lt;p&gt;Para mejorar la presentación de nuestro gráfico, podemos ajustar el color, forma y tamaño de los puntos con las funciones &lt;code&gt;color =&lt;/code&gt;, &lt;code&gt;shape =&lt;/code&gt; y &lt;code&gt;size =&lt;/code&gt; dentro de &lt;code&gt;geom_jitter()&lt;/code&gt;.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_jitter(width = 0.2, color = &amp;quot;#5F9EA0&amp;quot;, shape = 17, size =2)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;
-# 5. Gráfico de cajas con jitter
-Cuando tenemos una variable categórica que representa grupos, podemos crear un gráfico de cajas y sobreponer los puntos a cada grupo. Para ello, debemos agregar una capa adicional con la información del gráfico jitter.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
-  geom_jitter(width = 0.2, alpha=0.8)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;
-# 6. Juntando todas las piezas&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data=MaterialParticulado, mapping =aes(x=Ciudad, y=PM2.5))+
-  geom_boxplot(fill=&amp;quot;#5F9EA0&amp;quot;, alpha= 0.5)+
-  geom_jitter(width = 0.2, alpha=0.8)+
-  labs(title=&amp;quot;PM2.5 según ciudad&amp;quot;,
-       y=&amp;quot;PM2.5 (μm)&amp;quot;, x=&amp;quot;Ciudad&amp;quot;)+
-  theme(axis.text =element_text(size=16),
-        axis.title=element_text(size=23),
-        plot.title=element_text(size=25),
-        axis.line = element_line(color = &amp;quot;#333333&amp;quot;,size = 1, linetype = &amp;quot;solid&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/courses/ggplot2/Jitter_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
