@@ -90,7 +90,7 @@
 &lt;h2&gt;Opneing &lt;code&gt;RStudio&lt;/code&gt;&lt;/h2&gt;
 &lt;p&gt;When you open &lt;code&gt;RStudio&lt;/code&gt;, a window appears with three panes in it.&lt;/p&gt;
 &lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/aboutr_files/rstudio&#34; width=&#34;800&#34; height=&#34;400&#34; alt=&#34;&#34; /&gt;
+&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neomu/exploringr_files/rstudio&#34; width=&#34;800&#34; height=&#34;400&#34; alt=&#34;&#34; /&gt;
 &lt;p class=&#34;caption&#34;&gt;RStudio IDE for R in Mac&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The largest pane is a console window. This is where you’ll run your R code and see results. The console window is exactly what you’d see if you ran R. Everything else you see is unique to RStudio. Hidden in the other panes are a text editor, a graphics window, a debugger, a file manager, and much more.&lt;/p&gt;
