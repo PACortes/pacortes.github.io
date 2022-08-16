@@ -1659,7 +1659,7 @@ Cuando tenemos una variable categórica que representa grupos, podemos crear un 
 &lt;li&gt;&lt;a href=&#34;#context&#34; id=&#34;toc-context&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Context&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#content&#34; id=&#34;toc-content&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Content&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#data-dictionary&#34; id=&#34;toc-data-dictionary&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Data Dictionary&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualizations-in-a-glace&#34; id=&#34;toc-visualizations-in-a-glace&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Visualizations in a glace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualizations-in-a-glance&#34; id=&#34;toc-visualizations-in-a-glance&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; Visualizations in a glance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 
@@ -2142,8 +2142,8 @@ Service to the society
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;div id=&#34;visualizations-in-a-glace&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Visualizations in a glace&lt;/h1&gt;
+&lt;div id=&#34;visualizations-in-a-glance&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; Visualizations in a glance&lt;/h1&gt;
 &lt;p&gt;I have developed an application programming interface (API) to explore the visualizations that we will explore in this workshop. To do that, follow these steps:&lt;/p&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
 &lt;li&gt;&lt;p&gt;Download the data set &lt;a href=&#34;https://www.dropbox.com/s/rsee0jk8v205jba/FacultyAffairs.xlsx?dl=0&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
