@@ -5,7 +5,7 @@
     <link>https://academic-demo.netlify.app/tag/visualizacion/</link>
       <atom:link href="https://academic-demo.netlify.app/tag/visualizacion/index.xml" rel="self" type="application/rss+xml" />
     <description>Visualización</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 16 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>Visualización</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Day 1: About R &amp; RStudio</title>
       <link>https://academic-demo.netlify.app/workshops/neom/aboutr/</link>
-      <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/workshops/neom/aboutr/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
@@ -109,8 +109,8 @@
 &lt;div id=&#34;to-install-rstudio&#34; class=&#34;section level3&#34; number=&#34;7.1.2&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1.2&lt;/span&gt; To install RStudio&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Go to (www.rstudio.com)[www.rstudio.com].&lt;/li&gt;
-&lt;li&gt;Click on [Download] (&lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34; class=&#34;uri&#34;&gt;https://www.rstudio.com/products/rstudio/download/&lt;/a&gt;) and then “Download” under “RStudio Desktop”.&lt;/li&gt;
+&lt;li&gt;Go to &lt;a href=&#34;www.rstudio.com&#34;&gt;www.rstudio.com&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Click on &lt;a href=&#34;https://www.rstudio.com/products/rstudio/download/&#34;&gt;Download&lt;/a&gt; and then “Download” under “RStudio Desktop”.&lt;/li&gt;
 &lt;li&gt;Click “Download RStudio for Mac” to get the latest Windows version; save the .dmg file on your computer; double-click it to open; and then drag and drop it to your applications folder.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;

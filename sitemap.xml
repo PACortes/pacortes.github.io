@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://academic-demo.netlify.app/workshops/neom/aboutr/</loc>
-    <lastmod>2022-08-14T00:00:00+00:00</lastmod>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/courses/dplyr/select/</loc>
     <lastmod>2022-01-15T21:13:14-05:00</lastmod>
@@ -59,6 +59,9 @@
     <loc>https://academic-demo.netlify.app/categories/</loc>
     <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://academic-demo.netlify.app/tag/ggplot/</loc>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://academic-demo.netlify.app/tag/r/</loc>
     <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
@@ -71,14 +74,11 @@
     <loc>https://academic-demo.netlify.app/tags/</loc>
     <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/workshops/</loc>
+    <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
     <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://academic-demo.netlify.app/tag/ggplot/</loc>
-    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://academic-demo.netlify.app/tag/visualizacion/</loc>
-    <lastmod>2022-08-16T00:00:00+00:00</lastmod>
+    <loc>https://academic-demo.netlify.app/workshops/</loc>
+    <lastmod>2022-08-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://academic-demo.netlify.app/workshops/neom/</loc>
     <lastmod>2022-08-10T00:00:00+00:00</lastmod>
