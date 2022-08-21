@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="1 R Objects and Classes 2 R variables  2.1 Changing Value of Variables 2.2 Naming R variables  3 R data types  3.1 Numeric 3.2 Integer 3." />
+  <meta name="description" content="1 Objects and Classes 2 Variables  2.1 Changing Value of Variables 2.2 Naming Variables  3 Data Types  3.1 Numeric 3.2 Integer 3.3 Complex 3.4 Character 3." />
 
   
   <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/workshops/neom/datatypes/" />
@@ -295,7 +295,7 @@
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/workshops/neom/datatypes/" />
   <meta property="og:title" content="Day 1: R Data Types | Pablo Cortes" />
-  <meta property="og:description" content="1 R Objects and Classes 2 R variables  2.1 Changing Value of Variables 2.2 Naming R variables  3 R data types  3.1 Numeric 3.2 Integer 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+  <meta property="og:description" content="1 Objects and Classes 2 Variables  2.1 Changing Value of Variables 2.2 Naming Variables  3 Data Types  3.1 Numeric 3.2 Integer 3.3 Complex 3.4 Character 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
     
@@ -865,13 +865,13 @@
 
 <div id="TOC">
 <ul>
-<li><a href="#r-objects-and-classes" id="toc-r-objects-and-classes"><span class="toc-section-number">1</span> <code>R</code> Objects and Classes</a></li>
-<li><a href="#r-variables" id="toc-r-variables"><span class="toc-section-number">2</span> <code>R</code> variables</a>
+<li><a href="#objects-and-classes" id="toc-objects-and-classes"><span class="toc-section-number">1</span> Objects and Classes</a></li>
+<li><a href="#variables" id="toc-variables"><span class="toc-section-number">2</span> Variables</a>
 <ul>
 <li><a href="#changing-value-of-variables" id="toc-changing-value-of-variables"><span class="toc-section-number">2.1</span> Changing Value of Variables</a></li>
-<li><a href="#naming-r-variables" id="toc-naming-r-variables"><span class="toc-section-number">2.2</span> Naming <code>R</code> variables</a></li>
+<li><a href="#naming-variables" id="toc-naming-variables"><span class="toc-section-number">2.2</span> Naming Variables</a></li>
 </ul></li>
-<li><a href="#r-data-types" id="toc-r-data-types"><span class="toc-section-number">3</span> <code>R</code> data types</a>
+<li><a href="#data-types" id="toc-data-types"><span class="toc-section-number">3</span> Data Types</a>
 <ul>
 <li><a href="#numeric" id="toc-numeric"><span class="toc-section-number">3.1</span> Numeric</a></li>
 <li><a href="#integer" id="toc-integer"><span class="toc-section-number">3.2</span> Integer</a></li>
@@ -880,35 +880,35 @@
 <li><a href="#logical" id="toc-logical"><span class="toc-section-number">3.5</span> Logical</a></li>
 <li><a href="#factors" id="toc-factors"><span class="toc-section-number">3.6</span> Factors</a></li>
 </ul></li>
-<li><a href="#r-data-structures" id="toc-r-data-structures"><span class="toc-section-number">4</span> <code>R</code> data structures</a></li>
+<li><a href="#data-structures" id="toc-data-structures"><span class="toc-section-number">4</span> Data Structures</a></li>
 <li><a href="#vectors" id="toc-vectors"><span class="toc-section-number">5</span> Vectors</a></li>
-<li><a href="#matrices-and-arrays" id="toc-matrices-and-arrays"><span class="toc-section-number">6</span> Matrices and arrays</a></li>
+<li><a href="#matrices-and-arrays" id="toc-matrices-and-arrays"><span class="toc-section-number">6</span> Matrices and Arrays</a></li>
 <li><a href="#lists" id="toc-lists"><span class="toc-section-number">7</span> Lists</a>
 <ul>
-<li><a href="#accessing-list-elements" id="toc-accessing-list-elements"><span class="toc-section-number">7.1</span> Accessing list elements</a></li>
+<li><a href="#accessing-list-elements" id="toc-accessing-list-elements"><span class="toc-section-number">7.1</span> Accessing List Elements</a></li>
 </ul></li>
 <li><a href="#data-frames" id="toc-data-frames"><span class="toc-section-number">8</span> Data Frames</a>
 <ul>
-<li><a href="#creating-data-frames" id="toc-creating-data-frames"><span class="toc-section-number">8.1</span> Creating data frames</a></li>
-<li><a href="#addingchanging-column-names" id="toc-addingchanging-column-names"><span class="toc-section-number">8.2</span> Adding/Changing column names</a></li>
+<li><a href="#creating-data-frames" id="toc-creating-data-frames"><span class="toc-section-number">8.1</span> Creating Data Frames</a></li>
+<li><a href="#addingchanging-column-names" id="toc-addingchanging-column-names"><span class="toc-section-number">8.2</span> Adding/Changing Column Names</a></li>
 <li><a href="#expanding-a-data-frame" id="toc-expanding-a-data-frame"><span class="toc-section-number">8.3</span> Expanding a Data Frame</a></li>
-<li><a href="#subsetting-data-frames" id="toc-subsetting-data-frames"><span class="toc-section-number">8.4</span> Subsetting data frames</a></li>
-<li><a href="#creating-data-frames-from-files" id="toc-creating-data-frames-from-files"><span class="toc-section-number">8.5</span> Creating data frames from files</a></li>
+<li><a href="#subsetting-data-frames" id="toc-subsetting-data-frames"><span class="toc-section-number">8.4</span> Subsetting Data Frames</a></li>
+<li><a href="#creating-data-frames-from-files" id="toc-creating-data-frames-from-files"><span class="toc-section-number">8.5</span> Creating Data Frames From Files</a></li>
 <li><a href="#useful-data-frame-functions" id="toc-useful-data-frame-functions"><span class="toc-section-number">8.6</span> Useful Data Frame Functions</a></li>
 </ul></li>
 </ul>
 </div>
 
-<div id="r-objects-and-classes" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> <code>R</code> Objects and Classes</h1>
+<div id="objects-and-classes" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Objects and Classes</h1>
 <p><code>R</code> is an object-oriented programming language with the fundamental design principle: Everything is an <code>object.</code></p>
 <p>An <code>object</code> is simply a collection of data (<code>variables</code>) and methods (functions).</p>
 <p>All <code>object</code> in <code>R</code> have a specific <code>class</code> that can have a set of class-specific attributes. Basically, a <code>class</code> is a blueprint for that object.</p>
 <p>We would never build a house without a blueprint. The blueprint (prototype) of a house is the <code>class</code>, which contains all the details about the floors, doors, windows, etc. Based on these descriptions we build our house. Here, house is the <code>object</code>.</p>
 </div>
-<div id="r-variables" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> <code>R</code> variables</h1>
-<p>A <strong>variable</strong> is a name given to a memory location, which is used to store values in a computer program. Variables in R programming can be used to store different types of values such as numbers, words, matrices, and even tables. These different types of values are called <strong>data types</strong>.</p>
+<div id="variables" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Variables</h1>
+<p>In R, a <strong>variable</strong> is a name given to a memory location, which is used to store values in a computer program. Variables in R programming can be used to store different types of values such as numbers, words, matrices, and even tables. These different types of values are called <strong>data types</strong>.</p>
 <p>We can create variables from within the R environment and from files on your computer. <code>R</code> uses<code>=</code>or <code>&lt;-</code> to assign values to a variable name.</p>
 <pre class="r"><code>x &lt;- 2022</code></pre>
 <p>Here, <code>x</code> is the variable where the data <em>2022</em> is stored. Now, whenever we use <code>x</code> in our program, we will get 2022.</p>
@@ -927,8 +927,8 @@ x &lt;- 23456722
 x
 ## [1] 23456722</code></pre>
 </div>
-<div id="naming-r-variables" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Naming <code>R</code> variables</h2>
+<div id="naming-variables" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Naming Variables</h2>
 <p>In <code>R</code>, we can use any name for our variables. However, For a variable to be valid, it should follow some simple rules:</p>
 <ul>
 <li><p>It should contain letters, digits, periods, and underscores.</p></li>
@@ -939,8 +939,8 @@ x
 </ul>
 </div>
 </div>
-<div id="r-data-types" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> <code>R</code> data types</h1>
+<div id="data-types" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Data Types</h1>
 <p>Each variable in <code>R</code> has an associated data type. The fundamental data types in R Programming are as follows:</p>
 <ul>
 <li><p>Numeric.</p></li>
@@ -1072,8 +1072,8 @@ class(sex)
 ## [1] &quot;factor&quot;</code></pre>
 </div>
 </div>
-<div id="r-data-structures" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> <code>R</code> data structures</h1>
+<div id="data-structures" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Data Structures</h1>
 </div>
 <div id="vectors" class="section level1" number="5">
 <h1><span class="header-section-number">5</span> Vectors</h1>
@@ -1101,7 +1101,7 @@ class(CharacterVector)
 ## [1] &quot;character&quot;</code></pre>
 </div>
 <div id="matrices-and-arrays" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Matrices and arrays</h1>
+<h1><span class="header-section-number">6</span> Matrices and Arrays</h1>
 <p>A matrix is simply a vector that has additional attributes called dimensions. Arrays are just multidimensional matrices. Again, matrices and arrays must contain elements all of the same data class.</p>
 <p>To create a matrix, we can use the <code>matrix()</code> function.</p>
 <pre class="r"><code># creating a 3x3 matrix. 
@@ -1229,7 +1229,7 @@ MyTeam
 ## $Height
 ## [1] 1.82 1.70</code></pre>
 <div id="accessing-list-elements" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Accessing list elements</h2>
+<h2><span class="header-section-number">7.1</span> Accessing List Elements</h2>
 <p>Elements of the list can be accessed by the index of the element in the list. In case of named lists it can also be accessed using the names.</p>
 <pre class="r"><code># Access the first element of the list. As it is also a list, all its elements will be printed.
 MyTeam[1]
@@ -1249,7 +1249,7 @@ MyTeam$Age
 <p>As a result, data frames can store different classes of objects in each column (i.e. numeric, character, factor).</p>
 <p>In essence, the easiest way to think of a data frame is as an Excel worksheet that contains columns of different types of data but are all of equal length rows.</p>
 <div id="creating-data-frames" class="section level2" number="8.1">
-<h2><span class="header-section-number">8.1</span> Creating data frames</h2>
+<h2><span class="header-section-number">8.1</span> Creating Data Frames</h2>
 <p>Data frames can also be created explicitly with the <code>data.frame()</code> function.</p>
 <pre class="r"><code># data frame with 3 columns and 2 rows
 df &lt;- data.frame(col1 = c(&quot;John&quot;, &quot;Steve&quot;), 
@@ -1285,7 +1285,7 @@ df
 ##  $ Height: num  1.82 1.7</code></pre>
 </div>
 <div id="addingchanging-column-names" class="section level2" number="8.2">
-<h2><span class="header-section-number">8.2</span> Adding/Changing column names</h2>
+<h2><span class="header-section-number">8.2</span> Adding/Changing Column Names</h2>
 <p>We can also also add/change the existing column names by using <code>colnames()</code>.</p>
 <pre class="r"><code># add/change column names
 colnames(df) &lt;- c(&quot;Employee&quot;, &quot;Weight&quot;, &quot;Other&quot;)
@@ -1328,7 +1328,7 @@ df2
 ## 3    Peter     70  1.56     USA</code></pre>
 </div>
 <div id="subsetting-data-frames" class="section level2" number="8.4">
-<h2><span class="header-section-number">8.4</span> Subsetting data frames</h2>
+<h2><span class="header-section-number">8.4</span> Subsetting Data Frames</h2>
 <p>The most basic way of subsetting a data frame in R is by using square brackets <code>[row, column]</code>.</p>
 <p>Let´s select all the information of the first row of our data frame.</p>
 <pre class="r"><code># Information for first employee
@@ -1364,8 +1364,8 @@ df2[2,3]
 ## [1] 1.7</code></pre>
 </div>
 <div id="creating-data-frames-from-files" class="section level2" number="8.5">
-<h2><span class="header-section-number">8.5</span> Creating data frames from files</h2>
-<p>We can also create a new data frame when importing the data into R. In the next section we will explore more about how import data into R.</p>
+<h2><span class="header-section-number">8.5</span> Creating Data Frames From Files</h2>
+<p>We can also create a new data frame when importing the data into R. In the next session we will explore more about how import data into R.</p>
 </div>
 <div id="useful-data-frame-functions" class="section level2" number="8.6">
 <h2><span class="header-section-number">8.6</span> Useful Data Frame Functions</h2>
