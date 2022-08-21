@@ -1,0 +1,1642 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Pablo Cortés García" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="1 R Objects and Classes 2 R variables  2.1 Changing Value of Variables 2.2 Naming R variables  3 R data types  3.1 Numeric 3.2 Integer 3." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/workshops/neom/datatypes/" />
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.481af39c39ffd87b2d14f39943e7c723.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://academic-demo.netlify.app/workshops/neom/datatypes/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Pablo Cortes" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/workshops/neom/datatypes/" />
+  <meta property="og:title" content="Day 1: R Data Types | Pablo Cortes" />
+  <meta property="og:description" content="1 R Objects and Classes 2 R variables  2.1 Changing Value of Variables 2.2 Naming R variables  3 R data types  3.1 Numeric 3.2 Integer 3." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-08-21T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-08-21T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Day 1: R Data Types | Pablo Cortes</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="363f8ce307f097c25ffa7b443a51d1ea" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Pablo Cortes</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Pablo Cortes</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Opinión</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publication/"><span>Publicaciones</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>R</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/workshops/"><span>Workshops</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contacto</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://www.researchgate.net/profile/Pablo_Cortes11" target="_blank" rel="noopener" aria-label="researchgate">
+              <i class="fab fa-researchgate" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Introduction
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/workshops/"><i class="fas fa-arrow-left pr-1"></i>Workshops and Training Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/workshops/neom/">Introduction</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/workshops/neom/aboutr/">Day 1: About R &amp; RStudio</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/exploringr/">Day 1: Exploring R &amp; RStudio</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/packages/">Day 1: Packages</a></li>
+
+
+
+  <li class="active"><a href="/workshops/neom/datatypes/">Day 1: R Data Types</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/dataset/">Day 1: Our Dataset</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/workshops/">
+      
+        Workshops and Training Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/workshops/neom/">
+      
+        Introduction
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Day 1: R Data Types
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>Day 1: R Data Types</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#r-objects-and-classes" id="toc-r-objects-and-classes"><span class="toc-section-number">1</span> <code>R</code> Objects and Classes</a></li>
+<li><a href="#r-variables" id="toc-r-variables"><span class="toc-section-number">2</span> <code>R</code> variables</a>
+<ul>
+<li><a href="#changing-value-of-variables" id="toc-changing-value-of-variables"><span class="toc-section-number">2.1</span> Changing Value of Variables</a></li>
+<li><a href="#naming-r-variables" id="toc-naming-r-variables"><span class="toc-section-number">2.2</span> Naming <code>R</code> variables</a></li>
+</ul></li>
+<li><a href="#r-data-types" id="toc-r-data-types"><span class="toc-section-number">3</span> <code>R</code> data types</a>
+<ul>
+<li><a href="#numeric" id="toc-numeric"><span class="toc-section-number">3.1</span> Numeric</a></li>
+<li><a href="#integer" id="toc-integer"><span class="toc-section-number">3.2</span> Integer</a></li>
+<li><a href="#complex" id="toc-complex"><span class="toc-section-number">3.3</span> Complex</a></li>
+<li><a href="#character" id="toc-character"><span class="toc-section-number">3.4</span> Character</a></li>
+<li><a href="#logical" id="toc-logical"><span class="toc-section-number">3.5</span> Logical</a></li>
+<li><a href="#factors" id="toc-factors"><span class="toc-section-number">3.6</span> Factors</a></li>
+</ul></li>
+<li><a href="#r-data-structures" id="toc-r-data-structures"><span class="toc-section-number">4</span> <code>R</code> data structures</a></li>
+<li><a href="#vectors" id="toc-vectors"><span class="toc-section-number">5</span> Vectors</a></li>
+<li><a href="#matrices-and-arrays" id="toc-matrices-and-arrays"><span class="toc-section-number">6</span> Matrices and arrays</a></li>
+<li><a href="#lists" id="toc-lists"><span class="toc-section-number">7</span> Lists</a>
+<ul>
+<li><a href="#accessing-list-elements" id="toc-accessing-list-elements"><span class="toc-section-number">7.1</span> Accessing list elements</a></li>
+</ul></li>
+<li><a href="#data-frames" id="toc-data-frames"><span class="toc-section-number">8</span> Data Frames</a>
+<ul>
+<li><a href="#creating-data-frames" id="toc-creating-data-frames"><span class="toc-section-number">8.1</span> Creating data frames</a></li>
+<li><a href="#addingchanging-column-names" id="toc-addingchanging-column-names"><span class="toc-section-number">8.2</span> Adding/Changing column names</a></li>
+<li><a href="#expanding-a-data-frame" id="toc-expanding-a-data-frame"><span class="toc-section-number">8.3</span> Expanding a Data Frame</a></li>
+<li><a href="#subsetting-data-frames" id="toc-subsetting-data-frames"><span class="toc-section-number">8.4</span> Subsetting data frames</a></li>
+<li><a href="#creating-data-frames-from-files" id="toc-creating-data-frames-from-files"><span class="toc-section-number">8.5</span> Creating data frames from files</a></li>
+<li><a href="#useful-data-frame-functions" id="toc-useful-data-frame-functions"><span class="toc-section-number">8.6</span> Useful Data Frame Functions</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="r-objects-and-classes" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> <code>R</code> Objects and Classes</h1>
+<p><code>R</code> is an object-oriented programming language with the fundamental design principle: Everything is an <code>object.</code></p>
+<p>An <code>object</code> is simply a collection of data (<code>variables</code>) and methods (functions).</p>
+<p>All <code>object</code> in <code>R</code> have a specific <code>class</code> that can have a set of class-specific attributes. Basically, a <code>class</code> is a blueprint for that object.</p>
+<p>We would never build a house without a blueprint. The blueprint (prototype) of a house is the <code>class</code>, which contains all the details about the floors, doors, windows, etc. Based on these descriptions we build our house. Here, house is the <code>object</code>.</p>
+</div>
+<div id="r-variables" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> <code>R</code> variables</h1>
+<p>A <strong>variable</strong> is a name given to a memory location, which is used to store values in a computer program. Variables in R programming can be used to store different types of values such as numbers, words, matrices, and even tables. These different types of values are called <strong>data types</strong>.</p>
+<p>We can create variables from within the R environment and from files on your computer. <code>R</code> uses<code>=</code>or <code>&lt;-</code> to assign values to a variable name.</p>
+<pre class="r"><code>x &lt;- 2022</code></pre>
+<p>Here, <code>x</code> is the variable where the data <em>2022</em> is stored. Now, whenever we use <code>x</code> in our program, we will get 2022.</p>
+<pre class="r"><code>x &lt;- 2022
+print(x)
+## [1] 2022</code></pre>
+<p>As we can can see, when we print <code>x</code> we get 2022 as output.</p>
+<div id="changing-value-of-variables" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Changing Value of Variables</h2>
+<p>Depending on the conditions or information passed into the program, we can change the value of a variable.</p>
+<pre class="r"><code>x &lt;- 2022
+x
+## [1] 2022</code></pre>
+<pre class="r"><code># changing value of a variable
+x &lt;- 23456722
+x
+## [1] 23456722</code></pre>
+</div>
+<div id="naming-r-variables" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Naming <code>R</code> variables</h2>
+<p>In <code>R</code>, we can use any name for our variables. However, For a variable to be valid, it should follow some simple rules:</p>
+<ul>
+<li><p>It should contain letters, digits, periods, and underscores.</p></li>
+<li><p>It should start with a letter or a period, but not with digits (e.g. <em>foryou</em> but not <em>4you</em>).</p></li>
+<li><p>It should not start with a dot followed by a digit (e.g. <em>.4you</em>).</p></li>
+<li><p>It should not be a reserved keyword. (e.g. <em>for</em>, <em>in</em>, <em>NA</em>,, <em>NULL</em>, <em>TRUE</em>, <em>beak</em>, among many others).</p></li>
+<li><p>R is case sensitive (e.g. <em>Neom</em> and <em>neom</em> are treated as different variables).</p></li>
+</ul>
+</div>
+</div>
+<div id="r-data-types" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> <code>R</code> data types</h1>
+<p>Each variable in <code>R</code> has an associated data type. The fundamental data types in R Programming are as follows:</p>
+<ul>
+<li><p>Numeric.</p></li>
+<li><p>Integer.</p></li>
+<li><p>Complex.</p></li>
+<li><p>Character.</p></li>
+<li><p>Logical.</p></li>
+</ul>
+<p>R is able to automatically distinguish between different types of data. We can find out the type of any object using the <code>class()</code> function. Alternatively, we can ask if an object is a specific class using using a logical test. The <code>is.classOfData()</code> family of functions will return either a <code>TRUE</code> or a <code>FALSE</code>.</p>
+<p>Let’s discuss each of these <code>R</code> data types one by one.</p>
+<div id="numeric" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Numeric</h2>
+<p>In <code>R</code>, the <code>numeric</code> data type represents all real numbers with or without decimal values. It is the default data type for numbers in R.</p>
+<pre class="r"><code># assign a decimal to value x
+x &lt;- 150.4
+
+# print the class name of variable
+class(x)
+## [1] &quot;numeric&quot;
+
+# ask the class name of variable
+is.numeric(x)
+## [1] TRUE</code></pre>
+<p>When R stores a number in a variable, it converts the number into a <code>double</code> value or a decimal type with at least two decimal places. This means that a value such as <em>100</em> here, is stored as <em>100.00</em> with a type of double and a class of numeric.</p>
+<pre class="r"><code># assign a decimal to value mynumber
+mynumber &lt;- 100
+
+# print the output
+mynumber
+## [1] 100
+
+# print the class name of variable
+class(mynumber)
+## [1] &quot;numeric&quot;
+
+# ask the class name of variable
+is.numeric(mynumber)
+## [1] TRUE
+
+# print the type of variable
+typeof(mynumber)
+## [1] &quot;double&quot;</code></pre>
+</div>
+<div id="integer" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> Integer</h2>
+<p>The <code>integer</code> data type specifies real values without decimal points. We use the suffix <code>L</code> to specify integer data. We can also convert a value into an integer type using the <code>as.integer()</code> function.</p>
+<pre class="r"><code># assign a integer value with the to my_integer
+my_integer &lt;- 100L
+
+# print the output
+my_integer
+## [1] 100
+
+# print the class name of variable
+class(my_integer)
+## [1] &quot;integer&quot;
+
+# ask the class name of variable
+is.numeric(my_integer)
+## [1] TRUE
+
+# print the type of variable
+typeof(my_integer)
+## [1] &quot;integer&quot;</code></pre>
+</div>
+<div id="complex" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Complex</h2>
+<p>The <code>complex</code> data type is used to specify purely imaginary values in R. We use the suffix <code>i</code> to specify the imaginary part.</p>
+<pre class="r"><code># assign a complex value with the to MyComplex
+MyComplex &lt;- 100i
+
+# print the output
+MyComplex
+## [1] 0+100i
+
+# print the class name of variable
+class(MyComplex)
+## [1] &quot;complex&quot;
+
+# ask the class name of variable
+is.numeric(MyComplex)
+## [1] FALSE
+
+# print the type of variable
+typeof(MyComplex)
+## [1] &quot;complex&quot;</code></pre>
+</div>
+<div id="character" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> Character</h2>
+<p>The <code>character</code> data type is used to specify character or string values in a variable. A string is a set of characters. Strings in <code>R</code> can contain alphabets, numbers, and symbols. For example, <em>N</em> is a single character and <em>Neom</em> is a string.</p>
+<p>We can use single quotes <code>''</code> or double quotes <code>""</code> to represent strings. If we don’t use quotes or double quotes, <code>R</code> will consider the character and string as an object.</p>
+<pre class="r"><code># assign a single character to word_1
+word_1 &lt;- &quot;NC1&quot;
+
+# print the output
+word_1
+## [1] &quot;NC1&quot;
+
+# print the class name of variable
+class(word_1)
+## [1] &quot;character&quot;
+
+# ask the class name of variable
+is.numeric(word_1)
+## [1] FALSE
+
+# print the type of variable
+typeof(word_1)
+## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="logical" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Logical</h2>
+<p>The <code>logical</code> data type in R is also known as boolean data type. It can only have two values: <code>TRUE</code> and <code>FALSE</code>.</p>
+</div>
+<div id="factors" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Factors</h2>
+<p><code>Factors</code> are the data objects which are used to categorize the data and store it as levels (e.g. “MALE” or “FEMALE”). This is useful for storing categorical data. Factors can store both strings and integers.</p>
+<p>We can create factors using the function <code>factor()</code></p>
+<pre class="r"><code># Creating factor using factor()
+sex&lt;- factor(c(&quot;Small&quot;, &quot;Female&quot;, &quot;Male&quot;, &quot;Female&quot;))
+
+# print the output
+sex
+## [1] Small  Female Male   Female
+## Levels: Female Male Small
+
+# print the class name of variable
+class(sex)
+## [1] &quot;factor&quot;</code></pre>
+</div>
+</div>
+<div id="r-data-structures" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> <code>R</code> data structures</h1>
+</div>
+<div id="vectors" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> Vectors</h1>
+<p>A vector is the most common and basic data structure in <code>R</code>. A vector is a collection of elements that are most commonly of mode character, logical, integer or numeric. Vectors can contain numbers, characters, or logicals, but the key thing to remember is that all the elements inside a vector must be of the same class. In other words, vectors can contain either numbers, characters or logicals but not mixtures of these types of data.</p>
+<p>The function <code>c()</code> combines/joins single R objects into a vector of R objects. It is mostly used for creating vectors.</p>
+<pre class="r"><code># creating a numeric vector of 5 elements
+NumericVector &lt;- c(1,2,5,7,8)
+
+# print the output
+NumericVector
+## [1] 1 2 5 7 8
+
+# print the class name
+class(NumericVector)
+## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code># creating a character vector of 3 elements
+CharacterVector &lt;- c(&quot;I&quot;, &quot;Love&quot;, &quot;Neom&quot;)
+
+# print the output
+CharacterVector
+## [1] &quot;I&quot;    &quot;Love&quot; &quot;Neom&quot;
+
+# print the class name
+class(CharacterVector)
+## [1] &quot;character&quot;</code></pre>
+</div>
+<div id="matrices-and-arrays" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Matrices and arrays</h1>
+<p>A matrix is simply a vector that has additional attributes called dimensions. Arrays are just multidimensional matrices. Again, matrices and arrays must contain elements all of the same data class.</p>
+<p>To create a matrix, we can use the <code>matrix()</code> function.</p>
+<pre class="r"><code># creating a 3x3 matrix. 
+My_Matrix &lt;- matrix(1:9, nrow=3)
+
+# print the output
+My_Matrix
+##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9
+
+# print the class name
+class(My_Matrix)
+## [1] &quot;matrix&quot;</code></pre>
+<p>By default the matrix is filled rather than the default column-wise. We can fill the matrix row-wise using <code>byrow = TRUE</code></p>
+<pre class="r"><code># creating a 3x3 matrix. 
+My_Matrix &lt;- matrix(1:9, nrow=3, byrow = TRUE)
+
+# print the output
+My_Matrix
+##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+
+# print the class name
+class(My_Matrix)
+## [1] &quot;matrix&quot;</code></pre>
+<p>To create an array we can use the <code>array()</code> functions.</p>
+<pre class="r"><code># An array with one dimension with values ranging from 1 to 12
+array1 &lt;- array(1:12)
+
+# print the output
+array1
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12
+
+# print the class name
+class(array1)
+## [1] &quot;array&quot;</code></pre>
+<p>We can use the <code>array()</code> function to create an array, and the <code>dim = argument</code> parameter to specify the dimensions.</p>
+<pre class="r"><code># An array with more than one dimension
+array2 &lt;- array(1:12, dim = c(3,4,2))
+
+# print the output
+array2
+## , , 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+
+# print the class name
+class(array2)
+## [1] &quot;array&quot;</code></pre>
+<p>When using the <code>array()</code> function we define the dimensions using the <code>dim = argument</code>, in our case 2 rows, 4 columns in 2 different matrices.</p>
+</div>
+<div id="lists" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Lists</h1>
+<p>A list can contain many different data types inside it. A list is a collection of data which is ordered and changeable.</p>
+<p>To create a list, use the <code>list()</code> function:</p>
+<pre class="r"><code># List of three components
+MySelf &lt;- list(&quot;John&quot;, 36, 1.82)
+
+# Print the output
+MySelf 
+## [[1]]
+## [1] &quot;John&quot;
+## 
+## [[2]]
+## [1] 36
+## 
+## [[3]]
+## [1] 1.82
+
+# print the type of variable
+typeof(MySelf)
+## [1] &quot;list&quot;</code></pre>
+<p>We can check de length of the list using the function <code>length()</code>.</p>
+<pre class="r"><code>length(MySelf)
+## [1] 3</code></pre>
+<p>We can examine the structure of the list using the funtion <code>str()</code>.</p>
+<pre class="r"><code>str(MySelf)
+## List of 3
+##  $ : chr &quot;John&quot;
+##  $ : num 36
+##  $ : num 1.82</code></pre>
+<p>We can also crate a list with tags which makes it easier to reference the components of the list.</p>
+<pre class="r"><code># List of three components
+MySelf &lt;- list(Name=&quot;John&quot;, Age=36, Height=1.82)
+
+# Print the output
+MySelf 
+## $Name
+## [1] &quot;John&quot;
+## 
+## $Age
+## [1] 36
+## 
+## $Height
+## [1] 1.82</code></pre>
+<p>We can add more components to the list using the function <code>c()</code>.</p>
+<pre class="r"><code># List of three components
+MyTeam &lt;- list(c(&quot;John&quot;, &quot;Steve&quot;), c(36,45), c(1.82, 1.70))
+
+# Give names to the elements in the list.
+names(MyTeam) &lt;- c(&quot;Name&quot;, &quot;Age&quot;, &quot;Height&quot;)
+
+# Print the output
+MyTeam 
+## $Name
+## [1] &quot;John&quot;  &quot;Steve&quot;
+## 
+## $Age
+## [1] 36 45
+## 
+## $Height
+## [1] 1.82 1.70</code></pre>
+<div id="accessing-list-elements" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Accessing list elements</h2>
+<p>Elements of the list can be accessed by the index of the element in the list. In case of named lists it can also be accessed using the names.</p>
+<pre class="r"><code># Access the first element of the list. As it is also a list, all its elements will be printed.
+MyTeam[1]
+## $Name
+## [1] &quot;John&quot;  &quot;Steve&quot;
+
+
+# Access the list element using the name of the element.
+MyTeam$Age
+## [1] 36 45</code></pre>
+</div>
+</div>
+<div id="data-frames" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Data Frames</h1>
+<p>A data frame is the most common way of storing data in R and, generally, is the data structure most often used for data analyses.</p>
+<p>Basically, a data frame is a list of equal-length vectors. Each element of the list can be thought of as a column and the length of each element of the list is the number of rows.</p>
+<p>As a result, data frames can store different classes of objects in each column (i.e. numeric, character, factor).</p>
+<p>In essence, the easiest way to think of a data frame is as an Excel worksheet that contains columns of different types of data but are all of equal length rows.</p>
+<div id="creating-data-frames" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Creating data frames</h2>
+<p>Data frames can also be created explicitly with the <code>data.frame()</code> function.</p>
+<pre class="r"><code># data frame with 3 columns and 2 rows
+df &lt;- data.frame(col1 = c(&quot;John&quot;, &quot;Steve&quot;), 
+                 col2 = c(36,45),
+                 col3 = c(1.82, 1.70))
+
+# Print the output
+df
+##    col1 col2 col3
+## 1  John   36 1.82
+## 2 Steve   45 1.70</code></pre>
+<p>Note how col1 in df was converted to a column of factors. This is because there is a default setting in <code>data.frame()</code> that converts character columns to factors. We can turn this off by setting the <code>stringsAsFactors = FALSE</code>.</p>
+<p>We also can create a data frame from other types of objects using <code>c()</code>.</p>
+<pre class="r"><code>
+# Generate three objects
+Name &lt;- c(&quot;John&quot;, &quot;Steve&quot;)
+Age &lt;-  c(36,45)
+Height &lt;- c(1.82, 1.70)
+
+# data frame with 3 columns
+df &lt;- data.frame(Name, Age, Height)
+
+# Print the output
+df
+##    Name Age Height
+## 1  John  36   1.82
+## 2 Steve  45   1.70</code></pre>
+<p>We can explore the structure of a data frame using the function <code>str()</code>.</p>
+<pre class="r"><code>str(df)
+## &#39;data.frame&#39;:    2 obs. of  3 variables:
+##  $ Name  : Factor w/ 2 levels &quot;John&quot;,&quot;Steve&quot;: 1 2
+##  $ Age   : num  36 45
+##  $ Height: num  1.82 1.7</code></pre>
+</div>
+<div id="addingchanging-column-names" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Adding/Changing column names</h2>
+<p>We can also also add/change the existing column names by using <code>colnames()</code>.</p>
+<pre class="r"><code># add/change column names
+colnames(df) &lt;- c(&quot;Employee&quot;, &quot;Weight&quot;, &quot;Other&quot;)
+
+# Print the output
+df
+##   Employee Weight Other
+## 1     John     36  1.82
+## 2    Steve     45  1.70</code></pre>
+</div>
+<div id="expanding-a-data-frame" class="section level2" number="8.3">
+<h2><span class="header-section-number">8.3</span> Expanding a Data Frame</h2>
+<p>A data frame can be expanded by adding columns and rows. We can add new columns to the data frame using the function <code>cbind()</code>.</p>
+<pre class="r"><code># New vector
+Country &lt;- c(&quot;KSA&quot;, &quot;Ireland&quot;)
+
+# Adding new column
+df1 &lt;- cbind(df, Country)
+
+#Print the output
+df1
+##   Employee Weight Other Country
+## 1     John     36  1.82     KSA
+## 2    Steve     45  1.70 Ireland</code></pre>
+<p>We can also use the <code>rbind()</code> function to add data frame rows together. To add rows appropriately, we need to convert the items being added to a data frame and make sure the columns are the same class as the original data frame.</p>
+<pre class="r"><code># New vector
+NewEmployee &lt;- data.frame(Employee=&quot;Peter&quot;, 
+                          Weight=70,
+                          Other=1.56,
+                          Country=&quot;USA&quot;)
+
+# Adding new column
+df2 &lt;- rbind(df1, NewEmployee)
+
+#Print the output
+df2
+##   Employee Weight Other Country
+## 1     John     36  1.82     KSA
+## 2    Steve     45  1.70 Ireland
+## 3    Peter     70  1.56     USA</code></pre>
+</div>
+<div id="subsetting-data-frames" class="section level2" number="8.4">
+<h2><span class="header-section-number">8.4</span> Subsetting data frames</h2>
+<p>The most basic way of subsetting a data frame in R is by using square brackets <code>[row, column]</code>.</p>
+<p>Let´s select all the information of the first row of our data frame.</p>
+<pre class="r"><code># Information for first employee
+df2[1,]
+##   Employee Weight Other Country
+## 1     John     36  1.82     KSA</code></pre>
+<p>Now, let´s select all the information of the second and third rows of our data frame.</p>
+<pre class="r"><code># Information for two employees
+df2[2:3,]
+##   Employee Weight Other Country
+## 2    Steve     45  1.70 Ireland
+## 3    Peter     70  1.56     USA</code></pre>
+<p>We can also select information for all rows from a specific column.</p>
+<pre class="r"><code># All employee´s names
+df2[,1]
+## [1] John  Steve Peter
+## Levels: John Steve Peter</code></pre>
+<p>To select a specific column, we can also type in the name of the data frame, followed by a <code>$</code>, and then the name of the column.</p>
+<pre class="r"><code># All employee´s names
+df2$Employee
+## [1] John  Steve Peter
+## Levels: John Steve Peter</code></pre>
+<p>Or, maybe we want information from more than one column.</p>
+<pre class="r"><code># All employee´s names and weights
+df2[,1:2]
+##   Employee Weight
+## 1     John     36
+## 2    Steve     45
+## 3    Peter     70</code></pre>
+<p>Maybe, we are interested in specific information for one row from a specific column.</p>
+<pre class="r"><code># Weight of second employee in our data frame
+df2[2,3]
+## [1] 1.7</code></pre>
+</div>
+<div id="creating-data-frames-from-files" class="section level2" number="8.5">
+<h2><span class="header-section-number">8.5</span> Creating data frames from files</h2>
+<p>We can also create a new data frame when importing the data into R. In the next section we will explore more about how import data into R.</p>
+</div>
+<div id="useful-data-frame-functions" class="section level2" number="8.6">
+<h2><span class="header-section-number">8.6</span> Useful Data Frame Functions</h2>
+<ul>
+<li><code>head()</code>: shows first 6 rows.</li>
+<li><code>tail()</code>: shows last 6 rows.</li>
+<li><code>dim()</code>: returns the dimensions of data frame.</li>
+<li><code>nrow()</code>: number of rows.</li>
+<li><code>ncol()</code>: number of columns.</li>
+<li><code>str()</code>: structure of data frame.</li>
+<li><code>names()</code>: show the names attribute for a data frame.</li>
+</ul>
+</div>
+</div>
+
+          </div>
+
+          
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/r/">R</a>
+  
+  <a class="badge badge-light" href="/tag/rstudio/">RStudio</a>
+  
+</div>
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/workshops/neom/packages/" rel="next">Day 1: Packages</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/workshops/neom/dataset/" rel="prev">Day 1: Our Dataset</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Aug 21, 2022</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/workshops/neom/exploringr/">Day 1: Exploring R &amp; RStudio</a></li>
+      
+      <li><a href="/workshops/neom/packages/">Day 1: Packages</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+
+</body>
+</html>

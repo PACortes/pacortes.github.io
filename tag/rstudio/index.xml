@@ -5,7 +5,7 @@
     <link>https://academic-demo.netlify.app/tag/rstudio/</link>
       <atom:link href="https://academic-demo.netlify.app/tag/rstudio/index.xml" rel="self" type="application/rss+xml" />
     <description>RStudio</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>RStudio</title>
@@ -162,6 +162,534 @@ Ctrl/Cmd + S.&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;Once the package is installed, or is a base package, you must load the package and only after it has been loaded you can use all the functions and datasets it contains. To load a package, run &lt;code&gt;library(name_of_package)&lt;/code&gt; (this time &lt;code&gt;&#34;&#34;&lt;/code&gt; around the name of the package are optional).&lt;/p&gt;
 &lt;p&gt;In the following example, the library ggplot2 is loaded.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Day 1: R Data Types</title>
+      <link>https://academic-demo.netlify.app/workshops/neom/datatypes/</link>
+      <pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neom/datatypes/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#r-objects-and-classes&#34; id=&#34;toc-r-objects-and-classes&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; Objects and Classes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-variables&#34; id=&#34;toc-r-variables&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; variables&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#changing-value-of-variables&#34; id=&#34;toc-changing-value-of-variables&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; Changing Value of Variables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#naming-r-variables&#34; id=&#34;toc-naming-r-variables&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Naming &lt;code&gt;R&lt;/code&gt; variables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-data-types&#34; id=&#34;toc-r-data-types&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; data types&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#numeric&#34; id=&#34;toc-numeric&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.1&lt;/span&gt; Numeric&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#integer&#34; id=&#34;toc-integer&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.2&lt;/span&gt; Integer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#complex&#34; id=&#34;toc-complex&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.3&lt;/span&gt; Complex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#character&#34; id=&#34;toc-character&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.4&lt;/span&gt; Character&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#logical&#34; id=&#34;toc-logical&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.5&lt;/span&gt; Logical&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#factors&#34; id=&#34;toc-factors&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3.6&lt;/span&gt; Factors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r-data-structures&#34; id=&#34;toc-r-data-structures&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; data structures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vectors&#34; id=&#34;toc-vectors&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Vectors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#matrices-and-arrays&#34; id=&#34;toc-matrices-and-arrays&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; Matrices and arrays&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lists&#34; id=&#34;toc-lists&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7&lt;/span&gt; Lists&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#accessing-list-elements&#34; id=&#34;toc-accessing-list-elements&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;7.1&lt;/span&gt; Accessing list elements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-frames&#34; id=&#34;toc-data-frames&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8&lt;/span&gt; Data Frames&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-data-frames&#34; id=&#34;toc-creating-data-frames&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8.1&lt;/span&gt; Creating data frames&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#addingchanging-column-names&#34; id=&#34;toc-addingchanging-column-names&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8.2&lt;/span&gt; Adding/Changing column names&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#expanding-a-data-frame&#34; id=&#34;toc-expanding-a-data-frame&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8.3&lt;/span&gt; Expanding a Data Frame&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#subsetting-data-frames&#34; id=&#34;toc-subsetting-data-frames&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8.4&lt;/span&gt; Subsetting data frames&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-data-frames-from-files&#34; id=&#34;toc-creating-data-frames-from-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8.5&lt;/span&gt; Creating data frames from files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#useful-data-frame-functions&#34; id=&#34;toc-useful-data-frame-functions&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;8.6&lt;/span&gt; Useful Data Frame Functions&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;r-objects-and-classes&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; Objects and Classes&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is an object-oriented programming language with the fundamental design principle: Everything is an &lt;code&gt;object.&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;An &lt;code&gt;object&lt;/code&gt; is simply a collection of data (&lt;code&gt;variables&lt;/code&gt;) and methods (functions).&lt;/p&gt;
+&lt;p&gt;All &lt;code&gt;object&lt;/code&gt; in &lt;code&gt;R&lt;/code&gt; have a specific &lt;code&gt;class&lt;/code&gt; that can have a set of class-specific attributes. Basically, a &lt;code&gt;class&lt;/code&gt; is a blueprint for that object.&lt;/p&gt;
+&lt;p&gt;We would never build a house without a blueprint. The blueprint (prototype) of a house is the &lt;code&gt;class&lt;/code&gt;, which contains all the details about the floors, doors, windows, etc. Based on these descriptions we build our house. Here, house is the &lt;code&gt;object&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-variables&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; variables&lt;/h1&gt;
+&lt;p&gt;A &lt;strong&gt;variable&lt;/strong&gt; is a name given to a memory location, which is used to store values in a computer program. Variables in R programming can be used to store different types of values such as numbers, words, matrices, and even tables. These different types of values are called &lt;strong&gt;data types&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We can create variables from within the R environment and from files on your computer. &lt;code&gt;R&lt;/code&gt; uses&lt;code&gt;=&lt;/code&gt;or &lt;code&gt;&amp;lt;-&lt;/code&gt; to assign values to a variable name.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- 2022&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here, &lt;code&gt;x&lt;/code&gt; is the variable where the data &lt;em&gt;2022&lt;/em&gt; is stored. Now, whenever we use &lt;code&gt;x&lt;/code&gt; in our program, we will get 2022.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- 2022
+print(x)
+## [1] 2022&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As we can can see, when we print &lt;code&gt;x&lt;/code&gt; we get 2022 as output.&lt;/p&gt;
+&lt;div id=&#34;changing-value-of-variables&#34; class=&#34;section level2&#34; number=&#34;2.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; Changing Value of Variables&lt;/h2&gt;
+&lt;p&gt;Depending on the conditions or information passed into the program, we can change the value of a variable.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;x &amp;lt;- 2022
+x
+## [1] 2022&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# changing value of a variable
+x &amp;lt;- 23456722
+x
+## [1] 23456722&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;naming-r-variables&#34; class=&#34;section level2&#34; number=&#34;2.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; Naming &lt;code&gt;R&lt;/code&gt; variables&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;R&lt;/code&gt;, we can use any name for our variables. However, For a variable to be valid, it should follow some simple rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;It should contain letters, digits, periods, and underscores.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It should start with a letter or a period, but not with digits (e.g. &lt;em&gt;foryou&lt;/em&gt; but not &lt;em&gt;4you&lt;/em&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It should not start with a dot followed by a digit (e.g. &lt;em&gt;.4you&lt;/em&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;It should not be a reserved keyword. (e.g. &lt;em&gt;for&lt;/em&gt;, &lt;em&gt;in&lt;/em&gt;, &lt;em&gt;NA&lt;/em&gt;,, &lt;em&gt;NULL&lt;/em&gt;, &lt;em&gt;TRUE&lt;/em&gt;, &lt;em&gt;beak&lt;/em&gt;, among many others).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;R is case sensitive (e.g. &lt;em&gt;Neom&lt;/em&gt; and &lt;em&gt;neom&lt;/em&gt; are treated as different variables).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-data-types&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; data types&lt;/h1&gt;
+&lt;p&gt;Each variable in &lt;code&gt;R&lt;/code&gt; has an associated data type. The fundamental data types in R Programming are as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Numeric.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Integer.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Complex.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Character.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Logical.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;R is able to automatically distinguish between different types of data. We can find out the type of any object using the &lt;code&gt;class()&lt;/code&gt; function. Alternatively, we can ask if an object is a specific class using using a logical test. The &lt;code&gt;is.classOfData()&lt;/code&gt; family of functions will return either a &lt;code&gt;TRUE&lt;/code&gt; or a &lt;code&gt;FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let’s discuss each of these &lt;code&gt;R&lt;/code&gt; data types one by one.&lt;/p&gt;
+&lt;div id=&#34;numeric&#34; class=&#34;section level2&#34; number=&#34;3.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.1&lt;/span&gt; Numeric&lt;/h2&gt;
+&lt;p&gt;In &lt;code&gt;R&lt;/code&gt;, the &lt;code&gt;numeric&lt;/code&gt; data type represents all real numbers with or without decimal values. It is the default data type for numbers in R.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# assign a decimal to value x
+x &amp;lt;- 150.4
+
+# print the class name of variable
+class(x)
+## [1] &amp;quot;numeric&amp;quot;
+
+# ask the class name of variable
+is.numeric(x)
+## [1] TRUE&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When R stores a number in a variable, it converts the number into a &lt;code&gt;double&lt;/code&gt; value or a decimal type with at least two decimal places. This means that a value such as &lt;em&gt;100&lt;/em&gt; here, is stored as &lt;em&gt;100.00&lt;/em&gt; with a type of double and a class of numeric.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# assign a decimal to value mynumber
+mynumber &amp;lt;- 100
+
+# print the output
+mynumber
+## [1] 100
+
+# print the class name of variable
+class(mynumber)
+## [1] &amp;quot;numeric&amp;quot;
+
+# ask the class name of variable
+is.numeric(mynumber)
+## [1] TRUE
+
+# print the type of variable
+typeof(mynumber)
+## [1] &amp;quot;double&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;integer&#34; class=&#34;section level2&#34; number=&#34;3.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.2&lt;/span&gt; Integer&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;integer&lt;/code&gt; data type specifies real values without decimal points. We use the suffix &lt;code&gt;L&lt;/code&gt; to specify integer data. We can also convert a value into an integer type using the &lt;code&gt;as.integer()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# assign a integer value with the to my_integer
+my_integer &amp;lt;- 100L
+
+# print the output
+my_integer
+## [1] 100
+
+# print the class name of variable
+class(my_integer)
+## [1] &amp;quot;integer&amp;quot;
+
+# ask the class name of variable
+is.numeric(my_integer)
+## [1] TRUE
+
+# print the type of variable
+typeof(my_integer)
+## [1] &amp;quot;integer&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;complex&#34; class=&#34;section level2&#34; number=&#34;3.3&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.3&lt;/span&gt; Complex&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;complex&lt;/code&gt; data type is used to specify purely imaginary values in R. We use the suffix &lt;code&gt;i&lt;/code&gt; to specify the imaginary part.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# assign a complex value with the to MyComplex
+MyComplex &amp;lt;- 100i
+
+# print the output
+MyComplex
+## [1] 0+100i
+
+# print the class name of variable
+class(MyComplex)
+## [1] &amp;quot;complex&amp;quot;
+
+# ask the class name of variable
+is.numeric(MyComplex)
+## [1] FALSE
+
+# print the type of variable
+typeof(MyComplex)
+## [1] &amp;quot;complex&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;character&#34; class=&#34;section level2&#34; number=&#34;3.4&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.4&lt;/span&gt; Character&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;character&lt;/code&gt; data type is used to specify character or string values in a variable. A string is a set of characters. Strings in &lt;code&gt;R&lt;/code&gt; can contain alphabets, numbers, and symbols. For example, &lt;em&gt;N&lt;/em&gt; is a single character and &lt;em&gt;Neom&lt;/em&gt; is a string.&lt;/p&gt;
+&lt;p&gt;We can use single quotes &lt;code&gt;&#39;&#39;&lt;/code&gt; or double quotes &lt;code&gt;&#34;&#34;&lt;/code&gt; to represent strings. If we don’t use quotes or double quotes, &lt;code&gt;R&lt;/code&gt; will consider the character and string as an object.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# assign a single character to word_1
+word_1 &amp;lt;- &amp;quot;NC1&amp;quot;
+
+# print the output
+word_1
+## [1] &amp;quot;NC1&amp;quot;
+
+# print the class name of variable
+class(word_1)
+## [1] &amp;quot;character&amp;quot;
+
+# ask the class name of variable
+is.numeric(word_1)
+## [1] FALSE
+
+# print the type of variable
+typeof(word_1)
+## [1] &amp;quot;character&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;logical&#34; class=&#34;section level2&#34; number=&#34;3.5&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.5&lt;/span&gt; Logical&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;logical&lt;/code&gt; data type in R is also known as boolean data type. It can only have two values: &lt;code&gt;TRUE&lt;/code&gt; and &lt;code&gt;FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;factors&#34; class=&#34;section level2&#34; number=&#34;3.6&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;3.6&lt;/span&gt; Factors&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Factors&lt;/code&gt; are the data objects which are used to categorize the data and store it as levels (e.g. “MALE” or “FEMALE”). This is useful for storing categorical data. Factors can store both strings and integers.&lt;/p&gt;
+&lt;p&gt;We can create factors using the function &lt;code&gt;factor()&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Creating factor using factor()
+sex&amp;lt;- factor(c(&amp;quot;Small&amp;quot;, &amp;quot;Female&amp;quot;, &amp;quot;Male&amp;quot;, &amp;quot;Female&amp;quot;))
+
+# print the output
+sex
+## [1] Small  Female Male   Female
+## Levels: Female Male Small
+
+# print the class name of variable
+class(sex)
+## [1] &amp;quot;factor&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-data-structures&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; data structures&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div id=&#34;vectors&#34; class=&#34;section level1&#34; number=&#34;5&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Vectors&lt;/h1&gt;
+&lt;p&gt;A vector is the most common and basic data structure in &lt;code&gt;R&lt;/code&gt;. A vector is a collection of elements that are most commonly of mode character, logical, integer or numeric. Vectors can contain numbers, characters, or logicals, but the key thing to remember is that all the elements inside a vector must be of the same class. In other words, vectors can contain either numbers, characters or logicals but not mixtures of these types of data.&lt;/p&gt;
+&lt;p&gt;The function &lt;code&gt;c()&lt;/code&gt; combines/joins single R objects into a vector of R objects. It is mostly used for creating vectors.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# creating a numeric vector of 5 elements
+NumericVector &amp;lt;- c(1,2,5,7,8)
+
+# print the output
+NumericVector
+## [1] 1 2 5 7 8
+
+# print the class name
+class(NumericVector)
+## [1] &amp;quot;numeric&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# creating a character vector of 3 elements
+CharacterVector &amp;lt;- c(&amp;quot;I&amp;quot;, &amp;quot;Love&amp;quot;, &amp;quot;Neom&amp;quot;)
+
+# print the output
+CharacterVector
+## [1] &amp;quot;I&amp;quot;    &amp;quot;Love&amp;quot; &amp;quot;Neom&amp;quot;
+
+# print the class name
+class(CharacterVector)
+## [1] &amp;quot;character&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;matrices-and-arrays&#34; class=&#34;section level1&#34; number=&#34;6&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; Matrices and arrays&lt;/h1&gt;
+&lt;p&gt;A matrix is simply a vector that has additional attributes called dimensions. Arrays are just multidimensional matrices. Again, matrices and arrays must contain elements all of the same data class.&lt;/p&gt;
+&lt;p&gt;To create a matrix, we can use the &lt;code&gt;matrix()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# creating a 3x3 matrix. 
+My_Matrix &amp;lt;- matrix(1:9, nrow=3)
+
+# print the output
+My_Matrix
+##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9
+
+# print the class name
+class(My_Matrix)
+## [1] &amp;quot;matrix&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By default the matrix is filled rather than the default column-wise. We can fill the matrix row-wise using &lt;code&gt;byrow = TRUE&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# creating a 3x3 matrix. 
+My_Matrix &amp;lt;- matrix(1:9, nrow=3, byrow = TRUE)
+
+# print the output
+My_Matrix
+##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+## [3,]    7    8    9
+
+# print the class name
+class(My_Matrix)
+## [1] &amp;quot;matrix&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To create an array we can use the &lt;code&gt;array()&lt;/code&gt; functions.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# An array with one dimension with values ranging from 1 to 12
+array1 &amp;lt;- array(1:12)
+
+# print the output
+array1
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12
+
+# print the class name
+class(array1)
+## [1] &amp;quot;array&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can use the &lt;code&gt;array()&lt;/code&gt; function to create an array, and the &lt;code&gt;dim = argument&lt;/code&gt; parameter to specify the dimensions.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# An array with more than one dimension
+array2 &amp;lt;- array(1:12, dim = c(3,4,2))
+
+# print the output
+array2
+## , , 1
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+## 
+## , , 2
+## 
+##      [,1] [,2] [,3] [,4]
+## [1,]    1    4    7   10
+## [2,]    2    5    8   11
+## [3,]    3    6    9   12
+
+# print the class name
+class(array2)
+## [1] &amp;quot;array&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When using the &lt;code&gt;array()&lt;/code&gt; function we define the dimensions using the &lt;code&gt;dim = argument&lt;/code&gt;, in our case 2 rows, 4 columns in 2 different matrices.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;lists&#34; class=&#34;section level1&#34; number=&#34;7&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;7&lt;/span&gt; Lists&lt;/h1&gt;
+&lt;p&gt;A list can contain many different data types inside it. A list is a collection of data which is ordered and changeable.&lt;/p&gt;
+&lt;p&gt;To create a list, use the &lt;code&gt;list()&lt;/code&gt; function:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# List of three components
+MySelf &amp;lt;- list(&amp;quot;John&amp;quot;, 36, 1.82)
+
+# Print the output
+MySelf 
+## [[1]]
+## [1] &amp;quot;John&amp;quot;
+## 
+## [[2]]
+## [1] 36
+## 
+## [[3]]
+## [1] 1.82
+
+# print the type of variable
+typeof(MySelf)
+## [1] &amp;quot;list&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can check de length of the list using the function &lt;code&gt;length()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;length(MySelf)
+## [1] 3&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can examine the structure of the list using the funtion &lt;code&gt;str()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(MySelf)
+## List of 3
+##  $ : chr &amp;quot;John&amp;quot;
+##  $ : num 36
+##  $ : num 1.82&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can also crate a list with tags which makes it easier to reference the components of the list.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# List of three components
+MySelf &amp;lt;- list(Name=&amp;quot;John&amp;quot;, Age=36, Height=1.82)
+
+# Print the output
+MySelf 
+## $Name
+## [1] &amp;quot;John&amp;quot;
+## 
+## $Age
+## [1] 36
+## 
+## $Height
+## [1] 1.82&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can add more components to the list using the function &lt;code&gt;c()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# List of three components
+MyTeam &amp;lt;- list(c(&amp;quot;John&amp;quot;, &amp;quot;Steve&amp;quot;), c(36,45), c(1.82, 1.70))
+
+# Give names to the elements in the list.
+names(MyTeam) &amp;lt;- c(&amp;quot;Name&amp;quot;, &amp;quot;Age&amp;quot;, &amp;quot;Height&amp;quot;)
+
+# Print the output
+MyTeam 
+## $Name
+## [1] &amp;quot;John&amp;quot;  &amp;quot;Steve&amp;quot;
+## 
+## $Age
+## [1] 36 45
+## 
+## $Height
+## [1] 1.82 1.70&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;accessing-list-elements&#34; class=&#34;section level2&#34; number=&#34;7.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;7.1&lt;/span&gt; Accessing list elements&lt;/h2&gt;
+&lt;p&gt;Elements of the list can be accessed by the index of the element in the list. In case of named lists it can also be accessed using the names.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Access the first element of the list. As it is also a list, all its elements will be printed.
+MyTeam[1]
+## $Name
+## [1] &amp;quot;John&amp;quot;  &amp;quot;Steve&amp;quot;
+
+
+# Access the list element using the name of the element.
+MyTeam$Age
+## [1] 36 45&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-frames&#34; class=&#34;section level1&#34; number=&#34;8&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;8&lt;/span&gt; Data Frames&lt;/h1&gt;
+&lt;p&gt;A data frame is the most common way of storing data in R and, generally, is the data structure most often used for data analyses.&lt;/p&gt;
+&lt;p&gt;Basically, a data frame is a list of equal-length vectors. Each element of the list can be thought of as a column and the length of each element of the list is the number of rows.&lt;/p&gt;
+&lt;p&gt;As a result, data frames can store different classes of objects in each column (i.e. numeric, character, factor).&lt;/p&gt;
+&lt;p&gt;In essence, the easiest way to think of a data frame is as an Excel worksheet that contains columns of different types of data but are all of equal length rows.&lt;/p&gt;
+&lt;div id=&#34;creating-data-frames&#34; class=&#34;section level2&#34; number=&#34;8.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;8.1&lt;/span&gt; Creating data frames&lt;/h2&gt;
+&lt;p&gt;Data frames can also be created explicitly with the &lt;code&gt;data.frame()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# data frame with 3 columns and 2 rows
+df &amp;lt;- data.frame(col1 = c(&amp;quot;John&amp;quot;, &amp;quot;Steve&amp;quot;), 
+                 col2 = c(36,45),
+                 col3 = c(1.82, 1.70))
+
+# Print the output
+df
+##    col1 col2 col3
+## 1  John   36 1.82
+## 2 Steve   45 1.70&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note how col1 in df was converted to a column of factors. This is because there is a default setting in &lt;code&gt;data.frame()&lt;/code&gt; that converts character columns to factors. We can turn this off by setting the &lt;code&gt;stringsAsFactors = FALSE&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We also can create a data frame from other types of objects using &lt;code&gt;c()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;
+# Generate three objects
+Name &amp;lt;- c(&amp;quot;John&amp;quot;, &amp;quot;Steve&amp;quot;)
+Age &amp;lt;-  c(36,45)
+Height &amp;lt;- c(1.82, 1.70)
+
+# data frame with 3 columns
+df &amp;lt;- data.frame(Name, Age, Height)
+
+# Print the output
+df
+##    Name Age Height
+## 1  John  36   1.82
+## 2 Steve  45   1.70&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can explore the structure of a data frame using the function &lt;code&gt;str()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;str(df)
+## &amp;#39;data.frame&amp;#39;:    2 obs. of  3 variables:
+##  $ Name  : Factor w/ 2 levels &amp;quot;John&amp;quot;,&amp;quot;Steve&amp;quot;: 1 2
+##  $ Age   : num  36 45
+##  $ Height: num  1.82 1.7&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;addingchanging-column-names&#34; class=&#34;section level2&#34; number=&#34;8.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;8.2&lt;/span&gt; Adding/Changing column names&lt;/h2&gt;
+&lt;p&gt;We can also also add/change the existing column names by using &lt;code&gt;colnames()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# add/change column names
+colnames(df) &amp;lt;- c(&amp;quot;Employee&amp;quot;, &amp;quot;Weight&amp;quot;, &amp;quot;Other&amp;quot;)
+
+# Print the output
+df
+##   Employee Weight Other
+## 1     John     36  1.82
+## 2    Steve     45  1.70&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;expanding-a-data-frame&#34; class=&#34;section level2&#34; number=&#34;8.3&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;8.3&lt;/span&gt; Expanding a Data Frame&lt;/h2&gt;
+&lt;p&gt;A data frame can be expanded by adding columns and rows. We can add new columns to the data frame using the function &lt;code&gt;cbind()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# New vector
+Country &amp;lt;- c(&amp;quot;KSA&amp;quot;, &amp;quot;Ireland&amp;quot;)
+
+# Adding new column
+df1 &amp;lt;- cbind(df, Country)
+
+#Print the output
+df1
+##   Employee Weight Other Country
+## 1     John     36  1.82     KSA
+## 2    Steve     45  1.70 Ireland&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can also use the &lt;code&gt;rbind()&lt;/code&gt; function to add data frame rows together. To add rows appropriately, we need to convert the items being added to a data frame and make sure the columns are the same class as the original data frame.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# New vector
+NewEmployee &amp;lt;- data.frame(Employee=&amp;quot;Peter&amp;quot;, 
+                          Weight=70,
+                          Other=1.56,
+                          Country=&amp;quot;USA&amp;quot;)
+
+# Adding new column
+df2 &amp;lt;- rbind(df1, NewEmployee)
+
+#Print the output
+df2
+##   Employee Weight Other Country
+## 1     John     36  1.82     KSA
+## 2    Steve     45  1.70 Ireland
+## 3    Peter     70  1.56     USA&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;subsetting-data-frames&#34; class=&#34;section level2&#34; number=&#34;8.4&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;8.4&lt;/span&gt; Subsetting data frames&lt;/h2&gt;
+&lt;p&gt;The most basic way of subsetting a data frame in R is by using square brackets &lt;code&gt;[row, column]&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let´s select all the information of the first row of our data frame.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Information for first employee
+df2[1,]
+##   Employee Weight Other Country
+## 1     John     36  1.82     KSA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, let´s select all the information of the second and third rows of our data frame.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Information for two employees
+df2[2:3,]
+##   Employee Weight Other Country
+## 2    Steve     45  1.70 Ireland
+## 3    Peter     70  1.56     USA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can also select information for all rows from a specific column.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# All employee´s names
+df2[,1]
+## [1] John  Steve Peter
+## Levels: John Steve Peter&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To select a specific column, we can also type in the name of the data frame, followed by a &lt;code&gt;$&lt;/code&gt;, and then the name of the column.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# All employee´s names
+df2$Employee
+## [1] John  Steve Peter
+## Levels: John Steve Peter&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Or, maybe we want information from more than one column.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# All employee´s names and weights
+df2[,1:2]
+##   Employee Weight
+## 1     John     36
+## 2    Steve     45
+## 3    Peter     70&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Maybe, we are interested in specific information for one row from a specific column.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Weight of second employee in our data frame
+df2[2,3]
+## [1] 1.7&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-data-frames-from-files&#34; class=&#34;section level2&#34; number=&#34;8.5&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;8.5&lt;/span&gt; Creating data frames from files&lt;/h2&gt;
+&lt;p&gt;We can also create a new data frame when importing the data into R. In the next section we will explore more about how import data into R.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;useful-data-frame-functions&#34; class=&#34;section level2&#34; number=&#34;8.6&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;8.6&lt;/span&gt; Useful Data Frame Functions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;head()&lt;/code&gt;: shows first 6 rows.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tail()&lt;/code&gt;: shows last 6 rows.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dim()&lt;/code&gt;: returns the dimensions of data frame.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nrow()&lt;/code&gt;: number of rows.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ncol()&lt;/code&gt;: number of columns.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;str()&lt;/code&gt;: structure of data frame.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;names()&lt;/code&gt;: show the names attribute for a data frame.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
     </item>
