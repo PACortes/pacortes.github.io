@@ -5,7 +5,7 @@
     <link>https://academic-demo.netlify.app/category/r/</link>
       <atom:link href="https://academic-demo.netlify.app/category/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 21 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 22 Aug 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png</url>
       <title>R</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Day 1: About R &amp; RStudio</title>
       <link>https://academic-demo.netlify.app/workshops/neom/aboutr/</link>
-      <pubDate>Sun, 21 Aug 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 22 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/workshops/neom/aboutr/</guid>
       <description>
 &lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
@@ -23,8 +23,8 @@
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-r&#34; id=&#34;toc-what-is-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#the-r-software-environment&#34; id=&#34;toc-the-r-software-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#why-use-r&#34; id=&#34;toc-why-use-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-r-environment&#34; id=&#34;toc-the-r-environment&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; environment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-uselearn-r&#34; id=&#34;toc-why-uselearn-r&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Why use/learn &lt;code&gt;R&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#what-is-rstudio&#34; id=&#34;toc-what-is-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#definitions&#34; id=&#34;toc-definitions&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Definitions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#r-rstudio&#34; id=&#34;toc-r-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; &lt;code&gt;R&lt;/code&gt; &amp;amp; &lt;code&gt;RStudio&lt;/code&gt;?&lt;/a&gt;&lt;/li&gt;
@@ -47,22 +47,22 @@
 
 &lt;div id=&#34;what-is-r&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; ¿What is &lt;code&gt;R&lt;/code&gt;?&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is a language and software environment for statistical computing and graphics.&lt;/p&gt;
-&lt;p&gt;R provides a wide variety of statistical and graphical techniques, and is highly extensible.&lt;/p&gt;
-&lt;p&gt;It is one of the most popular languages used by statisticians, data analysts, researchers and marketers to retrieve, clean, analyze, visualize and present data.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is a free software environment for statistical computing and graphics.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; provides a wide variety of statistical and graphical techniques, and is highly extensible.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;the-r-software-environment&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; software environment&lt;/h1&gt;
-&lt;p&gt;The R language programming environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.&lt;/p&gt;
+&lt;div id=&#34;the-r-environment&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; The &lt;code&gt;R&lt;/code&gt; environment&lt;/h1&gt;
+&lt;p&gt;The R environment is a fully planned and coherent system built around a standard command-line interface. Users leverage this to read data and load it to the workspace, specify commands and receive results.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;why-use-r&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Why use &lt;code&gt;R&lt;/code&gt;?&lt;/h1&gt;
+&lt;div id=&#34;why-uselearn-r&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Why use/learn &lt;code&gt;R&lt;/code&gt;?&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;R is open-source and free!&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;R is popular and R community is huge&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;R runs on all platforms (Available for Windows, Macintosh, and Linux).&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Publication-quality graphs. With R you have complete control over plotting/graphing options and are able to output publication quality figures with ease.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Packages for &lt;em&gt;literate statistical programming&lt;/em&gt; - weaving written reports and analysis code in one document.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is open-source and free.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;R&lt;/code&gt; is popular and R community is huge.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;R&lt;/code&gt; runs on all platforms (Available for Windows, Macintosh, and Linux).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Publication-quality visualizations. With &lt;code&gt;R&lt;/code&gt;, we have full control over plotting/graphing options and can easily generate publication quality visualizations&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Used in almost every industry.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Integrate with other languages and files.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;It’s fun… probably not at the beginning of the learning process.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;figure&#34;&gt;
@@ -72,8 +72,10 @@
 &lt;/div&gt;
 &lt;div id=&#34;what-is-rstudio&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; ¿What is &lt;code&gt;RStudio&lt;/code&gt;?&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; is a free, open source IDE (integrated development environment) for R. Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import &lt;em&gt;CSV&lt;/em&gt;, &lt;em&gt;Excel&lt;/em&gt;, &lt;em&gt;SAS&lt;/em&gt;, &lt;em&gt;SPSS&lt;/em&gt; and &lt;em&gt;Stata&lt;/em&gt; files into R without having to write the code to do so.&lt;/p&gt;
-&lt;p&gt;It is important to note that &lt;code&gt;RStudio&lt;/code&gt; is a software that runs &lt;code&gt;R&lt;/code&gt; and provides additional tools that are useful when writing &lt;code&gt;R&lt;/code&gt; code. So &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are not the same.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; is a free, open source IDE (integrated development environment) for R.&lt;/p&gt;
+&lt;p&gt;Its interface is organized so that the user can clearly view graphs, data tables, R code, and output all at the same time.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;RStudio&lt;/code&gt; also offers an Import-Wizard-like feature that allows users to import &lt;em&gt;CSV&lt;/em&gt;, &lt;em&gt;Excel&lt;/em&gt;, &lt;em&gt;SAS&lt;/em&gt;, &lt;em&gt;SPSS&lt;/em&gt; and &lt;em&gt;Stata&lt;/em&gt; files into R without having to write the code to do so.&lt;/p&gt;
+&lt;p&gt;It is important to note that &lt;code&gt;RStudio&lt;/code&gt; is a software that runs &lt;code&gt;R&lt;/code&gt; and provides additional tools that are useful when writing &lt;code&gt;R&lt;/code&gt; code. &lt;strong&gt;So &lt;code&gt;R&lt;/code&gt; and &lt;code&gt;RStudio&lt;/code&gt; are not the same&lt;/strong&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;definitions&#34; class=&#34;section level1&#34; number=&#34;5&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Definitions&lt;/h1&gt;
