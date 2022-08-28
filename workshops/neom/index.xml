@@ -1375,7 +1375,7 @@ Service to the society
 &lt;p&gt;R is able to recognise a wide variety of file formats, although in reality we will probably end up only using one or two regularly.&lt;/p&gt;
 &lt;div id=&#34;format-your-tidy-data&#34; class=&#34;section level2&#34; number=&#34;1.1&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Format your (tidy) data&lt;/h2&gt;
-&lt;p&gt;Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In &lt;strong&gt;tidy data&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In tidy data:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Every column is a variable.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Every row is an observation.&lt;/p&gt;&lt;/li&gt;
@@ -1399,13 +1399,13 @@ Service to the society
 &lt;li&gt;&lt;p&gt;&lt;code&gt;setwd(“C:/mydata”)&lt;/code&gt; will set the current working directory to a specific location.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We can also set the current working directory clicking the Session tab and then Set Working Directory option.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/importing_files/setwd.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/importing_files/setwd.png&#34; width=&#34;600&#34; height=&#34;300&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;importing-using-command&#34; class=&#34;section level2&#34; number=&#34;1.3&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Importing using command&lt;/h2&gt;
 &lt;div id=&#34;csv-files&#34; class=&#34;section level3&#34; number=&#34;1.3.1&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.1&lt;/span&gt; csv Files&lt;/h3&gt;
-&lt;p&gt;We can import &lt;strong&gt;.csv&lt;/strong&gt; files using basic R function &lt;strong&gt;read.csv()&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We can import &lt;strong&gt;.csv&lt;/strong&gt; files using basic R function &lt;code&gt;read.csv()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Syntax:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;read.csv(&#34;path/file_name.csv&#34;, header = TRUE)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Arguments:&lt;/p&gt;
@@ -1419,7 +1419,7 @@ Service to the society
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.2&lt;/span&gt; txt Files&lt;/h3&gt;
 &lt;p&gt;We can import &lt;strong&gt;.txt&lt;/strong&gt; or a tab-delimited text files using basic R function &lt;code&gt;read.table()&lt;/code&gt;. The data will be imported as a data frame.&lt;/p&gt;
 &lt;p&gt;Syntax:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;read.table(&#34;path/file_name.csv&#34;, header=TRUE)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;read.table(&#34;path/file_name.txt&#34;, header=TRUE)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Arguments:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;path : The path of the file to be imported.&lt;/p&gt;&lt;/li&gt;
@@ -1439,10 +1439,12 @@ TRUE .&lt;/p&gt;&lt;/li&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.3&lt;/span&gt; xls/xlsx Files&lt;/h3&gt;
 &lt;p&gt;We can import import Excel files, &lt;strong&gt;.xls&lt;/strong&gt; and &lt;strong&gt;.xlsx&lt;/strong&gt;, using the function &lt;code&gt;read_excel()&lt;/code&gt; from &lt;code&gt;readxl&lt;/code&gt; package.&lt;/p&gt;
 &lt;p&gt;Syntax:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;library(&#34;readxl&#34;)&lt;/code&gt; &lt;code&gt;read_excel(&#34;path/file_name.xlsx&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;library(&#34;readxl&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;read_excel(&#34;path/file_name.xlsx&#34;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;We can also import &lt;strong&gt;.xlsx&lt;/strong&gt; using the function &lt;code&gt;read.xlsx()&lt;/code&gt; from &lt;code&gt;xlsx&lt;/code&gt; package.&lt;/p&gt;
 &lt;p&gt;Syntax:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;library(&#34;xlsx&#34;)&lt;/code&gt; &lt;code&gt;read.xlsx(&#34;path/file_name.xlsx&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;library(&#34;xlsx&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;read.xlsx(&#34;path/file_name.xlsx&#34;)&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;importing-using-environment-tab&#34; class=&#34;section level2&#34; number=&#34;1.4&#34;&gt;
@@ -1465,7 +1467,7 @@ desktop.&lt;/p&gt;&lt;/li&gt;
     </item>
     
     <item>
-      <title>Day 2: Data manipulation</title>
+      <title>Day 2: Data Manipulation</title>
       <link>https://academic-demo.netlify.app/workshops/neom/dplyr/</link>
       <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
       <guid>https://academic-demo.netlify.app/workshops/neom/dplyr/</guid>
@@ -1501,7 +1503,7 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 &lt;div id=&#34;data-manipulation-with-dplyr&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Data Manipulation with &lt;code&gt;dplyr&lt;/code&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;dplyr&lt;/code&gt; is a powerful R-package to transform and summarize tabular data with rows and columns. It was created to enable efficient manipulation of data with the advantages of speed and simplicity of coding.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;dplyr&lt;/code&gt; provides a consistent set of functions,which we sometimes call verbs. Each of these &lt;code&gt;dplyr&lt;/code&gt; verbs does one thing. Each verb is named in a way that is extremely easy to remember. Some of these include:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dplyr&lt;/code&gt; provides a consistent set of functions, which we sometimes call verbs. Each of these &lt;code&gt;dplyr&lt;/code&gt; verbs does one thing. Each verb is named in a way that is extremely easy to remember. Some of these include:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;glimpse()&lt;/code&gt;: to examine our dataset.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;select()&lt;/code&gt;: to select columns (variables) by their names.&lt;/p&gt;&lt;/li&gt;
@@ -1523,7 +1525,6 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 &lt;div id=&#34;dplyr-syntax&#34; class=&#34;section level2&#34; number=&#34;2.1&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; &lt;code&gt;dplyr&lt;/code&gt; syntax&lt;/h2&gt;
 &lt;p&gt;All &lt;code&gt;dplyr&lt;/code&gt; verbs share a similar syntax.&lt;/p&gt;
-&lt;p&gt;Syntax:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;dplyr_verb(dataframe, stuff-to-do)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Arguments:&lt;/p&gt;
 &lt;ul&gt;
@@ -1540,7 +1541,7 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.3&lt;/span&gt; Loading our data&lt;/h2&gt;
 &lt;p&gt;To explore the functions of &lt;code&gt;dplyr&lt;/code&gt;, we need a dataset. We will use the &lt;code&gt;FacultyAffairs&lt;/code&gt; dataset.&lt;/p&gt;
 &lt;p&gt;We can load the dataset into the current R session by selecting &lt;code&gt;Import Dataset&amp;gt;From Excel File...&lt;/code&gt; in the Environment tab.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/dplyr_files/importing.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/dplyr_files/importing.png&#34; width=&#34;800&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;dplyr-verbs&#34; class=&#34;section level2&#34; number=&#34;2.4&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4&lt;/span&gt; &lt;code&gt;dplyr&lt;/code&gt; verbs&lt;/h2&gt;
@@ -1614,7 +1615,7 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 ##  9 Bachiochi, Linda     
 ## 10 Newman, Richard      
 ## # … with 840 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The &lt;code&gt;select()&lt;/code&gt; verb can also be used to drop columns from a dataframe using the the &lt;code&gt;-&lt;/code&gt;symbol. The following code can be read as follows: “From the data dataset, select all columns that are not the EmployeeName column”.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;select()&lt;/code&gt; verb can also be used to drop columns from a dataframe using the the &lt;code&gt;-&lt;/code&gt; symbol. The following code can be read as follows: “From the data dataset, select all columns that are not the EmployeeName column”.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(data,-EmployeeName)
 ## # A tibble: 850 × 31
 ##    AcadYear FirstYearApp Sex   YearBirth Nationality Appointment SchoolApp      
@@ -1637,7 +1638,7 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 ## #   MentoringResProj &amp;lt;dbl&amp;gt;, MentoringTheses &amp;lt;dbl&amp;gt;, NumPublication &amp;lt;dbl&amp;gt;,
 ## #   SubManuscripts &amp;lt;dbl&amp;gt;, NumCitations &amp;lt;dbl&amp;gt;, NumBooks &amp;lt;dbl&amp;gt;, …&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The above code reduced the dimensions of our data frame [850 × 31].&lt;/p&gt;
-&lt;p&gt;To select multiple columns, we need to add their names to the select verb. Let´s select information about Faculty’s full name, nationality,sex, and salary.&lt;/p&gt;
+&lt;p&gt;To select multiple columns, we need to add their names to the &lt;code&gt;select()&lt;/code&gt; verb. Let´s select information about Faculty’s full name, nationality, sex, and salary.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(data,EmployeeName,Nationality, Sex, Salary)
 ## # A tibble: 850 × 4
 ##    EmployeeName          Nationality Sex   Salary
@@ -1705,7 +1706,7 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 &lt;/div&gt;
 &lt;div id=&#34;creating-columns&#34; class=&#34;section level3&#34; number=&#34;2.4.4&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4.4&lt;/span&gt; Creating columns&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;mutate()&lt;/code&gt; verb is useful for adding new columns to a dataframe, which will have the results of operations on already existing columns.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;mutate()&lt;/code&gt; verb is useful for creating new columns to a dataframe, which will have the results of operations on already existing columns.&lt;/p&gt;
 &lt;p&gt;For example, we would like to add a new column with a salary adjustment of 10%. Let´s create the &lt;code&gt;AdjSalary&lt;/code&gt; column.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(data,AdjSalary = Salary+Salary*0.1)
 ## # A tibble: 850 × 33
@@ -1722,6 +1723,24 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 ##  9     2019         2019 Bachiochi, Lin… F          1967 Spain                 3
 ## 10     2019         2019 Newman, Richard M          1969 Spain                 3
 ## # … with 840 more rows, and 26 more variables: SchoolApp &amp;lt;chr&amp;gt;, Salary &amp;lt;dbl&amp;gt;,
+## #   DaysLateLast30 &amp;lt;dbl&amp;gt;, Absences &amp;lt;dbl&amp;gt;, ResearchArea &amp;lt;chr&amp;gt;,
+## #   JobSatisfaction &amp;lt;dbl&amp;gt;, SelfEvalResp &amp;lt;dbl&amp;gt;, SelfEvalTech &amp;lt;dbl&amp;gt;,
+## #   SelfEvalInnov &amp;lt;dbl&amp;gt;, StudentEvalResp &amp;lt;dbl&amp;gt;, StudentEvalTech &amp;lt;dbl&amp;gt;,
+## #   StudentEvalInnov &amp;lt;dbl&amp;gt;, CoursesUnd &amp;lt;dbl&amp;gt;, CoursesGrad &amp;lt;dbl&amp;gt;,
+## #   MentoringResProj &amp;lt;dbl&amp;gt;, MentoringTheses &amp;lt;dbl&amp;gt;, NumPublication &amp;lt;dbl&amp;gt;,
+## #   SubManuscripts &amp;lt;dbl&amp;gt;, NumCitations &amp;lt;dbl&amp;gt;, NumBooks &amp;lt;dbl&amp;gt;, …
+
+head(mutate(data,AdjSalary = Salary+Salary*0.1))
+## # A tibble: 6 × 33
+##   AcadYear FirstYearApp EmployeeName     Sex   YearBirth Nationality Appointment
+##      &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;            &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;
+## 1     2019         2019 Adinolfi, Wilso… M          1987 USA                   1
+## 2     2019         2019 Ait Sidi, Karth… M          1985 USA                   1
+## 3     2019         2019 Akinkuolie, Sar… F          1981 USA                   1
+## 4     2019         2019 Alagbe,Trina     F          1979 USA                   1
+## 5     2019         2019 Anderson, Carol  F          1977 USA                   1
+## 6     2019         2019 Anderson, Linda  F          1977 England               2
+## # … with 26 more variables: SchoolApp &amp;lt;chr&amp;gt;, Salary &amp;lt;dbl&amp;gt;,
 ## #   DaysLateLast30 &amp;lt;dbl&amp;gt;, Absences &amp;lt;dbl&amp;gt;, ResearchArea &amp;lt;chr&amp;gt;,
 ## #   JobSatisfaction &amp;lt;dbl&amp;gt;, SelfEvalResp &amp;lt;dbl&amp;gt;, SelfEvalTech &amp;lt;dbl&amp;gt;,
 ## #   SelfEvalInnov &amp;lt;dbl&amp;gt;, StudentEvalResp &amp;lt;dbl&amp;gt;, StudentEvalTech &amp;lt;dbl&amp;gt;,
@@ -1772,7 +1791,7 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 ## 10 Nowlan, Kristie   F          1982 Canada     
 ## # … with 476 more rows&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The above code reduced the dimensions of our data frame [486 × 4].
-Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;code&gt;EmployeeName&lt;/code&gt; column, we will use the &lt;code&gt;arrange(verb)&lt;/code&gt;.&lt;/p&gt;
+Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;code&gt;EmployeeName&lt;/code&gt; column, we will use the &lt;code&gt;arrange()&lt;/code&gt; verb.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data %&amp;gt;% 
   select(EmployeeName,Sex,YearBirth,Nationality) %&amp;gt;% 
   filter(Sex==&amp;quot;F&amp;quot;) %&amp;gt;% 
@@ -1821,6 +1840,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 ##   &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
 ## 1 F         67651.             10.2
 ## 2 M         69773.             10.4&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the next session, we will apply &lt;code&gt;dplyr&lt;/code&gt; verbs to create visualizations using &lt;code&gt;ggplot2&lt;/code&gt; package.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;

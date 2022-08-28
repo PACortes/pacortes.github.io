@@ -294,7 +294,7 @@
   
   <meta property="og:site_name" content="Pablo Cortes" />
   <meta property="og:url" content="https://academic-demo.netlify.app/workshops/neom/dplyr/" />
-  <meta property="og:title" content="Day 2: Data manipulation | Pablo Cortes" />
+  <meta property="og:title" content="Day 2: Data Manipulation | Pablo Cortes" />
   <meta property="og:description" content="1 Data Manipulation 2 Data Manipulation with dplyr  2.1 dplyr syntax 2.2 Pipe operator 2.3 Loading our data 2.4 dplyr verbs  2.4.1 Looking at the data 2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
     <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
   
@@ -321,7 +321,7 @@
 
 
 
-  <title>Day 2: Data manipulation | Pablo Cortes</title>
+  <title>Day 2: Data Manipulation | Pablo Cortes</title>
 </head>
 
 
@@ -783,7 +783,7 @@
 
 
 
-  <li class="active"><a href="/workshops/neom/dplyr/">Day 2: Data manipulation</a></li>
+  <li class="active"><a href="/workshops/neom/dplyr/">Day 2: Data Manipulation</a></li>
 
       
         </ul>
@@ -857,7 +857,7 @@
 
 
       <li class="breadcrumb-item active" aria-current="page">
-        Day 2: Data manipulation
+        Day 2: Data Manipulation
       </li>
     </ol>
   </nav>
@@ -865,7 +865,7 @@
 
           
 
-          <h1>Day 2: Data manipulation</h1>
+          <h1>Day 2: Data Manipulation</h1>
 
           <div class="article-style">
             
@@ -900,7 +900,7 @@
 <div id="data-manipulation-with-dplyr" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Data Manipulation with <code>dplyr</code></h1>
 <p><code>dplyr</code> is a powerful R-package to transform and summarize tabular data with rows and columns. It was created to enable efficient manipulation of data with the advantages of speed and simplicity of coding.</p>
-<p><code>dplyr</code> provides a consistent set of functions,which we sometimes call verbs. Each of these <code>dplyr</code> verbs does one thing. Each verb is named in a way that is extremely easy to remember. Some of these include:</p>
+<p><code>dplyr</code> provides a consistent set of functions, which we sometimes call verbs. Each of these <code>dplyr</code> verbs does one thing. Each verb is named in a way that is extremely easy to remember. Some of these include:</p>
 <ul>
 <li><p><code>glimpse()</code>: to examine our dataset.</p></li>
 <li><p><code>select()</code>: to select columns (variables) by their names.</p></li>
@@ -922,7 +922,6 @@
 <div id="dplyr-syntax" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> <code>dplyr</code> syntax</h2>
 <p>All <code>dplyr</code> verbs share a similar syntax.</p>
-<p>Syntax:</p>
 <p><code>dplyr_verb(dataframe, stuff-to-do)</code></p>
 <p>Arguments:</p>
 <ul>
@@ -939,7 +938,7 @@
 <h2><span class="header-section-number">2.3</span> Loading our data</h2>
 <p>To explore the functions of <code>dplyr</code>, we need a dataset. We will use the <code>FacultyAffairs</code> dataset.</p>
 <p>We can load the dataset into the current R session by selecting <code>Import Dataset&gt;From Excel File...</code> in the Environment tab.</p>
-<p><img src="/workshops/neom/dplyr_files/importing.png" width="400" height="200" /></p>
+<p><img src="/workshops/neom/dplyr_files/importing.png" width="800" height="400" /></p>
 </div>
 <div id="dplyr-verbs" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> <code>dplyr</code> verbs</h2>
@@ -1013,7 +1012,7 @@
 ##  9 Bachiochi, Linda     
 ## 10 Newman, Richard      
 ## # … with 840 more rows</code></pre>
-<p>The <code>select()</code> verb can also be used to drop columns from a dataframe using the the <code>-</code>symbol. The following code can be read as follows: “From the data dataset, select all columns that are not the EmployeeName column”.</p>
+<p>The <code>select()</code> verb can also be used to drop columns from a dataframe using the the <code>-</code> symbol. The following code can be read as follows: “From the data dataset, select all columns that are not the EmployeeName column”.</p>
 <pre class="r"><code>select(data,-EmployeeName)
 ## # A tibble: 850 × 31
 ##    AcadYear FirstYearApp Sex   YearBirth Nationality Appointment SchoolApp      
@@ -1036,7 +1035,7 @@
 ## #   MentoringResProj &lt;dbl&gt;, MentoringTheses &lt;dbl&gt;, NumPublication &lt;dbl&gt;,
 ## #   SubManuscripts &lt;dbl&gt;, NumCitations &lt;dbl&gt;, NumBooks &lt;dbl&gt;, …</code></pre>
 <p>The above code reduced the dimensions of our data frame [850 × 31].</p>
-<p>To select multiple columns, we need to add their names to the select verb. Let´s select information about Faculty’s full name, nationality,sex, and salary.</p>
+<p>To select multiple columns, we need to add their names to the <code>select()</code> verb. Let´s select information about Faculty’s full name, nationality, sex, and salary.</p>
 <pre class="r"><code>select(data,EmployeeName,Nationality, Sex, Salary)
 ## # A tibble: 850 × 4
 ##    EmployeeName          Nationality Sex   Salary
@@ -1104,7 +1103,7 @@
 </div>
 <div id="creating-columns" class="section level3" number="2.4.4">
 <h3><span class="header-section-number">2.4.4</span> Creating columns</h3>
-<p>The <code>mutate()</code> verb is useful for adding new columns to a dataframe, which will have the results of operations on already existing columns.</p>
+<p>The <code>mutate()</code> verb is useful for creating new columns to a dataframe, which will have the results of operations on already existing columns.</p>
 <p>For example, we would like to add a new column with a salary adjustment of 10%. Let´s create the <code>AdjSalary</code> column.</p>
 <pre class="r"><code>mutate(data,AdjSalary = Salary+Salary*0.1)
 ## # A tibble: 850 × 33
@@ -1121,6 +1120,24 @@
 ##  9     2019         2019 Bachiochi, Lin… F          1967 Spain                 3
 ## 10     2019         2019 Newman, Richard M          1969 Spain                 3
 ## # … with 840 more rows, and 26 more variables: SchoolApp &lt;chr&gt;, Salary &lt;dbl&gt;,
+## #   DaysLateLast30 &lt;dbl&gt;, Absences &lt;dbl&gt;, ResearchArea &lt;chr&gt;,
+## #   JobSatisfaction &lt;dbl&gt;, SelfEvalResp &lt;dbl&gt;, SelfEvalTech &lt;dbl&gt;,
+## #   SelfEvalInnov &lt;dbl&gt;, StudentEvalResp &lt;dbl&gt;, StudentEvalTech &lt;dbl&gt;,
+## #   StudentEvalInnov &lt;dbl&gt;, CoursesUnd &lt;dbl&gt;, CoursesGrad &lt;dbl&gt;,
+## #   MentoringResProj &lt;dbl&gt;, MentoringTheses &lt;dbl&gt;, NumPublication &lt;dbl&gt;,
+## #   SubManuscripts &lt;dbl&gt;, NumCitations &lt;dbl&gt;, NumBooks &lt;dbl&gt;, …
+
+head(mutate(data,AdjSalary = Salary+Salary*0.1))
+## # A tibble: 6 × 33
+##   AcadYear FirstYearApp EmployeeName     Sex   YearBirth Nationality Appointment
+##      &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt;
+## 1     2019         2019 Adinolfi, Wilso… M          1987 USA                   1
+## 2     2019         2019 Ait Sidi, Karth… M          1985 USA                   1
+## 3     2019         2019 Akinkuolie, Sar… F          1981 USA                   1
+## 4     2019         2019 Alagbe,Trina     F          1979 USA                   1
+## 5     2019         2019 Anderson, Carol  F          1977 USA                   1
+## 6     2019         2019 Anderson, Linda  F          1977 England               2
+## # … with 26 more variables: SchoolApp &lt;chr&gt;, Salary &lt;dbl&gt;,
 ## #   DaysLateLast30 &lt;dbl&gt;, Absences &lt;dbl&gt;, ResearchArea &lt;chr&gt;,
 ## #   JobSatisfaction &lt;dbl&gt;, SelfEvalResp &lt;dbl&gt;, SelfEvalTech &lt;dbl&gt;,
 ## #   SelfEvalInnov &lt;dbl&gt;, StudentEvalResp &lt;dbl&gt;, StudentEvalTech &lt;dbl&gt;,
@@ -1171,7 +1188,7 @@
 ## 10 Nowlan, Kristie   F          1982 Canada     
 ## # … with 476 more rows</code></pre>
 <p>The above code reduced the dimensions of our data frame [486 × 4].
-Now, let´s order alphabetically the new dataframe. To reorder the rows of <code>EmployeeName</code> column, we will use the <code>arrange(verb)</code>.</p>
+Now, let´s order alphabetically the new dataframe. To reorder the rows of <code>EmployeeName</code> column, we will use the <code>arrange()</code> verb.</p>
 <pre class="r"><code>data %&gt;% 
   select(EmployeeName,Sex,YearBirth,Nationality) %&gt;% 
   filter(Sex==&quot;F&quot;) %&gt;% 
@@ -1220,6 +1237,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of <code
 ##   &lt;chr&gt;      &lt;dbl&gt;            &lt;dbl&gt;
 ## 1 F         67651.             10.2
 ## 2 M         69773.             10.4</code></pre>
+<p>In the next session, we will apply <code>dplyr</code> verbs to create visualizations using <code>ggplot2</code> package.</p>
 </div>
 </div>
 </div>
