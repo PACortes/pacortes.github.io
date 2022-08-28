@@ -1,0 +1,1483 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Pablo Cortés García" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="1 Data Manipulation 2 Data Manipulation with dplyr  2.1 dplyr syntax 2.2 Pipe operator 2.3 Loading our data 2.4 dplyr verbs  2.4.1 Looking at the data 2." />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://academic-demo.netlify.app/workshops/neom/dplyr/" />
+
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.481af39c39ffd87b2d14f39943e7c723.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://academic-demo.netlify.app/workshops/neom/dplyr/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary" />
+  
+  <meta property="og:site_name" content="Pablo Cortes" />
+  <meta property="og:url" content="https://academic-demo.netlify.app/workshops/neom/dplyr/" />
+  <meta property="og:title" content="Day 2: Data manipulation | Pablo Cortes" />
+  <meta property="og:description" content="1 Data Manipulation 2 Data Manipulation with dplyr  2.1 dplyr syntax 2.2 Pipe operator 2.3 Loading our data 2.4 dplyr verbs  2.4.1 Looking at the data 2." /><meta property="og:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" />
+    <meta property="twitter:image" content="https://academic-demo.netlify.app/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-08-28T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-08-28T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Day 2: Data manipulation | Pablo Cortes</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b4549bb7b6314b5fcddeafba8a822edc" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Pablo Cortes</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Pablo Cortes</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Opinión</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/publication/"><span>Publicaciones</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>R</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/workshops/"><span>Workshops</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contacto</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://www.researchgate.net/profile/Pablo_Cortes11" target="_blank" rel="noopener" aria-label="researchgate">
+              <i class="fab fa-researchgate" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    
+
+
+
+
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-md-3 w-100" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <div class="d-flex">
+      <span class="d-md-none pl-1 flex-grow-1 text-left overflow-hidden">
+        
+          Introduction
+        
+      </span>
+      <span><i class="fas fa-chevron-down"></i></span>
+    </div>
+  </button>
+
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+
+  
+  
+    
+
+    
+      
+
+      <ul class="nav docs-sidenav">
+        <li><a href="/workshops/"><i class="fas fa-arrow-left pr-1"></i>Workshops and Training Courses</a></li>
+      </ul>
+
+      
+      
+        
+          
+        
+      
+
+
+  
+    
+    
+    
+    
+      
+    
+    
+
+    
+      <div class="docs-toc-item">
+        <a class="docs-toc-link " href="/workshops/neom/">Introduction</a>
+    
+      
+        <ul class="nav docs-sidenav">
+      
+
+
+  <li class=""><a href="/workshops/neom/rabout/">Day 1: About R &amp; RStudio</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/exploringr/">Day 1: Exploring R &amp; RStudio</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/packages/">Day 1: Packages</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/datatypes/">Day 1: R Data Types</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/dataset/">Day 1: Our Dataset</a></li>
+
+
+
+  <li class=""><a href="/workshops/neom/importing/">Day 2: Importing data</a></li>
+
+
+
+  <li class="active"><a href="/workshops/neom/dplyr/">Day 2: Data manipulation</a></li>
+
+      
+        </ul>
+      
+    
+
+    
+      </div>
+    
+
+    
+  
+</nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      
+
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          
+            
+  <nav class="d-none d-md-flex" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      
+  
+  
+  
+
+  <li class="breadcrumb-item">
+    <a href="/">
+      
+        Home
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/workshops/">
+      
+        Workshops and Training Courses
+      
+    </a>
+  </li>
+
+
+  <li class="breadcrumb-item">
+    <a href="/workshops/neom/">
+      
+        Introduction
+      
+    </a>
+  </li>
+
+
+      <li class="breadcrumb-item active" aria-current="page">
+        Day 2: Data manipulation
+      </li>
+    </ol>
+  </nav>
+
+
+          
+
+          <h1>Day 2: Data manipulation</h1>
+
+          <div class="article-style">
+            
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#data-manipulation" id="toc-data-manipulation"><span class="toc-section-number">1</span> Data Manipulation</a></li>
+<li><a href="#data-manipulation-with-dplyr" id="toc-data-manipulation-with-dplyr"><span class="toc-section-number">2</span> Data Manipulation with <code>dplyr</code></a>
+<ul>
+<li><a href="#dplyr-syntax" id="toc-dplyr-syntax"><span class="toc-section-number">2.1</span> <code>dplyr</code> syntax</a></li>
+<li><a href="#pipe-operator" id="toc-pipe-operator"><span class="toc-section-number">2.2</span> Pipe operator</a></li>
+<li><a href="#loading-our-data" id="toc-loading-our-data"><span class="toc-section-number">2.3</span> Loading our data</a></li>
+<li><a href="#dplyr-verbs" id="toc-dplyr-verbs"><span class="toc-section-number">2.4</span> <code>dplyr</code> verbs</a>
+<ul>
+<li><a href="#looking-at-the-data" id="toc-looking-at-the-data"><span class="toc-section-number">2.4.1</span> Looking at the data</a></li>
+<li><a href="#selecting-columns" id="toc-selecting-columns"><span class="toc-section-number">2.4.2</span> Selecting columns</a></li>
+<li><a href="#filtering-rows" id="toc-filtering-rows"><span class="toc-section-number">2.4.3</span> Filtering rows</a></li>
+<li><a href="#creating-columns" id="toc-creating-columns"><span class="toc-section-number">2.4.4</span> Creating columns</a></li>
+<li><a href="#sumarizing-columns" id="toc-sumarizing-columns"><span class="toc-section-number">2.4.5</span> Sumarizing columns</a></li>
+<li><a href="#multiple-verbs-at-once" id="toc-multiple-verbs-at-once"><span class="toc-section-number">2.4.6</span> Multiple verbs at once</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="data-manipulation" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Data Manipulation</h1>
+<p>In real-life, data is not always presented analysis-ready. Most of the time it has gaps, missing values, incorrect date formats, missing variable names, no variable names, or variables scattered into multiple columns etc. When this kind of data is presented for analysis, it needs intervention to make it tidy.</p>
+<p>Data manipulation is the process of organizing data to read and understand it better. We manipulate data for analysis and visualization.</p>
+</div>
+<div id="data-manipulation-with-dplyr" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Data Manipulation with <code>dplyr</code></h1>
+<p><code>dplyr</code> is a powerful R-package to transform and summarize tabular data with rows and columns. It was created to enable efficient manipulation of data with the advantages of speed and simplicity of coding.</p>
+<p><code>dplyr</code> provides a consistent set of functions,which we sometimes call verbs. Each of these <code>dplyr</code> verbs does one thing. Each verb is named in a way that is extremely easy to remember. Some of these include:</p>
+<ul>
+<li><p><code>glimpse()</code>: to examine our dataset.</p></li>
+<li><p><code>select()</code>: to select columns (variables) by their names.</p></li>
+<li><p><code>filter()</code>: to pick rows (observations/samples) based on their values.</p></li>
+<li><p><code>mutate()</code>: to create new variables.</p></li>
+<li><p><code>summarize()</code>: to compute statistical summaries.</p>
+<ul>
+<li><code>mean</code>: calculate the mean, or average.</li>
+<li><code>median</code>: calculate the median.</li>
+<li><code>max</code>: find the maximum value.</li>
+<li><code>min</code>: find the minimum value</li>
+<li><code>sum</code>: add all the values together.</li>
+<li><code>n</code>: count the number of records.</li>
+</ul></li>
+<li><p><code>distinct()</code>: to remove duplicate rows.</p></li>
+<li><p><code>arrange()</code>: to reorder the rows.</p></li>
+<li><p><code>group_by()</code>: to break down the dataset into specified groups of rows.</p></li>
+</ul>
+<div id="dplyr-syntax" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> <code>dplyr</code> syntax</h2>
+<p>All <code>dplyr</code> verbs share a similar syntax.</p>
+<p>Syntax:</p>
+<p><code>dplyr_verb(dataframe, stuff-to-do)</code></p>
+<p>Arguments:</p>
+<ul>
+<li>dplyr_verb : The name of the dplyr verb.</li>
+<li>dataframe : The name of the dataframe to operate on.</li>
+<li>stuff-to-do : Syntax that specifies exactly how to execute the dplyr verb.</li>
+</ul>
+</div>
+<div id="pipe-operator" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Pipe operator</h2>
+<p>These verbs can be chained together using the pipe operator (<code>%&gt;%</code>) to perform more complex data manipulations. Basically, the pipe operator makes the output of one line of code the input for the next.</p>
+</div>
+<div id="loading-our-data" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Loading our data</h2>
+<p>To explore the functions of <code>dplyr</code>, we need a dataset. We will use the <code>FacultyAffairs</code> dataset.</p>
+<p>We can load the dataset into the current R session by selecting <code>Import Dataset&gt;From Excel File...</code> in the Environment tab.</p>
+<p><img src="/workshops/neom/dplyr_files/importing.png" width="400" height="200" /></p>
+</div>
+<div id="dplyr-verbs" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> <code>dplyr</code> verbs</h2>
+<p>Before using <code>dplyr</code> it is necessary to install it, since it is not a part of base R.</p>
+<p>The <code>dplyr</code> package is hosted in the CRAN repository. Any package from the CRAN repository can be installed using the function <code>install.packages("dplyr")</code></p>
+<p>Now that we have the dplyr package installed we need to load it to our R workspace. For this purpose we can use the <code>library()</code> function. If installed correctly, the message “Attaching package: ‘dplyr’” will appear.</p>
+<pre class="r"><code>library(dplyr)
+## 
+## Attaching package: &#39;dplyr&#39;
+## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag
+## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<div id="looking-at-the-data" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Looking at the data</h3>
+<p>The verb <code>glimpse()</code> allow us to see the columns selected in the output without printing all the data every time.</p>
+<pre class="r"><code>glimpse(data)
+## Rows: 850
+## Columns: 32
+## $ AcadYear         &lt;dbl&gt; 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019,…
+## $ FirstYearApp     &lt;dbl&gt; 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019,…
+## $ EmployeeName     &lt;chr&gt; &quot;Adinolfi, Wilson  K&quot;, &quot;Ait Sidi, Karthikeyan&quot;, &quot;Akin…
+## $ Sex              &lt;chr&gt; &quot;M&quot;, &quot;M&quot;, &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot;F&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;F&quot;…
+## $ YearBirth        &lt;dbl&gt; 1987, 1985, 1981, 1979, 1977, 1977, 1975, 1985, 1967,…
+## $ Nationality      &lt;chr&gt; &quot;USA&quot;, &quot;USA&quot;, &quot;USA&quot;, &quot;USA&quot;, &quot;USA&quot;, &quot;England&quot;, &quot;Englan…
+## $ Appointment      &lt;dbl&gt; 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 1, 1, 1, 1, 1, 2, 2, 2,…
+## $ SchoolApp        &lt;chr&gt; &quot;ComputerScience&quot;, &quot;ComputerScience&quot;, &quot;ComputerScienc…
+## $ Salary           &lt;dbl&gt; 62506, 104437, 64955, 64991, 50825, 57568, 95660, 593…
+## $ DaysLateLast30   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+## $ Absences         &lt;dbl&gt; 1, 17, 3, 15, 2, 15, 19, 19, 4, 16, 12, 15, 9, 7, 1, …
+## $ ResearchArea     &lt;chr&gt; &quot;AI&quot;, &quot;CC&quot;, &quot;ML&quot;, &quot;ML&quot;, &quot;AI&quot;, &quot;AI&quot;, &quot;ML&quot;, &quot;AI&quot;, &quot;CC&quot;,…
+## $ JobSatisfaction  &lt;dbl&gt; 5, 4, 4, 5, 3, 4, 2, 3, 2, 3, 5, 5, 5, 1, 5, 5, 5, 5,…
+## $ SelfEvalResp     &lt;dbl&gt; 3, 4, 3, 3, 3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 4, 3, 3, 3,…
+## $ SelfEvalTech     &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 4,…
+## $ SelfEvalInnov    &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
+## $ StudentEvalResp  &lt;dbl&gt; 3, 3, 3, 4, 3, 3, 3, 4, 4, 3, 3, 3, 4, 3, 3, 4, 4, 3,…
+## $ StudentEvalTech  &lt;dbl&gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
+## $ StudentEvalInnov &lt;dbl&gt; 4, 4, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
+## $ CoursesUnd       &lt;dbl&gt; 5, 4, 5, 5, 5, 4, 3, 5, 4, 4, 5, 5, 4, 5, 3, 5, 5, 5,…
+## $ CoursesGrad      &lt;dbl&gt; 2, 4, 1, 1, 3, 1, 1, 1, 3, 1, 2, 1, 4, 3, 1, 1, 1, 3,…
+## $ MentoringResProj &lt;dbl&gt; 7, 7, 6, 7, 6, 7, 7, 2, 5, 7, 7, 7, 7, 6, 7, 7, 7, 2,…
+## $ MentoringTheses  &lt;dbl&gt; 5, 5, 5, 5, 3, 5, 5, 0, 5, 5, 5, 5, 2, 5, 4, 5, 5, 5,…
+## $ NumPublication   &lt;dbl&gt; 13, 14, 6, 6, 12, 13, 8, 9, 12, 13, 10, 12, 10, 10, 9…
+## $ SubManuscripts   &lt;dbl&gt; 12, 14, 11, 10, 12, 13, 13, 11, 13, 11, 12, 13, 11, 1…
+## $ NumCitations     &lt;dbl&gt; 213, 236, 199, 181, 224, 211, 214, 178, 200, 241, 230…
+## $ NumBooks         &lt;dbl&gt; 0, 0, 0, 0, 0, 1, 1, 1, 2, 3, 3, 0, 1, 1, 1, 0, 1, 1,…
+## $ NumConferences   &lt;dbl&gt; 0, 1, 2, 1, 2, 1, 2, 2, 2, 1, 3, 3, 2, 1, 0, 1, 2, 3,…
+## $ ResGrantsAwa     &lt;dbl&gt; 4, 3, 3, 4, 3, 4, 3, 5, 4, 3, 3, 4, 4, 4, 2, 4, 5, 4,…
+## $ ResGrantsSub     &lt;dbl&gt; 2, 2, 4, 4, 2, 2, 3, 4, 3, 2, 2, 2, 3, 3, 2, 4, 3, 4,…
+## $ NumComUniv       &lt;dbl&gt; 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 2, 0, 1, 0, 2, 1,…
+## $ NumOut           &lt;dbl&gt; 0, 1, 0, 1, 2, 2, 0, 2, 0, 1, 0, 1, 0, 0, 0, 2, 0, 2,…</code></pre>
+</div>
+<div id="selecting-columns" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Selecting columns</h3>
+<p>To select a few columns we need to add their names to the select verb. The order in which we add them, will determine the order in which they appear in the output.</p>
+<p>For example, let´s select the information about Faculty’s full name. The following code can be read as follows: “From the data dataset, select only the EmployeeName column”.</p>
+<pre class="r"><code>select(data,EmployeeName)
+## # A tibble: 850 × 1
+##    EmployeeName         
+##    &lt;chr&gt;                
+##  1 Adinolfi, Wilson  K  
+##  2 Ait Sidi, Karthikeyan
+##  3 Akinkuolie, Sarah    
+##  4 Alagbe,Trina         
+##  5 Anderson, Carol      
+##  6 Anderson, Linda      
+##  7 Andreola, Colby      
+##  8 Athwal, Sam          
+##  9 Bachiochi, Linda     
+## 10 Newman, Richard      
+## # … with 840 more rows</code></pre>
+<p>The <code>select()</code> verb can also be used to drop columns from a dataframe using the the <code>-</code>symbol. The following code can be read as follows: “From the data dataset, select all columns that are not the EmployeeName column”.</p>
+<pre class="r"><code>select(data,-EmployeeName)
+## # A tibble: 850 × 31
+##    AcadYear FirstYearApp Sex   YearBirth Nationality Appointment SchoolApp      
+##       &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;          
+##  1     2019         2019 M          1987 USA                   1 ComputerScience
+##  2     2019         2019 M          1985 USA                   1 ComputerScience
+##  3     2019         2019 F          1981 USA                   1 ComputerScience
+##  4     2019         2019 F          1979 USA                   1 ComputerScience
+##  5     2019         2019 F          1977 USA                   1 ComputerScience
+##  6     2019         2019 F          1977 England               2 ComputerScience
+##  7     2019         2019 F          1975 England               2 ComputerScience
+##  8     2019         2019 M          1985 England               2 ComputerScience
+##  9     2019         2019 F          1967 Spain                 3 ComputerScience
+## 10     2019         2019 M          1969 Spain                 3 ComputerScience
+## # … with 840 more rows, and 24 more variables: Salary &lt;dbl&gt;,
+## #   DaysLateLast30 &lt;dbl&gt;, Absences &lt;dbl&gt;, ResearchArea &lt;chr&gt;,
+## #   JobSatisfaction &lt;dbl&gt;, SelfEvalResp &lt;dbl&gt;, SelfEvalTech &lt;dbl&gt;,
+## #   SelfEvalInnov &lt;dbl&gt;, StudentEvalResp &lt;dbl&gt;, StudentEvalTech &lt;dbl&gt;,
+## #   StudentEvalInnov &lt;dbl&gt;, CoursesUnd &lt;dbl&gt;, CoursesGrad &lt;dbl&gt;,
+## #   MentoringResProj &lt;dbl&gt;, MentoringTheses &lt;dbl&gt;, NumPublication &lt;dbl&gt;,
+## #   SubManuscripts &lt;dbl&gt;, NumCitations &lt;dbl&gt;, NumBooks &lt;dbl&gt;, …</code></pre>
+<p>The above code reduced the dimensions of our data frame [850 × 31].</p>
+<p>To select multiple columns, we need to add their names to the select verb. Let´s select information about Faculty’s full name, nationality,sex, and salary.</p>
+<pre class="r"><code>select(data,EmployeeName,Nationality, Sex, Salary)
+## # A tibble: 850 × 4
+##    EmployeeName          Nationality Sex   Salary
+##    &lt;chr&gt;                 &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;
+##  1 Adinolfi, Wilson  K   USA         M      62506
+##  2 Ait Sidi, Karthikeyan USA         M     104437
+##  3 Akinkuolie, Sarah     USA         F      64955
+##  4 Alagbe,Trina          USA         F      64991
+##  5 Anderson, Carol       USA         F      50825
+##  6 Anderson, Linda       England     F      57568
+##  7 Andreola, Colby       England     F      95660
+##  8 Athwal, Sam           England     M      59365
+##  9 Bachiochi, Linda      Spain       F      47837
+## 10 Newman, Richard       Spain       M      50178
+## # … with 840 more rows</code></pre>
+</div>
+<div id="filtering-rows" class="section level3" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Filtering rows</h3>
+<p>The <code>filter()</code> verb is used to extract rows, based on a specified condition.</p>
+<p>For example, we want to extract only the rows belonging to female faculty.</p>
+<pre class="r"><code>filter(data,Sex == &quot;F&quot;)
+## # A tibble: 486 × 32
+##    AcadYear FirstYearApp EmployeeName    Sex   YearBirth Nationality Appointment
+##       &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt;
+##  1     2019         2019 Akinkuolie, Sa… F          1981 USA                   1
+##  2     2019         2019 Alagbe,Trina    F          1979 USA                   1
+##  3     2019         2019 Anderson, Carol F          1977 USA                   1
+##  4     2019         2019 Anderson, Linda F          1977 England               2
+##  5     2019         2019 Andreola, Colby F          1975 England               2
+##  6     2019         2019 Bachiochi, Lin… F          1967 Spain                 3
+##  7     2019         2019 Ngodup, Shari   F          1981 Australia             1
+##  8     2019         2019 Nguyen, Dheepa  F          1977 Australia             1
+##  9     2019         2019 Nguyen, Lei-Mi… F          1982 Denmark               1
+## 10     2019         2019 Nowlan, Kristie F          1982 Canada                1
+## # … with 476 more rows, and 25 more variables: SchoolApp &lt;chr&gt;, Salary &lt;dbl&gt;,
+## #   DaysLateLast30 &lt;dbl&gt;, Absences &lt;dbl&gt;, ResearchArea &lt;chr&gt;,
+## #   JobSatisfaction &lt;dbl&gt;, SelfEvalResp &lt;dbl&gt;, SelfEvalTech &lt;dbl&gt;,
+## #   SelfEvalInnov &lt;dbl&gt;, StudentEvalResp &lt;dbl&gt;, StudentEvalTech &lt;dbl&gt;,
+## #   StudentEvalInnov &lt;dbl&gt;, CoursesUnd &lt;dbl&gt;, CoursesGrad &lt;dbl&gt;,
+## #   MentoringResProj &lt;dbl&gt;, MentoringTheses &lt;dbl&gt;, NumPublication &lt;dbl&gt;,
+## #   SubManuscripts &lt;dbl&gt;, NumCitations &lt;dbl&gt;, NumBooks &lt;dbl&gt;, …</code></pre>
+<p>The above code reduced the dimensions of our data frame [486 × 32].</p>
+<p>The <code>filter()</code> verb can also be used to extract rows, based on multiple conditions. Let´s extract the rows belonging to female faculty who published at least five research articles during academic year 2021.</p>
+<pre class="r"><code>filter(data,Sex == &quot;F&quot; &amp;  AcadYear  == &quot;2021&quot; &amp; NumPublication &gt; 5)
+## # A tibble: 120 × 32
+##    AcadYear FirstYearApp EmployeeName    Sex   YearBirth Nationality Appointment
+##       &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt;
+##  1     2021         2019 Akinkuolie, Sa… F          1981 USA                   1
+##  2     2021         2019 Alagbe,Trina    F          1979 USA                   1
+##  3     2021         2019 Anderson, Carol F          1977 USA                   1
+##  4     2021         2019 Anderson, Linda F          1977 England               2
+##  5     2021         2019 Andreola, Colby F          1975 England               2
+##  6     2021         2019 Bachiochi, Lin… F          1967 Spain                 3
+##  7     2021         2019 Baczenski, Rac… F          1981 Australia             1
+##  8     2021         2019 Beak, Kimberly  F          1977 USA                   2
+##  9     2021         2019 Beatrice, Cour… F          1981 USA                   2
+## 10     2021         2019 Becker, Renee   F          1975 USA                   3
+## # … with 110 more rows, and 25 more variables: SchoolApp &lt;chr&gt;, Salary &lt;dbl&gt;,
+## #   DaysLateLast30 &lt;dbl&gt;, Absences &lt;dbl&gt;, ResearchArea &lt;chr&gt;,
+## #   JobSatisfaction &lt;dbl&gt;, SelfEvalResp &lt;dbl&gt;, SelfEvalTech &lt;dbl&gt;,
+## #   SelfEvalInnov &lt;dbl&gt;, StudentEvalResp &lt;dbl&gt;, StudentEvalTech &lt;dbl&gt;,
+## #   StudentEvalInnov &lt;dbl&gt;, CoursesUnd &lt;dbl&gt;, CoursesGrad &lt;dbl&gt;,
+## #   MentoringResProj &lt;dbl&gt;, MentoringTheses &lt;dbl&gt;, NumPublication &lt;dbl&gt;,
+## #   SubManuscripts &lt;dbl&gt;, NumCitations &lt;dbl&gt;, NumBooks &lt;dbl&gt;, …</code></pre>
+</div>
+<div id="creating-columns" class="section level3" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Creating columns</h3>
+<p>The <code>mutate()</code> verb is useful for adding new columns to a dataframe, which will have the results of operations on already existing columns.</p>
+<p>For example, we would like to add a new column with a salary adjustment of 10%. Let´s create the <code>AdjSalary</code> column.</p>
+<pre class="r"><code>mutate(data,AdjSalary = Salary+Salary*0.1)
+## # A tibble: 850 × 33
+##    AcadYear FirstYearApp EmployeeName    Sex   YearBirth Nationality Appointment
+##       &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;dbl&gt;
+##  1     2019         2019 Adinolfi, Wils… M          1987 USA                   1
+##  2     2019         2019 Ait Sidi, Kart… M          1985 USA                   1
+##  3     2019         2019 Akinkuolie, Sa… F          1981 USA                   1
+##  4     2019         2019 Alagbe,Trina    F          1979 USA                   1
+##  5     2019         2019 Anderson, Carol F          1977 USA                   1
+##  6     2019         2019 Anderson, Linda F          1977 England               2
+##  7     2019         2019 Andreola, Colby F          1975 England               2
+##  8     2019         2019 Athwal, Sam     M          1985 England               2
+##  9     2019         2019 Bachiochi, Lin… F          1967 Spain                 3
+## 10     2019         2019 Newman, Richard M          1969 Spain                 3
+## # … with 840 more rows, and 26 more variables: SchoolApp &lt;chr&gt;, Salary &lt;dbl&gt;,
+## #   DaysLateLast30 &lt;dbl&gt;, Absences &lt;dbl&gt;, ResearchArea &lt;chr&gt;,
+## #   JobSatisfaction &lt;dbl&gt;, SelfEvalResp &lt;dbl&gt;, SelfEvalTech &lt;dbl&gt;,
+## #   SelfEvalInnov &lt;dbl&gt;, StudentEvalResp &lt;dbl&gt;, StudentEvalTech &lt;dbl&gt;,
+## #   StudentEvalInnov &lt;dbl&gt;, CoursesUnd &lt;dbl&gt;, CoursesGrad &lt;dbl&gt;,
+## #   MentoringResProj &lt;dbl&gt;, MentoringTheses &lt;dbl&gt;, NumPublication &lt;dbl&gt;,
+## #   SubManuscripts &lt;dbl&gt;, NumCitations &lt;dbl&gt;, NumBooks &lt;dbl&gt;, …</code></pre>
+</div>
+<div id="sumarizing-columns" class="section level3" number="2.4.5">
+<h3><span class="header-section-number">2.4.5</span> Sumarizing columns</h3>
+<p>The <code>summarise()</code> verb is used to provide different summary statistics from a dataframe.</p>
+<p>For example, we want to summarise the means of salary of our faculty during 2019-2022 period.</p>
+<pre class="r"><code>summarise(data,
+          MeanSalary=mean(Salary))
+## # A tibble: 1 × 1
+##   MeanSalary
+##        &lt;dbl&gt;
+## 1     68707.</code></pre>
+<p>Now, let´s try to compute the salary and the minumum, mean and maximum number of publications of our faculty during 2019-2022 period.</p>
+<pre class="r"><code>summarise(data,
+          MeanSalary=mean(Salary),
+          MinPublications=min(NumPublication),
+          MeanPublications=mean(NumPublication),
+          MaxPublications=max(NumPublication))
+## # A tibble: 1 × 4
+##   MeanSalary MinPublications MeanPublications MaxPublications
+##        &lt;dbl&gt;           &lt;dbl&gt;            &lt;dbl&gt;           &lt;dbl&gt;
+## 1     68707.               1             9.99              18</code></pre>
+</div>
+<div id="multiple-verbs-at-once" class="section level3" number="2.4.6">
+<h3><span class="header-section-number">2.4.6</span> Multiple verbs at once</h3>
+<p>So far, we have only used one verb in each command line. However, these verbs can be chained together using the pipe operator (<code>%&gt;%</code>) to perform more complex data manipulations.</p>
+<p>Let´s try to reduce the dimension of our dataframe to work only with personal information of female faculty. To do that, we will use the pipe operator (<code>%&gt;%</code>) and <code>select ()</code> and <code>filter()</code> verbs.</p>
+<pre class="r"><code>data %&gt;% 
+  select(EmployeeName,Sex,YearBirth,Nationality) %&gt;% 
+  filter(Sex==&quot;F&quot;)
+## # A tibble: 486 × 4
+##    EmployeeName      Sex   YearBirth Nationality
+##    &lt;chr&gt;             &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;      
+##  1 Akinkuolie, Sarah F          1981 USA        
+##  2 Alagbe,Trina      F          1979 USA        
+##  3 Anderson, Carol   F          1977 USA        
+##  4 Anderson, Linda   F          1977 England    
+##  5 Andreola, Colby   F          1975 England    
+##  6 Bachiochi, Linda  F          1967 Spain      
+##  7 Ngodup, Shari     F          1981 Australia  
+##  8 Nguyen, Dheepa    F          1977 Australia  
+##  9 Nguyen, Lei-Ming  F          1982 Denmark    
+## 10 Nowlan, Kristie   F          1982 Canada     
+## # … with 476 more rows</code></pre>
+<p>The above code reduced the dimensions of our data frame [486 × 4].
+Now, let´s order alphabetically the new dataframe. To reorder the rows of <code>EmployeeName</code> column, we will use the <code>arrange(verb)</code>.</p>
+<pre class="r"><code>data %&gt;% 
+  select(EmployeeName,Sex,YearBirth,Nationality) %&gt;% 
+  filter(Sex==&quot;F&quot;) %&gt;% 
+  arrange(EmployeeName)
+## # A tibble: 486 × 4
+##    EmployeeName      Sex   YearBirth Nationality
+##    &lt;chr&gt;             &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;      
+##  1 Akinkuolie, Sarah F          1981 USA        
+##  2 Akinkuolie, Sarah F          1981 USA        
+##  3 Akinkuolie, Sarah F          1981 USA        
+##  4 Akinkuolie, Sarah F          1981 USA        
+##  5 Alagbe,Trina      F          1979 USA        
+##  6 Alagbe,Trina      F          1979 USA        
+##  7 Alagbe,Trina      F          1979 USA        
+##  8 Alagbe,Trina      F          1979 USA        
+##  9 Anderson, Carol   F          1977 USA        
+## 10 Anderson, Carol   F          1977 USA        
+## # … with 476 more rows</code></pre>
+<p>However, there is something wrong with this output. We have repeated information for each faculty. We can use <code>distinct()</code> to remove all duplicate rows.</p>
+<pre class="r"><code>data %&gt;% 
+  select(EmployeeName,Sex,YearBirth,Nationality) %&gt;% 
+  filter(Sex==&quot;F&quot;) %&gt;% 
+  distinct(EmployeeName)
+## # A tibble: 130 × 1
+##    EmployeeName     
+##    &lt;chr&gt;            
+##  1 Akinkuolie, Sarah
+##  2 Alagbe,Trina     
+##  3 Anderson, Carol  
+##  4 Anderson, Linda  
+##  5 Andreola, Colby  
+##  6 Bachiochi, Linda 
+##  7 Ngodup, Shari    
+##  8 Nguyen, Dheepa   
+##  9 Nguyen, Lei-Ming 
+## 10 Nowlan, Kristie  
+## # … with 120 more rows</code></pre>
+<p>Now, let´s try something more complex. We want to compate the average salary and number of publications for male and female faculty during academic year 2021</p>
+<pre class="r"><code>data %&gt;% 
+  filter(AcadYear  == &quot;2021&quot;) %&gt;% 
+  group_by(Sex) %&gt;% 
+  summarize(MeanSalary=mean(Salary),
+            MeanPublications=mean(NumPublication))
+## # A tibble: 2 × 3
+##   Sex   MeanSalary MeanPublications
+##   &lt;chr&gt;      &lt;dbl&gt;            &lt;dbl&gt;
+## 1 F         67651.             10.2
+## 2 M         69773.             10.4</code></pre>
+</div>
+</div>
+</div>
+
+          </div>
+
+          
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/r/">R</a>
+  
+  <a class="badge badge-light" href="/tag/rstudio/">RStudio</a>
+  
+</div>
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/workshops/neom/importing/" rel="next">Day 2: Importing data</a>
+  </div>
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Aug 28, 2022</p>
+
+          
+
+
+
+
+
+          
+
+
+
+
+          
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/workshops/neom/importing/">Day 2: Importing data</a></li>
+      
+      <li><a href="/workshops/neom/exploringr/">Day 1: Exploring R &amp; RStudio</a></li>
+      
+      <li><a href="/workshops/neom/datatypes/">Day 1: R Data Types</a></li>
+      
+      <li><a href="/workshops/neom/packages/">Day 1: Packages</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+  </div>
+
+  <div class="page-footer">
+    
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
+
+    
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+
+</body>
+</html>

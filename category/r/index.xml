@@ -2742,11 +2742,7 @@ Service to the society
 &lt;li&gt;&lt;p&gt;&lt;code&gt;setwd(“C:/mydata”)&lt;/code&gt; will set the current working directory to a specific location.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;We can also set the current working directory clicking the Session tab and then Set Working Directory option.&lt;/p&gt;
-&lt;div class=&#34;figure&#34;&gt;
-&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/importing_files/setwd.png&#34; width=&#34;400&#34; height=&#34;200&#34; alt=&#34;&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;Set Working Directory
-option.&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/importing_files/setwd.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;importing-using-command&#34; class=&#34;section level2&#34; number=&#34;1.3&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Importing using command&lt;/h2&gt;
@@ -2806,6 +2802,369 @@ desktop.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;In order to see the output on the console, type the file name.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/importing_files/Environment.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Day 2: Data manipulation</title>
+      <link>https://academic-demo.netlify.app/workshops/neom/dplyr/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neom/dplyr/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-manipulation&#34; id=&#34;toc-data-manipulation&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Data Manipulation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-manipulation-with-dplyr&#34; id=&#34;toc-data-manipulation-with-dplyr&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Data Manipulation with &lt;code&gt;dplyr&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#dplyr-syntax&#34; id=&#34;toc-dplyr-syntax&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.1&lt;/span&gt; &lt;code&gt;dplyr&lt;/code&gt; syntax&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pipe-operator&#34; id=&#34;toc-pipe-operator&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.2&lt;/span&gt; Pipe operator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#loading-our-data&#34; id=&#34;toc-loading-our-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.3&lt;/span&gt; Loading our data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dplyr-verbs&#34; id=&#34;toc-dplyr-verbs&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.4&lt;/span&gt; &lt;code&gt;dplyr&lt;/code&gt; verbs&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#looking-at-the-data&#34; id=&#34;toc-looking-at-the-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.4.1&lt;/span&gt; Looking at the data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#selecting-columns&#34; id=&#34;toc-selecting-columns&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.4.2&lt;/span&gt; Selecting columns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#filtering-rows&#34; id=&#34;toc-filtering-rows&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.4.3&lt;/span&gt; Filtering rows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#creating-columns&#34; id=&#34;toc-creating-columns&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.4.4&lt;/span&gt; Creating columns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#sumarizing-columns&#34; id=&#34;toc-sumarizing-columns&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.4.5&lt;/span&gt; Sumarizing columns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#multiple-verbs-at-once&#34; id=&#34;toc-multiple-verbs-at-once&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2.4.6&lt;/span&gt; Multiple verbs at once&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-manipulation&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Data Manipulation&lt;/h1&gt;
+&lt;p&gt;In real-life, data is not always presented analysis-ready. Most of the time it has gaps, missing values, incorrect date formats, missing variable names, no variable names, or variables scattered into multiple columns etc. When this kind of data is presented for analysis, it needs intervention to make it tidy.&lt;/p&gt;
+&lt;p&gt;Data manipulation is the process of organizing data to read and understand it better. We manipulate data for analysis and visualization.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-manipulation-with-dplyr&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Data Manipulation with &lt;code&gt;dplyr&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;dplyr&lt;/code&gt; is a powerful R-package to transform and summarize tabular data with rows and columns. It was created to enable efficient manipulation of data with the advantages of speed and simplicity of coding.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dplyr&lt;/code&gt; provides a consistent set of functions,which we sometimes call verbs. Each of these &lt;code&gt;dplyr&lt;/code&gt; verbs does one thing. Each verb is named in a way that is extremely easy to remember. Some of these include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;glimpse()&lt;/code&gt;: to examine our dataset.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;select()&lt;/code&gt;: to select columns (variables) by their names.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;filter()&lt;/code&gt;: to pick rows (observations/samples) based on their values.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;mutate()&lt;/code&gt;: to create new variables.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;summarize()&lt;/code&gt;: to compute statistical summaries.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mean&lt;/code&gt;: calculate the mean, or average.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;median&lt;/code&gt;: calculate the median.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;max&lt;/code&gt;: find the maximum value.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;min&lt;/code&gt;: find the minimum value&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sum&lt;/code&gt;: add all the values together.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;n&lt;/code&gt;: count the number of records.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;distinct()&lt;/code&gt;: to remove duplicate rows.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;arrange()&lt;/code&gt;: to reorder the rows.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;group_by()&lt;/code&gt;: to break down the dataset into specified groups of rows.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;dplyr-syntax&#34; class=&#34;section level2&#34; number=&#34;2.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.1&lt;/span&gt; &lt;code&gt;dplyr&lt;/code&gt; syntax&lt;/h2&gt;
+&lt;p&gt;All &lt;code&gt;dplyr&lt;/code&gt; verbs share a similar syntax.&lt;/p&gt;
+&lt;p&gt;Syntax:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dplyr_verb(dataframe, stuff-to-do)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dplyr_verb : The name of the dplyr verb.&lt;/li&gt;
+&lt;li&gt;dataframe : The name of the dataframe to operate on.&lt;/li&gt;
+&lt;li&gt;stuff-to-do : Syntax that specifies exactly how to execute the dplyr verb.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pipe-operator&#34; class=&#34;section level2&#34; number=&#34;2.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.2&lt;/span&gt; Pipe operator&lt;/h2&gt;
+&lt;p&gt;These verbs can be chained together using the pipe operator (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) to perform more complex data manipulations. Basically, the pipe operator makes the output of one line of code the input for the next.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;loading-our-data&#34; class=&#34;section level2&#34; number=&#34;2.3&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.3&lt;/span&gt; Loading our data&lt;/h2&gt;
+&lt;p&gt;To explore the functions of &lt;code&gt;dplyr&lt;/code&gt;, we need a dataset. We will use the &lt;code&gt;FacultyAffairs&lt;/code&gt; dataset.&lt;/p&gt;
+&lt;p&gt;We can load the dataset into the current R session by selecting &lt;code&gt;Import Dataset&amp;gt;From Excel File...&lt;/code&gt; in the Environment tab.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/dplyr_files/importing.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dplyr-verbs&#34; class=&#34;section level2&#34; number=&#34;2.4&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4&lt;/span&gt; &lt;code&gt;dplyr&lt;/code&gt; verbs&lt;/h2&gt;
+&lt;p&gt;Before using &lt;code&gt;dplyr&lt;/code&gt; it is necessary to install it, since it is not a part of base R.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;dplyr&lt;/code&gt; package is hosted in the CRAN repository. Any package from the CRAN repository can be installed using the function &lt;code&gt;install.packages(&#34;dplyr&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have the dplyr package installed we need to load it to our R workspace. For this purpose we can use the &lt;code&gt;library()&lt;/code&gt; function. If installed correctly, the message “Attaching package: ‘dplyr’” will appear.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+## 
+## Attaching package: &amp;#39;dplyr&amp;#39;
+## The following objects are masked from &amp;#39;package:stats&amp;#39;:
+## 
+##     filter, lag
+## The following objects are masked from &amp;#39;package:base&amp;#39;:
+## 
+##     intersect, setdiff, setequal, union&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;looking-at-the-data&#34; class=&#34;section level3&#34; number=&#34;2.4.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4.1&lt;/span&gt; Looking at the data&lt;/h3&gt;
+&lt;p&gt;The verb &lt;code&gt;glimpse()&lt;/code&gt; allow us to see the columns selected in the output without printing all the data every time.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;glimpse(data)
+## Rows: 850
+## Columns: 32
+## $ AcadYear         &amp;lt;dbl&amp;gt; 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019,…
+## $ FirstYearApp     &amp;lt;dbl&amp;gt; 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019, 2019,…
+## $ EmployeeName     &amp;lt;chr&amp;gt; &amp;quot;Adinolfi, Wilson  K&amp;quot;, &amp;quot;Ait Sidi, Karthikeyan&amp;quot;, &amp;quot;Akin…
+## $ Sex              &amp;lt;chr&amp;gt; &amp;quot;M&amp;quot;, &amp;quot;M&amp;quot;, &amp;quot;F&amp;quot;, &amp;quot;F&amp;quot;, &amp;quot;F&amp;quot;, &amp;quot;F&amp;quot;, &amp;quot;F&amp;quot;, &amp;quot;M&amp;quot;, &amp;quot;F&amp;quot;, &amp;quot;M&amp;quot;, &amp;quot;F&amp;quot;…
+## $ YearBirth        &amp;lt;dbl&amp;gt; 1987, 1985, 1981, 1979, 1977, 1977, 1975, 1985, 1967,…
+## $ Nationality      &amp;lt;chr&amp;gt; &amp;quot;USA&amp;quot;, &amp;quot;USA&amp;quot;, &amp;quot;USA&amp;quot;, &amp;quot;USA&amp;quot;, &amp;quot;USA&amp;quot;, &amp;quot;England&amp;quot;, &amp;quot;Englan…
+## $ Appointment      &amp;lt;dbl&amp;gt; 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 1, 1, 1, 1, 1, 2, 2, 2,…
+## $ SchoolApp        &amp;lt;chr&amp;gt; &amp;quot;ComputerScience&amp;quot;, &amp;quot;ComputerScience&amp;quot;, &amp;quot;ComputerScienc…
+## $ Salary           &amp;lt;dbl&amp;gt; 62506, 104437, 64955, 64991, 50825, 57568, 95660, 593…
+## $ DaysLateLast30   &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,…
+## $ Absences         &amp;lt;dbl&amp;gt; 1, 17, 3, 15, 2, 15, 19, 19, 4, 16, 12, 15, 9, 7, 1, …
+## $ ResearchArea     &amp;lt;chr&amp;gt; &amp;quot;AI&amp;quot;, &amp;quot;CC&amp;quot;, &amp;quot;ML&amp;quot;, &amp;quot;ML&amp;quot;, &amp;quot;AI&amp;quot;, &amp;quot;AI&amp;quot;, &amp;quot;ML&amp;quot;, &amp;quot;AI&amp;quot;, &amp;quot;CC&amp;quot;,…
+## $ JobSatisfaction  &amp;lt;dbl&amp;gt; 5, 4, 4, 5, 3, 4, 2, 3, 2, 3, 5, 5, 5, 1, 5, 5, 5, 5,…
+## $ SelfEvalResp     &amp;lt;dbl&amp;gt; 3, 4, 3, 3, 3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 4, 3, 3, 3,…
+## $ SelfEvalTech     &amp;lt;dbl&amp;gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 4, 4, 4,…
+## $ SelfEvalInnov    &amp;lt;dbl&amp;gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
+## $ StudentEvalResp  &amp;lt;dbl&amp;gt; 3, 3, 3, 4, 3, 3, 3, 4, 4, 3, 3, 3, 4, 3, 3, 4, 4, 3,…
+## $ StudentEvalTech  &amp;lt;dbl&amp;gt; 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
+## $ StudentEvalInnov &amp;lt;dbl&amp;gt; 4, 4, 4, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,…
+## $ CoursesUnd       &amp;lt;dbl&amp;gt; 5, 4, 5, 5, 5, 4, 3, 5, 4, 4, 5, 5, 4, 5, 3, 5, 5, 5,…
+## $ CoursesGrad      &amp;lt;dbl&amp;gt; 2, 4, 1, 1, 3, 1, 1, 1, 3, 1, 2, 1, 4, 3, 1, 1, 1, 3,…
+## $ MentoringResProj &amp;lt;dbl&amp;gt; 7, 7, 6, 7, 6, 7, 7, 2, 5, 7, 7, 7, 7, 6, 7, 7, 7, 2,…
+## $ MentoringTheses  &amp;lt;dbl&amp;gt; 5, 5, 5, 5, 3, 5, 5, 0, 5, 5, 5, 5, 2, 5, 4, 5, 5, 5,…
+## $ NumPublication   &amp;lt;dbl&amp;gt; 13, 14, 6, 6, 12, 13, 8, 9, 12, 13, 10, 12, 10, 10, 9…
+## $ SubManuscripts   &amp;lt;dbl&amp;gt; 12, 14, 11, 10, 12, 13, 13, 11, 13, 11, 12, 13, 11, 1…
+## $ NumCitations     &amp;lt;dbl&amp;gt; 213, 236, 199, 181, 224, 211, 214, 178, 200, 241, 230…
+## $ NumBooks         &amp;lt;dbl&amp;gt; 0, 0, 0, 0, 0, 1, 1, 1, 2, 3, 3, 0, 1, 1, 1, 0, 1, 1,…
+## $ NumConferences   &amp;lt;dbl&amp;gt; 0, 1, 2, 1, 2, 1, 2, 2, 2, 1, 3, 3, 2, 1, 0, 1, 2, 3,…
+## $ ResGrantsAwa     &amp;lt;dbl&amp;gt; 4, 3, 3, 4, 3, 4, 3, 5, 4, 3, 3, 4, 4, 4, 2, 4, 5, 4,…
+## $ ResGrantsSub     &amp;lt;dbl&amp;gt; 2, 2, 4, 4, 2, 2, 3, 4, 3, 2, 2, 2, 3, 3, 2, 4, 3, 4,…
+## $ NumComUniv       &amp;lt;dbl&amp;gt; 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 2, 0, 1, 0, 2, 1,…
+## $ NumOut           &amp;lt;dbl&amp;gt; 0, 1, 0, 1, 2, 2, 0, 2, 0, 1, 0, 1, 0, 0, 0, 2, 0, 2,…&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;selecting-columns&#34; class=&#34;section level3&#34; number=&#34;2.4.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4.2&lt;/span&gt; Selecting columns&lt;/h3&gt;
+&lt;p&gt;To select a few columns we need to add their names to the select verb. The order in which we add them, will determine the order in which they appear in the output.&lt;/p&gt;
+&lt;p&gt;For example, let´s select the information about Faculty’s full name. The following code can be read as follows: “From the data dataset, select only the EmployeeName column”.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(data,EmployeeName)
+## # A tibble: 850 × 1
+##    EmployeeName         
+##    &amp;lt;chr&amp;gt;                
+##  1 Adinolfi, Wilson  K  
+##  2 Ait Sidi, Karthikeyan
+##  3 Akinkuolie, Sarah    
+##  4 Alagbe,Trina         
+##  5 Anderson, Carol      
+##  6 Anderson, Linda      
+##  7 Andreola, Colby      
+##  8 Athwal, Sam          
+##  9 Bachiochi, Linda     
+## 10 Newman, Richard      
+## # … with 840 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;select()&lt;/code&gt; verb can also be used to drop columns from a dataframe using the the &lt;code&gt;-&lt;/code&gt;symbol. The following code can be read as follows: “From the data dataset, select all columns that are not the EmployeeName column”.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(data,-EmployeeName)
+## # A tibble: 850 × 31
+##    AcadYear FirstYearApp Sex   YearBirth Nationality Appointment SchoolApp      
+##       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;          
+##  1     2019         2019 M          1987 USA                   1 ComputerScience
+##  2     2019         2019 M          1985 USA                   1 ComputerScience
+##  3     2019         2019 F          1981 USA                   1 ComputerScience
+##  4     2019         2019 F          1979 USA                   1 ComputerScience
+##  5     2019         2019 F          1977 USA                   1 ComputerScience
+##  6     2019         2019 F          1977 England               2 ComputerScience
+##  7     2019         2019 F          1975 England               2 ComputerScience
+##  8     2019         2019 M          1985 England               2 ComputerScience
+##  9     2019         2019 F          1967 Spain                 3 ComputerScience
+## 10     2019         2019 M          1969 Spain                 3 ComputerScience
+## # … with 840 more rows, and 24 more variables: Salary &amp;lt;dbl&amp;gt;,
+## #   DaysLateLast30 &amp;lt;dbl&amp;gt;, Absences &amp;lt;dbl&amp;gt;, ResearchArea &amp;lt;chr&amp;gt;,
+## #   JobSatisfaction &amp;lt;dbl&amp;gt;, SelfEvalResp &amp;lt;dbl&amp;gt;, SelfEvalTech &amp;lt;dbl&amp;gt;,
+## #   SelfEvalInnov &amp;lt;dbl&amp;gt;, StudentEvalResp &amp;lt;dbl&amp;gt;, StudentEvalTech &amp;lt;dbl&amp;gt;,
+## #   StudentEvalInnov &amp;lt;dbl&amp;gt;, CoursesUnd &amp;lt;dbl&amp;gt;, CoursesGrad &amp;lt;dbl&amp;gt;,
+## #   MentoringResProj &amp;lt;dbl&amp;gt;, MentoringTheses &amp;lt;dbl&amp;gt;, NumPublication &amp;lt;dbl&amp;gt;,
+## #   SubManuscripts &amp;lt;dbl&amp;gt;, NumCitations &amp;lt;dbl&amp;gt;, NumBooks &amp;lt;dbl&amp;gt;, …&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above code reduced the dimensions of our data frame [850 × 31].&lt;/p&gt;
+&lt;p&gt;To select multiple columns, we need to add their names to the select verb. Let´s select information about Faculty’s full name, nationality,sex, and salary.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;select(data,EmployeeName,Nationality, Sex, Salary)
+## # A tibble: 850 × 4
+##    EmployeeName          Nationality Sex   Salary
+##    &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;       &amp;lt;chr&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1 Adinolfi, Wilson  K   USA         M      62506
+##  2 Ait Sidi, Karthikeyan USA         M     104437
+##  3 Akinkuolie, Sarah     USA         F      64955
+##  4 Alagbe,Trina          USA         F      64991
+##  5 Anderson, Carol       USA         F      50825
+##  6 Anderson, Linda       England     F      57568
+##  7 Andreola, Colby       England     F      95660
+##  8 Athwal, Sam           England     M      59365
+##  9 Bachiochi, Linda      Spain       F      47837
+## 10 Newman, Richard       Spain       M      50178
+## # … with 840 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;filtering-rows&#34; class=&#34;section level3&#34; number=&#34;2.4.3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4.3&lt;/span&gt; Filtering rows&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;filter()&lt;/code&gt; verb is used to extract rows, based on a specified condition.&lt;/p&gt;
+&lt;p&gt;For example, we want to extract only the rows belonging to female faculty.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(data,Sex == &amp;quot;F&amp;quot;)
+## # A tibble: 486 × 32
+##    AcadYear FirstYearApp EmployeeName    Sex   YearBirth Nationality Appointment
+##       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;           &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;
+##  1     2019         2019 Akinkuolie, Sa… F          1981 USA                   1
+##  2     2019         2019 Alagbe,Trina    F          1979 USA                   1
+##  3     2019         2019 Anderson, Carol F          1977 USA                   1
+##  4     2019         2019 Anderson, Linda F          1977 England               2
+##  5     2019         2019 Andreola, Colby F          1975 England               2
+##  6     2019         2019 Bachiochi, Lin… F          1967 Spain                 3
+##  7     2019         2019 Ngodup, Shari   F          1981 Australia             1
+##  8     2019         2019 Nguyen, Dheepa  F          1977 Australia             1
+##  9     2019         2019 Nguyen, Lei-Mi… F          1982 Denmark               1
+## 10     2019         2019 Nowlan, Kristie F          1982 Canada                1
+## # … with 476 more rows, and 25 more variables: SchoolApp &amp;lt;chr&amp;gt;, Salary &amp;lt;dbl&amp;gt;,
+## #   DaysLateLast30 &amp;lt;dbl&amp;gt;, Absences &amp;lt;dbl&amp;gt;, ResearchArea &amp;lt;chr&amp;gt;,
+## #   JobSatisfaction &amp;lt;dbl&amp;gt;, SelfEvalResp &amp;lt;dbl&amp;gt;, SelfEvalTech &amp;lt;dbl&amp;gt;,
+## #   SelfEvalInnov &amp;lt;dbl&amp;gt;, StudentEvalResp &amp;lt;dbl&amp;gt;, StudentEvalTech &amp;lt;dbl&amp;gt;,
+## #   StudentEvalInnov &amp;lt;dbl&amp;gt;, CoursesUnd &amp;lt;dbl&amp;gt;, CoursesGrad &amp;lt;dbl&amp;gt;,
+## #   MentoringResProj &amp;lt;dbl&amp;gt;, MentoringTheses &amp;lt;dbl&amp;gt;, NumPublication &amp;lt;dbl&amp;gt;,
+## #   SubManuscripts &amp;lt;dbl&amp;gt;, NumCitations &amp;lt;dbl&amp;gt;, NumBooks &amp;lt;dbl&amp;gt;, …&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above code reduced the dimensions of our data frame [486 × 32].&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;filter()&lt;/code&gt; verb can also be used to extract rows, based on multiple conditions. Let´s extract the rows belonging to female faculty who published at least five research articles during academic year 2021.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;filter(data,Sex == &amp;quot;F&amp;quot; &amp;amp;  AcadYear  == &amp;quot;2021&amp;quot; &amp;amp; NumPublication &amp;gt; 5)
+## # A tibble: 120 × 32
+##    AcadYear FirstYearApp EmployeeName    Sex   YearBirth Nationality Appointment
+##       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;           &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;
+##  1     2021         2019 Akinkuolie, Sa… F          1981 USA                   1
+##  2     2021         2019 Alagbe,Trina    F          1979 USA                   1
+##  3     2021         2019 Anderson, Carol F          1977 USA                   1
+##  4     2021         2019 Anderson, Linda F          1977 England               2
+##  5     2021         2019 Andreola, Colby F          1975 England               2
+##  6     2021         2019 Bachiochi, Lin… F          1967 Spain                 3
+##  7     2021         2019 Baczenski, Rac… F          1981 Australia             1
+##  8     2021         2019 Beak, Kimberly  F          1977 USA                   2
+##  9     2021         2019 Beatrice, Cour… F          1981 USA                   2
+## 10     2021         2019 Becker, Renee   F          1975 USA                   3
+## # … with 110 more rows, and 25 more variables: SchoolApp &amp;lt;chr&amp;gt;, Salary &amp;lt;dbl&amp;gt;,
+## #   DaysLateLast30 &amp;lt;dbl&amp;gt;, Absences &amp;lt;dbl&amp;gt;, ResearchArea &amp;lt;chr&amp;gt;,
+## #   JobSatisfaction &amp;lt;dbl&amp;gt;, SelfEvalResp &amp;lt;dbl&amp;gt;, SelfEvalTech &amp;lt;dbl&amp;gt;,
+## #   SelfEvalInnov &amp;lt;dbl&amp;gt;, StudentEvalResp &amp;lt;dbl&amp;gt;, StudentEvalTech &amp;lt;dbl&amp;gt;,
+## #   StudentEvalInnov &amp;lt;dbl&amp;gt;, CoursesUnd &amp;lt;dbl&amp;gt;, CoursesGrad &amp;lt;dbl&amp;gt;,
+## #   MentoringResProj &amp;lt;dbl&amp;gt;, MentoringTheses &amp;lt;dbl&amp;gt;, NumPublication &amp;lt;dbl&amp;gt;,
+## #   SubManuscripts &amp;lt;dbl&amp;gt;, NumCitations &amp;lt;dbl&amp;gt;, NumBooks &amp;lt;dbl&amp;gt;, …&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;creating-columns&#34; class=&#34;section level3&#34; number=&#34;2.4.4&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4.4&lt;/span&gt; Creating columns&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;mutate()&lt;/code&gt; verb is useful for adding new columns to a dataframe, which will have the results of operations on already existing columns.&lt;/p&gt;
+&lt;p&gt;For example, we would like to add a new column with a salary adjustment of 10%. Let´s create the &lt;code&gt;AdjSalary&lt;/code&gt; column.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;mutate(data,AdjSalary = Salary+Salary*0.1)
+## # A tibble: 850 × 33
+##    AcadYear FirstYearApp EmployeeName    Sex   YearBirth Nationality Appointment
+##       &amp;lt;dbl&amp;gt;        &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;           &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;             &amp;lt;dbl&amp;gt;
+##  1     2019         2019 Adinolfi, Wils… M          1987 USA                   1
+##  2     2019         2019 Ait Sidi, Kart… M          1985 USA                   1
+##  3     2019         2019 Akinkuolie, Sa… F          1981 USA                   1
+##  4     2019         2019 Alagbe,Trina    F          1979 USA                   1
+##  5     2019         2019 Anderson, Carol F          1977 USA                   1
+##  6     2019         2019 Anderson, Linda F          1977 England               2
+##  7     2019         2019 Andreola, Colby F          1975 England               2
+##  8     2019         2019 Athwal, Sam     M          1985 England               2
+##  9     2019         2019 Bachiochi, Lin… F          1967 Spain                 3
+## 10     2019         2019 Newman, Richard M          1969 Spain                 3
+## # … with 840 more rows, and 26 more variables: SchoolApp &amp;lt;chr&amp;gt;, Salary &amp;lt;dbl&amp;gt;,
+## #   DaysLateLast30 &amp;lt;dbl&amp;gt;, Absences &amp;lt;dbl&amp;gt;, ResearchArea &amp;lt;chr&amp;gt;,
+## #   JobSatisfaction &amp;lt;dbl&amp;gt;, SelfEvalResp &amp;lt;dbl&amp;gt;, SelfEvalTech &amp;lt;dbl&amp;gt;,
+## #   SelfEvalInnov &amp;lt;dbl&amp;gt;, StudentEvalResp &amp;lt;dbl&amp;gt;, StudentEvalTech &amp;lt;dbl&amp;gt;,
+## #   StudentEvalInnov &amp;lt;dbl&amp;gt;, CoursesUnd &amp;lt;dbl&amp;gt;, CoursesGrad &amp;lt;dbl&amp;gt;,
+## #   MentoringResProj &amp;lt;dbl&amp;gt;, MentoringTheses &amp;lt;dbl&amp;gt;, NumPublication &amp;lt;dbl&amp;gt;,
+## #   SubManuscripts &amp;lt;dbl&amp;gt;, NumCitations &amp;lt;dbl&amp;gt;, NumBooks &amp;lt;dbl&amp;gt;, …&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sumarizing-columns&#34; class=&#34;section level3&#34; number=&#34;2.4.5&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4.5&lt;/span&gt; Sumarizing columns&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;summarise()&lt;/code&gt; verb is used to provide different summary statistics from a dataframe.&lt;/p&gt;
+&lt;p&gt;For example, we want to summarise the means of salary of our faculty during 2019-2022 period.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summarise(data,
+          MeanSalary=mean(Salary))
+## # A tibble: 1 × 1
+##   MeanSalary
+##        &amp;lt;dbl&amp;gt;
+## 1     68707.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, let´s try to compute the salary and the minumum, mean and maximum number of publications of our faculty during 2019-2022 period.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summarise(data,
+          MeanSalary=mean(Salary),
+          MinPublications=min(NumPublication),
+          MeanPublications=mean(NumPublication),
+          MaxPublications=max(NumPublication))
+## # A tibble: 1 × 4
+##   MeanSalary MinPublications MeanPublications MaxPublications
+##        &amp;lt;dbl&amp;gt;           &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;           &amp;lt;dbl&amp;gt;
+## 1     68707.               1             9.99              18&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;multiple-verbs-at-once&#34; class=&#34;section level3&#34; number=&#34;2.4.6&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;2.4.6&lt;/span&gt; Multiple verbs at once&lt;/h3&gt;
+&lt;p&gt;So far, we have only used one verb in each command line. However, these verbs can be chained together using the pipe operator (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) to perform more complex data manipulations.&lt;/p&gt;
+&lt;p&gt;Let´s try to reduce the dimension of our dataframe to work only with personal information of female faculty. To do that, we will use the pipe operator (&lt;code&gt;%&amp;gt;%&lt;/code&gt;) and &lt;code&gt;select ()&lt;/code&gt; and &lt;code&gt;filter()&lt;/code&gt; verbs.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data %&amp;gt;% 
+  select(EmployeeName,Sex,YearBirth,Nationality) %&amp;gt;% 
+  filter(Sex==&amp;quot;F&amp;quot;)
+## # A tibble: 486 × 4
+##    EmployeeName      Sex   YearBirth Nationality
+##    &amp;lt;chr&amp;gt;             &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      
+##  1 Akinkuolie, Sarah F          1981 USA        
+##  2 Alagbe,Trina      F          1979 USA        
+##  3 Anderson, Carol   F          1977 USA        
+##  4 Anderson, Linda   F          1977 England    
+##  5 Andreola, Colby   F          1975 England    
+##  6 Bachiochi, Linda  F          1967 Spain      
+##  7 Ngodup, Shari     F          1981 Australia  
+##  8 Nguyen, Dheepa    F          1977 Australia  
+##  9 Nguyen, Lei-Ming  F          1982 Denmark    
+## 10 Nowlan, Kristie   F          1982 Canada     
+## # … with 476 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The above code reduced the dimensions of our data frame [486 × 4].
+Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;code&gt;EmployeeName&lt;/code&gt; column, we will use the &lt;code&gt;arrange(verb)&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data %&amp;gt;% 
+  select(EmployeeName,Sex,YearBirth,Nationality) %&amp;gt;% 
+  filter(Sex==&amp;quot;F&amp;quot;) %&amp;gt;% 
+  arrange(EmployeeName)
+## # A tibble: 486 × 4
+##    EmployeeName      Sex   YearBirth Nationality
+##    &amp;lt;chr&amp;gt;             &amp;lt;chr&amp;gt;     &amp;lt;dbl&amp;gt; &amp;lt;chr&amp;gt;      
+##  1 Akinkuolie, Sarah F          1981 USA        
+##  2 Akinkuolie, Sarah F          1981 USA        
+##  3 Akinkuolie, Sarah F          1981 USA        
+##  4 Akinkuolie, Sarah F          1981 USA        
+##  5 Alagbe,Trina      F          1979 USA        
+##  6 Alagbe,Trina      F          1979 USA        
+##  7 Alagbe,Trina      F          1979 USA        
+##  8 Alagbe,Trina      F          1979 USA        
+##  9 Anderson, Carol   F          1977 USA        
+## 10 Anderson, Carol   F          1977 USA        
+## # … with 476 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;However, there is something wrong with this output. We have repeated information for each faculty. We can use &lt;code&gt;distinct()&lt;/code&gt; to remove all duplicate rows.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data %&amp;gt;% 
+  select(EmployeeName,Sex,YearBirth,Nationality) %&amp;gt;% 
+  filter(Sex==&amp;quot;F&amp;quot;) %&amp;gt;% 
+  distinct(EmployeeName)
+## # A tibble: 130 × 1
+##    EmployeeName     
+##    &amp;lt;chr&amp;gt;            
+##  1 Akinkuolie, Sarah
+##  2 Alagbe,Trina     
+##  3 Anderson, Carol  
+##  4 Anderson, Linda  
+##  5 Andreola, Colby  
+##  6 Bachiochi, Linda 
+##  7 Ngodup, Shari    
+##  8 Nguyen, Dheepa   
+##  9 Nguyen, Lei-Ming 
+## 10 Nowlan, Kristie  
+## # … with 120 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, let´s try something more complex. We want to compate the average salary and number of publications for male and female faculty during academic year 2021&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data %&amp;gt;% 
+  filter(AcadYear  == &amp;quot;2021&amp;quot;) %&amp;gt;% 
+  group_by(Sex) %&amp;gt;% 
+  summarize(MeanSalary=mean(Salary),
+            MeanPublications=mean(NumPublication))
+## # A tibble: 2 × 3
+##   Sex   MeanSalary MeanPublications
+##   &amp;lt;chr&amp;gt;      &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;
+## 1 F         67651.             10.2
+## 2 M         69773.             10.4&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
