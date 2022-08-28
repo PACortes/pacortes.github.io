@@ -2687,6 +2687,131 @@ Service to the society
     </item>
     
     <item>
+      <title>Day 2: Importing data</title>
+      <link>https://academic-demo.netlify.app/workshops/neom/importing/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neom/importing/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-data-into-rstudio&#34; id=&#34;toc-importing-data-into-rstudio&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Importing data into &lt;code&gt;RStudio&lt;/code&gt;&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#format-your-tidy-data&#34; id=&#34;toc-format-your-tidy-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.1&lt;/span&gt; Format your (tidy) data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#setting-the-working-directory&#34; id=&#34;toc-setting-the-working-directory&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.2&lt;/span&gt; Setting the Working Directory&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-using-command&#34; id=&#34;toc-importing-using-command&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3&lt;/span&gt; Importing using command&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#csv-files&#34; id=&#34;toc-csv-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.1&lt;/span&gt; csv Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#txt-files&#34; id=&#34;toc-txt-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.2&lt;/span&gt; txt Files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#xlsxlsx-files&#34; id=&#34;toc-xlsxlsx-files&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.3.3&lt;/span&gt; xls/xlsx Files&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#importing-using-environment-tab&#34; id=&#34;toc-importing-using-environment-tab&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1.4&lt;/span&gt; Importing using Environment tab&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;importing-data-into-rstudio&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Importing data into &lt;code&gt;RStudio&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Although creating data frames from existing data structures is extremely useful, by far the most common approach is to create a data frame by importing data from an external file.&lt;/p&gt;
+&lt;p&gt;To do this, we need to have our data correctly formatted (tidy data) and saved in a file format that R is able to recognise.&lt;/p&gt;
+&lt;p&gt;R is able to recognise a wide variety of file formats, although in reality we will probably end up only using one or two regularly.&lt;/p&gt;
+&lt;div id=&#34;format-your-tidy-data&#34; class=&#34;section level2&#34; number=&#34;1.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.1&lt;/span&gt; Format your (tidy) data&lt;/h2&gt;
+&lt;p&gt;Tidy data is a standard way of mapping the meaning of a dataset to its structure. A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. In &lt;strong&gt;tidy data&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Every column is a variable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Every row is an observation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Every cell is a single value (usually either numbers or strings).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When tidying our data we should ensure that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Each variable has its own column.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Each row is an observation.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The top of each column contains the name of the variable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There are no blank columns or blank rows between data.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;All data in a column has the same type (e.g. it is all numerical data, or it is all text data).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Data are consistent (e.g. if a binary variable can take values ‘Yes’ or ‘No’ with no alternatives such as ‘Y’ and ‘N’).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;setting-the-working-directory&#34; class=&#34;section level2&#34; number=&#34;1.2&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.2&lt;/span&gt; Setting the Working Directory&lt;/h2&gt;
+&lt;p&gt;Before importing and reading any data, we must set the working directory to the location of the data.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;getwd()&lt;/code&gt; will print out the current directory.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;setwd(“C:/mydata”)&lt;/code&gt; will set the current working directory to a specific location.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can also set the current working directory clicking the Session tab and then Set Working Directory option.&lt;/p&gt;
+&lt;div class=&#34;figure&#34;&gt;
+&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/importing_files/setwd.png&#34; width=&#34;400&#34; height=&#34;200&#34; alt=&#34;&#34; /&gt;
+&lt;p class=&#34;caption&#34;&gt;Set Working Directory
+option.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;importing-using-command&#34; class=&#34;section level2&#34; number=&#34;1.3&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3&lt;/span&gt; Importing using command&lt;/h2&gt;
+&lt;div id=&#34;csv-files&#34; class=&#34;section level3&#34; number=&#34;1.3.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.1&lt;/span&gt; csv Files&lt;/h3&gt;
+&lt;p&gt;We can import &lt;strong&gt;.csv&lt;/strong&gt; files using basic R function &lt;strong&gt;read.csv()&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Syntax:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;read.csv(&#34;path/file_name.csv&#34;, header = TRUE)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;path : The path of the file to be imported.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;file_name: The name of the file.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;header : Indicator of whether to import column headings. By default TRUE.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;txt-files&#34; class=&#34;section level3&#34; number=&#34;1.3.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.2&lt;/span&gt; txt Files&lt;/h3&gt;
+&lt;p&gt;We can import &lt;strong&gt;.txt&lt;/strong&gt; or a tab-delimited text files using basic R function &lt;code&gt;read.table()&lt;/code&gt;. The data will be imported as a data frame.&lt;/p&gt;
+&lt;p&gt;Syntax:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;read.table(&#34;path/file_name.csv&#34;, header=TRUE)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;path : The path of the file to be imported.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;file_name: The name of the file.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;header : Indicator of whether to import column headings. By default
+TRUE .&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can also will use &lt;code&gt;read.table()&lt;/code&gt; methods to import &lt;strong&gt;.csv&lt;/strong&gt; file into R Programming Language.&lt;/p&gt;
+&lt;p&gt;Syntax:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;read.table(&#34;path/file_name.csv&#34;, header=TRUE, sep = &#34;,&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;sep = “,” : The separator for the values in each row.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;xlsxlsx-files&#34; class=&#34;section level3&#34; number=&#34;1.3.3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.3.3&lt;/span&gt; xls/xlsx Files&lt;/h3&gt;
+&lt;p&gt;We can import import Excel files, &lt;strong&gt;.xls&lt;/strong&gt; and &lt;strong&gt;.xlsx&lt;/strong&gt;, using the function &lt;code&gt;read_excel()&lt;/code&gt; from &lt;code&gt;readxl&lt;/code&gt; package.&lt;/p&gt;
+&lt;p&gt;Syntax:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;library(&#34;readxl&#34;)&lt;/code&gt; &lt;code&gt;read_excel(&#34;path/file_name.xlsx&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;We can also import &lt;strong&gt;.xlsx&lt;/strong&gt; using the function &lt;code&gt;read.xlsx()&lt;/code&gt; from &lt;code&gt;xlsx&lt;/code&gt; package.&lt;/p&gt;
+&lt;p&gt;Syntax:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;library(&#34;xlsx&#34;)&lt;/code&gt; &lt;code&gt;read.xlsx(&#34;path/file_name.xlsx&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;importing-using-environment-tab&#34; class=&#34;section level2&#34; number=&#34;1.4&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;1.4&lt;/span&gt; Importing using Environment tab&lt;/h2&gt;
+&lt;p&gt;A flexible way to import data is to click on the Environment tab in the upper right window of RStudio and then click the Import Dataset tab.&lt;/p&gt;
+&lt;p&gt;Multiple file type options are shown, such as text, Excel, SPSS, SAS, and Stata.&lt;/p&gt;
+&lt;p&gt;We can easily import data through R studio with the following steps.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;From the Environment tab click on the Import Dataset Menu.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Select the file extension from the option.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A pop-up box will appear, either enter the file name or browse the
+desktop.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The selected file will be displayed on a new window with its dimensions.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In order to see the output on the console, type the file name.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/importing_files/Environment.png&#34; width=&#34;400&#34; height=&#34;200&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Example Talk</title>
       <link>https://academic-demo.netlify.app/talk/example-talk/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
