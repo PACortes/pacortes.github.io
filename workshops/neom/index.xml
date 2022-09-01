@@ -1865,5 +1865,308 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 </description>
     </item>
     
+    <item>
+      <title>Day 3: ggplot2</title>
+      <link>https://academic-demo.netlify.app/workshops/neom/ggplot2/</link>
+      <pubDate>Thu, 01 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://academic-demo.netlify.app/workshops/neom/ggplot2/</guid>
+      <description>
+&lt;script src=&#34;https://academic-demo.netlify.app/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#data-visualization&#34; id=&#34;toc-data-visualization&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Data Visualization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-visualization-with-ggplot2&#34; id=&#34;toc-data-visualization-with-ggplot2&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Data Visualization with &lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#themes&#34; id=&#34;toc-themes&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#installingloading-ggplot2&#34; id=&#34;toc-installingloading-ggplot2&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; installing/loading &lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#loading-our-data&#34; id=&#34;toc-loading-our-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Loading our data&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#plot-types&#34; id=&#34;toc-plot-types&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6&lt;/span&gt; Plot types&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#scatterplot&#34; id=&#34;toc-scatterplot&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6.1&lt;/span&gt; Scatterplot&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#set-axis-limits&#34; id=&#34;toc-set-axis-limits&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6.1.1&lt;/span&gt; Set axis limits&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#titles-and-axes-labels&#34; id=&#34;toc-titles-and-axes-labels&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6.1.2&lt;/span&gt; Titles and axes labels&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#points-size&#34; id=&#34;toc-points-size&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6.1.3&lt;/span&gt; Points Size&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#color-customization&#34; id=&#34;toc-color-customization&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6.1.4&lt;/span&gt; Color customization&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#customizing-the-legend&#34; id=&#34;toc-customizing-the-legend&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;6.1.5&lt;/span&gt; Customizing the legend&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div id=&#34;data-visualization&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Data Visualization&lt;/h1&gt;
+&lt;p&gt;Data visualization is the technique used to translate information into visual cues such as graphs, charts, maps, and many others. The main goal of data visualization is to make it easier to identify patterns, trends and outliers in large data sets. This is useful as it helps in intuitive and easy understanding of the data and thereby make better decisions regarding it.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; has several systems for making graphs, but &lt;code&gt;ggplot2&lt;/code&gt; is one of the most elegant and most versatile.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;data-visualization-with-ggplot2&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Data Visualization with &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;ggplot2&lt;/code&gt; is a R-package dedicated to data visualization.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ggplot2&lt;/code&gt; implements the layered grammar of graphics, a coherent system for describing and building graphs. All plots in this package are built using a layered approach, building layers up to create the final visualization. To add layers, we use the symbol &lt;code&gt;+&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Every &lt;code&gt;ggplot2&lt;/code&gt; plot has three key components:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Plot = data + aesthetic mappings + geometry&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Arguments:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: the information we want to visualise.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;aesthetic mappings&lt;/code&gt;: defined with &lt;code&gt;aes()&lt;/code&gt;, describe how data’s variables are mapped to visual properties or aesthetics attributes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geometry&lt;/code&gt;: at least one layer defining the type of graphics. Layers are usually created with a &lt;code&gt;geom&lt;/code&gt; function.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here’s a simple example with the basic syntax for a &lt;code&gt;ggplot2&lt;/code&gt; plot:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
+  geom_point()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;where,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: The iris dataset is a built-in dataset in R that contains measurements on 4 different attributes (in centimeters) for 50 flowers from 3 different species.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;aesthetic mappings&lt;/code&gt;: engine Sepal Length mapped to x position, Sepal Width to y position.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geometry&lt;/code&gt;: Layer to make a scatterplot.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In our example the data and aesthetic mappings are supplied in &lt;code&gt;ggplot()&lt;/code&gt;, then layers are added on with &lt;code&gt;+&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;themes&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Themes&lt;/h1&gt;
+&lt;p&gt;Themes are a powerful way to customize the non-data components of your plots (titles, labels, fonts, background, gridlines, and legends). Themes can be used to give plots a consistent customized look. The theme system does not affect how the data is rendered by geoms, or how it is transformed by scales.&lt;/p&gt;
+&lt;p&gt;The theming system is composed of four main components:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Theme elements specify the non-data elements that we can control. For example, the &lt;code&gt;plot.title&lt;/code&gt; element controls the appearance of the plot title.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Each element is associated with an element function, which describes the visual properties of the element. For example, &lt;code&gt;element_text()&lt;/code&gt; sets the font size, colour and face of text elements like &lt;code&gt;plot.title&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;theme()&lt;/code&gt; function which allows you to override the default theme elements by calling element functions, like &lt;code&gt;theme(plot.title = element_text(colour = &#34;green&#34;))&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Complete themes, like &lt;code&gt;theme_bw()&lt;/code&gt; set all of the theme elements to values designed to work together harmoniously.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installingloading-ggplot2&#34; class=&#34;section level1&#34; number=&#34;4&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;4&lt;/span&gt; installing/loading &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;Before using &lt;code&gt;ggplot2&lt;/code&gt; it is necessary to install it, since it is not a part of base R.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;ggplot2&lt;/code&gt; package is hosted in the CRAN repository. Any package from the CRAN repository can be installed using the function &lt;code&gt;install.packages(&#34;ggplot2&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now that we have the &lt;code&gt;ggplot2&lt;/code&gt; package installed we need to load it to our R workspace. For this purpose we can use the &lt;code&gt;library()&lt;/code&gt; function. If installed correctly, the message “Attaching package: ‘ggplot2’” will appear.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;loading-our-data&#34; class=&#34;section level1&#34; number=&#34;5&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;5&lt;/span&gt; Loading our data&lt;/h1&gt;
+&lt;p&gt;To explore the functions of &lt;code&gt;ggplot2&lt;/code&gt;, we need a dataset. We will use the &lt;code&gt;FacultyAffairs&lt;/code&gt; dataset.&lt;/p&gt;
+&lt;p&gt;We can load the dataset into the current R session by selecting &lt;code&gt;Import Dataset&amp;gt;From Excel File...&lt;/code&gt; in the Environment tab.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/dplyr_files/importing.png&#34; width=&#34;800&#34; height=&#34;400&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-types&#34; class=&#34;section level1&#34; number=&#34;6&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; Plot types&lt;/h1&gt;
+&lt;p&gt;The geometry defines the plot types in &lt;code&gt;ggplot2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Geometry function names follow the pattern: &lt;code&gt;geom_X&lt;/code&gt; where X is the name of the geometry. Some examples include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_blank()&lt;/code&gt;: display nothing.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_point()&lt;/code&gt;: makes a scatterplot.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_line()&lt;/code&gt; makes a line plot.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_bar()&lt;/code&gt;: makes a bar chart. Display distribution of discrete variable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_histogram()&lt;/code&gt;: makes a bar chart. Bin and count continuous variable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_boxplot()&lt;/code&gt;: makes a Box-and-whisker plot.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_jitter()&lt;/code&gt;: randomly jitter overlapping points.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_density()&lt;/code&gt;: smoothed density estimate.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_dotplot()&lt;/code&gt;: stack individual points into a dot plot.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_area()&lt;/code&gt; makes an area plot.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_freqpoly()&lt;/code&gt;: bin and count continuous variable, display with lines.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;scatterplot&#34; class=&#34;section level2&#34; number=&#34;6.1&#34;&gt;
+&lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1&lt;/span&gt; Scatterplot&lt;/h2&gt;
+&lt;p&gt;A Scatterplots displays the relationship between two numeric variables in a data-set. he position of each dot on the horizontal and vertical axis indicates values for an individual data point.&lt;/p&gt;
+&lt;p&gt;Let´s generate a scatterplot to evaluate the relationship between faculty members’ self-assessment (&lt;code&gt;SelfEvalTech&lt;/code&gt;) and the students’ assessment (&lt;code&gt;StudentEvalTech&lt;/code&gt;) on the use of technologies during teaching activities.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;set-axis-limits&#34; class=&#34;section level3&#34; number=&#34;6.1.1&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1.1&lt;/span&gt; Set axis limits&lt;/h3&gt;
+&lt;p&gt;We can use the &lt;code&gt;xlim()&lt;/code&gt; and &lt;code&gt;ylim()&lt;/code&gt; functions to set the scatterplot´s x-axis and y-axis limits, respectively.&lt;/p&gt;
+&lt;p&gt;Let´s create a scatterplot with a x-axis and y-axis ranging from 0 to 100.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point()+
+  xlim(0,100)+
+  ylim(0,100)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;titles-and-axes-labels&#34; class=&#34;section level3&#34; number=&#34;6.1.2&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1.2&lt;/span&gt; Titles and axes labels&lt;/h3&gt;
+&lt;p&gt;We can use the &lt;code&gt;labs()&lt;/code&gt; function to change the title and axes labels.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point()+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Now, let’s increase the size of the title, axis labels and axis text with using the &lt;code&gt;theme()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point()+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can also change the color of title and/or axis labels. Let´s change the color of the axis&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point()+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20,colour=&amp;quot;darkblue&amp;quot;),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;points-size&#34; class=&#34;section level3&#34; number=&#34;6.1.3&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1.3&lt;/span&gt; Points Size&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;size&lt;/code&gt; argument of the &lt;code&gt;geom_point&lt;/code&gt; function allows chancing the size of the points. The default &lt;code&gt;size&lt;/code&gt; is 1.5 but you can decrease or increase this value to make the points smaller or larger.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point(size=2.5)+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;color-customization&#34; class=&#34;section level3&#34; number=&#34;6.1.4&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1.4&lt;/span&gt; Color customization&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;colour&lt;/code&gt; argument of the &lt;code&gt;geom_point&lt;/code&gt; function allows customizing the color of the points.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point(size=2.5, colour=&amp;quot;darkblue&amp;quot;)+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The transparency of the points can also be customized with &lt;code&gt;alpha&lt;/code&gt; argument (values 0- to 1).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point(size=2.5, colour=&amp;quot;darkblue&amp;quot;, alpha= 0.5)+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;There are at least two ways we can customize color by a variable. One of the ways is to use color argument inside global &lt;code&gt;aes()&lt;/code&gt; function with the variable we want to color with. Let´s color our points by the academic year of the assessment.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech, color=as.factor(AcadYear))) + 
+  geom_point(size=2.5, alpha= 0.5)+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Another way is to use color argument with variable inside the aesthetics function &lt;code&gt;aes()&lt;/code&gt; inside &lt;code&gt;geom_point()&lt;/code&gt;. The code below will generate the same scatter plot as the one above.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
+  geom_point(aes(col=as.factor(AcadYear)),size=2.5, alpha= 0.5)+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Often we may want to use our favourites values and show a useful legend. Fortunately this is simple to do using the &lt;code&gt;scale_colour_manual()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech, color=as.factor(AcadYear))) + 
+  geom_point(size=2.5, alpha= 0.5)+
+  scale_colour_manual(&amp;quot;Academic Year&amp;quot;, values= c(&amp;quot;#007BB5&amp;quot;, &amp;quot;#E0403F&amp;quot;, &amp;quot;#F18825&amp;quot;, &amp;quot;#006B44&amp;quot;))+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;customizing-the-legend&#34; class=&#34;section level3&#34; number=&#34;6.1.5&#34;&gt;
+&lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1.5&lt;/span&gt; Customizing the legend&lt;/h3&gt;
+&lt;p&gt;By default, &lt;code&gt;ggplot2&lt;/code&gt; automatically build a legend on our chart as soon as a point feature (e.g. color, shape) is mapped to a variable in &lt;code&gt;aes()&lt;/code&gt;. We can modify attributes of the legend within the &lt;code&gt;theme()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;We can control a legend position using &lt;code&gt;legend.position=&#34; &#34;&lt;/code&gt; function. The possible arguments are: &lt;code&gt;&#34;top&#34;&lt;/code&gt;, &lt;code&gt;&#34;right&#34;&lt;/code&gt;, &lt;code&gt;&#34;bottom&#34;&lt;/code&gt;, &lt;code&gt;&#34;left&#34;&lt;/code&gt; or &lt;code&gt;&#34;none&#34;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Alternatively, we can insert the legend on the inside of the plot by specifying the exact coordinates: &lt;code&gt;legend.position= c(x, y)&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech, color=as.factor(AcadYear))) + 
+  geom_point(size=2.5, alpha= 0.5)+
+  scale_colour_manual(&amp;quot;Academic Year&amp;quot;, values= c(&amp;quot;#007BB5&amp;quot;, &amp;quot;#E0403F&amp;quot;, &amp;quot;#F18825&amp;quot;, &amp;quot;#006B44&amp;quot;))+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25),
+        legend.position=c(0.15,0.8))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can customize the title using &lt;code&gt;legend.title=&#34; &#34;&lt;/code&gt; function. We can also hide the title of legend with &lt;code&gt;legend.title= element_blank()&lt;/code&gt;. Let´s increase the legend title size.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech, color=as.factor(AcadYear))) + 
+  geom_point(size=2.5, alpha= 0.5)+
+  scale_colour_manual(&amp;quot;Academic Year&amp;quot;, values= c(&amp;quot;#007BB5&amp;quot;, &amp;quot;#E0403F&amp;quot;, &amp;quot;#F18825&amp;quot;, &amp;quot;#006B44&amp;quot;))+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25),
+        legend.position=c(0.1,0.8),
+        legend.title=element_text(size=12))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We can also customize the legend background (fill) and border (colour) using &lt;code&gt;legend.background=&#34; &#34;&lt;/code&gt; function. Let´s increase the legend title size.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech, color=as.factor(AcadYear))) + 
+  geom_point(size=2.5, alpha= 0.5)+
+  scale_colour_manual(&amp;quot;Academic Year&amp;quot;, values= c(&amp;quot;#007BB5&amp;quot;, &amp;quot;#E0403F&amp;quot;, &amp;quot;#F18825&amp;quot;, &amp;quot;#006B44&amp;quot;))+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25),
+        legend.position=c(0.1,0.8),
+        legend.title=element_text(size=12),
+        legend.background = element_rect(colour=&amp;quot;black&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;
+We can change the text of the legend using &lt;code&gt;legend.text= element_text()&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech, color=as.factor(AcadYear))) + 
+  geom_point(size=2.5, alpha= 0.5)+
+  scale_colour_manual(&amp;quot;Academic Year&amp;quot;, values= c(&amp;quot;#007BB5&amp;quot;, &amp;quot;#E0403F&amp;quot;, &amp;quot;#F18825&amp;quot;, &amp;quot;#006B44&amp;quot;))+
+  xlim(0,100)+
+  ylim(0,100)+
+  labs(title=&amp;quot;My first scatterplot&amp;quot;,
+       x=&amp;quot;Self-assessment (%)&amp;quot;,
+       y=&amp;quot;Students’ assessment (%)&amp;quot;)+
+  theme(axis.text =element_text(size=15),
+        axis.title=element_text(size=20),
+        plot.title=element_text(size=25),
+        legend.position=c(0.1,0.8),
+        legend.title=element_text(size=12),
+        legend.background = element_rect(colour=&amp;quot;black&amp;quot;),
+        legend.text= element_text(size=10))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
