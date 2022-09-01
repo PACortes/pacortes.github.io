@@ -1876,7 +1876,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 &lt;div id=&#34;TOC&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#data-visualization&#34; id=&#34;toc-data-visualization&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;1&lt;/span&gt; Data Visualization&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#data-visualization-with-ggplot2&#34; id=&#34;toc-data-visualization-with-ggplot2&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; Data Visualization with &lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ggplot2&#34; id=&#34;toc-ggplot2&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;2&lt;/span&gt; &lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#themes&#34; id=&#34;toc-themes&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;3&lt;/span&gt; Themes&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#installingloading-ggplot2&#34; id=&#34;toc-installingloading-ggplot2&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;4&lt;/span&gt; installing/loading &lt;code&gt;ggplot2&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#loading-our-data&#34; id=&#34;toc-loading-our-data&#34;&gt;&lt;span class=&#34;toc-section-number&#34;&gt;5&lt;/span&gt; Loading our data&lt;/a&gt;&lt;/li&gt;
@@ -1897,19 +1897,18 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 &lt;div id=&#34;data-visualization&#34; class=&#34;section level1&#34; number=&#34;1&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;1&lt;/span&gt; Data Visualization&lt;/h1&gt;
 &lt;p&gt;Data visualization is the technique used to translate information into visual cues such as graphs, charts, maps, and many others. The main goal of data visualization is to make it easier to identify patterns, trends and outliers in large data sets. This is useful as it helps in intuitive and easy understanding of the data and thereby make better decisions regarding it.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;R&lt;/code&gt; has several systems for making graphs, but &lt;code&gt;ggplot2&lt;/code&gt; is one of the most elegant and most versatile.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;R&lt;/code&gt; has several systems for making graphs, but &lt;code&gt;ggplot2&lt;/code&gt; is one of the most elegant and versatile.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div id=&#34;data-visualization-with-ggplot2&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
-&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; Data Visualization with &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h1&gt;
-&lt;p&gt;&lt;code&gt;ggplot2&lt;/code&gt; is a R-package dedicated to data visualization.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ggplot2&lt;/code&gt; implements the layered grammar of graphics, a coherent system for describing and building graphs. All plots in this package are built using a layered approach, building layers up to create the final visualization. To add layers, we use the symbol &lt;code&gt;+&lt;/code&gt;.&lt;/p&gt;
+&lt;div id=&#34;ggplot2&#34; class=&#34;section level1&#34; number=&#34;2&#34;&gt;
+&lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;2&lt;/span&gt; &lt;code&gt;ggplot2&lt;/code&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;ggplot2&lt;/code&gt; is a R-package dedicated to data visualization. It implements the grammar of graphics, a coherent system for describing and building plots. All plots in this package are built using a layered approach, building layers up to create the final visualization. To add layers, we use the symbol &lt;code&gt;+&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Every &lt;code&gt;ggplot2&lt;/code&gt; plot has three key components:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Plot = data + aesthetic mappings + geometry&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Arguments:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: the information we want to visualise.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;aesthetic mappings&lt;/code&gt;: defined with &lt;code&gt;aes()&lt;/code&gt;, describe how data’s variables are mapped to visual properties or aesthetics attributes.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;geometry&lt;/code&gt;: at least one layer defining the type of graphics. Layers are usually created with a &lt;code&gt;geom&lt;/code&gt; function.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;data: the information we want to visualise.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;aesthetic mappings: defined with &lt;code&gt;aes()&lt;/code&gt;, describe how data’s variables are mapped to visual properties or aesthetics attributes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;geometry: at least one layer defining the type of graphics. Layers are usually created with a &lt;code&gt;geom&lt;/code&gt; function.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Here’s a simple example with the basic syntax for a &lt;code&gt;ggplot2&lt;/code&gt; plot:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(iris, aes(x = Sepal.Length, y = Sepal.Width)) + 
@@ -1917,15 +1916,15 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;where,&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;data&lt;/code&gt;: The iris dataset is a built-in dataset in R that contains measurements on 4 different attributes (in centimeters) for 50 flowers from 3 different species.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;aesthetic mappings&lt;/code&gt;: engine Sepal Length mapped to x position, Sepal Width to y position.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;geometry&lt;/code&gt;: Layer to make a scatterplot.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;data: the iris dataset is a built-in dataset in R that contains measurements on 4 different attributes (in centimeters) for 50 flowers from 3 different species.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;aesthetic mappings: engine Sepal Length mapped to x position, Sepal Width to y position.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;geometry: layer to make a scatterplot.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In our example the data and aesthetic mappings are supplied in &lt;code&gt;ggplot()&lt;/code&gt;, then layers are added on with &lt;code&gt;+&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;themes&#34; class=&#34;section level1&#34; number=&#34;3&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;3&lt;/span&gt; Themes&lt;/h1&gt;
-&lt;p&gt;Themes are a powerful way to customize the non-data components of your plots (titles, labels, fonts, background, gridlines, and legends). Themes can be used to give plots a consistent customized look. The theme system does not affect how the data is rendered by geoms, or how it is transformed by scales.&lt;/p&gt;
+&lt;p&gt;Themes are a powerful way to customize the non-data components of &lt;code&gt;ggplot()&lt;/code&gt; plots (titles, labels, fonts, background, gridlines, and legends). Themes can be used to give plots a consistent customized look. The theme system does not affect how the data is rendered by geom functions.&lt;/p&gt;
 &lt;p&gt;The theming system is composed of four main components:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Theme elements specify the non-data elements that we can control. For example, the &lt;code&gt;plot.title&lt;/code&gt; element controls the appearance of the plot title.&lt;/p&gt;&lt;/li&gt;
@@ -1949,8 +1948,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 &lt;/div&gt;
 &lt;div id=&#34;plot-types&#34; class=&#34;section level1&#34; number=&#34;6&#34;&gt;
 &lt;h1&gt;&lt;span class=&#34;header-section-number&#34;&gt;6&lt;/span&gt; Plot types&lt;/h1&gt;
-&lt;p&gt;The geometry defines the plot types in &lt;code&gt;ggplot2&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Geometry function names follow the pattern: &lt;code&gt;geom_X&lt;/code&gt; where X is the name of the geometry. Some examples include:&lt;/p&gt;
+&lt;p&gt;The geometry defines the plot types in &lt;code&gt;ggplot2&lt;/code&gt;. Geometry function names follow the pattern: &lt;code&gt;geom_X()&lt;/code&gt; where X is the name of the geometry. Some examples include:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;geom_blank()&lt;/code&gt;: display nothing.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;geom_point()&lt;/code&gt;: makes a scatterplot.&lt;/p&gt;&lt;/li&gt;
@@ -1962,7 +1960,6 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 &lt;li&gt;&lt;p&gt;&lt;code&gt;geom_density()&lt;/code&gt;: smoothed density estimate.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;geom_dotplot()&lt;/code&gt;: stack individual points into a dot plot.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;code&gt;geom_area()&lt;/code&gt; makes an area plot.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;geom_freqpoly()&lt;/code&gt;: bin and count continuous variable, display with lines.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div id=&#34;scatterplot&#34; class=&#34;section level2&#34; number=&#34;6.1&#34;&gt;
 &lt;h2&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1&lt;/span&gt; Scatterplot&lt;/h2&gt;
@@ -2019,7 +2016,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 &lt;/div&gt;
 &lt;div id=&#34;points-size&#34; class=&#34;section level3&#34; number=&#34;6.1.3&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1.3&lt;/span&gt; Points Size&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;size&lt;/code&gt; argument of the &lt;code&gt;geom_point&lt;/code&gt; function allows chancing the size of the points. The default &lt;code&gt;size&lt;/code&gt; is 1.5 but you can decrease or increase this value to make the points smaller or larger.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;size&lt;/code&gt; argument of the &lt;code&gt;geom_point&lt;/code&gt; function allows changing the size of the points. The default &lt;code&gt;size&lt;/code&gt; is 1.5 but you can decrease or increase this value to make the points smaller or larger.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
   geom_point(size=2.5)+
   xlim(0,100)+
@@ -2034,7 +2031,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
 &lt;/div&gt;
 &lt;div id=&#34;color-customization&#34; class=&#34;section level3&#34; number=&#34;6.1.4&#34;&gt;
 &lt;h3&gt;&lt;span class=&#34;header-section-number&#34;&gt;6.1.4&lt;/span&gt; Color customization&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;colour&lt;/code&gt; argument of the &lt;code&gt;geom_point&lt;/code&gt; function allows customizing the color of the points.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;colour&lt;/code&gt; argument of the &lt;code&gt;geom_point&lt;/code&gt; function allows customizing point´s color.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
   geom_point(size=2.5, colour=&amp;quot;darkblue&amp;quot;)+
   xlim(0,100)+
@@ -2046,7 +2043,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
         axis.title=element_text(size=20),
         plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;The transparency of the points can also be customized with &lt;code&gt;alpha&lt;/code&gt; argument (values 0- to 1).&lt;/p&gt;
+&lt;p&gt;The transparency of the points can also be customized with &lt;code&gt;alpha&lt;/code&gt; argument (values 0 to 1).&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech)) + 
   geom_point(size=2.5, colour=&amp;quot;darkblue&amp;quot;, alpha= 0.5)+
   xlim(0,100)+
@@ -2082,7 +2079,7 @@ Now, let´s order alphabetically the new dataframe. To reorder the rows of &lt;c
         axis.title=element_text(size=20),
         plot.title=element_text(size=25))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://academic-demo.netlify.app/workshops/neom/ggplot2_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;Often we may want to use our favourites values and show a useful legend. Fortunately this is simple to do using the &lt;code&gt;scale_colour_manual()&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;Often we may want to use our favourites values and show a useful legend. Fortunately, this is simple to do using the &lt;code&gt;scale_colour_manual()&lt;/code&gt; function.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data, aes(x = SelfEvalTech, y = StudentEvalTech, color=as.factor(AcadYear))) + 
   geom_point(size=2.5, alpha= 0.5)+
   scale_colour_manual(&amp;quot;Academic Year&amp;quot;, values= c(&amp;quot;#007BB5&amp;quot;, &amp;quot;#E0403F&amp;quot;, &amp;quot;#F18825&amp;quot;, &amp;quot;#006B44&amp;quot;))+
